@@ -2357,3 +2357,30 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   into the outage; record committed locally only on
   planner-1340-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/1340-run.md.
+## 14:04 to about 14:15 - Ticker pass ticker-1404 (failed, 1 unit)
+
+- 14:04 PT 2026-11-17, ticker-1404 - failed, 1 unit: help
+  (help-2026-11-17-1030). Mac mini ONLINE but last_seen
+  unchanged at 20:02:14Z (about 2h10m stale); LastWar running
+  with 0 windows (list_windows x3, open_app x4
+  outcome_unknown across three sessions, activate
+  ax_windows_empty x2, connection.repair done, observe/snap
+  unavailable). SEVENTEENTH consecutive occurrence of the
+  window loss; no game unit has executed since ticker-0214
+  gifts at 02:14 PT, about twelve hours of routine now missed.
+  Duel day 2 Base Expansion ends 18:00 PT: UR trucks,
+  Legendary secrets and survivor intake all score today and
+  all stay missed while the window is down. Recovery is the
+  owner step: click the LastWar Dock icon once, then re-probe.
+  Unit completed FAILED (blocker_category e, target 1,
+  achieved 0, verified no); tracker untouched. Sync: reaped 0,
+  expired 2, due 22, produced 0, already queued 22. Zombie
+  chain stays closed (event ended 2026-10-30). Own PRs
+  re-read via public PR list 22:12Z (#711/#708/#425, none
+  owned by this job, no PR for records/2026-11-17).
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 121 hours into the outage; record
+  committed locally only on ticker-1404-1117-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-17. Record:
+  alliance-help/1404-queue-run.md.
