@@ -3367,3 +3367,38 @@ Record: knowledge-organization/0332-run.md.
   for records/2026-11-16. Thirty-eighth consecutive
   planner run failing to commit, so a Chinese chat report
   is owed. Record: queue-planning/2040-run.md.
+## 21:02 to about 21:20 - Ticker pass (Mac back online, radar done, survivors and training partial)
+
+- 21:02 PT, ticker-2102 - 3 units: radar done, survivors partial,
+  training partial. The Mac mini is ONLINE again (device.list
+  online, last_seen 2026-11-17T05:00:41Z) after about 40 hours
+  offline since Nov 15 05:19 PT - this pass breaks the 29-pass
+  consecutive ticker failure streak (ticker-1949 harvest-1803 was
+  the 29th) with the first done unit since Nov 14 18:35 PT.
+  Radar unit radar-2026-11-16-1803 done (stack day, duel day 2
+  Base Expansion per live tools/duel.py - the unit's window label
+  said day 1 release, stamped before the 19:00 reset; live read
+  governs): Lv.13, points 468, stored 0/40, stamina 55, restore 12
+  tasks in 02:41:22, Claim All bar 5 pending (not tapped, stack
+  day), 6 pins inventoried untapped; nothing executed, nothing
+  claimed, nothing spent. Survivors unit
+  survivors-2026-11-16-1803 partial: front gate not found after 3
+  pans, no survivor figure verified, nothing tapped; named re-read
+  survivors gate re-ground (check the two white face-bubble figures
+  at norm 324,810 and 452,869 first). Training unit
+  training-2026-11-16-1803 partial: fifth consecutive partial on
+  Drill Ground Full (Issue #678); fresh route identified the
+  right-side buildings (airport, globe, tank, crystal, statues) -
+  none is the Drill Ground - and two rightward drags barely moved
+  the camera back (pan-back anomaly, start drags on open road or
+  re-centre with BASE). Tracker: radar done, survivors and training
+  untouched. Own PRs re-checked via the public PR list (#711, #708,
+  #425 only, none owned by this job; no PR for records/2026-11-16).
+  Sync reaped 0 expired 0 due 22 produced 0; completion marker
+  reaped harvest-2026-11-16-1803; zombie seeding no-op, event ended.
+  VPS SSH still Permission denied (publickey), about 104.3 hours
+  into the break; no bundle, no push, no PR. Records committed
+  locally on ticker-2102-1116-delivery, UNPUSHED, push pending VPS
+  recovery. Chat report owed (previous pass also access-failed, and
+  this pass breaks the streak). Records: radar-tasks/2104-queue-run.md,
+  survivor-intake/2122-queue-run.md, troop-training/2121-queue-run.md.
