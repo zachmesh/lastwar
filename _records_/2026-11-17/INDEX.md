@@ -596,3 +596,166 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   break; no bundle, no push, no PR. Record committed locally
   on ticker-0333-1117-delivery, UNPUSHED, push pending VPS
   recovery. Record: resource-collection/0333-queue-run.md.
+## 03:39 to about 03:44 - PR catch-all pass (read-only, VPS SSH down)
+
+- 03:39 PT 2026-11-17, pr-catchall-0339 - blocked delivery, 104th
+  consecutive blocked catchall pass: VPS SSH still Permission
+  denied (publickey), about 110.9 hours into the break (IONOS
+  console route chosen 2026-11-14 17:37 PT still not complete).
+  Read-only pass via the authenticated GitHub connector (the
+  unauthenticated REST quota was exhausted this run - core 0
+  remaining, reset 04:07:51 PT): exactly three open PRs, all
+  unchanged since the 0139 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0, updated
+  2026-11-12T20:04:57Z), 708 (records 2026-11-12, Owner
+  lastwar-pr-integrator, head 2f59c270, updated
+  2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z, still owner-gated on OD-20261108-01,
+  tenth day); named owners match diffs, nothing adoptable, no
+  owned PR (PR 137 stays merged, corroborated by zero repo
+  activity since 2026-11-12T20:44:37Z). 138 real open issues,
+  zero unclassified; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged, all waited over 24 hours. Missed batches
+  rise to 28 (the 03:00 PT point passed with no merge). NEW
+  chain gap: the 0239 slot on 2026-11-17 left no record anywhere
+  (mirror, hidden_files, day INDEX, memory log checked), so
+  chain gaps are now FIVE. No new stale-owner flag; the
+  708/425/711 flags remain in force. Mac mini ONLINE per the
+  ticker-0333 note. No adoption, fix, reply, hand-off, Slack
+  sync or chat report - quiet run. Record is a LOCAL MIRROR
+  COPY ONLY; records-branch delivery blocked until VPS SSH is
+  restored. Pending mirror-only catchall records now 100 in
+  total (11-12: 11; 11-13: 23; 11-14: 19; 11-15: 23; 11-16: 21;
+  11-17: 3 incl. this one).
+  Record: pr-catchall/0339-run.md.
+
+## 03:32 to about 03:53 - Knowledge organization pass (no-op, VPS SSH down)
+
+- 03:32 PT 2026-11-17, knowledge-organizer-0332 - no-op: no
+  profile folded, no contradiction found, no gap filed. Own
+  PRs re-verified live via the authenticated GitHub connector
+  (#711, #708, #425, heads and updatedAt unchanged since the
+  0232 pass; PR 711's 1145 amendment still owed at VPS
+  recovery). Knowledge issues re-verified live via the
+  connector (41 open, newest #595 2026-11-12T14:11:46Z,
+  unchanged). Five records read in full: resource-collection
+  0333 (ticker-0333 harvest failed, game window lost after a
+  green zoom click), queue-planning 0240 (11 units staged,
+  44th consecutive planner run failing to commit), pr-catchall
+  0339 (104th blocked pass, missed batches 28, NEW chain gap
+  0239, gaps now FIVE), tool-development 0332 (no-op, #425
+  thread is 135 comments, correcting the 0232 partial read),
+  pr-integration 0323 (103rd failed pass, 03:00 batch missed).
+  No fold: the 0333 window-loss blocker is the FIRST harvest
+  partial with this blocker, and rule R2 writes a blocker into
+  activity metadata only at the third - the lessons stay
+  record-level; the back-arrow centre (62, 944) is per-unit
+  measured data, never inherited per R2; the background-clicks
+  mechanism is already folded in the held 2332 fold
+  (shop-claims 1.57.0). Mac mini ONLINE, last_seen
+  2026-11-17T11:30:28Z, IDENTICAL to the ticker-0333 read
+  despite live execution 03:33-03:41 PT - third data point:
+  last_seen is a reconnect stamp, not activity. VPS SSH still
+  Permission denied (publickey), about 111.1 hours into the
+  break; IONOS console route chosen 2026-11-14 17:37 PT still
+  not complete. Folding watermark unchanged at dfe14a38db.
+  No Slack sync (no material knowledge change), no chat
+  report - quiet run. Record is a LOCAL MIRROR COPY ONLY;
+  records-branch delivery blocked until VPS SSH is restored.
+  Record: knowledge-organization/0332-run.md.
+
+## 04:32 to about 04:36 - Tool developer pass (no-op, VPS SSH down)
+
+- 04:32 PT 2026-11-17, tool-development-0432 - no-op: VPS SSH
+  still Permission denied (publickey), about 111.8 hours into
+  the break (IONOS console route chosen 2026-11-14 17:37 PT
+  still not complete). Read-only pass via the authenticated
+  GitHub connector: exactly three open PRs, all unchanged
+  since the 0332 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270), 425
+  (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z, still owner-gated on
+  OD-20261108-01, no author action). The full #425 comment
+  thread stands from the 0332 paginated re-read (135 comments,
+  last 2026-11-12T19:29:36Z, reviews empty); updated_at
+  unchanged, so no new comment, review or fix point. Tooling
+  issues #712 and #709 unchanged (updated
+  2026-11-12T19:54:59Z and 19:41:23Z); no tooling issue on the
+  first page of 30 (totalCount 63) updated after
+  2026-11-12T20:11:54Z. #712 already implemented and held
+  (branch tip b3d25979fc, 3 files, 111 insertions, 3 deletions;
+  bundle 22,218,802 bytes intact), #709 next once the #712 PR
+  opens. Main still a858a0fca8. Corroborated by
+  knowledge-organization 0332 and pr-catchall 0339 (104th
+  blocked pass, missed batches 28, chain gaps FIVE; Mac mini
+  ONLINE). No new tooling defect disclosed. No code change, no
+  branch push, no PR, no comment, no Slack sync - quiet run.
+  Record is a LOCAL MIRROR COPY ONLY; records-branch delivery
+  blocked until VPS SSH is restored.
+  Record: tool-development/0432-run.md.
+
+## 04:32 to about 04:38 - Knowledge organization pass (no-op, VPS SSH down)
+
+- 04:32 PT 2026-11-17, knowledge-organization-0432 -
+  no-op: VPS SSH still Permission denied (publickey),
+  about 111.8 hours into the break (IONOS console
+  route chosen 2026-11-14 17:37 PT still not
+  complete). Read-only pass via the authenticated
+  GitHub connector: exactly three open PRs, all
+  unchanged since the 0332 pass - 711 (knowledge fold,
+  Owner lastwar-knowledge-organizer, head e3c3dfd0,
+  updated 2026-11-12T20:04:57Z), 708 (records, head
+  2f59c270, updated 2026-11-12T20:44:37Z), 425
+  (tooling, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z); PR 711's 1145 amendment
+  still owed at VPS recovery. Knowledge issues
+  re-verified live via the connector (41 open, newest
+  #595 2026-11-12T14:11:46Z, unchanged; 2 pages 30+11
+  via cursor pagination). Two records landed mid-run
+  and were read in full before this record closed:
+  tool-development 0432 (no-op, #712/#709 unchanged,
+  held #712 implementation intact) and pr-integration
+  0428 (FAILED, 104th consecutive failed integrator
+  pass, checker NOT DUE, non-batch pass, missed
+  batches stay 28, all three PRs merge-tree exit 0
+  against main a858a0fca); neither carries profile
+  learning. No fold: the 0333 harvest-failure hold
+  (rule R2, first partial) stands; the 04:00-hour
+  ticker pass record has still not landed in the
+  local mirror. Mac mini ONLINE, last_seen
+  2026-11-17T11:30:28Z, IDENTICAL to the 0332 read -
+  fourth data point: last_seen is a reconnect stamp,
+  not activity. Folding watermark unchanged at
+  dfe14a38db. No Slack sync (no material knowledge
+  change), no chat report - quiet run. Record is a
+  LOCAL MIRROR COPY ONLY; records-branch delivery
+  blocked until VPS SSH is restored.
+  Record: knowledge-organization/0432-run.md.
+
+## 03:40 to about 04:45 - Queue planning pass (partial, VPS SSH down)
+
+- 03:40 PT 2026-11-17, queue-planning-0340 - partial (45th
+  consecutive planner run failing to commit): plan staged 1
+  unit (zero-sweep-2026-11-17-1630, first pass of tonight's
+  pre-reset sweep pair, chain pre-reset-sweep-2026-11-17;
+  already_present 73, skipped_done_current 0,
+  skipped_closed [harvest-2026-11-17-0203], reaped 0,
+  expired 0; pool staged through 16:30 local) and this run
+  appended the standing first-pass ledger-walk task text to
+  it from the previous day's pair; the final pass (1730) is
+  not yet staged and the 17:00-hour run owns it. Scout diff
+  on the 2026-11-11 6-pass observation applied with 0 counts
+  (observed 52, actionable 0, enqueued 0, unexplained red
+  dots 11); 0 withdrawals; pool inbox 73, claimed 0, done
+  2291. Ticker-0333 ran live mid-run (03:34-03:40 PT):
+  harvest-2026-11-17-0203 FAILED, game window lost after a
+  green zoom click. Pre-reset sweep production not due
+  (04:00-hour run); tonight is the first night since Nov 13
+  with a live device after three missed nights. Delivery
+  blocked - VPS SSH still Permission denied (publickey),
+  about 112 hours into the outage; record committed locally
+  only on planner-0340-1117-delivery, UNPUSHED, push pending
+  VPS recovery. No PR opened for records/2026-11-17.
+  Record: queue-planning/0340-run.md.
