@@ -2575,3 +2575,44 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-1504-1117-delivery, UNPUSHED, push pending VPS recovery.
   No PR opened for records/2026-11-17. Record:
   queue-ticker/1504-process-failure.md.
+## 15:32 to about 15:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-17-1532.
+  FAILED, one hundred and thirteenth consecutive
+  failure for the same break: VPS SSH publickey
+  rejected once (about 15:32 PT; the rejection is
+  server-side, local key fingerprint re-verified this
+  pass and unchanged), no merges, no comments, no
+  records PR opened. BATCH pass for records purposes:
+  the checker (_tools_/records_batch.py) reports DUE
+  at the scheduled pass start 15:30:54 PT (exit 0,
+  window 15:00-16:00 PT), at clock time and
+  merge-aware - so the 15:00 batch merge of PR 708 was
+  owed but impossible without the VPS, and missed
+  batches rise to 31; next batch point 19:00 PT. Open
+  PRs 711/708/425 unchanged since Nov 12 (heads
+  e3c3dfd0, 2f59c270, 4f41cdd6a); merge-tree exit 0 for
+  all three against main a858a0fca (trees f46bfda1,
+  e05ec8b5, 08e8515a, identical to all prior probes).
+  PR comment detail re-read first-hand this pass via
+  the public GitHub API: PR 711 has 1 comment, PR 708
+  has 0, PR 425 has 135 comments, latest 2026-11-12 -
+  nothing new addressed to this pass. PR 711 feedback
+  stands (no repeat comment due); PR 425 still
+  owner-gated (OD-20261108-01 open, re-read stands
+  from the 0015 pass). Records branches: 13 via
+  ls-remote, latest records/2026-11-12, none for 11-13
+  to 11-17 on the remote, so no new records PR.
+  Containment re-verified first-hand this pass
+  (merge-base --is-ancestor after an HTTPS fetch):
+  only records/2026-11-12 carries commits beyond main
+  and it already has open PR 708. /tmp/records-merges.json
+  was present this pass (recreated by the 1427 pass,
+  PR 700 merged 2026-11-12T11:09:47-08:00); a later
+  pass should re-verify that timestamp against gh once
+  the VPS returns. Local records/2026-11-17 exists
+  (0000 pass), UNPUSHED, push pending VPS recovery.
+  This record committed locally on records/2026-11-17,
+  UNPUSHED - push via the standard VPS route once SSH
+  returns. Status: failed.
+  Full detail in pr-integration/1532-run.md.
