@@ -1192,3 +1192,22 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-0722-1117-delivery, UNPUSHED, push pending VPS recovery.
   No PR opened for records/2026-11-17.
   Record: queue-ticker/0722-process-failure.md.
+
+## 08:04 to about 08:14 - Queue ticker pass (process failure, fifth consecutive)
+
+- 08:04 PT 2026-11-17, ticker-0804 - process failure (R2, fifth
+  consecutive occurrence): Mac mini online, LastWar running but
+  no window - fresh session cc-17 list_windows shows the same 10
+  windows as ticker-0534 and ticker-0722, no LastWar entry; the
+  game window is still lost in the fullscreen Space. No unit
+  claimed or executed, nothing claimed or spent. No game unit
+  has run since ticker-0214 gifts at 02:14 PT, about six hours
+  of routine now missed. Sync: reaped 0, expired 0, due 22,
+  produced 0; zombie chain stays closed. Own PRs re-verified via
+  public list: #711, #708, #425 only, none owned by this job.
+  Tooling Issue filing still owed at VPS recovery. Delivery
+  blocked - VPS SSH still Permission denied (publickey), about
+  115.5 hours into the outage; record committed locally only on
+  ticker-0804-1117-delivery, UNPUSHED, push pending VPS
+  recovery. No PR opened for records/2026-11-17.
+  Record: queue-ticker/0804-process-failure.md.
