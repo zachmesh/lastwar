@@ -460,6 +460,13 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   f4d8adb4a9 with the 0638 run record), UNPUSHED, push
   pending VPS recovery. This record committed locally on
   Full detail in pr-integration/0745-run.md.
+  0845-run.md - pr-integration 0845 run (FAILED, VPS SSH
+  denied; checker NOT DUE, NON-batch pass, missed batches
+  stay 29, next batch 11:00 PT). Open PRs 711/708/425
+  carried forward from the 0745 pass, verified only by
+  records/2026-11-17 exists (0000 pass, tip 35b90359fc
+  with the 0745 run record), UNPUSHED, push pending VPS
+  Full detail in pr-integration/0845-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
