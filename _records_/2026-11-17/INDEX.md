@@ -47,3 +47,26 @@ of 2026-10-28.
   records/2026-11-17, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/0000-run.md.
+
+## 01:01 to about 01:16 - Ticker pass ticker-0101
+
+- 01:01 PT 2026-11-17, ticker-0101 - 1 unit done, Mac mini online.
+  Sync: 22 due, 0 produced (all already queued), 0 expired, 0
+  reaped; completion marker reaped harvest-2026-11-16-2203.
+  Zombie chain stays closed (event ended 2026-10-30, unit 066).
+  Own PRs first: open PRs #711, #708, #425 via the authenticated
+  GitHub connector - none owned by this job, heads and updated_at
+  unchanged since Nov 12.
+- radar-2026-11-16-2203 done (stack day, duel day 2 Base
+  Expansion): radar entered and verified (Lv.13, 468 points,
+  stored 7/40, stamina 103); Quick Execute ran 2 ordinary tasks
+  (stamina 103 to 83), nothing claimed; re-entry shows 10 task
+  rewards pending for the day-3 release (Claim All NOT tapped);
+  9 map pins inventoried untapped; stored still 7/40 after the
+  2 executions - open question for the release-day unit (does
+  stored count completed-but-unclaimed tasks?). Tracker radar
+  done. Record: radar-tasks/0115-queue-run.md.
+- Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 108 hours into the outage; record committed
+  locally only on ticker-0101-1117-delivery, UNPUSHED, push
+  pending VPS recovery. No PR opened for records/2026-11-17.
