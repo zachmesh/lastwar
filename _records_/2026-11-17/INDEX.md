@@ -2852,3 +2852,138 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   locally only on ticker-1634-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17. Record:
   queue-ticker/1634-process-failure.md.
+## 16:32 to about 16:40 - Knowledge organization pass (no-op for folding, R2 twenty-first occurrence)
+
+- 16:32 PT 2026-11-17, knowledge-organization-1632 - no-op for
+  folding. VPS SSH still Permission denied (publickey) at
+  16:32 PT, about 123.6 hours into the outage; IONOS console
+  route (chosen 2026-11-14 17:37 PT) still not complete, about
+  70.9 hours later. Own PRs re-read live via the GitHub
+  connector, all unchanged since the 1532 pass: #711
+  (knowledge, head e3c3dfd0, updated 2026-11-12T20:04:57Z),
+  #708 (records 2026-11-12, head 2f59c270, updated
+  2026-11-12T20:44:37Z), #425 (tools log gate, head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z). Knowledge issues re-read
+  live, 2 pages 30+11 via cursor pagination, totalCount 41,
+  newest updated 2026-11-12T14:11:46Z (#595), unchanged. No
+  new issue, no new comment, nothing to file. Three records
+  landed since the 1532 close and were read in full:
+  queue-ticker 1534 (twentieth consecutive window-loss
+  occurrence, probe; daily-missions unit claimed at 15:37 PT
+  before the 1504 record was read, then released back to
+  inbox - no failed unit recorded), queue-ticker 1613
+  (twenty-first, probe-only, token never taken - the 1534
+  lesson applied), queue-planning 1540 (partial, 5 staged,
+  scout diff 0, 56th consecutive planner run failing to
+  commit). NEW SHADE in the 1613 record: the control channel
+  now cannot bind ANY window, not just LastWar - Chrome
+  open_app failed, activate Chrome window 125
+  geometry_mismatch, observe fails (1534 still observed
+  Chrome normally). Mac mini online; last_seen MOVED to
+  2026-11-18T00:03:35Z (16:03 PT), first move since 14:09 PT
+  (sixteenth data point) - but the 1613 pass ran at 16:13 PT,
+  after the move, and still found no window, so the move is
+  NOT evidence the owner did the Dock-icon step. No game unit
+  has run since ticker-0214 gifts at 02:14 PT - about fourteen
+  hours of routine missed. Duel day 2 ends 18:00 PT today;
+  tonight's sweep pair (1630/1730) and the 18:00 PT
+  release-day radar unit stay blocked until the owner
+  recovers the window (one click on the LastWar Dock icon, or
+  tools/mac_lastwar_front.sh in Terminal). The ticker-1234,
+  ticker-0904 and pr-integration 0845 records still have NOT
+  landed (mirror gap, known second-hand); no pr-catchall 1539
+  or pr-integration 1632 record has landed yet. No fold: no
+  profile claim is false; the windowless-app evidence,
+  Dock-icon recovery and the new channel-blindness shade
+  belong to the tier-2 entry-route note whose home is
+  undecided and whose write stays deferred to the retro /
+  the tooling issue. Missed batches still 31 (next 19:00 PT).
+  Chain gaps stay FIVE. The five held folds stay PARTIAL,
+  their PRs owed at VPS recovery. Seven issue items owed at
+  VPS recovery, carried. No Slack sync (no material profile
+  change); the R2 twenty-first-occurrence owner update goes
+  in this run's final message. Record:
+  knowledge-organization/1632-run.md (local mirror only;
+  backup in goal hidden_files/2026-11-17; records-branch
+  delivery owed at VPS recovery).
+
+## 15:39 to about 16:45 - PR catch-all pass (blocked delivery, VPS SSH down)
+
+- 15:39 PT 2026-11-17, pr-catchall-1539 - blocked delivery. VPS SSH
+  still Permission denied (publickey) at 16:38 PT, about 123.9 hours
+  into the outage; IONOS console route (chosen 2026-11-14 17:37 PT)
+  still not complete about 71.0 hours later. 116th consecutive
+  blocked catchall pass; pending mirror-only catchall records now
+  116 (11-12: 11; 11-13: 23; 11-14: 23; 11-15: 23; 11-16: 21;
+  11-17: 15). Chain gaps remain FIVE, none new.
+- Open PRs re-read live via the authenticated GitHub connector, all
+  unchanged since the 1439 pass: #711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0, updated
+  2026-11-12T20:04:57Z), #708 (records 2026-11-12, Owner
+  lastwar-pr-integrator, head 2f59c270, updated
+  2026-11-12T20:44:37Z), #425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z). Nothing adoptable; no adoption, fix,
+  reply, hand-off, or new stale-owner flag. The 708 / 425 / 711
+  flags remain in force.
+- Open issues re-read live in 2 pages (138 real issues, state=open,
+  perPage=100, zero dupes), zero unclassified. Owner-decision
+  issues 132, 154, 335, 514, 517 all unchanged and all waited over
+  24 hours (oldest since 2026-11-02). No shepherd comment posted.
+- Missed integrator batches still 31 (no batch point fell inside
+  this run window); next batch point 19:00 PT. Own adopted PR 137
+  stays merged (verified 2139 pass, corroborated by zero repo
+  activity since 2026-11-12T20:44:37Z). Record:
+  pr-catchall/1539-run.md (local mirror only; backup in goal
+  hidden_files; records-branch delivery owed at VPS recovery).
+
+## 16:32 to about 16:51 - Tool developer pass (no-op, VPS SSH down)
+
+- 16:32 PT 2026-11-17, tool-development-1632 - no-op. VPS SSH
+  still Permission denied (publickey) at 16:32 PT, about 123.8
+  hours into the outage; IONOS console route (chosen 2026-11-14
+  17:37 PT) still not complete. Open PRs re-read live via the
+  GitHub connector, all unchanged since the 1532 pass: #711
+  (knowledge, head e3c3dfd0), #708 (records 2026-11-12, head
+  2f59c270), #425 (own tools log gate, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z). Full #425 thread re-read via the public
+  GitHub API (135 comments): latest the 2026-11-12 1126
+  integrator re-verification, still owner-gated on
+  OD-20261108-01, no author action; live mergeable true/clean
+  against current main a858a0fca8. Tooling issues totalCount
+  63, unchanged; #712 and #709 both already implemented and held
+  locally, not re-taken. Main still a858a0fca8; #705 confirmed
+  merged as #710. Held work verified intact: #712 branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc (3 files,
+  +111/-3), #709 branch work/pass-worktree-base-709 tip
+  cff911b5db, td-712 bundle untouched. No code change, no PR,
+  no comment, no Slack sync. Record:
+  tool-development/1632-run.md (local mirror only; backup in
+  goal hidden_files; records-branch delivery owed at VPS
+  recovery).
+
+## 16:40 to about 16:57 - Queue planning pass (partial, VPS SSH down)
+
+- 16:40 PT 2026-11-17, queue-planning-1640 - partial (57th
+  consecutive planner run failing to commit): plan staged 0
+  units (pool already full for the next 12 hours),
+  already_present 77, reaped 0, expired 0,
+  skipped_closed []. Scout diff on the 2026-11-11 6-pass
+  observation applied with 0 counts (observed 52, actionable
+  0, enqueued 0, unexplained red dots 11); 0 withdrawals;
+  pool inbox 77, claimed 0, done 2342. Ticker-1534, ticker-1613
+  and ticker-1634 ran live (twentieth, twenty-first and
+  twenty-second consecutive process failures on the window
+  loss); in 1613 and 1634 the control channel cannot bind ANY
+  window, a new shade. Mac mini ONLINE but LastWar is windowless
+  (0 windows), and no game unit has executed since ticker-0214
+  gifts at 02:14 PT, about fourteen and a half hours of routine
+  now missed. Pre-reset sweep production not due (16:00-hour
+  run); tonight's pair is complete in the pool (1630 + 1730,
+  ledger text verified present this run) after three missed
+  nights, but execution depends on the Mac window recovering
+  before 17:30. Delivery blocked - VPS SSH still Permission
+  denied (publickey), about 124 hours into the outage;
+  record committed locally only on
+  planner-1640-1117-delivery, no PR for records/2026-11-17.
+  Record: queue-planning/1640-run.md.
