@@ -2660,6 +2660,22 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   700 merged 2026-11-12T11:09:47-08:00); that timestamp
   still needs re-verification against gh once the VPS
   Full detail in pr-integration/1730-run.md.
+- Integrator pass pr-integration-2026-11-17-1845.
+  FAILED, one hundred and sixteenth consecutive
+  rejected once (about 18:45 PT; the rejection is
+  scheduled pass start 18:45:54 PT (exit 1, outside
+  batch point 19:00 PT (14 minutes after pass start).
+  Open PRs 711/708/425 unchanged since Nov 12 (heads
+  e3c3dfd0, 2f59c270, 4f41cdd6a; updated_at byte-identical
+  to the 1730 pass, so no new comment or review on any
+  PR); merge-tree exit 0 for all three against main
+  /tmp/records-merges.json was ABSENT at pass start
+  (ephemeral /tmp cleared); recreated with the single
+  known entry (PR 700 merged 2026-11-12T11:09:47-08:00);
+  that timestamp still needs re-verification against gh
+  once the VPS returns. Local records/2026-11-17 exists
+  (0000 pass), UNPUSHED, push pending VPS recovery. This
+  Full detail in pr-integration/1845-run.md.
 ## 14:39 to about 15:38 - PR catch-all pass (blocked delivery, VPS SSH down)
 
 - 14:39 PT 2026-11-17, pr-catchall-1439 - blocked delivery. VPS SSH
