@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-12T10:40:00Z
-version: 0.17.0
+modified: 2026-11-18T20:40:00Z
+version: 0.23.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -10,6 +10,7 @@ grounded_in:
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
   - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
+  - source: PR #614 merged 2026-11-11 (Refs #606) - zero-sweep slots moved from [90, 30] to [120, 60]; section 12 synced to that roster by this change
   - source: organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)
   - source: Issue #689 (tooling) - outcome_unknown control lock after a session drop, implemented 2026-11-12 as the pool-level control-lock blocker and rule R9
 ---
@@ -556,7 +557,7 @@ design - a unit that works a ledger line closes it by the ledger
 standard, and the round summary reports ledger lines with no
 producing unit as unscheduled, never as absent.
 
-**The zero sweep.** Twice before each daily reset - the absolute instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer) - at 90 and 30 minutes before the reset instant (16:30 and 17:30 PST in winter, 17:30 and 18:30 PDT in summer), a sweep unit walks the ledger item
+**The zero sweep.** Twice before each daily reset - the absolute instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer) - at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), a sweep unit walks the ledger item
 by item. Each line is read live - at zero, not at zero, or
 unreadable. A line not at zero gets a priority 1 unit of its own
 type enqueued before the sweep closes, named in the sweep record;
@@ -573,7 +574,7 @@ stages one unit per slot through the same (regular,
 planned_for) invariant, with `not_before` at the slot start,
 `expires_at` at the next expiry clock time and the chain id
 `<prefix><local date>` with one sequence number per slot. The
-sweep pair is that regular (`zero-sweep`, reset-anchored: `reset_utc` 02:00 with `slots_before_reset_minutes` [90, 30], expiry at the reset instant, chain `pre-reset-sweep-<local date>`, priority 1,
+sweep pair is that regular (`zero-sweep`, reset-anchored: `reset_utc` 02:00 with `slots_before_reset_minutes` [120, 60], expiry at the reset instant, chain `pre-reset-sweep-<local date>`, priority 1,
 `est_minutes` 15, activity `daily-activities`); for the reset-anchored form `not_before` is the reset instant minus the slot offset and `expires_at` is the reset instant itself (wall-clock `fixed_slots` behaviour is unchanged for any other regular that uses it); `sync` never
 stages it, because the tracker carries no per-slot done state
 and plan owns its production. Before this interface landed the
@@ -590,6 +591,7 @@ staged with `queue.py sweep` (or `plan`) from a current tree.
 
 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.
 2026-11-07 follow-up (organizer 0432, Refs #147): the four flagged mentions are rewritten in version 0.16.0 - VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3) - all now anchor at the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer). The two dated 19:00 mentions that stay are history, not rules: the 2026-10-27 lapse (section 1) and the 2026-10-28 migration validation (section 9), both from the PDT era when the reset was 19:00 local.
+2026-11-18 sync (organizer 1232, Refs #606): the sweep geometry above moves from [90, 30] to [120, 60] per PR #614 (merged 2026-11-11) - seq-1 at 16:00, fix-ups at the 16:30 midpoint, seq-2 at 17:00 PST in winter - so the final pass spans two ticker passes instead of expiring inside one. The 2026-11-04 correction note above stays as history: it records the geometry the 90/30 form replaced, not the current form.
 
 ## 13. The perception layer (scout)
 
@@ -883,6 +885,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.23.0, 2026-11-18 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The frontmatter version was stale at 0.17.0 while the changelog already ran to 0.22.0, so this change also sets it to 0.23.0.
 - 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
 - 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
 - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
