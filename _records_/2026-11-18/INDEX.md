@@ -15,6 +15,7 @@ description: The 0015 PR integration pass - FAILED, VPS SSH unreachable (Permiss
 All times America/Los_Angeles. Actor Muse, under the owner standing
 instruction of 2026-10-25 to run the regulars and the queue design
 of 2026-10-28.
+modified: 2026-11-18T08:58:00Z
 ## 00:04 to about 00:14 - Ticker pass ticker-0004 (failed, 1 unit)
 
 - 00:04 PT, ticker-0004 - 1 unit failed, pass stops after it:
@@ -173,3 +174,41 @@ of 2026-10-28.
   about 132 hours into the outage; record committed locally
   only on planner-0040-1118-delivery, no PR for
   records/2026-11-18. Record: queue-planning/0040-run.md.
+## 00:34 to about 00:57 - Ticker pass ticker-0034 (process failure, no unit claimed)
+
+- 00:34 PT, ticker-0034 - PROCESS FAILURE, thirty-sixth
+  consecutive window-loss occurrence. Route change honored:
+  the 0004 record was re-read FIRST, before sync and before any
+  claim; no unit was claimed; token taken and released unused.
+  Mac mini ONLINE (last_seen 08:02:34Z, unchanged since 0004),
+  LastWar running (com.lastwar.ios) but 0 windows. Four
+  sessions (cc-69, cc-70, cc-71 game probe; cc-72 channel
+  check): open_app "LastWar" outcome_unknown three times,
+  list_windows LastWar 0 three times, observe and screen.snap
+  observation_unavailable, activate LastWar ax_windows_empty,
+  frontmost app is the assistant itself. mac_capture_probe
+  classifies OFF_SCREEN_WINDOW, high confidence, stop_pass yes
+  (exit 10). New shade: Chrome windows also unselectable now
+  (activate windows 125/196 geometry_mismatch,
+  agent_display=false; open_app Chrome fails, multiple
+  instances) - the Nov 4/5 baseline had them observing
+  normally. transport healthy but progressAgeSeconds back in
+  the thousands (2858/2859); agent_window
+  new_tab_in_existing_window seventh pass. No game input sent.
+- Duel day 3, Age of Science, 17.2 hours left at the 00:49
+  read; radar posture RELEASE. Day-3 scoring (research, valor
+  badges, drone chests, radar release) all missed. No game unit
+  has executed since ticker-0214 gifts 02:14 PT Nov 17 - about
+  22.75 hours of routine now missed. Nov 17 pre-reset sweep pair
+  expired unexecuted (fourth consecutive missed night); Nov 18
+  pair not yet staged (17:00-hour planner run owns it).
+- Sync: reaped 0, expired 0, due 22, produced 0, already queued
+  22; completion marker reaped (radar-2026-11-17-2203). Zombie
+  chain stays closed (event ended 2026-10-30). Own PRs: VPS gh
+  unreachable; GitHub connector re-read - exactly three open
+  PRs (#711, #708, #425), none owned by this job, no PR for
+  records/2026-11-17 or records/2026-11-18. Push and PR blocked
+  - VPS SSH still Permission denied (publickey), about 132.2
+  hours into the outage; record committed locally only on
+  ticker-0034-1118-delivery, UNPUSHED, push pending VPS
+  recovery. Record: queue-ticker/0034-process-failure.md.
