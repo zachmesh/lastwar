@@ -3210,3 +3210,31 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   pr-catchall/1739-run.md (local mirror only; backup in goal
   hidden_files/2026-11-17; records-branch delivery owed at VPS
   recovery).
+## 18:04 to about 18:15 - Queue ticker pass (process failure, LastWar window missing)
+
+- 18:04 PT 2026-11-17, ticker-1804 - process failure (R2, twenty-fifth
+  consecutive occurrence). Mac mini ONLINE, last_seen MOVED to
+  02:01:32Z (fresh, about 3 minutes before the pass; it stood at
+  00:03:35Z at the 1734 read) - the gateway reconnected again, but
+  the window did not come back with it. LastWar in running_apps
+  yet 0 windows in list_windows (all 10) in one fresh session
+  (cc-51), open_app LastWar outcome_unknown, activate
+  ax_windows_empty, observe observation_unavailable. Probe
+  classifies OFF_SCREEN_WINDOW, high confidence, stop_pass yes
+  (exit 10). NEW SHADE persists, fifth pass in a row: the control
+  channel cannot bind ANY window - Chrome window 125 activate
+  geometry_mismatch (agent_display=false); connection.health reports
+  both transports connected, so the gateway is fine and the failure is
+  in the window-binding layer. Route change followed: the 1734 record
+  was re-read before any claim, no unit claimed, token never taken
+  (sync ran before the re-read, claims nothing, no breach). No game
+  unit has executed since ticker-0214 gifts at 02:14 PT, about sixteen
+  hours of routine now missed. Duel day 3 Age of Science began 18:00
+  PT (23.8h left at the 18:09 read): research, valor badges, drone
+  component chests and radar release all score today - all missed
+  while the window is down; day 2's UR-truck window closed unplayed.
+  Delivery blocked - VPS SSH still Permission denied (publickey),
+  about 125 hours into the outage; record committed locally only on
+  ticker-1804-1117-delivery, UNPUSHED, push pending VPS recovery.
+  No PR opened for records/2026-11-17. Record:
+  queue-ticker/1804-process-failure.md.
