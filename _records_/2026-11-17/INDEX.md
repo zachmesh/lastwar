@@ -3018,3 +3018,32 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   record committed locally only on ticker-1704-1117-delivery,
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-17. Record: queue-ticker/1704-process-failure.md.
+
+## 17:34 to about 17:50 - Queue ticker pass (process failure, LastWar window missing)
+
+- 17:34 PT 2026-11-17, ticker-1734 - process failure (R2, twenty-fourth
+  consecutive occurrence). Mac mini ONLINE, last_seen UNCHANGED at
+  00:03:35Z since the 1613 read (about 100 minutes stale); LastWar in
+  running_apps yet 0 windows in list_windows (all 10) across two fresh
+  sessions (cc-49, cc-50), open_app LastWar outcome_unknown,
+  open_app "Last War" open_failed (no installed app matching),
+  activate ax_windows_empty, observe observation_unavailable.
+  Probe classifies OFF_SCREEN_WINDOW, high confidence, stop_pass yes
+  (exit 10). NEW SHADE persists, fourth pass in a row: the control
+  channel cannot bind ANY window - Chrome window 125 activate
+  geometry_mismatch (agent_display=false); connection.health reports
+  both transports connected, so the gateway is fine and the failure is
+  in the window-binding layer. Route change followed: the 1704 record
+  was re-read before any claim, no unit claimed, token never taken
+  (sync ran before the re-read, claims nothing, no breach). No game
+  unit has executed since ticker-0214 gifts at 02:14 PT, about fifteen
+  and a half hours of routine now missed. Duel day 2 Base Expansion
+  ends 18:00 PT (0.4h left at the 17:38 read): UR trucks and Legendary
+  secrets score today, radar stacks - all missed while the window is
+  down; tonight's sweep pair (1630 + 1730) is staged but the 1730
+  sweep fires about now and will hit the same blocker unless the
+  window recovers. Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 125 hours into the outage; record committed
+  locally only on ticker-1734-1117-delivery, UNPUSHED, push pending
+  VPS recovery. No PR opened for records/2026-11-17. Record:
+  queue-ticker/1734-process-failure.md.
