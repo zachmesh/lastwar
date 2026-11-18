@@ -3863,3 +3863,43 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   possible, record committed locally only on delivery branch
   ticker-2104-1117-delivery, UNPUSHED. Record:
   arms-race/2104-queue-run.md.
+## 21:38 to about 21:47 - Ticker pass ticker-2134 (access failed, 31st consecutive window loss)
+
+- 21:38 PT 2026-11-17, ticker-2134 - access failed: the Mac mini
+  computer-control channel could not bind ANY window for the
+  31st consecutive occurrence (ticker-2034 at 20:34 PT was the
+  30th, same shape). Seven probes across six methods in session
+  cc-61: environment.describe (LastWar running, agent_window
+  unavailable, reason `new_tab_in_existing_window`, third pass
+  recording it), connection.health (native progressAgeSeconds
+  about 5693, no gateway progress since about 20:04 PT - grown
+  from about 2004 at the 2034 pass; web 96), open_app LastWar
+  outcome_unknown, observe full observation_unavailable,
+  list_windows 11 windows none for LastWar, screen.snap
+  observation_unavailable (even the no-target display capture
+  fails). Display 1920x1080, all permissions true. No login
+  screen, no verification code, no different-device dialog.
+  Unit donations-2026-11-17-1803 completed as failed; tracker
+  untouched; execute loop stopped after the one unit (a second
+  would fail identically on the same broken channel). Route
+  change honored: the 2034 record was re-read BEFORE the token
+  was taken - no sixth claim-before-read recurrence.
+- OWN PRS FIRST via the GitHub connector (VPS gh CLI dead),
+  fresh check this pass: exactly three open PRs (#711, #708,
+  #425), heads and updated_at unchanged since Nov 12; none
+  owned by this job, no records/2026-11-17 PR, nothing
+  addressed to this job.
+- Sync: reaped 0, expired 0, due 22, produced 0, inbox 68.
+  Zombie: no seeding, event ended 2026-10-30. VPS SSH still
+  Permission denied (publickey), about 129.3 hours into the
+  break - no push, no PR; commit lands on local delivery
+  branch ticker-2134-1117-delivery (2034 delivery tip
+  6f03abdf50 as base; live branch checked out by integrator
+  worktree pi-0000-records-1117). Observation for the tool
+  developer (carried from 2034): vip-2026-11-17-1800 (P1,
+  attempts 0) carries expires_at 2026-11-19T02:00:00Z, a day
+  past its slot; unverified as a defect, no issue filed. Owed
+  from earlier passes: 2004 record has no day-INDEX section
+  and no action-log entry. Record:
+  alliance-donations/2134-queue-run.md (local mirror only
+  until VPS recovery).
