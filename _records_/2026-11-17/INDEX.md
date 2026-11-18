@@ -3402,3 +3402,31 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   outage; record committed locally only on ticker-1904-1117-delivery,
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-17. Record: queue-ticker/1904-process-failure.md.
+## 19:36 to about 19:52 - Queue ticker pass (access failure, LastWar window missing)
+
+- 19:36 PT 2026-11-17, ticker-1934 - access failure (R2, twenty-eighth
+  consecutive occurrence of the window loss). Mac mini ONLINE,
+  last_seen 02:01:32Z, LastWar running (pid 11266) yet 0 windows in
+  list_windows; open_app LastWar outcome_unknown x3, activate
+  ax_windows_empty, observe and screen.snap observation_unavailable
+  across three computer sessions (cc-55, cc-56, cc-57). NEW SHADE
+  persists eighth pass in a row: the control channel cannot bind ANY
+  window - Finder, Chrome window 125 and Calculator all fail with
+  geometry_mismatch (agent_display=false); connection.health reports
+  both transports connected and connection.repair reports healthy,
+  so the gateway is fine and the failure is in the window-binding
+  layer. Route change re-read LATE again: radar unit
+  radar-2026-11-17-1803 was claimed and the token taken before the
+  previous record (ticker-1904, same failure) was re-read; the unit
+  was completed as failed per the 1704 pattern (result stats patched
+  with the six required keys so the close counts as verified),
+  token released, no game input sent, nothing claimed or spent.
+  Duel day 3 Age of Science, radar release posture - the stack
+  release is still owed and the tracker was left untouched, so the
+  next tick re-produces radar. Zombie Invasion: no seeding, the
+  event ended (verified 2026-11-15, chain closed). Sync: 22 due,
+  0 produced, 1 completion marker reaped. Delivery blocked - VPS
+  SSH still Permission denied (publickey), about 127 hours into the
+  outage; OWN PRS FIRST could not be done and no push or PR is
+  possible, record committed locally only on records/2026-11-17,
+  UNPUSHED. Record: radar-tasks/1936-queue-run.md.
