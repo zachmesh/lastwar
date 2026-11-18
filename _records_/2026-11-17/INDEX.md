@@ -3632,6 +3632,42 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   records/2026-11-17, UNPUSHED. Record:
   survivor-intake/2004-queue-run.md.
 
+- Integrator pass pr-integration-2026-11-17-2200.
+  FAILED, one hundred and nineteenth consecutive
+  failure for the same break: VPS SSH publickey
+  rejected once (about 22:04 PT; the rejection is
+  server-side, local key fingerprint re-verified this
+  pass and unchanged), no merges, no comments, no
+  records PR opened. NON-batch pass for records
+  purposes: the checker (_tools_/records_batch.py)
+  reports NOT DUE at the scheduled pass start
+  22:00:54 PT (exit 1, outside every batch window),
+  at clock time and merge-aware - no batch point falls
+  inside this pass, so missed batches stay at 32; next
+  batch point 23:00 PT. Open PRs 711/708/425 unchanged
+  since Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6a;
+  updated_at byte-identical to the 2045 pass, so no new
+  comment or review on any PR); merge-tree exit 0 for
+  all three against main a858a0fca (trees f46bfda1,
+  e05ec8b5, 08e8515a, identical to all prior probes).
+  PR 711 feedback stands (no repeat comment due); PR
+  425 still owner-gated (OD-20261108-01 open, re-read
+  stands from the 0015 pass). Records branches: 13 via
+  ls-remote, latest records/2026-11-12, none for 11-13
+  to 11-17 on the remote, so no new records PR.
+  Containment re-verified first-hand this pass (all 12
+  older branches contained in main; only
+  records/2026-11-12 carries commits beyond main and
+  it already has open PR 708). /tmp/records-merges.json
+  was missing at pass start and was recreated this pass
+  with the single known entry (PR 700 merged
+  2026-11-12T11:09:47-08:00); that timestamp still needs
+  re-verification against gh once the VPS returns. Local
+  records/2026-11-17 exists (0000 pass), UNPUSHED, push
+  pending VPS recovery. This record committed locally on
+  records/2026-11-17, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/2200-run.md.
 ## 20:34 to about 20:42 - Ticker pass ticker-2034 (access failed, 30th consecutive window loss)
 
 - 20:34 PT 2026-11-17, ticker-2034 - access failed: the Mac mini
