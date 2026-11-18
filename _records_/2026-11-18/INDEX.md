@@ -938,3 +938,51 @@ modified: 2026-11-18T13:09:00Z
   record committed locally only on planner-0540-1118-delivery,
   no PR for records/2026-11-18. Record:
   queue-planning/0540-run.md.
+## 06:22 to about 06:28 - Ticker pass ticker-0616 (process failure, no unit claimed)
+
+- 06:22 PT, ticker-0616 - PROCESS FAILURE, forty-first
+  consecutive window loss. Mac mini ONLINE (last_seen
+  13:23:44Z, newer than 0500 by ~1h02m), LastWar running
+  (com.lastwar.ios) but exposes no window - same
+  fullscreen-Space loss as the 40 preceding passes. Four
+  computer sessions (cc-89 to cc-92): open_app "LastWar"
+  outcome_unknown four times (three attempts plus one re-probe
+  after repair), list_windows 0, observe and screen.snap
+  observation_unavailable; one activate was interrupted by a
+  service restart mid-call (follow-up list_windows still 0).
+  No game screen reached, no unit claimed, nothing spent.
+  Token held 06:22-06:27 PT, released unused.
+- ORDERING HONORED: this pass re-read the newest queue-ticker
+  record (0500) BEFORE sync - the first honoring pass since
+  the deviation watch restarted at zero a third time at 0500.
+  Two more consecutive honoring passes are needed before the
+  route change counts as verified.
+- New signal: connection.repair target web returned a healthy
+  snapshot with no "recovery started" signal, but
+  progressAgeSeconds fell to 123 on both transports, down
+  from 3527 (native) and 7261 (web) - the first pass in which
+  the repair moved progressAge at all. The transports are
+  progressing again; the window is not back. The repair moved
+  the channel, not the window. Probe classification unchanged:
+  tools/mac_capture_probe.py v1.2.0 returns OFF_SCREEN_WINDOW,
+  high confidence, stop_pass yes (exit 10), same label as
+  0500. No game input sent; no Escape, Return or
+  Ctrl-Cmd-F; green zoom untouched.
+- Duel day 3, Age of Science, 11.6 hours left at the 06:21
+  read; radar posture RELEASE. Day-3 scoring missed. No game
+  unit has executed since ticker-0214 gifts at 02:14 PT Nov 17
+  - about twenty-eight hours of routine now missed. Tonight's
+  pre-reset sweep pair is COMPLETE (seq 1 by 0440, seq 2 by
+  0540); the Nov 17 pair expired unexecuted, the fourth
+  consecutive missed night.
+- Sync: reaped 0, expired 0, due 22, produced 0, already queued
+  22. Stats: inbox 78, claimed 0, done 2404. Zombie chain stays
+  closed (event ended 2026-10-30). Own PRs: VPS gh unreachable;
+  GitHub connector re-read - exactly three open PRs (#711 #708
+  #425), none owned by this job, no records/2026-11-18 PR.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 137.6 hours into the outage; record
+  committed locally only on ticker-0616-1118-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-18. No batch point passed; missed batches
+  stay 34. Record: queue-ticker/0616-process-failure.md.
