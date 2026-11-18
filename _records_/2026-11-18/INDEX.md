@@ -1264,3 +1264,43 @@ modified: 2026-11-18T13:09:00Z
   is restored.
   Record: pr-catchall/0939-run.md.
 - 09:46 PT, queue-planning-0940 - partial (73rd consecutive planner run failing to commit). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 0740 run) - no new question or numbered fix point. Owner-decision issues 132, 154, 335, 514, 517 unchanged. Plan staged 0 units (pool already complete to ~21:46 local; already_present 77, skipped_closed radar-2026-11-18-0603); pre-reset sweep NOT DUE, tonight's pair COMPLETE and present in inbox (zero-sweep-1630/1730); scout diff on the 6-pass Nov 11 observation applied with 0 counts (observed 52, unexplained 11); 0 withdrawals (oldest inbox unit vip-2026-11-17-1800 newer than the observation). Pool inbox 75, claimed 0, done 2418 - the -1/+1 vs the 0740 stats is ticker-0834 claiming and closing radar-2026-11-18-0603 FAILED (forty-third consecutive window-loss occurrence; ordering DEVIATION, deviation watch restarts at zero a fifth time). Missed batches stay 35; next batch 11:00 PT. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about thirty-one and a half hours missed). Duel day 3 Age of Science ends 18:00 PT Nov 18. No 0840 planner record exists in the live tree - new gap for the retro. VPS SSH still Permission denied (publickey), about 141 hours into the outage; record committed locally only on planner-0940-1118-delivery, UNPUSHED, push pending VPS recovery. No PR for records/2026-11-18 exists. Record: queue-planning/0940-run.md.
+## 10:14 to about 10:28 - Ticker pass ticker-1010 (gifts unit FAILED, forty-fourth consecutive window loss)
+
+- 10:14 PT, ticker-1010 - gifts-2026-11-18-0630 FAILED.
+  Forty-fourth consecutive window-loss occurrence (0834 was
+  the forty-third). Mac mini ONLINE (last_seen
+  2026-11-18T16:23:36Z at first check, 18:20:33Z at re-check;
+  one transient node_offline mid-pass, recovered on retry),
+  LastWar running (com.lastwar.ios) but exposes no window:
+  three computer sessions (cc-95/96/97), open_app "LastWar"
+  outcome_unknown twice, no window after 45 seconds, activate
+  ax_windows_empty, list_windows 11 windows with no LastWar
+  entry (three checks), list_apps 8 apps with LastWar absent
+  from the AX app list entirely, open_app file_path
+  invalid_params, observe and screen.snap
+  observation_unavailable. NEW: the control channel is wedged
+  on the stale LastWar target - every window selection fails
+  stale_observation / geometry_mismatch, including Finder and
+  Chrome, so no window at all can be bound. Probe classifier
+  returns OFF_SCREEN_WINDOW, high confidence, stop_pass true
+  (evidence /tmp/lastwar-probe-1010.json). No game input sent.
+  Token held 10:14-10:18 and 10:19-10:29 PT, released.
+- ORDERING DEVIATION, stated plainly: this pass ran sync and
+  claimed the unit BEFORE re-reading the newest queue-ticker
+  record (0834), the same breach as 0834/0733; the deviation
+  watch restarts at zero a sixth time. The next pass must
+  re-read the newest queue-ticker record FIRST, before sync
+  and before any claim.
+- Probe, pool and duel: sync reaped 0, expired 4 (0603
+  arms-race, donations, survivors, training, all expired
+  unexecuted), due 22, produced 0; pool inbox 71, claimed 0,
+  done 2422. Duel day 3 Age of Science ends 18:00 PT Nov 18,
+  radar RELEASE; day-3 scoring missed while the window is
+  down. No game unit executed since ticker-0214 gifts Nov 17
+  02:14 PT (about thirty-two and a quarter hours missed).
+  Missed batches stay 35; next batch 11:00 PT. VPS SSH still
+  Permission denied (publickey), about 141 hours into the
+  outage; record committed locally only on
+  ticker-1010-1118-delivery, UNPUSHED, push pending VPS
+  recovery. No PR for records/2026-11-18 exists. Record:
+  alliance-gifts/1014-queue-run.md.
