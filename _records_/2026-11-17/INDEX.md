@@ -3668,6 +3668,26 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   records/2026-11-17, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/2200-run.md.
+- Integrator pass pr-integration-2026-11-17-2300.
+  FAILED, one hundred and twentieth consecutive
+  rejected once (about 23:15 PT; the rejection is
+  server-side - local key fingerprint re-verified and
+  unchanged). Checker (_tools_/records_batch.py) run
+  locally from fetched main reports DUE on all three
+  variants (clock, merge-aware, replay at the 23:00:54
+  trigger time; exit 0) - this pass IS a batch pass,
+  the 23:00 batch, and it is MISSED because no merge
+  is possible without the VPS; missed batches rise to
+  33. Open PRs 711/708/425 unchanged since Nov 12
+  (heads e3c3dfd0, 2f59c270, 4f41cdd6a; updated_at
+  byte-identical to the 2200 pass, so no new comment or
+  review on any PR); merge-tree exit 0 for all three
+  against main a858a0fca (trees f46bfda1, e05ec8b5,
+  08e8515a, identical to all prior probes). PR 711
+  feedback stands (no repeat comment due); PR 425
+  still owner-gated (OD-20261108-01 open, re-read
+  present at pass start (PR 700 merged
+  Full detail in pr-integration/2300-run.md.
 ## 20:34 to about 20:42 - Ticker pass ticker-2034 (access failed, 30th consecutive window loss)
 
 - 20:34 PT 2026-11-17, ticker-2034 - access failed: the Mac mini
