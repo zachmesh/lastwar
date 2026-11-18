@@ -371,3 +371,29 @@ modified: 2026-11-18T09:47:00Z
   about 133 hours into the outage; record committed locally
   only on planner-0140-1118-delivery, no PR for
   records/2026-11-18. Record: queue-planning/0140-run.md.
+## 02:30 to about 02:41 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-18-0230.
+  FAILED, one hundred and twenty-third consecutive failure for the
+  same break: VPS SSH publickey rejected once (about 02:34 PT; the
+  rejection is server-side, local key fingerprint re-verified this
+  pass and unchanged), no merges, no comments, no records PR opened.
+  NON-BATCH pass for records purposes: the checker
+  (_tools_/records_batch.py) reports NOT DUE at the scheduled pass
+  start 02:30:54 PT (exit 1, outside every batch window), at clock
+  time and merge-aware - so no batch merge was owed and missed
+  batches stay 33; next batch point 03:00 PT. Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6a;
+  updated_at byte-identical to the 0115 pass, so no new comment or
+  review on any PR); merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a, identical to all
+  prior probes). PR 711 feedback stands (no repeat comment due);
+  PR 425 still owner-gated (OD-20261108-01 open, re-read stands
+  from the 0015 pass). Records branches: 13 via ls-remote, latest
+  records/2026-11-12, none for 11-13 to 11-18 on the remote, so no
+  new records PR. Containment re-verified first-hand this pass (all
+  12 older branches contained in main; only records/2026-11-12
+  carries commits beyond main and it already has open PR 708).
+  This record committed locally on records/2026-11-18, UNPUSHED -
+  push via the standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/0230-run.md.
