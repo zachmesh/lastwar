@@ -3430,3 +3430,127 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   outage; OWN PRS FIRST could not be done and no push or PR is
   possible, record committed locally only on records/2026-11-17,
   UNPUSHED. Record: radar-tasks/1936-queue-run.md.
+## 18:39 to about 18:57 - PR catch-all pass (blocked delivery, 1639 gap confirmed)
+
+- 18:39 PT 2026-11-17, pr-catchall-1839 - blocked delivery. VPS SSH
+  still Permission denied (publickey) at 18:50 PT, about 126.1 hours
+  into the outage; IONOS console route (chosen 2026-11-14 17:37 PT)
+  still not complete about 73.2 hours later. 118th consecutive
+  blocked catchall pass; pending mirror-only catchall records now
+  118 (11-12: 11; 11-13: 23; 11-14: 23; 11-15: 23; 11-16: 21;
+  11-17: 17). The 1639 chain gap on 2026-11-17, provisional in the
+  1739 pass, is now CONFIRMED (no record in the mirror,
+  hidden_files/2026-11-17/ or the hidden_files root as of 18:52 PT;
+  only the 2026-11-14 and 2026-11-16 1639 records exist) - chain
+  gaps now SIX, matching the knowledge-organization 1832
+  confirmation at 18:35 PT.
+- Open PRs re-read live via the authenticated GitHub connector, all
+  unchanged since the 1739 pass: #711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0, updated
+  2026-11-12T20:04:57Z), #708 (records 2026-11-12, Owner
+  lastwar-pr-integrator, head 2f59c270, updated
+  2026-11-12T20:44:37Z), #425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z). Nothing adoptable; no adoption, fix,
+  reply, hand-off, or new stale-owner flag. The 708 / 425 / 711
+  flags remain in force.
+- Open issues re-read live in 2 pages (138 real issues, state=open,
+  perPage=100, zero dupes), zero unclassified. Owner-decision
+  issues 132, 154, 335, 514, 517 all unchanged and all waited over
+  24 hours (oldest since 2026-11-02). No shepherd comment posted.
+- Missed integrator batches still 31 (no batch point fell inside
+  this run window); next batch point 19:00 PT. Own adopted PR 137
+  stays merged (verified 2139 pass, corroborated by zero repo
+  activity since 2026-11-12T20:44:37Z). Record:
+  pr-catchall/1839-run.md (local mirror only; backup in goal
+  hidden_files/2026-11-17; records-branch delivery owed at VPS
+  recovery).
+
+## 19:32 to about 19:41 - Knowledge organization pass (no-op for folding, step-5 trade-day sweep, 19:00 batch point)
+
+- 19:32 PT 2026-11-17, knowledge-organization-1932 - no-op for
+  folding, but the step-5 fuller consolidation sweep of the
+  whole ended Nov 17 trade day ran (first run after the 19:00
+  local reset). VPS SSH still Permission denied (publickey) at
+  19:32 PT, about 127 hours into the outage; IONOS console
+  route (chosen 2026-11-14 17:37 PT) still not complete, about
+  75 hours later. Own PRs re-read live via the GitHub
+  connector, all unchanged since the 1832 pass: #711
+  (knowledge, head e3c3dfd0, updated 2026-11-12T20:04:57Z),
+  #708 (records 2026-11-12, head 2f59c270, updated
+  2026-11-12T20:44:37Z), #425 (tools log gate, head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z). Knowledge issues re-read
+  live, 2 pages 30+11 via cursor pagination, totalCount 41,
+  newest updated 2026-11-12T14:11:46Z (#595), unchanged. No
+  new issue, no new comment, nothing to file. Four records
+  landed since the 1832 close and were read in full:
+  pr-catchall 1839 (blocked delivery, 118th consecutive;
+  chain gap 1639 confirmed; missed batches 31),
+  queue-planning 1840 (partial, 12 units staged for Nov 18
+  0603/0630, sweep pair expired unexecuted - fourth
+  consecutive missed night, scout diff 0, 59th consecutive
+  planner run failing to commit), pr-integration 1845
+  (hidden-only, failed, 116th consecutive; checker NOT DUE,
+  non-batch pass; missed batches 31), and tool-development
+  1832 (hidden-only, partial; issue #709 implemented but
+  DUPLICATED the 2026-11-15 0733 held patch - reconcile to
+  one patch before any PR; #712 likewise implemented-held;
+  connector write route effectively unavailable, 403 expected
+  even with approval). The sweep read tool-development 1332
+  (hidden-only) in full and description-scanned the twelve
+  hidden-only pr-integration runs for the day (all the
+  standard failed-pass shape, no foldable learning); the
+  0440 planner slot is confirmed NOT to exist (0540
+  consecutive after 0340), so there is no 0440 slot gap on
+  2026-11-17. Mirror-gap class B-2026-11-16-03 gains two new
+  instances (tool-development 1332, pr-integration 1845).
+  R2 stays at TWENTY-FIVE verified occurrences: ticker-1834
+  ran (1840 sync evidence: 6 units expired at 02:34:34Z) but
+  its record has not landed, so a twenty-sixth is NOT
+  counted. The 19:00 PT batch point fell inside this run
+  window with the VPS still down, so the batch cannot merge;
+  missed batches remain 31 verified, the 19:00 miss expected
+  as the 32nd and to be counted by the integrator's next
+  batch pass. Mac mini online; last_seen still
+  2026-11-18T02:01:32Z, UNCHANGED from the 1804 read
+  (nineteenth data point) - NOT evidence the owner did the
+  Dock-icon step. Duel day 3 (Age of Science) runs to 18:00
+  PT Nov 18 with research, valor badges, drone chests and the
+  radar release scoring today - all blocked by the R2 stop
+  condition until the window is recovered. No fold, no
+  contradiction, no gap filed; one new owed filing (the
+  tool-development held-patch duplication gap), eight owed
+  items in total. Record:
+  knowledge-organization/1932-run.md (local mirror only;
+  backup in goal hidden_files/2026-11-17; records-branch
+  delivery owed at VPS recovery).
+
+## 19:40 to about 19:52 - Queue planning pass (partial, VPS SSH down)
+
+- 19:40 PT 2026-11-17, queue-planning-1940 - partial (60th
+  consecutive planner run failing to commit): plan staged 6
+  units (passes/secrets/treasures/trucks/events
+  2026-11-18-0657 and scout-midday 2026-11-18-0700),
+  already_present 68, reaped 0, expired 0,
+  skipped_closed []. Pre-reset sweep production was NOT due
+  (19:00-hour run) - tonight's pair already EXPIRED
+  UNEXECUTED at 18:04:42 local (fourth consecutive missed
+  night, Nov 14, 15, 16, 17). Scout diff on the 2026-11-11
+  6-pass observation applied with 0 counts (observed 52,
+  actionable 0, enqueued 0, unexplained red dots 11);
+  0 withdrawals; pool inbox 71, claimed 1, done 2365 at
+  19:43 local. Ticker-1904 ran live (twenty-seventh
+  consecutive process failure on the window loss);
+  ticker-1934 failed the radar unit at 19:43:45 PT
+  (twenty-eighth consecutive; shade eighth pass in a row);
+  the control channel cannot bind ANY window. Mac mini
+  ONLINE (last_seen 18:01 PST) but LastWar is windowless
+  (0 windows), and no game unit has executed since
+  ticker-0214 gifts at 02:14 PT, about seventeen and a half
+  hours of routine now missed. Duel day 3 Age of Science
+  began 18:00 PT; the radar stack release is still owed.
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 127 hours into the outage; record
+  committed locally only on planner-1940-1117-delivery,
+  no PR for records/2026-11-17. Record:
+  queue-planning/1940-run.md.
