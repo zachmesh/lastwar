@@ -3603,3 +3603,42 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   and no push or PR is possible, record committed locally only on
   records/2026-11-17, UNPUSHED. Record:
   survivor-intake/2004-queue-run.md.
+
+## 20:34 to about 20:42 - Ticker pass ticker-2034 (access failed, 30th consecutive window loss)
+
+- 20:34 PT 2026-11-17, ticker-2034 - access failed: the Mac mini
+  computer-control channel could not bind ANY window for the
+  30th consecutive occurrence (ticker-2004 at 20:04 PT was the
+  29th, same shape). Five probes across four methods in session
+  cc-59: open_app LastWar outcome_unknown, observe full and
+  current observation_unavailable, list_windows 11 windows none
+  for LastWar, activate Chrome 125 geometry_mismatch with
+  agent_display=false and ax_windows_empty. LastWar running,
+  display 1920x1080, all permissions true. Two NEW leads:
+  environment.describe reports agent_window unavailable with
+  reason `new_tab_in_existing_window`, and connection.health
+  progressAgeSeconds stuck at about 2004 since the 2004 pass.
+  No login screen, no verification code, no different-device
+  dialog. Unit training-2026-11-17-1803 completed as failed;
+  tracker untouched; execute loop stopped after the one unit
+  (a second would fail identically on the same broken channel).
+  Route change honored: the 2004 record was re-read BEFORE
+  claiming - no fifth claim-before-read recurrence.
+- OWN PRS FIRST via the GitHub connector (VPS gh CLI dead):
+  exactly three open PRs (#711, #708, #425), heads and
+  updated_at unchanged since Nov 12; none owned by this job, no
+  records/2026-11-17 PR, nothing addressed to this job.
+- Sync: reaped 0, expired 0, due 22, produced 0, inbox 70.
+  Zombie: no seeding, event ended (Glacieradon, verified live
+  2026-11-15). VPS SSH still Permission denied (publickey),
+  about 128.8 hours into the break - no push, no PR; commit
+  lands on local delivery branch ticker-2034-1117-delivery
+  (records/2026-11-17 tip e17dd2b93c as base; live branch
+  checked out by integrator worktree pi-0000-records-1117).
+  Observation for the tool developer: vip-2026-11-17-1800 (P1,
+  attempts 0) carries expires_at 2026-11-19T02:00:00Z, a day
+  past its slot; unverified as a defect, no issue filed. Owed
+  from earlier passes: 2004 record has no day-INDEX section and
+  no action-log entry. Record:
+  troop-training/2034-queue-run.md (local mirror only until
+  VPS recovery).
