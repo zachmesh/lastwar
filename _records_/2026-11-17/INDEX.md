@@ -2676,6 +2676,28 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   once the VPS returns. Local records/2026-11-17 exists
   (0000 pass), UNPUSHED, push pending VPS recovery. This
   Full detail in pr-integration/1845-run.md.
+- Integrator pass pr-integration-2026-11-17-1945.
+  FAILED, one hundred and seventeenth consecutive
+  rejected once (about 19:52 PT; the rejection is
+  comments, no records PR opened. BATCH pass for
+  (_tools_/records_batch.py) reports DUE at the
+  scheduled pass start 19:45:54 PT (exit 0, inside
+  the 19:00-20:00 window), at clock time and
+  merge-aware - the first pass at or after the 19:00
+  point - but the merge was impossible without the
+  VPS, so the 19:00 batch is missed and missed batches
+  rise to 32; tonight's 20:39 daily retro will read a
+  trade day still not in main; next batch point 23:00
+  PT. Open PRs 711/708/425 unchanged since Nov 12
+  (heads e3c3dfd0, 2f59c270, 4f41cdd6a; updated_at
+  byte-identical to the 1845 pass, so no new comment
+  or review on any PR); merge-tree exit 0 for all
+  three against main a858a0fca (trees f46bfda1,
+  PR 711 feedback stands (no repeat comment due); PR
+  425 still owner-gated (OD-20261108-01 open, re-read
+  stands from the 0015 pass). Records branches: 13 via
+  verified first-hand this pass (all 12 contained).
+  Full detail in pr-integration/1945-run.md.
 ## 14:39 to about 15:38 - PR catch-all pass (blocked delivery, VPS SSH down)
 
 - 14:39 PT 2026-11-17, pr-catchall-1439 - blocked delivery. VPS SSH
