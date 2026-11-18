@@ -3238,3 +3238,32 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-1804-1117-delivery, UNPUSHED, push pending VPS recovery.
   No PR opened for records/2026-11-17. Record:
   queue-ticker/1804-process-failure.md.
+
+## 18:34 to about 18:50 - Queue ticker pass (process failure, LastWar window missing)
+
+- 18:34 PT 2026-11-17, ticker-1834 - process failure (R2, twenty-sixth
+  consecutive occurrence). Mac mini ONLINE, last_seen UNCHANGED at
+  02:01:32Z since the 1804 read (about 33 minutes stale at pass start).
+  LastWar in running_apps yet 0 windows in list_windows (all 10) in one
+  fresh session (cc-52), open_app LastWar outcome_unknown x3, activate
+  ax_windows_empty, observe observation_unavailable. Probe classifies
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes (exit 10). NEW SHADE
+  persists, sixth pass in a row: the control channel cannot bind ANY
+  window - Chrome window 125 activate geometry_mismatch
+  (agent_display=false); connection.health reports both transports
+  connected, so the gateway is fine and the failure is in the
+  window-binding layer. Ordering mistake, recorded plainly: the route
+  change was re-read LATE - passes-2026-11-17-1457 was claimed and the
+  device token taken before the 1804 record was re-read; both were
+  unwound unused (claim released back to inbox, token released), no game
+  input sent. Next pass must re-read the newest queue-ticker record
+  FIRST, before sync, claim or token. No game unit has executed since
+  ticker-0214 gifts at 02:14 PT, about sixteen and a half hours of
+  routine now missed. Duel day 3 Age of Science (23.3h left at the
+  18:42 read): research, valor badges, drone component chests and radar
+  release all score today - all missed while the window is down.
+  Delivery blocked - VPS SSH still Permission denied (publickey),
+  about 125 hours into the outage; record committed locally only on
+  ticker-1834-1117-delivery, UNPUSHED, push pending VPS recovery.
+  No PR opened for records/2026-11-17. Record:
+  queue-ticker/1834-process-failure.md.
