@@ -17,6 +17,7 @@ instruction of 2026-10-25 to run the regulars and the queue design
 of 2026-10-28.
 modified: 2026-11-18T08:58:00Z
 modified: 2026-11-18T09:47:00Z
+modified: 2026-11-18T11:09:00Z
 ## 00:04 to about 00:14 - Ticker pass ticker-0004 (failed, 1 unit)
 
 - 00:04 PT, ticker-0004 - 1 unit failed, pass stops after it:
@@ -397,3 +398,50 @@ modified: 2026-11-18T09:47:00Z
   This record committed locally on records/2026-11-18, UNPUSHED -
   push via the standard VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/0230-run.md.
+## 02:43 to about 03:09 - Ticker pass ticker-0243 (passes unit FAILED, thirty-eighth consecutive window loss)
+
+- 02:43 PT, ticker-0243 - passes-2026-11-17-2257 FAILED.
+  Thirty-eighth consecutive window-loss occurrence (0134 was
+  the thirty-seventh). Mac mini ONLINE (last_seen
+  2026-11-18T10:06:07Z, newer than 0134's 08:02:34Z by about
+  two hours) but LastWar running with 0 windows. Four computer
+  sessions (cc-77, cc-78, cc-79, cc-80): open_app "LastWar"
+  outcome_unknown three times, list_windows 11 windows with no
+  LastWar entry, observe and screen.snap observation_unavailable,
+  activate LastWar ax_windows_empty; Chrome window 125 also
+  unselectable in three sessions (geometry_mismatch,
+  agent_display=false). connection.repair (target web) returned
+  healthy with no observable change; re-probe identical. Probe
+  classifier now reads CAPTURE_STREAM_DOWN, medium confidence,
+  stop_pass yes (exit 11) - a new shade versus the 0034/0134
+  OFF_SCREEN_WINDOW, because Chrome also fails to observe. No
+  game input sent. Token held 02:44-03:08 PT, released.
+- ORDERING DEVIATION, stated plainly: this pass ran sync and
+  claimed the unit BEFORE re-reading the newest queue-ticker
+  record (0134) - the claim-before-read the route change
+  forbids, same deviation as 0004. The deviation-watch sequence
+  restarts at ZERO honoring passes (0034 first, 0134 second,
+  broken here); R2 advances 37 to 38 verified occurrences.
+  The next pass must re-read the newest queue-ticker record
+  FIRST, before sync and before any claim.
+- Duel day 3, Age of Science, 15.2 hours left at the 02:46
+  read; radar posture RELEASE. Day-3 scoring all missed. No
+  game unit has executed since ticker-0214 gifts 02:14 PT Nov
+  17 - about twenty-four and three-quarter hours of routine
+  now missed. Nov 17 pre-reset sweep pair expired unexecuted
+  (fourth consecutive missed night); Nov 18 pair not yet staged
+  (17:00-hour planner run owns it).
+- Sync: reaped 0, expired 10, due 22, produced 0, already
+  queued 22. Stats: inbox 61, claimed 0, done 2393 (+1 failed
+  passes unit = 2394). Zombie chain stays closed (event ended
+  2026-10-30). Own PRs: VPS gh unreachable; local gh not
+  logged in; cited pr-catchall-0139's live read - exactly three
+  open PRs (#711, #708, #425), none owned by this job, no PR
+  for records/2026-11-17 or records/2026-11-18.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 134.4 hours into the outage; record
+  committed locally only on ticker-0243-1118-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-18. The 03:00 PT batch point passed during
+  this run with no records PR in existence, so missed batches
+  rise 33 to 34. Record: shop-claims/0243-queue-run.md.
