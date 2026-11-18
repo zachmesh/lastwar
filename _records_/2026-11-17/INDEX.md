@@ -4097,3 +4097,44 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   outage; record committed locally only on
   planner-2140-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/2140-run.md.
+## 22:34 to about 22:44 - Ticker pass ticker-2236 (process failure, 32nd consecutive window loss)
+
+- 22:34 PT 2026-11-17, ticker-2236 - process failure: the LastWar
+  game window is still missing on the Mac mini for the 32nd
+  consecutive occurrence by the running count (ticker-2134 at
+  21:38 PT was the 31st; count caveat: the 2104 commit and the
+  2134 record both say 31st, and no 2204 ticker record exists,
+  so the count is muddled by one). Probe-only pass under the
+  ticker-0534 route change: session cc-62, environment.describe
+  (LastWar running, agent_window unavailable, reason
+  new_tab_in_existing_window, fourth pass), connection.health
+  (both transports healthy; progressAgeSeconds 2054, down from
+  5693 at 2134 - the counter moved, not a recovery), open_app
+  LastWar outcome_unknown (C0958A02...), activate brought_to_front
+  false ax_windows_empty, list_windows 11 windows 0 LastWar,
+  computer.observe observation_unavailable, Chrome window 125
+  activate geometry_mismatch (NEW SHADE, twelfth pass: the
+  channel binds no window). mac_capture_probe.py:
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes (exit 10).
+  No unit claimed; passes-2026-11-17-1857 left in inbox; token
+  released unused. No Touch ID, no password, no game input.
+  Ordering note: sync and token-acquire ran before the 1804
+  record was re-read (same shape as ticker-1704); no unit was
+  claimed, so nothing ran on an unread state.
+- OWN PRS FIRST: VPS gh CLI dead (SSH Permission denied);
+  freshest GitHub-connector check is tool-development-2232 at
+  22:32 PT, 8 minutes before this pass: exactly three open PRs
+  (#711, #708, #425), heads and updated_at unchanged since
+  Nov 12; none owned by this job, no records/2026-11-17 PR,
+  nothing addressed to this job.
+- Sync: reaped 0, expired 6, due 22, produced 0, inbox 61.
+  Zombie: no seeding, event ended (chain closed 2026-11-14).
+  Duel day 3 Age of Science, 19.4h left at the 22:38 read;
+  research, valor badges, drone chests and radar release all
+  score today and are missed while the window is down. VPS SSH
+  still Permission denied (publickey), about 129.9 hours into
+  the break - no push, no PR; commit lands on local delivery
+  branch ticker-2236-1117-delivery (2134 delivery tip
+  bc6f19a249 as base). Record:
+  queue-ticker/2236-process-failure.md (local mirror only
+  until VPS recovery).
