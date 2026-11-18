@@ -4308,3 +4308,24 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   record committed locally only on
   planner-2240-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/2240-run.md.
+## 23:34 to about 23:42 - Queue ticker pass (blocked, window missing)
+
+- 23:34 PT 2026-11-17, queue-ticker-2334 - process failure (34th
+  consecutive window-loss pass): no unit executed; Mac ONLINE
+  (last_seen 2026-11-18T07:28:57Z) but LastWar windowless (running,
+  0 windows) - open_app outcome_unknown, list_windows same 11
+  windows, observe observation_unavailable; mac_capture_probe
+  OFF_SCREEN_WINDOW, medium confidence, stop_pass yes. No game
+  screen reached, nothing collected, nothing spent; tracker
+  untouched. No game unit executed since ticker-0214 gifts at
+  02:14 PT, about 21.5 hours of routine now missed. Sync: reaped
+  0, expired 0, due 22, produced 0. Zombie chain stays closed, no
+  seeding. Duel day 3 Age of Science, 18.4h left; day-3 scoring
+  still missed. Own PRs first via browser fetch of
+  github.com/zachmesh/lastwar/pulls: exactly three open PRs #711
+  #708 #425, none owned by this job, no records/2026-11-17 PR, no
+  question to answer. Delivery blocked - VPS SSH still Permission
+  denied (publickey), about 130.6 hours into the outage; record
+  committed locally only on ticker-2334-1117-delivery, no PR for
+  records/2026-11-17.
+  Record: queue-ticker/2334-process-failure.md.
