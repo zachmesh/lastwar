@@ -1345,3 +1345,38 @@ modified: 2026-11-18T13:09:00Z
 
 - 10:00 PT, pr-integration-1000 - FAILED, at least the eighty-seventh consecutive failed integrator pass. VPS SSH tried once, Permission denied (publickey), about 141.4 hours into the outage (since 2026-11-12 12:47 PT); IONOS console route (owner chose 2026-11-14 17:37 PT) still not complete. Read-only pass via the GitHub connector and a fresh local HTTPS clone of main (a858a0fca, unchanged since 2026-11-12 11:52 PT): exactly 3 open PRs, all unchanged since the 0845 pass - 711 (knowledge fold, head e3c3dfd0, updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12, head 2f59c270, updatedAt 2026-11-12T20:44:37Z), 425 (tools log gate, head 4f41cdd6a, updatedAt 2026-11-12T19:29:37Z). Checker gate _tools_/records_batch.py run locally twice - NOT DUE at clock time about 10:09 PT (exit 1, next batch 11:00 PT, 50 minutes away) and NOT DUE replayed at trigger time 10:00:54 PT (59 minutes away) - non-batch pass, so records PR 708 (26 commits ahead of main, merge-tree clean f46bfda1) awaits the 11:00 batch and no merge was due. PR 711 merge-tree clean (e05ec8b5), held on the standing 1145 review feedback, no repeat comment due. PR 425 merge-tree clean (08e8515a), still owner-gated, standing 2026-11-07 2245 escalation, OD-20261108-01 re-read stands. No merges, no comments, no records PR opened, no sync-back. Missed batches stay 35; next batch point 11:00 PT 2026-11-18. Records branches: 13 via ls-remote, latest records/2026-11-12, none for 11-13 through 11-18; only records/2026-11-12 carries commits beyond main and it already has PR 708. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about thirty-two hours missed). Record is a local mirror copy only; records-branch delivery blocked until VPS SSH is restored. Record: pr-integration/1000-run.md.
 
+## 11:33 to about 11:47 - Ticker pass ticker-1133 (harvest unit FAILED, forty-fifth consecutive window loss)
+
+- 11:33 PT, ticker-1133 - harvest-2026-11-18-1003 FAILED.
+  Forty-fifth consecutive window-loss occurrence (1010 was the
+  forty-fourth). Mac mini ONLINE (last_seen 2026-11-18T19:03:24Z,
+  about 30 minutes before the pass), LastWar running
+  (com.lastwar.ios) but exposes no window: two computer sessions
+  (cc-98, cc-99), open_app "LastWar" outcome_unknown, activate
+  LastWar ax_windows_empty, list_windows 11 windows with no
+  LastWar entry (three checks, one after a 20-second wait),
+  observe and screen.snap observation_unavailable. Fresh session
+  cc-99 still wedged on the stale LastWar target - open_app
+  "Finder" fails stale_observation/geometry_mismatch. No game
+  screen reached, no bubbles collected, no Armed Truck loot
+  claimed, nothing spent. Token held 11:35-11:47 PT, released.
+- ORDERING DEVIATION, stated plainly: this pass ran sync and
+  claimed the unit BEFORE re-reading the newest queue-ticker
+  record (1010), against the ticker-0534 route change (claim no
+  unit until the window is recovered). The deviation watch
+  restarts at zero a seventh time. The next pass must re-read the
+  newest queue-ticker record FIRST, before sync and before any
+  claim.
+- Probe, pool and duel: probe OFF_SCREEN_WINDOW high confidence,
+  stop_pass yes (evidence /tmp/lw-probe-1133.json). Sync reaped 0,
+  expired 0, due 22, produced 0; pool inbox 77, claimed 0, done
+  2433 at the 11:34 read. Duel day 3 Age of Science ends 18:00 PT
+  Nov 18, radar RELEASE; day-3 scoring missed while the window is
+  down. No game unit executed since ticker-0214 gifts Nov 17
+  02:14 PT (about thirty-three and a half hours missed). Missed
+  batches stay 36; next batch 15:00 PT. VPS SSH still Permission
+  denied (publickey), about 143 hours into the outage; record
+  committed locally only on ticker-1133-1118-delivery, UNPUSHED,
+  push pending VPS recovery. No PR for records/2026-11-18 exists.
+  Records: resource-collection/1133-queue-run.md,
+  queue-ticker/1133-process-failure.md.
