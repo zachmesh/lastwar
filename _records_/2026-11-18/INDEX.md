@@ -986,3 +986,77 @@ modified: 2026-11-18T13:09:00Z
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-18. No batch point passed; missed batches
   stay 34. Record: queue-ticker/0616-process-failure.md.
+- 06:32 PT 2026-11-18, tool-development-0632 - no-op (VPS SSH still Permission denied, ~138h into the outage; own PR #425 still CLEAN against main a858a0fca8, owner-gated on OD-20261108-01 with no new comment since 2026-11-12 19:29:36Z; merge-tree exit 0, merged tree 08e8515a, PR-only diff unchanged 3 files 330+/101-; issues #712 and #709 unchanged and already implemented/held locally - #712 branch b3d25979fc, #709 branch cff911b5db - pending the PR route; no code changed, no PR opened, no comment posted, no Slack sync). Record: tool-development/0632-run.md.
+- 06:45 PT 2026-11-18, pr-integration-0645 - FAILED. VPS SSH still Permission denied (publickey), about 138 hours into the outage; IONOS-console recovery chosen 2026-11-14 still not landed. Checker _tools_/records_batch.py run locally from a fresh HTTPS clone of main: NOT DUE three ways (clock, merge-aware, trigger-time replay), non-batch pass, next batch 07:00 PT (10-14 minutes away). Missed batches stay 34. Open PRs 711, 708, 425 re-verified read-only via the GitHub connector - heads and updated_at unchanged since 2026-11-12; all three merge-tree exit 0 against main a858a0fca (unchanged since 2026-11-12 11:52 PT), no conflicts. 708 awaits batch (not merged, non-batch pass + VPS down); 711 held on the standing 1145 review, no repeat comment due; 425 still owner-gated (OD-20261108-01 open, no owner decision), standing escalation from 2026-11-07 2245. The 0544 pass's "PR #425 head moved, needs re-verification" is stale - 0532 tool-dev already re-verified 4f41cdd6abeb CLEAN this morning, re-confirmed here. No new records PR opened (only records/2026-11-12 uncontained, already has PR 708; no records branch for 11-13 through 11-18). At least the eighty-fourth consecutive failed integrator pass from the recorded chain. Record: pr-integration/0645-run.md (local mirror + hidden_files backup; branch commit deferred until route recovery).
+## 06:47 to about 06:55 - PR catch-all pass (blocked delivery, quiet run)
+
+- 06:39 PT, pr-catchall-0639 - BLOCKED DELIVERY, 129th
+  consecutive blocked catchall pass. VPS SSH tried once,
+  Permission denied (publickey), about 138 hours into the
+  outage; IONOS console route (owner chose 2026-11-14 17:37
+  PT) still not complete, about 85.2 hours later. Read-only
+  pass via the authenticated GitHub connector: exactly three
+  open PRs, all unchanged since the 0039 pass - 711 (knowledge
+  fold, Owner lastwar-knowledge-organizer, head e3c3dfd0,
+  updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12,
+  Owner lastwar-pr-integrator, head 2f59c270, updatedAt
+  2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updatedAt
+  2026-11-12T19:29:37Z); named owners match the diffs, none
+  is this job's, nothing adoptable. This job's one adopted
+  PR 137 stays merged (2026-11-02T01:48:35Z, zachmesh).
+  Issues: 138 real open issues in a 2-page connector read
+  (100+38, zero dupes), zero unclassified; newest issue 712;
+  latest-updated real issue #689 at 2026-11-12T20:11:54Z.
+  Owner-decision issues over 24h, all unchanged: 132, 154,
+  335, 514, 517. No new stale-owner flag, no new
+  owner-gated point; the three flags from the 1139/1239
+  windows remain in force. No batch point crossed in this
+  run window, so missed batches stay 34; next point 07:00
+  PT 2026-11-18. No new chain gap; the 0339 slot on
+  2026-11-18 stays the seventh confirmed gap. Mac mini
+  ONLINE per the ticker-0616 note (last_seen
+  2026-11-18T13:23:44Z) but LastWar windowless (forty-first
+  consecutive window loss); no game unit since ticker-0214
+  gifts Nov 17 02:14 PT, about twenty-eight hours. Quiet
+  run: no Slack DM sync, no chat report. Record is a local
+  mirror copy only; records-branch delivery blocked until
+  VPS SSH is restored.
+  Record: pr-catchall/0639-run.md.
+
+- 06:32 PT, knowledge-organization-0632 - no-op for folding (partial, delivery blocked). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 0532 run and to the 0616/0540/0632/0645 passes' independent reads) - no new question or numbered fix point; the 1145 amendment to PR #711 still owed, branch head unchanged since 2026-11-12. Knowledge issues: 41 open, newest #678, newest updated #595, unchanged. Four records read in full since the 0532 close: queue-ticker 0616 (forty-first consecutive window-loss occurrence, R2 40 to 41; ordering HONORED - 0500 re-read before sync, first honoring pass since the deviation watch restarted at zero a third time, one honoring pass with two more needed; connection.repair moved transport progressAge for the first time, 3527/7261 down to 123 on both transports, while the window stayed absent; one activate interrupted by a service restart mid-call; probe label OFF_SCREEN_WINDOW unchanged from 0500; Mac last_seen 2026-11-18T13:23:44Z, gateway active again about 05:23 PT), queue-planning 0540 (10 units staged, 1803 set plus scout 1800 and zero-sweep 1730 seq 2, completing tonight's sweep pair; scout diff 0; pool inbox 78, done 2404; seventieth consecutive planner run failing to commit), tool-development 0632 (no-op, PR #425 owner-gated, #712/#709 held), pr-integration 0645 (FAILED, checker NOT DUE three ways, non-batch pass; at least the eighty-fourth consecutive failed integrator pass; missed batches 34), plus pr-catchall 0639 read in full at the closing find (129th consecutive blocked catchall pass; 138 real issues, zero unclassified, newest #712, latest-updated #689; owner-decision issues 132, 154, 335, 514, 517 unchanged; no new chain gap). The 0534 slot is now explained (0500 ended 05:08 PT, planner ran 05:40 PT, tick most likely fired late or window taken by planner) and does not join the unknown list; unknown slots stay 2204, 0104, 0204. Records-labeling resolution: the 0544 pass's "PR #425 head moved, needs re-verification" is stale, doubly refuted (0532 tool-dev and 0645 integrator both re-verified 4f41cdd6abeb CLEAN); the 0532 tool-dev "0440 staged 0 units" vs the 0440 record's 1 staged still stands unresolved. The 0639 catchall slot LANDED (pr-catchall/0639-run.md, executed 06:47-06:55 PT), not a gap. Chain gaps still SEVEN. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about 28 hours missed). Missed batches stay 34; next batch 07:00 PT. Duel day 3 Age of Science ends 18:00 PT Nov 18. No profile folded, no gap filed; folding watermark unchanged at dfe14a38db. VPS SSH still Permission denied (publickey), about 138 hours into the outage; record + INDEX entry live in the local mirror only, backup in goal hidden_files/2026-11-18. Record: knowledge-organization/0632-run.md.
+
+## 06:40 to about 07:31 - Queue planning pass (partial, VPS SSH down)
+
+- 06:40 PT 2026-11-18, queue-planning-0640 - partial (71st
+  consecutive planner run failing to commit): plan staged 11
+  units (mail/help/gifts/train/star-ceremony/duel-score 1830,
+  passes/secrets/treasures/trucks/events 1857;
+  already_present 67, reaped 0, expired 12 - the 0230 set of 6,
+  the 0257 set of 5, plus scout-midday-2026-11-17-0700) -
+  the 12-hour horizon now reaches about 19:30 local Nov 18.
+  Pre-reset sweep production was NOT due (06:40-hour run) -
+  tonight's pair is COMPLETE via the plan (seq 1 staged by
+  the 0440 run, seq 2 by the 0540 run); last night's pair
+  EXPIRED UNEXECUTED at 18:04:42 local Nov 17 (fourth
+  consecutive missed night, Nov 14, 15, 16, 17). The staged
+  sweep units carry the known gaps (no ledger-walk task text;
+  expires 18:00 local, an hour before the 19:00 reset).
+  Scout diff on the 2026-11-11 6-pass observation applied with
+  0 counts (observed 52, actionable 0, enqueued 0,
+  unexplained red dots 11); 0 withdrawals (oldest inbox unit
+  vip-2026-11-17-1800, created 2026-11-17T14:58:33Z, is newer
+  than the Nov 11 observation); pool inbox 77, claimed 0,
+  done 2416 at 07:30 local (78 at 0540 + 11 staged - 12
+  expired). Ticker-0616 06:22-06:28 PT process failure
+  (forty-first consecutive window-loss occurrence; the 06:34
+  and 07:04 ticks left no record); Mac ONLINE (last_seen
+  2026-11-18T13:23:44Z at the 0616 pass) but LastWar
+  windowless; no game unit executed since ticker-0214 gifts
+  at 02:14 PT, about twenty-nine hours of routine now missed.
+  Duel day 3 Age of Science, about 10.5 hours left at the
+  07:30 read. Delivery blocked - VPS SSH still Permission
+  denied (publickey), about 139 hours into the outage;
+  record committed locally only on planner-0640-1118-delivery,
+  no PR for records/2026-11-18. Record:
+  queue-planning/0640-run.md.
