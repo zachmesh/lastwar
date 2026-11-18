@@ -2825,3 +2825,30 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-1613-1117-delivery, UNPUSHED, push pending VPS recovery.
   No PR opened for records/2026-11-17. Record:
   queue-ticker/1613-process-failure.md.
+
+## 16:34 to about 16:45 - Queue ticker pass (process failure, LastWar window missing)
+
+- 16:34 PT 2026-11-17, ticker-1634 - process failure (R2, twenty-second
+  consecutive occurrence). Mac mini ONLINE, last_seen UNCHANGED at
+  00:03:35Z since the 1613 read (about 40 minutes stale); LastWar in
+  running_apps yet 0 windows in list_windows (all 10, and app-filtered
+  0), list_apps 7 apps with no LastWar entry, open_app outcome_unknown,
+  activate ax_windows_empty, observe and screen.snap
+  observation_unavailable in session cc-46. Probe classifies
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes (exit 10). NEW
+  SHADE persists, second pass in a row: the control channel cannot bind
+  ANY window this pass - Chrome window 125 activate geometry_mismatch
+  (agent_display=false), Chrome observation also fails. Recovery is the
+  same owner step: click the LastWar Dock icon once, then re-probe. The
+  device token was acquired at pass start and released unused; no unit
+  claimed, tracker untouched. No game unit has executed since
+  ticker-0214 gifts at 02:14 PT, about fourteen and a half hours of
+  routine now missed. Duel day 2 Base Expansion ends 18:00 PT (1.3h
+  left at the 16:39 read): UR trucks and Legendary secrets score today,
+  radar stacks - all missed while the window is down; tonight's sweep
+  pair (1630 + 1730) is staged but blocked unless the window recovers
+  before 17:30. Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 123.5 hours into the outage; record committed
+  locally only on ticker-1634-1117-delivery, UNPUSHED, push pending VPS
+  recovery. No PR opened for records/2026-11-17. Record:
+  queue-ticker/1634-process-failure.md.
