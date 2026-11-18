@@ -4308,6 +4308,29 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   record committed locally only on
   planner-2240-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/2240-run.md.
+- 23:12 PT 2026-11-17, queue-ticker-2304 - failed (33rd
+  consecutive window-loss pass): harvest-2026-11-17-2203
+  failed; Mac ONLINE (last_seen 2026-11-18T06:04:28Z, first
+  connection since Nov 12) but LastWar windowless (pid 11266,
+  background mode, 0 windows) - open_app outcome_unknown x4
+  across two fresh sessions (cc-63, cc-64), activate
+  ax_windows_empty, list_windows same 11 windows, observe /
+  screen.snap observation_unavailable, describe and
+  inspect_menu refused for no bound window; after a 90s wait
+  the window still had not appeared. No game screen reached,
+  nothing collected, nothing spent; tracker untouched. No game
+  unit executed since ticker-0214 gifts at 02:14 PT, about 21
+  hours of routine now missed. Sync: reaped 0, expired 5, due
+  22, produced 0. Zombie chain stays closed, no seeding.
+  Tonight's pre-reset sweep pair already expired unexecuted at
+  18:04:42 (fourth consecutive missed night). Own PRs first via
+  browser fetch of github.com/zachmesh/lastwar/pulls: exactly
+  three open PRs #711 #708 #425, none owned by this job, no
+  records/2026-11-17 PR, no question to answer. Delivery
+  blocked - VPS SSH still Permission denied (publickey), about
+  130 hours into the outage; record committed locally only on
+  ticker-2304-1117-delivery, no PR for records/2026-11-17.
+  Record: resource-collection/2310-queue-run.md.
 ## 23:34 to about 23:42 - Queue ticker pass (blocked, window missing)
 
 - 23:34 PT 2026-11-17, queue-ticker-2334 - process failure (34th
@@ -4329,3 +4352,106 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   committed locally only on ticker-2334-1117-delivery, no PR for
   records/2026-11-17.
   Record: queue-ticker/2334-process-failure.md.
+## 22:39 to about 23:20 - PR catch-all pass (blocked delivery, VPS SSH down)
+
+- 22:39 PT 2026-11-17, pr-catchall-2239 - blocked delivery
+  (122nd consecutive blocked catchall pass evidenced in the
+  record chain): VPS SSH tried once, Permission denied
+  (publickey), about 130.6 hours into the outage; IONOS
+  console route (owner chose 2026-11-14 17:37 PT) still not
+  complete, about 77.6 hours later. Read-only pass via the
+  authenticated GitHub connector: exactly three open PRs,
+  all unchanged since the 2139 pass - 711 (knowledge fold,
+  Owner lastwar-knowledge-organizer, head e3c3dfd0,
+  updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12,
+  Owner lastwar-pr-integrator, head 2f59c270, updatedAt
+  2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updatedAt
+  2026-11-12T19:29:37Z); named owners match the diffs, none
+  is this job's, nothing adoptable. This job's one adopted
+  PR 137 stays merged (2026-11-02T01:48:35Z, zachmesh).
+  Issues: 138 real open issues in a 2-page connector read
+  (100+38, zero dupes), zero unclassified; newest issue 712;
+  latest-updated real issue #689 at 2026-11-12T20:11:54Z.
+  Owner-decision issues over 24h, all unchanged: 132, 154,
+  335, 514, 517. No new stale-owner flag, no new
+  owner-gated point; the three flags from the 1139/1239
+  windows remain in force. The 23:00 PT batch point passed
+  during this run window with no merge, so missed batches
+  rise 32 to 33; next point 03:00 PT 2026-11-18. Chain gaps
+  stay six confirmed. Quiet run: no Slack DM sync, no chat
+  report. Record is a local mirror copy only; records-branch
+  delivery blocked until VPS SSH is restored.
+  Record: pr-catchall/2239-run.md.
+
+## 23:32 to about 23:38 - Knowledge organization pass (no-op for folding, R2 thirty-third occurrence, missed batches 33)
+- 23:32 PT 2026-11-17, knowledge-organization-2332 - no-op for
+  folding. VPS SSH still Permission denied (publickey) at run
+  start, about 130.7 hours into the outage; IONOS console route
+  (chosen 2026-11-14 17:37 PT) still not complete, about 78 hours
+  later. Own PRs re-read live via the GitHub connector, all
+  unchanged: #711 (knowledge, head e3c3dfd0, updated
+  2026-11-12T20:04:57Z), #708 (records 2026-11-12, head 2f59c270,
+  updated 2026-11-12T20:44:37Z), #425 (tools log gate, head
+  4f41cdd6, updated 2026-11-12T19:29:37Z); #711 corroborated by
+  the pr-catchall 2239, queue-planning 2240 and ticker-2304
+  passes' own live reads the same hour. Knowledge issues re-read
+  live, totalCount 41, newest #678, newest updated #595
+  (2026-11-12T14:11:46Z), unchanged. Four records read in full
+  since the 2232 close: queue-ticker 2236 (process failure, 32nd
+  consecutive window-loss occurrence; NEW SHADE twelfth pass;
+  progressAgeSeconds moved 5693 to 2054, a gateway-counter
+  movement, not a recovery; sync-before-read ordering noted, no
+  unit claimed, so the deviation watch does NOT re-fire),
+  queue-planning 2240 (partial, 12 units staged for Nov 18
+  1003/1030 slots, scout diff 0 counts, sweep pair expired
+  fourth consecutive night), pr-catchall 2239 (blocked delivery,
+  122nd consecutive; 138 real issues, newest #712,
+  latest-updated #689; 23:00 PT batch point passed with no merge,
+  missed batches 32 to 33; chain gaps stay six),
+  resource-collection 2310 (ticker-2304 harvest FAILED, 33rd
+  consecutive window-loss occurrence). R2 advances THIRTY-ONE to
+  THIRTY-THREE verified occurrences (32nd ticker-2236, 33rd
+  ticker-2304, both landed records). COUNTING-LABEL CONTRADICTION
+  persists for the retro: ticker-2104 and ticker-2134 both
+  recorded as the 31st; plus the 2204 slot is now unknown (no
+  record or delivery branch in the mirror) - if a 2204 pass hit
+  the blocker, the pass-count figures would be 33rd and 34th.
+  DEVIATION WATCH stays CLOSED (no claim-before-read in 2236 or
+  2304; two of three verification passes evidenced). Mac
+  last_seen 2026-11-18T06:04:28Z at the 2236 pass start - no
+  evidence the owner did the Dock-icon step as of 23:12 PT.
+  Eight unlanded records/slots now (0904, 1234, 0845 mirror,
+  1632, 1834, 1904, 2104, 2204); survivor-intake 2004 still has
+  no day-INDEX section. No fold, no profile contradiction, no gap
+  filed. Record: knowledge-organization/2332-run.md (local mirror
+  only; backup in goal hidden_files/2026-11-17; records-branch
+  delivery owed at VPS recovery).
+
+## 23:40 to about 23:48 - Queue planning pass (partial, VPS SSH down)
+
+- 23:40 PT 2026-11-17, queue-planning-2340 - partial (64th
+  consecutive planner run failing to commit): plan staged 5
+  units (passes/secrets/treasures/trucks/events
+  2026-11-18-1057; already_present 69, reaped 0, expired 0)
+  - the 12-hour horizon now reaches about 11:44 local Nov 18.
+  Pre-reset sweep production was NOT due (23:00-hour run) -
+  tonight's pair already EXPIRED UNEXECUTED at 18:04:42 local
+  (fourth consecutive missed night, Nov 14, 15, 16, 17).
+  Scout diff on the 2026-11-11 6-pass observation applied
+  with 0 counts (observed 52, actionable 0, enqueued 0,
+  unexplained red dots 11); 0 withdrawals (oldest inbox unit
+  scout-midday-2026-11-17-0700, created 2026-11-17T03:46:30Z,
+  is newer than the Nov 11 observation); pool inbox 72,
+  claimed 0, done 2382 at 23:44 local (73 at 2240 + 5 staged
+  - 5 expired in ticker-2304's sync - 1 failed
+  harvest-2203). Ticker-2334 process failure 23:34-23:42 PT
+  (thirty-fourth consecutive window-loss occurrence, shade
+  fifth pass); Mac ONLINE (last_seen 2026-11-18T07:28:57Z)
+  but LastWar windowless; no game unit executed since
+  ticker-0214 gifts at 02:14 PT, about twenty-one and a half
+  hours of routine now missed. Delivery blocked - VPS SSH
+  still Permission denied (publickey), about 131 hours into
+  the outage; record committed locally only on
+  planner-2340-1117-delivery, no PR for records/2026-11-17.
+  Record: queue-planning/2340-run.md.
