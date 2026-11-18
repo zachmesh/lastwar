@@ -2648,6 +2648,18 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   pass), UNPUSHED, push pending VPS recovery. This
   record committed locally on records/2026-11-17,
   Full detail in pr-integration/1637-run.md.
+- Integrator pass pr-integration-2026-11-17-1730.
+  FAILED, one hundred and fifteenth consecutive
+  rejected once (about 17:42 PT; the rejection is
+  scheduled pass start 17:30:54 PT (exit 1, outside
+  4f41cdd6a; updated_at byte-identical to the 1637
+  records/2026-11-12 re-verified NOT contained in main
+  first-hand this pass; older-branch containment
+  carried from the 1532 pass (all tips byte-identical).
+  /tmp/records-merges.json present at pass start (PR
+  700 merged 2026-11-12T11:09:47-08:00); that timestamp
+  still needs re-verification against gh once the VPS
+  Full detail in pr-integration/1730-run.md.
 ## 14:39 to about 15:38 - PR catch-all pass (blocked delivery, VPS SSH down)
 
 - 14:39 PT 2026-11-17, pr-catchall-1439 - blocked delivery. VPS SSH
