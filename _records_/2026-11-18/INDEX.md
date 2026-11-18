@@ -1060,3 +1060,46 @@ modified: 2026-11-18T13:09:00Z
   record committed locally only on planner-0640-1118-delivery,
   no PR for records/2026-11-18. Record:
   queue-planning/0640-run.md.
+## 07:33 to about 07:49 - Ticker pass ticker-0733 (process failure, forty-second consecutive window loss)
+
+- 07:33 PT, ticker-0733 - 1 unit claimed and closed FAILED, pass
+  stops after it: harvest harvest-2026-11-18-0603 FAILED. Mac
+  mini ONLINE (last_seen 2026-11-18T14:23:30Z), LastWar running
+  (com.lastwar.ios) but exposes no window - same
+  fullscreen-Space loss as the 41 preceding passes. One
+  computer session (cc-93): open_app "LastWar" outcome_unknown
+  twice, activate LastWar ax_windows_empty, list_windows 11
+  windows with no LastWar entry, observe and screen.snap
+  observation_unavailable, list_apps 8 apps with LastWar absent
+  from the AX list entirely. No game screen reached, nothing
+  collected, nothing spent. Token held 07:36-07:43 PT, released.
+- ORDERING DEVIATION, stated plainly: this pass ran sync and
+  claimed the unit BEFORE re-reading the newest queue-ticker
+  record (0616-process-failure.md), against the 0534 warning
+  and the ticker-0534 route change (claim no unit until the
+  window is recovered). The 0616 pass was the first honoring
+  pass since the deviation watch restarted at zero a third time
+  at 0500; this pass breaks the honoring streak, so the watch
+  restarts at zero a fourth time. The claim should not have
+  happened; the probe itself was still required by the retry
+  rule and sent no game input. The next pass must re-read the
+  newest queue-ticker record FIRST, before sync and before any
+  claim.
+- Duel day 3, Age of Science, 10.3 hours left at the 07:44
+  read; radar posture RELEASE. Day-3 scoring missed. No game
+  unit has executed successfully since ticker-0214 gifts at
+  02:14 PT Nov 17 - about twenty-nine hours of routine now
+  missed.
+- Sync: reaped 0, expired 0, due 22, produced 0, already
+  queued 22. Stats: inbox 77, claimed 0, done 2416. Zombie
+  chain stays closed (event ended 2026-10-30). Own PRs: VPS
+  gh unreachable; GitHub connector re-read - exactly three
+  open PRs (#711 #708 #425), none owned by this job, no
+  records/2026-11-18 PR. Push and PR blocked - VPS SSH still
+  Permission denied (publickey), about 139 hours into the
+  outage; record committed locally only on
+  ticker-0733-1118-delivery, UNPUSHED, push pending VPS
+  recovery. The 07:00 PT batch point passed with no records PR
+  merged, so missed batches rise 34 to 35. Records:
+  queue-ticker/0733-process-failure.md and
+  resource-collection/0737-queue-run.md.
