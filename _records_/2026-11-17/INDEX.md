@@ -3831,3 +3831,35 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   outage; record committed locally only on
   planner-2040-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/2040-run.md.
+## 21:04 to about 21:11 - Queue ticker pass (access failure, LastWar window missing)
+
+- 21:04 PT 2026-11-17, ticker-2104 - access failure (R2, thirty-first
+  consecutive occurrence of the window loss). Mac mini ONLINE,
+  last_seen 04:04:22Z (unchanged since 20:04 PT), LastWar running yet
+  0 windows in list_windows; open_app LastWar outcome_unknown,
+  observe full/current observation_unavailable, activate Chrome
+  window 125 geometry_mismatch (agent_display=false,
+  ax_windows_empty) in one computer session (cc-60).
+  environment.describe: agent_window unavailable, reason
+  new_tab_in_existing_window (same as 2034); connection.health
+  progressAgeSeconds about 3900, up from about 2004 - no gateway
+  progress for about 65 minutes and still growing. NEW SHADE
+  persists eleventh pass in a row: the control channel cannot bind
+  ANY window. Route change honored: the 2034 record was re-read
+  BEFORE the token was taken and the unit claimed - no
+  claim-before-read recurrence. The Arms Race phase, score and
+  tier-3 target were never read; the unit was completed as failed
+  per the 1704 pattern (result stats patched with the six required
+  keys so the close counts as verified), token released, no game
+  input sent, nothing claimed or spent. Duel day 3 Age of Science
+  is live, so the tier-3 push is still owed and the tracker was
+  left untouched, so the next tick re-produces arms-race. Zombie
+  Invasion: no seeding, the event ended (verified 2026-11-15,
+  chain closed). Sync: 22 due, 0 produced, 0 reaped. Delivery
+  blocked - VPS SSH still Permission denied (publickey), about 129
+  hours into the outage; OWN PRS FIRST via GitHub connector
+  instead (PRs 711/708/425 unchanged since Nov 12, none owned by
+  this job, no PR for records/2026-11-17); no push or PR is
+  possible, record committed locally only on delivery branch
+  ticker-2104-1117-delivery, UNPUSHED. Record:
+  arms-race/2104-queue-run.md.
