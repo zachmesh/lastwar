@@ -220,3 +220,40 @@ modified: 2026-11-18T08:58:00Z
   hours into the outage; record committed locally only on
   ticker-0034-1118-delivery, UNPUSHED, push pending VPS
   recovery. Record: queue-ticker/0034-process-failure.md.
+
+## 01:34 to about 01:40 - Ticker pass ticker-0134 (process failure, no unit claimed)
+
+- 01:34 PT, ticker-0134 - PROCESS FAILURE, thirty-seventh
+  consecutive window loss. Mac mini ONLINE (last_seen
+  08:02:34Z, unchanged since the 0004 pass), LastWar running
+  (com.lastwar.ios) but exposes no window. Four computer
+  sessions (cc-73, cc-74, cc-75, cc-76): open_app "LastWar"
+  outcome_unknown three times, list_windows 11 windows with
+  no LastWar entry, observe and screen.snap
+  observation_unavailable, activate ax_windows_empty; Chrome
+  window 125 also unselectable (geometry_mismatch,
+  agent_display=false), the shade the 0034 pass first
+  recorded. Probe OFF_SCREEN_WINDOW, high confidence,
+  stop_pass yes. No game input sent. Token held 01:36-01:39
+  PT, released unused; no unit claimed.
+- ORDERING DEVIATION, stated plainly: sync ran BEFORE the
+  0034 record was re-read (same deviation as 0004); the route
+  change requires the newest queue-ticker record first. The
+  sync produced nothing and no unit was claimed, so it cost
+  nothing this time.
+- Duel day 3, Age of Science, 16.4 hours left at the 01:36
+  read; radar posture RELEASE. Day-3 scoring (research, valor
+  badges, drone chests, radar release) all missed. No game
+  unit executed since ticker-0214 gifts 02:14 PT Nov 17 -
+  about twenty-three and a half hours of routine now missed.
+- Sync: reaped 0, expired 0, due 22, produced 0, already
+  queued 22. Stats: inbox 71, claimed 0, done 2383. Zombie
+  chain stays closed (event ended 2026-10-30). Own PRs:
+  VPS gh unreachable; GitHub connector re-read - exactly
+  three open PRs (#711, #708, #425), none owned by this job,
+  no PR for records/2026-11-17 or records/2026-11-18.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 133.8 hours into the outage; record
+  committed locally only on ticker-0134-1118-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-18. Record: queue-ticker/0134-process-failure.md.
