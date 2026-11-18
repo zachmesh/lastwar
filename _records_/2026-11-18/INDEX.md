@@ -1060,6 +1060,7 @@ modified: 2026-11-18T13:09:00Z
   record committed locally only on planner-0640-1118-delivery,
   no PR for records/2026-11-18. Record:
   queue-planning/0640-run.md.
+- 07:32 PT 2026-11-18, tool-development-0732 - no-op (VPS SSH still Permission denied, ~139h into the outage; own PR #425 still CLEAN against main a858a0fca8, owner-gated on OD-20261108-01 with no new comment since 2026-11-12 19:29:36Z; merge-tree exit 0, merged tree 08e8515a, PR-only diff unchanged 3 files 330+/101-; issues #712 and #709 unchanged and already implemented/held locally - #712 branch b3d25979fc, #709 branch cff911b5db - pending the PR route; no code changed, no PR opened, no comment posted, no Slack sync). Record: tool-development/0732-run.md.
 ## 07:33 to about 07:49 - Ticker pass ticker-0733 (process failure, forty-second consecutive window loss)
 
 - 07:33 PT, ticker-0733 - 1 unit claimed and closed FAILED, pass
@@ -1103,3 +1104,44 @@ modified: 2026-11-18T13:09:00Z
   merged, so missed batches rise 34 to 35. Records:
   queue-ticker/0733-process-failure.md and
   resource-collection/0737-queue-run.md.
+- 07:45 PT 2026-11-18, pr-integration-0745 - FAILED. VPS SSH still Permission denied (publickey), about 139 hours into the outage; IONOS-console recovery chosen 2026-11-14 still not landed. Checker _tools_/records_batch.py run locally from a fresh HTTPS clone of main: DUE three ways (clock, merge-aware, trigger-time replay), so this pass IS a batch pass - the first pass at or after the 07:00 batch point - but the 07:00 batch merge of PR 708 was impossible without the VPS, so missed batches rise 34 to 35 (the queue-ticker 0733 record counted the same rise independently). Open PRs 711, 708, 425 re-verified read-only via the GitHub connector - heads and updated_at unchanged since 2026-11-12; all three merge-tree exit 0 against main a858a0fca (unchanged since 2026-11-12 11:52 PT), no conflicts. 708 batch merge due but blocked; 711 held on the standing 1145 review, no repeat comment due; 425 still owner-gated (OD-20261108-01 open, no owner decision), standing escalation from 2026-11-07 2245. No new records PR opened (only records/2026-11-12 uncontained, already has PR 708; no records branch for 11-13 through 11-18). At least the eighty-fifth consecutive failed integrator pass from the recorded chain. Record: pr-integration/0745-run.md (local mirror + hidden_files backup; branch commit deferred until route recovery).
+- 07:32 PT, knowledge-organization-0732 - no-op for folding (partial, delivery blocked). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 0632 run and to the 0733/0640/0732/0745/0739 passes' independent reads) - no new question or numbered fix point; the 1145 amendment to PR #711 still owed, branch head unchanged since 2026-11-12. Knowledge issues: 41 open, newest #678, unchanged. Six records read in full since the 0632 close: queue-ticker 0733 (forty-second consecutive window-loss occurrence, R2 41 to 42; ordering DEVIATION - sync and claim of harvest-0603 ran BEFORE re-reading the 0616 record, so the deviation watch restarts at ZERO a fourth time, a further occurrence of B-2026-11-17-02; LastWar absent from the AX app list while still in running_apps; probe label OFF_SCREEN_WINDOW unchanged; Mac last_seen 2026-11-18T14:23:30Z), resource-collection 0737 (harvest-0603 failed, same 42nd occurrence, same deviation), queue-planning 0640 (11 units staged, 1830/1857 sets, expired 12; scout diff 0; pool inbox 77, done 2416; seventy-first consecutive planner run failing to commit), tool-development 0732 (no-op, PR #425 owner-gated, #712/#709 held), pr-integration 0745 (FAILED, checker DUE three ways, BATCH pass, missed batches rise 34 to 35; at least the eighty-fifth consecutive failed integrator pass), pr-catchall 0739 (130th consecutive blocked catchall pass; 138 real issues, zero unclassified, newest #712, latest-updated #689; owner-decision issues 132, 154, 335, 514, 517 unchanged; no new chain gap). The 0704 slot is now explained (07:04 tick fired late as ticker-0733, started 07:33 PT); the 0634 slot joins the unknown list (no ticker record, silent end) - unknown slots now FOUR (2204, 0104, 0204, 0634); if all four hit the blocker, 0733 would be the 46th by pass count. NEW records-labeling inconsistency for the retro: the tool-dev 0732 record misattributes the 0540 staging (10 units, 1803 set) to the 0640 run (11 units, 1830/1857 sets); the 0532 "0440 staged 0 units" note still stands unresolved. Backup-location drift noted: the 0632 backup lives in the goal hidden_files ROOT, not in hidden_files/2026-11-18. Chain gaps still SEVEN. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about 29.5 hours missed). Missed batches now 35; next batch 11:00 PT. Duel day 3 Age of Science ends 18:00 PT Nov 18. No profile folded, no contradiction resolved, no gap filed; folding watermark unchanged at dfe14a38db. VPS SSH still Permission denied (publickey), about 139 hours into the outage; record + INDEX entry live in the local mirror only, backup in goal hidden_files/2026-11-18. Record: knowledge-organization/0732-run.md.
+- 08:32 PT, knowledge-organization-0832 - no-op for folding (partial, delivery blocked). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 0732 run) - no new question or numbered fix point; the 1145 amendment to PR #711 still owed, branch head unchanged since 2026-11-12. Knowledge issues: 41 open, newest #678, unchanged. ZERO new records landed since the 0732 close (mirror find at run close returned nothing); the 0804 ticker slot is PENDING, not declared unknown - no record in the mirror, no staged copy in hidden_files, and no later pass has yet stated that no record exists. R2 stays at FORTY-TWO verified occurrences; deviation watch stays at ZERO honoring passes since the fourth restart; missed batches stay 35; next batch 11:00 PT. Chain gaps still SEVEN; next catchall slot 0839 due 08:39 PT. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about 30 hours missed). No profile folded, no contradiction resolved, no gap filed; folding watermark unchanged at dfe14a38db. VPS SSH still Permission denied (publickey), about 140 hours into the outage; record + INDEX entry live in the local mirror only, backup in goal hidden_files/2026-11-18. Record: knowledge-organization/0832-run.md.
+- 08:32 PT 2026-11-18, tool-development-0832 - no-op (VPS SSH still Permission denied, ~140h into the outage; own PR #425 still CLEAN against main a858a0fca8, owner-gated on OD-20261108-01 with no new comment since 2026-11-12 19:29:36Z; merge-tree exit 0, merged tree 08e8515a, PR-only diff unchanged 3 files 330+/101-; issues #712 and #709 unchanged and already implemented/held locally - #712 branch b3d25979fc, #709 branch cff911b5db - pending the PR route; no code changed, no PR opened, no comment posted, no Slack sync). Record: tool-development/0832-run.md.
+- 08:34 PT, queue-planning-0740 - partial (72nd consecutive planner run failing to commit). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 0640 run) - no new question or numbered fix point. Owner-decision issues 132, 154, 335, 514, 517 unchanged. Plan staged 0 units (pool already complete to ~20:35 local; already_present 77, skipped_closed harvest-2026-11-18-0603); pre-reset sweep NOT DUE, tonight's pair COMPLETE and present in inbox (zero-sweep-1630/1730); scout diff on the 6-pass Nov 11 observation applied with 0 counts (observed 52, unexplained 11); 0 withdrawals (oldest inbox unit vip-2026-11-17-1800 newer than the observation). Pool inbox 76, claimed 0, done 2417 - the -1/+1 vs the 0640 stats is ticker-0733 claiming and closing harvest-2026-11-18-0603 FAILED (forty-second consecutive window-loss occurrence; ordering DEVIATION, deviation watch restarts at zero a fourth time). Missed batches stay 35; next batch 11:00 PT. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about 30 hours missed). Duel day 3 Age of Science ends 18:00 PT Nov 18. VPS SSH still Permission denied (publickey), about 140 hours into the outage; record committed locally only on planner-0740-1118-delivery, UNPUSHED, push pending VPS recovery. No PR for records/2026-11-18 exists. Record: queue-planning/0740-run.md.
+## 07:39 to about 07:49 - PR catch-all pass (blocked delivery, quiet run)
+
+- 07:39 PT, pr-catchall-0739 - BLOCKED DELIVERY, 130th
+  consecutive blocked catchall pass. VPS SSH tried once,
+  Permission denied (publickey), about 139 hours into the
+  outage; IONOS console route (owner chose 2026-11-14 17:37
+  PT) still not complete, about 86.2 hours later. Read-only
+  pass via the authenticated GitHub connector: exactly three
+  open PRs, all unchanged since the 0039 pass - 711 (knowledge
+  fold, Owner lastwar-knowledge-organizer, head e3c3dfd0,
+  updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12,
+  Owner lastwar-pr-integrator, head 2f59c270, updatedAt
+  2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updatedAt
+  2026-11-12T19:29:37Z); named owners match the diffs, none
+  is this job's, nothing adoptable. This job's one adopted
+  PR 137 stays merged (2026-11-02T01:48:35Z, zachmesh).
+  Issues: 138 real open issues in a 2-page connector read
+  (100+38, zero dupes), zero unclassified; newest issue 712;
+  latest-updated real issue #689 at 2026-11-12T20:11:54Z.
+  Owner-decision issues over 24h, all unchanged: 132, 154,
+  335, 514, 517. No new stale-owner flag, no new
+  owner-gated point; the three flags from the 1139/1239
+  windows remain in force. The 07:00 PT batch point passed
+  during this run window with no records PR merged, so missed
+  batches rise 34 to 35; next point 11:00 PT 2026-11-18. No
+  new chain gap; the 0339 slot on 2026-11-18 stays the seventh
+  confirmed gap. Mac mini ONLINE per the ticker-0616 note
+  (last_seen 2026-11-18T13:23:44Z) but LastWar windowless
+  (forty-first consecutive window loss); no game unit since
+  ticker-0214 gifts Nov 17 02:14 PT, about twenty-nine and a
+  half hours. Quiet run: no Slack DM sync, no chat report.
+  Record is a local mirror copy only; records-branch delivery
+  blocked until VPS SSH is restored.
+  Record: pr-catchall/0739-run.md.
+
