@@ -2616,6 +2616,38 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed.
   Full detail in pr-integration/1532-run.md.
+- Integrator pass pr-integration-2026-11-17-1637.
+  FAILED, one hundred and fourteenth consecutive
+  rejected once (about 16:38 PT; the rejection is
+  server-side, local key fingerprint re-verified at
+  the 1532 pass and unchanged), no merges, no
+  comments, no records PR opened. NON-batch pass for
+  records purposes: the checker
+  (_tools_/records_batch.py) reports NOT DUE at the
+  scheduled pass start 16:30:54 PT (exit 1, outside
+  every batch window), at clock time and merge-aware -
+  the 15:00 window closed at 16:00 PT and the 1532
+  pass was the batch pass for it, so no batch merge
+  was owed here and missed batches stay at 31; next
+  batch point 19:00 PT. Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270,
+  4f41cdd6a; updated_at byte-identical to the 1532
+  pass, so no new comment or review on any PR);
+  merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a,
+  identical to all prior probes). PR 711 feedback
+  Containment verdict carried from the 1532 pass
+  first-hand check (all tips byte-identical): only
+  records/2026-11-12 carries commits beyond main and
+  it already has open PR 708. /tmp/records-merges.json
+  was missing at pass start and was recreated this
+  pass with the single known entry (PR 700 merged
+  2026-11-12T11:09:47-08:00); that timestamp still
+  needs re-verification against gh once the VPS
+  returns. Local records/2026-11-17 exists (0000
+  pass), UNPUSHED, push pending VPS recovery. This
+  record committed locally on records/2026-11-17,
+  Full detail in pr-integration/1637-run.md.
 ## 14:39 to about 15:38 - PR catch-all pass (blocked delivery, VPS SSH down)
 
 - 14:39 PT 2026-11-17, pr-catchall-1439 - blocked delivery. VPS SSH
