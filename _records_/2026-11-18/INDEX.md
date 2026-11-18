@@ -18,6 +18,7 @@ of 2026-10-28.
 modified: 2026-11-18T08:58:00Z
 modified: 2026-11-18T09:47:00Z
 modified: 2026-11-18T11:09:00Z
+modified: 2026-11-18T11:58:00Z
 ## 00:04 to about 00:14 - Ticker pass ticker-0004 (failed, 1 unit)
 
 - 00:04 PT, ticker-0004 - 1 unit failed, pass stops after it:
@@ -570,3 +571,47 @@ modified: 2026-11-18T11:09:00Z
   committed locally only on planner-0240-1118-delivery, no
   PR for records/2026-11-18. Record:
   queue-planning/0240-run.md.
+## 03:53 to about 04:00 - Ticker pass ticker-0353 (process failure, no unit claimed)
+
+- 03:53 PT, ticker-0353 - PROCESS FAILURE, thirty-ninth
+  consecutive window loss. Mac mini ONLINE (last_seen
+  10:06:07Z, unchanged since the 0243 pass, stale about 1 hour
+  50 minutes), LastWar running (com.lastwar.ios) but exposes
+  no window. Four computer sessions (cc-81, cc-82, cc-83,
+  cc-84): open_app "LastWar" outcome_unknown three times,
+  list_windows 11 windows with no LastWar entry, observe and
+  screen.snap observation_unavailable, activate
+  ax_windows_empty; Chrome window 125 also unselectable
+  (geometry_mismatch, agent_display=false), third consecutive
+  pass with that shade. connection.repair target web tried a
+  second time - no "recovery started" signal, no observable
+  change; re-probe after repair failed identically. Probe
+  CAPTURE_STREAM_DOWN, medium confidence, stop_pass yes
+  (exit 11), same as 0243. No game input sent. Token held
+  03:54-04:00 PT, released unused; no unit claimed.
+- ORDERING DEVIATION, stated plainly: sync ran BEFORE the
+  0134 record was re-read (same deviation as 0004 and 0243);
+  the route change requires the newest queue-ticker record
+  first. The sync produced nothing and no unit was claimed, so
+  it cost nothing this time, but the deviation-watch sequence
+  restarts at zero honoring passes again.
+- Duel day 3, Age of Science, 14.1 hours left at the 03:56
+  read; radar posture RELEASE. Day-3 scoring (research, valor
+  badges, drone chests, radar release) all missed. No game
+  unit executed since ticker-0214 gifts 02:14 PT Nov 17 -
+  about twenty-five and three-quarter hours of routine now
+  missed.
+- Sync: reaped 0, expired 4, due 22, produced 0, already
+  queued 22 (completion marker for passes-2026-11-17-2257
+  reaped). Stats: inbox 68, claimed 0, done 2398. Zombie
+  chain stays closed (event ended 2026-10-30). Own PRs:
+  VPS gh unreachable; GitHub connector re-read - exactly
+  three open PRs (#711, #708, #425), heads and updated_at
+  unchanged since Nov 12, none owned by this job, no PR for
+  records/2026-11-17 or records/2026-11-18. Push and PR
+  blocked - VPS SSH still Permission denied (publickey),
+  about 135.2 hours into the outage; record committed locally
+  only on ticker-0353-1118-delivery, UNPUSHED, push pending
+  VPS recovery. No PR opened for records/2026-11-18. No batch
+  point passed during this run; missed-batch count stays 34.
+  Record: queue-ticker/0353-process-failure.md.
