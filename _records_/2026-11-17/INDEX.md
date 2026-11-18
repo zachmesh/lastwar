@@ -3576,3 +3576,30 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   committed locally only on planner-1940-1117-delivery,
   no PR for records/2026-11-17. Record:
   queue-planning/1940-run.md.
+## 20:04 to about 20:13 - Queue ticker pass (access failure, LastWar window missing)
+
+- 20:04 PT 2026-11-17, ticker-2004 - access failure (R2, twenty-ninth
+  consecutive occurrence of the window loss). Mac mini ONLINE,
+  last_seen 04:04:22Z, LastWar running yet 0 windows in
+  list_windows; open_app LastWar outcome_unknown, activate
+  ax_windows_empty, observe and screen.snap observation_unavailable
+  in one computer session (cc-58). NEW SHADE persists ninth pass in
+  a row: the control channel cannot bind ANY window - Google Chrome
+  window 125 also fails with geometry_mismatch
+  (agent_display=false); environment.describe confirms the game
+  process is alive with no accessibility window. Route change
+  re-read LATE again: survivors unit survivors-2026-11-17-1803 was
+  claimed and the token taken before the previous record
+  (ticker-1934, same failure) was re-read; the unit was completed
+  as failed per the 1704 pattern (result stats patched with the six
+  required keys so the close counts as verified), token released,
+  no game input sent, nothing claimed or spent. The survivors line
+  at the front gate was never observed, so the intake is still owed
+  and the tracker was left untouched, so the next tick re-produces
+  survivors. Zombie Invasion: no seeding, the event ended
+  (verified 2026-11-15, chain closed). Sync: 22 due, 0 produced,
+  1 completion marker reaped. Delivery blocked - VPS SSH still
+  Permission denied (publickey); OWN PRS FIRST could not be done
+  and no push or PR is possible, record committed locally only on
+  records/2026-11-17, UNPUSHED. Record:
+  survivor-intake/2004-queue-run.md.
