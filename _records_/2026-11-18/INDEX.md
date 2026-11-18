@@ -5,10 +5,16 @@ modified: 2026-11-18T08:14:00Z
 version: 1.0.0
 description: Day record for 2026-11-18 (America/Los_Angeles) - VPS SSH still down
 status: unverified
----
 
 # 2026-11-18
-
+title: Play Record 2026-11-18
+created: 2026-11-18T08:28:00Z
+modified: 2026-11-18T08:28:00Z
+level: L0
+description: The 0015 PR integration pass - FAILED, VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT); one hundred and twenty-first consecutive failed pass, no merges, no comments, no records PR opened. Checker _tools_/records_batch.py (local fallback from main a858a0fca) reports NOT DUE at the trigger time 00.15.54 PT, at clock time and merge-aware - non-batch pass, no batch merge owed, missed batches stay 33. Open PRs 711/708/425 unchanged since Nov 12, merge-tree exit 0 for all three against main a858a0fca. This record committed locally on records/2026-11-18, UNPUSHED - it needs the VPS route back before it can land
+All times America/Los_Angeles. Actor Muse, under the owner standing
+instruction of 2026-10-25 to run the regulars and the queue design
+of 2026-10-28.
 ## 00:04 to about 00:14 - Ticker pass ticker-0004 (failed, 1 unit)
 
 - 00:04 PT, ticker-0004 - 1 unit failed, pass stops after it:
@@ -47,3 +53,34 @@ status: unverified
   committed locally only on ticker-0004-1118-delivery,
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-18. Record: radar-tasks/0004-queue-run.md.
+## 00:15 to about 00:28 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-18-0015.
+  FAILED, one hundred and twenty-first consecutive failure for the
+  same break: VPS SSH publickey rejected once (about 00:21 PT; the
+  rejection is server-side, local key fingerprint re-verified this
+  pass and unchanged), no merges, no comments, no records PR opened.
+  NON-BATCH pass for records purposes: the checker
+  (_tools_/records_batch.py) reports NOT DUE at the scheduled pass
+  start 00:15:54 PT (exit 1, outside every batch window), at clock
+  time and merge-aware - so no batch merge was owed and missed
+  batches stay 33; next batch point 03:00 PT. Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6a;
+  updated_at byte-identical to the 2300 pass, so no new comment or
+  review on any PR); merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a, identical to all
+  prior probes). PR 711 feedback stands (no repeat comment due);
+  PR 425 still owner-gated (OD-20261108-01 open, re-read stands
+  from the 0015 pass). Records branches: 13 via ls-remote, latest
+  records/2026-11-12, none for 11-13 to 11-18 on the remote, so no
+  new records PR. Containment re-verified first-hand this pass (all
+  12 older branches contained in main; only records/2026-11-12
+  carries commits beyond main and it already has open PR 708).
+  /tmp/records-merges.json was absent at pass start and was
+  recreated this pass (PR 700 merged 2026-11-12T11:09:47-08:00);
+  that timestamp still needs re-verification against gh once the
+  VPS returns. Local records/2026-11-18 created by this pass,
+  UNPUSHED, push pending VPS recovery. This record committed
+  locally on records/2026-11-18, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/0015-run.md.
