@@ -1145,3 +1145,44 @@ modified: 2026-11-18T13:09:00Z
   blocked until VPS SSH is restored.
   Record: pr-catchall/0739-run.md.
 
+## 08:34 to about 09:13 - Ticker pass ticker-0834 (radar unit FAILED, forty-third consecutive window loss)
+
+- 08:34 PT, ticker-0834 - radar-2026-11-18-0603 FAILED.
+  Forty-third consecutive window-loss occurrence (0733 was
+  the forty-second). Mac mini ONLINE (last_seen
+  2026-11-18T16:23:36Z, about 30 minutes before the pass),
+  LastWar running (com.lastwar.ios) but exposes no window:
+  one computer session (cc-94), open_app "LastWar"
+  outcome_unknown three times, list_windows 11 windows with
+  no LastWar entry (four checks), list_apps 8 apps with
+  LastWar absent from the AX app list entirely, activate
+  ax_windows_empty, observe and screen.snap
+  observation_unavailable. Probe classifier returns UNKNOWN
+  (low confidence - evidence file lacks the checklist steps),
+  symptoms identical to the 0733 OFF_SCREEN_WINDOW read. No
+  game input sent. Token held 08:52-09:08 PT, released.
+- ORDERING DEVIATION, stated plainly: this pass ran sync and
+  claimed the unit BEFORE re-reading the newest queue-ticker
+  record (0733) - the claim-before-read the route change
+  forbids, same deviation as 0004, 0243 and 0733. The
+  deviation-watch verification restarts at ZERO honoring
+  passes a fifth time. The next pass must re-read the newest
+  queue-ticker record FIRST, before sync and before any claim.
+- Duel day 3, Age of Science, 9.1 hours left at the 08:53
+  read; radar posture RELEASE. Day-3 scoring all missed. No
+  game unit has executed since ticker-0214 gifts 02:14 PT
+  Nov 17 - about thirty and three-quarter hours of routine
+  now missed. Missed batches stay 35; next point 11:00 PT.
+- Sync: reaped 0, expired 0, due 22, produced 0, already
+  queued 22; completion marker reaped
+  (harvest-2026-11-18-0603). Stats: inbox 76, claimed 0,
+  done 2417. Zombie chain stays closed (event ended
+  2026-10-30). Own PRs: VPS gh unreachable; GitHub connector
+  re-read - exactly three open PRs (#711, #708, #425), none
+  owned by this job, no PR for records/2026-11-17 or
+  records/2026-11-18.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 140 hours into the outage; record
+  committed locally only on ticker-0834-1118-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-18. Record: radar-tasks/0834-queue-run.md.
