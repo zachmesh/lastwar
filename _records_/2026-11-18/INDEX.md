@@ -85,6 +85,14 @@ modified: 2026-11-18T08:58:00Z
   locally on records/2026-11-18, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/0015-run.md.
+- Integrator pass pr-integration-2026-11-18-0115.
+  FAILED, one hundred and twenty-second consecutive failure for the
+  same break: VPS SSH publickey rejected once (about 01:29 PT; the
+  start 01:15:54 PT (exit 1, outside every batch window), at clock
+  updated_at byte-identical to the 0015 pass, so no new comment or
+  This record committed locally on records/2026-11-18, UNPUSHED -
+  push via the standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/0115-run.md.
 ## 00:32 to about 00:45 - Knowledge organization pass (no-op for folding, R2 thirty-fifth occurrence, deviation watch re-fired)
 - 00:32 PT 2026-11-18, knowledge-organization-0032 - no-op for
   folding. VPS SSH still Permission denied (publickey) at run
