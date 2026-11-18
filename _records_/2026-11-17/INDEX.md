@@ -4138,6 +4138,29 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   bc6f19a249 as base). Record:
   queue-ticker/2236-process-failure.md (local mirror only
   until VPS recovery).
+- 23:12 PT 2026-11-17, queue-ticker-2304 - failed (33rd
+  consecutive window-loss pass): harvest-2026-11-17-2203
+  failed; Mac ONLINE (last_seen 2026-11-18T06:04:28Z, first
+  connection since Nov 12) but LastWar windowless (pid 11266,
+  background mode, 0 windows) - open_app outcome_unknown x4
+  across two fresh sessions (cc-63, cc-64), activate
+  ax_windows_empty, list_windows same 11 windows, observe /
+  screen.snap observation_unavailable, describe and
+  inspect_menu refused for no bound window; after a 90s wait
+  the window still had not appeared. No game screen reached,
+  nothing collected, nothing spent; tracker untouched. No game
+  unit executed since ticker-0214 gifts at 02:14 PT, about 21
+  hours of routine now missed. Sync: reaped 0, expired 5, due
+  22, produced 0. Zombie chain stays closed, no seeding.
+  Tonight's pre-reset sweep pair already expired unexecuted at
+  18:04:42 (fourth consecutive missed night). Own PRs first via
+  browser fetch of github.com/zachmesh/lastwar/pulls: exactly
+  three open PRs #711 #708 #425, none owned by this job, no
+  records/2026-11-17 PR, no question to answer. Delivery
+  blocked - VPS SSH still Permission denied (publickey), about
+  130 hours into the outage; record committed locally only on
+  ticker-2304-1117-delivery, no PR for records/2026-11-17.
+  Record: resource-collection/2310-queue-run.md.
 ## 21:39 to about 22:16 - PR catch-all pass (blocked delivery, VPS SSH down)
 
 - 21:39 PT 2026-11-17, pr-catchall-2139 - blocked delivery
