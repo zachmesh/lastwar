@@ -3283,3 +3283,94 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-1834-1117-delivery, UNPUSHED, push pending VPS recovery.
   No PR opened for records/2026-11-17. Record:
   queue-ticker/1834-process-failure.md.
+## 18:32 to about 18:47 - Knowledge organization pass (no-op for folding, R2 twenty-fifth occurrence)
+
+- 18:32 PT 2026-11-17, knowledge-organization-1832 - no-op for
+  folding. VPS SSH still Permission denied (publickey) at
+  18:32 PT, about 125.1 hours into the outage; IONOS console
+  route (chosen 2026-11-14 17:37 PT) still not complete, about
+  72.3 hours later. Own PRs re-read live via the GitHub
+  connector, all unchanged since the 1732 pass: #711
+  (knowledge, head e3c3dfd0, updated 2026-11-12T20:04:57Z),
+  #708 (records 2026-11-12, head 2f59c270, updated
+  2026-11-12T20:44:37Z), #425 (tools log gate, head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z). Knowledge issues re-read
+  live, 2 pages 30+11 via cursor pagination, totalCount 41,
+  newest updated 2026-11-12T14:11:46Z (#595), unchanged. No
+  new issue, no new comment, nothing to file. Four records
+  landed since the 1732 close and were read in full:
+  queue-ticker 1734 (twenty-fourth consecutive window-loss
+  occurrence, probe; route change re-read first, no unit
+  claimed, token never taken), queue-ticker 1804
+  (twenty-fifth, probe; same; Mac mini last_seen MOVED to
+  02:01:32Z during the pass - gateway reconnected, window
+  still missing), pr-catchall 1739 (blocked delivery, 117th
+  consecutive; provisional 1639 gap), and queue-planning
+  1740 (partial, 0 staged, scout diff 0, 58th consecutive
+  planner run failing to commit). NEW SHADE persists for a
+  fifth pass in a row (1613, 1634, 1704, 1734, 1804): the
+  control channel cannot bind ANY window - Chrome window 125
+  geometry_mismatch, while the gateway reports both transports
+  connected. Mac mini online; last_seen still
+  2026-11-18T02:01:32Z, UNCHANGED from the 1804 read
+  (eighteenth data point) - the stamp moved at 18:01 PT but
+  the 1804 pass ran after the move and still found no window,
+  so the move is NOT evidence the owner did the Dock-icon
+  step. No game unit has run since ticker-0214 gifts at
+  02:14 PT - about sixteen hours of routine missed. Duel day
+  2 ended 18:00 PT unplayed (UR trucks, Legendary secrets
+  closed with nothing played); Duel day 3 Age of Science
+  began 18:00 PT (research, valor badges, drone chests and
+  the radar release all score today - all missed while the
+  window is down). The 1639 chain gap on 2026-11-17 is now
+  CONFIRMED (no record anywhere as of 18:35 PT, about 56
+  minutes after the run was due) - chain gaps now SIX. The
+  ticker-1734 record HAS landed this run; the ticker-0904,
+  ticker-1234 and pr-integration 0845 records still have NOT
+  landed (mirror gap, known second-hand); no pr-integration
+  1632 record has landed yet. No fold: no profile claim is
+  false; the windowless-app evidence, Dock-icon recovery and
+  the channel-blindness shade belong to the tier-2 entry-route
+  note whose home is undecided and whose write stays deferred
+  to the retro / the tooling issue. Missed batches still 31
+  (next 19:00 PT; the 1932 run is the batch pass and does the
+  step-5 trade-day sweep). The five held folds stay PARTIAL,
+  their PRs owed at VPS recovery. Seven issue items owed at
+  VPS recovery, carried. No Slack sync (no material profile
+  change); the R2 twenty-fifth-occurrence owner update goes in
+  this run's final message. Record:
+  knowledge-organization/1832-run.md (local mirror only;
+  backup in goal hidden_files/2026-11-17; records-branch
+  delivery owed at VPS recovery).
+
+## 18:40 to about 18:53 - Queue planning pass (partial, VPS SSH down)
+
+- 18:40 PT 2026-11-17, queue-planning-1840 - partial (59th
+  consecutive planner run failing to commit): plan staged 12
+  units (mail/help/gifts/train/star-ceremony/duel-score
+  2026-11-18-0630 and harvest/radar/survivors/training/
+  donations/arms-race 2026-11-18-0603), already_present 61,
+  reaped 0, expired 0, skipped_closed []. Pre-reset sweep
+  production was NOT due (18:00-hour run) - but tonight's
+  pair EXPIRED UNEXECUTED at 18:04:42 local during
+  ticker-1804's sync (both passes, 0 attempts, "window passed
+  before execution"): the fourth consecutive missed night
+  (Nov 14, 15, 16, 17). Scout diff on the 2026-11-11 6-pass
+  observation applied with 0 counts (observed 52, actionable
+  0, enqueued 0, unexplained red dots 11); 0 withdrawals;
+  pool inbox 72, claimed 0, done 2359. Ticker-1804 ran live
+  (twenty-fifth consecutive process failure on the window
+  loss); the control channel cannot bind ANY window, a shade
+  now in its fifth pass in a row. Ticker-1834 has no record
+  file yet, but its sync already expired 6 units and released
+  the passes-1457 claim. Mac mini ONLINE (last_seen moved to
+  02:01:32Z during the 1804 pass) but LastWar is windowless
+  (0 windows), and no game unit has executed since
+  ticker-0214 gifts at 02:14 PT, about sixteen and a half
+  hours of routine now missed. Duel day 2 ended 18:00 PT
+  unplayed; Duel day 3 Age of Science began 18:00 PT.
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 126 hours into the outage; record
+  committed locally only on planner-1840-1117-delivery,
+  no PR for records/2026-11-17. Record:
+  queue-planning/1840-run.md.
