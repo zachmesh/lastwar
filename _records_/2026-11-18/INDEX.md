@@ -1786,3 +1786,23 @@ modified: 2026-11-18T13:09:00Z
 ## 21:40 to about 21:49 - Queue planning pass (no-op, delivery blocked)
 
 - 21:40 PT, queue-planning-2140 - no-op (84th consecutive planner run failing to commit; 0 units staged, 0 applied, 0 withdrawn - nothing due in the 12-hour horizon). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 2040 run) - no new question or numbered fix point. Owner-decision issues 132, 154, 335, 514, 517 unchanged; newest issue by creation still #712 (verified live). Plan staged 0 units (already_present 74, reaped 0, expired 0, skipped_closed survivors-2026-11-18-1803) - horizon to about 09:41 local Nov 19; inbox arithmetic reconciles (72 - 1 survivors-1803 claimed by ticker-2104 + 0 staged = 71; done 2474 + 1 = 2475); pre-reset sweep NOT DUE (21:00-hour run), tonight's pair already EXPIRED unexecuted during ticker-1804 (both passes, finished_at 18:04:53 PT, 0 attempts) - fifth consecutive missed night confirmed; scout diff on the 6-pass Nov 11 observation applied with 0 counts (observed 52, unexplained 11); 0 withdrawals (oldest inbox unit scout-midday-2026-11-18-0700 newer than the observation). Pool inbox 71, claimed 0, done 2475. NEW: ticker-2004 and ticker-2104 now evidenced by unit result blocks - radar-1803 failed 20:12:30-20:14:59 PT (54th consecutive blocked tick), survivors-1803 failed 21:24:01-21:25:15 PT (55th consecutive window loss); no queue-ticker record file exists for either slot. CORRECTION to the 2040 record: radar-1803 was executed by ticker-2004, not ticker-1912. No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about forty-three and a half hours missed). Missed batches 38 (next batch 23:00 PT). No 0840 or 1540 planner record exists in the live tree - gaps carried for the retro. Live-INDEX gap carried: the 1940 run's INDEX section exists only on its delivery branch, not in the live INDEX. VPS SSH still Permission denied (publickey), about 152.9 hours into the outage; record committed locally only on planner-2140-1118-delivery, UNPUSHED, push pending VPS recovery. No PR for records/2026-11-18 exists. Record: queue-planning/2140-run.md.
+## 22:15 to about 22:40 - PR integration 2215 run, FAILED (VPS SSH denied)
+
+- Integrator pass pr-integration-2026-11-18-2215. FAILED, VPS SSH
+  still Permission denied (publickey), about 153.9 hours into the
+  outage; no merge, comment, VPS checker run or records push was
+  possible. Checker _tools_/records_batch.py run locally from main
+  a858a0fca (plain, merge-aware and replay at the trigger time, all
+  exit 1) reports NOT DUE - non-batch pass, next batch 23:00 PT;
+  missed batches 38 by enumeration (the ticker-2004/2104 records say 39,
+  a one-count gap flagged for the retro to reconcile). Open PRs
+  711/708/425 read-only verified first-hand via the GitHub connector
+  and the public GitHub API - all merge-tree clean against main a858a0fca,
+  heads unchanged since 2026-11-12; records PR 708 awaits the 23:00 batch,
+  knowledge PR 711 held on the unaddressed #710-supersedes-#705 feedback,
+  tools PR 425 still owner-gated (OD-20261108-01 open). No merges, no
+  comments, no new records PR. All 12 older records branches
+  re-verified contained in main; no records branch for 11-13 to
+  11-18. This record committed locally on records/2026-11-18,
+  UNPUSHED - push via the standard VPS route once SSH returns.
+  Status: failed. Full detail in pr-integration/2215-run.md.
