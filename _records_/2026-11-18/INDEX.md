@@ -1649,3 +1649,22 @@ modified: 2026-11-18T13:09:00Z
 ## 18:40 to about 18:52 - Queue planning pass (partial, delivery blocked)
 
 - 18:40 PT, queue-planning-1840 - partial (81st consecutive planner run failing to commit). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 1740 run) - no new question or numbered fix point. Owner-decision issues 132, 154, 335, 514, 517 unchanged. Plan staged 12 units (mail, help, gifts, train, star-ceremony, duel-score 2026-11-19-0630; harvest, radar, survivors, training, donations, arms-race 2026-11-19-0603; already_present 62, reaped 0, expired 6 - the 1430 set) - horizon to about 06:40 local Nov 19; pre-reset sweep NOT DUE (18:00-hour run), tonight's pair already EXPIRED unexecuted during ticker-1804 (both passes, finished_at 18:04:53 PT, 0 attempts) - fifth consecutive missed night confirmed; scout diff on the 6-pass Nov 11 observation applied with 0 counts (observed 52, unexplained 11); 0 withdrawals (oldest inbox unit scout-midday-2026-11-18-0700 newer than the observation). Pool inbox 73, claimed 0, done 2467. Ticker-1804 process failure 18:04-18:23 PT (fifty-first consecutive window-loss occurrence; 18:00 reset passed during the window, duel day 3 Age of Science closed scoreless, day 4 Train Heroes to 18:00 PT Nov 19; deviation: gifts-1430 claimed before the route change was re-read, released cleanly, honoring streak RESET to zero). No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about forty and a half hours missed). Missed batches 37 (no batch point passed during this run window; next batch 19:00 PT). No 0840 or 1540 planner record exists in the live tree - gaps carried for the retro. VPS SSH still Permission denied (publickey), about 149.9 hours into the outage; record committed locally only on planner-1840-1118-delivery, UNPUSHED, push pending VPS recovery. No PR for records/2026-11-18 exists. Record: queue-planning/1840-run.md.
+## 18:48 to about 19:00 - Ticker pass ticker-1848
+
+- Ticker pass ticker-1848. FAILED, fifty-second consecutive
+  blocked ticker tick (last successful game execution
+  2026-11-17 02:14 PT): the Mac mini is online but the
+  LastWar process has no window (ax_windows_empty;
+  list_windows shows 10 windows, none LastWar; two open_app
+  attempts outcome_unknown, no window appeared). Unit
+  passes-2026-11-18-1457 (shop-claims) claimed and completed
+  as failed; nothing claimed. Sync reaped 0, due 22,
+  produced 0. Zombie Invasion not seeded (event ended
+  2026-10-30, chain closed). Open PRs 711/708/425 unchanged
+  and none owned by this job. vip-2026-11-18-1800 (priority 1,
+  stalled 12.5h) lapsed at the 19:00 reset - sixth
+  consecutive day the VIP freebie is lost. VPS SSH still
+  Permission denied (publickey), so no push and no PR: this
+  record committed locally on records/2026-11-18, UNPUSHED.
+  Status: failed, partial delivery. Full detail in
+  shop-claims/1848-queue-run.md.
