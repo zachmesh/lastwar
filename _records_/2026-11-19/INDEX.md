@@ -22,6 +22,9 @@ modified: 2026-11-19T09:39:00Z
 created: 2026-11-19T11:36:00Z
 modified: 2026-11-19T11:36:00Z
 description: The 0331 queue ticker pass - PROCESS FAILURE, LastWar window still missing (60th consecutive window loss); Mac mini online, last_seen advanced to 10:25:01Z, probe OFF_SCREEN_WINDOW; VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT). This record committed locally on ticker-0331-1119-delivery, UNPUSHED - it needs the VPS route back before it can land
+created: 2026-11-19T12:46:00Z
+modified: 2026-11-19T12:46:00Z
+description: The 0434 queue ticker pass - PROCESS FAILURE, LastWar window still missing (61st consecutive window loss); route honored for the first time (deviation watch moves ZERO to ONE); Mac mini online, last_seen advanced to 12:25:42Z, probe OFF_SCREEN_WINDOW, Chrome windows also unselectable; VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT). This record committed locally on ticker-0434-1119-delivery, UNPUSHED - it needs the VPS route back before it can land
 ## 00:34 to about 01:06 - Queue ticker pass (process failure, delivery blocked)
 
 - 00:34 PT, ticker-0034 - PROCESS FAILURE, fifty-eighth
