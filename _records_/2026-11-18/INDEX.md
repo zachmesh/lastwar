@@ -1690,3 +1690,53 @@ modified: 2026-11-18T13:09:00Z
 - OWN PRS FIRST could not run via the VPS gh CLI (SSH down). Fallback via the public GitHub API: open PRs #711, #708, #425 - none owned by this job, none for records/2026-11-18, nothing addressed to the ticker (#708 comments read hit the unauthenticated API rate limit).
 - VPS SSH still Permission denied (publickey), about 151 hours into the outage; owner-selected IONOS recovery (2026-11-14) still not landed. No push and no PR: this record committed locally on records/2026-11-18, UNPUSHED. Missed integrator batches rise 38 to 39.
 - No game unit since ticker-0214 gifts Nov 17 02:14 PT. The duel day 3 radar release went unplayed. The wedged windowless LastWar process needs a quit-and-relaunch on the Mac before any ticker pass can play again. Record: radar-tasks/2004-queue-run.md.
+## 19:39 to about 19:51 - PR catch-all pass pr-catchall-1939 (blocked delivery)
+
+- 19:39 PT 2026-11-18, pr-catchall-1939 - blocked delivery
+  (142nd consecutive blocked catchall pass evidenced in the
+  record chain): VPS SSH tried once, Permission denied
+  (publickey), about 151.0 hours into the outage; IONOS
+  console route (owner chose 2026-11-14 17:37 PT) still not
+  complete, about 98.1 hours later. Read-only pass via the
+  authenticated GitHub connector, corroborated by an
+  unauthenticated REST PR-list read at run start (HTTP 200,
+  heads byte-identical); the REST rate limit then exhausted
+  (Remaining 0, reset about 04:48:58Z) and the issues/comments
+  endpoints returned 403. Exactly three open PRs, all unchanged
+  since the 1839 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0, updatedAt
+  2026-11-12T20:04:57Z), 708 (records 2026-11-12, Owner
+  lastwar-pr-integrator, head 2f59c270, updatedAt
+  2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updatedAt
+  2026-11-12T19:29:37Z); named owners match the diffs, none
+  is this job's, nothing adoptable. This job's one adopted
+  PR 137 stays merged (2026-11-02T01:48:35Z, zachmesh).
+  Issues: 138 real open issues in a 2-page connector read
+  (100+38, zero dupes), zero unclassified; newest issue 712;
+  latest-updated real issue #689 at 2026-11-12T20:11:54Z.
+  Owner-decision issues over 24h, all unchanged: 132, 154,
+  335, 514, 517. No new stale-owner flag, no new
+  owner-gated point; the three flags from the 1139/1239
+  windows remain in force. The 19:00 PT batch point passed
+  during this run window, so missed batches rise 37 to 38;
+  next point 23:00 PT 2026-11-18. Chain gaps stay seven
+  confirmed. Mac back ONLINE (last_seen 19:04:50 PT) but
+  LastWar still windowless - ticker-1912 is the fifty-third
+  consecutive windowless occurrence; the 19:00 reset passed
+  with VIP/passes/mail/gifts/help/events units in inbox, sixth
+  consecutive missed VIP day; the 1834 and 1904 ticker slots
+  are record-less, so the 52nd occurrence has no landed
+  record; duel day 4 Train Heroes runs to 18:00 PT Nov 19,
+  radar STACK; no game unit since ticker-0214 gifts Nov 17
+  02:14 PT. Quiet run: no Slack DM sync, no chat report.
+  Record is a local mirror copy only; records-branch delivery
+  blocked until VPS SSH is restored. Record:
+  pr-catchall/1939-run.md.
+
+## 20:32 to about 20:37 - Knowledge organization pass (no-op, delivery blocked)
+
+- 20:32 PT, knowledge-organization-2032 - no-op (no fold, no feedback addressed, no gaps filed; run-record delivery blocked by VPS SSH outage). Own PRs first, re-verified live via the authenticated GitHub connector this run: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 1932 run, bodies including Owner lines re-read live) - no new review or question; the 1145 amendment on PR #711 still owed, blocked on the push route. Knowledge issues 41 open, newest #678, latest-updated #595 at 2026-11-12T14:11:46Z, unchanged. Records read in full since the 1932 close: pr-catchall 1939 (blocked delivery, 142nd consecutive blocked catchall pass, 138 real issues unchanged, missed batches 37 to 38), queue-planning 1940 (partial, 82nd consecutive planner run failing to commit, 6 units staged, pool inbox 73 / done 2473, fifth missed pre-reset night confirmed, scout diff 0 counts), pr-integration 1945 (failed, batch pass per the checker - 19:00 window, merge-aware due at pass start - but PR 708 merge NOT executed, missed batches 37 to 38, same batch point as 1939/1912 so the count stays 38; PR 425 owner-gated, clean vs main a858a0fca) - none carries a foldable profile learning. NEW: the pr-integration 1945 record exists ONLY as a hidden_files backup (staged-copy-only drift, joins tool-dev 1205 and 1532) and carries NO day-INDEX section - the owning pass's owed INDEX append, flagged again. No queue-ticker 2004 record as of run close (watched, not listed - records land with delay). Watermark unchanged dfe14a38db; held folds still six. Chain gaps still 7; missed batches 38 (next point 23:00 PT). VPS SSH still Permission denied (publickey), about 151.3 hours into the outage; record + INDEX live in the local mirror only, backup in goal hidden_files/2026-11-18; records-branch delivery and the six held fold PRs owed at VPS recovery. No Slack DM sync, no chat report. Record: knowledge-organization/2032-run.md.
+## 20:40 to about 20:52 - Queue planning pass (no-op, delivery blocked)
+
+- 20:40 PT, queue-planning-2040 - no-op (83rd consecutive planner run failing to commit; 0 units staged, 0 applied, 0 withdrawn - nothing due in the 12-hour horizon). Own PRs first, re-verified live via the GitHub connector: exactly 3 open PRs (#711 head e3c3dfd0, #708 head 2f59c270, #425 head 4f41cdd6; updated_at byte-identical to the 1940 run) - no new question or numbered fix point. Owner-decision issues 132, 154, 335, 514, 517 unchanged; newest issue by creation still #712 (verified live). Plan staged 0 units (already_present 74, reaped 0, expired 0, skipped_closed radar-2026-11-18-1803) - horizon to about 08:41 local Nov 19; inbox arithmetic reconciles (73 - 1 radar-1803 claimed by ticker-1912 + 0 staged = 72; done 2473 + 1 = 2474); pre-reset sweep NOT DUE (20:00-hour run), tonight's pair already EXPIRED unexecuted during ticker-1804 (both passes, finished_at 18:04:53 PT, 0 attempts) - fifth consecutive missed night confirmed; scout diff on the 6-pass Nov 11 observation applied with 0 counts (observed 52, unexplained 11); 0 withdrawals (oldest inbox unit scout-midday-2026-11-18-0700 newer than the observation). Pool inbox 72, claimed 0, done 2474. Ticker-1912 failed 19:12-19:20 PT (fifty-third consecutive window-loss occurrence); no 2004 or 2012 ticker record in the live tree as of about 20:46 PT (record-less slots, not proof the passes never ran - count NOT incremented). No game unit executed since ticker-0214 gifts Nov 17 02:14 PT (about forty-two and a half hours missed). Missed batches 38 (next batch 23:00 PT). No 0840 or 1540 planner record exists in the live tree - gaps carried for the retro. Live-INDEX gap now one worse: the 1940 run's INDEX section exists only on its delivery branch, not in the live INDEX. VPS SSH still Permission denied (publickey), about 151.0 hours into the outage; record committed locally only on planner-2040-1118-delivery, UNPUSHED, push pending VPS recovery. No PR for records/2026-11-18 exists. Record: queue-planning/2040-run.md.
