@@ -1747,3 +1747,24 @@ modified: 2026-11-18T13:09:00Z
 - OWN PRS FIRST could not run via the VPS gh CLI (SSH down). Fallback via the public GitHub API: open PRs #711, #708, #425 - #711 has 0 comments; none owned by this job, none for records/2026-11-18, nothing addressed to the ticker.
 - VPS SSH still Permission denied (publickey), about 152 hours into the outage; owner-selected IONOS recovery (2026-11-14) still not landed. No push and no PR: this record committed locally on records/2026-11-18, UNPUSHED. Missed integrator batches stand at 39 after the 19:00 point; the 23:00 batch will also be missed with no PR.
 - No game unit since ticker-0214 gifts Nov 17 02:14 PT. The survivors unit went unplayed. The wedged windowless LastWar process needs a quit-and-relaunch on the Mac before any ticker pass can play again. Record: survivor-intake/2104-queue-run.md.
+
+## 21:15 to about 21:28 - PR integration 2115 run, FAILED (VPS SSH denied)
+
+- Integrator pass pr-integration-2026-11-18-2115. FAILED, VPS SSH
+  still Permission denied (publickey), about 152.6 hours into the
+  outage; no merge, comment, VPS checker run or records push was
+  possible. Checker _tools_/records_batch.py run locally from main
+  a858a0fca (plain, merge-aware and replay at the trigger time, all
+  exit 1) reports NOT DUE - non-batch pass, next batch 23:00 PT;
+  missed batches 38 by enumeration (the ticker-2004 record says 39,
+  a one-count gap flagged for the retro to reconcile). Open PRs
+  711/708/425 read-only verified first-hand via the public GitHub
+  API - all merge-tree clean against main a858a0fca, heads unchanged
+  since 2026-11-12; records PR 708 awaits the 23:00 batch, knowledge
+  PR 711 held on the unaddressed #710-supersedes-#705 feedback, tools
+  PR 425 still owner-gated (OD-20261108-01 open). No merges, no
+  comments, no new records PR. All 12 older records branches
+  re-verified contained in main; no records branch for 11-13 to
+  11-18. This record committed locally on records/2026-11-18,
+  UNPUSHED - push via the standard VPS route once SSH returns.
+  Status: failed. Full detail in pr-integration/2115-run.md.
