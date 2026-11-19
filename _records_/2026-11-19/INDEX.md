@@ -15,6 +15,9 @@ title: Day record 2026-11-19
 created: 2026-11-19T08:36:00Z
 modified: 2026-11-19T09:06:00Z
 description: Day record for 2026-11-19 (America/Los_Angeles) - VPS SSH still down
+created: 2026-11-19T10:33:00Z
+modified: 2026-11-19T10:33:00Z
+description: The 0215 queue ticker pass - PROCESS FAILURE, LastWar window still missing (59th consecutive window loss); Mac mini online, probe OFF_SCREEN_WINDOW; VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT). This record committed locally on ticker-0215-1119-delivery, UNPUSHED - it needs the VPS route back before it can land
 ## 00:34 to about 01:06 - Queue ticker pass (process failure, delivery blocked)
 
 - 00:34 PT, ticker-0034 - PROCESS FAILURE, fifty-eighth
@@ -126,3 +129,53 @@ description: Day record for 2026-11-19 (America/Los_Angeles) - VPS SSH still dow
 ## 01:11 to about 01:19 - Queue planning pass (no-op, delivery blocked)
 
 - 01:11 PT, queue-planning-0040 - no-op (0 units staged, nothing due in the 12-hour horizon to about 13:15 local; 0 expired, sweep pair not due, scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-19. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 74, claimed 0, done 2489. Ticker-0034 newly evidenced: 58th consecutive window-loss occurrence; Mac last_seen advanced again (frozen shade gone), window still absent; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches stay 39 (next point 03:00 PT Nov 19); fifth consecutive missed pre-reset sweep night. Duel day 4 Train Heroes to 18:00 PT Nov 19, radar STACK. 87th consecutive planner run failing to commit - Chinese chat report owed. Record: queue-planning/0040-run.md.
+## 02:04 to about 02:31 - Queue ticker pass (process failure, delivery blocked)
+
+- 02:04 PT, ticker-0215 - PROCESS FAILURE, fifty-ninth
+  consecutive window loss. Mac mini ONLINE (last_seen
+  2026-11-19T08:26:23Z, UNCHANGED since the 0034 read;
+  about 117 min old at probe), LastWar running
+  (com.lastwar.ios) but exposes no window. One computer
+  session (cc-122): open_app "LastWar" outcome_unknown
+  twice, list_windows 0 windows for LastWar three times,
+  full list 11 windows with no LastWar entry, activate
+  LastWar ax_windows_empty with brought_to_front false,
+  observe and screen.snap observation_unavailable.
+  connection.health both transports healthy,
+  lastResponseAgeSeconds 0-1, but progressAgeSeconds about
+  6940-6944, up from about 1830 at 0034 - the channel
+  answers but has made no progress since 08:26:23Z. Probe
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes (exit
+  10). No game input sent. Mail unit mail-2026-11-18-2230
+  claimed 02:15 PT and completed failed; token held
+  02:15-02:24 PT, released.
+- ORDERING DEVIATION, stated plainly: sync ran BEFORE the
+  0034 record was re-read, the same deviation as 0034 and
+  the passes it lists; the mail unit was also claimed BEFORE
+  the device probe, where 0034's route probes first and
+  claims nothing when the window is absent. The claim is
+  closed properly as failed (tracker untouched, no stranded
+  claim), but it is NOT a honoring pass - the deviation-watch
+  verification stays at ZERO honoring passes. The next pass
+  must re-read the newest queue-ticker record FIRST, before
+  sync and before any claim, and probe the device before
+  claiming any unit.
+- Duel day 4, Train Heroes, 15.6 hours left at the 02:24
+  read; radar posture STACK. Day-3 scoring all missed. No
+  game unit has executed since ticker-0214 gifts at 02:14 PT
+  Nov 17 - about forty-eight hours of routine now missed.
+  Sixth consecutive VIP day already lost; fifth consecutive
+  missed pre-reset sweep night.
+- Sync: reaped 0, expired 6 (the 2203 set), due 23, produced
+  0, already queued 22. Stats: inbox 68, claimed 0, done
+  2495. Zombie chain stays closed (event ended 2026-11-15,
+  unit 037). Stalled priority-1: vip-2026-11-18-1800 (20.0h).
+  Own PRs: VPS gh unreachable; GitHub connector re-read -
+  exactly three open PRs (#711, #708, #425), none owned by
+  this job, no PR for records/2026-11-18 or records/2026-11-19.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 157.8 hours into the outage; record
+  committed locally only on ticker-0215-1119-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-19. Missed batches stay 39; next point
+  03:00 PT. Record: queue-ticker/0215-process-failure.md.
