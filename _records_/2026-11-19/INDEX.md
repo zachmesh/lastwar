@@ -34,6 +34,7 @@ description: The 0704 queue ticker pass - PROCESS FAILURE, LastWar window still 
 modified: 2026-11-19T16:50:00Z
 modified: 2026-11-19T20:36:00Z
 modified: 2026-11-19T21:52:00Z
+modified: 2026-11-19T22:10:00Z
 ## 00:34 to about 01:06 - Queue ticker pass (process failure, delivery blocked)
 
 - 00:34 PT, ticker-0034 - PROCESS FAILURE, fifty-eighth
@@ -643,3 +644,6 @@ modified: 2026-11-19T21:52:00Z
 ## 13:52 PT, queue-ticker-1347 - FAILED (device access, window-loss outage continuing, 68th consecutive occurrence)
 
 - 13:52 PT, queue-ticker-1347 - FAILED (device access, window-loss outage continuing (68th consecutive occurrence by chain arithmetic; ticker-1228 was the 67th; retro owns the count)): Mac mini online but LastWar still windowless (no window since 2026-11-17 03:33); list_windows 0 LastWar windows x3, activate ax_windows_empty, open_app outcome_unknown x2, observe unavailable, screen.snap computer_busy; session cc-135 ended clean. Route honored: newest record re-read first, probe before claim, so NO unit was claimed and no token taken (would-be unit survivors-2026-11-19-1003 stays in inbox); nothing read or claimed, tracker untouched. Sync: 23 due, 0 produced, 0 reaped; zombie seeding skipped (event ended, chain closed 2026-11-14/15). Own PRs first via GitHub REST: #711/#708/#425 unchanged, no open PR for records/2026-11-19. VPS SSH still Permission denied (publickey), about 169 hours into the outage; delivery blocked, commit left on local records/2026-11-19, no PR. Inbox 76 units, nothing due played; no game unit since ticker-0214 gifts Nov 17 02:14 PT (about 59.5 hours missed); missed batches 42 per planner-1240. Record: queue-ticker/1347-queue-run.md.
+## 14:10 PT, queue-ticker-1404 - FAILED (device access, window-loss outage continuing, 69th consecutive occurrence)
+
+- 14:10 PT, queue-ticker-1404 - FAILED (device access, window-loss outage continuing (69th consecutive occurrence by chain arithmetic; ticker-1347 was the 68th; retro owns the count)): Mac mini online but LastWar still windowless (no window since 2026-11-17 03:33); list_windows 0 LastWar windows x3, activate ax_windows_empty, open_app outcome_unknown x2, observe unavailable; session cc-136 ended clean. Route honored: newest record re-read first, probe before claim, so NO unit was claimed and no token taken (would-be unit help-2026-11-19-1030 stays in inbox); nothing read or claimed, tracker untouched. Sync: 23 due, 0 produced, 4 expired reaped; zombie seeding skipped (event ended, chain closed 2026-11-14/15). Own PRs first via GitHub REST: #711/#708/#425 unchanged, no open PR for records/2026-11-19. VPS SSH still Permission denied (publickey), about 169.3 hours into the outage; delivery blocked, commit left on local records/2026-11-19, no PR. Inbox 72 units, nothing due played; no game unit since ticker-0214 gifts Nov 17 02:14 PT (about 60 hours missed); missed batches 42 per planner-1240. Record: queue-ticker/1404-queue-run.md.
