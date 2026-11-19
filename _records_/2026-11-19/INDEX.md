@@ -25,6 +25,9 @@ description: The 0331 queue ticker pass - PROCESS FAILURE, LastWar window still 
 created: 2026-11-19T12:46:00Z
 modified: 2026-11-19T12:46:00Z
 description: The 0434 queue ticker pass - PROCESS FAILURE, LastWar window still missing (61st consecutive window loss); route honored for the first time (deviation watch moves ZERO to ONE); Mac mini online, last_seen advanced to 12:25:42Z, probe OFF_SCREEN_WINDOW, Chrome windows also unselectable; VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT). This record committed locally on ticker-0434-1119-delivery, UNPUSHED - it needs the VPS route back before it can land
+created: 2026-11-19T14:16:00Z
+modified: 2026-11-19T14:16:00Z
+description: The 0534 queue ticker pass - PROCESS FAILURE, LastWar window still missing (62nd consecutive window loss); route deviation - sync ran before re-reading 0434, harvest unit claimed before the device probe, deviation-watch honoring stays at ONE; Mac mini online, last_seen unchanged at 12:25:42Z, probe OFF_SCREEN_WINDOW, Finder windows also unselectable; VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12.47 PT). This record committed locally on ticker-0534-1119-delivery, UNPUSHED - it needs the VPS route back before it can land
 ## 00:34 to about 01:06 - Queue ticker pass (process failure, delivery blocked)
 
 - 00:34 PT, ticker-0034 - PROCESS FAILURE, fifty-eighth
@@ -401,3 +404,53 @@ description: The 0434 queue ticker pass - PROCESS FAILURE, LastWar window still 
 ## 05:51 to about 06:00 - Queue planning pass (partial, delivery blocked)
 
 - 05:51 PT, queue-planning-0540 - partial (1 unit staged, zero-sweep-2026-11-19-1730; 0 expired; sweep pair not due, scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-19. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 76, claimed 0, done 2506. Ticker-0434 newly evidenced: 61st consecutive window-loss occurrence, FIRST deviation-watch honoring pass; pr-catchall-0439 (151st consecutive blocked pass), knowledge-organization-0532 (no-op) and pr-integration-0400 (FAILED non-batch) newly evidenced; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches stay 40 (next point 07:00 PT Nov 19); fifth consecutive missed pre-reset sweep night. Tonight's pre-reset sweep pair now exists in the pool via plan staging (1630 seq 1 + 1730 seq 2, both expiring 18:00 local). Duel day 4 Train Heroes to 18:00 PT Nov 19, radar STACK. 91st consecutive planner run failing to commit - Chinese chat report owed. NEW chain gap: no 0440 planner record exists in the live tree. Record: queue-planning/0540-run.md.
+## 05:34 to about 06:15 - Ticker pass ticker-0534 (process failure, one unit failed)
+
+- 05:34 PT, ticker-0534 - PROCESS FAILURE, sixty-second
+  consecutive window loss. ROUTE DEVIATION: this pass did NOT
+  re-read the newest queue-ticker record (0434) first and did
+  NOT probe before claiming - sync ran first, then the harvest
+  unit was claimed, and the device was probed only after. The
+  deviation-watch honoring count stays at ONE (0434, the
+  first); the next pass must re-honor (newest record first,
+  then sync, then probe before any claim). Consequence: the
+  harvest unit spent its first attempt (1 of 3) and closed
+  failed; the tracker is untouched and the regular stays due.
+  Count correction: the unit summary's "60th" understates by
+  two (taken from the stale 0215 count); 0434 was 61st, this
+  pass is 62nd. Mac mini ONLINE (last_seen 2026-11-19T12:25:42Z,
+  UNCHANGED since 0434 - channel has not progressed since
+  about 12:25Z; connection.health was NOT called this pass,
+  so no fresh progressAgeSeconds reading). LastWar running
+  (com.lastwar.ios) but exposes no window. Two computer
+  sessions (cc-126, cc-127): open_app "LastWar"
+  outcome_unknown twice, activate ax_windows_empty twice,
+  list_windows 11 windows with no LastWar entry twice,
+  observe and screen.snap observation_unavailable. NEW vs
+  0434: a Finder activate ALSO fails geometry_mismatch, so
+  no window is selectable on the agent display (Chrome,
+  Finder and LastWar all fail selection). Probe v1.2.0
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes. Token
+  held 05:52-06:09 PT, released after the failed completion.
+  No game input sent, nothing claimed.
+- Duel day 4, Train Heroes, 11.9 hours left at the 06:03
+  read; radar posture STACK. No game unit has executed since
+  ticker-0214 gifts at 02:14 PT Nov 17 - about fifty-two
+  hours of routine now missed. Seventh VIP day running
+  unreachable; fifth consecutive missed pre-reset sweep
+  night. Sync: reaped 0, expired 0, due 23, produced 0,
+  already queued 22. Stats: inbox 76, claimed 0, done 2506.
+  Zombie chain stays closed (event ended 2026-11-15).
+  Stalled priority-1: vip-2026-11-18-1800 (about 23h). Own
+  PRs: VPS gh unreachable; browser.open re-read of the public
+  PR list - exactly three open PRs (#711, #708, #425), none
+  owned by this job, no PR for records/2026-11-18 or
+  records/2026-11-19 (comment-body read partial via fetch
+  snippets). Push and PR blocked - VPS SSH still Permission
+  denied (publickey), about 160.9 hours into the outage;
+  record committed locally only on ticker-0534-1119-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-19. Missed batches stay 40 (no batch point
+  in this run window; next point 07:00 PT). Records:
+  queue-ticker/0534-process-failure.md and
+  resource-collection/0534-queue-run.md.
