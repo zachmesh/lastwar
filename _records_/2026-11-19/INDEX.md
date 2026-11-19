@@ -454,3 +454,63 @@ description: The 0534 queue ticker pass - PROCESS FAILURE, LastWar window still 
   in this run window; next point 07:00 PT). Records:
   queue-ticker/0534-process-failure.md and
   resource-collection/0534-queue-run.md.
+## 05:34 to about 06:15 - Queue ticker pass (process failure, one unit failed)
+
+- 05:34 PT, ticker-0534 - PROCESS FAILURE, sixty-second
+  consecutive window loss. ROUTE DEVIATION: this pass did NOT
+  re-read the newest queue-ticker record (0434) first and did
+  NOT probe before claiming - sync ran first, then the harvest
+  unit was claimed, and the device was probed only after. The
+  deviation-watch honoring count stays at ONE (0434, the
+  first); the next pass must re-honor (newest record first,
+  then sync, then probe before any claim). Consequence: the
+  harvest unit spent its first attempt (1 of 3) and closed
+  failed; the tracker is untouched and the regular stays due.
+  Count correction: the unit summary's "60th" understates by
+  two (taken from the stale 0215 count); 0434 was 61st, this
+  pass is 62nd. Mac mini ONLINE (last_seen 2026-11-19T12:25:42Z,
+  UNCHANGED since 0434 - channel has not progressed since
+  about 12:25Z; connection.health was NOT called this pass,
+  so no fresh progressAgeSeconds reading). LastWar running
+  (com.lastwar.ios) but exposes no window. Two computer
+  sessions (cc-126, cc-127): open_app "LastWar"
+  outcome_unknown twice, activate ax_windows_empty twice,
+  list_windows 11 windows with no LastWar entry twice,
+  observe and screen.snap observation_unavailable. NEW vs
+  0434: a Finder activate ALSO fails geometry_mismatch, so
+  no window is selectable on the agent display (Chrome,
+  Finder and LastWar all fail selection). Probe v1.2.0
+  OFF_SCREEN_WINDOW, high confidence, stop_pass yes. Token
+  held 05:52-06:09 PT, released after the failed completion.
+  No game input sent, nothing claimed.
+- Duel day 4, Train Heroes, 11.9 hours left at the 06:03
+  read; radar posture STACK. No game unit has executed since
+  ticker-0214 gifts at 02:14 PT Nov 17 - about fifty-two
+  hours of routine now missed. Seventh VIP day running
+  unreachable; fifth consecutive missed pre-reset sweep
+  night. Sync: reaped 0, expired 0, due 23, produced 0,
+  already queued 22. Stats: inbox 76, claimed 0, done 2506.
+  Zombie chain stays closed (event ended 2026-11-15).
+  Stalled priority-1: vip-2026-11-18-1800 (about 23h). Own
+  PRs: VPS gh unreachable; browser.open re-read of the public
+  PR list - exactly three open PRs (#711, #708, #425), none
+  owned by this job, no PR for records/2026-11-18 or
+  records/2026-11-19 (comment-body read partial via fetch
+  snippets). Push and PR blocked - VPS SSH still Permission
+  denied (publickey), about 160.9 hours into the outage;
+  record committed locally only on ticker-0534-1119-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-19. Missed batches stay 40 (no batch point
+  in this run window; next point 07:00 PT). Records:
+  queue-ticker/0534-process-failure.md and
+  resource-collection/0534-queue-run.md.
+
+## 06:15 PT, pr-integration-0615 - FAILED (VPS SSH still Permission denied (publickey), about 161.6 hours into the outage; 16th mirror-only pass since the 0230 branch-committed record, 142nd consecutive failed integrator pass by count from that record). NON-batch pass per the checker: _tools_/records_batch.py (1.2.0) from a fresh full HTTPS clone of main a858a0fca - live run 06:25 PT exit 1 "due: no - outside every batch window", replay --at pass start 06:15:54 PT exit 1, merge-aware due with last records merge PR #700 (2026-11-12T11:09:48-08:00) exit 1, same verdict; next batch point 07:00 PT Nov 19. Records PR 708 (records/2026-11-12, head 2f59c270) NOT due to merge on a non-batch pass - missed batches stay 40, confirming the queue-planning 0540 count. PR 711 head unchanged since the 1145 review, merge-tree clean (e05ec8b5), feedback stands, no repeat comment. PR 425 head unchanged, merge-tree clean (08e8515a), still owner-gated on OD-20261108-01 (open, re-read on current main), no new escalation. All 12 older records branches verified contained in main; no records branch for 11-13 through 11-19.
+- Stats: reviewed 3, merged 0, commented 0, escalated 0 (new), records PRs opened 0, records PRs merged 0, awaiting batch 1 (708), conflicts 0, unprocessed 0. Sweep clean; run failed, not partial (transport failure). No Slack sync, no merges. Record: pr-integration/0615-run.md (mirror copy only + goal hidden_files backup; branch commit deferred to route recovery). Reconciliation gap for the retro: the 0300, 0400 and 0500 passes today exist only as staged copies in the goal hidden_files with no day-INDEX entry.
+
+## 06:32 PT, knowledge-organization-0632 - no-op
+
+- 06:32 PT, knowledge-organization-0632 - no-op (no fold, no feedback addressed, no gaps filed; run-record delivery blocked by VPS SSH outage). Own PRs first: PR #711 re-verified live via the unauthenticated GitHub REST API (issue comments 1, newest 2026-11-12T19:55:59Z; reviews 1, COMMENTED 2026-11-12T20:04:56Z, the integrator 1145 review) - unchanged, no new question or numbered fix point; PRs #708/#425 corroborated unchanged by this run's own REST open-list read and the pr-catchall 0439 / pr-integration 0615 connector reads; the 1145 amendment (705 claims superseded by PR 710) still owed, blocked on the push route. Knowledge issues 41 open, newest #678, latest-updated #595 at 2026-11-12T14:11:46Z - unchanged. Records read in full (5): pr-catchall 0439 (BLOCKED DELIVERY, 151st consecutive blocked catchall pass, 138 real issues unchanged, zero unclassified, owner-decision issues 132/154/335/514/517 all unchanged), queue-planning 0540 (partial, 1 unit staged zero-sweep 2026-11-19-1730, 0 expired, pool inbox 76, done 2506, 91st consecutive planner run failing to commit, scout diff 0 counts on the same 6-pass Nov 11 observation already consumed, two sweep gaps already recorded for filing at recovery; NEW planner-chain gap: no 0440 planner record), queue-ticker 0534 (PROCESS FAILURE, 62nd consecutive window-loss occurrence, probe OFF_SCREEN_WINDOW, ROUTE DEVIATION - claimed before probing, deviation-watch stays at ONE honoring pass; Finder activate also fails geometry_mismatch, fault widens to no window selectable on the agent display; Mac last_seen UNCHANGED since 0434 at 12:25:42Z, connection.health not called, no fresh progressAgeSeconds; count correction 60th to 62nd), resource-collection 0534 (harvest-2026-11-19-0203 failed, 370 seconds, no game input), pr-integration 0615 (FAILED, NON-batch pass, PR 708 not due, 142nd consecutive failed integrator pass, missed batches 40). No fold: all five records carry device-channel diagnostics, route bookkeeping or routine queue/batch records-chain arithmetic, not profile learnings; the Finder widening and the deviation consequence join the owed tooling issue's evidence at recovery. Watermark unchanged dfe14a38db; held folds still six. Step-5 trade-day sweep not due (next sweep falls to the first run after the 19:00 reset on Nov 19). Missed batches stay 40 (next point 07:00 PT Nov 19); chain gaps stay seven. No game unit since ticker-0214 gifts Nov 17 02:14 PT (about fifty-two and a half hours missed); seventh consecutive missed VIP day; fifth consecutive missed pre-reset sweep night; duel day 4 Train Heroes runs to 18:00 PT Nov 19, radar STACK. VPS SSH still Permission denied (publickey), probed 14:32:xxZ, about 161.8 hours into the outage. Quiet run: no Slack DM sync, no chat report. Record: knowledge-organization/0632-run.md.
+- 06:36 PT, pr-catchall-0539 - BLOCKED DELIVERY (VPS SSH still Permission denied (publickey), about 161.9 hours into the outage; 152nd consecutive blocked catchall pass). Read-only via the authenticated GitHub connector: exactly three open PRs, all unchanged since the 0439 pass - 711 (knowledge fold, Owner lastwar-knowledge-organizer, head e3c3dfd0, updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12, Owner lastwar-pr-integrator, head 2f59c270, updatedAt 2026-11-12T20:44:37Z), 425 (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6, updatedAt 2026-11-12T19:29:37Z). Named owners match their diffs; nothing adoptable, no owned open PR (PR 137 stays merged). Issues: 138 real issues (2-page connector read, 100+38, totalCount 138, zero dupes), zero unclassified, newest 712, latest-updated #689 at 2026-11-12T20:11:54Z. Owner-decision issues over 24h, all unchanged: 132, 154, 335, 514, 517. Stale-owner flags remain in force (708 from 1239, 425 and 711 from 1139); no new flag. PR 425 still owner-gated (OD-20261108-01). No batch point passed in this window, missed batches stay 40 (next point 07:00 PT Nov 19). No new chain gap; chain gaps stay seven. Quiet run: no Slack DM sync, no chat report. Record: pr-catchall/0539-run.md (mirror copy only + goal hidden_files backup; branch commit deferred to route recovery).
+- 07:02 PT, queue-planning-0640 - partial (20 units staged, 1803/1830/1857/1800 sets; 17 expired, 0203/0230/0257 sets + scout-midday-2026-11-18-0700; sweep pair not due, scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-19. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 78, claimed 0, done 2524. Ticker-0534 newly evidenced: 62nd consecutive window-loss occurrence, ROUTE DEVIATION (claimed before probing), deviation-watch stays at ONE honoring pass; pr-catchall-0539 (152nd consecutive blocked pass), knowledge-organization-0632 (no-op) and pr-integration-0615 (FAILED non-batch) newly evidenced; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches 40 confirmed through 06:59 (07:00 point passed during this run's execution window, pending the integrator's 07:00-batch pass); fifth consecutive missed pre-reset sweep night. Tonight's pre-reset sweep pair exists in the pool via plan staging (1630 seq 1 + 1730 seq 2, both expiring 18:00 local). Duel day 4 Train Heroes to 18:00 PT Nov 19, radar STACK. 92nd consecutive planner run failing to commit - Chinese chat report owed. Chain gap carried: no 0440 planner record exists in the live tree. Record: queue-planning/0640-run.md.
+2026-11-19T15:10:00Z
