@@ -598,3 +598,48 @@ twenty-five. No game unit since ticker-0214 gifts Nov 17 02:14 PT
 missed batches stay 48 (next point 15:00 PT Nov 20). VPS SSH still
 down, delivery blocked, commit left on local records/2026-11-20,
 no PR. This pass is partial. Record: queue-ticker/1204-queue-run.md.
+## 12:04 to about 12:32 - Queue ticker pass (FAILED, Mac mini offline, thirteenth device-offline occurrence)
+
+ticker-1204: 91st consecutive failed ticker pass by recorded-slot
+chain arithmetic, THIRTEENTH device-offline occurrence. Mac mini
+offline since 2026-11-19 20:16:40 PST, no wake-up path;
+computer.session start, connection.health and computer.session
+start all node_offline, mac_capture_probe DEVICE_OFFLINE high
+confidence, stop_pass yes (exit 13). One unit claimed and completed
+FAILED: harvest-2026-11-20-1003 (claim before probe burned 1
+attempt; tracker untouched, next tick re-produces a fresh harvest
+unit). Token acquired ticker-1204 until 20:37:28Z and released
+before pass end; sync ran before the newest queue-ticker record
+was read; deviation-watch stays at THREE. Sync: due 22, produced 0,
+reaped 0, expired 0; pool inbox 77, done 2650 (76/2651 after the
+failed completion). Zombie seeding skipped (event ended 2026-10-30).
+Own PRs first: VPS SSH still Permission denied, about 191 hours
+into the outage; exactly three open PRs, all unchanged since
+2026-11-12 (#711, #708, #425), none owned by this job, no PR for
+records/2026-11-20. NEW chain-gap candidate ticker-1134 (no record
+anywhere checked); candidates now SIXTEEN, possible total
+twenty-five. No game unit since ticker-0214 gifts Nov 17 02:14 PT
+(about 82.1 hours missed); seventh consecutive missed VIP day;
+missed batches stay 48 (next point 15:00 PT Nov 20). VPS SSH still
+down, delivery blocked, commit left on local records/2026-11-20,
+no PR. This pass is partial. Record: queue-ticker/1204-queue-run.md.
+
+## 12:15 to about 12:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-20-1230. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 15:00): no merges. VPS SSH still Permission
+  denied (publickey), about 192 hours into the outage, so no
+  GitHub write was possible - no comments posted, no merges,
+  no push. Records PR 708 re-verified CLEAN at unchanged head
+  2f59c270, awaits the 15:00 batch; the 11:00 batch today was
+  missed (no integrator pass in the window), missed batches
+  now 48. Knowledge PR 711 head unchanged since the 1145
+  review, no repeat comment. Tools PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN against unchanged
+  main a858a0fca, no new comment. Branch action-log line 1969
+  (0434 and 0604 run-record lines concatenated) repaired
+  before the append, 1974 lines all valid, object multiset
+  unchanged. No records PR for records/2026-11-20 (branch
+  exists only locally, unpushed). This pass is partial.
+  Record: pr-integration/1230-run.md.
