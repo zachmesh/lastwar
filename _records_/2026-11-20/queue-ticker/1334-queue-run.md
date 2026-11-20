@@ -1,7 +1,7 @@
 ---
 title: Queue ticker run failure - Mac mini offline, ninety-second consecutive occurrence
-created: 2026-11-20T21:58:00Z
-modified: 2026-11-20T21:59:00Z
+created: 2026-11-20T21:48:00Z
+modified: 2026-11-20T21:49:00Z
 version: 1.0.0
 description: Queue ticker 2026-11-20 13:34 PT run failure, Mac mini offline, one radar attempt burned by claim-after-probe
 status: run-failure
@@ -17,7 +17,7 @@ grounded_in:
   - source: VPS SSH probe, 2026-11-20T21:41Z
 ---
 
-# Queue ticker 2026-11-20 13:34 to about 14:00 PT (ticker-1334) - FAILED
+# Queue ticker 2026-11-20 13:34 to about 13:50 PT (ticker-1334) - FAILED
 
 No unit completed, no screen entered, nothing read or claimed in
 the game. The blocker is the ninety-second consecutive failed
