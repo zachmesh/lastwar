@@ -74,3 +74,50 @@ description: Day record for 2026-11-20 (America/Los_Angeles) - VPS SSH still dow
 ## 00:41 to about 00:55 - Queue planning pass (no-op, delivery blocked)
 
 - 00:41 PT, queue-planning-0040 - no-op (0 units staged, nothing due in the 12-hour horizon to about 12:45 local; 0 expired, sweep pair not due, tonight's pair already expired unexecuted 18:19:25 PT, sixth missed sweep night; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-20. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 73, claimed 0, done 2598. Ticker-0004 newly evidenced: 81st consecutive failed pass, third device-offline occurrence; pr-catchall-0039 (169th consecutive blocked pass), pr-integration-0015 (157th consecutive failed pass), tool-development-0032 and knowledge-organization-0032 (both no-op) newly evidenced; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches stay 45 (next point 03:00 PT Nov 20); seventh consecutive missed VIP day. 107th consecutive planner run failing to commit - Chinese chat report owed. Chain gaps: nine confirmed, plus two new candidates (2026-11-13 0839, 2026-11-14 0039) flagged by pr-catchall-0039 for retro ruling. Record: queue-planning/0040-run.md.
+## 01:34 to about 01:50 - Ticker pass ticker-0134 (FAILED, Mac mini offline)
+
+- 01:34 PT, ticker-0134 - FAILED, eighty-second consecutive failed
+  ticker pass, FOURTH device-offline occurrence. Mac mini OFFLINE
+  per device.list, last_seen 2026-11-20T04:16:40Z (20:16:40 PST
+  Nov 19, about 5.4 hours stale at probe); device.describe
+  connection_state offline; connection.health x3 node_offline
+  (09:41Z to 09:43Z, three attempts satisfy the retry-at-least-3
+  rule); no computer session started, game window state
+  unverifiable. Probe DEVICE_OFFLINE, high confidence, stop_pass
+  yes (mac_capture_probe.py 1.2.0, exit 13). No game input sent.
+  Token held 01:44-01:50 PT, released unused; no unit claimed,
+  `next` never called.
+- ORDERING DEVIATION, stated plainly: sync ran BEFORE the 0004
+  record was re-read, the same deviation as 0004. The sync
+  produced nothing and no unit was claimed, so it cost nothing,
+  but it is NOT a honoring pass - the deviation-watch of
+  fully-honoring passes stays at THREE (0434, 1347, 1404). The
+  next pass must re-read the newest queue-ticker record FIRST,
+  before sync and before any claim.
+- Sync: due 22, produced 0, already_queued all 22, reaped 0,
+  expired 0. Pool after sync: inbox 73, claimed 0, done 2598.
+  Branch reconcile warning: fetch of records/2026-11-20 failed
+  (remote ref missing, issue #446). Zombie seeding skipped
+  (event ended about the 19:00 reset Oct 30, chains closed, no
+  live re-check possible).
+- Own PRs first: VPS SSH Permission denied (publickey) at about
+  09:40Z, about 181 hours into the outage; GitHub connector
+  fallback read shows the same three open PRs as 0004 (#711,
+  #708, #425), timestamps unchanged since 2026-11-12, none owned
+  by this job, no PR for records/2026-11-19 or records/2026-11-20.
+  No new issue filed (gh route down). Window-loss and
+  device-offline failure-mode filings stay owed.
+- Probe evidence note: first mac_capture_probe run returned
+  UNKNOWN until device_list_online false and
+  device_last_seen_stale true were added to the evidence file;
+  next pass should include both flags from the start.
+- Standing counts: no game unit since ticker-0214 gifts Nov 17
+  02:14 PT (about 71.5 hours missed); seventh consecutive missed
+  VIP day (same reset day 0004 counted, ends 18:00 PST Nov 20);
+  Nov 19 pre-reset sweep pair expired unexecuted 18:19:25 PT,
+  sixth missed sweep night per retro-2100; missed batches stay 42
+  plus 2 due-but-unexecuted (15:00, 19:00), no batch point in this
+  run window; duel day 4 Train Heroes ended 18:00 PT Nov 19,
+  unreachable. VPS SSH still down, delivery blocked, commit left
+  on local records/2026-11-20, no PR. This pass is partial. Record:
+  queue-ticker/0134-queue-run.md.
