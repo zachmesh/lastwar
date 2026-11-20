@@ -1484,6 +1484,16 @@ def _unit_id_for_window(item, planned_local):
                       planned_local.strftime("%Y-%m-%d-%H%M"))
 
 
+def _produce_refused(unit_id):
+    """True when _produce_for_window refused this unit in this run.
+
+    Issue #712: a refused window is not an already-present slot,
+    so the caller asks here instead of counting the None return
+    as present.
+    """
+    return any(r.get("unit") == unit_id for r in _PRODUCE_REFUSALS)
+
+
 def _produce_for_window(root, item, planned_local, window="",
                         closed_ids=None, expires_dt=None, priority=None):
     """Enqueue the unit for one (regular, window) pair, or return
@@ -1493,7 +1503,12 @@ def _produce_for_window(root, item, planned_local, window="",
     also not produced: the slot already closed on the delivered
     records branch or in another worktree, and minting a fresh
     unit with the same deterministic id would re-execute it
-    (issue #466). Callers that pass no closed set keep the old
+    (issue #466). A window whose expiry already passed is also
+    not produced, and neither is a reset-anchored slot whose
+    chain sequence the pool already holds at another slot (issue
+    #712) - both refusals are recorded in _PRODUCE_REFUSALS so
+    the caller reports them instead of counting the slot as
+    already present. Callers that pass no closed set keep the old
     behaviour; plan passes its own set (issue #465) and sweep
     keeps the old behaviour. expires_dt overrides the
     cadence-derived expiry and priority overrides the
@@ -1594,6 +1609,57 @@ def _produce_for_window(root, item, planned_local, window="",
             expires_dt = planned_utc + timedelta(days=1)
         else:
             expires_dt = planned_utc + timedelta(hours=4)
+    # Already-expired window (issue #712): plan yields the previous
+    # day's last slot as the current window before the first slot
+    # of the day, and its reset instant is already past - a unit
+    # minted for it is born expired (the 1140 run staged
+    # zero-sweep-2026-11-11-1700 17h44m past its expiry). Refuse
+    # it here, at the single production choke point, so no
+    # producer - plan, sync, sweep or fix-ups - can stage a
+    # stillborn unit. The refusal is recorded, not silent, so the
+    # caller reports it instead of counting the slot as already
+    # present.
+    if expires_dt <= now_utc():
+        print(f"warning: refusing to stage {unit_id}: window "
+              f"expires_at {iso(expires_dt)} already passed "
+              f"(issue #712)", file=sys.stderr)
+        _PRODUCE_REFUSALS.append(
+            {"unit": unit_id,
+             "reason": "expires_at %s already passed"
+                       % iso(expires_dt)})
+        return None
+    if expected is not None and expected.get("chain_id") and \
+            expected.get("seq"):
+        # Chain-sequence dedupe across a geometry change (issue
+        # #712): the (regular, planned_for) invariant cannot see
+        # a second pair staged at new-geometry slots while the
+        # old-geometry pair still holds the same chain sequences
+        # (the 1140 run staged 16:00/17:00 seq 1/2 beside the
+        # 16:30/17:30 seq 1/2 from the [90,30] geometry). One
+        # chain holds one unit per sequence - refuse the second
+        # pair and leave the standing pair for the planner to
+        # withdraw or the executor to run.
+        for state in STATES:
+            for f in list_units(root, state):
+                if f.get("regular") != regular:
+                    continue
+                if f.get("chain_id") != expected["chain_id"]:
+                    continue
+                try:
+                    seq = int(f.get("chain_seq", 0))
+                except (TypeError, ValueError):
+                    continue
+                if seq == expected["seq"]:
+                    print(f"warning: refusing to stage {unit_id}: "
+                          f"chain {expected['chain_id']} already "
+                          f"holds seq {seq} as {f.get('unit')} "
+                          f"(issue #712)", file=sys.stderr)
+                    _PRODUCE_REFUSALS.append(
+                        {"unit": unit_id,
+                         "reason": "chain %s already holds seq %d "
+                                   "as %s" % (expected["chain_id"],
+                                              seq, f.get("unit"))})
+                    return None
     chain_id, chain_seq = "", ""
     prefix = item.get("chain_id_prefix", "")
     if prefix:
@@ -1804,6 +1870,14 @@ ROSTER_FRESH_REF = "refs/queue-fresh/main"
 _MAIN_ROSTER_OFFSETS_CACHE = {"attempted": False, "offsets": None,
                               "warning": None, "warned": False}
 _ROSTER_FRESH_REFUSALS = []
+
+# Production refusals (issue #712): _produce_for_window records
+# every window it refuses to mint - a window whose expiry already
+# passed, or a reset-anchored slot whose chain sequence the pool
+# already holds at another slot - as {"unit": ..., "reason": ...},
+# so the caller reports the refusal instead of counting the slot
+# as already present.
+_PRODUCE_REFUSALS = []
 
 
 def _git_remote(root):
@@ -2479,6 +2553,13 @@ def cmd_plan(args):
                 planned.append(unit)
             elif _unit_id_for_window(item, w) in closed:
                 skipped_closed.append(_unit_id_for_window(item, w))
+            elif _produce_refused(_unit_id_for_window(item, w)):
+                # Issue #712: a refused window (already expired, or
+                # its chain sequence already held) is not an
+                # already-present slot - the refusal is reported in
+                # produce_refusals below, so already_present is
+                # not inflated by it.
+                pass
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -2501,6 +2582,7 @@ def cmd_plan(args):
                       "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
+                      "produce_refusals": _PRODUCE_REFUSALS,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 1 if _ROSTER_FRESH_REFUSALS else 0
