@@ -529,3 +529,32 @@ pass is partial. Record: queue-ticker/0934-queue-run.md.
 ## 10:58 to about 11:06 - Queue planning pass (partial, delivery blocked)
 
 - 10:58 PT, queue-planning-1040 - partial (17 units staged: 2203/2230/2257 sets; 17 expired: 0603/0630/0657 sets, unexecuted; sweep pair not due, tonight's pair COMPLETE in the pool by plan - the 1700 run must skip production, not mint a second seq 1 per #712; last night's pair expired unexecuted 18:19:25 PT Nov 19, sixth missed sweep night, seventh if tonight also goes unexecuted; scout diff on the 6-pass observation applied with 0 counts, 11 unexplained red dots, 0 withdrawals; pool inbox 77, claimed 0, done 2650; ticker-0934 evidenced on the branch (89th failed pass, 11th device-offline occurrence, commit e01b24d8cf); ticker-1034 still in its window at close, not flagged; chain-gap candidates THIRTEEN, possible total twenty-two, confirmed gaps NINE; missed batches 47 per pr-integration-1000; VPS SSH Permission denied, delivery blocked, commit left on planner-1040-1120-delivery, no PR; 116th consecutive planner run failing to commit). Record: queue-planning/1040-run.md.
+## 11:04 to about 11:25 - Queue ticker pass (FAILED, Mac mini offline, twelfth device-offline occurrence)
+
+ticker-1104: 90th consecutive failed ticker pass by recorded-slot
+chain arithmetic, TWELFTH device-offline occurrence. Mac mini
+offline since 2026-11-19 20:16:40 PST, no wake-up path;
+connection.health, connection.repair and computer.session start
+all node_offline, mac_capture_probe DEVICE_OFFLINE high
+confidence, stop_pass yes (exit 13). No unit claimed, no unit
+completed, `next` never called, no attempt burned
+(vip-2026-11-19-1800 and vip-2026-11-20-1800 stay in inbox at
+attempts 0 of 3, expiring 2026-11-21T02:00:00Z and
+2026-11-22T02:00:00Z). Token acquired after the probe
+(ticker-1104 until 19:28:29Z) and released before pass end; sync
+ran before the newest queue-ticker record was read, and the first
+probe run used a wrong evidence key (corrected and re-run);
+deviation-watch stays at THREE. Sync: due 22, produced 0,
+reaped 0, expired 0; pool inbox 77, done 2650. Zombie seeding
+skipped (event ended 2026-10-30). Own PRs first: VPS SSH still
+Permission denied, about 190 hours into the outage; exactly three
+open PRs, all unchanged since 2026-11-12 (#711, #708, #425),
+none owned by this job, no PR for records/2026-11-20. NEW
+chain-gap candidate ticker-1034 (no record anywhere checked);
+candidates now FOURTEEN, possible total twenty-three. No game unit
+since ticker-0214 gifts Nov 17 02:14 PT (about 80.8 hours
+missed); seventh consecutive missed VIP day; missed batches stay
+47 (11:00 batch point arrived during this pass, no 11:00
+integrator record visible, not counted as missed). VPS SSH still
+down, delivery blocked, commit left on local records/2026-11-20,
+no PR. This pass is partial. Record: queue-ticker/1104-queue-run.md.
