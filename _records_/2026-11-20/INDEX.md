@@ -434,3 +434,31 @@ queue-ticker/0704-queue-run.md.
 ## 08:39 PT, pr-catchall-0839 - BLOCKED DELIVERY (VPS SSH still Permission denied (publickey), about 187.9 hours into the outage; 177th consecutive blocked catchall pass)
 
 - 08:39 PT, pr-catchall-0839 - BLOCKED DELIVERY (VPS SSH still Permission denied (publickey), about 187.9 hours into the outage; 177th consecutive blocked catchall pass). Read-only via the authenticated GitHub connector this pass: exactly three open PRs, all unchanged since the 0739 pass - 711 (knowledge fold, Owner lastwar-knowledge-organizer, head e3c3dfd0, updatedAt 2026-11-12T20:04:57Z), 708 (records 2026-11-12, Owner lastwar-pr-integrator, head 2f59c270, updatedAt 2026-11-12T20:44:37Z), 425 (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6, updatedAt 2026-11-12T19:29:37Z). Owner lines re-read live from all three PR bodies this pass. Named owners match their diffs; nothing adoptable, no owned open PR (PR 137 stays merged). Issues: 138 real issues (2-page connector read, 100+38 rows, totalCount 138, zero dupes), zero unclassified, newest 712, latest-updated #689 at 2026-11-12T20:11:54Z. Owner-decision issues over 24h, all unchanged: 132, 154, 335, 514, 517. Stale-owner flags remain in force (708 from 1239, 425 and 711 from 1139); no new flag. PR 425 still owner-gated (OD-20261108-01). Missed batches 47, formally recounted by pr-integration-0745 (next point 11:00 PT Nov 20). NEW: ticker-0804 has no record on the records/2026-11-20 branch at close read (branch tip still 5b2368e485, ticker-0704) - not adopted as a candidate by this pass, carried unadjudicated for the next planner/KO pass. Chain gaps stay NINE confirmed; candidates stay TEN, possible total nineteen. Quiet run for this job's own outcomes: no Slack DM sync, no chat report. Record: pr-catchall/0839-run.md (mirror copy only + goal hidden_files backup; branch commit deferred to route recovery).
+## 08:34 to about 08:50 - Queue ticker pass (FAILED, Mac mini offline, tenth device-offline occurrence)
+
+ticker-0834 (executor ticker-0841): 88th consecutive failed ticker
+pass by recorded-slot chain arithmetic, TENTH device-offline
+occurrence. Mac mini offline since 2026-11-19 20:16:40 PST, no
+wake-up path; 3x computer.session start all node_offline,
+mac_capture_probe DEVICE_OFFLINE medium confidence, stop_pass yes
+(exit 13). The recovery device also timed out twice
+(connection.repair, connection.health, 25s each). No unit claimed,
+no unit completed, `next` never called, no attempt burned
+(vip-2026-11-19-1800 stays in inbox at attempts 0 of 3,
+expires 2026-11-21T02:00:00Z). Token acquired before the probe
+(same deviation as 0604/0704; released before pass end) and sync
+ran before the newest queue-ticker record was read; deviation-watch
+stays at THREE. Sync: due 22, produced 0, reaped 0, expired 0;
+pool inbox 77, done 2633. Zombie seeding skipped (event ended
+2026-10-30). Own PRs first via the GitHub connector (VPS SSH
+still Permission denied, about 187.9 hours into the outage):
+exactly three open PRs, all unchanged since 2026-11-12 (#711,
+#708, #425), none owned by this job, no PR for
+records/2026-11-20. NEW chain-gap candidates ticker-0734 and
+ticker-0804 (no record anywhere checked); candidates now TWELVE,
+possible total twenty-one. No game unit since ticker-0214 gifts
+Nov 17 02:14 PT (about 78.5 hours missed); seventh consecutive
+missed VIP day; missed batches stay 47 (next point 11:00 PT
+Nov 20). VPS SSH still down, delivery blocked, commit left on
+local records/2026-11-20, no PR. This pass is partial. Record:
+queue-ticker/0834-queue-run.md.
