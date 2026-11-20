@@ -213,3 +213,38 @@ modified: 2026-11-20T09:50:00Z
 ## 03:47 to about 03:53 - Queue planning pass (partial, delivery blocked)
 
 - 03:47 PT, queue-planning-0340 - partial (5 units staged for Nov 20 1457, already_present 69, expired 5 - the Nov 19 2257 set, finished_at 03:47:51 PT; sweep pair not due, tonight's pair already expired unexecuted 18:19:25 PT, sixth missed sweep night; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-20. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 73, claimed 0, done 2615. Ticker-0234 newly evidenced from the local records/2026-11-20 branch (83rd consecutive failed pass, fifth device-offline occurrence); ticker-0304 and ticker-0334 left no record anywhere - 0334 NEW gap candidate, fourth recordless slot today (0034, 0104, 0204, 0334); pr-integration-0330 (160th consecutive failed pass, 03:00 batch confirmed due-but-unexecuted #4), knowledge-organization-0332 and tool-development-0332 (both no-op), pr-catchall-0339 (172nd consecutive blocked pass) newly evidenced; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches now 46 (next point 07:00 PT Nov 20); seventh consecutive missed VIP day. 110th consecutive planner run failing to commit - Chinese chat report owed. Chain gaps: nine confirmed, plus candidates 2026-11-13 0839, 2026-11-14 0039, ticker-0034, ticker-0104, ticker-0204 and ticker-0334 (possible total fifteen) flagged for retro ruling. Record: queue-planning/0340-run.md.
+## 03:34 to about 04:00 - Queue ticker pass (FAILED, Mac mini offline, sixth device-offline occurrence)
+
+- 03:34 PT, ticker-0334 - FAILED (Mac mini offline, node_offline,
+  no wake-up path; 84th consecutive failed pass, SIXTH
+  device-offline occurrence). Probe before claim: device.list
+  offline, last_seen 2026-11-20T04:16:40Z (20:16:40 PST Nov 19,
+  about 7.6 hours stale); connection.health x3 (11:52Z) all
+  node_offline; mac_capture_probe returns DEVICE_OFFLINE,
+  high confidence, stop_pass yes (exit 13). No unit claimed, no
+  unit completed, `next` never called, no attempt burned
+  (vip-2026-11-19-1800 stays in inbox at attempts 0 of 3,
+  expires 2026-11-21T02:00:00Z). Token acquired after the probe
+  and released before pass end. Sync: due 22, produced 0,
+  already_queued all 22, reaped 0, expired 0; pool inbox 73,
+  claimed 0, done 2615. Zombie seeding skipped (event ended
+  about the 2026-10-30 reset; chains zombie-2026-10-28 and
+  zombie-2026-11-10 closed, the latter by unit 037 on 2026-11-14).
+  Own PRs first: VPS SSH Permission denied (publickey) at about
+  11:51Z, about 183 hours into the outage; GitHub connector
+  fallback read shows the same three open PRs as 0234 (#711,
+  #708, #425), timestamps unchanged since 2026-11-12, none owned
+  by this job, no PR for records/2026-11-19 or records/2026-11-20.
+  No new issue filed (gh route down). Route PARTIALLY honored
+  (same sync-before-newest-record slip as 0234; deviation-watch
+  stays at THREE). Standing counts: no game unit since ticker-0214
+  gifts Nov 17 02:14 PT (about 73.7 hours missed); seventh
+  consecutive missed VIP day; Nov 19 pre-reset sweep pair expired
+  unexecuted 18:19:25 PT, sixth missed sweep night; missed batches
+  stay 42 plus 4 due-but-unexecuted, i.e. 46 (03:00 batch Nov 20
+  passed with no PR to merge; next batch 07:00 PT Nov 20); chain
+  gaps nine confirmed plus five candidates (2026-11-13 0839,
+  2026-11-14 0039, ticker-0104, ticker-0204, ticker-0304).
+  VPS SSH still down, delivery blocked, commit left on local
+  records/2026-11-20, no PR. This pass is partial. Record:
+  queue-ticker/0334-queue-run.md.
