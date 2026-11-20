@@ -263,3 +263,41 @@ modified: 2026-11-20T09:50:00Z
 ## 04:53 to about 05:00 - Queue planning pass (partial, delivery blocked)
 
 - 04:53 PT, queue-planning-0440 - partial (1 unit staged: zero-sweep-2026-11-20-1630, tonight's sweep seq 1, chain pre-reset-sweep-2026-11-20, planned 16:30 PT, expires 18:00 PT = the reset, no ledger-walk task text; already_present 74, expired 0, reaped 0; sweep pair not due, tonight's pair now HALF-STAGED by plan - seq 2 not yet staged, 1700 run must not mint a second seq 1 per #712; last night's pair expired unexecuted 18:19:25 PT Nov 19, sixth missed sweep night, seventh if tonight also goes unexecuted; scout diff on the 6-pass observation applied with 0 counts, 11 unexplained red dots unchanged, 0 withdrawals; run-record delivery blocked by VPS SSH outage). Own PRs first: connector read - exactly three open PRs, all unchanged since 2026-11-12 (#711, #708, #425), none owned by this job, no PR for records/2026-11-20. Owner-decision issues #517/#514/#335/#154/#132 all unchanged, newest issue still #712. Pool: inbox 74, claimed 0, done 2615; newest finished 2026-11-20T04:52:24Z, evidence stale. NEW: ticker-0404 and ticker-0434 left no record anywhere (fifth and sixth recordless slots today: 0034, 0104, 0204, 0304, 0404, 0434; 0334 withdrawn by KO-0432, record exists on branch commit 870a6af7a4) - NEW chain-gap candidates, possible total sixteen (nine confirmed + seven candidates); pr-integration-0430 (161st consecutive failed pass, missed batches 46), knowledge-organization-0432 (no-op) and pr-catchall-0439 (173rd consecutive blocked pass) newly evidenced; no game unit since ticker-0214 gifts Nov 17 02:14 PT. Missed batches now 46 (next point 07:00 PT Nov 20); seventh consecutive missed VIP day. 111th consecutive planner run failing to commit - Chinese chat report owed. Record: queue-planning/0440-run.md.
+## 04:34 to about 05:10 - Queue ticker pass (FAILED, Mac mini offline, seventh device-offline occurrence)
+
+- 04:34 PT, ticker-0434 (executor ticker-0458, late start about
+  04:58 PT) - FAILED (Mac mini offline, node_offline, no wake-up
+  path; 85th consecutive failed pass, SEVENTH device-offline
+  occurrence). Probe before claim: device.list offline, last_seen
+  2026-11-20T04:16:40Z (20:16:40 PST Nov 19, about 8.8 hours
+  stale); connection.health, environment.describe and
+  connection.repair (13:00-13:02Z) all node_offline;
+  mac_capture_probe returns DEVICE_OFFLINE, high confidence,
+  stop_pass yes (exit 13). No unit claimed, no unit completed,
+  `next` never called, no attempt burned (vip-2026-11-19-1800
+  stays in inbox at attempts 0 of 3, expires 2026-11-21T02:00:00Z).
+  Token acquired after the probe and released before pass end.
+  Sync: due 22, produced 0, already_queued all 22, reaped 0,
+  expired 0; pool inbox 74, claimed 0, done 2615. Zombie seeding
+  skipped (event ended about the 2026-10-30 reset; chains
+  zombie-2026-10-28 and zombie-2026-11-10 closed, the latter by
+  unit 037 on 2026-11-14). Own PRs first: VPS SSH Permission
+  denied (publickey) at about 12:59Z, about 184 hours into the
+  outage; GitHub connector fallback read shows the same three open
+  PRs as 0334 (#711, #708, #425), timestamps unchanged since
+  2026-11-12, none owned by this job, no PR for records/2026-11-19
+  or records/2026-11-20. No new issue filed (gh route down).
+  Route PARTIALLY honored (same sync-before-newest-record slip as
+  0334; deviation-watch stays at THREE). Standing counts: no game
+  unit since ticker-0214 gifts Nov 17 02:14 PT (about 74.9 hours
+  missed); seventh consecutive missed VIP day; Nov 19 pre-reset
+  sweep pair expired unexecuted 18:19:25 PT, sixth missed sweep
+  night (tonight seq 1 staged by planner-0440, seq 2 not yet);
+  missed batches stay 42 plus 4 due-but-unexecuted, i.e. 46
+  (next batch 07:00 PT Nov 20); chain gaps nine confirmed plus
+  six candidates (2026-11-13 0839, 2026-11-14 0039, ticker-0104,
+  ticker-0204, ticker-0304, ticker-0404). The planner-0440
+  "ticker-0434 left no record" candidate closes with this record.
+  VPS SSH still down, delivery blocked, commit left on local
+  records/2026-11-20, no PR. This pass is partial. Record:
+  queue-ticker/0434-queue-run.md.
