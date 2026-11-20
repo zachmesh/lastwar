@@ -1,7 +1,7 @@
 ---
 title: Queue ticker run failure - Mac mini offline, ninety-first consecutive occurrence
 created: 2026-11-20T20:31:00Z
-modified: 2026-11-20T20:31:00Z
+modified: 2026-11-20T20:32:00Z
 version: 1.0.0
 description: Queue ticker 2026-11-20 12:04 PT run failure, Mac mini offline, one harvest attempt burned by claim-before-probe
 status: run-failure
@@ -17,7 +17,7 @@ grounded_in:
   - source: VPS SSH probe, 2026-11-20T20:21Z
 ---
 
-# Queue ticker 2026-11-20 12:04 to about 12:35 PT (ticker-1204) - FAILED
+# Queue ticker 2026-11-20 12:04 to about 12:32 PT (ticker-1204) - FAILED
 
 One unit claimed and completed failed; no screen entered, nothing
 read or claimed in the game. The blocker is the ninety-first
@@ -197,6 +197,38 @@ costs one cheap call and the claim costs an attempt.
   JSON per log_append.py check. No inbox unit file rides this delivery commit (the live-pool
   state stays in the working tree; the ticker's sync
   re-produces due units from the tracker in any case).
+
+## Delivery
+
+- Commit built in the existing branch worktree
+  lastwar-worktrees/ticker-0004-1120-records on records/2026-11-20
+  from the branch tip 26cb83cff8: run record, day INDEX.md
+  section, action-log entry.
+- Push via the standard bundle route was attempted after commit:
+  the bundle (/tmp/ticker-1204-1120.bundle) was created from the
+  commit, and the scp transfer to the VPS failed at about
+  20:31:15Z (`Permission denied (publickey)`, connection closed)
+  - the SSH outage persists. No retry was run: the failure is a
+  deterministic transport outage, not a ticker-collision race,
+  and the same failure was already verified at 20:21Z at run
+  start and by the 2026-11-15, 2026-11-16, 2026-11-17,
+  2026-11-18, 2026-11-19 and 2026-11-20 earlier runs. Per the
+  body, no further retry: the commit is LEFT on the local
+  records/2026-11-20 branch for the next pass or the integrator
+  to pick up once VPS SSH is restored. No direct main push was
+  made. No PR for records/2026-11-20 exists and none could be
+  opened by this run (VPS gh route down; GitHub App without
+  write permission).
+- After the failed attempt this record was amended (the attempt
+  timestamp and finished time, and a correction to the
+  action-log entry timestamp, which was written 4 minutes ahead
+  of the actual append time and is now set to the commit time
+  20:30:55Z). The amendment lands as a follow-up commit, not
+  an amend of e3727ecb93: the pr-integration 1230 run committed
+  3923d70a0c on top of it while this pass was amending, sweeping
+  in the INDEX section and the log-timestamp correction, so
+  rewriting e3727ecb93 would rewrite history under a live
+  commit. The bundle is recreated from the final commit.
 
 ## Time note
 
