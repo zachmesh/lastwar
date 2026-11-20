@@ -654,3 +654,26 @@ no PR. This pass is partial. Record: queue-ticker/1204-queue-run.md.
 ## 12:40 to about 12:48 - Queue planning pass (partial, delivery blocked)
 
 - 12:40 PT, queue-planning-1240 - partial (0 units staged, 0 expired; sweep pair not due, tonight's pair COMPLETE in the pool by plan - the 1700 run must skip production, not mint a second seq 1 per #712; last night's pair expired unexecuted 18:19:25 PT Nov 19, sixth missed sweep night, seventh if tonight also goes unexecuted; scout diff on the 6-pass observation applied with 0 counts, 11 unexplained red dots, 0 withdrawals; pool inbox 76, claimed 0, done 2651; ticker-1204 evidenced on the branch (91st failed pass, 13th device-offline occurrence, commits e3727ecb93 and 16ab0defec; claim-before-probe burned 1 harvest attempt); ticker-1134 confirmed recordless, already adopted as chain-gap candidate by KO-1232 (candidates SIXTEEN, possible total twenty-five); ticker-1234 still in its window at close, not flagged; chain-gap candidates SIXTEEN, possible total twenty-five, confirmed gaps NINE; missed batches 48 per pr-integration-1100/1230; VPS SSH Permission denied, delivery blocked, commit left on planner-1240-1120-delivery, no PR; 118th consecutive planner run failing to commit). Record: queue-planning/1240-run.md.
+## 13:30 to about 13:43 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-20-1330. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 15:00): no merges. VPS SSH still Permission
+  denied (publickey), about 192.8 hours into the outage, so no
+  GitHub write was possible - no comments posted, no merges,
+  no push. Records PR 708 freshly re-verified CLEAN (merge-tree
+  f46bfda1, API mergeable clean) at unchanged head 2f59c270,
+  awaits the 15:00 batch. Knowledge PR 711 head unchanged since
+  the 1145 review, no repeat comment. Tools PR 425 still
+  owner-gated (OD-20261108-01 re-read open on current main this
+  pass, zero decision lines), freshly re-verified CLEAN
+  (merge-tree 08e8515a, API mergeable clean), no new comment.
+  Missed batches stay 42 by the adopted definition (42 + 6
+  due-but-unexecuted = 48 unlanded); the 1230 record's "missed
+  batches now 48" wording is flagged as a counting deviation.
+  Status-label flag: 1230 used "partial", this run "failed" per
+  the body and the 1100/1900 precedent. The 1230 run's missing
+  live-tree mirror and hidden_files copy were backfilled this
+  pass from commit 3923d70a0c. No records PR for
+  records/2026-11-20 (branch exists only locally, unpushed).
+  This pass is failed. Record: pr-integration/1330-run.md.
