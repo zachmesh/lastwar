@@ -1172,6 +1172,8 @@ def cmd_sync(args):
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
+                      "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+                      "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
@@ -1500,7 +1502,17 @@ def _produce_for_window(root, item, planned_local, window="",
     SYNC_PRIORITY default - both are used by the pre-reset
     sweep fix-ups (issue #147), which expire at the reset they
     serve and run at priority 1 regardless of their regular's
-    usual cadence and priority."""
+    usual cadence and priority. A window whose computed expiry is
+    already past is never staged (issue #712): plan_windows
+    yields the cycle's current window, and for a reset-anchored
+    regular in the morning that is yesterday's last slot, whose
+    reset already passed - the refusal is recorded in
+    _EXPIRED_WINDOW_REFUSALS. A reset-anchored slot is likewise
+    never staged when the pool already holds the same chain step
+    (same chain_id and chain_seq) at another slot (issue #712):
+    the (regular, planned_for) dedupe above cannot see a pair
+    staged at the old geometry, so the refusal is recorded in
+    _CHAIN_SEQ_REFUSALS."""
     # Live-pool production (issue #598): sync / plan / sweep mint
     # through here, and a pass running this copy from a delivery
     # worktree would otherwise stage the unit into the worktree's
@@ -1563,6 +1575,40 @@ def _produce_for_window(root, item, planned_local, window="",
                               f"stale pair and re-run plan or sweep "
                               f"(issue #410)")
                 return None
+            if expected is not None and f.get("regular") == regular \
+                    and f.get("planned_for") != planned_iso \
+                    and expected["chain_id"] and \
+                    f.get("chain_id") == expected["chain_id"]:
+                # Issue #712: the same chain step staged at another
+                # slot - the (regular, planned_for) dedupe above
+                # cannot see it, so without this check plan stages
+                # a second seq-1 at 16:00 beside the 16:30 one the
+                # old [90, 30] geometry left in the inbox, and a
+                # second seq-2 for a reset day whose seq-2 already
+                # closed in done. Refuse instead of minting a
+                # duplicate step; the refusal is recorded so the
+                # command reports it.
+                try:
+                    fseq = int(f.get("chain_seq", 0))
+                except (TypeError, ValueError):
+                    fseq = None
+                if fseq == expected["seq"]:
+                    _CHAIN_SEQ_REFUSALS.append({
+                        "unit": _unit_id_for_window(item, planned_local),
+                        "regular": regular,
+                        "chain_id": expected["chain_id"],
+                        "chain_seq": expected["seq"],
+                        "existing_unit": f.get("unit"),
+                        "planned_for": planned_iso})
+                    print(f"warning: pool already holds chain_seq "
+                          f"{expected['seq']} of chain "
+                          f"{expected['chain_id']} as "
+                          f"{f.get('unit')} (planned "
+                          f"{f.get('planned_for')}) - not staging a "
+                          f"second seq-{expected['seq']} unit for the "
+                          f"{planned_iso} slot (issue #712)",
+                          file=sys.stderr)
+                    return None
     # Closed-slot guard (issue #466): the live-pool scan above
     # cannot see a closing that lives only on the delivered
     # records branch or in another worktree's marker, so a
@@ -1594,6 +1640,23 @@ def _produce_for_window(root, item, planned_local, window="",
             expires_dt = planned_utc + timedelta(days=1)
         else:
             expires_dt = planned_utc + timedelta(hours=4)
+    if expires_dt <= now_utc():
+        # Issue #712: a window whose expiry is already past is
+        # never staged - plan_windows yields the cycle's current
+        # window, and for a reset-anchored regular in the morning
+        # that is yesterday's last slot, whose reset already
+        # passed; minting it would stage a stillborn unit the
+        # next sync expires. The refusal is the filter working,
+        # not an error, so it is recorded for the command to
+        # report and the exit stays 0.
+        _EXPIRED_WINDOW_REFUSALS.append({
+            "unit": unit_id, "regular": regular,
+            "planned_for": planned_iso,
+            "expires_at": iso(expires_dt)})
+        print(f"refused: {unit_id} expires_at {iso(expires_dt)} is "
+              f"already past - not staging a unit that is expired "
+              f"at creation (issue #712)", file=sys.stderr)
+        return None
     chain_id, chain_seq = "", ""
     prefix = item.get("chain_id_prefix", "")
     if prefix:
@@ -1804,6 +1867,14 @@ ROSTER_FRESH_REF = "refs/queue-fresh/main"
 _MAIN_ROSTER_OFFSETS_CACHE = {"attempted": False, "offsets": None,
                               "warning": None, "warned": False}
 _ROSTER_FRESH_REFUSALS = []
+# Issue #712: _EXPIRED_WINDOW_REFUSALS collects the windows the
+# production path refused because their expiry is already past,
+# and _CHAIN_SEQ_REFUSALS the reset-anchored slots refused because
+# the pool already holds the same chain step at another slot.
+# Both are filters working, not errors, so the commands report
+# them and keep exit 0.
+_EXPIRED_WINDOW_REFUSALS = []
+_CHAIN_SEQ_REFUSALS = []
 
 
 def _git_remote(root):
@@ -2421,6 +2492,7 @@ def cmd_plan(args):
         closed.setdefault(unit, "completion marker in another "
                                 "worktree")
     planned, present, skipped_done, skipped_closed = [], 0, 0, []
+    skipped_expired = []
     fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
@@ -2472,13 +2544,17 @@ def cmd_plan(args):
                     and not due_now.get(item["id"], True):
                 skipped_done += 1
                 continue
+            uid = _unit_id_for_window(item, w)
             unit = _produce_for_window(
                 args.root, item, w, duel_window_text(item["id"], w),
                 closed_ids=closed)
             if unit:
                 planned.append(unit)
-            elif _unit_id_for_window(item, w) in closed:
-                skipped_closed.append(_unit_id_for_window(item, w))
+            elif uid in closed:
+                skipped_closed.append(uid)
+            elif uid in {r["unit"]
+                         for r in _EXPIRED_WINDOW_REFUSALS}:
+                skipped_expired.append(uid)
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -2499,6 +2575,9 @@ def cmd_plan(args):
                       "fixups_already_present": fixups_present,
                       "skipped_done_current": skipped_done,
                       "skipped_closed": skipped_closed,
+                      "skipped_expired": skipped_expired,
+                      "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+                      "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -2770,6 +2849,8 @@ def cmd_sweep(args):
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
         "produced": produced, "already_present": already,
         "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
+        "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+        "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
         "fixups_produced": fix["produced"],
         "fixups_already_present": fix["already_present"],
         "fixups_skipped_closed": fix["skipped_closed"]},
