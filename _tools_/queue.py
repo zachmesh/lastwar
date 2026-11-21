@@ -3443,6 +3443,29 @@ def cmd_next(args):
         if blocker.get("kind") == "control-lock":
             print("")
             return 0
+    # Doomed-probe preference (issue #746): a probe burns the
+    # unit it claims - the device is offline or the lock just
+    # aged out, so the attempt fails and the unit is gone. The
+    # ticker-2152 rule prefers the zombie chain unit for the
+    # probe and never burns a real perception unit: on Nov 14
+    # six of twelve probes claimed scout units 011-016 although
+    # a zombie chain unit sat queued in inbox, because the
+    # plain pick_key order returns scout and zombie alternately.
+    # A probe pass calls next --probe; when one is queued in
+    # inbox, actionable and inside this pass's budget, it is
+    # handed out ahead of the overlay steering and the normal
+    # pick. Otherwise the probe falls through to the normal
+    # pick, so a pass with no zombie unit queued still probes.
+    if args.probe:
+        zombie = [f for f in candidates
+                  if f.get("regular") == "zombie-invasion"
+                  and _est_minutes(f) <= args.budget_minutes]
+        if zombie:
+            print(f"probe: preferring queued zombie chain unit "
+                  f"{zombie[0].get('unit', '')} over the normal "
+                  f"pick (issue #746)", file=sys.stderr)
+            print(zombie[0].get("unit", ""))
+            return 0
     # Screen-blocking overlay (issue #436): a recorded overlay
     # prefers the unit that clears it over every base-screen unit,
     # and pauses base-screen production while the clearing unit is
@@ -5077,6 +5100,7 @@ def main(argv=None):
 
     p = sub.add_parser("next")
     p.add_argument("--budget-minutes", type=int, default=UNIT_CAP_MINUTES)
+    p.add_argument("--probe", action="store_true")
     p.set_defaults(fn=cmd_next)
 
     p = sub.add_parser("claim")
