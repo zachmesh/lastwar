@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-21
 
+## 15:32 to about 15:47 - Tool developer pass (DONE)
+
+- 15:32 PT, tool-development-1532 - done (PR #780 opened: `next --probe` hands out a queued zombie chain unit for doomed probes, Refs #746; R17 + changelog 0.25.0; 17/17 fixture assertions on isolated /tmp pools, py_compile clean; branch work/queue-probe-746-zombie-pref, commit 96d18d80). Own PRs first: #769 merged; #751 superseded by merged #715, no action; #425 owner-gated (OD-20261108-01), re-verified CLEAN 2026-11-21 1233 pass, no action. Issue #746 implemented this run (one item per run); progress commented on the issue. Slack DM sync done (ts 1795304733.202439). Record: tool-development/1532-run.md.
+
 ## 15:39 to about 15:41 - PR catch-all pass (NO-OP)
 
 - 15:39 PT, pr-catchall-1539 - no-op (fourth pass since VPS SSH recovery; delivery via git plumbing on the VPS). Open PRs 21 (23 at the 1439 final read): 769 merged 22:53Z, 776 merged 22:52Z, 716 and 708 merged 23:07Z; main advanced 132d543e to f9d87d86. New PR 774 knowledge (rebased successor to #753, MERGEABLE/CLEAN) names lastwar-knowledge-organizer. PR 772 superseded by merged #776; close step belongs to the named owner and the integrator. PR 711 unchanged (superseded by merged 719). PR 425 unchanged head 4f41cdd6, still owner-gated OD-20261108-01 (fourteenth day), re-verified CLEAN by the integrator 1530 pass against new main f9d87d86. Classification: 11 knowledge-organizer, 2 tool-developer, 8 pr-integrator; none owned by this job, nothing adopted or fixed. PR 137 re-verified merged live. Open issues 169, zero unclassified, newest still 750; owner-decision issues 132, 154, 335, 514, 517 all unchanged, all over 24 hours. PR 771 body records OD-20261109-01 decided-by-expiry in the register while issue 514 stays open on GitHub pending recovery Issue actions; closure belongs to the daily retro. No stale-owner flag fired (708 flag satisfied by merge, 425 flag remains in force, not re-fired). Quiet run, no Slack DM sync, no chat report. Record: pr-catchall/1539-run.md (committed to records/2026-11-21 this run, pushed via git plumbing on the VPS, ls-remote verified).
