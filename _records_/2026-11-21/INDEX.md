@@ -1,13 +1,53 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-21T21:00:00Z
+modified: 2026-11-21T21:39:00Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
 ---
 
 # 2026-11-21
+
+## 13:29 to about 13:38 - Ticker pass ticker-1318, training unit (partial)
+
+- Training unit training-2026-11-21-1003 closed PARTIAL, verified no,
+  blocker_category c. Fresh building-by-building identification (2x
+  crop of the lower-left quadrant): the portrait tent there does not
+  open a button row when tapped at its freshly grounded centre
+  (152, 671) - likely a hospital tent, not a barracks. The Drill
+  Ground is not in the current framing and the view cannot be panned,
+  so its screen stays unread; 0 batches collected, 0 requeued,
+  tracker untouched. Issue #678 comment owed with this evidence.
+  Record: troop-training/1340-queue-run.md.
+
+## 13:27 to about 13:36 - Ticker pass ticker-1318, donations unit (partial)
+
+- Donations unit donations-2026-11-21-1003 closed PARTIAL, verified
+  no, blocker_category c. Alliance menu would not open: coordinate
+  taps at the fresh measured centre (940, 720) and label centre
+  (940, 735), plus an Accessibility click on the 'Alliance' text,
+  all left the menu closed - and unlike the 2026-11-02 units the
+  camera did not pan either, so the wrong-tap-point hypothesis is
+  disproven for this window state. 0 donations, no Donation Count
+  read, tracker untouched. Fourth consecutive donations partial on
+  the Alliance-entry blocker - a process failure per queue rule R2,
+  reported as one. Record: alliance-donations/1340-queue-run.md.
+
+## 13:20 to about 13:31 - Ticker pass ticker-1318 (survivors partial)
+
+- 13:20 PT, ticker-1318 - survivors unit survivors-2026-11-21-1003
+  closed PARTIAL, verified no, blocker_category c. Game windowed again
+  (788x1083, pid 5136) - the Issue #648 fullscreen precondition cleared
+  between 12:47 and 13:19 PT and pointer input works again. Gate front
+  freshly grounded (visual grounding + 2x crop): two figures at the gate
+  with no "?" bubble on either, and no "?" bubble anywhere on the
+  visible base; the two "?" icons the 12:04 pass read are gone, not
+  collected by this unit. One tap on the small dark figure at the gate
+  opened nothing. Base view cannot be panned via this control channel
+  (drag x2, scroll, zoom-button click all no-effect), so the full gate
+  front stays unverified; 0 recruits, no Quick Dispatch. Tracker
+  untouched. Record: survivor-intake/1335-queue-run.md.
 
 ## 12:39 to about 13:00 - PR catch-all pass
 
