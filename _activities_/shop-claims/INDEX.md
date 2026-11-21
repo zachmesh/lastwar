@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-17T07:40:00Z
+modified: 2026-11-21T22:45:00Z
 level: L1
-version: 1.57.0
+version: 1.58.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -60,6 +60,7 @@ grounded_in:
   - source: ticker-1507 shop-claims execution record 2026-11-11 1531 queue run (done, checked only, nothing claimable, Weekly Pass list rotated to three cards with the Iron card absent, monthly Days Left 10 unchanged intraday; record commit 0e87ad206 on records/2026-11-11)
   - source: ticker-2244 perception-scout execution record 2026-11-11 2244 queue run (partial, store remainder walked, Monthly Pass Claim Reward available again, Hot Sale Free Claim still open, Mall tab badge 1 resolved; record commit ae91199c8 on records/2026-11-11)
   - source: ticker-2236 shop-claims execution record 2026-11-16 2240 queue run (partial, all pass gifts already claimed, Hot Deals check-in FREE GIFT unreachable - no Accessibility element for the Go button; committed locally on ticker-2236-1116-delivery, unpushed - VPS SSH down)
+  - source: ticker-1434 shop-claims execution record 2026-11-21 1434 queue run (done, Hot Deals free Military Training Pack claimed - Iron/Food/Coin Chest (UR) x1 each + 5m Speed-up x200, Weekly Pass Free Supply already Claimed, no owned pass daily pickup, monthly pass not owned; first done game unit since ticker-0214 gifts; window back on the current Space, Issue #648 precondition cleared; record commit d50f11e1 on records/2026-11-21)
 ---
 
 
@@ -1568,3 +1569,16 @@ the free and already paid for parts, never the paid unlocks.
 - Follow-up for the next passes unit: try the check-in event from the base Events screen (red badge 1 was showing) instead of the shop banner, or drive the game window frontmost before tapping Go. CORRECTION: the Events-screen route is NOT retried - the Events-hub route is a dead end (1500 events unit, re-confirmed 0214/0440, no check-in tab in the hub); see the updated Open questions entry. The live follow-up is the frontmost-window Go tap. Issue #553 stays open; comment with this evidence owed at VPS recovery.
 - Sync: reaped 0, expired 8, due 22, produced 0 (all 22 already queued); completion markers reaped: radar, survivors and training 2026-11-16-1803. Branch reconcile skipped with a warning: fetch of records/2026-11-16 failed (remote ref missing), issue #446.
 - Result stats: target all claimable pass/shop freebies for the slot; achieved 0 claims, all owned gifts verified already claimed, check-in gift unreachable; resources_gained none; costs about 4 minutes of unit time, no items spent; verified yes - every figure above was read live on screen in this unit; blocker_category c (tooling - Go button has no Accessibility element).
+
+## What the 2026-11-21 1434 unit added - first done unit since 0214, Hot Deals Military Training Pack claimed, window back on the current Space, Issue #648 cleared
+
+- Unit passes-2026-11-21-1057 by ticker-1434, session about 14:38 to 14:49 PT, status done. Evidence in `_records_/2026-11-21/shop-claims/1434-queue-run.md` (commit d50f11e1 on records/2026-11-21). First DONE game unit since ticker-0214 gifts on 2026-11-17 02:14 PT - about a four-day gap with no successful unit (the record's "first successful unit since ticker-1318" is loose phrasing: the 1318 units closed partial, not done).
+- Window state, Issue #648 CLEARED: the Last War window (105986, pid 5136, 788x1083) is back on the user's current Space - activate with raise=true returned brought_to_front true and raised true this pass, where ticker-1404 at 14:08 PT was refused with "raising it would switch the user's Space". This ends the run of seven consecutive game units blocked by the #648 window precondition. Comment with this evidence posted on Issue #648 by this run.
+- Hot Deals free pack claimed - Military Training Pack, Free Claim button: Iron Chest (UR) x1, Food Chest (UR) x1, Coin Chest (UR) x1, 5m Speed-up x200. CONGRATULATIONS popup confirmed the payout; the pack then read "Packs sold out". Timer on the pack before claiming showed 03:22:48 remaining (window runs to about the 18:00 reset, consistent with a reset-day pack).
+- Weekly Pass tab: Free Supply chest reads "Claimed" (already claimed today, auto-claims on page open). No owned pass has a claimable Daily Pickup: the S2 Drone Components Weekly Pass (Legendary), the S1 Drone Parts Weekly Pass (Epic), the middle card and the Coin Weekly Pass (Elite, Daily Pickup x3, Total 21) all show a $4.99 "Get Now" button - repurchase offers, not owned passes. The Legendary row's "Take All $19.99" was not tapped (red line). List scrolled to the bottom; Coin Weekly Pass is the last card.
+- Super Monthly Pass tab: Monthly Pass page shows a "Buy x1" button (250) and "Switch" - the pass is not currently owned, so there is no daily gift to claim. Nothing was bought.
+- Season passes were not hunted in the Season hub: per the activity metadata (2026-11-08 check, Issue #469) the Season II Week 8 hub path is stale and holds no pass claim.
+- Base HUD at entry, unchanged through the unit: food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236, total power 149,653,371, survivors 17.72K - identical to the ticker-1318/1404 reads, so the owner did not play between 13:31 and 14:38 PT.
+- Zombie seeding: not done. The Zombie Invasion event ended 2026-10-30; no fresh chain is seeded until the tab is seen live again.
+- Result stats: target claim the Hot Deals free pack, Weekly Pass Free Supply and daily pickups, Monthly Pass daily gift; achieved 1 claim (Military Training Pack free); resources_gained Iron Chest (UR) x1, Food Chest (UR) x1, Coin Chest (UR) x1, 5m Speed-up x200; costs about 11 minutes device time, no stamina or items; verified yes (claim popup, Free Supply Claimed state, and the $4.99 offer buttons all read live in this unit); blocker_category none.
+- Red lines: no diamonds or money spent, no paid button tapped, no speedup used. No Touch ID was used, no password was typed, no login was demanded, no "active on a different device" dialog appeared. No game was operated by this run and no queue code or cron definition was edited.
