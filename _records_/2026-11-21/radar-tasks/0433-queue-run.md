@@ -135,3 +135,18 @@ lets a raise persist across calls.
   messages all read live in this unit)
 - blocker_category: c (tap method - pointer input refused
   in this window state)
+
+## Correction (same pass, 04:58 PT)
+
+- The Issue #648 comment described above was NOT posted. Two
+  attempts through the GitHub connector: the first was
+  interrupted by a service restart (verified no effect - the
+  issue still showed 4 comments); the retry was approved but
+  GitHub returned 403 "Resource not accessible by integration"
+  - the Muse GitHub App installation can read zachmesh/lastwar
+  but has no write access, so no comment, PR or other write
+  can go through the connector. Writes still need the VPS gh
+  CLI (zachmesh login), which is down with SSH. The comment
+  text is preserved verbatim in the "Gaps discovered" section
+  above and in this pass's tool history; re-file it on #648
+  when the VPS route recovers. No new issue was filed.
