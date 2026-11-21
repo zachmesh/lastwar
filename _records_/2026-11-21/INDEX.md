@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-21
 
+## 15:32 to about 15:52 - Knowledge organization pass (FOLD)
+
+- 15:32 PT, knowledge-organization-1532 - fold (VPS SSH recovered, route live). Integrator 1445 feedback fixed on own PR #774: resource-collection frontmatter line join split (commit f5a5dd5bb2, reply posted 7071021583), YAML parses again, chain #774 -> #754 -> #755 -> #713 unblocked. #773 merge arms three rebases, all opened MERGEABLE: #779 survivor-intake 1.61.0 (rebase of #764, 2122 bullet restored verbatim), #781 troop-training 1.47.0 (rebase of #766), #782 radar-tasks 1.97.0 (rebase + renumber of #714; #648 comment corrected to posted 7068992903; frontmatter strict-YAML defects repaired, 6 source values). Successor comments posted on #764/#766/#714. No new game record (watermark unchanged at 937b2b5cb8, ticker-1434); knowledge issues 41 open, unchanged; #242 reset-boundary ask already implemented by merged #776. Held 1432 record landed with this one. Open PRs now 25. Step-5 sweep not due (next after 18:00 PT reset). Slack DM sync done (ts 1795305021.107039). Record: knowledge-organization/1532-run.md.
+
 ## 15:32 to about 15:47 - Tool developer pass (DONE)
 
 - 15:32 PT, tool-development-1532 - done (PR #780 opened: `next --probe` hands out a queued zombie chain unit for doomed probes, Refs #746; R17 + changelog 0.25.0; 17/17 fixture assertions on isolated /tmp pools, py_compile clean; branch work/queue-probe-746-zombie-pref, commit 96d18d80). Own PRs first: #769 merged; #751 superseded by merged #715, no action; #425 owner-gated (OD-20261108-01), re-verified CLEAN 2026-11-21 1233 pass, no action. Issue #746 implemented this run (one item per run); progress commented on the issue. Slack DM sync done (ts 1795304733.202439). Record: tool-development/1532-run.md.
@@ -32,6 +36,10 @@ status: unverified
 ## 14:34 to about 14:49 - Ticker pass ticker-1434 (DONE, first game unit since 13:31)
 
 - 14:34 PT, ticker-1434 - done (passes unit). The Issue #648 window precondition CLEARED: activate raise=true brought the Last War window (105986, pid 5136, 788x1083) to the front, where ticker-1404 at 14:08 PT was refused - first successful game unit since ticker-1318, ending seven consecutive blocked units. Unit passes-2026-11-21-1057 closed DONE: Hot Deals free Military Training Pack claimed (Iron Chest (UR) x1, Food Chest (UR) x1, Coin Chest (UR) x1, 5m Speed-up x200, CONGRATULATIONS popup confirmed); Weekly Pass Free Supply already Claimed; no owned pass daily pickup outstanding (S2 Drone Components, S1 Drone Parts, Coin Weekly Pass all $4.99 repurchase offers; Legendary Take All $19.99 untouched); Super Monthly Pass not owned (Buy x1 offer only, nothing bought). HUD unchanged (food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236, power 149,653,371). Own PRs first: PR #762 records 2026-11-21 OPEN, mergeable CLEAN, zero comments. Zombie not seeded (event ended 2026-10-30). Record: shop-claims/1434-queue-run.md.
+
+## 14:32 to about 14:56 - Knowledge organization pass (FOLD)
+
+- 14:32 PT, knowledge-organization-1432 - fold (VPS SSH recovered about 12:18 PT; first-hand probe returned VPS_OK). Integrator 1345 feedback worked on five own PRs into PRs #773-777 (all MERGEABLE/CLEAN): #773 radar line renumbered 1.93.0-1.96.1 + survivor-intake 1.60.0 + troop-training 1.46.0, #774 resource 1.65.0, #775 zero-sweep [120, 60], #776 reset boundary 02:00Z, #777 zombie close 1.57.0. Ticker-1434 passes unit landed DONE mid-run (commit d50f11e1, Hot Deals free Military Training Pack claimed, Issue #648 precondition cleared) and was folded into shop-claims 1.58.0 as PR #778, with the #648 clearance commented (7070490389). First DONE game unit since ticker-0214 gifts (Nov 17). Six PRs merged by the integrator 1345 pass (#719, #715, #765, #757, #756, #752); main now 132d543e. 0.23.0 tension flagged for the retro (Issue #739 vs integrator coexistence instruction vs #769 sentence). Record HELD locally at run end (records-branch push refused, branch checked out in ~/lastwar-push with uncommitted batch work) - landed by the 1532 run. Slack DM sync done (ts 1795301630.512489). Record: knowledge-organization/1432-run.md.
 
 ## 14:32 to about 14:47 - Tool developer pass
 
