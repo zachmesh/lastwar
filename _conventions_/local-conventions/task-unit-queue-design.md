@@ -586,6 +586,23 @@ one to the audit cause it answers.
   jump. Markers carry no chain_id, so only markers whose unit
   id matches the minted `<regular>-<chain_id>-<seq>` shape
   count.
+- **R17 - a doomed probe burns the zombie chain unit, never a perception unit (issue #746).**
+  A probe burns the unit it claims: the device is offline or
+  the control lock just aged out, so the attempt fails and the
+  unit is gone. The ticker-2152 rule prefers the zombie chain
+  unit for the probe - a chain successor is re-minted, so the
+  burn costs the chain nothing - and never burns a real
+  perception unit: on Nov 14 six of twelve probes claimed
+  scout units 011-016 although a zombie chain unit sat queued
+  in inbox, because the plain pick_key order returns scout and
+  zombie alternately. A probe pass calls `next --probe`;
+  when a zombie chain unit is queued in inbox, actionable and
+  inside the pass's budget, `next` hands it out ahead of the
+  overlay steering and the normal pick. Otherwise the probe
+  falls through to the normal pick, so a pass with no zombie
+  unit queued still probes. "Available" means queued in
+  inbox: a zombie unit already claimed or closed does not
+  count.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -924,6 +941,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.25.0, 2026-11-21 - section 11 gains rule R17 (doomed-probe zombie preference, issue #746): `next --probe` hands out a queued zombie chain unit ahead of the overlay steering and the normal pick, so a probe pass burns the re-minted chain unit instead of a scout unit; with no zombie unit queued, actionable and inside budget, the probe falls through to the normal pick.
 - 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.
 - 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-step dedupe, issue #712): the production path refuses a window whose computed expiry is already past and a reset-anchored slot whose chain step the pool already holds at another slot, so plan no longer stages a stillborn zero-sweep unit for yesterday's slot or a second sweep pair at the new geometry beside the old one; both refusals are recorded and reported by plan and sweep.
 - 0.23.0, 2026-11-18 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The frontmatter version was stale at 0.17.0 while the changelog already ran to 0.22.0; the frontmatter bump to 0.23.0 is dropped on the 2026-11-21 rebase per the integrator review (the landed R15 entry already claims 0.23.0), so the frontmatter staleness stands for a follow-up.
