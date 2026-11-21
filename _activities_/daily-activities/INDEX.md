@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-14T04:46:41Z
+modified: 2026-11-20T05:44:00Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -135,7 +135,8 @@ regulars is kept so it is always visible what is still expected.
 
 - The canonical list is `_tools_/regulars.json` - one entry per
   regular, with its cadence (every run for everything in the
-  routine, daily with the 19:00 reset for VIP, Thursdays for
+  routine, daily with the trade-day reset (02:00Z, about 18:00 PST
+  in winter, 19:00 PDT in summer) for VIP, Thursdays for
   Ghost Ops) and its segment (1 to 4). Every-run regulars become
   due again at each new cycle of their own segment - a regular
   done or skipped in an earlier cycle is never a reason to skip
@@ -740,3 +741,10 @@ claims cited below were read in this pass's passes unit
 - PR and issue state (verified live this run via the public GitHub API): PR #711 OPEN, head e3c3dfd0, updatedAt 2026-11-12T20:04:57Z - unchanged, no new review or comment; the 1732 amendment commit 3687128f26 is still held locally, NOT on the remote branch (VPS SSH down). PR #708 OPEN, head 2f59c270. PR #425 OPEN, head 4f41cdd6, still owner-gated (OD-20261108-01). Knowledge issues: 41 open, newest update #595 at 2026-11-12T14:11:46Z - unchanged. Open issues overall 138, newest #712, zero unclassified.
 - The next probe burns one failed unit per tick until the Mac returns unless the device-offline pause lands. VPS disk 96% (476M free, below the 500M flag threshold) per the 1239 read - still unverifiable (SSH down).
 - No diamonds or money spent in the folded passes. No game was operated by this run and no queue code or cron definition was edited.
+
+## What the 2026-11-19 retro ruled - VIP cadence reset label corrected to 02:00Z (B-2026-11-19-02)
+
+- Sources: daily retro 2026-11-19 (flag (l) RULED - the reset boundary is 02:00Z, evidenced by the sweep pair expiring 18:00 local, the VIP unit expires_at 2026-11-21T02:00:00Z, and the ticker-1926 time note).
+- Correction: the regulars-list cadence line still stated the VIP daily cadence against the 19:00 reset. Corrected to the trade-day reset (02:00Z, about 18:00 PST in winter, 19:00 PDT in summer). No other claim in this profile changes.
+- Left untouched: the dated 2026-10-25, 2026-11-01, 2026-11-09 and 2026-11-11 sweep and close sections state the reset as read then (PDT era) and are history, not live rules.
+- The B-2026-11-19-02 issue is filed at VPS recovery; the PR carrying this fold names its issue number then. Owner: lastwar-knowledge-organizer.

@@ -1,9 +1,9 @@
 ---
 title: Events and Cycles
 created: 2026-10-25T17:58:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-20T05:44:00Z
 level: L1
-version: 1.2.2
+version: 1.3.0
 description: Arms Race phases, the Alliance Duel VS week, the double-dip rule, and radar task discipline
 status: unverified
 grounded_in:
@@ -66,8 +66,7 @@ day contributes to the weekly victory —
 | Day 6 (Sat) | Enemy Buster | 4 |
 | Day 7 (Sun) | off day | 0 |
 
-- The duel day boundary is 02:00 UTC — 19:00 local (America Los
-  Angeles). Day 1 of the current week opened Sunday 2026-10-25
+- The duel day boundary is 02:00 UTC — 18:00 local in winter (PST), 19:00 local in summer (PDT) (America/Los Angeles). Day 1 of the current week opened Sunday 2026-10-25
   19:00 local with 21h22m left when read at 21:37, and the week
   timer read 5d 21h. Server weekdays in the table above therefore
   begin the previous local evening.
@@ -112,3 +111,10 @@ research on Wednesday, hero spending on Thursday, training on Friday.
   points per claim against the 30,000 the in-game Day 1 page displays;
   the in-game page governs and a watched one-task claim is the pending
   test. The operational rules live in the strategy playbook.
+
+## What the 2026-11-19 retro ruled - duel-day boundary local time corrected for winter (B-2026-11-19-02)
+
+- Sources: daily retro 2026-11-19 (flag (l) RULED - the reset boundary is 02:00Z, evidenced by the sweep pair expiring 18:00 local, the VIP unit expires_at 2026-11-21T02:00:00Z, and the ticker-1926 time note).
+- Correction: the boundary line already named the absolute instant (02:00 UTC) but gave only the summer local reading (19:00 local). Corrected to 18:00 local in winter (PST), 19:00 local in summer (PDT). No other claim in this profile changes.
+- Left untouched: the dated 2026-10-25 week-opening observation states the local time as read then (PDT era) and is history, not a live rule.
+- The B-2026-11-19-02 issue is filed at VPS recovery; the PR carrying this fold names its issue number then. Owner: lastwar-knowledge-organizer.
