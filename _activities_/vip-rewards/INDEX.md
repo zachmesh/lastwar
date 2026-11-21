@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-12T00:32:17Z
+modified: 2026-11-20T05:44:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -60,16 +60,21 @@ Measured on 2026-10-25.
 ## Cadence
 
 - The VIP Daily Freebie can be claimed once per day. After the claim
-  its button becomes a countdown to the 19:00 daily reset (about
-  4 hours 59 minutes at 14:00 on 2026-10-25).
-- Reset rule, learned from a miss - because the reset is at 19:00
-  local, a round that runs after 19:00 must claim the freebie AGAIN
-  even when it was already claimed earlier the same calendar day.
-  On 2026-10-25 the afternoon claim was made, the long evening
-  sweep ran entirely after the reset and never opened the VIP
-  screen, and the owner claimed the fresh freebie himself at about
-  20:53. VIP is now on the daily umbrella list; do not close a
-  round without it.
+  its button becomes a countdown to the next 18:00 daily reset
+  (02:00Z; the unlock lands at about 18:01 to 18:02, so read the
+  button or the countdown live rather than assume). The 4 hours 59
+  minutes reading at 14:00 on 2026-10-25 predates the correction
+  and was misread as a reset clock - see Correction 2026-11-07.
+- Reset rule - the freebie unlocks at the 18:00 daily reset
+  (02:00Z), one per reset day. A round that runs after the reset
+  finds a fresh freebie if still unclaimed; a round before it
+  finds only the current cycle's freebie. The standing rule that
+  a round is not closed without opening the VIP screen stands -
+  as a check, not as an assumption of a fresh freebie. (Supersedes
+  the 19:00 wording this paragraph carried; the 2026-10-25 owner
+  claim at about 20:53 was the about-18:59 unlock claimed late,
+  per Correction 2026-11-07. VIP is now on the daily umbrella
+  list; do not close a round without it.)
 - Login points - the screen offered 200 VIP points for tomorrow
   login, on a 48 day streak. Points appear to land without a claim.
 - Login chest, corrected 2026-10-27 - the points do need a claim.
@@ -407,3 +412,10 @@ Measured on 2026-10-25.
 - Daily Freebie, claimed on the first tap: green Claim - tapped once, CONGRATULATIONS banner - puzzle piece x2, food crate x13, iron crate x13, coin crate x13. Points unchanged at 1,634,290 (freebie pays items, not points). Button now a countdown 01:41:40 at about 16:24 (points to about 18:06, not exactly 18:00 - recorded as read, the 18:00-reset reading is not re-litigated here). Same contents as the 1540 and 1438 claims - a third consecutive identical day; the rotation question stays open (see Open questions).
 - The "Alliance Gifts received!" toast appeared twice this pass with no claim tapped at those moments (once on the profile screen, once right after the chest tap - the chest's own dialog then confirmed the 120 points, so the toast is not the chest's confirmation). Same unexplained transient the ticker-1507 secrets unit saw on returning to base. Nothing was collected by it; no double-claim. Fourth sighting of the toast (2008, 2219, 1541, 1626); cause still unknown.
 - VIP Exclusive $99.99 untouched; VIP Store cart (red dot) untouched. No VIP level milestone was pending. No diamonds spent, no money spent, no paid offer tapped. Game left on the base screen.
+
+## What the 2026-11-19 retro ruled - Cadence reset labels corrected to 02:00Z (B-2026-11-19-02)
+
+- Sources: daily retro 2026-11-19 (flag (l) RULED - the reset boundary is 02:00Z, evidenced by the sweep pair expiring 18:00 local, the VIP unit expires_at 2026-11-21T02:00:00Z, and the ticker-1926 time note); Correction 2026-11-07 and Correction 2026-11-09 in this profile.
+- Correction: the Cadence countdown and reset-rule paragraphs still stated the 19:00 reset although both corrections above had already superseded that clock - the Nov 7 correction superseded the Cadence countdown claim and the Nov 9 correction set the unlock at the 18:00 daily reset, but the Cadence text itself was never rewritten. This version rewrites both paragraphs to the settled rule: the freebie unlocks at the 18:00 daily reset (02:00Z), one per reset day; a round after the reset finds a fresh freebie if still unclaimed. No other claim in this profile changes.
+- Left untouched: the dated 2026-10-25 and 2026-11-01/02 observations elsewhere in this file state the reset as read then (PDT era) and are history, not live rules; the two Correction sections above stand as written.
+- The B-2026-11-19-02 issue is filed at VPS recovery; the PR carrying this fold names its issue number then. Owner: lastwar-knowledge-organizer.

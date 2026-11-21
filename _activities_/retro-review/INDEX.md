@@ -1,9 +1,9 @@
 ---
 title: Retro Review
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-20T05:44:00Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: The daily retro pass - measuring the past 7 days of executions, naming the top leaks, and filing the improvement tasks the loop then works
 status: active
 grounded_in:
@@ -26,7 +26,7 @@ the game.
 
 ## Cadence
 
-Daily, after the 19:00 local reset round (about 20:39 local),
+Daily, after the trade-day reset round (02:00Z, about 18:00 PST in winter, 19:00 PDT in summer; the round runs about 20:39 local),
 as the standing job `lastwar-daily-retro`.
 
 ## Inputs
@@ -60,3 +60,9 @@ as the standing job `lastwar-daily-retro`.
   failed read is recorded as failed, with the gap named.
 - Never operates the game, edits a cron definition, or merges
   its own tier-2 changes outside the PR flow.
+
+## What the 2026-11-19 retro ruled - reset label corrected to 02:00Z (B-2026-11-19-02)
+
+- Sources: daily retro 2026-11-19 (flag (l) RULED - the reset boundary is 02:00Z, evidenced by the sweep pair expiring 18:00 local, the VIP unit expires_at 2026-11-21T02:00:00Z, and the ticker-1926 time note).
+- Correction: the Cadence line still scheduled the daily retro after the 19:00 local reset round. Corrected to the trade-day reset (02:00Z, about 18:00 PST in winter, 19:00 PDT in summer); the round itself still runs about 20:39 local. No other claim in this profile changes.
+- The B-2026-11-19-02 issue is filed at VPS recovery; the PR carrying this fold names its issue number then. Owner: lastwar-knowledge-organizer.

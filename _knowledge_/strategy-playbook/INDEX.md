@@ -1,9 +1,9 @@
 ---
 title: Strategy Playbook
 created: 2026-10-26T04:45:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-20T05:44:00Z
 level: L1
-version: 1.2.2
+version: 1.3.0
 description: How this account is played day to day - the objective, duel week timing gates, radar discipline, resource floors and the tools that enforce them
 status: unverified
 grounded_in:
@@ -83,8 +83,9 @@ zero in the duel, so the week - not the day - decides timing.
   Day 1, and mind the pre-matchmaking power assessment: finished
   upgrades are not collected during the Sunday assessment window
   where avoidable (Packsify) - they collect on Day 2 instead.
-- **Dead window** - the roughly five minutes after each 19:00
-  roll award no points (Handbook). Claims and spends wait until
+- **Dead window** - the roughly five minutes after each daily reset
+  roll (02:00Z; about 18:00 PST in winter, 19:00 PDT in summer)
+  award no points (Handbook). Claims and spends wait until
   the new day is fully live.
 
 ## Radar discipline
@@ -169,3 +170,9 @@ playbook wherever they touch - no purchases, no diamond spending,
 no speedup or stamina item burning to score, no research or
 building starts on the agent's own initiative, no coal decisions.
 The playbook times what is already allowed; it never widens it.
+
+## What the 2026-11-19 retro ruled - dead-window reset label corrected to 02:00Z (B-2026-11-19-02)
+
+- Sources: daily retro 2026-11-19 (flag (l) RULED - the reset boundary is 02:00Z, evidenced by the sweep pair expiring 18:00 local, the VIP unit expires_at 2026-11-21T02:00:00Z, and the ticker-1926 time note).
+- Correction: the dead-window rule still timed the roll at 19:00. Corrected to the daily reset (02:00Z, about 18:00 PST in winter, 19:00 PDT in summer). No other claim in this profile changes.
+- The B-2026-11-19-02 issue is filed at VPS recovery; the PR carrying this fold names its issue number then. Owner: lastwar-knowledge-organizer.
