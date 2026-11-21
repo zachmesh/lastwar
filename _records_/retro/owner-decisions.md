@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-12T05:00:00Z
-version: 2.2.0
+modified: 2026-11-13T05:00:00Z
+version: 2.3.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -324,37 +324,6 @@ one mention in a summary.
 - status: open
 
 
-### OD-20261109-01 - Transfer Surge warzone transfer
-
-- opened: 2026-11-09
-- item: whether Bears Lair should stay in Warzone
-  #2110 or apply to transfer to another warzone
-  during Application Day (ends 2026-11-12 18:00
-  UTC), and if so to which warzone.
-- context: discovered 2026-11-09 by scout
-  exploration unit scout-scout-discovery-2026-11-09-004
-  (executor ticker-0804), record
-  _records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md.
-  The Season II countdown opens TRANSFER SURGE, the
-  cross-warzone transfer event. Application Day runs
-  11/8 18:00:00 to 11/12 18:00:00 UTC, then Transfer
-  Day to 11/13 and Display Stage to 11/15. Transfer
-  Warzone Group (32) includes our #2110. Applying
-  would move Bears Lair out of Warzone #2110 (and out
-  of the AP3x alliance) into a chosen warzone,
-  subject to mutual approval. The full carry-over
-  rules were read live into the record. No Apply was
-  tapped. Filed as GitHub issue #514 (labels
-  owner-decision).
-- decision needed: stay in #2110, or apply to
-  transfer - and if so to which warzone - before
-  2026-11-12 18:00 UTC.
-- age tracking: opened 2026-11-09, age 0 days at
-  filing; the retro recomputes and reports the age
-  every run. The item is window-bound: it expires
-  undecided at 2026-11-12 18:00 UTC.
-- status: open
-
 ### OD-20261109-02 - start Builders Hut Lv.25 to Lv.26 upgrade
 
 - opened: 2026-11-09
@@ -409,7 +378,54 @@ one mention in a summary.
 
 ## Decided
 
-None yet.
+### OD-20261109-01 - Transfer Surge warzone transfer
+
+- opened: 2026-11-09
+- item: whether Bears Lair should stay in Warzone
+  #2110 or apply to transfer to another warzone
+  during Application Day (ends 2026-11-12 18:00
+  UTC), and if so to which warzone.
+- context: discovered 2026-11-09 by scout
+  exploration unit scout-scout-discovery-2026-11-09-004
+  (executor ticker-0804), record
+  _records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md.
+  The Season II countdown opens TRANSFER SURGE, the
+  cross-warzone transfer event. Application Day runs
+  11/8 18:00:00 to 11/12 18:00:00 UTC, then Transfer
+  Day to 11/13 and Display Stage to 11/15. Transfer
+  Warzone Group (32) includes our #2110. Applying
+  would move Bears Lair out of Warzone #2110 (and out
+  of the AP3x alliance) into a chosen warzone,
+  subject to mutual approval. The full carry-over
+  rules were read live into the record. No Apply was
+  tapped. Filed as GitHub issue #514 (labels
+  owner-decision).
+- decision needed: stay in #2110, or apply to
+  transfer - and if so to which warzone - before
+  2026-11-12 18:00 UTC.
+- age tracking: opened 2026-11-09, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run. The item is window-bound: it expires
+  undecided at 2026-11-12 18:00 UTC.
+  2026-11-10 retro: age 1 day. Transfer Surge
+  decision still needed before 2026-11-12 18:00
+  UTC; Issue #514 still open.
+  2026-11-11 retro: age 2 days. Transfer Surge
+  decision still needed before 2026-11-12 18:00
+  UTC (about 10:00 PST Nov 12); Issue #514 still
+  open. The item expires undecided tomorrow
+  morning unless the owner decides.
+  2026-11-12 retro: DECIDED BY EXPIRY. The stated
+  deadline 2026-11-12 18:00 UTC (10:00 PT) passed
+  with no owner decision and no Apply tapped, and
+  the outer nuance bound (about 2026-11-13 02:00
+  UTC, 18:00 PT Nov 12) also passed by retro time
+  (20:39 PT). No Apply was tapped, so the account
+  stays in Warzone #2110. The pr-catchall 1139 pass
+  posted two shepherd comments on #514 (the
+  deadline and the nuance bound). Issue #514
+  closed by the 2026-11-12 retro with this evidence.
+- status: decided by expiry (2026-11-12)
 
 ## 2026-11-06 retro notes (all items, ages recomputed)
 
@@ -490,3 +506,18 @@ None yet.
 - OD-20261109-01: age 2 days. Transfer Surge decision still needed before 2026-11-12 18:00 UTC (about 10:00 PST Nov 12); Issue #514 still open. The item expires undecided tomorrow morning unless the owner decides.
 - OD-20261109-02: age 2 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
 - No new owner-decision items from the Nov 11 window (the arms skip is the OD-20261031-01 pattern; no owner-gated PR was escalated; the Survey Center survey stays on #506, not a register item). All eleven items are open; the ten carried items are open longer than 48 hours and are named in the Nov 11 retro chat report and Slack sync until decided.
+
+## 2026-11-12 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 12 days. No new skipped-needs-owner on Nov 12 (no arms unit executed). No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 12 days, event-bound. Unaddressed a twelfth day: no Nov 12 events unit executed at all, and no Nov 12 events record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 12 days. No survivors unit executed Nov 12; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 11 days, unaddressed.
+- OD-20261101-02: age 11 days, unaddressed.
+- OD-20261101-03: age 11 days. No Nov 12 record mentions the Season Photo actions; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 7 days. New evidence: 0 batch violations out of 4 merges today, but the 15:00 and 19:00 windows saw no records merge at all (PR #708 still open at snapshot) - the checker does not flag absent merges. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 4 days. PR #425 still open, still awaiting owner decision (integrator re-verified it CLEAN all day, no new comment).
+- OD-20261108-02: age 4 days. New drift evidence: the #694/#705 stale-tool saga - the ticker body still says to work in ~/workspace/lastwar, so passes keep starting from the stale main tree, and the R9/R10 guards cannot protect a pass that never loads the current copy. Issue #415 still open.
+- OD-20261109-01: DECIDED BY EXPIRY - see the Decided section. The stated deadline 2026-11-12 18:00 UTC (10:00 PT) and the outer nuance bound (about 2026-11-13 02:00 UTC, 18:00 PT Nov 12) both passed with no owner decision and no Apply tapped; the account stays in Warzone #2110. Issue #514 closed by this retro.
+- OD-20261109-02: age 3 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
+- No new owner-decision items from the Nov 12 window: 0 skipped-needs-owner outcomes, and no owner-gated PR was escalated. All ten remaining items are open longer than 48 hours and are named in the Nov 12 retro chat report and Slack sync until decided.

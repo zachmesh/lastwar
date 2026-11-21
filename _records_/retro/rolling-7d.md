@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-12T05:00:00Z
-version: 1.6.0
+modified: 2026-11-13T05:00:00Z
+version: 1.7.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -653,3 +653,80 @@ remain the immutable source.
   this run (#149 is open, so its continuation is
   not a new recurrence event).
 - Detail - daily retro 2026-11-11 in this folder.
+
+## Entry 2026-11-12
+
+- Derived from - 1718 done units, finished local
+  2026-11-06 to 2026-11-12, read 2026-11-13T05:00Z
+  from the records/2026-11-12 branch tip
+  2f59c27047; the live working-tree pool holds 765
+  in window (gap 54, comparison degraded - the
+  live tree is not the live pool, see the Nov 12
+  retro). Nov 12 is a partial day at the snapshot
+  (64 branch, finished_at local; 2 partials and 10
+  failed by filename date, all 10 failed on the
+  control-channel lock). Nov 6 and Nov 12 carry
+  zero done in both pools - the dead days (Mac
+  offline Nov 6; control-channel lock, then Mac
+  offline, then the loop dark Nov 12).
+- Totals - done 155, partial 233, skipped-needs-owner 7,
+  failed 60, expired 364. Executor time 164,730 seconds
+  (45.8 hours), median unit 296 seconds, p90 701 seconds.
+- Best types by done percent - scout 21 of 53, gifts 14
+  of 37, help 14 of 37, secrets 14 of 37, passes 13
+  of 38, mail 12 of 37, treasures 12 of 37.
+- Worst types by done percent - training 0 of 39,
+  zero-sweep 0 of 14, trucks 0 of 38, zombie-invasion 0
+  of 26, crystal-shop 0 of 1, glittering-market 0 of 1,
+  donations 1 of 71, harvest 1 of 38, survivors 2 of
+  40, train 2 of 36.
+- Measurement state - numeric target over achieved
+  pairs 290, summed attainment 0.3064
+  (achieved_sum 9,047,641, target_sum 29,528,635);
+  the summed figure is NOT comparable: it is still
+  dominated by the duel-score running totals
+  (about 8,785,000 of the achieved sum). Points
+  3,608 reported, 3,608 honest (tool 1.5.5's sixth
+  exception now excludes the duel-score 1,650,000
+  running total and the daily-missions string
+  achieved naming the same total). Units carrying
+  blocker_category: h 136, e 94, none 78, c 37,
+  f 22, g 7, d 5, a 2, b 2, plus non-enum values
+  session-drop 1, time 1, unverified-close 1.
+  Unverified closings 499 (60.9 percent), down 3.2
+  points on yesterday's 64.1 percent.
+- Threshold breaches - unexplained red dots 11
+  (Nov 11 observation final state; no Nov 12
+  observation exists, diff-counted 9 only from
+  the stale frontmatter fallback, 0 structured
+  items parsed); recurrence of a closed
+  improvement's root cause (#631's stale-copy root
+  cause recurred within 1 day of closure - the
+  0941/1200 stale-tool handouts burned zombie 027
+  and scout 009 during the R9 pause; #631 reopen
+  attempted, blocked by the GitHub App 403, #694
+  the active tracker);
+  expired/unexecuted in day counts (52 branch,
+  97 live); quota attainment under 0.8 rolling
+  (donations 0.2871; trucks carries no pair and
+  its trade-day close is unknown for the sixth
+  day); unverified rate over 20 percent (60.9
+  percent, down 3.2 points week over week);
+  oldest open improvement over 7 days (#118, 10
+  days old - fourth day); daily standing job
+  artifact missing (the loop went dark about
+  12:46 PT - no ticker, planner, KO, TD or
+  integrator records after 12:30-12:46, no 15:00
+  or 19:00 batch merge, PR #708 unmerged; new
+  priority-1 issue DRAFTED, filing blocked by
+  the GitHub App 403 (full text in the retro);
+  #342, about 170 hours; Nov 12 planner
+  0740/0840/0940/1040 records never delivered,
+  #607; duel-score-2026-11-10-1803 lost;
+  stranded delivery #647 leaves 2 done units
+  invisible to the branch); ledger coverage 0 of
+  23 (neither sweep ran); batch compliance 0
+  violations in 4 merges (but the 15:00 and 19:00
+  windows saw no merge at all). Unit cap: 15 units
+  over 900 seconds in the window, 1 today.
+- Detail - daily retro 2026-11-12 in this folder.
