@@ -3,7 +3,8 @@ title: Resource Collection
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-21T09:37:43Z
 level: L1
-version: 1.65.0description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
+version: 1.65.0
+description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
