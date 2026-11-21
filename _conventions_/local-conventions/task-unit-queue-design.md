@@ -566,6 +566,25 @@ one to the audit cause it answers.
   the inbox, and a second seq-2 for a reset day whose seq-2
   already closed in done. The duplicate is refused at the mint
   point and recorded for the command to report.
+- **R16 - enqueue reconciles the next chain seq across live pool, markers and snapshot (issue #750).**
+  `enqueue` mints a chain successor at the highest seq named by
+  any of three sources - the live pool's inbox, claimed and
+  done; the live pool's completion markers; and the given
+  root's snapshot pool - instead of the live pool alone. A
+  chain unit closed in a detached worktree lands its done
+  record on the delivery branch, and sync drops the stale inbox
+  copy, so the live pool can forget the highest finished seq
+  and re-mint it: the zombie-036 case, where the finished unit
+  survived only as a completion marker after its inbox copy
+  was dropped. A worktree whose done pool disagrees with live -
+  a completion this checkout has not seen yet, on another
+  machine or an undelivered branch - holds a newer seq than
+  live does. The mint takes the highest seq any source names
+  and prints a note naming the source that raised it, so the
+  reconciliation shows in the run log instead of a silent
+  jump. Markers carry no chain_id, so only markers whose unit
+  id matches the minted `<regular>-<chain_id>-<seq>` shape
+  count.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -903,6 +922,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.
 - 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-step dedupe, issue #712): the production path refuses a window whose computed expiry is already past and a reset-anchored slot whose chain step the pool already holds at another slot, so plan no longer stages a stillborn zero-sweep unit for yesterday's slot or a second sweep pair at the new geometry beside the old one; both refusals are recorded and reported by plan and sweep.
 - 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
 - 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
