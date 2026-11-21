@@ -61,6 +61,16 @@ Usage:
              # head executes, and the (regular, planned_for)
              # invariant cannot catch the second head because it
              # carries an empty planned_for.
+             # enqueue reconciles the next chain seq across the
+             # live pool, its completion markers and the given
+             # root's snapshot (issue #750): a finished seq the
+             # live pool forgot - its inbox copy dropped after
+             # the closing landed on the delivery branch - is
+             # still named by a marker, and a completion the
+             # snapshot holds that live has not seen yet is
+             # still named by the snapshot, so the mint takes
+             # the highest seq any source names and never
+             # re-mints a finished seq.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
@@ -1190,6 +1200,39 @@ def chain_seq_next(root, chain_id):
                 except (TypeError, ValueError):
                     pass
     return seq + 1
+
+
+def chain_seq_max_markers(root, regular, chain_id):
+    """Highest chain_seq a valid completion marker names, or 0.
+
+    Issue #750: a chain unit closed in a detached worktree
+    leaves its done record on the delivery branch, never in
+    this pool, and sync drops the stale inbox copy once the
+    branch or a marker says it closed - so the live pool's
+    inbox, claimed and done can hold no trace of the highest
+    finished seq, and chain_seq_next would mint it again. A
+    completion marker is the live pool's own memory of that
+    closing (issue #438), so the mint counts it. Markers carry
+    no chain_id - the unit id itself is the record, minted as
+    <regular>-<chain_id>-<seq>, so only markers whose id starts
+    with that prefix and ends in exactly three digits count,
+    and only valid markers (the file parses, names its own unit
+    and carries a closing status, the completion_marker_units
+    rule). A marker for another regular, another chain, or a
+    window id never matches the prefix.
+    """
+    if not regular or not chain_id:
+        return 0
+    prefix = "%s-%s-" % (regular, chain_id)
+    seq = 0
+    for unit in completion_marker_units(root):
+        if not unit.startswith(prefix):
+            continue
+        tail = unit[len(prefix):]
+        if len(tail) != 3 or not tail.isdigit():
+            continue
+        seq = max(seq, int(tail))
+    return seq
 
 
 SEGMENT_ANCHORS_PLAN = {1: 6 * 60 + 3, 2: 6 * 60 + 30, 3: 6 * 60 + 57}
@@ -3255,7 +3298,43 @@ def cmd_enqueue(args):
                           f"regular {f.get('regular')}, not "
                           f"{args.regular}")
                     return 1
-        chain_seq = chain_seq_next(root, args.chain_id)
+        # Reconciled next sequence (issue #750): the live pool
+        # alone can forget the highest finished seq - a chain
+        # unit closed in a detached worktree lands its done
+        # record on the delivery branch, and sync drops the
+        # stale inbox copy, so neither the live inbox, claimed
+        # nor done names it; a completion marker is the live
+        # pool's own memory of that closing. And a worktree
+        # whose done pool disagrees with live - a completion
+        # this checkout has not seen yet, on another machine
+        # or an undelivered branch - holds a newer seq than
+        # live does. The mint takes the highest seq any of the
+        # three sources names, so it can never re-mint a seq
+        # already finished somewhere; the note names the source
+        # that raised it, so the run log shows the
+        # reconciliation instead of a silent jump. args.root
+        # is already the given root's pool (main() resolved
+        # it), so it is the worktree snapshot here; root is
+        # the live pool.
+        live_next = chain_seq_next(root, args.chain_id)
+        marker_seq = chain_seq_max_markers(
+            root, args.regular, args.chain_id)
+        snap_next = live_next
+        if os.path.abspath(args.root) != os.path.abspath(root):
+            snap_next = chain_seq_next(args.root, args.chain_id)
+        chain_seq = max(live_next, marker_seq + 1, snap_next)
+        higher = []
+        if marker_seq + 1 > live_next:
+            higher.append("completion markers hold seq %d"
+                          % marker_seq)
+        if snap_next > live_next:
+            higher.append("worktree snapshot holds seq %d"
+                          % (snap_next - 1))
+        if higher:
+            print(f"note: chain {args.chain_id} next seq "
+                  f"reconciled to {chain_seq} - "
+                  f"{'; '.join(higher)}, live pool holds seq "
+                  f"{live_next - 1} (issue #750)")
         refusal = _chain_head_refusal(
             root, args.regular, args.chain_id, chain_seq)
         if refusal is not None:
