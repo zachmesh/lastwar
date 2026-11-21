@@ -545,3 +545,31 @@ of 2026-10-28.
   job, no PR for records/2026-11-15; zombie seeding no-op,
   Glacieradon ended; VPS SSH still down so push/PR impossible,
   commit stays local. Record: radar-tasks/1805-queue-run.md.
+## 20:39 to about 20:53 - Daily retro pass
+
+- Retro review 2026-11-15 2053 run - done, first retro in
+  four days (Nov 12 to Nov 14 never ran). Window 2026-11-09
+  to 2026-11-15, live pool only: 831 executions, done 91
+  (11.0 percent), partial 113, failed 38, expired 585,
+  skipped 4; unverified 661 (79.5 percent, up from 64.1);
+  honest points 3,500. Nov 12 to Nov 15 carry zero done
+  units; last done unit finished Nov 11. Eleven threshold
+  breaches named, including the retro gap itself, the
+  planner gap Nov 13 to Nov 14, 20 missed batches, ledger
+  coverage 0 of 23, and the live tool 1.5.1 vs main 1.5.4.
+  Six new issues owed with filing-ready bodies (filing route
+  down); none closed. Owner decisions: 11 open, all older
+  than 48 hours; OD-20261109-01 deadline passed undecided;
+  no owner decision in the DM since Nov 11 (123 messages
+  read, all Ember). Register carried to v2.3.0 in the live
+  mirror. Correction recorded: the "last success 18:35 PT
+  Nov 14" marker is contradicted by the pool - the units
+  finishing then are expired. Slack sync sent to the owner
+  DM (ts 1794804777.232729). VPS SSH still Permission
+  denied, delivery BLOCKED, all artifacts are mirror copies
+  in the live tree only; no branch commit (the
+  records/2026-11-15 worktree holds another job's staged,
+  uncommitted revert of tip 2e8b60b1, not disturbed).
+  Record: retro-review/2053-run.md. Retro file:
+  _records_/retro/2026-11-15.md.
+
