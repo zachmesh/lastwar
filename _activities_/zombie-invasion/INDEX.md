@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-14T04:46:41Z
+modified: 2026-11-21T07:39:00Z
 level: L1
-version: 1.56.0
+version: 1.57.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -64,6 +64,7 @@ grounded_in:
   - source: ticker-0941 execution record 2026-11-12 0943 queue run (zombie-invasion unit 027 FAILED on the control-lock, sixteenth consecutive blocked tick, ninth occurrence; three fresh sessions cc-713/cc-714/cc-715 all outcome_unknown; stale-tool handout - the pass ran the main working tree's tools/queue.py, which predates PR #692; unit completed failed with the current tool, blocker refreshed to 17:55:18Z, successor 028 enqueued; record commit bd144567e on records/2026-11-12)
   - source: ticker-1023 execution record 2026-11-12 1023 queue run (sync-only pass, no unit executed, seventeenth consecutive blocked tick; blocker recorded 17:55:18Z by the 0941 completion, about 35 minutes old, reaps 21:55:18Z; successor 028 confirmed in the live inbox, chain done 26 pending 1 per the live-pool read; new tooling gap filed as Issue #705 (sync reap/expire is snapshot-only); record commit 681b45aa5 on records/2026-11-12)
   - source: ticker-1047 execution record 2026-11-12 1047 queue run (sync-only pass, no unit executed, eighteenth consecutive blocked tick; blocker recorded 17:55:18Z by the 0941 completion, about 1 hour old, reaps 21:55:18Z; successor 028 still in the live inbox, no seeding needed; PR #706 merged - queue.py version command live; pass_worktree stale-branch reuse filed as tooling Issue #709; #705 refined - a main-checkout sync expired the 0603/0630 sets live at 10:45 PT; record commit 136be4c6a on records/2026-11-12)
+  - source: ticker-1804 zombie-invasion execution record 2026-11-14 1833 queue run (failed, Glacieradon chain 037, event ended - Events hub tab bar enumerated live across three scroll positions, six tabs, no Zombie Invasion tab - chain zombie-2026-11-10 closed, no successor enqueued, timer cross-check expiry about 2026-11-14T02:05Z, last successful kill unit 023; record commit f6f0563d on records/2026-11-14)
   - source: queue-planning execution record 2026-11-12 0340 run (5 units staged for the 14:57 slot, 69 already present, 1 skipped closed zero-sweep-2026-11-11-1730, 0 reaped, 0 expired; scout diff on the 6-pass observation 52 observed 11 unexplained with 0 counts, 0 withdrawals, no new issues; pool inbox 78, done 1652; record commit 586f40fc9 on records/2026-11-12)
   - source: tool-development execution record 2026-11-12 0245 run (issue #689 implemented as the pool-level control-lock blocker, PR #692 merged, queue design 0.17.0 rule R9, 4-hour stale bound with a one-input probe, Oct 26-27 precedent - 18 frozen runs, cleared only by owner local submission, no self-clear ever observed; record commit 9cc4596b9 on records/2026-11-12)
 ---
@@ -1238,3 +1239,10 @@ execution.
 - Trade-day sweep (step 5, ended trade day 2026-11-13): the pre-reset sweep pair (1630 + 1730, four units with seqs [1,1,2,2], Issue #712) expired UNEXECUTED - the 19:00 reset ledger walk is missed for the third night running (Nov 11, Nov 12, Nov 13). Queue planning 1740 checked the chain first and correctly produced no fifth unit; 1840 staged 18 + 2 and expired 11 (14:30/14:57 sets, unexecuted); 1940 staged 0. Twenty-second consecutive verified planner run failed to commit (VPS SSH outage since about 12:47 PT Nov 12).
 - Result stats: zombies_killed 0; coins_collected 0; costs 0 stamina, 0 items, no device input sent; verified yes for the queued state (030 in the live inbox) and for the channel state; blocker_category f for 029 (missing precondition - device unreachable); follow_up the next tick burns one failed probe unit until the Mac returns unless the device-offline pause lands; on Mac return the chain resumes with 030, which still owes the crossed-swords tap (500,753), the gift-badge re-check and the Store re-check.
 - No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
+
+## What the 2026-11-14 1833 ticker-1804 run added - Glacieradon chain 037, event ended, chain closed
+
+- Zombie-invasion unit 037 FAILED - execution impossible: the Zombie Invasion (Glacieradon) event ended. The Events hub tab bar was enumerated live across three scroll positions (The Age of Oil, Arms Race, Desert Storm (3v2 badge tab), Winter Battlefield, Rampage Bosses, Community - six tabs) with no Zombie Invasion tab. Session 18:25 to 18:33 PT Nov 14, Mac online again (first successful device access since the 2026-11-12 outage), account banner "Signed in as HidingAnt504" seen on the Events hub. No kills, no claims, no stamina or items spent; coin HUD 153.7M before and after. Evidence in `_records_/2026-11-14/zombie-invasion/1833-queue-run.md` (commit f6f0563d on records/2026-11-14).
+- Timer cross-check: chain unit 001 verified the Glacieradon wave live on 2026-11-11 with 2d 21:58 left; unit 023 read 1d 17:37 left on 2026-11-12T08:31Z; both point at expiry about 2026-11-14T02:05Z (2026-11-13 about 18:05 PT), consistent with the tab being gone now. The last successful kill in the chain was unit 023 (2026-11-12); units 024-027 failed on the device input block (Issue 689) and units 028-036 failed node_offline while the Mac was down.
+- Chain state: the chain zombie-2026-11-10 is closed; no successor unit was enqueued. This supersedes the 1048 update's "chain is live" state and the 1023 section's "the event itself is live" claim. The standing rule applies again: do NOT seed a fresh zombie chain until a Zombie Invasion tab is seen live in the Events hub.
+- Open: sync seeded this unit about 22 hours after the event expired (about 2026-11-14T02:05Z) - the zombie seeding check does not detect an ended event, so the chain kept producing units for a dead event. Filed as tooling Issue #745 (Refs #745); it is not a profile change.
