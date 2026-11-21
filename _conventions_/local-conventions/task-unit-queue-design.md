@@ -547,6 +547,23 @@ one to the audit cause it answers.
   priority-1 windowing step still acts on the given root and is
   not part of this rule.
 
+- **R15 - plan refuses already-expired windows and duplicate chain sequences (issue #712).**
+  `_produce_for_window` refuses to mint a unit whose window expiry
+  already passed, and refuses a reset-anchored slot whose chain
+  sequence the pool already holds at another slot. The first
+  refusal stops stillborn units: the 1140 run staged
+  zero-sweep-2026-11-11-1700 17h44m past its expiry, because plan
+  yields the previous day's last slot as the current window before
+  the first slot of the day. The second refusal stops a geometry
+  change staging a second sweep pair: the 1140 run staged 16:00 /
+  17:00 seq 1/2 beside the 16:30 / 17:30 seq 1/2 from the [90, 30]
+  geometry, which the (regular, planned_for) invariant cannot see.
+  Both refusals are recorded in `_PRODUCE_REFUSALS` and reported by
+  `plan` as `produce_refusals`, so the caller reports them instead
+  of counting the slot as already present. The refusal happens at
+  the single production choke point, so no producer - plan, sync,
+  sweep or fix-ups - can stage a stillborn or duplicate unit.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -883,6 +900,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-sequence refusal, issue #712): `plan` refuses to stage a window whose expiry already passed and refuses a reset-anchored slot whose chain sequence the pool already holds at another slot; refusals are recorded in `_PRODUCE_REFUSALS` and reported as `produce_refusals` instead of counted as already present.
 - 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
 - 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
 - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
