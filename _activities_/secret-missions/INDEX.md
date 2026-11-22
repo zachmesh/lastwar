@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-17T07:40:00Z
+modified: 2026-11-22T23:40:00Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -48,6 +48,9 @@ grounded_in:
   - source: ticker-0637 secret-missions execution record 2026-11-11 0651 queue run (done, all 8 tasks read live, 7 PERFECT, UR Rescue Officer unchanged since 0259, assists 5/5 at cap, recovery 2026-11-6 CLAIMED re-verified, Secret Task Report assist entries read, Mega Deploy not retried; record commit f8ee03b36 on records/2026-11-11)
   - source: ticker-1507 secret-missions execution record 2026-11-11 1541 queue run (done, all 8 tasks read live, 7 PERFECT, UR Rescue Officer unchanged a third same-day read, assists 5/5 at cap, Reward Recovery 2026-11-6 CLAIMED re-verified, "Alliance Gifts received!" toast with no claim tapped; record commit 0e87ad206 on records/2026-11-11)
   - source: ticker-2236 secret-missions execution record 2026-11-16 2300 queue run (partial, 7 tasks claimed in one tap, about 35.9M Hero EXP, 3 tasks plundered, assists and recovery not reached; committed locally on ticker-2236-1116-delivery, unpushed - VPS SSH down)
+  - source: ticker-0234 secret-missions execution record 2026-11-22 0244 queue run (partial, Claim-button blocker recurred - occurrence 1 of a new streak, five variants tried including a genuine foreground raise, 2026-11-04 foreground hypothesis TESTED and DISCHARGED; new task type UR Capture the Oil Depot Lv.5; Reward Recovery 2026-11-19 CLAIMED re-confirmed; record commit c5c9b88d6 on branch ticker-0234-records-1122, not yet merged to main)
+  - source: ticker-1050 secret-missions execution record 2026-11-22 1104 queue run (done, 2 finished UR tasks claimed in one tap, both plundered overnight, assists 5/5 at cap, Reward Recovery 2026-11-19 CLAIMED re-confirmed; record commit 8fad985c1 on main)
+  - source: GitHub Issue #831 (knowledge, Secret Command Post findings from ticker-1416 unit secrets-2026-11-22-1057 - orange icon on resolved tasks is a plunder stamp, Mega Deploy true centre (619,946), Mega Deploy toast is the authoritative nothing-pending check; issue-grounded - its source record _records_/2026-11-22/secret-missions/1450-queue-run.md, commit d9640682 on branch ticker-1416-delivery, is not in any ref in the VPS clone)
 ---
 
 
@@ -117,6 +120,20 @@ post screen carries two sibling tabs registered as their own types -
   duration and an auto assigned hero team (some tasks get only two
   heroes), a checkbox per task, a UR Only filter that starts on,
   and a Perform Now button that sends everything checked at once.
+- CORRECTED 2026-11-22 (Issue #831): Mega Deploy's true centre
+  is norm (619,946) in the 642x951 window - the (498,900) point
+  recorded from the 2243 unit is the button's top-left edge and
+  misses (the button spans about pixel x 320-475, y 870-930).
+  A tap at (619,946) responds with the toast "There are
+  currently no tasks available for dispatch" when nothing is
+  pending. The 2243/0150/0259 conclusions that Mega Deploy is
+  dead or unresponsive rest on those edge taps and are WRONG -
+  do not repeat them. Mega Refresh centre is about (386,946)
+  by the same measurement, NOT yet tap-verified - an estimate
+  only, do not rely on it. The Mega Deploy toast is the
+  authoritative nothing-pending check: when it reports no
+  tasks available for dispatch it covers the whole list
+  including below the fold, so no scroll check is needed.
 - Unchecking UR Only resets every checkbox to empty - after
   unchecking, re-check each task by hand before Perform Now. The
   panel scrolls for long lists.
@@ -136,7 +153,34 @@ post screen carries two sibling tabs registered as their own types -
   2026-10-25, in the morning batch and again in the evening. Each
   claimed card is stamped PERFECT in gold, and the Your Tasks badge
   clears. (2026-11-11 0259 update: counter-example - the 0259 unit read 7 finished tasks PERFECT with no Claim button anywhere in the panel and card-body taps inert; the claim step for this batch is unattributed - either finished tasks auto-claim or PERFECT marks completion, see the 0259 section and Issue #626.)
+- Claim promptly - MEASURED 2026-11-22 (1104 unit): the two
+  finished UR tasks sat finished since about 22:47 on
+  2026-11-21 (dispatched about 18:47) and were plundered
+  overnight before the 11:02 claim - one tap claimed both,
+  but the listed rewards went to the plunderers and no
+  received-rewards figure was displayed. Finished tasks left
+  unclaimed for hours get plundered: the claim unit should
+  run soon after the shortest tasks finish. (Lesson repeated
+  from ticker-2234.)
 - Blocker status, R2 metadata write 2026-11-04 0847 (third consecutive Claim-blocker partial: 0248, 0545, 0847): the Claim buttons have now failed in three consecutive units, so under queue rule R2 as corrected in the 0545 section this blocker is written into the activity metadata here, the entry route changes before any further unit of this type runs, and the streak is named in that day's round summary. Entry-route change owed: attempt a genuine foreground activation (Dock or app-icon activation) before any Claim tap - background taps failed in all three units, and a true foreground tap was never actually achieved (the 0545 title-bar click did not raise the window; click_foreground is unavailable for this game). A fourth identical partial is a process failure reported to the owner. (2026-11-08 1114 update: the blocker is discharged in practice - the Claim tap worked on the first try and collected all four finished tasks at once; see the 1114 section. No genuine foreground activation is recorded in that unit, so the foreground hypothesis stays untested and the session-dependence note stands - buttons responded here as they did in session cc-441 per the 0914 daily-missions unit. The entry-route change this blocker owed is moot for now; if Claim buttons fail again, the R2 sequence restarts from the first partial.)
+  (2026-11-22 0244 update: the blocker RECURRED - occurrence 1
+  of a new streak. Five variants tried, all verified no-change
+  by screenshot: single tap Claim 1, single tap Claim 2,
+  1-second long-press, exit + fresh re-entry, and a genuine
+  foreground raise (raise=true, brought_to_front true) plus
+  double-tap. The 2026-11-04 hypothesis that background taps
+  were the cause is now TESTED and DISCHARGED - the window was
+  raised to the front and the Claim buttons still did not
+  respond. Follow-up per R2: the next unit changes method; a
+  2nd consecutive failure files a GitHub Issue (play); a 3rd
+  writes the blocker into the activity metadata. Candidate
+  next methods: the Claim button via its OCR/click_element
+  route, the task row first to open its detail card and claim
+  from there, or a fresh computer session. The two finished UR
+  tasks (Rescue Test Subject, Capture the Oil Depot) stayed
+  unclaimed. The 1104 unit the same morning claimed both
+  finished UR tasks with one tap, so the streak stands at 1
+  occurrence, not 2 - no Issue filed.)
 - Morning batch claimed - UR Rescue Officer, UR Rescue Missing
   Agent, SSR Search for Missing Refugees, SSR Protect Refugee Camp.
   Rewards included Treasure Map Fragments number 7, 4 and 1, a full
@@ -156,7 +200,10 @@ post screen carries two sibling tabs registered as their own types -
   times 245, a puzzle piece, chests times 420, medals times 609 and
   a row of 5 minute speedups. The record then read CLAIMED. An older
   2026-10-16 record would not expand and is presumed settled. Check
-  this panel whenever the post is open.
+  this panel whenever the post is open. (2026-11-22 update: the
+  0244 and 1104 units both re-confirmed the 2026-11-19 18:00
+  record reads CLAIMED; the 1104 unit re-confirmed "ONLY THE
+  LAST 7 RECOVERY RECORDS ARE RETAINED".)
 
 ## Ally assists
 
@@ -209,6 +256,11 @@ Per task play data, as the owner documentation standard requires.
 - Rescue Test Subject - UR, 4 hours 0 minutes. Dispatched by Mega,
   evening of 2026-10-25.
 - Disrupt electric grid - UR, 2 hours 0 minutes. Dispatched by Mega.
+- Capture the Oil Depot - UR, Lv.5. (Added 2026-11-22 0244:
+  new task type, not previously in the catalogue. Duration
+  not yet measured - dispatched about 18:47 and finished by
+  about 22:47 on 2026-11-21, so at most about 4 hours. The
+  1104 unit claimed it after it was plundered overnight.)
 - Provide Tech Support to Refugees - 1 hour 0 minutes, two instances
   the same evening.
 - Protect Refugee Camp - 1 hour 0 minutes in the evening list; an
@@ -440,7 +492,12 @@ secrets-2026-10-31-2257, status partial).
   undispatched (the one-frame button visual change was
   press state only). Input itself was not dead in this
   session: the base back arrow, the post entry tap and
-  list drags all worked.
+  list drags all worked. (2026-11-22 #831 correction: the
+  (498,900) point is the button's top-left edge, not its
+  centre - the button spans about pixel x 320-475, y 870-930.
+  These taps missed the button, so this unit is NOT evidence
+  that Mega Deploy is unresponsive. The true centre is norm
+  (619,946); see the corrected dispatching note.)
 - Result: 0 tasks dispatched, 0 claimed, assists
   untouched at 0/5. The tracker is left untouched so the
   next tick re-produces the regular.
@@ -495,6 +552,12 @@ secrets-2026-10-31-2257, status partial).
   it. The 2243 unit's Go tap at norm (755,452) missed
   the button; the button centre is x about 825, not 755.
   Do not repeat the 755 point or Mega Deploy taps.
+  (2026-11-22 #831 correction: the "Mega Deploy is now dead"
+  conclusion above is WRONG - both the 2243 edge taps and
+  this unit's double-tap at (498,941) missed the button's
+  top-left edge. Mega Deploy's true centre is norm (619,946)
+  and responds there. The "dead" conclusion is withdrawn;
+  the (498,941)/(498,900) points must not be reused.)
 - All 8 tasks dispatched in this unit, verified live:
   Your Tasks badge stepped 8 to 7 to 6 to 4 and then
   cleared, and the closing read shows the four SSR tasks
@@ -1069,9 +1132,18 @@ secrets-2026-10-31-2257, status partial).
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
   new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.) (2026-11-09 1748 update: the zero-sweep's incidental Secret Mobile Squad read at about 17:40 still shows the same 4 SSR cards all PERFECT, Assist Allies 5/5, Plunder Others 0/3 on that panel; still no new own tasks since the 22:49 claim on 2026-11-08.) (2026-11-09 2211 update: ANSWERED - a fresh batch of 9 tasks appeared between the 14:51 check and 22:03, so new own tasks arrive after the daily reset. The record attributes the refresh to the 19:00 reset, but that instant is not separately verified - the about-18:00 rollover (Issue #242) is also inside the window, and no reset instant was measured for the post.) (2026-11-10 1847 update: CONFIRMED again - a fresh batch of 8 tasks appeared between the 16:34 read (all PERFECT, assists 5/5) and 18:47, across the 18:00 reset; the batch refreshed with the reset day, same pattern as the 2026-11-09 2211 answer. The reset instant itself is still inferred from the Weekly Pass 18:00:00 line, not separately measured for the post.)
-- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.) (2026-11-10 0444 update: the badge is still on the same Provide Tech Support to Refugees row, still unexplained.) (2026-11-10 1036 update: the badge has MOVED - it now sits on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit re-reads the badge on both cards.) (2026-11-10 1349 update: the badge is a SINGLE badge that moves between the two SSR cards as the list scrolls - in the top view it sat on Provide Tech Support to Refugees; after the first drag-scroll it sat on Protect Refugee Camp instead. It is not a Claim button on either card, and its meaning is still unexplained. Next unit keeps watching whether it ever becomes actionable.) (2026-11-10 1531 update: the harvest cross-read at about 15:25 shows Provide Tech Support SSR without a PERFECT stamp (vs all-PERFECT at 1349) - possible same-day card refresh; the sighting did not scroll the list, so it cannot confirm the full set; next unit re-reads both SSR cards live.) (2026-11-10 1634 update: the zero-sweep's Command Post read at about 16:49 shows Provide Tech Support SSR still without a PERFECT stamp, with the orange hexagon badge on it - the second consecutive read (15:25, 16:49) showing the card not-perfect, which supports a new task instance (same-day refresh) over a misread. The next secrets unit re-reads both SSR cards live to confirm.) (2026-11-10 1847 update: RESOLVED - the 1847 unit found a fresh post-reset batch: the Provide Tech Support card is a new 01:00:00 instance deployed by Mega Deploy and verified running with a 01:00:25 countdown. The 15:25 and 16:49 not-perfect reads were the pre-refresh state of a card about to be replaced, not a misread; the same-day refresh explanation stands. The orange hexagon badge was NOT observed on any of the fresh task cards - the fresh batch carries running countdowns, not PERFECT stamps or the badge. The badge watch stays open for the next unit: it may attach only to claimed cards.)
+- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.) (2026-11-10 0444 update: the badge is still on the same Provide Tech Support to Refugees row, still unexplained.) (2026-11-10 1036 update: the badge has MOVED - it now sits on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit re-reads the badge on both cards.) (2026-11-10 1349 update: the badge is a SINGLE badge that moves between the two SSR cards as the list scrolls - in the top view it sat on Provide Tech Support to Refugees; after the first drag-scroll it sat on Protect Refugee Camp instead. It is not a Claim button on either card, and its meaning is still unexplained. Next unit keeps watching whether it ever becomes actionable.) (2026-11-10 1531 update: the harvest cross-read at about 15:25 shows Provide Tech Support SSR without a PERFECT stamp (vs all-PERFECT at 1349) - possible same-day card refresh; the sighting did not scroll the list, so it cannot confirm the full set; next unit re-reads both SSR cards live.) (2026-11-10 1634 update: the zero-sweep's Command Post read at about 16:49 shows Provide Tech Support SSR still without a PERFECT stamp, with the orange hexagon badge on it - the second consecutive read (15:25, 16:49) showing the card not-perfect, which supports a new task instance (same-day refresh) over a misread. The next secrets unit re-reads both SSR cards live to confirm.) (2026-11-10 1847 update: RESOLVED - the 1847 unit found a fresh post-reset batch: the Provide Tech Support card is a new 01:00:00 instance deployed by Mega Deploy and verified running with a 01:00:25 countdown. The 15:25 and 16:49 not-perfect reads were the pre-refresh state of a card about to be replaced, not a misread; the same-day refresh explanation stands. The orange hexagon badge was NOT observed on any of the fresh task cards - the fresh batch carries running countdowns, not PERFECT stamps or the badge. The badge watch stays open for the next unit: it may attach only to claimed cards.) (2026-11-22 #831 update: RESOLVED in substance - the orange
+  running-figure icon on a RESOLVED task row opens that task's
+  own SECRET TASK REPORT panel with its plunder history, NOT a
+  dispatch panel (three taps on 2026-11-22: (833,494),
+  (825,475), (833,715)). The icon marks a resolved task whose
+  rewards were plundered; only a genuinely pending task's row
+  icon opens a dispatch panel. The 1104 unit confirms it: after
+  one Claim tap claimed both finished UR tasks, all three UR
+  rows carried the orange plunder stamp.)
 - Your Tasks count 8 vs 9: the 0218 record says one Claim tap collected all 9 tasks at once (4 UR/SSR plus five 30-minute SR tasks); the 0444 unit counts 8 cards, 4 SR, scrolled twice - no 5th SR card between Protect Refugee Camp and Retrieve Raw Materials, and the list ends at Retrieve Agent Profile. Either the 0218 count was off by one or one SR card left the list since. Nothing pending either way (all 8 PERFECT, no Claim button). The next secrets unit recounts the list against this note. (Added 2026-11-10 0444.) (2026-11-10 1036 update: RESOLVED - the 1036 unit counted 8 again, drag-scrolled top to bottom, and confirms 8 cards; the 02:18 "9 tasks" count was a miscount. The count is 8: 2 UR, 2 SSR, 4 SR. Nothing pending either way - all 8 PERFECT, no Claim button.)
-- Plunder Others denominator varies between reads: 0/5 in the 1036, 1349 and 1847 units, 0/3 in the 1531 harvest cross-read, the 1634 zero-sweep read and the 1748 zero-sweep read. Not reconciled - recorded as observed; the next unit reads it live. (Added 2026-11-10 1847.) (2026-11-16 2236 update: 0/3 again in this unit, matching the 1531/1634/1748 reads against 0/5 in 1036/1349/1847 - still unreconciled.)
+- Plunder Others denominator varies between reads: 0/5 in the 1036, 1349 and 1847 units, 0/3 in the 1531 harvest cross-read, the 1634 zero-sweep read and the 1748 zero-sweep read. Not reconciled - recorded as observed; the next unit reads it live. (Added 2026-11-10 1847.) (2026-11-16 2236 update: 0/3 again in this unit, matching the 1531/1634/1748 reads against 0/5 in 1036/1349/1847 - still unreconciled.) (2026-11-22 update: 0/5 in both the 0244 and 1104 units -
+  still unreconciled.)
 - Whether the remaining 90% of a plundered task's rewards reaches the
   account: the 2026-11-08 2253 unit found SR Retrieve Valuable
   Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
@@ -1079,6 +1151,19 @@ secrets-2026-10-31-2257, status partial).
   Hero EXP 1.2M, iron 975.0K, food 975.0K); the claim-all at 22:49
   did not stamp the card and no received total was shown, so the
   other 90% is unverified. (Added 2026-11-08 2253.) (2026-11-16 2236 update: third plunder read - UR Capture the Oil Depot plundered by [DanG]173 SkySoldier at 11-16 18:37 (chest x1, green item x15, Hero EXP 123.9K taken), plus SR Retrieve Raw Materials and SR Retrieve Agent Profile plundered (reports not opened) - 3 of 10 tasks lost in one evening. Whether a plundered task stays claimable for the remainder is still unverified; the 90% question stands. Issue #626 carries the plunder mechanic; comment with this evidence owed at VPS recovery.)
+  (2026-11-22 1104 update: fourth plunder read - the two
+  finished UR tasks were plundered overnight (Rescue Test
+  Subject 11-21 22:48 by [MEW]Jväy, [LGDR]Monka174 and
+  [GLVD]바니윤 Bunny; Capture the Oil Depot 11-22 01:03 by
+  [Lagi]Don Pedros, Box x6, 324.9K, 324.9K, EXP 412.8K) and
+  the one-tap claim afterwards displayed no received-rewards
+  figure - the listed rewards went to the plunderers. Whether
+  any remainder reaches the account is still unverified; the
+  90% question stands. Issue #626 carries the plunder
+  mechanic.)
+## Changelog
+
+- 1.40.0 (2026-11-22): 0244 + 1104 secrets units and Issue #831 folded (Refs #831, #626). Claim-button blocker recurred - occurrence 1 of a new streak, five variants tried including a genuine foreground raise, 2026-11-04 foreground hypothesis TESTED and DISCHARGED; the 1104 unit claimed both finished UR tasks with one tap the same morning, so the streak stands at 1, no Issue filed. New catalogue entry UR Capture the Oil Depot Lv.5 (duration unmeasured, at most about 4 hours). Plunder lesson repeated - finished tasks left unclaimed for hours get plundered, claim soon after the shortest tasks finish. Issue #831 (issue-grounded): the orange running-figure icon on resolved tasks is a plunder stamp opening the per-task SECRET TASK REPORT, not a dispatch panel; Mega Deploy true centre corrected to (619,946) - the (498,900) point is the button's top-left edge, the 2243/0150/0259 "Mega Deploy is dead" conclusions are withdrawn; Mega Refresh centre about (386,946) is an unverified estimate; the Mega Deploy toast is the authoritative nothing-pending check. Reward Recovery 2026-11-19 CLAIMED re-confirmed twice; only the last 7 recovery records are retained.
 
 ## What the 2026-11-04 0545 unit added - second consecutive Claim-blocker partial, foreground still untested
 
@@ -1565,7 +1650,12 @@ secrets-2026-10-31-2257, status partial).
 - Unit secrets-2026-11-10-2257 by ticker-0234, 02:50 to 02:59 local, status done. Evidence in `_records_/2026-11-11/secret-missions/0259-queue-run.md` (commit 2abfb335c on records/2026-11-11). Session cc-543 on the owner Mac mini, LastWar window 636402. Token held until 11:01:08Z.
 - Entry: Secret Command Post opened from the car icon at norm (55,636); title SECRET COMMAND POST verified. Two wrong turns on the way in, both harmless and backed out of: the radio-tower icon at (56,699) opens the radar map (12 Radar Tasks restore in 02:48:24, 0/40 - radar's unit, not this one), and the magnifier icon at (56,760) zooms the base view; the top icon at (56,576) jumps to the train station.
 - Your Tasks holds the 8 cards of the 18:47 batch (ticker-1834, record 1847): 7 stamped PERFECT in gold, no Claim button anywhere, and a tap on a PERFECT card body does nothing - nothing to claim. The exception is UR Rescue Officer (top card): no PERFECT stamp, no countdown, no Claim button. Its orange icon at the card's top-right opens the SECRET TASK REPORT, not a dispatch panel.
-- Mega Deploy tapped twice at its centre - no change either time (R2: method ended inside this unit). No dispatch panel opened, consistent with no pending task to deploy; the card-body tap only showed a Hero EXP reward tooltip (Owned 1.5G). Nothing deployed. Mega Deploy is dead - do not repeat the taps.
+- Mega Deploy tapped twice at its centre - no change either time (R2: method ended inside this unit). No dispatch panel opened, consistent with no pending task to deploy; the card-body tap only showed a Hero EXP reward tooltip (Owned 1.5G). Nothing deployed. Mega Deploy is dead - do not repeat the taps. (2026-11-22
+  #831 correction: WITHDRAWN - the centre point recorded
+  from the 2243 unit, (498,900), is the button's top-left
+  edge, and the true centre (619,946) responds with the
+  nothing-pending toast. With nothing pending in this unit,
+  the toast at (619,946) is the check to use.)
 - SECRET TASK REPORT, first read in a secrets unit (opened from the UR card's icon): two entries, both "Plundered your task rewards" - [III5]Rul07 at 11-10 20:53 and [TOO]denn bagus at 11-10 20:55, each taking chest x6, 5m speedup x5, Hero EXP 412.8K, medal x144. Other players plundered our finished tasks' rewards. Filed as knowledge Issue #626 from this unit.
 - Ally Tasks: Assist buttons visible (MrCallejon SSR x2, seb fin13 SSR x2) but Assist Allies reads 5/5 - at cap, none tapped. The counter still reads 5/5 at 02:59 although the 5 assists were used at 18:47 by ticker-1834: the assist day runs 18:00 to 18:00, not to the 19:00 reset in the standing notes (see below).
 - Reward Recovery re-checked: newest record 2026-11-6 18:00 reads CLAIMED (8 unstarted tasks completed by the system; fragments x3/x3/x1/x1, Mystery Supply Box x224, puzzle x2, chests x315, medals 1.2K, Upgrade Ore 1.0K, Hero EXP 13.8M). The 2026-10-24 19:00 record sits below it. Nothing new to claim. Only the last 7 recovery records are retained.
@@ -1623,3 +1713,34 @@ secrets-2026-10-31-2257, status partial).
 - Plundered - rewards taken by other players (3 of 10 tasks): the orange hero icon on a task opens its SECRET TASK REPORT. UR Capture the Oil Depot: plundered by [DanG]173 SkySoldier at 11-16 18:37 - chest x1, green item x15, Hero EXP 123.9K taken. SR Retrieve Raw Materials: plundered (report not opened). SR Retrieve Agent Profile: plundered, report badge (2) (report not opened). Third plunder read (after the 0259 two entries and the 2253 10% take); Issue #626 carries the plunder mechanic - comment with this evidence owed at VPS recovery. Nothing was plundered by this account: Plunder Others stands 0/3, untouched per the standing rule.
 - Not done in this unit (15-minute cap reached): Ally assists - Assist Allies stands 0/5, Ally Tasks badge 5, no assist was attempted. Reward Recovery (Recover button, top right) - not opened or checked. Hidden Treasures tab (red badge 1) and Ghost Ops tab - not opened; they are sibling types with their own units. The next secrets unit picks up assists and the recovery check.
 - Result stats: target claim finished tasks, dispatch pending tasks, use assists; achieved 7 tasks claimed in one tap, no dispatch pending, assists and recovery not reached; resources_gained about 35.9M Hero EXP visible; costs about 19 minutes (ran past the 15-minute cap clearing popups and scrolling); verified yes - every figure above was read live on screen in this unit; blocker_category none; assists_done 0, tasks_claimed 7, tasks_deployed 0, ur_tasks_claimed 3, device_takeovers 0; follow_up assists to 5/5 and Reward Recovery check next unit.
+
+## What the 2026-11-22 0244 unit added - Claim-button blocker recurred, foreground hypothesis discharged, new UR task type, partial
+
+- Unit secrets-2026-11-21-2257 by ticker-0234, session about 02:45 to 02:48 PT, status partial. Evidence in `_records_/2026-11-22/secret-missions/0244-queue-run.md` (commit c5c9b88d6 on branch ticker-0234-records-1122, not yet merged to main). Tool-measured duration 244 seconds, about 4 minutes.
+- Duel posture (tools/duel.py): day 7, Off day - settlement, no scoring actions. No Mega Refresh used for UR rolling; its cost stays unobserved.
+- Entry: base left-column white truck icon at fresh measured centre (39,657), unsnapped, opened SECRET COMMAND POST on the first tap; title verified before acting. In this 763x1050 window the icon centre sits near x 39, not the 48-55 of the 642x951 groundings - re-ground fresh each unit, per the standing lesson.
+- State read live: Assist Allies 5/5 (at cap, nothing to do). Plunder Others 0/5, not touched (PvP, no owner instruction). Your Tasks badge 2. UR Rescue Test Subject Lv.5 - green Claim button. UR Capture the Oil Depot Lv.5 - green Claim button (new task type, see the catalogue entry). UR Disrupt electric grid Lv.5 - orange hexagon badge on the right, no Claim button (not finished). SSR Provide Tech Support to Refugees Lv.5 - gold PERFECT stamp (already claimed).
+- Blocker - Claim buttons unresponsive (recurrence, occurrence 1 of a new streak). Five variants tried, every one verified no-change by screenshot - no congratulations panel, both Claim buttons still present, Your Tasks badge still 2: single tap Claim button 1 (UR Rescue Test Subject) at (770,450); single tap Claim button 2 (UR Capture the Oil Depot) at (763,564); 1-second long-press Claim button 1 at (763,450); exit the post and fresh re-entry, single tap Claim button 1 at (763,450); genuine foreground raise (activate with raise true - brought_to_front true, raised true) plus double-tap Claim button 1 at (763,450). Variant 5 matters: the 2026-11-04 blocker write hypothesised that background taps were the cause and that a genuine foreground activation was never actually achieved. That hypothesis is now TESTED and does NOT resolve the blocker - the window was raised to the front and the Claim buttons still did not respond. The foreground route is discharged as the answer for this occurrence. History: the blocker last ran 2026-11-04 (three consecutive partials), was discharged in practice 2026-11-08 (1114 unit, Claim tap worked first try), and the 2026-11-16 unit claimed 7 tasks fine.
+- Reward Recovery, checked: the 2026-11-19 18:00 record reads CLAIMED; the 2026-11-18 18:00 record sits below it, collapsed. Only the last 7 recovery records are retained. Nothing outstanding to claim.
+- Mega Refresh and Mega Deploy not tapped: nothing pending to deploy (the two finished tasks await claiming, not dispatch), and the duel day is Off, so no UR-roll refresh applies.
+- Follow-up (R2): the next secrets unit must arrive with a changed method - the second consecutive partial with the same blocker must change method, and if it also fails, file it as a GitHub Issue (class play); a third consecutive failure writes the blocker into the activity metadata. Candidate next methods, none tried yet in this streak: tap the Claim button via its OCR/click_element route, tap the task row first to open its detail card and claim from there, or try in a fresh computer session (session-dependence was noted in the 1114 discharge). The two finished UR tasks stay unclaimed until then. (The 1104 unit the same morning claimed both finished UR tasks with one tap, so the streak stands at 1 occurrence - see the claiming-section update.)
+- Result stats: target 2 finished tasks to claim, achieved 0, resources_gained none, costs about 4 minutes and no items spent, verified yes (all closing figures are same-unit live reads), blocker_category c (tap method). Tracker untouched; the next tick re-produces the regular.
+
+## What the 2026-11-22 1104 unit added - 2 finished UR tasks claimed in one tap, both plundered overnight, assists at cap, done
+
+- Unit secrets-2026-11-22-0657 by ticker-1050, session about 11:00 to 11:04 PT, status done. Evidence in `_records_/2026-11-22/secret-missions/1104-queue-run.md` (commit 8fad985c1 on main). The unit's slot was 06:57 PT with expires_at 10:57 PT; it was picked at 10:59 PT and finished after expiry, a late finish.
+- Entry: SECRET COMMAND POST opened first tap from the base left column slot (48,648); title verified. Game in window mode (642x951), background input working. No "active on a different device" dialog.
+- Post state at entry, read live about 11:01: Assist Allies 5/5, Plunder Others 0/5. Your Tasks badge 3. Rows: UR Rescue Test Subject (Claim), UR Capture the Oil Depot (Claim), UR Disrupt electric grid (orange plunder stamp), SSR Provide Tech Support to Refugees (gold PERFECT stamp).
+- Claim, about 11:02: one tap on the Rescue Test Subject Claim button opened the CONGRATULATIONS popup over the interaction list (the claim-all behaviour). The Your Tasks badge cleared and no Claim button remains on any visible row. Plunder rows in the popup: [GLYD]바니윤 Bunny, 11-21 22:48, and one further plunderer (name cut off at the top of the list) - each "Plundered your task rewards" with ? x15, green box x144, triangle 240, Hero EXP 1.2M. The two finished UR tasks sat finished since about 22:47 on 2026-11-21 (dispatched about 18:47 that day) and were plundered overnight. Help rows: [AP3x]D Texas Boy, 11-22 03:47, and [AP3x]Lisas49ers 리사, 11-21 22:48 - "helped you claim task rewards". Like All tapped; the popup was then dismissed by tapping the dimmed area. Post-claim read: all three UR rows now carry the orange plunder stamp; the SSR row keeps the gold PERFECT stamp. Lesson repeated from ticker-2234: finished tasks left unclaimed for hours get plundered - the claim unit should run soon after the shortest tasks finish. See the new claiming-section bullet.
+- Dispatch check, about 11:03: a scroll of the Your Tasks list produced no change - the 4 resolved rows are the whole list, no pending (Go) task exists, so no Mega Deploy this unit. New tasks spawn over time; the next secrets unit dispatches them.
+- Reward Recovery, about 11:03: 2026-11-19 18:00 record - "OVER THE PAST 1 DAYS, YOU HAD 8 UNSTARTED SECRET TASKS. WE'VE SINCE COMPLETED THEM FOR YOU AND RECOVERED SOME OF THE REWARDS." Rewards shown include map fragments 5/2/2/3/1, envelope x1, fragment x1, Mystery Supply Box 287, puzzle x2, 6.0K x5 (more below the fold). Status CLAIMED - nothing unclaimed. 2026-11-18 18:00 record: collapsed; a tap on its header did not expand it (same as the 2026-10-16 record) - presumed settled, not verified. "ONLY THE LAST 7 RECOVERY RECORDS ARE RETAINED."
+- Duel posture (tools/duel.py): day 7, Off day - settlement, no scoring actions. The Mega Refresh-for-UR rule does not apply.
+- Result stats: target claim every finished secret task, use ally assists to the 5/day cap, dispatch pending tasks, check Reward Recovery; achieved 2 finished tasks claimed (both plundered before claim), assists already 5/5, no pending tasks to dispatch, Recovery 2026-11-19 CLAIMED; resources_gained none read - no received-rewards figure was displayed for the plundered claims; points 0; costs about 12 minutes device time, no spend, no stamina, no items; verified yes (post state, claim popup, Recovery panel all read live in this unit); tasks_claimed 2, tasks_plundered 2, assists_used 5, assists_cap 5, pending_tasks 0, late_finish true. No diamonds or items spent, no Mega Refresh used, Plunder Others untouched.
+
+## What Issue #831 added (issue-grounded, 2026-11-22) - plunder stamp vs Go icon, Mega Deploy true centre (619,946), toast as nothing-pending check
+
+- PROVENANCE: this section is ISSUE-GROUNDED, not record-grounded. Source: GitHub Issue #831 (labels knowledge), filed from ticker-1416 unit secrets-2026-11-22-1057 (about 14:36-14:50 PT). Its source record `_records_/2026-11-22/secret-missions/1450-queue-run.md` (commit d9640682, branch ticker-1416-delivery) is NOT in any ref in the VPS clone at fold time, so the findings below rest on the issue text, cross-checked against the 1104 record where stated.
+- Finding 1 - the orange icon on RESOLVED tasks opens the SECRET TASK REPORT panel with that task's own plunder history, NOT a dispatch panel. The three UR rows (Rescue Test Subject, Disrupt electric grid, Capture the Oil Depot) each carry an orange running-figure icon at the right end. Three taps on it - (833,494), (825,475) (the 0150 unit's verified Go point), (833,715) - all opened the SECRET TASK REPORT panel with that task's own plunder history. Rescue Test Subject: 11-21 22:48, [MEW]Jväy, [LGDR]Monka174, [GLVD]바니윤 Bunny, each "Plundered your task rewards" (Mystery Supply Box x15, x144, x240, EXP 1.2M). Capture the Oil Depot: 11-22 01:03, [Lagi]Don Pedros (Box x6, 324.9K, 324.9K, EXP 412.8K). Cursor positions in the screenshots confirm all three taps landed exactly on the icon, so this is game behaviour, not a tap miss. Cross-check with the 1104 record (ticker-1050, same day 11:00-11:04): at 11:01 the rows were Rescue Test Subject (Claim), Capture the Oil Depot (Claim), Disrupt electric grid (already carrying the orange stamp); after one Claim tap claimed both finished UR tasks, "all three UR rows now carry the orange plunder stamp". The icon therefore marks a RESOLVED task whose rewards were plundered. Only a genuinely pending task's row icon opens a dispatch panel. Rule: distinguish the Go icon on pending tasks from the plunder stamp on resolved tasks - see the corrected dispatching note and the resolved orange-badge open question.
+- Finding 2 - Mega Deploy true centre is (619,946), NOT (498,900). A tap at normalized (619,946) in the 642x951 window responds with the toast "There are currently no tasks available for dispatch". The (498,900) point recorded from the 2243 unit is the button's top-left edge and misses (the button spans about pixel x 320-475, y 870-930). The 2243 conclusion that Mega Deploy is unresponsive rests on those edge taps and is WRONG - corrected with dated markers in the 2243, 0150 and 0259 sections and in the dispatching note above. Mega Refresh centre is about (386,946) by the same measurement, NOT yet tap-verified - folded as an unverified estimate only.
+- Finding 3 - the Mega Deploy toast is the authoritative nothing-pending check. When Mega Deploy reports no tasks available for dispatch, it covers the whole list including below the fold, so no scroll check is needed. Recorded in the dispatching note above.
+- Requested change (from the issue): distinguish the Go icon on pending tasks from the plunder stamp on resolved tasks (tap opens the per-task plunder report), correct the Mega Deploy point to (619,946), and record the toast as the pending check. All three are done in this fold. Closure of Issue #831 belongs to the daily retro, not to this fold.
