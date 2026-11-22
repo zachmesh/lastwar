@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T17:48:31Z
-version: 0.34.0
+modified: 2026-11-22T18:45:22Z
+version: 0.35.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -746,6 +746,28 @@ one to the audit cause it answers.
   reports, and the tool's per-day table is the audit trail when a later count
   disagrees with a ruling.
 
+- **R24 - a scout chain stops at its reset day: enqueue refuses a successor and next skips the stale units (issue #818).**
+  A chain successor inherits the completed unit's chain id, so nothing
+  stopped a Nov-20 scout chain from minting on Nov-22: ticker-0957 was
+  handed scout-scout-2026-11-20-019, created 2026-11-22T16:25:19Z, two
+  days after the chain's reset day, and the pass declined to claim it
+  and ended the execute loop. Executing a stale unit appends
+  observations to the wrong reset day's observation file, and the chain
+  never closes. `enqueue` refuses a successor when the chain's reset
+  day has ended, and `next` never hands out a unit whose chain day is
+  past - the skipped units are named on stderr, so the pass record
+  shows the filter working. The day end is read from the chain id's
+  trailing date against the roster's daily reset (02:00 UTC): a
+  post-reset chain scout-YYYY-MM-DD ends at the reset ending the
+  following local date, a midday chain scout-mid-YYYY-MM-DD at the
+  reset ending its own local date. Any other chain id (zombie,
+  pre-reset-sweep, scout-discovery) carries another lifetime, so the
+  guard does not apply to it; an unreadable roster or an unparsable
+  date is likewise no signal and the mint proceeds as before. The 23
+  stale units already in the inbox are not removed by this change:
+  sync expires the ones that carry an expiry, and the rest sit
+  unhanded until the pool is reconciled.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -1083,6 +1105,8 @@ the retro's loop-health check auditing that no tier-2 change
 reached main unreviewed.
 
 ## Changelog
+
+- 0.35.0, 2026-11-22 - section 11 gains rule R24 (stale scout chains, issue #818): `enqueue` refuses a scout chain successor after the chain's reset day ended and `next` skips units whose scout chain day is past, so a Nov-20 chain stops minting on Nov-22 instead of seeding units that write observations to the wrong day's file; the day end comes from the chain id's trailing date against the roster's 02:00 UTC reset (post-reset chains end at the following local date's reset, midday chains at their own date's reset), and zombie, sweep and discovery chains are untouched.
 
 - 0.34.0, 2026-11-22 - section 11 gains rule R23 (missed-VIP-days count, issue #742): the count comes from the pool via new `_tools_/vip_missed.py`, keyed on the unit-id slot date with only the 1800 slot defining a day, and a day is missed when its 1800 unit expired/failed or closed done/partial with claimed_count 0; the ticker's hand count of seven vs the ruled eight is the live instance (the Nov 13 unit's finished_at fell on Nov 15).
 - 0.33.0, 2026-11-22 - section 11 gains rule R22 (slot coverage, issue #743): every scheduled ticker slot leaves a record or a missed-fire marker; `_tools_/slot_coverage.py check` reports the recordless past-window slots on the :04/:34 grid and `mark` writes a marker, refusing a slot a record already covers; coverage is read from the record title, never the file name alone, so a late-starting pass serves the slot its title states.
