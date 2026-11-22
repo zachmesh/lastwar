@@ -1576,6 +1576,13 @@ def _produce_for_window(root, item, planned_local, window="",
         # so the command exits 1 on it.
         refusal = _roster_geometry_refusal(root, item)
         if refusal is not None:
+            # Issue #744: the refusal names the regular, not the
+            # window - stamp this window's unit id on the copy so
+            # a caller counting unproduced windows can tell a
+            # refused slot (no unit in the pool under this id)
+            # from a present one.
+            refusal = dict(refusal)
+            refusal["unit"] = _unit_id_for_window(item, planned_local)
             _ROSTER_FRESH_REFUSALS.append(refusal)
             return None
     for state in STATES:
@@ -2536,6 +2543,14 @@ def cmd_plan(args):
                                 "worktree")
     planned, present, skipped_done, skipped_closed = [], 0, 0, []
     skipped_expired = []
+    # Issue #744: a refusal is not a present unit - a window the
+    # production path refused (expired, duplicate chain step,
+    # stale roster) holds no unit under its id in any pool state,
+    # so it is reported under its own skip list instead of
+    # inflating already_present. already_present counts only the
+    # genuine dedupe hits below.
+    skipped_chain_seq = []
+    skipped_roster_refusals = []
     fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
@@ -2578,6 +2593,9 @@ def cmd_plan(args):
                     fixups_planned.extend(fix["produced"])
                     fixups_present += fix["already_present"]
                     skipped_closed.extend(fix["skipped_closed"])
+                    skipped_chain_seq.extend(fix["skipped_chain_seq"])
+                    skipped_roster_refusals.extend(
+                        fix["skipped_roster_refusals"])
         for w in windows:
             # The tracker has no per-slot done state, so the
             # current-window skip must not drop a fixed-slot unit;
@@ -2598,6 +2616,12 @@ def cmd_plan(args):
             elif uid in {r["unit"]
                          for r in _EXPIRED_WINDOW_REFUSALS}:
                 skipped_expired.append(uid)
+            elif uid in {r["unit"]
+                         for r in _CHAIN_SEQ_REFUSALS}:
+                skipped_chain_seq.append(uid)
+            elif uid in {r.get("unit")
+                         for r in _ROSTER_FRESH_REFUSALS}:
+                skipped_roster_refusals.append(uid)
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -2619,6 +2643,8 @@ def cmd_plan(args):
                       "skipped_done_current": skipped_done,
                       "skipped_closed": skipped_closed,
                       "skipped_expired": skipped_expired,
+                      "skipped_chain_seq": skipped_chain_seq,
+                      "skipped_roster_refusals": skipped_roster_refusals,
                       "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
                       "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
@@ -2654,7 +2680,12 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     fix-up regular's name sorts before zero-sweep.
 
     Returns {"produced": [...], "already_present": n,
-    "skipped_closed": [...], "error": str-or-None}. error is set
+    "skipped_closed": [...], "skipped_expired": [...],
+    "skipped_chain_seq": [...], "skipped_roster_refusals": [...],
+    "error": str-or-None}. A refused fix-up (issue #744) is
+    reported under its own skip list, never counted as already
+    present - already_present counts only fix-ups the pool
+    actually holds. error is set
     (and nothing is staged) when the roster entry carries no
     fixup_regulars list, the list is empty, or it names a regular
     the roster does not hold. A reset day whose reset instant is
@@ -2666,12 +2697,16 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     if fixups is None:
         return {"produced": [], "already_present": 0,
                 "skipped_closed": [],
+                "skipped_chain_seq": [],
+                "skipped_roster_refusals": [],
                 "error": f"regular {item.get('id')!r} carries no "
                          f"fixup_regulars list - sync the tree to "
                          f"main before producing the sweep pair"}
     if not isinstance(fixups, list) or not fixups:
         return {"produced": [], "already_present": 0,
                 "skipped_closed": [],
+                "skipped_chain_seq": [],
+                "skipped_roster_refusals": [],
                 "error": f"regular {item.get('id')!r} carries an "
                          f"empty fixup_regulars list - a sweep pair "
                          f"with no fix-ups repeats the issue #147 "
@@ -2681,6 +2716,8 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
         if fid not in by_id:
             return {"produced": [], "already_present": 0,
                     "skipped_closed": [],
+                    "skipped_chain_seq": [],
+                    "skipped_roster_refusals": [],
                     "error": f"fixup regular {fid!r} is not in the "
                              f"roster - fix fixup_regulars on "
                              f"regular {item.get('id')!r} before "
@@ -2688,12 +2725,15 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     reset_local = _reset_instant_for_local_date(item, local_date)
     if reset_local <= datetime.now(LOCAL_TZ):
         return {"produced": [], "already_present": 0,
-                "skipped_closed": [], "error": None}
+                "skipped_closed": [], "skipped_chain_seq": [],
+                "skipped_roster_refusals": [], "error": None}
     offsets = _reset_anchored_offsets(item)
     midpoint = (offsets[0] + offsets[-1]) // 2
     slot = reset_local - timedelta(minutes=midpoint)
     reset_utc = reset_local.astimezone(timezone.utc)
     produced, already, skipped = [], 0, []
+    skipped_expired, skipped_chain_seq = [], []
+    skipped_roster_refusals = []
     for fid in fixups:
         unit_id = _unit_id_for_window(by_id[fid], slot)
         unit = _produce_for_window(
@@ -2704,10 +2744,23 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
             produced.append(unit)
         elif closed_ids and unit_id in closed_ids:
             skipped.append(unit_id)
+        elif unit_id in {r["unit"]
+                         for r in _EXPIRED_WINDOW_REFUSALS}:
+            skipped_expired.append(unit_id)
+        elif unit_id in {r["unit"]
+                         for r in _CHAIN_SEQ_REFUSALS}:
+            skipped_chain_seq.append(unit_id)
+        elif unit_id in {r.get("unit")
+                         for r in _ROSTER_FRESH_REFUSALS}:
+            skipped_roster_refusals.append(unit_id)
         else:
             already += 1
     return {"produced": produced, "already_present": already,
-            "skipped_closed": skipped, "error": None}
+            "skipped_closed": skipped,
+            "skipped_expired": skipped_expired,
+            "skipped_chain_seq": skipped_chain_seq,
+            "skipped_roster_refusals": skipped_roster_refusals,
+            "error": None}
 
 
 def cmd_sweep(args):
@@ -2876,27 +2929,46 @@ def cmd_sweep(args):
         print(f"refused: {fix['error']} (issue #147)")
         return 1
     produced, already = [], 0
+    skipped_expired, skipped_chain_seq = [], []
+    skipped_roster_refusals = []
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
             label = "first pass" if idx == 0 else "final pass"
         else:
             label = f"pass {idx + 1}"
+        uid = _unit_id_for_window(item, slot)
         unit = _produce_for_window(
             args.root, item, slot, f"pre-reset zero sweep, {label}")
         if unit:
             produced.append(unit)
+        elif uid in {r["unit"]
+                     for r in _EXPIRED_WINDOW_REFUSALS}:
+            skipped_expired.append(uid)
+        elif uid in {r["unit"]
+                     for r in _CHAIN_SEQ_REFUSALS}:
+            skipped_chain_seq.append(uid)
+        elif uid in {r.get("unit")
+                     for r in _ROSTER_FRESH_REFUSALS}:
+            skipped_roster_refusals.append(uid)
         else:
             already += 1
     print(json.dumps({
         "regular": args.regular, "date": local_date.isoformat(),
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
         "produced": produced, "already_present": already,
+        "skipped_expired": skipped_expired,
+        "skipped_chain_seq": skipped_chain_seq,
+        "skipped_roster_refusals": skipped_roster_refusals,
         "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
         "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
         "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
         "fixups_produced": fix["produced"],
         "fixups_already_present": fix["already_present"],
-        "fixups_skipped_closed": fix["skipped_closed"]},
+        "fixups_skipped_closed": fix["skipped_closed"],
+        "fixups_skipped_expired": fix["skipped_expired"],
+        "fixups_skipped_chain_seq": fix["skipped_chain_seq"],
+        "fixups_skipped_roster_refusals":
+            fix["skipped_roster_refusals"]},
         ensure_ascii=False))
     return 1 if _ROSTER_FRESH_REFUSALS else 0
 
