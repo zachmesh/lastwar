@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T10:20:00Z
+modified: 2026-11-22T11:35:00Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
@@ -717,3 +717,7 @@ status: unverified
 ## 02:08 to about 02:20 - Ticker pass ticker-0204, scout unit (PARTIAL)
 
 - 02:08 PT, ticker-0204 - partial (scout unit scout-scout-2026-11-20-012, chain scout-2026-11-20 seq 12, about 12 minutes, computer session cc-79, window 105986). Red target countdown RESOLVED, and the 00:00:40 Alliance timer with it: the same element - the red target icon at the right edge (about 910,657, badge 1) carries a countdown 00:01:00 on the base; one tap opened ALLIANCE WARS (Rally Intel / Individual Intel): rally [AP3x]Celestial88 "Rallying... 00:00:42" vs a Lv.30 Doom Elite, 52km away, Count/Limit (2/5), three green "+" join slots; NOT joined (observe-only). Passes entry RESOLVED as a mislabel: the passes regular's entry is the shop (cart icon, Weekly Pass / Super Monthly Pass tabs per shop-claims 1.3.0), already walked by seq 4/5 - no further passes search is owed; claimability belongs to the passes unit in the inbox. Record screen explored (MY PROFILE Record button): a social interaction log, four 2026-11-16 "Thank you for sharing your Lucky Gift!" entries (SKRyZeRZ, Jerry Apex, Skinner Box, 꿀밤Bamie); not a passes entry. Game-clock finding (inference): rocket 15:53:39 to 15:51:59 and green-clock 15:19:08 to 15:17:27 dropped only ~1:40 across ~10 minutes of wall time while the blue-building timer counted up 08:06 to 08:08 - all four timers in lockstep, likely background throttling of the iPad app clock. Base re-reads: power 149,417,850 unchanged; lightning 120; WORLD badge 18 (89 at seq 11 close, drop between units unexplained); Events badge 1, VS red dot; Build: Oil Well (0/1). 32 items observed (day total 422); red dots 14 seen, 14 explained, 0 unexplained (fourth zero-unexplained close). Two timer identities still open (blue-building count-up, green-clock 15:17); successor seq 13 enqueued. No diamonds or money spent. Record: perception-scout/0220-queue-run.md. Observation file v1.9.0.
+
+## 03:22 to about 03:30 - Ticker pass ticker-0304, scout unit (PARTIAL)
+
+- 03:22 PT, ticker-0304 - partial (scout unit scout-scout-2026-11-20-013, chain scout-2026-11-20 seq 13, about 8 minutes, computer session cc-90). Record red dot RESOLVED as persistent: MY PROFILE still shows it and the Record screen still holds the same four 2026-11-16 entries, viewed twice now without clearing. Right-edge long timer re-read live 14:38:52 (13:37 drop over about 15 minutes, near real-time while the window was actively driven); tick-rate evidence favors the rocket identification (zero near the 18:00 reset) over the green-clock real-time model, but the two timers are not discriminated - identity still open. Blue-building count-up timer not legibly read. 9 items observed (day total 431); 9 red dots seen, 9 explained, 0 unexplained - fifth zero-unexplained close of this chain. VIP13 Daily Freebie Claim seen live, NOT tapped (belongs to the VIP regular). Successor seq 14 enqueued for the two timer identities. Record: perception-scout/0328-queue-run.md. Observation file v1.10.0.

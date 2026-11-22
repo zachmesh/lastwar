@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T10:20:00Z
+modified: 2026-11-22T11:32:00Z
 level: L0
-version: 1.9.0
+version: 1.10.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -619,3 +619,17 @@ worked first attempt; the fullscreen precondition (Issue
 ## Coverage update (ticker-0204, about 02:20 local)
 
 - Surfaces walked this unit: base (re-read), MY PROFILE, Record screen, Alliance Wars. Items observed this reset day: 422 (390 + 32). Red dots seen this unit: 14, explained 14; unexplained red dots: 0 - the fourth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock 15:17 timer identity); 3 resolved (red target countdown; 00:00:40 Alliance timer - same element; passes entry - shop tabs, already walked); 1 answered (Record is a social log). Not walked yet: the two timer identities (successor seq 13), Record red-dot clearance verification. The chain continues (scout-2026-11-20, successor seq 13).
+
+## Pass scout-2026-11-20 executed, unit ticker-0304, Record red dot does not clear, right-edge long timer re-read
+
+- Session about 03:22 to 03:30 local, computer session cc-90, window 105986 (window mode, never brought to front). Observe-only throughout. Token renewed 03:20 to 03:35:24 PT (a re-acquire near expiry grants a fresh lease).
+- Entry: the game was still on the Alliance Tech panel left open by the donations unit of this pass; closed the Alliance Tech panel and the Alliance menu back to the base view (two X taps, one back-arrow tap, all first-try).
+- Base re-reads (entry about 03:26, close about 03:29): power 149,417,850 (unchanged); food 760.8M, iron 1.1G, coins 103.9M, diamonds 6,436 (unchanged); stamina 120; hammer 1/4 (red dot), flask 2/2; Events badge 1, VS red dot; Build: Oil Well (0/1); two survivor "?" icons at the front door; radar dish badge 8, trucks badges 3 and 1; WORLD/BASE badge 40 at close (chat ticker count).
+- Right-edge long timer re-read live: 14:38:52 at about 03:26, against 14:52:29 at about 03:11 in the donations unit of this same pass - a 13:37 drop over about 15 minutes of wall time, near real-time ticking while the window was actively driven. Against the seq 12 close reads (rocket 15:51:59, green-clock 15:17:27 at about 02:19), the rocket-zero-near-18:00 model predicts about 14:34 at 03:26 (4 to 5 minutes off, inside the background-throttling error), while a real-time green-clock model predicts about 14:10 (29 minutes off). The rocket identification is favored but NOT proven - the two timers are not discriminated from the base view, and the identity stays open.
+- Record red dot RESOLVED as persistent: MY PROFILE still shows the Record red dot, and the Record screen still holds the same four entries, all 2026-11-16 17:50-17:51 ("Thank you for sharing your Lucky Gift!" from SKRyZeRZ, Jerry Apex, Skinner Box, 꿀밤Bamie) - no new entries since seq 12, and the screen has now been viewed twice (seq 12 and this unit) without the dot clearing. The dot is stale/persistent, not a new-entry signal. First tap on the Record icon at (156,914) produced no visible change, as in seq 12; a re-grounded tap on the icon centre (214,933) opened it. MY PROFILE re-read unchanged: Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot - the Daily Freebie, belongs to the VIP regular), #2110; flower 12, gift box 88, trophy 11; Moments "No posts found."
+- Red dots seen this unit: 9 (Record, VIP13, hammer 1/4, Events badge 1, VS, Alliance Wars red target badge 1, Alliance, Mail, Inventory), explained 9, unexplained 0 - the fifth zero-unexplained close of this chain. Mail and Inventory dots are explained by category (unread mail / new items) and were not opened - opening them belongs to the mail and shop-claims regulars, not to a scout.
+- NOT seen this unit: the blue-building count-up timer identity (last read 08:08 at seq 12 close, counting up about 1 per minute - no building timer was legibly read on this unit's base screenshot); the green-clock / rocket timer discrimination.
+
+## Coverage update (ticker-0304, about 03:30 local)
+
+- Surfaces walked this unit: base (re-read), MY PROFILE, Record screen. Items observed this reset day: 431 (422 + 9). Red dots seen this unit: 9, explained 9; unexplained red dots: 0 - the fifth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock / rocket timer discrimination); 1 resolved (Record red dot is persistent and does not clear on viewing). Not walked yet: the two timer identities (successor seq 14). The chain continues (scout-2026-11-20, successor seq 14).
