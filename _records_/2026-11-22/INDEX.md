@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-22
 created: 2026-11-22T08:06:00Z
-modified: 2026-11-22T11:35:00Z
+modified: 2026-11-22T12:45:00Z
 version: 1.0.0
 description: Day record for 2026-11-22 (America/Los_Angeles)
 status: unverified
@@ -12,6 +12,9 @@ status: unverified
 ## 04:39 to about 04:42 - PR catch-all 0439 run, triage-only pass
 - PR catch-all pass pr-catchall-2026-11-22-0439. 23:00 PT batch merged seven records PRs; #751 closed unmerged; new records PR #812 (Owner lastwar-pr-integrator) awaits the 07:00 PT batch. 8 open PRs scanned, none owned by this job. Issue 805 classified knowledge with a triage comment; 180 open issues, zero unclassified after triage; owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current. Status: triage-only. Full detail in pr-catchall/0439-run.md.
 
+## 04:35 to about 04:41 - Ticker pass ticker-0434, donations unit (PARTIAL)
+
+- 04:35 PT, ticker-0434 - partial (donations unit donations-2026-11-22-1146, about 6 minutes, computer session cc-95). Re-read unit enqueued by the 0334 pass for after the next refill (not_before 12:15 UTC): Donation Count 3/30 live at entry, batch of 3 coin donations dispatched, button greyed with 00:00:08 timer; after a 12 second wait re-read 1/30 live, 1 more dispatched, button greyed again with 00:19:25 timer; final 0/30 never live-read, so the unit closes partial with verified no and the tracker stays untouched. Re-read unit donations-2026-11-22-1241 enqueued for after the cooldown (not_before 13:05 UTC, about 05:05 PT). New observation: the green timer is the countdown to the next +1 refill tick, ticks roughly every 20 minutes clock-anchored (00:00:08 to a 1/30 re-read in about 20 seconds; 00:19:25 to the next tick at about 05:03 PT) - the count is a regenerating pool capped at 30, not a fixed daily 30, so a live 0/30 read is unachievable in the general case; filed as Issue #813. Record: alliance-donations/0441-queue-run.md.
 ## 03:46 to about 03:59 - Ticker pass ticker-0334, donations unit (PARTIAL)
 
 - 03:46 PT, ticker-0334 - partial (donations unit donations-2026-11-22-1119, about 13 minutes, computer session cc-93, window 105986). Re-read after the 0304 cooldown: Donation Count live 1/30 on Quick Construction AND 1/30 on Rallied Attack - same count on both nodes, supporting a shared/global remaining count. Changed route held: no tap from 1/30 on either node, so no donation dispatched and the count stays 1/30 live-read. Refill data point: 0 to 1 in about 30 minutes (0304 saw 0 to 1 in about 10 minutes - bursty, not linear). War tree re-read live (Unit Load Capacity 2/10, Quick Training 1/10, Expert Trainer 2/10, three 5/10, Troop Movement 5/10, three 7/10); Quick Construction 9/10, Tech EXP 3.6M/8.0M, footer 5300 display-only. Cross-reads for the scout chain: blue-building count-up timer 09:43-09:44 (+1/min corroborated); right-edge long timer 14:16:35, rocket model 3-4 minutes off vs 27 for green-clock; lightning 114 OCR read resolved as the hammer "1/4" misread (lightning is 120). Re-read unit enqueued for after the next refill (not_before 12:15 UTC). No diamonds or money spent. Record: alliance-donations/0359-queue-run.md.
