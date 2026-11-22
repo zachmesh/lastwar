@@ -9,6 +9,9 @@ status: unverified
 
 # 2026-11-22
 
+## 04:39 to about 04:42 - PR catch-all 0439 run, triage-only pass
+- PR catch-all pass pr-catchall-2026-11-22-0439. 23:00 PT batch merged seven records PRs; #751 closed unmerged; new records PR #812 (Owner lastwar-pr-integrator) awaits the 07:00 PT batch. 8 open PRs scanned, none owned by this job. Issue 805 classified knowledge with a triage comment; 180 open issues, zero unclassified after triage; owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current. Status: triage-only. Full detail in pr-catchall/0439-run.md.
+
 ## 03:46 to about 03:59 - Ticker pass ticker-0334, donations unit (PARTIAL)
 
 - 03:46 PT, ticker-0334 - partial (donations unit donations-2026-11-22-1119, about 13 minutes, computer session cc-93, window 105986). Re-read after the 0304 cooldown: Donation Count live 1/30 on Quick Construction AND 1/30 on Rallied Attack - same count on both nodes, supporting a shared/global remaining count. Changed route held: no tap from 1/30 on either node, so no donation dispatched and the count stays 1/30 live-read. Refill data point: 0 to 1 in about 30 minutes (0304 saw 0 to 1 in about 10 minutes - bursty, not linear). War tree re-read live (Unit Load Capacity 2/10, Quick Training 1/10, Expert Trainer 2/10, three 5/10, Troop Movement 5/10, three 7/10); Quick Construction 9/10, Tech EXP 3.6M/8.0M, footer 5300 display-only. Cross-reads for the scout chain: blue-building count-up timer 09:43-09:44 (+1/min corroborated); right-edge long timer 14:16:35, rocket model 3-4 minutes off vs 27 for green-clock; lightning 114 OCR read resolved as the hammer "1/4" misread (lightning is 120). Re-read unit enqueued for after the next refill (not_before 12:15 UTC). No diamonds or money spent. Record: alliance-donations/0359-queue-run.md.
