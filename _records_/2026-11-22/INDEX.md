@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-22
 created: 2026-11-22T08:06:00Z
-modified: 2026-11-22T10:39:29Z
+modified: 2026-11-22T11:35:00Z
 version: 1.0.0
 description: Day record for 2026-11-22 (America/Los_Angeles)
 status: unverified
@@ -91,3 +91,7 @@ status: unverified
 ## 03:15 to about 03:20 - PR integration pass (DONE)
 
 - 03:15 PT, pr-integration-0330 - done (NON-batch pass, checker RUN merge-aware: NOT DUE, #804 already merged 03:05 in this window; VPS route live, all gh/git ran on the VPS as zachmesh). 0 merges, 0 PR comments, 0 records PRs opened. Records PRs #807 (24 commits beyond main) and #717 (22) still conflicting on the action-log only, conflict sets unchanged, re-check at the 07:00 batch; #425 still owner-gated OD-20261108-01 (age 14 days), re-verified CLEAN vs unchanged main 369198a40, no repeat comment. #755/#754/#713 still conflicting on the resource-collection INDEX (comments stand); #753 superseded by merged #774, #711 by #719, #751 duplicates #715. No sync-back needed (no merges; local github/main already at 369198a40). Silent run (no Slack, no chat). Sweep clean, 9 open PRs at start, 9 at end, 0 unprocessed. Record: pr-integration/0330-run.md.
+
+## 03:06 to about 03:20 - Ticker pass ticker-0304, donations unit (PARTIAL)
+
+- 03:06 PT, ticker-0304 - partial (donations unit donations-2026-11-22-0921, about 14 minutes, computer session cc-88). Re-read unit after the 0113 cooldown: Donation Count 5/30 live at entry, 5 coin donations dispatched, button greyed with 00:09:37 timer; waited the cooldown out inside the unit and re-read 1/30 live (one refill inside about 10 minutes), 1 more dispatched, button greyed again with 00:18:47 timer; final 0/30 never live-read, so the unit closes partial with verified no and the tracker stays untouched. Re-read unit enqueued for after the cooldown (about 11:40 UTC). New observation: the refill is bursty, not linear - 0 to 1 inside about 10 minutes, against the 1-per-22-to-33-minute rate implied by the 0113 data. Issue #500 commented with the new data point. Record: alliance-donations/0319-queue-run.md.
