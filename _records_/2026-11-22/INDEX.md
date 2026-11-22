@@ -50,3 +50,7 @@ status: unverified
 ## 01:34 to about 01:42 - Ticker pass ticker-0134, training unit (PARTIAL)
 
 - 01:34 PT, ticker-0134 - partial (training unit training-2026-11-21-2203, about 8 minutes, computer session cc-78). Lv.27 barracks requeued: 726x T9, 1d 10:19:35, 4.1M food + 4.1M iron (food 764.9M to 760.8M confirms the batch started; panel re-read "Training in progress 1d 10:17:42"). The standing Drill Ground Full blocker (Issue #678) did NOT reproduce - first clean requeue since 2026-11-10. Lv.30 barracks Details read (Training Count +793, instructors Marcus/Taylor/Daniel/Michael) but its training state was not verified; Lv.24 and fourth barracks not reached. Tracker untouched. Record: troop-training/0134-queue-run.md.
+
+## 01:39 to about 01:43 - PR catch-all pass (no-op)
+
+- 01:39 PT, pr-catchall-2026-11-22-0139 - no-op (VPS route live, all gh/git ran on the VPS as zachmesh). Knowledge PR #808 merged since the 0039 pass (squash 2e0f19fe, Refs #726); main head now 2e0f19fe. 10 open PRs scanned, none owned by this job. #425 re-verified CLEAN twice, still owner-gated OD-20261108-01 (age 14 days); #717 conflict set shrank to the action-log only; #804/#807 CLEAN, await the 03:00 batch. 179 open issues, zero unclassified, no new issues since the 0039 pass; owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current. Status: no-op. Full detail in pr-catchall/0139-run.md.
