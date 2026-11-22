@@ -1,0 +1,17 @@
+{
+ "passes": {
+  "status": "done",
+  "at": "2026-11-22T02:44:03-08:00",
+  "note": "shop sweep checked live, 0 claims; Free Supply Claimed, monthly not owned"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-22T02:51:36-08:00",
+  "note": "Checked: M1 x2, M2 x3, M3 x0, M4 x0, M5 x0, M6 x8, M7 x3, chest 5/15; 0 digs, no complete set"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-22T05:26:25-08:00",
+  "note": "Stack day: 1 task executed, 11 rewards pending, stored 11/40"
+ }
+}
