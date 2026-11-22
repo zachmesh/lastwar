@@ -48,5 +48,10 @@
   "status": "done",
   "at": "2026-11-22T11:04:06-08:00",
   "note": "2 finished UR tasks claimed (both plundered overnight); assists 5/5; no pending tasks; Recovery 2026-11-19 CLAIMED; late finish"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-22T12:11:31-08:00",
+  "note": "1 gate survivor processed, visible gate line clear, 0 recruits identified"
  }
 }
