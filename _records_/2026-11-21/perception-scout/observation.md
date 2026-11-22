@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T11:32:00Z
+modified: 2026-11-22T11:42:00Z
 level: L0
-version: 1.10.0
+version: 1.11.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -633,3 +633,18 @@ worked first attempt; the fullscreen precondition (Issue
 ## Coverage update (ticker-0304, about 03:30 local)
 
 - Surfaces walked this unit: base (re-read), MY PROFILE, Record screen. Items observed this reset day: 431 (422 + 9). Red dots seen this unit: 9, explained 9; unexplained red dots: 0 - the fifth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock / rocket timer discrimination); 1 resolved (Record red dot is persistent and does not clear on viewing). Not walked yet: the two timer identities (successor seq 14). The chain continues (scout-2026-11-20, successor seq 14).
+
+## Pass scout-2026-11-20 executed, unit ticker-0334, TRAIN UNITS opened by mistake for the blue-building timer, right-edge timer favors the rocket model
+
+- Session about 03:38 to about 03:42 local, computer session cc-91, window 105986 (window mode, never brought to front). Observe-only throughout. Token held 03:37 to 03:52.
+- Entry: the game was still on MY PROFILE left by seq 13; closed with the panel X at (823,46), first try. MY PROFILE re-read unchanged: Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110; flower 12, gift box 88, trophy 11; Moments "No posts found."; Record red dot still present.
+- Base re-reads (entry about 03:40, close about 03:42): power 149,417,850 (unchanged); food 760.8M, iron 1.1G, coins 103.9M, diamonds 6,436 (unchanged); hammer 1/4 (red dot), flask 2/2; Events badge 1, VS red dot; Build: Oil Well (0/1); two survivor "?" icons at the front door; WORLD badge 43 at close; chat badge 3; trucks red dot; "Breaking News: Intense battle..." ticker; "Neural Hunter: [Alliance Recruiti..." and "System: Pinenipp1e Received..." chat lines; banner "The rumor turns out to be true!".
+- Lightning counter discrepancy, unresolved: entry screenshot reads 120, close OCR reads 114. Both reads reported; the 6-point difference is NOT asserted as a spend - it may be an OCR misread. Successor: re-read the counter live twice before treating any change as real.
+- Right-edge long timer re-read live: 14:20:40 at about 03:40, 14:20:04 at about 03:41, 14:19:4x at the about 03:42 close (OCR). Against seq 13's 14:38:52 (read during its 03:22-03:30 session), the drop is about 18 to 19 minutes over about 14 to 18 minutes of wall time - near-real-time ticking within the read-time uncertainty. Model check, with the corrected clock: the rocket model (zero near the 18:00 reset) predicts about 14:20 at 03:40, within a minute of the 14:20:40 read; the green-clock model (seq 12's 15:17:27 at about 02:19, real-time) predicts about 13:56, about 24 minutes off. The rocket identification is STRONGLY favored, still NOT proven - the green-clock timer was not re-located and re-read in this unit. (Correction, same pass before commit: the first draft attached the wrong wall times, about 03:48-03:52, to these reads; the VM clock shows the unit ran about 03:38-03:42.)
+- Blue-building count-up timer NOT identified. The tap at the small clock icon at (609,519) opened TRAIN UNITS (a barracks), not the blue building: Power 1352, Morale 625.0, Squad Load Capacity 2000, Unit HP 4121.49, Unit Attack 33.87, Unit Defense 6.89; tiers Lv.6, Lv.7 (1,116), Lv.8 (1,998), Lv.9 (1,878, selected), Lv.10 (34.8K, locked); training in progress Lv.9, 726 units, "Training in progress 1d 08:16:33" - a countdown, not the count-up timer. Speed Up NOT tapped. The "09:38" seen at the right edge behind the MY PROFILE panel was NOT re-found on the base view after closing the panel (camera re-centred; position is view-dependent).
+- NOT seen this unit: the Mall floating chest and orange balloon carried open from seq 8 (not re-checked, unit cap); the green-clock timer's location.
+- Red dots seen this unit: 11 (Record, VIP13, hammer 1/4, Events badge 1, VS, Alliance, Mail, Inventory, trucks, chat badge 3, WORLD badge 43), explained 11, unexplained 0 - the sixth zero-unexplained close of this chain.
+
+## Coverage update (ticker-0334, about 03:52 local)
+
+- Surfaces walked this unit: MY PROFILE, base (re-read), TRAIN UNITS panel. Items observed this reset day: 439 (431 + 8). Red dots seen this unit: 11, explained 11; unexplained red dots: 0 - the sixth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock / rocket timer discrimination); 1 narrowed (right-edge timer matches the rocket model within a minute, about 24 minutes off the green-clock model); 1 new discrepancy (lightning 120 to 114, possibly OCR). Not walked yet: the two timer identities, the Mall floating chest / orange balloon re-check (successor seq 15). The chain continues (scout-2026-11-20, successor seq 15).

@@ -9,6 +9,9 @@ status: unverified
 
 # 2026-11-22
 
+## 03:46 to about 03:59 - Ticker pass ticker-0334, donations unit (PARTIAL)
+
+- 03:46 PT, ticker-0334 - partial (donations unit donations-2026-11-22-1119, about 13 minutes, computer session cc-93, window 105986). Re-read after the 0304 cooldown: Donation Count live 1/30 on Quick Construction AND 1/30 on Rallied Attack - same count on both nodes, supporting a shared/global remaining count. Changed route held: no tap from 1/30 on either node, so no donation dispatched and the count stays 1/30 live-read. Refill data point: 0 to 1 in about 30 minutes (0304 saw 0 to 1 in about 10 minutes - bursty, not linear). War tree re-read live (Unit Load Capacity 2/10, Quick Training 1/10, Expert Trainer 2/10, three 5/10, Troop Movement 5/10, three 7/10); Quick Construction 9/10, Tech EXP 3.6M/8.0M, footer 5300 display-only. Cross-reads for the scout chain: blue-building count-up timer 09:43-09:44 (+1/min corroborated); right-edge long timer 14:16:35, rocket model 3-4 minutes off vs 27 for green-clock; lightning 114 OCR read resolved as the hammer "1/4" misread (lightning is 120). Re-read unit enqueued for after the next refill (not_before 12:15 UTC). No diamonds or money spent. Record: alliance-donations/0359-queue-run.md.
 ## 03:39 to about 03:43 - PR catch-all pass (no-op)
 
 - 03:39 PT, pr-catchall-2026-11-22-0339 - no-op (VPS route live, all gh/git ran on the VPS as zachmesh). 0330 batch merged #804 (records 2026-11-21), #807 (records 2026-11-22), #811 (records 2026-11-21 post-batch append) and tool PR #810 (held-patches register); 8 open PRs remain, none owned by this job. #425 re-verified CLEAN against new main 76cecb30 at the 0330 batch, still owner-gated OD-20261108-01 (15 days), not merged. 180 open issues, zero unclassified; owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current. Status: no-op. Full detail in pr-catchall/0339-run.md.
