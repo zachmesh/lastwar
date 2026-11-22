@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T08:27:00Z
+modified: 2026-11-22T10:20:00Z
 level: L0
-version: 1.8.0
+version: 1.9.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -604,3 +604,18 @@ worked first attempt; the fullscreen precondition (Issue
 ## Coverage update (ticker-0004, about 00:27 local)
 
 - Surfaces walked this unit: base (re-read), MY PROFILE, VIP screen. Items observed this reset day: 390 (362 + 28). Red dots seen this unit: 16, explained 16; unexplained red dots: 0 - the third zero-unexplained close of this chain. Unknown items: 4 still open (passes entry; red target countdown not re-read; 00:00:40 Alliance timer identity open; 06:23 building timer identity open); 2 resolved (gold cup is a base decoration, not a passes entry; green 19h timer is the rocket/missile countdown). Not walked yet: passes, red target. The chain continues (scout-2026-11-20, successor seq 12).
+
+## Pass scout-2026-11-20 executed, unit ticker-0204, Record explored, red target resolved as Alliance Wars rally, passes entry resolved to shop tabs
+
+- Session about 02:08 to 02:20 local, computer session cc-79, window 105986 (window mode, never brought to front). Observe-only throughout. Token held 02:05 to 02:20.
+- Red target countdown RESOLVED, and the 00:00:40 Alliance timer with it - the same element. The red circular target icon at the right edge (about 910,657, red badge 1) carries a countdown reading 00:01:00 on the base; one tap opened ALLIANCE WARS (Rally Intel / Individual Intel tabs): rally [AP3x]Celestial88 "Rallying... 00:00:42" against a Lv.30 Doom Elite, Attack, 52km away, Count/Limit (2/5), three green "+" join slots, "Show Popup Tip" checked. The rally was NOT joined. The countdown read 00:00:44 in the observe receipt, 00:00:42 in the screenshot seconds later, and 00:00:2x on the base after returning.
+- Passes entry RESOLVED as a mislabel: the passes regular's entry is the shop - base cart icon opens HOT DEALS, Weekly Pass tab (Free Supply chest, weekly pass cards) and Super Monthly Pass tab (monthly pass daily gift) are its pass pages, per _activities_/shop-claims/INDEX.md v1.3.0. Seq 4 and seq 5 already walked the Mall fully. No separate passes screen is left to find; claimability today belongs to the passes unit in the inbox (passes-2026-11-22-0257.md). No further passes search is owed.
+- Record screen explored: MY PROFILE's Record button opens a social interaction log, not a passes entry. Tabs Interaction (selected), Gift, Battl[e]. Four entries, all 2026-11-16 about 17:50-17:51, each "Thank you for sharing your Lucky Gift!" from #2110 [AP3x]SKRyZeRZ (17:51:37), Jerry Apex (17:51:13), Skinner Box (17:51:07), 꿀밤Bamie (17:50:51). Toggle "Disable Instant Message Notifications" off. First tap at (212,943) produced no visible change; a re-grounded tap on the icon centre (214,933) opened it.
+- Game clock runs slower than wall time while the window is backgrounded (finding, inference flagged): the rocket timer dropped 15:53:39 to 15:51:59 (1:40) and the green-clock timer 15:19:08 to 15:17:27 (1:41) across about 10 minutes of wall time, while the blue-building timer counted UP 08:06 to 08:08 (+2). All four timers moved in lockstep with about 1:40 of game time. This matches seq 11's irregular ticking (rocket 5:29 over about 11 minutes; VS countdown 99 seconds over about 8 minutes in seq 7). Likely mechanism: the iPad app throttles its clock while its window is covered/backgrounded. Recorded as inference, not a measured fact.
+- Base re-reads (entry about 02:09, close about 02:19): power 149,417,850 (unchanged); food 760.8M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 120 at entry and close; hammer 1/4 (red dot), flask 2/2; WORLD/BASE badge 18 at entry and close (89 at seq 11 close; the drop between units is unexplained, most plausibly chat read in another session - cause not established); Events badge 1, VS red dot; Build: Oil Well (0/1); two survivor "?" icons at the front door; radar dish badge 8, trucks badges 3 and 1.
+- MY PROFILE (portrait tap): Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110; flower 12, gift box 88, trophy 11; Moments "No posts found."; Record (red dot), Account, Settings, Rankings, Follow. No passes entry. Whether the Record red dot cleared after viewing was NOT re-checked - left for the successor.
+- NOT seen this unit: the Mall floating chest and orange balloon carried open from seq 8 (not re-checked); the VIP13 Daily Freebie Claim button is live and unclaimed (seq 11) - it belongs to the VIP regular, not to a scout.
+
+## Coverage update (ticker-0204, about 02:20 local)
+
+- Surfaces walked this unit: base (re-read), MY PROFILE, Record screen, Alliance Wars. Items observed this reset day: 422 (390 + 32). Red dots seen this unit: 14, explained 14; unexplained red dots: 0 - the fourth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock 15:17 timer identity); 3 resolved (red target countdown; 00:00:40 Alliance timer - same element; passes entry - shop tabs, already walked); 1 answered (Record is a social log). Not walked yet: the two timer identities (successor seq 13), Record red-dot clearance verification. The chain continues (scout-2026-11-20, successor seq 13).
