@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T18:45:22Z
-version: 0.35.0
+modified: 2026-11-22T21:42:29Z
+version: 0.36.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -298,7 +298,10 @@ the token.
    `claimed`, stamping `claimed_by`, `claimed_at`, `lease_until`
    (default lease 20 minutes - longer than the unit cap, so a unit
    is never requeued out from under a live executor) and
-   incrementing `attempts`.
+   incrementing `attempts`. The claim is gated by rule R25: the
+   pass must first record its read of the newest queue-ticker
+   record, so a claim on unread state fails loudly instead of
+   executing.
 3. Run the unit, at most 15 minutes. On time, finish the current
    atomic in-game action, write the `_records_` file, and complete
    the unit with a `partial` result noting the remaining work. The
@@ -768,6 +771,33 @@ one to the audit cause it answers.
   sync expires the ones that carry an expiry, and the rest sit
   unhanded until the pool is reconciled.
 
+- **R25 - a claim needs a read receipt for the newest queue-ticker record (issue #737).**
+  The standing route change - re-read the newest queue-ticker
+  record before any claim - was breached eight or more times on
+  Nov 18 alone, and three consecutive honoring passes (1504/1604/
+  1734) were broken by ticker-1804, which claimed
+  gifts-2026-11-18-1430 before reading the 1734 record and
+  released it un-executed: the pre-step as written does not
+  enforce the route change, so the tool enforces it at the claim,
+  the choke point. `queue.py read --record <path> --executor
+  <name>` records that a pass read the newest record, writing a
+  receipt into the shared live pool (`_queue_/read-receipt.md`,
+  gitignored, like the device token and the blockers); `claim`
+  refuses, exit 1 with nothing moved, until a receipt names the
+  newest record, carries that record's sha256, names the claiming
+  executor, and is at most 120 minutes old. A newer record landing
+  after the read refuses the claim until it too is read, an
+  amended record refuses until re-read, and another pass's read
+  never authorises this pass's claim. With no queue-ticker record
+  in the tree there is nothing to read and the claim proceeds, so
+  the first pass ever and a scratch pool need no receipt. The
+  newest record is the maximum by (date directory, file name)
+  under `_records_/*/queue-ticker/`, read from the repository the
+  pass runs in - a stale checkout defeats this gate exactly as it
+  defeats R9 and R10, which is why the ticker runs from a fresh
+  worktree. `LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM=1` bypasses the gate
+  only for isolated /tmp fixture validation of a new tool version.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -1105,6 +1135,8 @@ the retro's loop-health check auditing that no tier-2 change
 reached main unreviewed.
 
 ## Changelog
+
+- 0.36.0, 2026-11-22 - section 11 gains rule R25 (claim-before-read gate, issue #737): `queue.py read` records that a pass read the newest queue-ticker record into a shared live-pool receipt, and `claim` refuses until the receipt names the newest record, carries its sha256, names the claiming executor and is at most 120 minutes old, so the standing route change (re-read the newest queue-ticker record before any claim) is enforced by the tool instead of the pass's pre-step prose; with no queue-ticker record in the tree the claim proceeds.
 
 - 0.35.0, 2026-11-22 - section 11 gains rule R24 (stale scout chains, issue #818): `enqueue` refuses a scout chain successor after the chain's reset day ended and `next` skips units whose scout chain day is past, so a Nov-20 chain stops minting on Nov-22 instead of seeding units that write observations to the wrong day's file; the day end comes from the chain id's trailing date against the roster's 02:00 UTC reset (post-reset chains end at the following local date's reset, midday chains at their own date's reset), and zombie, sweep and discovery chains are untouched.
 

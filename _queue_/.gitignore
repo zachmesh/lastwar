@@ -6,3 +6,7 @@ blockers/
 # detached worktree, so the next pass never re-picks them; they
 # are live-only pool state, never records.
 completed/
+# Claim-before-read receipts (issue #737): the pass's attestation
+# that it read the newest queue-ticker record; the claim gate
+# reads it. Live-only pool state, never a record.
+read-receipt.md
