@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T00:22:29Z
+modified: 2026-11-22T03:22:00Z
 level: L0
-version: 1.1.0
+version: 1.2.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -205,3 +205,57 @@ worked first attempt; the fullscreen precondition (Issue
   station, VIP, passes, daily missions, world map, duel
   and radar. The chain continues (scout-2026-11-20,
   successor seq 4 to be enqueued).
+
+## Pass scout-2026-11-20 executed, unit ticker-1904, Mall top level + 2 tabs
+
+### Base screen, read live about 19:13 local
+
+- Level 30, power 149,653,371. Food 752.7M, iron 1.1G, coins
+  102.4M, diamonds 17.72K, stamina 89, cart 5,246. March
+  Queues 0/3. Events badge 1, VS "Calculating.", Alliance
+  Assembly countdown 22:45:00 (22:40:3x on exit). Radio badge
+  1, Alliance / Mail / Inventory red dots, 99+ chest badge
+  bottom right above BASE (identity not re-verified this unit
+  - unexplained). "Build: Oil Well (0/1)" banner. Toast
+  "Important: President HawksMav appointed...". Breaking News
+  ticker plus two chat lines. Framing note: the game canvas
+  renders wider than the 763-wide window; right-column icons
+  and the rightmost Mall tab are cut at the right edge.
+
+### Mall top level, read live about 19:15 local
+
+- Tabs: Official Event (red dot), Weekly Deal, Super Monthly
+  Pass, Weekly Pass, Diamond, Gold Bullion Mall (name
+  truncated at the right edge, presumed not verified).
+  Headline "Visit the Last War Store for more free rewards!".
+  Carousel: FREE GIFT card, FREE TOMORROW card (x5 / x5 / x5),
+  "Claim points and redeem great rewards" card. Go button, two
+  page dots. Nothing claimed.
+
+### Weekly Deal tab, read live about 19:18 local
+
+- Period 2026-11-16 00:00:00 to 2026-11-22 23:59:59. Valor
+  Badge (Epic) $99.99, Base Upgrade (Epic) $19.99, UR Set
+  (Elite) $49.99, each 1 purchase available. More rows below
+  the fold, unread. All paid; nothing bought.
+
+### Super Monthly Pass tab, read live about 19:20 local
+
+- Monthly Pass, 30 days. Squad 4 Lv.20 "Unlock an extra
+  squad!". Daily Pickup: 100 x1, 50 x2, gold card x2, 5m
+  speed-up 60, iron 200. Legendary badge. Get Now +2500 red
+  crystal plus five items x1, +250. Buy x1 and Switch buttons.
+  Nothing bought. Back arrow returned to the base screen.
+
+## Coverage update (ticker-1904, about 19:21 local)
+
+- Surfaces walked this unit: base (re-read), store-top,
+  store-weekly-deal, store-monthly-pass. Items observed this
+  reset day: 130 (94 + 36). Red dots seen this unit: 7,
+  explained 6, unexplained 1 (the 99+ chest badge). Unknown
+  items: 1 new (Gold Bullion Mall tab name truncated); 2 still
+  open (the 00:00:51 countdown, the Chat top-bar NEW! icon).
+  Not walked yet: remaining Mall tabs, alliance panel and
+  station, VIP, passes, daily missions, world map, duel and
+  radar. The chain continues (scout-2026-11-20, successor
+  seq 4 to be enqueued).
