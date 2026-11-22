@@ -155,3 +155,53 @@ worked first attempt; the fullscreen precondition (Issue
   (scout-2026-11-20, successor seq 3 in inbox); the
   midday pass (scout-midday-2026-11-21-0700) is in the
   inbox.
+
+### Arms Race tab, read live about 17:11 local
+
+- Phase "Base Building", Contest Segment Lv.29-30,
+  00:49:57 left. Tier chests labelled 2,360 / 4,800 /
+  11,800 above thresholds 6,250 / 12,500 / 30,000. Star
+  points 0; chest counter 0/2. Scoring paths: Building
+  Power +1pt +1 star; 1-min Construction Speed-up +10;
+  Buy Packs containing Diamonds (1 Diamond) +30 - the
+  diamond path is a red-line spend, never taken. Own row
+  #2110 [AP3x]Bears Lair, rank 11, score 400; row above
+  #2112 [FLow]LuLLu, rank 10.
+
+### Base "NEW" megaphone - RESOLVED, read live about 17:12 local
+
+- The gold megaphone icon (bottom centre-right, grounded
+  684,857) opens Chat on the Alliance tab with the
+  Alliance Announcement popup. Announcement 2026-11-21
+  16:09:35 from MesutCLK Apex: THP and Main Team
+  screenshots for the weekly check-in, before reset.
+  Comment(1), 1 like. Banner "Leader calls for enabling
+  notifications for crucial Alliance news." with an Open
+  button - NOT tapped (owner action). Chat tabs World /
+  Alliance / Moments / Private (red badge 3); sub-tabs
+  Chat / Alliance Announcement (red dot). Top bar carries
+  a "NEW!" badge on an icon at top right next to the gear
+  - identity unread, unknown item.
+
+### Mail categories, read live about 17:12 local
+
+- Battle Report (red dot), Alliance (gift icon -
+  claimable), Event (gift icon - claimable), System
+  (avatar thumbnail), Regular (red dot), In-app Purchases
+  (red dot), Favorite. Footer: mails older than 30 days
+  are automatically deleted. All dots and gifts route to
+  the mail unit; scout claims nothing.
+
+## Coverage update (ticker-1704, about 17:14 local)
+
+- Surfaces walked this unit: Arms Race tab, base
+  megaphone (resolved), chat, mail categories. Items
+  observed this reset day: 94 (67 + 27). Red dots seen
+  this unit: 8, all explained (Bingo 1 carried, Private
+  3, Alliance Announcement 1, mail 3); unexplained red
+  dots: 0. Unknown items: 1 new (Chat top-bar NEW! icon);
+  1 still open (the 00:00:51 countdown from the chain
+  head). Not walked yet: store, alliance panel and
+  station, VIP, passes, daily missions, world map, duel
+  and radar. The chain continues (scout-2026-11-20,
+  successor seq 4 to be enqueued).
