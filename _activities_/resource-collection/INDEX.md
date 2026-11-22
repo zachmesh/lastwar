@@ -65,7 +65,8 @@ grounded_in:
   - source: ticker-2031 resource-collection execution record 2026-11-11 2048 queue run (partial, food +2.2M and coin +4.0M by exact-pointer taps, receipt missed the coin collection, grounding call timed out, Armed Truck twelfth deferral, retro A-2026-11-11-05 verification owed; record commit f7ef9ca1 on records/2026-11-11)
   - source: ticker-0100 resource-collection execution record 2026-11-12 0126 queue run (partial, all three panel pools collected exact - coin +1,999,342, food +3,078,487, iron +7,117,257, total 12,195,086; map bubbles still standing after Available 0, contradicting the 1531 read; Armed Truck thirteenth deferral in the lineage; record commit 911d317f8 on records/2026-11-12)
   - source: ticker-2348 resource-collection execution record 2026-11-16 2348 queue run (partial, 0 bubbles collected, two new verified non-bubble points, retrait-dialog near-miss cancelled safely, Armed Truck fourteenth deferral in the lineage; committed locally on ticker-2348-1116-delivery, UNPUSHED - VPS SSH down)
-  - source: ticker-0048 resource-collection execution record 2026-11-21 0049 queue run (partial, first game unit after about 94 hours, update-complete restart dialog with clean restart into base, 0 verified bubble collections, coin plus 2.8M attribution unverified, Armed Truck fifteenth deferral; record commit f55449837f on local records/2026-11-21 branch, UNPUSHED - VPS SSH down)---
+  - source: ticker-0048 resource-collection execution record 2026-11-21 0049 queue run (partial, first game unit after about 94 hours, update-complete restart dialog with clean restart into base, 0 verified bubble collections, coin plus 2.8M attribution unverified, Armed Truck fifteenth deferral; record commit f55449837f on local records/2026-11-21 branch, UNPUSHED - VPS SSH down)
+---
 
 
 # Resource collection
