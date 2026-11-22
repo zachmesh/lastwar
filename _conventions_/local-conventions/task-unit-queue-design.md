@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T08:46:00Z
-version: 0.32.0
+modified: 2026-11-22T16:50:28Z
+version: 0.33.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -717,6 +717,16 @@ one to the audit cause it answers.
   branch already at the base is reused and reported, so a
   re-created worktree after a removal is not an error.
 
+- **R22 - every scheduled ticker slot leaves a record or a missed-fire marker (issue #743).**
+  The ticker fires every 30 minutes on the :04/:34 grid; a slot is covered when a
+  `_records_/<date>/queue-ticker/` record states that slot in its title, or when a
+  `<slot>-missed-fire.md` marker names it. `_tools_/slot_coverage.py check` reports
+  the recordless past-window slots (exit 1) and `mark` writes a marker, refusing a
+  slot a record already covers. A late-starting pass names its record by its start
+  time and states the slot it served in its title, so the file name alone never
+  decides coverage - ticker-1930 serves the 19:04 slot. The retro's prose ruling
+  adjudicates a slot, but only a record or a marker closes it for the check.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -1055,6 +1065,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.33.0, 2026-11-22 - section 11 gains rule R22 (slot coverage, issue #743): every scheduled ticker slot leaves a record or a missed-fire marker; `_tools_/slot_coverage.py check` reports the recordless past-window slots on the :04/:34 grid and `mark` writes a marker, refusing a slot a record already covers; coverage is read from the record title, never the file name alone, so a late-starting pass serves the slot its title states.
 - 0.32.0, 2026-11-22 - section 3 specifies the `_queue_/completed/` completion markers (issue #726): the marker's purpose (issue #438), its four fields, the validity rule, the readers that treat a marker like a local done record, the live-only status, and the sync reaping rule (168 hours, lost closings reported per issue #563). No tool change: `queue.py` already implements all of it; the design document never mentioned the directory.
 - 0.31.0, 2026-11-21 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606; renumbered from 0.23.0, issue #739): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The entry was first labeled 0.23.0 and collided with the R15 entry (PR #715) that already claims 0.23.0; this change renumbers it to the next free version and bumps the frontmatter from its stale 0.17.0 to 0.31.0.
 - 0.30.0, 2026-11-21 - section 4 states the VIP expiry rule explicitly (issue #733): a VIP unit staged for a reset opens that reset day and expires at the next reset, so expires_at is planned_for + 24h; the 2026-11-19T02:00:00Z expiry on vip-2026-11-17-1800 is correct and the ticker-2034 flag is refuted. No tool change: the daily-reset branch already computes planned_utc + 1 day.
