@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T03:22:00Z
+modified: 2026-11-22T04:35:00Z
 level: L0
-version: 1.2.0
+version: 1.3.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -318,3 +318,53 @@ worked first attempt; the fullscreen precondition (Issue
   duel and radar; Weekly Deal and Super Monthly Pass
   tabs unopened. The chain continues
   (scout-2026-11-20, successor seq 5 in inbox).
+
+## Seq 5 (ticker-2004, about 20:23-20:28 local)
+
+- Weekly Deal: "Weekly Deal", 2026-11-16 00:00:00 -
+  2026-11-22 23:59:59; Valor Badge (Epic) $99.99
+  (red gem 10.0K, blue 1.0K, 5m speedup 1.2K, gold 80,
+  grey 20, box), Base Upgrade (Epic) $19.99 (red gem
+  2.0K, 5m speedup 180, grey 12, box 12, gold 12,
+  purple 10.0K), UR Set (Elite) $49.99 (red gem 5.0K,
+  5m speedup 600, coin 300.0K, purple 2, gold 2,
+  yellow 750); 1 purchase available each; no free
+  item; no floating chest on the Mall left edge here.
+- Super Monthly Pass: "Monthly Pass", Duration 30
+  Days, Squad 4 Lv.20, "Unlock an extra squad!";
+  Daily Pickup red gem 100 x1, gold 50 x2, gold item
+  x2, 5m speedup 60, blue item 200; "Legendary"
+  badge; Get Now +2500 red gems + 5 items x1; Buy x1
+  button + Switch button, "250" medallion beside Buy
+  (price unread, never tapped); no floating chest on
+  the Mall left edge here. Mall now fully walked (7
+  tabs).
+- Base re-read: power 149,653,371; food 752.7M; iron
+  1.1G; coins 102.4M; diamonds 5,246; stamina 101;
+  Alliance Assembly 21:43:58.
+- NEW: red target/crosshair icon at the right edge
+  (about 935,650), red badge 1, countdown 00:00:02
+  below it - possibly the chain-head 00:00:51
+  countdown, unconfirmed.
+- NEW: small orange balloon floating over the map at
+  about 495,340, absent at 20:22 - possibly a
+  floating reward, not tapped.
+- 99+ badge still at 799,929 above the BASE tab;
+  identity still unverified. Chat NEW! icon still
+  open (chat not opened). Mall floating chest icon
+  not seen on either tab this unit.
+
+## Coverage update (ticker-2004, about 20:29 local)
+
+- Surfaces walked this unit: mall (Weekly Deal, Super
+  Monthly Pass). Items observed this reset day: 198
+  (171 + 27). Red dots seen this unit: 10, 9
+  explained; unexplained red dots: 1 (red target icon
+  badge). Unknown items: 2 new (red target icon
+  countdown, orange balloon); 3 still open (Mall
+  floating chest, Chat NEW! icon, 99+ badge); 1
+  possibly-resolved (00:00:51 countdown, unconfirmed).
+  Not walked yet: alliance panel and station, VIP,
+  passes, daily missions, world map, duel and radar.
+  The chain continues (scout-2026-11-20, successor
+  seq 6 in inbox).
