@@ -1,8 +1,8 @@
 {
  "passes": {
   "status": "done",
-  "at": "2026-11-22T02:44:03-08:00",
-  "note": "shop sweep checked live, 0 claims; Free Supply Claimed, monthly not owned"
+  "at": "2026-11-22T10:59:28-08:00",
+  "note": "Shop checked only, nothing claimable (Hot Deals promos only, Free Supply Claimed, no pass owned); late finish"
  },
  "treasures": {
   "status": "done",
@@ -11,13 +11,13 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-11-22T05:26:25-08:00",
-  "note": "Stack day: 1 task executed, 11 rewards pending, stored 11/40"
+  "at": "2026-11-22T11:38:33-08:00",
+  "note": "Stack day 7: entry verified, no Quick Execute offered (Claim All-only bar, 11 pending), stored 28/40, 6 pins inventoried"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-22T06:21:06-08:00",
-  "note": "All 6 categories swept, nothing claimable, nothing claimed"
+  "at": "2026-11-22T10:32:23-08:00",
+  "note": "0630-slot sweep: 6 categories, no rewards available"
  },
  "harvest": {
   "status": "done",
@@ -26,12 +26,32 @@
  },
  "research": {
   "status": "done",
-  "at": "2026-11-22T10:11:48-08:00",
-  "note": "Both slots busy: Armor VIII Lv.3 06:32:07, Defense Training VIII Lv.6 15:51:34; nothing finished"
+  "at": "2026-11-22T13:10:41-08:00",
+  "note": "Queue read live: slot 1 Lv.3 Advanced Armor VIII 03:33:29 left, slot 2 Lv.6 Defense Training VIII 12:52:56 left, nothing finished"
  },
  "building-queues": {
   "status": "done",
   "at": "2026-11-22T10:13:15-08:00",
   "note": "Drill Ground Lv.25 upgrade 07:12:47 left, slots 2-4 idle"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-22T10:35:30-08:00",
+  "note": "0630-slot: Regular 753 + Premium 52, level progress +15,580"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-22T10:37:43-08:00",
+  "note": "0630-slot: Help All, 1 request, points 0 to 60/1000"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-22T11:04:06-08:00",
+  "note": "2 finished UR tasks claimed (both plundered overnight); assists 5/5; no pending tasks; Recovery 2026-11-19 CLAIMED; late finish"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-22T12:11:31-08:00",
+  "note": "1 gate survivor processed, visible gate line clear, 0 recruits identified"
  }
 }
