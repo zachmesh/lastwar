@@ -1,13 +1,17 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T11:35:00Z
+modified: 2026-11-22T12:16:49Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
 ---
 
 # 2026-11-21
+
+## 04:08 to about 04:13 - Ticker pass ticker-0404, scout unit (PARTIAL)
+
+- 04:08 PT, ticker-0404 - partial (scout unit scout-scout-2026-11-20-015, chain scout-2026-11-20 seq 15, about 5 minutes, computer session cc-94, window 105986). Entry on the ALLIANCE TECHS panel (ticker-0319 donations pass): Expert Nurse 1/10, Garrison HP/Attack/Defense 7/10 each, Tech Donation Today 5300. Alliance menu: [AP3x] The Apex, Leader Abyss Apex, Power 14,383,191,808, Members 99/100; red dots on Help, Alliance Gifts, Alliance Store, Alliance Techs; Alliance Star (Event 42) Time Left 13:40:33 to 13:39:04. Back-arrow point CORRECTED (R2): (194,867) x2 and (194,840) x1 no change, (194,915) closed first try. Lightning discrepancy RESOLVED: cropped enlargement reads 120 unambiguously, the 114s are OCR misreads (donations cross-read 0359 independently resolved 114 as the hammer "1/4" misread); counter 120, no spend. Right-edge long timer 13:48:37 at about 04:12 - rocket model (zero near the 18:00 reset) predicts about 13:48, within a minute; green-clock model about 24 minutes off - the rocket identification is now CONFIRMED (donations cross-read 0359: 14:16:35, rocket 3-4 min off vs 27 for green-clock). Blue-building count-up timer NOT identified (a fragile "10:09" glimpse behind the Techs panel, not re-found after the camera re-centred; donations cross-read 0359: 09:43-09:44, about +1/min). Alliance Wars rally timer 00:00:47. Base re-reads: power 149,417,850 unchanged; food 760.8M, iron 1.1G, coins 103.9M, diamonds 6,436 unchanged; hammer 1/4, flask 2/2; Events badge 1; Build: Oil Well (0/1); WORLD badge 87. 12 items observed (day total 451); red dots 13 seen, 13 explained, 0 unexplained (seventh zero-unexplained close). Mall floating chest / orange balloon not seen in this base view. Successor seq 16 enqueued. No diamonds or money spent. Record: perception-scout/0408-queue-run.md. Observation file v1.12.0.
 
 ## 03:38 to about 03:42 - Ticker pass ticker-0334, scout unit (PARTIAL)
 
