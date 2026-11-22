@@ -661,6 +661,21 @@ one to the audit cause it answers.
   carries its walk instructions. A unit that is not a sweep pass,
   or a sweep unit with no chain sequence, keeps the generic body.
 
+- **R21 - create refuses a stale existing branch when --base is given (issue #709).**
+  `pass_worktree.py create --branch B --base R` reuses an existing
+  branch B only when B's tip is R; a branch at any other tip is
+  refused, exit 2, naming both tips, so a pass never decides from
+  a stale main it did not ask for. Ticker-1047 asked for a fresh
+  main worktree and got the stale branch at cc58a605c4 (pre-#704
+  main) instead of current main 96520ae0d4, because create checked
+  out any existing branch and ignored --base; the pass caught it
+  only by verifying the base before deciding, and the defect
+  recurred at ticker-1334 on the same shape. Without --base the
+  checkout semantics stand - an existing branch is checked out
+  as-is, which is how a pass re-opens a records branch - and a
+  branch already at the base is reused and reported, so a
+  re-created worktree after a removal is not an error.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -999,6 +1014,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.29.0, 2026-11-21 - section 11 gains rule R21 (worktree-create base check, issue #709): `pass_worktree.py create` with an explicit `--base` reuses an existing branch only when its tip is the base and refuses a stale branch, exit 2, naming both tips, so a pass never decides from a stale main it did not ask for; without `--base` the checkout-as-is semantics stand.
 - 0.28.0, 2026-11-21 - section 11 gains rule R20 (sweep ledger-walk task text, issue #748): the production path appends the standing ledger-walk task section to each pre-reset sweep pair body (first/final pass by chain_seq), so a staged pair carries its walk instructions instead of the generic body; slot and reset times come from the unit's own fields and the ledger line count is read live from the ledger.
 - 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue #744): `plan` and `sweep` report a refused window (expired, duplicate chain step, stale roster) under its own skip list instead of counting it as already present, so already_present equals the units the pool actually holds for the staged windows; the roster-freshness refusal now carries the refused window's unit id so callers can classify it.
 - 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): `enqueue` refuses a chain successor when the chain's latest recorded `event_ends_at` is past, so a dead event's chain stops minting instead of seeding units for it; no reading recorded means no signal and the mint proceeds as before.
