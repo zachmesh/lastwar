@@ -71,6 +71,12 @@ Usage:
              # still named by the snapshot, so the mint takes
              # the highest seq any source names and never
              # re-mints a finished seq.
+             # enqueue refuses a scout chain successor after the
+             # chain's reset day ended (issue #818): a successor
+             # inherits the completed unit's chain id, so without
+             # this check a Nov-20 chain keeps minting on Nov-22
+             # and the units it seeds write observations to the
+             # wrong day's file.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
@@ -96,6 +102,11 @@ Usage:
              # clearing unit is staged but not yet actionable,
              # instead of handing out work that would block on
              # the same overlay.
+             # next never hands out a unit whose scout chain's
+             # reset day has ended (issue #818): the stale unit is
+             # skipped and named on stderr, so the pass moves on
+             # to fresh work instead of executing a unit for a
+             # day that already closed.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
   queue.py [--root DIR] deadline --unit UNIT
@@ -299,7 +310,7 @@ import re
 import subprocess
 import sys
 import tempfile
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
@@ -3451,6 +3462,94 @@ def _chain_event_end(root, snapshot_root, chain_id):
     return latest, latest_unit
 
 
+_SCOUT_ITEM_CACHE = {}
+
+
+def _scout_roster_item(defs_path):
+    """The roster's scout entry, or None when it cannot be read.
+
+    Issue #818: the daily reset (reset_utc) the scout-chain
+    day-end guard reads comes from the roster, never from a
+    hard-coded hour - the reset is a game constant the roster
+    owns. A missing file, a malformed roster, or a scout entry
+    without reset_utc is no signal, and the guard proceeds as
+    before (like the #745 guard with no recorded reading).
+    Cached per path: next reads it once per candidate otherwise.
+    """
+    if defs_path not in _SCOUT_ITEM_CACHE:
+        item = None
+        try:
+            with open(defs_path, encoding="utf-8") as fh:
+                regs = json.load(fh)["regulars"]
+        except (OSError, ValueError, KeyError, TypeError):
+            regs = []
+        found = next((r for r in regs if r.get("id") == "scout"),
+                     None)
+        if found is not None and \
+                _parse_hhmm(found.get("reset_utc", "")) is not None:
+            item = found
+        _SCOUT_ITEM_CACHE[defs_path] = item
+    return _SCOUT_ITEM_CACHE[defs_path]
+
+
+def _default_regulars_path():
+    """Roster beside this tool (regulars.json in _tools_/)."""
+    return os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+
+
+def _scout_chain_day_end(chain_id, defs_path):
+    """Reset instant ending a dated scout chain's day, or None.
+
+    Issue #818: ticker-0957 on 2026-11-22 was handed
+    scout-scout-2026-11-20-019 - a Nov-20 chain got a new unit
+    created on Nov-22, two days after its reset day, because a
+    successor inherits the completed unit's chain id and nothing
+    checked the chain's day had ended. Executing it would append
+    observations to the wrong reset day's observation file, and
+    the chain never closes. Two shapes, two conventions - both
+    read from the chain id's trailing date, and both end at the
+    daily reset from the roster's scout entry:
+    - scout-YYYY-MM-DD: the post-reset chain, seeded by the
+      reset on that local date, so its day ends at the NEXT
+      reset after it - the reset instant ending the FOLLOWING
+      local date.
+    - scout-mid-YYYY-MM-DD: the midday chain, seeded by the
+      07:00 local pass on that date, so its day ends at the
+      reset ending that same local date.
+    Any other chain id (zombie, pre-reset-sweep, scout-discovery)
+    carries another lifetime, so no signal and the caller
+    proceeds as before. A chain id with an unparsable date is
+    likewise no signal, never an error.
+    """
+    if not isinstance(chain_id, str):
+        return None
+    post = re.fullmatch(r"scout-(\d{4})-(\d{2})-(\d{2})", chain_id)
+    mid = re.fullmatch(r"scout-mid-(\d{4})-(\d{2})-(\d{2})",
+                       chain_id)
+    if post is None and mid is None:
+        return None
+    match = post if post is not None else mid
+    try:
+        day = date(int(match.group(1)), int(match.group(2)),
+                   int(match.group(3)))
+    except ValueError:
+        return None
+    item = _scout_roster_item(defs_path)
+    if item is None:
+        return None
+    if post is not None:
+        day = day + timedelta(days=1)
+    end = _reset_instant_for_local_date(item, day)
+    return end.astimezone(timezone.utc)
+
+
+def _scout_chain_day_ended(chain_id, stamp, defs_path):
+    """True when a dated scout chain's reset day has ended."""
+    end = _scout_chain_day_end(chain_id, defs_path)
+    return end is not None and end <= stamp
+
+
 def _chain_head_refusal(root, regular, chain_id, chain_seq):
     """Refusal message when a chain head would duplicate work, or None.
 
@@ -3613,6 +3712,22 @@ def cmd_enqueue(args):
                   f"{iso(ends_at)} (recorded by {ends_unit}) - no "
                   f"successor minted (issue #745)")
             return 1
+        # Reset-day guard (issue #818): a scout chain successor is
+        # never minted after the chain's reset day ended - the
+        # successor inherits the completed unit's chain id, so
+        # without this check a Nov-20 chain keeps minting on
+        # Nov-22 and the units it seeds write observations to the
+        # wrong day's file. The refusal names the reset instant
+        # that ended the chain's day, so the run log shows the
+        # boundary instead of a bare refusal.
+        defs_path = args.regulars_json or _default_regulars_path()
+        day_end = _scout_chain_day_end(args.chain_id, defs_path)
+        if day_end is not None and day_end <= now_utc():
+            print(f"refused: chain {args.chain_id} reset day ended "
+                  f"{iso(day_end)} - no successor minted "
+                  f"(issue #818)")
+            return 1
+
         refusal = _chain_head_refusal(
             root, args.regular, args.chain_id, chain_seq)
         if refusal is not None:
@@ -3708,12 +3823,31 @@ def cmd_next(args):
               f"(issue #441)", file=sys.stderr)
         return 1
     stamp = now_utc()
+    defs_path = _default_regulars_path()
     candidates = sorted(
         (f for f in list_units(root, "inbox")
          if _actionable(f, stamp)
          and not _has_done_record(root, f.get("unit"))
-         and not has_completion_marker(root, f.get("unit"))),
+         and not has_completion_marker(root, f.get("unit"))
+         and not _scout_chain_day_ended(
+             f.get("chain_id", ""), stamp, defs_path)),
         key=lambda f: pick_key(f, stamp))
+    # Reset-day guard (issue #818): name the stale-chain units
+    # next skipped, so the pass record shows the filter working;
+    # sync expires the ones that carry an expiry, and the rest
+    # simply sit unhanded instead of executing for a closed day.
+    skipped = sorted(
+        f.get("unit", "")
+        for f in list_units(root, "inbox")
+        if _actionable(f, stamp)
+        and not _has_done_record(root, f.get("unit"))
+        and not has_completion_marker(root, f.get("unit"))
+        and _scout_chain_day_ended(
+            f.get("chain_id", ""), stamp, defs_path))
+    if skipped:
+        print(f"note: skipping {len(skipped)} stale-chain unit(s) "
+              f"whose scout reset day ended: {', '.join(skipped)} "
+              f"(issue #818)", file=sys.stderr)
     # Control-channel lock (issue #689): no unit can clear it -
     # every unit needs input - so while one stands, hand out
     # nothing. The stale bound in sync re-opens the pool for one
