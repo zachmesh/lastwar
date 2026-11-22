@@ -9,6 +9,11 @@ status: unverified
 
 # 2026-11-21
 
+## 22:30 to about 22:35 - PR integration pass (DONE, non-batch)
+
+- 22:30 PT, pr-integration-2245 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges, zero comments. Records PR #793 MERGEABLE at new head 82c52730 (scout+mail record landed on the branch during the pass), awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #425 still owner-gated OD-20261108-01 (age 13 days), no new comment - head and main unchanged since the 2215-slot re-verification. Delivery via GitHub API (2045/2115/2130/2145/2200/2215/2230 precedent). Sweep clean, 15 open PRs all decided. Record: pr-integration/2245-run.md.
+
+
 ## 22:15 to about 22:21 - PR integration pass (DONE, non-batch)
 
 - 22:15 PT, pr-integration-2230 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges, 1 comment (#425 re-verified CLEAN vs new main 410149dec, still owner-gated OD-20261108-01, age 13 days). Records PR #793 MERGEABLE at head 4c6c0806 (2215 run record landed on the branch), awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #802 merged at the 2200-slot pass (squash 410149de). Delivery via GitHub API (2045/2115/2130/2145/2200/2215 precedent). Sweep clean, 15 open PRs all decided. Record: pr-integration/2230-run.md.
