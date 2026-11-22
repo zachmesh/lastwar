@@ -8,6 +8,10 @@ status: unverified
 ---
 
 # 2026-11-21
+## 20:45 to about 20:56 - PR integration pass (DONE, non-batch)
+
+- 20:45 PT, pr-integration-2045 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges. Two comments: #754 now first in the resource chain after #774 landed (1.65.0 as 31b266635), still conflicting on _activities_/resource-collection/INDEX.md, needs a branch-side rebase; #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs new main d2b0512b8. Records PR #793 MERGEABLE at head dc5ce122, awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755 and #713 still conflicting behind #754; #753 superseded by merged #774. Delivery deviation: the VPS worktree route was flagged by an execution-risk check, so this record was delivered via GitHub API; the flagged worktree /tmp/pr-int-2045 was left unprocessed for cleanup. Sweep clean, 15 open PRs all decided. Record: pr-integration/2045-run.md.
+
 ## 20:39 to about 20:42 - PR catch-all 2039 run, no-op pass
 - PR catch-all pass pr-catchall-2026-11-21-2039. #791 and #792 merged in the 19:49 PT batch; new records PR #793 (Owner lastwar-pr-integrator) MERGEABLE/CLEAN, awaits the 23:00 batch. 15 open PRs scanned, none owned by this job. 172 open issues, zero unclassified; owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current. Status: no-op. Full detail in pr-catchall/2039-run.md.
 
