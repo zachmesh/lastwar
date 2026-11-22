@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-21
 
+## 16:00 to about 16:18 - PR integration pass (DONE, non-batch)
+
+- 16:00 PT, pr-integration-1600 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges. Six comments: #772 and #761 superseded by merged #776/#775 (close requested); #755, #754 and #713 now CONFLICTING on _activities_/resource-collection/INDEX.md (single-file chain conflict, commented); #425 still owner-gated (OD-20261108-01 open, line 278, zero decision lines), re-verified CLEAN vs main da1bdda4, one re-verification comment posted. #774 frontmatter defect stands (line 68 `---` glued), head unchanged, no repeat comment. Records PR #762 MERGEABLE/CLEAN at new head 045b178d, awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (1500 comments stand). Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. Sweep clean, 21 open PRs all decided. Quiet run, no Slack DM sync, no chat report. Record: pr-integration/1600-run.md.
+
 ## 15:51 to about 16:01 - Ticker pass ticker-1549 (DONE, scout)
 
 - 15:51 PT, ticker-1549 - done (scout unit scout-scout-2026-11-10-011, base + Events hub, observe-only; game in window mode, Issue #648 cleared. Key finding: NO Zombie Invasion tab in the Events hub (7 tabs: featured, Arms Race, Bingo Task badge 1, Black Market NEW/!, Desert Battlefield, Wanted Boss, Community) - event not live, no zombie chain seeded. Base HUD: power 149,653,371, food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236. 29 items observed, 7 red dots all explained, 0 unexplained; 1 unknown item (00:00:51 countdown). Own PRs first: PR #762 conflict resolved this pass (rebased onto main f9d87d86, MERGEABLE/CLEAN, comment posted; two mid-rebase commits recovered and pushed fast-forward). Record: perception-scout/1551-queue-run.md; observation: perception-scout/observation.md.)
