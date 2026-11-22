@@ -9,7 +9,7 @@ status: unverified
 
 # 2026-11-22
 
-## 12:32 to about 12:47 - Tool development 2026-11-22 1232 run, done
+## 12:32 to about 12:42 - Tool development 2026-11-22 1232 run, done
 
 - 12:32 PT, tool-development-1232 - done (issue #822 implemented, PR #823 open: new _tools_/mac_window_open.py 1.0.0 decides the session-open step from list_windows evidence - OPEN_APP only with no window, ACTIVATE_EXISTING / ACTIVATE_LIVE_DUPLICATE with raise=true, DUPLICATE_UNKNOWN_LIVE stops the pass at exit 2, R2 names the duplicate as the likely cause of ignored taps; 11/11 fixture assertions on isolated /tmp scratch, tree_check exit 0; issue #822 commented). Own PRs first: #425 re-verified MERGEABLE/CLEAN, still owner-gated OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/1232-run.md.
 
