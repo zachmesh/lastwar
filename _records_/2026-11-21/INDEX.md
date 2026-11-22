@@ -1,13 +1,17 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T00:48:00Z
+modified: 2026-11-22T01:44:30Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
 ---
 
 # 2026-11-21
+
+## 17:39 to about 17:47 - PR catch-all pass (DONE, no-op)
+
+- 17:39 PT, pr-catchall-1739 - no-op (sixth pass since VPS SSH recovery). Own PRs first: no adopted open PR (PR #137 stays MERGED). Open PRs down 21 to 15: #774 merged 16:51 PT, #772/#766/#764/#761/#714 closed unmerged 16:41 PT (integrator cleanup); the 15 remaining all name a matching owner and match their diff class - integrator 8 records PRs (#771/#770/#768/#767/#763/#762/#718/#717), knowledge-organizer 5 (#755/#754/#753/#713/#711), tool-developer 2 (#751/#425) - nothing adopted, no fix, no hand-off. #425 still owner-gated (OD-20261108-01, no owner decision), re-verified CLEAN vs main 44ea602d by the integrator 1645 pass; 2026-11-12 flag stays in force, not re-fired. #711 superseded by merged #719, KO amended the branch 12:45 PT, no stale-owner flag. #762 MERGEABLE/CLEAN, awaits the 19:00 batch. Issues: 171 open, unchanged; zero unclassified; owner-decision #132/#154/#335/#514/#517 all unchanged, all over 24 hours, statements current. No Slack DM sync, no chat report (quiet run). Main 44ea602d unchanged. Record: pr-catchall/1739-run.md.
 
 ## 17:30 to about 17:38 - PR integration pass (DONE, non-batch)
 
