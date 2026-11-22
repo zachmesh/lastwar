@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-21
 
+## 18:00 to about 18:14 - PR integration pass (DONE, non-batch)
+
+- 18:00 PT, pr-integration-1800 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). One merge: #789 tools R19 already_present counting fix (Refs #744, squash, delete-branch), main 44ea602d to 761d7341, merge-tree exit 0, py_compile clean; non-blocking note: cmd_plan drops fix[skipped_expired], unreachable in practice. Records PR #762 MERGEABLE/CLEAN at head 49fc3e09, awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (1500 comments stand). #754/#755/#713 still CONFLICTING, awaiting branch-side rebase after #774 and #789 (1600 comments stand). #753 superseded by #774, #711 by #719, #751 duplicates #715. #425 still owner-gated (OD-20261108-01 open, zero decision lines), re-verified CLEAN vs new main 761d7341 (merge-tree 2dc5bd0f), no new comment. Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. VPS ~/lastwar-push working tree holds a pre-existing unresolved merge conflict (_activities_/resource-collection/INDEX.md), flagged, not resolved this pass. Slack DM sync done (ts 1795313527.282019); chat report in Chinese. Sync-back: local refs/remotes/github/main fast-forwarded to 761d7341 via bundle; local main branch fast-forward deferred (dirty worktree checkout). Sweep clean, 15 open PRs all decided. Record: pr-integration/1800-run.md.
+
 ## 17:32 to about 17:58 - Tool development pass (DONE)
 
 - 17:32 PT, tool-development-1732 - done (issue #744 implemented, PR #789 open: plan/sweep report refused windows under their own skip lists instead of counting them as already_present; R19, changelog 0.27.0; 28/28 fixture assertions on isolated /tmp scratch pools, bug reproduced on main's copy; issue #744 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM synced (ts 1795312728.127609). Record: tool-development/1732-run.md.
