@@ -1256,10 +1256,12 @@ def cmd_sync(args):
     markers = reap_stale_completion_markers(args.root)
     markers_reaped = markers["reaped"]
     markers_lost = markers["lost"]
+    markers_by_reason = markers["by_reason"]
     if markers_lost:
         print("warning: completion markers aged out with no local "
               f"done record - the delivery never carried these "
-              f"closings: {", ".join(markers_lost)} (issue #563)")
+              f"closings: {", ".join(markers_lost)} (issue #563)",
+              file=sys.stderr)
     # Roster staleness (issue #198): sync stages from the tracker,
     # which reads the roster next to this tool, so a stale tree
     # stages nothing for a regular the live pool still holds
@@ -1332,6 +1334,7 @@ def cmd_sync(args):
                       "blockers_reaped": blockers_reaped,
                       "completion_markers_reaped": markers_reaped,
                       "completion_markers_lost": markers_lost,
+                      "completion_markers_reaped_by_reason": markers_by_reason,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
@@ -5296,14 +5299,24 @@ def reap_stale_completion_markers(root):
     COMPLETED_STALE_HOURS with no local done record - the
     delivery never carried that closing, so the retro can triage
     each named unit instead of counting one more bare integer.
+    The same drop is also split by reason under "by_reason"
+    ("done-landed", "aged-out", "invalid"), so a caller quoting
+    the reap can name each marker's fate instead of only the
+    count (issue #826): the ticker's sync section quotes the
+    aged-out subset as lost, and the two markers ticker-1248
+    reaped as aged out on Nov 18 read as ordinary reaps until
+    the #735 forensics reconstructed them.
     """
     home = completion_home(root)
     folder = os.path.join(home, COMPLETED_DIRNAME)
     if not os.path.isdir(folder):
-        return {"reaped": [], "lost": []}
+        return {"reaped": [], "lost": [],
+                "by_reason": {"done-landed": [], "aged-out": [],
+                              "invalid": []}}
     stamp = now_utc()
     dropped = []
     lost = []
+    by_reason = {"done-landed": [], "aged-out": [], "invalid": []}
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".md"):
             continue
@@ -5339,7 +5352,12 @@ def reap_stale_completion_markers(root):
         dropped.append(unit)
         if aged_out:
             lost.append(unit)
-    return {"reaped": dropped, "lost": lost}
+            by_reason["aged-out"].append(unit)
+        elif valid:
+            by_reason["done-landed"].append(unit)
+        else:
+            by_reason["invalid"].append(unit)
+    return {"reaped": dropped, "lost": lost, "by_reason": by_reason}
 
 
 def _write_token_file(path, fields):
