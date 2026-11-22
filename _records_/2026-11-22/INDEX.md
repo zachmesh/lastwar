@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-22
 
+## 12:32 to about 12:47 - Tool development 2026-11-22 1232 run, done
+
+- 12:32 PT, tool-development-1232 - done (issue #822 implemented, PR #823 open: new _tools_/mac_window_open.py 1.0.0 decides the session-open step from list_windows evidence - OPEN_APP only with no window, ACTIVATE_EXISTING / ACTIVATE_LIVE_DUPLICATE with raise=true, DUPLICATE_UNKNOWN_LIVE stops the pass at exit 2, R2 names the duplicate as the likely cause of ignored taps; 11/11 fixture assertions on isolated /tmp scratch, tree_check exit 0; issue #822 commented). Own PRs first: #425 re-verified MERGEABLE/CLEAN, still owner-gated OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/1232-run.md.
+
 ## 11:32 to about 11:47 - Tool development pass (DONE)
 - 11:32 PT, tool-development-1132 - done (issue #820 live-log repair: live-tree action log 6 bad lines -> 0, 5 splits + 1 blank dropped, 576 -> 580 lines, 580 objects, multiset identical, check exit 0; branch log already clean, no change. No PR opened (no repo change: append guard already ships in log_append.py 1.0.0; blank-line repair already in gated PR #425; recurrence is worker-side raw appends). Issue #820 commented. Own PRs first: #425 re-verified MERGEABLE/CLEAN, still owner-gated OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/1132-run.md.
 
