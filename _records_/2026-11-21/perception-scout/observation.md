@@ -463,3 +463,77 @@ worked first attempt; the fullscreen precondition (Issue
   news." with an Open button - NOT tapped. Full detail
   in mail-rewards/2236-queue-run.md. Seq 7 still has
   to identify the icon's function by tapping it.
+
+## Scout section (ticker-2304, about 23:24-23:33 local, chain seq 7)
+
+- Chat NEW! icon IDENTIFIED: the notepad icon at the top right of the
+  Chat screen (about 852,59, between the compose (+) icon and the
+  gear) opens the NEWS CENTER. Tabs News (NEW!), World, Alliance;
+  sub-tabs System News / Guides (NEW!). Four cards, all NEW!:
+  "1604 ROMO: Across borders, we are one family." [15580 likes];
+  "#2162 | Glitch: We Can Never Have Enough Speedups" [21898];
+  "1.1 million registrations achieved - claim 8,000 Gold B..."
+  (1,100,000 image); "#1574 | From the Battlefield to the Dance
+  Floor: A Player-Run...". No card was tapped (observe-only; the
+  registrations card is claim-adjacent). The red NEW! badge on the
+  Chat notepad icon did NOT clear after opening News Center once -
+  it was still present on return to Chat.
+- Chat screen read live: tabs World (red dot), Alliance (selected,
+  red dot), Moments (red dot), Private (red badge 3); sub-tabs
+  Chat / Alliance Announcement (red dot). Announcement popup
+  "AP3X | TANK SQUAD GEAR GUIDE", 2026-11-21 21:14:06 StarFall,
+  1 like. Leader banner "Leader calls for enabling notifications
+  for crucial Alliance news." with an Open button - NOT tapped.
+  Messages: Jerry Apex (VIP 13, R4, Lv.30) "Thank you for the
+  train khal" and "Damn it teeemo you left me behind". A
+  message long-press menu (Copy / Translate / Reply / Report)
+  was open on entry to Chat - nothing in it was tapped; it was
+  dismissed by tapping the announcement X. The megaphone tap
+  opened Chat on the FIRST tap this unit (seq 6 needed two
+  taps and a slow open); the chat ticker tap only scrolled the
+  ticker.
+- Base re-reads (entry about 23:24, close about 23:32): power
+  149,417,850 (unchanged across the unit; down from 149,653,371
+  at 22:14); food 762.6M, iron 1.1G, coins 103.9M, diamonds
+  6,426 (up from 5,246 at 22:14, +1,180 - claimed by another
+  unit, not this observe-only unit). Lightning counter 107 at
+  entry, 108 at close (+1, normal regen; the OCR "114" read was
+  a misread of the nearby 1/4 hammer counter). Hammer 1/4 (red
+  dot), flask 2/2. VS countdown 18:43:04 at entry, 18:41:25 at
+  close - a 99-second drop over about 8 minutes of wall time,
+  NOT real-time ticking (seq 6 read it ticking in real time);
+  discrepancy unexplained, recorded, not asserted. Build: Oil
+  Well (0/1), unchanged. Chat ticker top line changed during
+  the unit to "President HawksMav appointed Aratz as Secretary
+  of Interior!". Resource bubbles ready on many buildings
+  (harvest owns). Base megaphone NEW! still present at close.
+- 99+ badge: ABSENT at entry and at close (it was present at
+  22:25 per seq 6). Cleared sometime between 22:25 and 23:24,
+  most plausibly by opening Chat with the Alliance tab selected
+  (consistent with the 2026-11-09 resolution: unread Alliance
+  chat count, clears on opening the Alliance tab); the exact
+  clearing unit is unrecorded.
+- Red badge above WORLD: read 10 at entry, 3 at close. Identity
+  still open; leading candidate is an unread-chat count that
+  dropped when Chat was opened. Counted as the unit's one
+  unexplained red dot.
+- NOT seen this unit: the red target icon (no crosshair icon on
+  the base at close; its countdown was not re-read - world map
+  unwalked); the green 19-hour countdown timer (not visible on
+  the base at close); the Mall floating chest icon (Mall not
+  opened); the orange terminal / daily-missions entry (no
+  distinct orange terminal icon identifiable on the left edge);
+  the passes entry (gold trophy cup confirmed decorative by
+  seq 6; no other entry found).
+
+## Coverage update (ticker-2304, about 23:33 local)
+
+- Surfaces walked this unit: base (re-read), Chat, News Center.
+  Items observed this reset day: 288 (266 + 22). Red dots seen
+  this unit: 18, explained 17; unexplained red dots: 1 (the
+  badge above WORLD, 10 to 3). Unknown items: 3 still open
+  (Mall floating chest, orange terminal / daily-missions entry,
+  passes entry); 1 resolved (Chat NEW! = News Center); 2 not
+  re-read (red target countdown, green 19h timer). Not walked
+  yet: passes, daily missions, world map, duel and radar. The
+  chain continues (scout-2026-11-20, successor seq 8).
