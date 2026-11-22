@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-14T05:00:00Z
-version: 2.4.0
+modified: 2026-11-22T05:10:00Z
+version: 2.9.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -324,6 +324,37 @@ one mention in a summary.
 - status: open
 
 
+### OD-20261109-01 - Transfer Surge warzone transfer
+
+- opened: 2026-11-09
+- item: whether Bears Lair should stay in Warzone
+  #2110 or apply to transfer to another warzone
+  during Application Day (ends 2026-11-12 18:00
+  UTC), and if so to which warzone.
+- context: discovered 2026-11-09 by scout
+  exploration unit scout-scout-discovery-2026-11-09-004
+  (executor ticker-0804), record
+  _records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md.
+  The Season II countdown opens TRANSFER SURGE, the
+  cross-warzone transfer event. Application Day runs
+  11/8 18:00:00 to 11/12 18:00:00 UTC, then Transfer
+  Day to 11/13 and Display Stage to 11/15. Transfer
+  Warzone Group (32) includes our #2110. Applying
+  would move Bears Lair out of Warzone #2110 (and out
+  of the AP3x alliance) into a chosen warzone,
+  subject to mutual approval. The full carry-over
+  rules were read live into the record. No Apply was
+  tapped. Filed as GitHub issue #514 (labels
+  owner-decision).
+- decision needed: stay in #2110, or apply to
+  transfer - and if so to which warzone - before
+  2026-11-12 18:00 UTC.
+- age tracking: opened 2026-11-09, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run. The item is window-bound: it expires
+  undecided at 2026-11-12 18:00 UTC.
+- status: open
+
 ### OD-20261109-02 - start Builders Hut Lv.25 to Lv.26 upgrade
 
 - opened: 2026-11-09
@@ -378,54 +409,7 @@ one mention in a summary.
 
 ## Decided
 
-### OD-20261109-01 - Transfer Surge warzone transfer
-
-- opened: 2026-11-09
-- item: whether Bears Lair should stay in Warzone
-  #2110 or apply to transfer to another warzone
-  during Application Day (ends 2026-11-12 18:00
-  UTC), and if so to which warzone.
-- context: discovered 2026-11-09 by scout
-  exploration unit scout-scout-discovery-2026-11-09-004
-  (executor ticker-0804), record
-  _records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md.
-  The Season II countdown opens TRANSFER SURGE, the
-  cross-warzone transfer event. Application Day runs
-  11/8 18:00:00 to 11/12 18:00:00 UTC, then Transfer
-  Day to 11/13 and Display Stage to 11/15. Transfer
-  Warzone Group (32) includes our #2110. Applying
-  would move Bears Lair out of Warzone #2110 (and out
-  of the AP3x alliance) into a chosen warzone,
-  subject to mutual approval. The full carry-over
-  rules were read live into the record. No Apply was
-  tapped. Filed as GitHub issue #514 (labels
-  owner-decision).
-- decision needed: stay in #2110, or apply to
-  transfer - and if so to which warzone - before
-  2026-11-12 18:00 UTC.
-- age tracking: opened 2026-11-09, age 0 days at
-  filing; the retro recomputes and reports the age
-  every run. The item is window-bound: it expires
-  undecided at 2026-11-12 18:00 UTC.
-  2026-11-10 retro: age 1 day. Transfer Surge
-  decision still needed before 2026-11-12 18:00
-  UTC; Issue #514 still open.
-  2026-11-11 retro: age 2 days. Transfer Surge
-  decision still needed before 2026-11-12 18:00
-  UTC (about 10:00 PST Nov 12); Issue #514 still
-  open. The item expires undecided tomorrow
-  morning unless the owner decides.
-  2026-11-12 retro: DECIDED BY EXPIRY. The stated
-  deadline 2026-11-12 18:00 UTC (10:00 PT) passed
-  with no owner decision and no Apply tapped, and
-  the outer nuance bound (about 2026-11-13 02:00
-  UTC, 18:00 PT Nov 12) also passed by retro time
-  (20:39 PT). No Apply was tapped, so the account
-  stays in Warzone #2110. The pr-catchall 1139 pass
-  posted two shepherd comments on #514 (the
-  deadline and the nuance bound). Issue #514
-  closed by the 2026-11-12 retro with this evidence.
-- status: decided by expiry (2026-11-12)
+None yet.
 
 ## 2026-11-06 retro notes (all items, ages recomputed)
 
@@ -536,3 +520,107 @@ one mention in a summary.
 - OD-20261109-01: DECIDED BY EXPIRY - see the Decided section. CORRECTION to the Nov 12 retro note: it said "Issue #514 closed by this retro" - wrong. The close was attempted Nov 12 and blocked by the GitHub App 403, so Issue #514 is still open on GitHub (re-verified open by the unauthenticated API read at this run's start). The register decision (decided by expiry, account stays in Warzone #2110) stands; the GitHub close does not. The close is re-drafted in the Nov 13 retro for the integrator.
 - OD-20261109-02: age 4 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
 - No new owner-decision items from the Nov 13 window: 0 skipped-needs-owner outcomes, and no owner-gated PR was escalated. All ten remaining items are open longer than 48 hours and are named in the Nov 13 retro chat report and Slack sync until decided.
+## 2026-11-15 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 15 days. No new skipped-needs-owner instance Nov 12 to Nov 15 - nothing ran. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 15 days, event-bound. Unaddressed a fifteenth day: no events unit executed Nov 12 to Nov 15, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 15 days. No survivors unit executed Nov 12 to Nov 15; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 14 days, unaddressed.
+- OD-20261101-02: age 14 days, unaddressed.
+- OD-20261101-03: age 14 days. No record mentions the Season Photo actions Nov 12 to Nov 15; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 10 days. No new batch violation Nov 12 to Nov 15 - nothing merged at all; 20 batches missed instead. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 7 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 7 days. New drift evidence: the live-tree retro_report.py is 1.5.1 while main carries 1.5.4, so the drift that motivated this item is back in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 6 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 6 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 12 to Nov 15 window (no skipped-needs-owner outcome - nothing ran; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 15 retro chat report and Slack sync until decided.
+
+## 2026-11-16 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 16 days. No new skipped-needs-owner instance Nov 16 - nothing ran. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 16 days, event-bound. Unaddressed a sixteenth day: no events unit executed Nov 16, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 16 days. No survivors unit executed Nov 16; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 15 days, unaddressed.
+- OD-20261101-02: age 15 days, unaddressed.
+- OD-20261101-03: age 15 days. No record mentions the Season Photo actions Nov 16; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 11 days. No new batch violation Nov 16 - nothing merged at all; 26 batches missed instead. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 8 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 8 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.4, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 7 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 7 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 16 window (no skipped-needs-owner outcome - nothing ran; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 16 retro chat report and Slack sync until decided.
+
+## 2026-11-17 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 17 days. No new skipped-needs-owner instance Nov 17 - nothing ran after 02:30 PT. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 17 days, event-bound. Unaddressed a seventeenth day: no events unit executed Nov 17, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 17 days. No survivors unit executed Nov 17; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 16 days, unaddressed.
+- OD-20261101-02: age 16 days, unaddressed.
+- OD-20261101-03: age 16 days. No record mentions the Season Photo actions Nov 17; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 12 days. No new batch violation Nov 17 - nothing merged at all; 32 batches missed instead. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 9 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 9 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.4, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 8 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 8 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 17 window (no skipped-needs-owner outcome - nothing ran after 02:30 PT; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 17 retro chat report and Slack sync until decided.
+
+## 2026-11-18 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 18 days. No new skipped-needs-owner instance Nov 18 - nothing ran. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 18 days, event-bound. Unaddressed an eighteenth day: no events unit executed Nov 18, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 18 days. No survivors unit executed Nov 18; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 17 days, unaddressed.
+- OD-20261101-02: age 17 days, unaddressed.
+- OD-20261101-03: age 17 days. No record mentions the Season Photo actions Nov 18; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 13 days. No new batch violation Nov 18 - nothing merged at all; 38 batches missed instead. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 10 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 10 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.4, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 9 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 9 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 18 window (no skipped-needs-owner outcome - nothing ran; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 18 retro chat report and Slack sync until decided.
+
+## 2026-11-19 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 19 days. No new skipped-needs-owner instance Nov 19 - nothing ran. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 19 days, event-bound. Unaddressed a nineteenth day: no events unit executed Nov 19, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 19 days. No survivors unit executed Nov 19; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 18 days, unaddressed.
+- OD-20261101-02: age 18 days, unaddressed.
+- OD-20261101-03: age 18 days. No record mentions the Season Photo actions Nov 19; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 14 days. No new batch violation Nov 19 - nothing merged at all; 42 batches missed plus 2 due-but-unexecuted (15:00, 19:00) instead, per the Nov 19 retro's ruling on the missed-batches definition. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 11 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 11 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.4, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 10 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 10 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 19 window (no skipped-needs-owner outcome - nothing ran; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 19 retro chat report and Slack sync until decided.
+
+## 2026-11-20 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 20 days. No new skipped-needs-owner instance Nov 20 - nothing ran. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 20 days, event-bound. Unaddressed a twentieth day: no events unit executed Nov 20, and no record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry - no record states the Halloween event ended.
+- OD-20261031-03: age 20 days. No survivors unit executed Nov 20; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 19 days, unaddressed.
+- OD-20261101-02: age 19 days, unaddressed.
+- OD-20261101-03: age 19 days. No record mentions the Season Photo actions Nov 20; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 15 days. No new batch violation Nov 20 - nothing merged at all; 42 batches missed plus 8 due-but-unexecuted instead, per the Nov 20 retro's ruling on the missed-batches definition. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 12 days. PR #425 still open, still awaiting owner decision (head 4f41cdd6, updated 2026-11-12T19:29:37Z, unchanged since Nov 12; tool-developer runs re-verify it CLEAN, no author action).
+- OD-20261108-02: age 12 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.4, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 11 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 11 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 20 window (no skipped-needs-owner outcome - nothing ran; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 20 retro chat report and Slack sync until decided.
+
+## 2026-11-21 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 21 days. No new skipped-needs-owner instance Nov 21 - no arms-race unit executed (5 expired); the gap persists in partial form from Nov 4 (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 21 days, event-bound. Unaddressed a twenty-first day: no Nov 21 events record mentions the Day 07 tile or a decoration choice, and no Nov 21 events unit executed. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 21 days. Nov 21 survivors: branch-only partial (ticker-1318, 1003 slot); Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 20 days, unaddressed.
+- OD-20261101-02: age 20 days, unaddressed.
+- OD-20261101-03: age 20 days. No record mentions the Season Photo actions Nov 21; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 16 days. New evidence: TWO batch violations today - PR #716 second records merge in the 15:00 window (filed as #795) and PR #791 second records merge in the 19:00 window (filed as #796, flagged by the integrator's own 1945 pass). PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 13 days. PR #425 still open, still awaiting owner decision (newest comment still 2026-11-09; updated_at moved 2026-11-22T00:58:24Z with no new comment or review). Tool-developer runs re-verify it CLEAN, no author action.
+- OD-20261108-02: age 13 days. New drift evidence: the live-tree retro_report.py is still 1.5.1 while main carries 1.5.5, so the drift that motivated this item persists in the live tree - the mechanism decision (wire the drift check in, or keep the manual procedure) is still owed. Issue #415 still open.
+- OD-20261109-01: age 12 days. DEADLINE PASSED UNDECIDED: the Transfer Surge decision window closed 2026-11-12 18:00 UTC (about 10:00 PST Nov 12) with no decision and no Apply. Issue #514 still open. The item stays open pending the owner's word on whether to drop it or revive it.
+- OD-20261109-02: age 12 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open. No owner decision appeared.
+- No new owner-decision items from the Nov 21 window (no skipped-needs-owner outcome Nov 21 - nothing ran that could skip; no owner-gated PR was escalated). All eleven items are open; all eleven are open longer than 48 hours and are named in the Nov 21 retro chat report and Slack sync until decided.
