@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T18:32:17Z
+modified: 2026-11-17T10:44:38Z
 level: L1
-version: 1.53.0
+version: 1.54.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -59,6 +59,7 @@ grounded_in:
   - source: ticker-1806 alliance-gifts execution record 2026-11-10 1810 queue run (done, dialog-confirmed 464 Regular plus 14 Premium, 478 total, Gift Level 28 progress 203,638,690 to 203,653,640, per-step deltas unattributed as Issue #183 evidence, badge 11 vs dialog 12 second-sweep gap, Zombie Invasion tab seen live in the Events hub; record commit 20a62ff0 on records/2026-11-10)
   - source: ticker-0212 alliance-gifts execution record 2026-11-11 0218 queue run (done, dialog-confirmed 667 Regular and 52 Premium, both tabs verified empty, Gift Level 28 progress 205,158,210 to 205,177,930; record commit b0615980f on records/2026-11-11)
   - source: ticker-1012 alliance-gifts execution record 2026-11-11 1042 queue run (done, dialog-confirmed 312 Regular and 19 Premium, both tabs verified Claimed, Gift Level 28 progress 206,145,210 to 206,168,170, Premium Claim All re-grounded at 744,939; record commit c0c788be on records/2026-11-11)
+  - source: ticker-0214 alliance-gifts execution record 2026-11-17 0229 queue run (done, dialog-confirmed 176 Regular plus 67 Premium, Gift Level 29 progress 15,808,080 to 15,821,690, alliance-wide progress decomposition, Premium badge 87 against dialog 67; Issue #183 evidence)
 ---
 
 
@@ -866,6 +867,8 @@ one file per execution.
 
 - 1.53.0 (2026-11-11): 1042 gifts unit folded (done, dialog-confirmed 312 Regular plus 19 Premium, 331 total, both tabs verified Claimed with no red dot and no Claim All button; Gift Level 28 progress 206,145,210 to 206,168,170 of 206,300,000, 131,830 short of Level 29; Regular window 310 plus 2 late arrivals claimed on a re-check; Premium badge 18 to 19 as one gift arrived mid-unit; progress read 206,168,150 and later 206,168,170 while this unit claimed nothing in between, so allies claiming also moves it - Issue #183 evidence, commented by this run; Premium Claim All re-grounded at (744,939) against Regular (498,936), first Premium attempt at the Regular coordinates missed; Hide-your-name checkbox verified still unchecked after a stray click; session drop cc-593 to cc-594 between units, no loss).
 
+- 1.54.0 (2026-11-17): 0229 gifts unit folded (done, dialog-confirmed 176 Regular plus 67 Premium, 243 total, both tabs verified Claimed with no red dot and no Claim All button; Gift Level 29, progress 15,808,080 to 15,821,690 of 257,900,000 - Level 29 reached since the 1042 close at 206,168,170 of 206,300,000; alliance-wide progress DECOMPOSED - own claims total 9,760 points against a 13,610 bar move, the extra 3,850 arriving in the same windows as own claims (+2,780 beside a 1-gift claim, +70 beside a 2-gift claim, +1,000 beside the last 2-gift claim, exactly one MR Premium gift's value, i.e. another member claiming in that minute), so a gifts unit is judged by dialog counts, never by the bar delta - Issue #183 evidence, comment owed at VPS recovery; Premium badge 87 against dialog 67 repeats the 2305 unit's exact -20 gap, second occurrence, filing owed at VPS recovery; entry first try from the Radar Tasks map screen left by ticker-0101, its 10 pending task rewards left untouched).
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1509,3 +1512,15 @@ one file per execution.
 - Progress note, Issue #183 evidence: the Gift Level progress is alliance-wide, not solely this unit's doing - it read 206,168,150 and later 206,168,170 while this unit claimed nothing in between, so allies claiming also moves it. Do not attribute progress deltas to this unit's claims alone. Last read: 206,168,170 / 206,300,000 (131,830 short of Level 29).
 - Verification (read live): after the second Regular claim, Premium re-checked: every row "Claimed", no Claim All button, no red dot on either tab. Alliance panel after exit: Alliance Gifts red dot gone. (Alliance Wars, Help, Alliance Store, Alliance Techs still carry red dots - other units' work.) "Hide your name on Gifts" checkbox was never touched; verified still unchecked after a stray click.
 - Outcome: done. Regular 312 claimed, Premium 19 claimed, 331 gifts total. No diamonds or money spent, no paid button tapped. The game was left on the base screen.
+
+## What the 2026-11-17 0229 unit added - done, 176 Regular and 67 Premium claimed, Gift Level 29 reached, alliance-wide progress decomposed (Issue #183)
+
+- Unit gifts-2026-11-16-2230 by ticker-0214, about 02:16 to 02:28 local, status done, finished inside expires_at (02:30 PT). Evidence in `_records_/2026-11-17/alliance-gifts/0229-queue-run.md` (local mirror; records-branch delivery blocked by the VPS outage).
+- Entry state (read live): the game was left on the Radar Tasks map screen by ticker-0101 (10 task rewards pending for the day-3 release, Claim All untouched - not this unit's work, left alone). Home, Alliance, Alliance Gifts (red dot) all tapped first try. Base at entry: Total Power 149,482,045; coins 27.7M, iron 643.5M, food 1.0G. Alliance [AP3x] The Apex, 99/100 members.
+- Regular tab, four sweeps: Claim All 1 claimed 171 gifts (badge read 170, one more arrived before the tap); progress 15,808,080 to 15,809,790 (+1,710 = 171 x 10, exact). Three further sweeps caught arrivals during the unit: 1 gift (OatmealDragon Doom Elite 23:58:34), then 2 gifts (23:59:57, 23:58:52), then 2 gifts (LAMP 1 Doom Elite 23:59:51 plus one more that arrived between the screenshot and the tap). Regular total 176.
+- Premium tab, one sweep: Claim All claimed 67 gifts; progress 15,809,790 to 15,817,790 (+8,000). Top rows: MR +1000 (Mega Express Contract), R +50 (Advanced Hero Growth Battle Pass), SSR +200 (Supreme Hero Growth Battle Pass), R +50 (Daily Special Black Market Cash Pack).
+- Gift Level 29 (measured): progress 15,808,080 to 15,821,690 of 257,900,000 at close. Level 29 reached since the 1042 close (206,168,170 of 206,300,000, 131,830 short of Level 29 on 2026-11-11) - the level-up happened between 2026-11-11 and this unit, with no folded gifts unit in between.
+- Progress decomposition, Issue #183 evidence (comment owed at VPS recovery - no write route this run): own claims in this unit total 9,760 points (176 x 10 Regular + 8,000 Premium), but the bar moved 13,610. The extra 3,850 arrived in the same windows as own claims: +2,780 beside the 1-gift claim, +70 beside the 2-gift claim, +1,000 beside the last 2-gift claim (exactly one MR Premium gift's +1000, i.e. another member claimed an MR gift in that minute). The bar therefore also moves on other members' claims - the alliance-wide reading stands, now decomposed per window rather than as a single unexplained excess. Do not judge a gifts unit by the bar delta; judge it by the dialog counts.
+- Premium badge-versus-dialog gap REPEATS, second occurrence of exactly -20: badge read 87, dialog claimed 67. The 2305 unit (2026-11-02) read badge 82 against dialog 62 - the same -20. The tab was fully Claimed afterwards with no Claim All button, so nothing was left unclaimed. Possible causes: the badge counts rows including already-claimed ones, or it was stale. Filing owed at VPS recovery: a knowledge issue for the repeated -20 Premium badge gap (badge counts 20 more than the dialog claims, twice).
+- Gifts arrive about one a minute while allies kill Doom Elites; arrivals after the close check belong to the next gifts unit.
+- Outcome: done. Regular 176 claimed, Premium 67 claimed, 243 gifts total. Both tabs showed all rows Claimed, no Claim All button and no red dot at the close check. No diamonds or money spent, no paid button tapped.
