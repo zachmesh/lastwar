@@ -1,0 +1,157 @@
+---
+title: Observation 2026-11-21
+created: 2026-11-21T23:55:00Z
+modified: 2026-11-22T00:22:29Z
+level: L0
+version: 1.1.0
+description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
+status: unverified
+---
+
+# Observation 2026-11-21
+
+All times America/Los_Angeles. Observe-only; nothing claimed,
+fought, dispatched, donated, dug or bought in any section
+unless the section says otherwise.
+
+## Pass scout-2026-11-10-011 executed, unit ticker-1549, base and Events hub
+
+Stale chain unit (chain scout-2026-11-10, seq 11) executed in the
+current reset day: observations are filed here as reads of the
+current game state, not of the old window. Session about 15:51
+to 16:01 local, computer session cc-18. Observe-only throughout.
+Game in window mode (788x1083, window 105986), background input
+working; the fullscreen precondition (Issue #648) is cleared.
+Full unit record at `perception-scout/1551-queue-run.md`.
+
+### Base screen and HUD, read live about 15:52 local
+
+- Top bar: power 149,653,371; food 730.5M, iron 1.1G, coin
+  88.2M, diamonds 5,236; level 48.
+- Left column: hammer 1/4 (red dot), research flask 2/2,
+  two truck icons with badges 3 and 1, a red radar/target
+  icon at the right edge mid-screen.
+- Right column: Events badge 1, VS (duel) countdown 02:07:38,
+  rocket/missile icon 1d 02:07:38, Alliance (red dot), Mail
+  (red dot), Inventory (red dot).
+- Bottom: HEROES (red dot), WORLD, a "99+" badge near WORLD.
+- Task: "Build: Oil Well (0/1)". Chat ticker: "Breaking
+  News: Intense battle..."; "Bobsuruncle: Oh you did aweso...";
+  "Kalria KaIia: How did you guys do...". Alliance
+  announcement: a player appointed Kalria KaIia as Secretary
+  of Interior.
+- Two survivor "?" icons at the front door. A "NEW"
+  megaphone icon near the bottom centre-right.
+- A 00:00:51 countdown read at 937,669 on the return to base
+  (about 16:01), beside the Alliance/Mail column; meaning
+  unverified, carried forward as the day's one unknown item.
+
+### Events hub, read live about 15:55 to 16:00 local
+
+- Tab bar, 7 tabs, in order: [treasure chest / featured]
+  (selected), Arms Race, Bingo Task (red badge 1), Black
+  Market (NEW tag and "!" badge), Desert Battlefield,
+  Wanted Boss, Community.
+- NO Zombie Invasion tab. The event is not live; do not seed
+  a zombie chain, and the inbox zombie-2026-11-10-032 unit
+  will find no event when executed. This answers the seeding
+  question for this reset day.
+- Featured tab: "Unlock Radar Task: Dripper" - complete a
+  total of 5000 Radar Tasks in this Warzone, 314188/5000,
+  1d 02:06:52 left. "Unlock Secret Task: Capture the Oil
+  Depot" - complete a total of 1000 Secret tasks in this
+  Warzone, 55437/1000, 1d 02:06:52 left. Stage track 1-2-3-4,
+  stage 2 highlighted.
+- Tab bar scrolls: a background drag moved it (the drag
+  receipt said outcome_unknown, but the bar did scroll and
+  the OCR tab list changed). The bar shifts between openings;
+  re-ground tab positions on sight before tapping.
+- The Bingo Task badge 1 and the Black Market NEW/! are for
+  the events regular; no claim was made by this unit.
+
+## Pass scout-2026-11-20 executed, units ticker-1604, Events hub tabs completed
+
+Chain head scout-2026-11-20-1800 (16:07-16:12 local) plus
+chain seq 2 scout-scout-2026-11-20-001 (16:13-16:16 local),
+computer session cc-19. Observe-only throughout. Game in
+window mode (788x1083, window 105986), activate raise=true
+worked first attempt; the fullscreen precondition (Issue
+#648) stays cleared. Full unit records at
+`perception-scout/1604-queue-run.md` and
+`perception-scout/1613-queue-run.md`.
+
+### Base screen and HUD, re-read live about 16:08 local
+
+- Top bar unchanged from the 15:52 read: power 149,653,371;
+  food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236.
+- Red dots: Events 1, VS countdown 01:51:51, Alliance,
+  Mail, Inventory, HEROES, WORLD 99+, construction hammer
+  1/4, trucks badge 3, hero badge 1. Research flask 2/2,
+  no dot.
+- Chat ticker: "Breaking News: Alliance War!
+  DieRotenTeufel: [SNGw]Nakie22 ... PandaVoid:
+  [SNGw]Jiqullsz (Warzo...".
+- "Build: Oil Well (0/1)". The "NEW" megaphone icon near
+  the bottom centre-right is still unread - unknown item,
+  carried forward.
+
+### Events hub tabs, opened live about 16:09 to 16:16 local
+
+- Featured ("The Age of Oil") tab: stage track 1-2-3-4 at
+  stage 2. "Unlock Radar Task: Dripper" 314811/5000 (up
+  623 from the 15:55 read of 314188), "Unlock Secret Task:
+  Capture the Oil Depot" 55487/1000 (up 50 from 55437),
+  both 1d 01:51:21 left. Both warzone goals far exceeded.
+- Bingo Task tab: 9/15 tasks complete, 1d 01:50:29 left.
+  Row chests 2 of 5 claimed, 3 unclaimed; column chests 3
+  blue + 1 gold unclaimed. Final reward ("Collect after
+  completing all tasks") unclaimed: Black Market Cash 1.5K,
+  Oil 30.0K x12, chest x1, red crystal 10K x1. The tab
+  badge 1 is explained by these unclaimed chests; the
+  owning regular is events.
+- Black Market tab (NEW candidate, Issue #783): 22d
+  01:46:36 left; Black Market Cash balance 7190. Top row
+  all Sold Out, Availability 0 (Free gear chest x1,
+  Featured chest x1, Fantastic 5m speed-up x12). Bottom
+  row, 500 cash each, Availability 1: orange chest IV x5,
+  purple crystal x1, blue chest x6. Refreshes (today)
+  46/46; Refresh Free; Quick Buy unchecked. Pack button
+  (red badge) top right. Tab "!" explained by the Pack
+  button / sold-out Free slot; nothing free claimable now.
+- Desert Storm Battlefield tab: "New" badge explained
+  (never visited). "Event ends in 01:45:52" with the banner
+  "The event is over!"; Enter Battlefield greyed. Buttons:
+  Rules, Achievement, History, Logs. Nothing playable.
+- Wanted Boss tab (known event, Issue #784 - no owning
+  regular): boss "Code 39", appears at server time 00:00;
+  aircraft heroes deal 50% extra damage. One attack pays
+  coin x6, 5m speed-up x5, red crystal x10, blue triangle
+  x250, gold shard x25. Go button live with a red dot and
+  00:45:32 left at the 16:15 read. Buttons: Rankings,
+  Rewards, Goals, Battle Record.
+- Community tab: visit any community, 200 Diamonds bonus;
+  link Discord after HQ Lv.8, extra 500 Diamonds. The 500
+  Diamonds reward reads "Claimed". Buttons: Facebook,
+  Discord, X, Reddit. Nothing actionable.
+- Arms Race tab: NOT opened - successor unit.
+- NO Zombie Invasion tab. The event is not live; do not
+  seed a zombie chain.
+
+## Coverage
+
+- Surfaces walked: 2 (base, Events hub - all 7 tabs now
+  opened). Items observed: 67 reads this reset day (29 +
+  24 + 14; base/HUD and the featured tab were re-read).
+- Red dots seen: 23 reads (7 + 13 + 3); all explained -
+  the Black Market "!" and Desert Battlefield "New" badges
+  the chain head left unexplained are explained by this
+  pass; unexplained red dots: 0. Unknown items: 2 (the
+  00:00:51 countdown; the "NEW" megaphone function).
+- Candidates filed as Issues this pass: #783 Black Market
+  (idea), #784 Wanted Boss has no owning regular (play).
+- Not walked yet: Arms Race tab content, store, alliance
+  panel and station, mail, VIP, passes, daily missions,
+  world map, duel and radar. The chain continues
+  (scout-2026-11-20, successor seq 3 in inbox); the
+  midday pass (scout-midday-2026-11-21-0700) is in the
+  inbox.
