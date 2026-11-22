@@ -1,8 +1,8 @@
 {
  "passes": {
   "status": "done",
-  "at": "2026-11-22T10:59:28-08:00",
-  "note": "Shop checked only, nothing claimable (Hot Deals promos only, Free Supply Claimed, no pass owned); late finish"
+  "at": "2026-11-22T14:34:33-08:00",
+  "note": "Shop checked live, nothing claimable: Hot Deals promo only, Free Supply Claimed, no owned pass pickup, monthly pass not owned"
  },
  "treasures": {
   "status": "done",
@@ -16,8 +16,8 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-22T10:32:23-08:00",
-  "note": "0630-slot sweep: 6 categories, no rewards available"
+  "at": "2026-11-22T13:42:41-08:00",
+  "note": "All 5 claimable categories swept, each 'No rewards available', nothing claimed"
  },
  "harvest": {
   "status": "done",
@@ -31,27 +31,32 @@
  },
  "building-queues": {
   "status": "done",
-  "at": "2026-11-22T10:13:15-08:00",
-  "note": "Drill Ground Lv.25 upgrade 07:12:47 left, slots 2-4 idle"
+  "at": "2026-11-22T13:33:48-08:00",
+  "note": "Queue read live: Lv.25 Drill Ground 03:53:40 left, slots 2-4 idle"
  },
  "gifts": {
   "status": "done",
-  "at": "2026-11-22T10:35:30-08:00",
-  "note": "0630-slot: Regular 753 + Premium 52, level progress +15,580"
+  "at": "2026-11-22T13:46:10-08:00",
+  "note": "83 Regular + 2 Premium gifts claimed, Gift Level 30,062,920 to 30,064,150"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-22T10:37:43-08:00",
-  "note": "0630-slot: Help All, 1 request, points 0 to 60/1000"
+  "at": "2026-11-22T13:37:49-08:00",
+  "note": "Help All cleared KaBoom420, header 60 to 100 of 1,000"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-22T11:04:06-08:00",
-  "note": "2 finished UR tasks claimed (both plundered overnight); assists 5/5; no pending tasks; Recovery 2026-11-19 CLAIMED; late finish"
+  "at": "2026-11-22T14:49:53-08:00",
+  "note": "No pending tasks; assists already 5/5; Recovery 2026-11-19 CLAIMED; plunder-stamp behaviour corrected, Mega Deploy centre (619,946) verified"
  },
  "survivors": {
   "status": "done",
   "at": "2026-11-22T12:11:31-08:00",
   "note": "1 gate survivor processed, visible gate line clear, 0 recruits identified"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-22T15:25:45-08:00",
+  "note": "Daily Freebie and login chest both claimed, VIP points 1,666,420 to 1,666,520"
  }
 }
