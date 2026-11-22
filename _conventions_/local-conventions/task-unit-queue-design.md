@@ -604,6 +604,32 @@ one to the audit cause it answers.
   inbox: a zombie unit already claimed or closed does not
   count.
 
+- **R18 - enqueue refuses a chain successor after the chain's recorded event end (issue #745).**
+  A chain ends only when its activity ends, but the mint must know the
+  activity ended: the Glacieradon chain kept minting successors after
+  the event expired about 2026-11-14T02:05Z (timer cross-check from
+  chain units 001 and 023) - unit 037 was enqueued at
+  2026-11-15T00:07:55Z, about 22 hours after the end, and the next pass
+  spent its one live access closing a chain that should never have been
+  seeded. A chain unit that reads the event timer live records
+  `event_ends_at` in result.stats (ISO UTC, the timer reading projected
+  to an instant); a unit that verifies the event has ended records it at
+  or before now and closes the chain without a successor. `enqueue`
+  takes the latest `event_ends_at` reading across the chain's done
+  units in the live pool and the given root's snapshot pool (the #750
+  reconciliation sources - only done units carry results), latest by
+  when the reading was taken rather than the largest instant, and
+  refuses to mint when it is past, naming the recording unit; exit 1,
+  nothing minted. No reading
+  recorded means no signal and the mint proceeds as before - the guard
+  can only enforce an end the chain has recorded, so a unit that reads
+  the timer must record it. The mint point is `enqueue`: the ticker's
+  completion-time enqueue is what seeded 037 (its frontmatter carries
+  the enqueue shape - empty planned_for, est 12); sync stages no chain
+  successors itself, so no second guard point is needed.
+  `_produce_for_window` chain-window units are covered separately by the
+  R15 expiry refusal.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -941,6 +967,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): `enqueue` refuses a chain successor when the chain's latest recorded `event_ends_at` is past, so a dead event's chain stops minting instead of seeding units for it; no reading recorded means no signal and the mint proceeds as before.
 - 0.25.0, 2026-11-21 - section 11 gains rule R17 (doomed-probe zombie preference, issue #746): `next --probe` hands out a queued zombie chain unit ahead of the overlay steering and the normal pick, so a probe pass burns the re-minted chain unit instead of a scout unit; with no zombie unit queued, actionable and inside budget, the probe falls through to the normal pick.
 - 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.
 - 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-step dedupe, issue #712): the production path refuses a window whose computed expiry is already past and a reset-anchored slot whose chain step the pool already holds at another slot, so plan no longer stages a stillborn zero-sweep unit for yesterday's slot or a second sweep pair at the new geometry beside the old one; both refusals are recorded and reported by plan and sweep.

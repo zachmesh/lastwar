@@ -3187,6 +3187,67 @@ def _sweep_enqueue_refusal(args):
     return None
 
 
+def _chain_event_end(root, snapshot_root, chain_id):
+    """Latest recorded event end for a chain, or (None, None).
+
+    Issue #745: the Glacieradon event expired about 2026-11-14T02:05Z
+    (timer cross-check from chain units 001 and 023), but the chain
+    kept minting successors - unit 037 was enqueued at
+    2026-11-15T00:07:55Z, about 22 hours after the end, because no
+    mint point knew the event had ended. A chain unit that reads
+    the event timer live records result.stats event_ends_at (ISO
+    UTC, the timer reading projected to an instant); a unit that
+    verifies the event has ended records it at or before now and
+    closes the chain. The latest reading is the event end the
+    mint must respect - latest by when the reading was taken
+    (result finished_at, tie-break chain_seq), not the largest
+    instant: a stale optimistic reading must not override a
+    fresh reading that says the event ended. The readings come
+    from the chain's done units in the live pool's done and the
+    given root's snapshot done (a closing this checkout has not
+    seen yet - the #750 reconciliation sources), since only done
+    units carry results. A malformed value is warned about and
+    skipped, never treated as an end. No reading at all means no
+    signal, and the mint proceeds as before.
+    """
+    latest = None
+    latest_unit = None
+    latest_key = None
+    roots = [root]
+    if snapshot_root and os.path.abspath(snapshot_root) != \
+            os.path.abspath(root):
+        roots.append(snapshot_root)
+    for pool in roots:
+        for f in list_units(pool, "done"):
+            if f.get("chain_id") != chain_id:
+                continue
+            result = f.get("result") or {}
+            stats = result.get("stats") or {}
+            if not isinstance(stats, dict):
+                continue
+            raw = stats.get("event_ends_at")
+            if raw is None or raw == "":
+                continue
+            ends = parse_iso(raw) if isinstance(raw, str) else None
+            if ends is None:
+                print(f"warning: {f.get('unit', '')} carries "
+                      f"unparsable event_ends_at {raw!r} - ignored "
+                      f"(issue #745)")
+                continue
+            finished = parse_iso(result.get("finished_at", "")) \
+                or datetime.min.replace(tzinfo=timezone.utc)
+            try:
+                seq = int(f.get("chain_seq", 0))
+            except (TypeError, ValueError):
+                seq = 0
+            key = (finished, seq)
+            if latest_key is None or key > latest_key:
+                latest_key = key
+                latest = ends
+                latest_unit = f.get("unit", "")
+    return latest, latest_unit
+
+
 def _chain_head_refusal(root, regular, chain_id, chain_seq):
     """Refusal message when a chain head would duplicate work, or None.
 
@@ -3335,6 +3396,20 @@ def cmd_enqueue(args):
                   f"reconciled to {chain_seq} - "
                   f"{'; '.join(higher)}, live pool holds seq "
                   f"{live_next - 1} (issue #750)")
+        # Event-end guard (issue #745): a chain successor is never
+        # minted after the chain's recorded event end. The mint
+        # point is enqueue - the ticker's completion-time enqueue
+        # is what seeded zombie-037 about 22 hours after the
+        # Glacieradon event expired, because the mint knew no end.
+        # The refusal names the recording unit, so the run log
+        # shows which live reading closed the chain.
+        ends_at, ends_unit = _chain_event_end(
+            root, args.root, args.chain_id)
+        if ends_at is not None and ends_at <= now_utc():
+            print(f"refused: chain {args.chain_id} event ended "
+                  f"{iso(ends_at)} (recorded by {ends_unit}) - no "
+                  f"successor minted (issue #745)")
+            return 1
         refusal = _chain_head_refusal(
             root, args.regular, args.chain_id, chain_seq)
         if refusal is not None:
