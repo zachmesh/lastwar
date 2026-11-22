@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T21:42:29Z
-version: 0.36.0
+modified: 2026-11-22T23:43:00Z
+version: 0.37.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -143,7 +143,11 @@ no local done record is reported as lost (issue #563): the delivery
 never carried that closing, so the retro can triage the named unit
 instead of counting one more bare integer, and the suppression
 lapsing makes the gap visible instead of hiding it behind a stale
-file.
+file. `sync` also splits every reap by reason in its JSON
+(`completion_markers_reaped_by_reason`: done-landed, aged-out,
+invalid), so the ticker's sync section quotes the aged-out subset
+as lost instead of folding it into the bare reaped count
+(issue #826).
 
 The two stranded units of issue #726 - `harvest-2026-11-11-1003`
 and `zombie-invasion-zombie-2026-11-10-014` - have no full unit file
@@ -798,6 +802,28 @@ one to the audit cause it answers.
   worktree. `LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM=1` bypasses the gate
   only for isolated /tmp fixture validation of a new tool version.
 
+- **R26 - sync names each reaped completion marker's reason, so a lost closing reads as lost in the run record (issue #826).**
+  `sync` already reported the lost subset as `completion_markers_lost`
+  (issue #563), but the ticker's sync section quotes only the bare
+  `completion_markers_reaped` list, so the two markers ticker-1248
+  reaped as aged out on Nov 18 read in its record as ordinary
+  done-landed reaps and the loss stayed invisible until the #735
+  forensics reconstructed it from finished_at arithmetic. `sync` now
+  also reports `completion_markers_reaped_by_reason` in its JSON -
+  every reaped marker under `done-landed` (its done record landed),
+  `aged-out` (valid, older than 168 hours, no local done record -
+  the delivery never carried the closing) or `invalid` (unparseable,
+  or naming another unit, or carrying no closing status) - and the
+  ticker's sync section quotes the aged-out subset from
+  `completion_markers_lost` as lost, with the reason split as the
+  audit trail. The `completion_markers_reaped` and
+  `completion_markers_lost` fields are unchanged, so existing
+  quoting keeps working. The aged-out warning itself moves to
+  stderr, like every other sync warning: it used to print to
+  stdout ahead of the JSON, so stdout stopped being one parseable
+  object exactly when markers were lost - the case the warning
+  exists for.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -1136,6 +1162,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.37.0, 2026-11-22 - section 11 gains rule R26 (reaped-marker reasons, issue #826): `sync` reports `completion_markers_reaped_by_reason` in its JSON, splitting every reaped completion marker into done-landed, aged-out and invalid, and the ticker's sync section quotes the aged-out subset as lost, so a lost closing is named as lost in the run record that reaped it instead of folding into the bare reaped count; the aged-out warning moves to stderr, so stdout stays one parseable JSON object even when markers are lost.
 - 0.36.0, 2026-11-22 - section 11 gains rule R25 (claim-before-read gate, issue #737): `queue.py read` records that a pass read the newest queue-ticker record into a shared live-pool receipt, and `claim` refuses until the receipt names the newest record, carries its sha256, names the claiming executor and is at most 120 minutes old, so the standing route change (re-read the newest queue-ticker record before any claim) is enforced by the tool instead of the pass's pre-step prose; with no queue-ticker record in the tree the claim proceeds.
 
 - 0.35.0, 2026-11-22 - section 11 gains rule R24 (stale scout chains, issue #818): `enqueue` refuses a scout chain successor after the chain's reset day ended and `next` skips units whose scout chain day is past, so a Nov-20 chain stops minting on Nov-22 instead of seeding units that write observations to the wrong day's file; the day end comes from the chain id's trailing date against the roster's 02:00 UTC reset (post-reset chains end at the following local date's reset, midday chains at their own date's reset), and zombie, sweep and discovery chains are untouched.
