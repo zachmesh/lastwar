@@ -8,8 +8,6 @@ status: complete
 grounded_in:
   - source: unit results in _queue_ done
   - source: daily retro 2026-10-31 in this folder
-  - source: daily retro 2026-11-01 in this folder
-  - source: daily retro 2026-11-02 in this folder
 ---
 
 # Rolling 7 day metrics
@@ -808,6 +806,65 @@ remain the immutable source.
   0 today.
 - Detail - daily retro 2026-11-13 in this folder.
 
+## Entry 2026-11-14
+
+- Derived from - 1743 done units scanned, finished local
+  2026-11-08 to 2026-11-14, read 2026-11-15T05:00Z
+  from the records/2026-11-14 branch tip
+  367158de20; the live pool holds done 2026 (gap 283
+  - the comparison is now fork divergence, not
+  delivery lag: this branch forked from main and
+  dropped 5 Nov 13 units that live only on the
+  unmerged records/2026-11-13 branch, plus the 19
+  Nov 12 units still missing, so the window is 613
+  not 642). Nov 14 is 12 failed units and 32 expired
+  units and nothing else (third dead day of this
+  window, but the first with live game access since
+  Nov 12). Nov 8 to Nov 11 alone runs 524 executions
+  with 148 done (28.2 percent).
+- Totals - done 148, partial 214, skipped-needs-owner 6,
+  failed 23, expired 222. Executor time 148,881 seconds
+  (41.4 hours), median unit 329 seconds, p90 739 seconds.
+- Best types by done percent - help 13 of 23, secrets 14
+  of 26, gifts 12 of 24, passes 12 of 27, treasures 12
+  of 26, scout 21 of 55, mail 10 of 24.
+- Worst types by done percent - training 0 of 26,
+  zero-sweep 0 of 11, trucks 0 of 28, zombie-invasion 0
+  of 32, donations 1 of 59, harvest 1 of 26, survivors 2
+  of 27, train 2 of 23.
+- Measurement state - numeric target over achieved
+  pairs 216, summed attainment 0.307
+  (achieved_sum 9,047,615, target_sum 29,468,493); the summed figure is NOT comparable: it is
+  still dominated by the duel-score running totals
+  (about 8,785,000 of the achieved sum). Points
+  3,608, unchanged from yesterday - nothing scored
+  Nov 14. Unverified closings 311 (50.7 percent),
+  down 2.5 points on yesterday's 53.2 percent -
+  partly the fork loss (3 Nov 13 units, all
+  unverified, left the window), not a verified
+  improvement. Blocker_category: h 128, e 44, none 73,
+  c 34, f 30, g 6, d 3, a 2, b 1, plus non-enum values
+  session-drop 1, time 1, unverified-close 1.
+- Threshold breaches - unexplained red dots 11
+  (Nov 11 observation final state; no Nov 12, Nov 13
+  or Nov 14 observation exists); no NEW recurrence
+  of a closed improvement's root cause (the Nov 13
+  #631 recurrence stands unrepaired, reopen still
+  blocked); expired/unexecuted (branch inbox 77,
+  70 older than 24 hours, oldest 86.3 hours old);
+  quota attainment under 0.8 (donations 0.3007;
+  trucks no pair, eighth day unknown); unverified
+  rate over 20 percent (50.7 percent, down 2.5 points
+  week over week); oldest open improvement over 7
+  days (#118, 12 days old, sixth day); daily standing
+  job artifact missing (0 merges, PR #708 at its
+  14th missed batch point, no remote records/2026-11-13
+  or records/2026-11-14 branch, no ticker record
+  after 18:35 PT); ledger coverage 0 of 23
+  (fourteenth consecutive day without a completed
+  sweep); unit cap (14 units over 900 seconds in the
+  window, 0 today).
+- Detail - daily retro 2026-11-14 in this folder.
 ## Entry 2026-11-15
 
 Note - entries for 2026-11-01 to 2026-11-11 live on main;
