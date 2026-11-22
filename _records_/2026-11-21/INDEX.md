@@ -9,6 +9,10 @@ status: unverified
 
 # 2026-11-21
 
+## 17:32 to about 17:58 - Tool development pass (DONE)
+
+- 17:32 PT, tool-development-1732 - done (issue #744 implemented, PR #789 open: plan/sweep report refused windows under their own skip lists instead of counting them as already_present; R19, changelog 0.27.0; 28/28 fixture assertions on isolated /tmp scratch pools, bug reproduced on main's copy; issue #744 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/1732-run.md.
+
 ## 17:45 to about 17:54 - PR integration pass (DONE, non-batch)
 
 - 17:45 PT, pr-integration-1745 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). No merges, no comments, no escalations: all 15 open PRs unchanged since the 1730 pass and already decided there, except #762 whose head moved only by delivery commits (1730 action-log line plus pr-catchall 1739 record, the latter landing mid-pass). Records PR #762 MERGEABLE/CLEAN at new head de1b5519 (merge-tree exit 0, merged tree 29d3285c), awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (#717 re-verified first-hand this pass; 1500 comments stand). #754/#755/#713 still CONFLICTING, awaiting branch-side rebase after #774 (#755 re-verified first-hand this pass; 1600 comments stand). #753 superseded by #774, #711 by #719, #751 duplicates #715. #425 still owner-gated (OD-20261108-01 open, zero decision lines), head unchanged, no new comment. Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. No Slack DM sync, no chat report (quiet run). Main 44ea602d unchanged. Sweep clean, 15 open PRs all decided. Record: pr-integration/1745-run.md.
