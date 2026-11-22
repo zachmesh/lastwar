@@ -981,6 +981,12 @@ def _sweep_task_text(regular, fields):
     if seq not in (1, 2):
         return ""
     slot = parse_iso(fields.get("planned_for", ""))
+    if slot is None:
+        # The enqueue path leaves planned_for empty and carries the
+        # slot start in not_before instead; the production path
+        # always sets planned_for, so this only fires for a
+        # hand-enqueued pass.
+        slot = parse_iso(fields.get("not_before", ""))
     reset = parse_iso(fields.get("expires_at", ""))
     slot_local = slot.astimezone(LOCAL_TZ) if slot else None
     reset_local = reset.astimezone(LOCAL_TZ) if reset else None
