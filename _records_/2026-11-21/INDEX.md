@@ -9,6 +9,11 @@ status: unverified
 
 # 2026-11-21
 
+## 22:45 to about 22:55 - PR integration pass (DONE, non-batch)
+
+- 22:45 PT, pr-integration-2300 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 1 merge: #803 docs renumber queue-design geometry 0.23.0 to 0.31.0 (Refs #739), squash 5045dc6f0; 0 comments. Records PR #793 MERGEABLE at new head 2d68d61d3 (pr-catchall 2239 record landed on the branch), awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #425 still owner-gated OD-20261108-01 (age 13 days), no new comment - head unchanged since the 2215-slot re-verification. Sync-back of the #803 merge DEFERRED per the standing deferral (owner go-ahead on bundle processing still unanswered; fresh bundle flagged and deleted unprocessed). Delivery via GitHub API (2045/2115/2130/2145/2200/2215/2230/2245 precedent). Sweep clean, 15 open PRs all decided. Record: pr-integration/2300-run.md.
+
+
 ## 22:39 to about 22:44 - PR catch-all pass (no-op)
 
 - 22:39 PT, pr-catchall-2239 - no-op (hourly adoption pass; VPS route live, all gh ran on the VPS as zachmesh). 16 open PRs, all named-owner and class-matched, none owned by this job; 0 adoptions, 0 fixes, 0 hand-offs. New PR #803 (queue-design renumber, Owner tool-developer, Refs #739 tooling; matches #794 precedent, not this job). #802 merged, main 410149dec. 177 open issues, 0 unclassified; owner-decision issues 132, 154, 335, 514, 517 all over 24 hours, statements current. Record: pr-catchall/2239-run.md.
