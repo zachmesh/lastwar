@@ -1,13 +1,21 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T07:57:10Z
+modified: 2026-11-22T08:33:03Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
 ---
 
 # 2026-11-21
+
+## 00:16 to about 00:27 - Ticker pass ticker-0004, scout unit (PARTIAL)
+
+- 00:16 PT, ticker-0004 - partial (scout unit scout-scout-2026-11-20-011, chain scout-2026-11-20 seq 11, about 11 minutes, computer session cc-69, window 105986). Passes entry still not found after checking MY PROFILE (Lv.30 [AP3x]Bears Lair, VIP13, #2110, no passes entry) and the VIP screen (VIP13, 1,662,720/2,000,000, 4-day login streak; Daily Freebie Claim button NOT tapped, VIP Exclusive $99.99 NOT tapped; no passes entry). Gold cup is a base decoration, not a button: two taps at its grounded point (about 806,676) selected the nearby Jack-o'-Carriage building instead (decoration controls appeared, camera panned; deselected by tapping empty ground, nothing moved or bought; seq 6 already tapped it and it opened nothing). Green 19h timer RESOLVED: it is the rocket/missile countdown at the right edge - seq 6 read it as "green 19h mid-right edge" at 22:13 when it read about 19:46, re-read live here 17:41:53 to 17:36:24 (real-time countdown, zero near the 18:00 reset). The 00:00:40 countdown near the Alliance button re-read live (fourth sighting, about 40 seconds, resets, identity open); blue-building timer 06:23 counts UP about 1 per minute (identity open). Red target countdown NOT re-read (red icon at the right edge mid-screen, about 989,419, partly off-screen, no number readable; seq 6 tracked it live 00:09:18 to 00:06:20, about a 10 minute cycle). Base re-reads: power 149,417,850 unchanged; lightning 119 to 120; WORLD badge 63 to 89 (still rising with chat); Events badge 1, VS red dot; Build: Oil Well (0/1). 28 items observed (day total 390); red dots 16 seen, 16 explained, 0 unexplained (third zero-unexplained close). Successor seq 12 enqueued. No diamonds or money spent. Record: perception-scout/0027-queue-run.md. Observation file v1.8.0.
+
+## 23:54 to about 00:02 - Ticker pass ticker-2334, scout unit (PARTIAL)
+
+- 23:54 PT, ticker-2334 - partial (scout unit scout-scout-2026-11-20-010, chain scout-2026-11-20 seq 10, about 8 minutes, computer session cc-68). Events hub tab list MAPPED (7 tabs, no passes tab): The Age of Oil, Arms Race, Bingo Task, Black Market, Winter Battlefield, The Doomsday, Community. March Queues gift badge 2 RESOLVED: two unclaimed Doomsday Alliance Gifts in the LOOT panel - Lv.150 Doom Walker (First Blood; gold chest x2, gold bars x1, iron 2.9M, food 2.9M, coins 1.8M, hero EXP 2.8M) and Lv.1 Doom Elite (Leader; gold chest x4, iron 7.0K, food 7.0K, coins 3.0K, hero EXP 3.0K, blue item x96); Claim All NOT tapped. 3v3 Brawl explored read-only (ARENA, warzones #2112/#2091/#2110/#2093, 7d 18:03:46 left; 1st [TF93] D1 O N E 2279, 2nd [AAVG] あおたろう Ao 2244, 3rd [AP3x] Abyss Apex 2124; entry needs top 200 in Total Hero Power). Champion Duel explored read-only: registration Day 1/1 (11.22-11.23), 0d 18:02:45 left, account NOT registered - owner decision flagged, no registration started. Event Reminder clears a card once its event is viewed (3v3 card vanished after viewing). Base close: power 149,417,850 unchanged; lightning 115; VS countdown 18:02:30; WORLD badge 11 (still rising with chat). Passes entry, red target countdown and green 19h timer still open. No diamonds or money spent. Record: perception-scout/0002-queue-run.md. Observation file v1.7.0.
 
 ## 23:45 to about 23:59 - PR integration pass (DONE, BATCH VIOLATION)
 
