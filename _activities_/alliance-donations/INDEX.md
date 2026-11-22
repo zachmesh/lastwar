@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-12T05:32:17Z
+modified: 2026-11-21T21:32:17Z
 level: L1
-version: 1.102.0
+version: 1.103.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -126,6 +126,7 @@ grounded_in:
   - source: ticker-0637 shop-claims execution record 2026-11-11 0656 queue run (partial, Free Supply ruby x10 iron x4, Tech Donation Today footer 3750 passing read on the Alliance Techs list; record commit f8ee03b36 on records/2026-11-11)
   - source: ticker-0707 alliance-donations execution record 2026-11-11 0733 queue run (partial, re-read unit 1430, live 3/30, 2 coin donations verified 3/30 to 1/30 on Rallied Attack, changed route held, 0635 tap-2 landing still unverified, footer 3750 at entry; record commit 86814bdac on records/2026-11-11)
   - source: ticker-0936 alliance-donations execution record 2026-11-11 1004 queue run (partial, 2 coin donations verified live 8/30 to 6/30 on Unit Load Capacity, recommended marker moved from Rallied Attack, coin cost 300 on this node, fifty-sixth replenishment data point, stopped on pass budget with the button green; record commit 5c18f9174 on records/2026-11-11)
+  - source: ticker-1318 alliance-donations execution record 2026-11-21 1340 queue run (partial, Alliance menu would not open, fresh measured centre (940, 720) fails, Accessibility click fails, no camera pan, 2026-11-02 hypothesis disproven; record commit 9418b215a4 on records/2026-11-21)
 ---
 
 
@@ -207,6 +208,8 @@ activity. Not a separate type.
 - Entry, 2026-11-11 0733: the game was on the base screen in full framing. Alliance shield grounded fresh from the current screenshot via visual grounding (bbox 895-968 x 698-748, centre 931,723) - opened the Alliance menu first try. Alliance Techs tile at (678,689) opened ALLIANCE TECHS first try. Ground the shield fresh every unit; the stored (903,787) centre stays stale.
 
 - Entry, 2026-11-11 1004: the game was on the base screen in full framing. Alliance shield grounded fresh from the current screenshot via visual grounding at norm (930,721) - opened the Alliance menu on the first try. Alliance Techs tile tapped at (686,665) opened ALLIANCE TECHS on the first try. Ground the shield fresh every unit; the stored (903,787) centre stays stale.
+
+- Entry, 2026-11-21 1340: the Alliance button does NOT open its menu in the windowed 788x1083 state, through any input route tried. Fresh measured centre by visual grounding: bbox (888, 689)-(992, 751) in image coordinates, centre window (940, 720); label centre (940, 735). Coordinate tap at (940, 720) - no change, menu did not open, camera did not pan. Coordinate tap at (940, 735) - only the announcement banner/chat advanced; menu still closed. Accessibility click_element on the 'Alliance' OCR text (element 13, fresh observation) - 1 percent visual change, menu still closed. This is NOT the 2026-11-02 failure signature: those taps panned the camera to the Drill Ground cluster. Here the taps neither open the menu nor move the camera - the button itself does not respond. The "wrong tap point" hypothesis from 2026-11-02 is therefore DISPROVEN for this window state: the fresh measured centre fails exactly like the grounding point did. The 2026-11-02 metadata centre (903, 787) is stale for this window geometry and stays withdrawn. The entry route MUST change before the next donations unit runs - candidates: tap the Alliance HQ building on the map itself, or re-enter the base view first. This is the fourth consecutive donations partial on the Alliance-entry blocker (0621, 1020, 1427 on 2026-11-02, now this unit) - a process failure under queue rule R2, not a result. No donation made, no Donation Count read (live read required by the hard closing rule; no arithmetic close attempted). HUD at entry: food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236, total power 149,653,371. Canvas taps elsewhere this pass DID land (hero select, empty-ground tap), so this is a button-specific failure, not a dead canvas. The #648 fullscreen precondition is clear this pass (windowed 788x1083, input works); the Alliance-button failure is NOT that issue.
 
 ## How it is done
 
@@ -4184,3 +4187,15 @@ enqueued for after the cooldown (not before about
 - Issue #631 CLOSED by the 2026-11-11 retro with evidence: PR #634 merged (tool-developer 1932 run); the post-merge donations units 1249 (06:25 PT) and 1430 (07:31 PT) followed the changed route - 2 donations verified live 3/30 to 1/30 on Rallied Attack, stopped at 1/30, no tap from 1/30. The stale-profile cause is fixed and the behaviour after the fix is the verification. A later breach reopens it.
 - No new donations unit ran between the 1004 unit and this run, so the route-compliance tally is unchanged (held in 0415, 0603, 1003, 1616, 1719, 2249, 2354, 0024, 0316, 0321, 0353, 0541, 0733, 1004; deviated in 2015, 2133, 2319, 0757, 0148, 0434, 0635). The verification above is still owed: no verified 0/30 close on the Nov 11 cycle has landed, and no named re-read unit's live count has been read since the 1004 close at 6/30.
 - No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
+
+## What the 2026-11-21 1340 unit added - Alliance menu would not open, fresh centre and Accessibility click both fail, no camera pan, 2026-11-02 hypothesis disproven, partial
+
+- Unit donations-2026-11-21-1003 by ticker-1318, 13:27 to 13:36 local, status partial. Evidence in `_records_/2026-11-21/alliance-donations/1340-queue-run.md` (commit 9418b215a4 on records/2026-11-21). Tracker untouched for partial, per the queue rules.
+- Game windowed 788x1083 on the base screen, input routes working for canvas taps (hero select, empty-ground tap both took effect this pass). HUD: food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236, total power 149,653,371. The #648 fullscreen precondition is clear this pass - the window is windowed again, input works - so the failure below is a button-specific entry failure, not the fullscreen precondition.
+- Alliance button freshly measured this unit by visual grounding: bbox (888, 689)-(992, 751) in image coordinates, centre window (940, 720); the label centre is (940, 735). The 2026-11-02 metadata centre (903, 787) is stale for this window geometry - fresh measurement wins per queue rule R2.
+- What was tried, all no-effect on the menu: (1) coordinate tap at the fresh measured icon centre (940, 720) - no change, menu did not open, camera did not pan; (2) coordinate tap at the label centre (940, 735) - only the announcement banner/chat advanced; menu still closed; (3) Accessibility click_element on the 'Alliance' OCR text (element 13, fresh observation) - 1 percent visual change, menu still closed.
+- This is NOT the 2026-11-02 failure signature: those taps panned the camera to the Drill Ground cluster. Here the taps neither open the menu nor move the camera - the button itself does not respond through any input route tried. The "wrong tap point" hypothesis from 2026-11-02 is therefore DISPROVEN for this window state: the fresh measured centre fails exactly like the grounding point did.
+- Outcome: 0 donations made, no Donation Count read (live read required by the hard closing rule; no arithmetic close attempted). Status partial, verified no, blocker_category c (entry-route tap method). Re-read owed at the next donations slot with a different entry route - candidates: tap the Alliance HQ building on the map itself, or re-enter the base view first.
+- Process-failure flag per queue rule R2: this is the fourth consecutive donations partial on the Alliance-entry blocker (0621, 1020, 1427 on 2026-11-02, now this unit). It is a process failure, not a result, and is reported to the owner as one.
+- Result stats: target burn the Donation Count down from the live entry read, verified per tap; achieved 0 donations, Donation Count unread; resources_gained none; points 0; costs about 9 minutes, no coins spent; verified no; blocker_category c; donations_made 0, donation_count_before unread, donation_count_after unread; device_takeovers 0.
+- No diamonds or money spent. No priced button, Renew, paid unlock or Legendary Claim All tapped. No login or verification demanded. No "active on a different device" dialog appeared. The game was left on the base screen. No game was operated by this run and no queue code or cron definition was edited.

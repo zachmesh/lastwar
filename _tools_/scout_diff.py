@@ -41,7 +41,15 @@ outputs in an output directory:
      also carries the distinct named dots parsed from the
      counted unexplained lines, with sections stating no
      countable names counted separately, so the distinct
-     figure is a floor); a structured
+     figure is a floor). A section may state its counts as
+     one prose bullet under a Coverage heading ("Red dots
+     seen this unit: 7, explained 6, unexplained 1 (the 99+
+     chest badge).", attested 2026-11-21, issue #800): the
+     bullet is parsed when its wrapped lines have all been
+     read, its numbers must add up (seen = explained +
+     unexplained) or the section reads as unstated, and the
+     parenthetical after the unexplained count names the
+     dots; a structured
      observation is never overridden, and the narrative seen
      total is never used as items observed, because seen
      counts red-dot signals, not observed items;
@@ -422,6 +430,118 @@ _HEADING_COUNTS = re.compile(
     r"\s*(?P<unexplained>\d+)\s+unexplained\b",
     re.IGNORECASE)
 
+# A Coverage heading may carry a pass's accounting as one
+# prose statement ("Red dots seen this unit: 7, explained 6,
+# unexplained 1 (the 99+ chest badge).", attested
+# 2026-11-21, issue #800): the counts live in the prose,
+# not in Seen/Explained/Unexplained lines, so the heading
+# starts a prose section and each bullet in it is parsed
+# when its wrapped lines have all been read. The seen count
+# accepts the "reads" tail ("seen: 23 reads (7 + 13 + 3)");
+# explained is "all explained" (the seen count) or a
+# number; unexplained is a number, optionally followed by a
+# parenthetical naming the dots. A statement whose numbers
+# do not add up (seen != explained + unexplained) reads as
+# unstated, never as a guess - a mis-parse must not invent a
+# count. The heading is "Coverage" or "Coverage update (...)";
+# a level-3 heading inside it (a sub-read such as "### Arms
+# Race tab") does not end the section, because the coverage
+# statement precedes it in the attested shape and the sub-read
+# bullets never match the prose form.
+_COVERAGE_HEADING = re.compile(
+    r"^#{1,6}\s*coverage(?:\s+update)?\b", re.IGNORECASE)
+_PROSE_COVERAGE_LINE = re.compile(
+    r"red\s+dots?\s+seen(?:\s+this\s+unit)?\s*:\s*"
+    r"(?P<seen>\d+)\b", re.IGNORECASE)
+_PROSE_EXPLAINED_ALL = re.compile(r"\ball\s+explained\b",
+                                  re.IGNORECASE)
+_PROSE_EXPLAINED_NUM = re.compile(r"\bexplained\s+(\d+)\b",
+                                  re.IGNORECASE)
+_PROSE_UNEXPLAINED = re.compile(
+    r"\bunexplained(?:\s+red\s+dots?)?\s*:?\s*(\d+)\b",
+    re.IGNORECASE)
+
+
+def _parse_prose_coverage(bullet_text):
+    """Counts from one prose coverage bullet, or None.
+
+    Returns seen/explained/unexplained (explained None when
+    the bullet states neither "all explained" nor a number),
+    or None when the bullet states no seen count, no
+    unexplained count, or numbers that do not add up. The
+    seen statement is searched anywhere in the bullet: a
+    Coverage update bullet carries its accounting mid-bullet
+    ("Surfaces walked this unit: ... Items observed ... Red
+    dots seen this unit: 8, ..."), so the counts are read
+    from the seen statement onward, never from the bullet's
+    head. The unexplained count is searched from the first
+    occurrence that carries a number, so a "left unexplained
+    are explained" clause never donates its words as a
+    count, and "all explained" is checked before a numbered
+    explained, so an explained list inside a parenthesis
+    ("all explained (Bingo 1 carried, ...)") never donates
+    its items as the explained count.
+    """
+    seen = _PROSE_COVERAGE_LINE.search(bullet_text)
+    if not seen:
+        return None
+    tail = bullet_text[seen.start():]
+    unexplained = _PROSE_UNEXPLAINED.search(tail)
+    if not unexplained:
+        return None
+    counts = {"seen": int(seen.group("seen")),
+              "unexplained": int(unexplained.group(1)),
+              "explained": None}
+    if _PROSE_EXPLAINED_ALL.search(tail):
+        counts["explained"] = counts["seen"]
+    else:
+        numbered = _PROSE_EXPLAINED_NUM.search(tail)
+        if numbered:
+            counts["explained"] = int(numbered.group(1))
+    if counts["explained"] is not None and \
+            counts["seen"] != counts["explained"] + \
+            counts["unexplained"]:
+        return None
+    return counts
+
+
+def _prose_unexplained_names(bullet_text, count):
+    """Names from a prose coverage bullet, or [].
+
+    The name sits in the parenthetical right after the
+    unexplained count ("unexplained 1 (the 99+ chest
+    badge)"), one item per dot; the items are normalised
+    with the usual exclusions and the six-word cap, and a
+    list whose kept items do not equal the count names
+    nothing, exactly like the counted-line rule. A zero
+    count or a bullet with no parenthetical names nothing -
+    the section still counts as unnamed, never as absent.
+    The search starts at the seen statement, so a
+    parenthetical before it (an items-observed tally) is
+    never read as a dot name.
+    """
+    if not bullet_text or not count:
+        return []
+    seen = _PROSE_COVERAGE_LINE.search(bullet_text)
+    if not seen:
+        return []
+    tail = bullet_text[seen.start():]
+    m = _PROSE_UNEXPLAINED.search(tail)
+    if not m:
+        return []
+    paren = re.search(r"\(([^)]*)\)", tail[m.end():])
+    if not paren:
+        return []
+    kept = []
+    for raw_item in re.split(r"[,;]", paren.group(1)):
+        name = _normalize_dot_name(raw_item)
+        if not name or _DOT_NAME_EXCLUDE.search(name):
+            continue
+        if len(name.split()) > 6:
+            continue
+        kept.append(name)
+    return kept if len(kept) == count else []
+
 
 def parse_narrative_accounting(text):
     """Per-pass red-dot accounting sections of a narrative
@@ -456,6 +576,26 @@ def parse_narrative_accounting(text):
     before splitting, so a comma inside a parenthesis
     ("(carried from 2026-11-09, badge moved 13 to 1)")
     never splits an item in two.
+    A Coverage heading ("Coverage", "Coverage update
+    (ticker-1904, ...)", attested 2026-11-21, issue #800)
+    instead starts a prose section: its "Red dots seen ..."
+    statement carries the pass's counts in prose, as its
+    own bullet ("seen: 23 reads (7 + 13 + 3); all explained
+    - ...; unexplained red dots: 0.") or embedded mid-bullet
+    in the Surfaces-walked bullet ("... Items observed this
+    reset day: 130 (94 + 36). Red dots seen this unit: 7,
+    explained 6, unexplained 1 (the 99+ chest badge)."),
+    and each bullet is parsed when its wrapped lines have
+    all been read, so a count split across lines still
+    reads. The numbers must add up (seen = explained +
+    unexplained) or the section reads as unstated, and the
+    parenthetical after the unexplained count names the
+    dots. Bullet accounting lines are never read inside a
+    prose section - the prose statement is the section's
+    format, and a "- Explained: hammer 1/4 ..." bullet
+    would otherwise donate its queue indicator as a count.
+    A level-3 heading inside a Coverage section (a sub-read
+    such as "### Arms Race tab") does not end it.
     A count a section does not state reads as None, never
     as zero - a line naming a dot without a number (for
     example "Unexplained: the Alliance Wars dot") states
@@ -471,6 +611,22 @@ def parse_narrative_accounting(text):
     sections = []
     current = None
     unexplained_text = None
+    prose_text = None
+
+    def _flush_prose():
+        nonlocal prose_text, unexplained_text
+        if prose_text is None or current is None:
+            prose_text = None
+            return
+        counts = _parse_prose_coverage(prose_text)
+        if counts is not None:
+            for key in ACCOUNTING_KEYS:
+                if current[key] is None and \
+                        counts[key] is not None:
+                    current[key] = counts[key]
+            if unexplained_text is None:
+                unexplained_text = prose_text
+        prose_text = None
 
     def _finalize(section, bullet_text):
         if section is None or "unexplained_names" in section:
@@ -482,6 +638,11 @@ def parse_narrative_accounting(text):
                 _heading_counted_unexplained_names(
                     bullet_text, section.get("unexplained"))
                 if bullet_text else [])
+        elif section.get("prose_counted"):
+            section["unexplained_names"] = (
+                _prose_unexplained_names(
+                    bullet_text, section.get("unexplained"))
+                if bullet_text else [])
         else:
             section["unexplained_names"] = (
                 _counted_unexplained_names(bullet_text)
@@ -490,10 +651,24 @@ def parse_narrative_accounting(text):
     for raw in text.splitlines():
         stripped = raw.strip()
         if stripped.startswith("#"):
+            if current is not None and \
+                    current.get("prose_counted") and \
+                    re.match(r"^#{3,}\s", stripped):
+                # A sub-read heading inside a Coverage
+                # section does not end it; a pending prose
+                # bullet still ends here, its wrapped lines
+                # are over.
+                _flush_prose()
+                continue
+            _flush_prose()
             _finalize(current, unexplained_text)
             unexplained_text = None
             if "red dot accounting" in stripped.lower():
                 current = {key: None for key in ACCOUNTING_KEYS}
+                sections.append(current)
+            elif _COVERAGE_HEADING.match(stripped):
+                current = {key: None for key in ACCOUNTING_KEYS}
+                current["prose_counted"] = True
                 sections.append(current)
             else:
                 heading = _HEADING_COUNTS.match(stripped)
@@ -508,6 +683,12 @@ def parse_narrative_accounting(text):
             continue
         if current is None:
             continue
+        if prose_text is not None:
+            if raw[:1].isspace() and stripped and \
+                    not stripped.startswith("-"):
+                prose_text += " " + stripped
+                continue
+            _flush_prose()
         if unexplained_text is not None:
             if raw[:1].isspace() and stripped and \
                     not stripped.startswith("-"):
@@ -515,12 +696,25 @@ def parse_narrative_accounting(text):
                 continue
             _finalize(current, unexplained_text)
             unexplained_text = None
+        if current.get("prose_counted") and \
+                stripped.startswith("-"):
+            # Every bullet in a Coverage section is held
+            # until its wrapped lines have all been read:
+            # the accounting statement may be its own bullet
+            # or embedded mid-bullet in the Surfaces-walked
+            # bullet, so the parse searches the whole bullet.
+            prose_text = stripped
+            continue
         m = None
-        if not current.get("heading_counted"):
+        if not current.get("heading_counted") and \
+                not current.get("prose_counted"):
             # Heading-counted sections already carry their
             # counts: a bullet must never overwrite them -
             # "- Explained: hammer 1/4 ..." would otherwise
-            # read its queue indicator as explained 1.
+            # read its queue indicator as explained 1. The
+            # same holds for prose sections: the prose bullet
+            # is the section's accounting, and a bullet
+            # accounting line inside one is unattested.
             m = _ACCOUNTING_LINE.match(stripped)
             if m:
                 qualifier = (m.group("qualifier") or "").strip()
@@ -543,6 +737,7 @@ def parse_narrative_accounting(text):
             # names nothing, but it is still a signal: the
             # section counts as unnamed, never as absent.
             unexplained_text = stripped
+    _flush_prose()
     _finalize(current, unexplained_text)
     return sections
 

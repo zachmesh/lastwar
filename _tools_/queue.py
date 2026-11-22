@@ -10,6 +10,33 @@ reliably without scraping prose. Units move inbox -> claimed -> done
 by atomic rename, claims carry a lease, an executor batch is bounded
 to 15 minutes, and exactly one executor holds the device token.
 
+The decision commands (enqueue, sync, plan, sweep, next) run only
+from a copy identical to main's _tools_/queue.py (issue #694): a
+stale copy refuses, exit 1, so a pass that runs the tool from the
+main working tree fails loudly instead of deciding on old
+behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for isolated
+/tmp fixture validation of a new tool version.
+
+They also refuse when this copy - or the pool it would decide on -
+sits under the system temp directory (issue #429): a pass worktree
+under /tmp can vanish mid-pass to the runtime's /tmp sweep, so a
+decision from there fails loudly at the first command instead of
+losing the work at delivery. Set LASTWAR_QUEUE_ALLOW_TMP_ROOT=1
+only for isolated /tmp fixture validation of a new tool version.
+
+`next` decides on the live pool (issue #694): it resolves the
+given root through live_pool_root first, so a worktree-root
+`next` lists the live inbox, not the worktree snapshot - a unit
+minted live after the snapshot, and an overlay-clearing unit
+staged live, are both visible to the pick, and a unit already
+closed live is never handed out again from a stale snapshot
+copy. `claim` claims the live-pool copy into the pass root when
+the unit sits in the live inbox, so a unit `next` hands out
+from the live pool is claimable even when the snapshot never
+held it; a unit the live pool holds claimed or done is refused,
+and a unit the live pool does not hold at all falls back to
+the snapshot copy.
+
 This tool manages files only. It never touches the game or the device;
 executors do the playing and call this tool around their work.
 
@@ -34,6 +61,16 @@ Usage:
              # head executes, and the (regular, planned_for)
              # invariant cannot catch the second head because it
              # carries an empty planned_for.
+             # enqueue reconciles the next chain seq across the
+             # live pool, its completion markers and the given
+             # root's snapshot (issue #750): a finished seq the
+             # live pool forgot - its inbox copy dropped after
+             # the closing landed on the delivery branch - is
+             # still named by a marker, and a completion the
+             # snapshot holds that live has not seen yet is
+             # still named by the snapshot, so the mint takes
+             # the highest seq any source names and never
+             # re-mints a finished seq.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
@@ -115,6 +152,11 @@ Usage:
              # pass in a fresh worktree still sees a token held by a
              # pass still running; a non-repo root keeps its own token.
   queue.py [--root DIR] reap                      # expired leases to inbox
+             # reap, sync and plan resolve the reap/expire root
+             # through live_pool_root (issue #705): a worktree-root
+             # run reaps and expires the live pool, not the
+             # worktree snapshot, so expired units leave the live
+             # inbox instead of accumulating there.
              # reap, sync and plan warn on stdout (exit still 0)
              # when the root holds no pool state directory at
              # all, so a wrong root never reports a silent zero
@@ -138,11 +180,17 @@ Usage:
              # one without hand-reading records; the 3-hour
              # active-window alert and its once-per-stall dedup
              # stay the summary job clause (issue #129).
+  queue.py version [--format text|json]
+             # print this copy's identity - resolved path, sha256,
+             # git HEAD and currency against main's copy - for a
+             # pass record to cite, so a stale-tool handout is
+             # diagnosable from the record alone (issue #694).
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: refuse (exit 1) on a
-             # corrupt pool before reaping or staging anything
+             # corrupt live pool before reaping or staging anything
              # (issue #441), then reap, expire stale units, drop
              # inbox copies already closed in done (issue #213),
+             # all on the live pool (issue #705),
              # then drop inbox copies already done on today's
              # delivered records branch (issue #446) - a unit
              # completed in a detached worktree lands its done
@@ -244,11 +292,13 @@ scalars, [a, b] flow lists, and mappings nested by 2 space indents
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -891,11 +941,142 @@ def typical_minutes(root, regular):
     return max(1, min(UNIT_CAP_MINUTES, minutes)), len(samples)
 
 
+def _ledger_line_count():
+    """Numbered lines in the daily collection ledger, or None.
+
+    The sweep task text names the count so the executor knows when
+    the walk is complete (issue #748). The ledger lives beside this
+    tool, so the count is read live instead of hard-coded; an
+    unreadable ledger degrades to a count-less walk rather than
+    failing the production.
+    """
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "..", "_conventions_", "local-conventions",
+                        "daily-collection-ledger.md")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+    except OSError:
+        return None
+    count = len(re.findall(r"(?m)^[0-9]+\. ", text))
+    return count if count else None
+
+
+def _sweep_task_text(regular, fields):
+    """Ledger-walk task section for a pre-reset sweep unit (issue #748).
+
+    Returns the section for a first (chain_seq 1) or final (chain_seq
+    2) pass, or "" for any other unit - only the sweep pair carries
+    it. The wording is the standing text the planner used to append
+    by hand (the 2026-11-07 pair), re-anchored to the current
+    geometry: slot and reset clock times come from the unit's own
+    planned_for and expires_at, the trade day from its chain_id, and
+    the ledger line count is read live. A missing timestamp or an
+    unreadable ledger degrades to the timeless / count-less form
+    instead of failing the production.
+    """
+    if regular != "zero-sweep":
+        return ""
+    seq = fields.get("chain_seq")
+    if seq not in (1, 2):
+        return ""
+    slot = parse_iso(fields.get("planned_for", ""))
+    if slot is None:
+        # The enqueue path leaves planned_for empty and carries the
+        # slot start in not_before instead; the production path
+        # always sets planned_for, so this only fires for a
+        # hand-enqueued pass.
+        slot = parse_iso(fields.get("not_before", ""))
+    reset = parse_iso(fields.get("expires_at", ""))
+    slot_local = slot.astimezone(LOCAL_TZ) if slot else None
+    reset_local = reset.astimezone(LOCAL_TZ) if reset else None
+    day = ""
+    chain_id = fields.get("chain_id", "")
+    if isinstance(chain_id, str) and chain_id.startswith(
+            "pre-reset-sweep-"):
+        day = chain_id[len("pre-reset-sweep-"):]
+    elif slot_local is not None:
+        day = slot_local.strftime("%Y-%m-%d")
+    slot_time = slot_local.strftime("%H:%M") if slot_local else ""
+    reset_time = reset_local.strftime("%H:%M") if reset_local else ""
+    count = _ledger_line_count()
+    count_clause = (f" - all {count} lines" if count else "")
+    reset_frag = f"{reset_time} local " if reset_time else ""
+    day_frag = f"{day} " if day else "this "
+    heading_time = f" ({slot_time} local)" if slot_time else ""
+    if seq == 1:
+        heading = "first pass"
+        intro = (f"first. This is the first of the two zero sweeps "
+                 f"before the {reset_frag}reset\n"
+                 f"that ends the {day_frag}trade and reset day "
+                 f"(queue design section 12).")
+        middle = ("- A line not at zero - enqueue a priority 1 unit "
+                  "of that line own\n"
+                  "  type before this sweep closes, and name it in "
+                  "the record. Do\n"
+                  "  not do another type work inside this unit - one "
+                  "unit, one task\n"
+                  "  type. The fix-up units run between this sweep "
+                  "and the final\n"
+                  "  sweep.\n"
+                  "- A line unreadable - close it as unverified "
+                  "under rule R1 and\n"
+                  "  name it in the record; the final sweep reads it "
+                  "again.")
+        record = ("Record the execution under `_records_` for the "
+                  "daily-activities\n"
+                  "activity as the sweep record of this pass, "
+                  "listing every line\n"
+                  "outcome and every fix-up unit enqueued.")
+    else:
+        heading = "final pass"
+        intro = (f"first. This is the final zero sweep before the "
+                 f"{reset_frag}reset\n"
+                 f"that ends the {day_frag}trade and reset day "
+                 f"(queue design section 12).\n"
+                 f"The first pass ran earlier today; read its sweep "
+                 f"record before starting.")
+        middle = ("- A line still not at zero - do the line own work "
+                  "now if it fits\n"
+                  "  this unit one task type limit by enqueuing a "
+                  "priority 1 fix-up\n"
+                  "  unit that expires at the reset, and name it in "
+                  "the record; if\n"
+                  "  it cannot complete before the reset, record it "
+                  "as a miss with\n"
+                  "  its reason (rule R6) - it does not roll "
+                  "silently into the next\n"
+                  "  day.\n"
+                  "- A line unreadable in both passes - close it as "
+                  "unverified\n"
+                  "  under rule R1 and name it in the record for the "
+                  "round summary.")
+        record = ("Record the execution under `_records_` for the "
+                  "daily-activities\n"
+                  "activity as the final sweep record of the day, "
+                  "listing every line\n"
+                  "outcome, every fix-up unit enqueued, and every "
+                  "miss with reason.")
+    return (
+        f"\n## Task - pre-reset zero sweep, {heading}{heading_time}\n"
+        f"\nRead `_conventions_/local-conventions/daily-collection-ledger.md`\n"
+        f"{intro}\n"
+        f"\nWalk the ledger item by item{count_clause}. For each line, read\n"
+        f"its state live and record one of three outcomes in the sweep\n"
+        f"record - at zero, not at zero, or unreadable.\n"
+        f"\n{middle}\n"
+        f"- Lines with no producing unit and the owner-named open items\n"
+        f"  (crystal, Glittering Market) are reported by name and age, not\n"
+        f"  skipped - rule R5.\n"
+        f"\n{record}\n")
+
+
 def write_new_unit(root, fields, regular):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     body = (f"# {regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    body += _sweep_task_text(regular, fields)
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
 
@@ -994,12 +1175,25 @@ def cmd_sync(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
+    # Live-pool reap/expire (issue #705): the step-1 reap, expiry
+    # and stale-copy drops below act on the live pool, not the
+    # worktree snapshot - a worktree-root sync used to expire the
+    # snapshot only, so expired units accumulated in the live
+    # inbox (ticker-1023: the 0603 set expired in the snapshot
+    # while the live inbox still held it). Resolve once here, so
+    # the pool-integrity guard below also covers the pool being
+    # mutated, and the JSON counts below describe live moves.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"sync reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
     # Pool integrity (issue #441): a bad merge resolution that leaves
     # conflict markers or a duplicate unit id in a committed unit
     # file used to stay silent until next handed out a phantom unit
     # claim could never find. Refuse to reap or stage anything on a
     # corrupt pool - repair the unit files and re-run.
-    problems = validate_pool(args.root)
+    problems = validate_pool(live)
     if problems:
         for problem in problems:
             print(problem, file=sys.stderr)
@@ -1024,11 +1218,11 @@ def cmd_sync(args):
     # record on the branch, never in this pool, so the local drop
     # below cannot see it - without the branch drop the next tick
     # hands the same unit out again.
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root, branch_done, branch)
-    stale_done_dropped = _drop_done_duplicates(args.root)
+    reaped = _reap_claimed(live)
+    expired = _expire_stale(live, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(live)
     branch_done_dropped = drop_branch_done_duplicates(
-        args.root, branch_done, branch)
+        live, branch_done, branch)
     # Screen-blocking overlay (issue #436): drop blockers whose
     # clearing unit is gone, so a vanished clearing unit cannot
     # leave a stale blocker file in the live pool directory.
@@ -1119,6 +1313,8 @@ def cmd_sync(args):
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
+                      "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+                      "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
@@ -1135,6 +1331,39 @@ def chain_seq_next(root, chain_id):
                 except (TypeError, ValueError):
                     pass
     return seq + 1
+
+
+def chain_seq_max_markers(root, regular, chain_id):
+    """Highest chain_seq a valid completion marker names, or 0.
+
+    Issue #750: a chain unit closed in a detached worktree
+    leaves its done record on the delivery branch, never in
+    this pool, and sync drops the stale inbox copy once the
+    branch or a marker says it closed - so the live pool's
+    inbox, claimed and done can hold no trace of the highest
+    finished seq, and chain_seq_next would mint it again. A
+    completion marker is the live pool's own memory of that
+    closing (issue #438), so the mint counts it. Markers carry
+    no chain_id - the unit id itself is the record, minted as
+    <regular>-<chain_id>-<seq>, so only markers whose id starts
+    with that prefix and ends in exactly three digits count,
+    and only valid markers (the file parses, names its own unit
+    and carries a closing status, the completion_marker_units
+    rule). A marker for another regular, another chain, or a
+    window id never matches the prefix.
+    """
+    if not regular or not chain_id:
+        return 0
+    prefix = "%s-%s-" % (regular, chain_id)
+    seq = 0
+    for unit in completion_marker_units(root):
+        if not unit.startswith(prefix):
+            continue
+        tail = unit[len(prefix):]
+        if len(tail) != 3 or not tail.isdigit():
+            continue
+        seq = max(seq, int(tail))
+    return seq
 
 
 SEGMENT_ANCHORS_PLAN = {1: 6 * 60 + 3, 2: 6 * 60 + 30, 3: 6 * 60 + 57}
@@ -1447,7 +1676,17 @@ def _produce_for_window(root, item, planned_local, window="",
     SYNC_PRIORITY default - both are used by the pre-reset
     sweep fix-ups (issue #147), which expire at the reset they
     serve and run at priority 1 regardless of their regular's
-    usual cadence and priority."""
+    usual cadence and priority. A window whose computed expiry is
+    already past is never staged (issue #712): plan_windows
+    yields the cycle's current window, and for a reset-anchored
+    regular in the morning that is yesterday's last slot, whose
+    reset already passed - the refusal is recorded in
+    _EXPIRED_WINDOW_REFUSALS. A reset-anchored slot is likewise
+    never staged when the pool already holds the same chain step
+    (same chain_id and chain_seq) at another slot (issue #712):
+    the (regular, planned_for) dedupe above cannot see a pair
+    staged at the old geometry, so the refusal is recorded in
+    _CHAIN_SEQ_REFUSALS."""
     # Live-pool production (issue #598): sync / plan / sweep mint
     # through here, and a pass running this copy from a delivery
     # worktree would otherwise stage the unit into the worktree's
@@ -1468,6 +1707,13 @@ def _produce_for_window(root, item, planned_local, window="",
         # so the command exits 1 on it.
         refusal = _roster_geometry_refusal(root, item)
         if refusal is not None:
+            # Issue #744: the refusal names the regular, not the
+            # window - stamp this window's unit id on the copy so
+            # a caller counting unproduced windows can tell a
+            # refused slot (no unit in the pool under this id)
+            # from a present one.
+            refusal = dict(refusal)
+            refusal["unit"] = _unit_id_for_window(item, planned_local)
             _ROSTER_FRESH_REFUSALS.append(refusal)
             return None
     for state in STATES:
@@ -1510,6 +1756,40 @@ def _produce_for_window(root, item, planned_local, window="",
                               f"stale pair and re-run plan or sweep "
                               f"(issue #410)")
                 return None
+            if expected is not None and f.get("regular") == regular \
+                    and f.get("planned_for") != planned_iso \
+                    and expected["chain_id"] and \
+                    f.get("chain_id") == expected["chain_id"]:
+                # Issue #712: the same chain step staged at another
+                # slot - the (regular, planned_for) dedupe above
+                # cannot see it, so without this check plan stages
+                # a second seq-1 at 16:00 beside the 16:30 one the
+                # old [90, 30] geometry left in the inbox, and a
+                # second seq-2 for a reset day whose seq-2 already
+                # closed in done. Refuse instead of minting a
+                # duplicate step; the refusal is recorded so the
+                # command reports it.
+                try:
+                    fseq = int(f.get("chain_seq", 0))
+                except (TypeError, ValueError):
+                    fseq = None
+                if fseq == expected["seq"]:
+                    _CHAIN_SEQ_REFUSALS.append({
+                        "unit": _unit_id_for_window(item, planned_local),
+                        "regular": regular,
+                        "chain_id": expected["chain_id"],
+                        "chain_seq": expected["seq"],
+                        "existing_unit": f.get("unit"),
+                        "planned_for": planned_iso})
+                    print(f"warning: pool already holds chain_seq "
+                          f"{expected['seq']} of chain "
+                          f"{expected['chain_id']} as "
+                          f"{f.get('unit')} (planned "
+                          f"{f.get('planned_for')}) - not staging a "
+                          f"second seq-{expected['seq']} unit for the "
+                          f"{planned_iso} slot (issue #712)",
+                          file=sys.stderr)
+                    return None
     # Closed-slot guard (issue #466): the live-pool scan above
     # cannot see a closing that lives only on the delivered
     # records branch or in another worktree's marker, so a
@@ -1541,6 +1821,23 @@ def _produce_for_window(root, item, planned_local, window="",
             expires_dt = planned_utc + timedelta(days=1)
         else:
             expires_dt = planned_utc + timedelta(hours=4)
+    if expires_dt <= now_utc():
+        # Issue #712: a window whose expiry is already past is
+        # never staged - plan_windows yields the cycle's current
+        # window, and for a reset-anchored regular in the morning
+        # that is yesterday's last slot, whose reset already
+        # passed; minting it would stage a stillborn unit the
+        # next sync expires. The refusal is the filter working,
+        # not an error, so it is recorded for the command to
+        # report and the exit stays 0.
+        _EXPIRED_WINDOW_REFUSALS.append({
+            "unit": unit_id, "regular": regular,
+            "planned_for": planned_iso,
+            "expires_at": iso(expires_dt)})
+        print(f"refused: {unit_id} expires_at {iso(expires_dt)} is "
+              f"already past - not staging a unit that is expired "
+              f"at creation (issue #712)", file=sys.stderr)
+        return None
     chain_id, chain_seq = "", ""
     prefix = item.get("chain_id_prefix", "")
     if prefix:
@@ -1615,7 +1912,10 @@ def _expire_stale(root, branch_done=None, branch=None):
     records branch, so expiry must not overwrite that result with
     a bogus miss either - the stale inbox copy is dropped
     instead. Callers that pass no branch set keep the old
-    behaviour; sync and plan fetch the branch first and pass it."""
+    behaviour; sync and plan fetch the branch first and pass it.
+    Callers pass the live pool root (issue #705): sync, plan and
+    reap resolve the given root through live_pool_root first, so
+    the expiry lands in the live inbox, not a worktree snapshot."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
@@ -1748,6 +2048,14 @@ ROSTER_FRESH_REF = "refs/queue-fresh/main"
 _MAIN_ROSTER_OFFSETS_CACHE = {"attempted": False, "offsets": None,
                               "warning": None, "warned": False}
 _ROSTER_FRESH_REFUSALS = []
+# Issue #712: _EXPIRED_WINDOW_REFUSALS collects the windows the
+# production path refused because their expiry is already past,
+# and _CHAIN_SEQ_REFUSALS the reset-anchored slots refused because
+# the pool already holds the same chain step at another slot.
+# Both are filters working, not errors, so the commands report
+# them and keep exit 0.
+_EXPIRED_WINDOW_REFUSALS = []
+_CHAIN_SEQ_REFUSALS = []
 
 
 def _git_remote(root):
@@ -1846,6 +2154,52 @@ def records_branch_done_units(root, branch):
     return done, None
 
 
+# Main fetch, shared (issues #606, #694): both the roster-freshness
+# check and the tool-currency guard read main without touching a
+# checked-out branch or the working tree. _fetch_main caches one
+# fetch per process per git directory, however many checks the run
+# performs.
+_MAIN_FETCH_CACHE = {"attempted": False, "ok": False, "warning": None,
+                     "dir": None}
+
+
+def _fetch_main(git_dir):
+    """Fetch main into the private ref, or (False, reason).
+
+    Returns (True, None) on success, (False, "no-remote") when
+    the repo has no usable remote, (False, "fetch-failed")
+    otherwise. The ref is ROSTER_FRESH_REF, the same private ref
+    the roster check already used, so a second fetch in one
+    process is a no-op fast-forward.
+    """
+    if (_MAIN_FETCH_CACHE["attempted"]
+            and _MAIN_FETCH_CACHE["dir"] == git_dir):
+        return _MAIN_FETCH_CACHE["ok"], _MAIN_FETCH_CACHE["warning"]
+    _MAIN_FETCH_CACHE["attempted"] = True
+    _MAIN_FETCH_CACHE["dir"] = git_dir
+    remote = _git_remote(git_dir)
+    if remote is None:
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "no-remote"
+        return False, "no-remote"
+    try:
+        fetch = subprocess.run(
+            ["git", "-C", git_dir, "fetch", "--depth", "1", remote,
+             "+main:%s" % ROSTER_FRESH_REF],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "fetch-failed"
+        return False, "fetch-failed"
+    if fetch.returncode != 0:
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "fetch-failed"
+        return False, "fetch-failed"
+    _MAIN_FETCH_CACHE["ok"] = True
+    _MAIN_FETCH_CACHE["warning"] = None
+    return True, None
+
+
 def _main_roster_offsets(root):
     """slots_before_reset_minutes per regular on the main tip.
 
@@ -1867,23 +2221,14 @@ def _main_roster_offsets(root):
         return (_MAIN_ROSTER_OFFSETS_CACHE["offsets"],
                 _MAIN_ROSTER_OFFSETS_CACHE["warning"])
     _MAIN_ROSTER_OFFSETS_CACHE["attempted"] = True
-    remote = _git_remote(root)
-    if remote is None:
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "no git remote, roster-freshness check skipped")
-        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
-    try:
-        fetch = subprocess.run(
-            ["git", "-C", root, "fetch", "--depth", "1", remote,
-             "+main:%s" % ROSTER_FRESH_REF],
-            capture_output=True, text=True, timeout=60)
-    except (OSError, subprocess.SubprocessError):
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "fetch of main failed, roster-freshness check skipped")
-        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
-    if fetch.returncode != 0:
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "fetch of main failed, roster-freshness check skipped")
+    fetched, fetch_reason = _fetch_main(root)
+    if not fetched:
+        if fetch_reason == "no-remote":
+            _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+                "no git remote, roster-freshness check skipped")
+        else:
+            _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+                "fetch of main failed, roster-freshness check skipped")
         return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
     try:
         show = subprocess.run(
@@ -1966,6 +2311,262 @@ def _roster_geometry_refusal(root, item):
             "main_offsets": main}
 
 
+# ---------------------------------------------------------------------
+# Tool-currency guard (issue #694)
+# ---------------------------------------------------------------------
+
+TOOL_ALLOW_STALE_ENV = "LASTWAR_QUEUE_ALLOW_STALE_TOOL"
+TOOL_GUARDED_COMMANDS = ("enqueue", "sync", "plan", "sweep", "next")
+
+
+def _tool_dir():
+    """Directory holding this copy of queue.py, symlinks resolved."""
+    return os.path.dirname(os.path.realpath(__file__))
+
+
+def main_tool_source():
+    """This tool as main carries it, or (None, warning).
+
+    Fetches main into the private ref (shared with the roster
+    check) and reads _tools_/queue.py at that ref. Returns
+    (bytes, None) on success, or (None, warning) when main
+    cannot be read: no git remote, fetch failed, or no tool at
+    the ref. A caller that cannot read main warns and continues,
+    exactly like the branch reconcile: an unreadable main never
+    blocks the tick, but a readable main whose tool differs from
+    this copy is positive proof the running copy is stale.
+    """
+    fetched, reason = _fetch_main(_tool_dir())
+    if not fetched:
+        if reason == "no-remote":
+            return None, "no git remote, tool-currency check skipped"
+        return None, "fetch of main failed, tool-currency check skipped"
+    try:
+        show = subprocess.run(
+            ["git", "-C", _tool_dir(), "show",
+             "%s:_tools_/queue.py" % ROSTER_FRESH_REF],
+            capture_output=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None, ("read of main tool failed, tool-currency check "
+                      "skipped")
+    if show.returncode != 0:
+        return None, ("read of main tool failed, tool-currency check "
+                      "skipped")
+    return show.stdout, None
+
+
+def tool_is_current():
+    """(True, None) when this copy matches main's queue.py.
+
+    Returns (True, None) when the running file is byte-identical
+    to main's copy, (False, None) when main's copy differs, and
+    (None, warning) when main cannot be read. The byte compare
+    cannot tell ahead from behind: any difference is stale for a
+    live pass, which must run main's tool - isolated fixture
+    validation of a new tool version sets
+    LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 instead.
+    """
+    try:
+        with open(os.path.realpath(__file__), "rb") as handle:
+            local = handle.read()
+    except OSError as exc:
+        return None, "cannot read this copy of queue.py (%s)" % exc
+    main_source, warning = main_tool_source()
+    if main_source is None:
+        return None, warning
+    return local == main_source, None
+
+
+def refuse_if_tool_stale(cmd):
+    """Refusal exit code when this copy is stale for a decision.
+
+    Issue #694: the ticker-0334 pass ran queue.py from the main
+    working tree - a checkout on another job's branch predating
+    PR #692 - and next handed out a unit during the R9
+    control-lock pause the stale copy could not see. The
+    decision commands (enqueue, sync, plan, sweep, next) refuse
+    - exit 1, nothing staged or handed out - when this copy
+    differs from main's _tools_/queue.py, so a stale pass fails
+    loudly instead of deciding on old behaviour. An unreadable
+    main warns and lets the command proceed, like the #606
+    roster check. Claim, complete and the token commands stay
+    unguarded: a pass that already decided must be able to
+    finish even if main advances mid-pass. Returns 1 on refusal,
+    else None.
+    """
+    if os.environ.get(TOOL_ALLOW_STALE_ENV) == "1":
+        print(f"warning: {TOOL_ALLOW_STALE_ENV}=1, tool-currency "
+              f"check bypassed for isolated validation (issue #694)",
+              file=sys.stderr)
+        return None
+    current, warning = tool_is_current()
+    if current is None:
+        print(f"warning: {warning} (issue #694)", file=sys.stderr)
+        return None
+    if current:
+        return None
+    print(f"{cmd} refused: this copy of queue.py differs from "
+          f"main's _tools_/queue.py - run the tool from a fresh "
+          f"main checkout (a pass worktree, never the main working "
+          f"tree) so the pass decides on current behaviour "
+          f"(issue #694)", file=sys.stderr)
+    return 1
+
+
+def _tool_identity():
+    """Identity of this copy of queue.py, for the version command.
+
+    Returns a dict: the resolved path of the invoked file, the
+    sha256 of this copy, the git HEAD of the checkout holding it
+    (or None outside a git checkout), and the currency of this
+    copy against main's _tools_/queue.py (issue #694) - current,
+    stale, or unknown when main cannot be read - plus main's
+    sha256 when readable. Pure reporting: it never refuses, so a
+    stale copy can still name itself stale and a copy under the
+    system temp directory still answers.
+    """
+    path = os.path.realpath(__file__)
+    try:
+        with open(path, "rb") as handle:
+            local = handle.read()
+    except OSError:
+        local = None
+    sha = hashlib.sha256(local).hexdigest() if local is not None else None
+    head = None
+    try:
+        rev = subprocess.run(
+            ["git", "-C", _tool_dir(), "rev-parse", "HEAD"],
+            capture_output=True, text=True, timeout=10)
+        if rev.returncode == 0:
+            head = rev.stdout.strip() or None
+    except (OSError, subprocess.SubprocessError):
+        head = None
+    main_source, warning = main_tool_source()
+    if main_source is None or local is None:
+        currency = "unknown"
+        main_sha = (hashlib.sha256(main_source).hexdigest()
+                    if main_source is not None else None)
+    else:
+        main_sha = hashlib.sha256(main_source).hexdigest()
+        currency = "current" if local == main_source else "stale"
+    return {"tool": "queue.py", "path": path, "sha256": sha,
+            "git_head": head, "currency": currency,
+            "main_sha256": main_sha, "currency_warning": warning}
+
+
+def cmd_version(args):
+    """Print this copy's identity (issue #694).
+
+    A pass record cites this output - resolved path, sha256, git
+    HEAD and currency against main - so a later stale-tool
+    handout is diagnosable from the record alone: the 0737
+    handover could not be attributed from its record because no
+    version, line count or worktree path was named. The command
+    is unguarded like claim and complete: it only reports, so a
+    stale copy still answers stale and a copy under the system
+    temp directory still answers. Exit 0 always.
+    """
+    identity = _tool_identity()
+    if args.format == "json":
+        print(json.dumps(identity, indent=2, sort_keys=True))
+        return 0
+    print("tool: %s" % identity["tool"])
+    print("path: %s" % identity["path"])
+    print("sha256: %s" % (identity["sha256"] or "unknown"))
+    print("git_head: %s" % (identity["git_head"] or "unknown"))
+    print("currency: %s" % identity["currency"])
+    print("main_sha256: %s" % (identity["main_sha256"] or "unknown"))
+    if identity["currency_warning"]:
+        print("currency_warning: %s" % identity["currency_warning"])
+    return 0
+
+
+# ---------------------------------------------------------------------
+# Worktree-location guard (issue #429)
+# ---------------------------------------------------------------------
+
+TOOL_ALLOW_TMP_ROOT_ENV = "LASTWAR_QUEUE_ALLOW_TMP_ROOT"
+
+
+def _temp_roots():
+    """System temp directories, symlinks resolved.
+
+    /tmp plus the platform temp dir (tempfile.gettempdir, which
+    honours TMPDIR): on this VM /tmp is a 512M tmpfs the runtime
+    wipes, and on the Mac TMPDIR is a per-user folder the OS
+    cleans. Both are the same hazard - a checkout under either
+    can vanish mid-pass.
+    """
+    roots = set()
+    for candidate in ("/tmp", tempfile.gettempdir()):
+        roots.add(os.path.realpath(candidate))
+    return roots
+
+
+def _is_under(path, root):
+    """True when realpath(path) is root or lives under it."""
+    path = os.path.realpath(path)
+    return path == root or path.startswith(root + os.sep)
+
+
+def _tmp_location(pool_root):
+    """(True, where) when a decision would run from a temp dir.
+
+    Checks the checkout holding this copy of queue.py (the parent
+    of _tools_/) and the pool --root resolves to: either one under
+    the system temp directory is a doomed checkout. Returns
+    (False, None) when neither is under a temp dir. Pure path
+    math, no fetch, so there is no unreadable-main case - the
+    bypass env is the only escape.
+    """
+    temps = _temp_roots()
+    for where, path in (("tool copy", os.path.dirname(_tool_dir())),
+                       ("pool", pool_root)):
+        for temp in temps:
+            if _is_under(path, temp):
+                return True, "%s %s sits under temp dir %s" % (
+                    where, path, temp)
+    return False, None
+
+
+def refuse_if_tmp_worktree(cmd, pool_root):
+    """Refusal exit code when a decision would run from /tmp.
+
+    Issue #429: on 2026-11-07 three ticker passes created their
+    worktrees under /tmp and all three vanished mid-pass to the
+    runtime's /tmp sweep, taking uncommitted records, INDEX
+    appends and unit completions with them; on 2026-11-08 the
+    retro run lost /tmp/retro-1108-branch the same way, after
+    PR #432 had already landed pass_worktree.py, which refuses
+    /tmp targets at creation - the tool is opt-in, and a pass
+    that creates its worktree with a bare `git worktree add`
+    under /tmp never touches it. So the decision commands
+    (enqueue, sync, plan, sweep, next) refuse - exit 1, nothing
+    staged or handed out - when this copy of queue.py, or the
+    pool it would decide on, sits under the system temp
+    directory, and the pass fails loudly at its first decision
+    instead of losing a finished unit's record at delivery.
+    LASTWAR_QUEUE_ALLOW_TMP_ROOT=1 bypasses only for isolated
+    /tmp fixture validation of a new tool version. Claim,
+    complete and the token commands stay unguarded, like the
+    #694 guard: a pass that already decided can finish even if
+    its worktree was created under /tmp. Returns 1 on refusal,
+    else None.
+    """
+    if os.environ.get(TOOL_ALLOW_TMP_ROOT_ENV) == "1":
+        print(f"warning: {TOOL_ALLOW_TMP_ROOT_ENV}=1, worktree-location "
+              f"check bypassed for isolated validation (issue #429)",
+              file=sys.stderr)
+        return None
+    is_tmp, where = _tmp_location(pool_root)
+    if not is_tmp:
+        return None
+    print(f"{cmd} refused: {where} - create the pass worktree under "
+          f"~/workspace/lastwar-worktrees/ (never /tmp) and run the "
+          f"tool from there (issue #429)", file=sys.stderr)
+    return 1
+
+
 def drop_branch_done_duplicates(root, done_ids, branch):
     """Drop inbox copies already closed on the records branch.
 
@@ -2011,11 +2612,19 @@ def cmd_plan(args):
     if branch_warning:
         print(f"warning: {branch_warning} (issue #446)",
               file=sys.stderr)
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root, branch_done, branch)
-    stale_done_dropped = _drop_done_duplicates(args.root)
+    # Live-pool reap/expire (issue #705): like sync, plan reaps,
+    # expires and drops stale inbox copies in the live pool, not
+    # the worktree snapshot.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"plan reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
+    reaped = _reap_claimed(live)
+    expired = _expire_stale(live, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(live)
     branch_done_dropped = drop_branch_done_duplicates(
-        args.root, branch_done, branch)
+        live, branch_done, branch)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -2064,6 +2673,15 @@ def cmd_plan(args):
         closed.setdefault(unit, "completion marker in another "
                                 "worktree")
     planned, present, skipped_done, skipped_closed = [], 0, 0, []
+    skipped_expired = []
+    # Issue #744: a refusal is not a present unit - a window the
+    # production path refused (expired, duplicate chain step,
+    # stale roster) holds no unit under its id in any pool state,
+    # so it is reported under its own skip list instead of
+    # inflating already_present. already_present counts only the
+    # genuine dedupe hits below.
+    skipped_chain_seq = []
+    skipped_roster_refusals = []
     fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
@@ -2106,6 +2724,9 @@ def cmd_plan(args):
                     fixups_planned.extend(fix["produced"])
                     fixups_present += fix["already_present"]
                     skipped_closed.extend(fix["skipped_closed"])
+                    skipped_chain_seq.extend(fix["skipped_chain_seq"])
+                    skipped_roster_refusals.extend(
+                        fix["skipped_roster_refusals"])
         for w in windows:
             # The tracker has no per-slot done state, so the
             # current-window skip must not drop a fixed-slot unit;
@@ -2115,13 +2736,23 @@ def cmd_plan(args):
                     and not due_now.get(item["id"], True):
                 skipped_done += 1
                 continue
+            uid = _unit_id_for_window(item, w)
             unit = _produce_for_window(
                 args.root, item, w, duel_window_text(item["id"], w),
                 closed_ids=closed)
             if unit:
                 planned.append(unit)
-            elif _unit_id_for_window(item, w) in closed:
-                skipped_closed.append(_unit_id_for_window(item, w))
+            elif uid in closed:
+                skipped_closed.append(uid)
+            elif uid in {r["unit"]
+                         for r in _EXPIRED_WINDOW_REFUSALS}:
+                skipped_expired.append(uid)
+            elif uid in {r["unit"]
+                         for r in _CHAIN_SEQ_REFUSALS}:
+                skipped_chain_seq.append(uid)
+            elif uid in {r.get("unit")
+                         for r in _ROSTER_FRESH_REFUSALS}:
+                skipped_roster_refusals.append(uid)
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -2142,6 +2773,11 @@ def cmd_plan(args):
                       "fixups_already_present": fixups_present,
                       "skipped_done_current": skipped_done,
                       "skipped_closed": skipped_closed,
+                      "skipped_expired": skipped_expired,
+                      "skipped_chain_seq": skipped_chain_seq,
+                      "skipped_roster_refusals": skipped_roster_refusals,
+                      "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+                      "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -2175,7 +2811,12 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     fix-up regular's name sorts before zero-sweep.
 
     Returns {"produced": [...], "already_present": n,
-    "skipped_closed": [...], "error": str-or-None}. error is set
+    "skipped_closed": [...], "skipped_expired": [...],
+    "skipped_chain_seq": [...], "skipped_roster_refusals": [...],
+    "error": str-or-None}. A refused fix-up (issue #744) is
+    reported under its own skip list, never counted as already
+    present - already_present counts only fix-ups the pool
+    actually holds. error is set
     (and nothing is staged) when the roster entry carries no
     fixup_regulars list, the list is empty, or it names a regular
     the roster does not hold. A reset day whose reset instant is
@@ -2187,12 +2828,16 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     if fixups is None:
         return {"produced": [], "already_present": 0,
                 "skipped_closed": [],
+                "skipped_chain_seq": [],
+                "skipped_roster_refusals": [],
                 "error": f"regular {item.get('id')!r} carries no "
                          f"fixup_regulars list - sync the tree to "
                          f"main before producing the sweep pair"}
     if not isinstance(fixups, list) or not fixups:
         return {"produced": [], "already_present": 0,
                 "skipped_closed": [],
+                "skipped_chain_seq": [],
+                "skipped_roster_refusals": [],
                 "error": f"regular {item.get('id')!r} carries an "
                          f"empty fixup_regulars list - a sweep pair "
                          f"with no fix-ups repeats the issue #147 "
@@ -2202,6 +2847,8 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
         if fid not in by_id:
             return {"produced": [], "already_present": 0,
                     "skipped_closed": [],
+                    "skipped_chain_seq": [],
+                    "skipped_roster_refusals": [],
                     "error": f"fixup regular {fid!r} is not in the "
                              f"roster - fix fixup_regulars on "
                              f"regular {item.get('id')!r} before "
@@ -2209,12 +2856,15 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     reset_local = _reset_instant_for_local_date(item, local_date)
     if reset_local <= datetime.now(LOCAL_TZ):
         return {"produced": [], "already_present": 0,
-                "skipped_closed": [], "error": None}
+                "skipped_closed": [], "skipped_chain_seq": [],
+                "skipped_roster_refusals": [], "error": None}
     offsets = _reset_anchored_offsets(item)
     midpoint = (offsets[0] + offsets[-1]) // 2
     slot = reset_local - timedelta(minutes=midpoint)
     reset_utc = reset_local.astimezone(timezone.utc)
     produced, already, skipped = [], 0, []
+    skipped_expired, skipped_chain_seq = [], []
+    skipped_roster_refusals = []
     for fid in fixups:
         unit_id = _unit_id_for_window(by_id[fid], slot)
         unit = _produce_for_window(
@@ -2225,10 +2875,23 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
             produced.append(unit)
         elif closed_ids and unit_id in closed_ids:
             skipped.append(unit_id)
+        elif unit_id in {r["unit"]
+                         for r in _EXPIRED_WINDOW_REFUSALS}:
+            skipped_expired.append(unit_id)
+        elif unit_id in {r["unit"]
+                         for r in _CHAIN_SEQ_REFUSALS}:
+            skipped_chain_seq.append(unit_id)
+        elif unit_id in {r.get("unit")
+                         for r in _ROSTER_FRESH_REFUSALS}:
+            skipped_roster_refusals.append(unit_id)
         else:
             already += 1
     return {"produced": produced, "already_present": already,
-            "skipped_closed": skipped, "error": None}
+            "skipped_closed": skipped,
+            "skipped_expired": skipped_expired,
+            "skipped_chain_seq": skipped_chain_seq,
+            "skipped_roster_refusals": skipped_roster_refusals,
+            "error": None}
 
 
 def cmd_sweep(args):
@@ -2397,25 +3060,46 @@ def cmd_sweep(args):
         print(f"refused: {fix['error']} (issue #147)")
         return 1
     produced, already = [], 0
+    skipped_expired, skipped_chain_seq = [], []
+    skipped_roster_refusals = []
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
             label = "first pass" if idx == 0 else "final pass"
         else:
             label = f"pass {idx + 1}"
+        uid = _unit_id_for_window(item, slot)
         unit = _produce_for_window(
             args.root, item, slot, f"pre-reset zero sweep, {label}")
         if unit:
             produced.append(unit)
+        elif uid in {r["unit"]
+                     for r in _EXPIRED_WINDOW_REFUSALS}:
+            skipped_expired.append(uid)
+        elif uid in {r["unit"]
+                     for r in _CHAIN_SEQ_REFUSALS}:
+            skipped_chain_seq.append(uid)
+        elif uid in {r.get("unit")
+                     for r in _ROSTER_FRESH_REFUSALS}:
+            skipped_roster_refusals.append(uid)
         else:
             already += 1
     print(json.dumps({
         "regular": args.regular, "date": local_date.isoformat(),
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
         "produced": produced, "already_present": already,
+        "skipped_expired": skipped_expired,
+        "skipped_chain_seq": skipped_chain_seq,
+        "skipped_roster_refusals": skipped_roster_refusals,
         "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
+        "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
+        "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
         "fixups_produced": fix["produced"],
         "fixups_already_present": fix["already_present"],
-        "fixups_skipped_closed": fix["skipped_closed"]},
+        "fixups_skipped_closed": fix["skipped_closed"],
+        "fixups_skipped_expired": fix["skipped_expired"],
+        "fixups_skipped_chain_seq": fix["skipped_chain_seq"],
+        "fixups_skipped_roster_refusals":
+            fix["skipped_roster_refusals"]},
         ensure_ascii=False))
     return 1 if _ROSTER_FRESH_REFUSALS else 0
 
@@ -2706,6 +3390,67 @@ def _sweep_enqueue_refusal(args):
     return None
 
 
+def _chain_event_end(root, snapshot_root, chain_id):
+    """Latest recorded event end for a chain, or (None, None).
+
+    Issue #745: the Glacieradon event expired about 2026-11-14T02:05Z
+    (timer cross-check from chain units 001 and 023), but the chain
+    kept minting successors - unit 037 was enqueued at
+    2026-11-15T00:07:55Z, about 22 hours after the end, because no
+    mint point knew the event had ended. A chain unit that reads
+    the event timer live records result.stats event_ends_at (ISO
+    UTC, the timer reading projected to an instant); a unit that
+    verifies the event has ended records it at or before now and
+    closes the chain. The latest reading is the event end the
+    mint must respect - latest by when the reading was taken
+    (result finished_at, tie-break chain_seq), not the largest
+    instant: a stale optimistic reading must not override a
+    fresh reading that says the event ended. The readings come
+    from the chain's done units in the live pool's done and the
+    given root's snapshot done (a closing this checkout has not
+    seen yet - the #750 reconciliation sources), since only done
+    units carry results. A malformed value is warned about and
+    skipped, never treated as an end. No reading at all means no
+    signal, and the mint proceeds as before.
+    """
+    latest = None
+    latest_unit = None
+    latest_key = None
+    roots = [root]
+    if snapshot_root and os.path.abspath(snapshot_root) != \
+            os.path.abspath(root):
+        roots.append(snapshot_root)
+    for pool in roots:
+        for f in list_units(pool, "done"):
+            if f.get("chain_id") != chain_id:
+                continue
+            result = f.get("result") or {}
+            stats = result.get("stats") or {}
+            if not isinstance(stats, dict):
+                continue
+            raw = stats.get("event_ends_at")
+            if raw is None or raw == "":
+                continue
+            ends = parse_iso(raw) if isinstance(raw, str) else None
+            if ends is None:
+                print(f"warning: {f.get('unit', '')} carries "
+                      f"unparsable event_ends_at {raw!r} - ignored "
+                      f"(issue #745)")
+                continue
+            finished = parse_iso(result.get("finished_at", "")) \
+                or datetime.min.replace(tzinfo=timezone.utc)
+            try:
+                seq = int(f.get("chain_seq", 0))
+            except (TypeError, ValueError):
+                seq = 0
+            key = (finished, seq)
+            if latest_key is None or key > latest_key:
+                latest_key = key
+                latest = ends
+                latest_unit = f.get("unit", "")
+    return latest, latest_unit
+
+
 def _chain_head_refusal(root, regular, chain_id, chain_seq):
     """Refusal message when a chain head would duplicate work, or None.
 
@@ -2817,7 +3562,57 @@ def cmd_enqueue(args):
                           f"regular {f.get('regular')}, not "
                           f"{args.regular}")
                     return 1
-        chain_seq = chain_seq_next(root, args.chain_id)
+        # Reconciled next sequence (issue #750): the live pool
+        # alone can forget the highest finished seq - a chain
+        # unit closed in a detached worktree lands its done
+        # record on the delivery branch, and sync drops the
+        # stale inbox copy, so neither the live inbox, claimed
+        # nor done names it; a completion marker is the live
+        # pool's own memory of that closing. And a worktree
+        # whose done pool disagrees with live - a completion
+        # this checkout has not seen yet, on another machine
+        # or an undelivered branch - holds a newer seq than
+        # live does. The mint takes the highest seq any of the
+        # three sources names, so it can never re-mint a seq
+        # already finished somewhere; the note names the source
+        # that raised it, so the run log shows the
+        # reconciliation instead of a silent jump. args.root
+        # is already the given root's pool (main() resolved
+        # it), so it is the worktree snapshot here; root is
+        # the live pool.
+        live_next = chain_seq_next(root, args.chain_id)
+        marker_seq = chain_seq_max_markers(
+            root, args.regular, args.chain_id)
+        snap_next = live_next
+        if os.path.abspath(args.root) != os.path.abspath(root):
+            snap_next = chain_seq_next(args.root, args.chain_id)
+        chain_seq = max(live_next, marker_seq + 1, snap_next)
+        higher = []
+        if marker_seq + 1 > live_next:
+            higher.append("completion markers hold seq %d"
+                          % marker_seq)
+        if snap_next > live_next:
+            higher.append("worktree snapshot holds seq %d"
+                          % (snap_next - 1))
+        if higher:
+            print(f"note: chain {args.chain_id} next seq "
+                  f"reconciled to {chain_seq} - "
+                  f"{'; '.join(higher)}, live pool holds seq "
+                  f"{live_next - 1} (issue #750)")
+        # Event-end guard (issue #745): a chain successor is never
+        # minted after the chain's recorded event end. The mint
+        # point is enqueue - the ticker's completion-time enqueue
+        # is what seeded zombie-037 about 22 hours after the
+        # Glacieradon event expired, because the mint knew no end.
+        # The refusal names the recording unit, so the run log
+        # shows which live reading closed the chain.
+        ends_at, ends_unit = _chain_event_end(
+            root, args.root, args.chain_id)
+        if ends_at is not None and ends_at <= now_utc():
+            print(f"refused: chain {args.chain_id} event ended "
+                  f"{iso(ends_at)} (recorded by {ends_unit}) - no "
+                  f"successor minted (issue #745)")
+            return 1
         refusal = _chain_head_refusal(
             root, args.regular, args.chain_id, chain_seq)
         if refusal is not None:
@@ -2846,6 +3641,7 @@ def cmd_enqueue(args):
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    body += _sweep_task_text(args.regular, fields)
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
@@ -2881,12 +3677,29 @@ def _est_minutes(fields):
 
 
 def cmd_next(args):
+    # Live-pool handout (issue #694): the candidates, the done
+    # suppression and the overlay-clearing search all read the
+    # live pool, not the given root's snapshot - production,
+    # token, blockers and markers already resolve there, and a
+    # worktree-root next that listed the snapshot handed out
+    # units already closed live while missing units minted live
+    # after the snapshot. The redirect note and the pool warning
+    # go to stderr, so stdout stays exactly one line: the unit
+    # id, or empty.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"next decides from the live pool {root} "
+              f"(issue #694)", file=sys.stderr)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning, file=sys.stderr)
     # Pool integrity (issue #441): refuse to hand out a unit from a
     # corrupt pool - a phantom id claim can never find - instead of
     # printing it and letting the pass stall at claim time. Sync
     # runs the same check first in the normal ticker flow; this
     # covers a direct next call on a pool sync never saw.
-    problems = validate_pool(args.root)
+    problems = validate_pool(root)
     if problems:
         for problem in problems:
             print(problem, file=sys.stderr)
@@ -2896,18 +3709,41 @@ def cmd_next(args):
         return 1
     stamp = now_utc()
     candidates = sorted(
-        (f for f in list_units(args.root, "inbox")
+        (f for f in list_units(root, "inbox")
          if _actionable(f, stamp)
-         and not _has_done_record(args.root, f.get("unit"))
-         and not has_completion_marker(args.root, f.get("unit"))),
+         and not _has_done_record(root, f.get("unit"))
+         and not has_completion_marker(root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
     # Control-channel lock (issue #689): no unit can clear it -
     # every unit needs input - so while one stands, hand out
     # nothing. The stale bound in sync re-opens the pool for one
     # probe after BLOCKER_STALE_HOURS.
-    for blocker in read_blockers(args.root):
+    for blocker in read_blockers(root):
         if blocker.get("kind") == "control-lock":
             print("")
+            return 0
+    # Doomed-probe preference (issue #746): a probe burns the
+    # unit it claims - the device is offline or the lock just
+    # aged out, so the attempt fails and the unit is gone. The
+    # ticker-2152 rule prefers the zombie chain unit for the
+    # probe and never burns a real perception unit: on Nov 14
+    # six of twelve probes claimed scout units 011-016 although
+    # a zombie chain unit sat queued in inbox, because the
+    # plain pick_key order returns scout and zombie alternately.
+    # A probe pass calls next --probe; when one is queued in
+    # inbox, actionable and inside this pass's budget, it is
+    # handed out ahead of the overlay steering and the normal
+    # pick. Otherwise the probe falls through to the normal
+    # pick, so a pass with no zombie unit queued still probes.
+    if args.probe:
+        zombie = [f for f in candidates
+                  if f.get("regular") == "zombie-invasion"
+                  and _est_minutes(f) <= args.budget_minutes]
+        if zombie:
+            print(f"probe: preferring queued zombie chain unit "
+                  f"{zombie[0].get('unit', '')} over the normal "
+                  f"pick (issue #746)", file=sys.stderr)
+            print(zombie[0].get("unit", ""))
             return 0
     # Screen-blocking overlay (issue #436): a recorded overlay
     # prefers the unit that clears it over every base-screen unit,
@@ -2915,14 +3751,14 @@ def cmd_next(args):
     # staged but not yet actionable - the next pass re-picks then.
     # Newest blocker first: the most recently recorded overlay is
     # the one on top of the screen.
-    for blocker in read_blockers(args.root):
-        clearing = [f for f in list_units(args.root, "inbox")
+    for blocker in read_blockers(root):
+        clearing = [f for f in list_units(root, "inbox")
                     if f.get("regular") ==
                     blocker["clearing_regular"]
-                    and not _has_done_record(args.root,
+                    and not _has_done_record(root,
                                              f.get("unit"))
                     and not has_completion_marker(
-                        args.root, f.get("unit"))]
+                        root, f.get("unit"))]
         if not clearing:
             # No unit can clear this overlay: nothing to wait for,
             # so this blocker does not steer the pick; a unit that
@@ -2950,11 +3786,41 @@ def cmd_next(args):
 
 
 def cmd_claim(args):
-    state, path = find_unit(args.root, args.unit)
-    if state != "inbox":
-        print(f"cannot claim {args.unit}: state is {state}")
+    # Live-pool claim (issue #694): next decides from the live
+    # pool, so the claim must find the unit there - a unit next
+    # hands out from the live inbox is claimed from the live
+    # inbox, moved into this root's claimed/ so complete and the
+    # delivery still see it in the pass tree. A unit the live
+    # pool holds claimed or done is refused: the snapshot copy
+    # is stale, and claiming it would re-execute a unit another
+    # pass already holds or closed. A unit the live pool does
+    # not hold at all falls back to this root's inbox, so a unit
+    # committed to the pass branch but not yet in the live
+    # working tree stays claimable. On a scratch root (no git)
+    # the live pool is this root, so the lookup collapses to
+    # today's behaviour. The move is one atomic rename; a
+    # cross-device failure refuses with nothing moved.
+    live = live_pool_root(args.root)
+    live_state, live_path = find_unit(live, args.unit)
+    if live_state == "inbox":
+        source = live_path
+        if live != os.path.abspath(args.root):
+            print(f"note: {args.root} is a linked-worktree pool; "
+                  f"claiming the live-pool unit into {args.root} "
+                  f"(issue #694)")
+    elif live_state in ("claimed", "done"):
+        print(f"cannot claim {args.unit}: state is {live_state} "
+              f"in the live pool - the inbox copy is stale, run "
+              f"sync to drop it instead of re-executing it")
         return 1
-    if _has_done_record(args.root, args.unit):
+    else:
+        state, path = find_unit(args.root, args.unit)
+        if state != "inbox":
+            print(f"cannot claim {args.unit}: state is {state}")
+            return 1
+        source = path
+    if _has_done_record(live, args.unit) or \
+            _has_done_record(args.root, args.unit):
         print(f"cannot claim {args.unit}: already has a done "
               f"record - the inbox copy is stale, run sync to "
               f"drop it instead of re-executing it")
@@ -2964,7 +3830,7 @@ def cmd_claim(args):
               f"another worktree - the inbox copy is stale, run "
               f"sync to drop it instead of re-executing it")
         return 1
-    fields, body = read_unit(path)
+    fields, body = read_unit(source)
     if not _actionable(fields, now_utc()):
         print(f"cannot claim {args.unit}: not before "
               f"{fields.get('not_before')}")
@@ -2980,7 +3846,27 @@ def cmd_claim(args):
         minutes=args.lease_minutes))
     os.makedirs(state_dir(args.root, "claimed"), exist_ok=True)
     target = unit_path(args.root, "claimed", args.unit)
-    os.rename(path, target)                      # atomic claim
+    try:
+        os.rename(source, target)                # atomic claim
+    except OSError as exc:
+        print(f"cannot claim {args.unit}: cannot move {source} "
+              f"to {target}: {exc}")
+        return 1
+    # A snapshot copy of a live-claimed unit is a stale
+    # duplicate: drop it so the delivery cannot re-add the unit
+    # to the committed inbox as pending. A failure here only
+    # warns - the claim already landed, and sync's branch
+    # reconciliation drops the stale copy once the done record
+    # lands (issue #446).
+    if live_state == "inbox" and \
+            live != os.path.abspath(args.root):
+        stale = unit_path(args.root, "inbox", args.unit)
+        if os.path.exists(stale):
+            try:
+                os.remove(stale)
+            except OSError as exc:
+                print(f"warning: cannot drop stale snapshot "
+                      f"copy {stale}: {exc}", file=sys.stderr)
     write_unit(target, fields, body)
     print(f"claimed {args.unit} by {args.executor} "
           f"until {fields['lease_until']}")
@@ -4109,8 +4995,15 @@ def cmd_reap(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
-    moved = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
+    # Live-pool reap/expire (issue #705): like sync and plan,
+    # reap expires the live pool, not the worktree snapshot.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"reap reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
+    moved = _reap_claimed(live)
+    expired = _expire_stale(live)
     print(f"reaped {moved} expired claim(s), "
           f"expired {expired} stale unit(s)")
     return 0
@@ -4486,6 +5379,7 @@ def main(argv=None):
 
     p = sub.add_parser("next")
     p.add_argument("--budget-minutes", type=int, default=UNIT_CAP_MINUTES)
+    p.add_argument("--probe", action="store_true")
     p.set_defaults(fn=cmd_next)
 
     p = sub.add_parser("claim")
@@ -4562,8 +5456,20 @@ def main(argv=None):
                    default="text")
     p.set_defaults(fn=cmd_stats)
 
+    p = sub.add_parser("version")
+    p.add_argument("--format", choices=["text", "json"],
+                   default="text")
+    p.set_defaults(fn=cmd_version)
+
     args = parser.parse_args(argv)
     args.root = resolve_pool_root(os.path.abspath(args.root))
+    if args.cmd in TOOL_GUARDED_COMMANDS:
+        refusal = refuse_if_tmp_worktree(args.cmd, args.root)
+        if refusal is not None:
+            return refusal
+        refusal = refuse_if_tool_stale(args.cmd)
+        if refusal is not None:
+            return refusal
     return args.fn(args)
 
 

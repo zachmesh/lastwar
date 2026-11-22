@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-12T10:40:00Z
-version: 0.17.0
+modified: 2026-11-22T06:37:56Z
+version: 0.31.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -10,6 +10,7 @@ grounded_in:
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
   - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
+  - source: PR #614 merged 2026-11-11 (Refs #606) - zero-sweep slots moved from [90, 30] to [120, 60]; section 12 synced to that roster by this change
   - source: organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)
   - source: Issue #689 (tooling) - outcome_unknown control lock after a session drop, implemented 2026-11-12 as the pool-level control-lock blocker and rule R9
 ---
@@ -142,7 +143,7 @@ colon-free except timestamps, as elsewhere in this repository.
 
 Priority classes from the current regulars.
 
-- **1 expiry-critical** - vip (expires at the trade-day reset, absolute 02:00 UTC), passes when
+- **1 expiry-critical** - vip (expires at the next reset after its slot, absolute 02:00 UTC - the slot opens its reset day, so expires_at is planned_for + 24h), passes when
   a free pack carries its own countdown, events on a check-in day
   boundary.
 - **2 windowed** - arms-race (points only count inside the live phase),
@@ -481,6 +482,199 @@ one to the audit cause it answers.
   to 2026-10-27 lock cleared only when the owner submitted
   locally - so the probe cadence is a bound on wasted attempts,
   not a prediction that the lock will clear.
+- **R10 - run the tool from a fresh main checkout (issue #694).**
+  A pass runs `queue.py` only from a fresh main checkout - a pass
+  worktree created through `_tools_/pass_worktree.py`, never the
+  main working tree, which sits on another job's branch and can
+  predate main by days. The tool enforces it: `next`, `sync`,
+  `plan`, `sweep` and `enqueue` refuse, exit 1, when this copy
+  of `queue.py` differs from main's `_tools_/queue.py`, so a
+  stale pass fails loudly instead of deciding on old behaviour -
+  the ticker-0334 pass ran the main-tree copy predating PR #692
+  and `next` handed out a unit during the R9 control-lock pause
+  the stale copy could not see. An unreadable main warns and
+  lets the command proceed, like the #606 roster check.
+  `LASTWAR_QUEUE_ALLOW_STALE_TOOL=1` is test-only, for isolated
+  /tmp fixture validation of a new tool version. `claim`,
+  `complete` and the token commands stay unguarded, so a pass
+  that already decided can finish even if main advances
+  mid-pass.
+- **R11 - never decide from a checkout under the system temp directory (issue #429).**
+  A pass worktree under /tmp can vanish mid-pass to the runtime's /tmp sweep - on 2026-11-07 three ticker passes lost their worktrees that way, and on 2026-11-08 the retro run lost /tmp/retro-1108-branch the same way, after the pass_worktree.py fix (PR #432) had already landed: the tool is opt-in, and a pass that creates its worktree with a bare `git worktree add` under /tmp never touches it. The tool enforces the location: `next`, `sync`, `plan`, `sweep` and `enqueue` refuse, exit 1, when this copy of `queue.py` - or the pool it would decide on - sits under the system temp directory (/tmp, or the platform temp dir from TMPDIR), so a pass in a doomed checkout fails loudly at its first decision instead of losing a finished unit's record at delivery. `LASTWAR_QUEUE_ALLOW_TMP_ROOT=1` is test-only, for isolated /tmp fixture validation of a new tool version. `claim`, `complete` and the token commands stay unguarded, so a pass that already decided can finish even if its worktree was created under /tmp.
+- **R12 - next and claim decide on the live pool (issue #694).**
+  `next` resolves the given root through the live pool before
+  it lists candidates, so a worktree-root `next` reads the
+  live inbox, not the worktree snapshot: a unit minted into
+  the live pool after the snapshot - a chain successor, a
+  planner-staged unit, an overlay-clearing unit - is visible
+  to the pick, and a unit already claimed or closed live is
+  never handed out again from a stale snapshot copy. `claim`
+  claims the live-pool copy into the pass root, so a unit
+  `next` hands out from the live pool is claimable even when
+  the snapshot never held it; the done record still lands in
+  the pass root, so the delivery is unchanged. A unit the
+  live pool holds claimed or done is refused instead of
+  claimed from the snapshot copy, and a unit the live pool
+  does not hold at all falls back to the snapshot copy, so a
+  unit committed to the pass branch but not yet in the live
+  working tree stays claimable.
+
+- **R13 - every pass record cites the tool identity (issue #694).**
+  A pass runs `queue.py version` first and records its output -
+  the resolved path of the invoked copy, its sha256, the git HEAD
+  of the checkout holding it, and its currency against main's
+  copy - in the pass record, so a later stale-tool handout is
+  diagnosable from the record alone. The ticker-0737 handover
+  could not be attributed from its record because no version,
+  line count or worktree path was named: with the current tool
+  the control-lock path is closed, but without the identity in
+  the record the next occurrence of the same shape is
+  unattributable again. The command only reports, so a stale
+  copy still answers stale and a copy under the system temp
+  directory still answers; it never refuses.
+
+- **R14 - sync, plan and reap reap and expire the live pool (issue #705).**
+  The step-1 reap, expiry and stale-copy drops resolve the given
+  root through live_pool_root before they touch anything, so a
+  worktree-root run expires the live pool instead of the snapshot:
+  an expired claim is released into the live inbox, a stale inbox
+  unit moves to live done with status expired, and a stale inbox
+  copy of a unit already closed in done - locally or on the
+  delivered records branch - is dropped from the live inbox.
+  Ticker-1023 expired the 0603 set in the snapshot while the live
+  inbox still held it, so the expired units stayed eligible to be
+  handed out late. The pool-integrity guard in sync now covers the
+  live pool too, since that is the pool being mutated; the aged
+  priority-1 windowing step still acts on the given root and is
+  not part of this rule.
+
+- **R15 - never stage an already-expired window or a duplicate chain step (issue #712).**
+  A window whose computed expiry is already past is never staged:
+  plan_windows yields the cycle's current window, and for a
+  reset-anchored regular in the morning that is yesterday's last
+  slot, whose reset already passed - the 1140 planner run staged
+  zero-sweep-2026-11-11-1700 with expires_at 2026-11-12T02:00Z,
+  17h44m past at creation, a stillborn unit the next sync
+  expires. The production path refuses it at the mint point, so
+  sync, plan and sweep are all covered, records the refusal for
+  the command to report, and keeps exit 0 - the refusal is the
+  filter working, not an error. A reset-anchored slot is likewise
+  never staged when the pool already holds the same chain step
+  (same chain_id and chain_seq) at another slot: the (regular,
+  planned_for) dedupe cannot see a pair staged at the old
+  geometry, so without this check plan stages a second seq-1 at
+  16:00 beside the 16:30 one the old [90, 30] geometry left in
+  the inbox, and a second seq-2 for a reset day whose seq-2
+  already closed in done. The duplicate is refused at the mint
+  point and recorded for the command to report.
+- **R16 - enqueue reconciles the next chain seq across live pool, markers and snapshot (issue #750).**
+  `enqueue` mints a chain successor at the highest seq named by
+  any of three sources - the live pool's inbox, claimed and
+  done; the live pool's completion markers; and the given
+  root's snapshot pool - instead of the live pool alone. A
+  chain unit closed in a detached worktree lands its done
+  record on the delivery branch, and sync drops the stale inbox
+  copy, so the live pool can forget the highest finished seq
+  and re-mint it: the zombie-036 case, where the finished unit
+  survived only as a completion marker after its inbox copy
+  was dropped. A worktree whose done pool disagrees with live -
+  a completion this checkout has not seen yet, on another
+  machine or an undelivered branch - holds a newer seq than
+  live does. The mint takes the highest seq any source names
+  and prints a note naming the source that raised it, so the
+  reconciliation shows in the run log instead of a silent
+  jump. Markers carry no chain_id, so only markers whose unit
+  id matches the minted `<regular>-<chain_id>-<seq>` shape
+  count.
+- **R17 - a doomed probe burns the zombie chain unit, never a perception unit (issue #746).**
+  A probe burns the unit it claims: the device is offline or
+  the control lock just aged out, so the attempt fails and the
+  unit is gone. The ticker-2152 rule prefers the zombie chain
+  unit for the probe - a chain successor is re-minted, so the
+  burn costs the chain nothing - and never burns a real
+  perception unit: on Nov 14 six of twelve probes claimed
+  scout units 011-016 although a zombie chain unit sat queued
+  in inbox, because the plain pick_key order returns scout and
+  zombie alternately. A probe pass calls `next --probe`;
+  when a zombie chain unit is queued in inbox, actionable and
+  inside the pass's budget, `next` hands it out ahead of the
+  overlay steering and the normal pick. Otherwise the probe
+  falls through to the normal pick, so a pass with no zombie
+  unit queued still probes. "Available" means queued in
+  inbox: a zombie unit already claimed or closed does not
+  count.
+
+- **R18 - enqueue refuses a chain successor after the chain's recorded event end (issue #745).**
+  A chain ends only when its activity ends, but the mint must know the
+  activity ended: the Glacieradon chain kept minting successors after
+  the event expired about 2026-11-14T02:05Z (timer cross-check from
+  chain units 001 and 023) - unit 037 was enqueued at
+  2026-11-15T00:07:55Z, about 22 hours after the end, and the next pass
+  spent its one live access closing a chain that should never have been
+  seeded. A chain unit that reads the event timer live records
+  `event_ends_at` in result.stats (ISO UTC, the timer reading projected
+  to an instant); a unit that verifies the event has ended records it at
+  or before now and closes the chain without a successor. `enqueue`
+  takes the latest `event_ends_at` reading across the chain's done
+  units in the live pool and the given root's snapshot pool (the #750
+  reconciliation sources - only done units carry results), latest by
+  when the reading was taken rather than the largest instant, and
+  refuses to mint when it is past, naming the recording unit; exit 1,
+  nothing minted. No reading
+  recorded means no signal and the mint proceeds as before - the guard
+  can only enforce an end the chain has recorded, so a unit that reads
+  the timer must record it. The mint point is `enqueue`: the ticker's
+  completion-time enqueue is what seeded 037 (its frontmatter carries
+  the enqueue shape - empty planned_for, est 12); sync stages no chain
+  successors itself, so no second guard point is needed.
+  `_produce_for_window` chain-window units are covered separately by the
+  R15 expiry refusal.
+
+- **R19 - already_present counts only units the pool actually holds (issue #744).**
+  The 1740 and 1840 planner runs on 2026-11-20 both reported already_present
+  one above the post-expiry pre-stage pool count (67 vs 66, 62 vs 61): the
+  counting rule, not a one-off miscount. A window the production path
+  refuses holds no unit under its id in any pool state - the expired-window
+  refusal (R15) was already classified into skipped_expired, but a
+  duplicate-chain-step refusal and a stale-roster refusal fell through to
+  the else branch and were counted as present. `plan` and `sweep` now
+  classify every unproduced window before counting it: expired into
+  skipped_expired, duplicate chain step into skipped_chain_seq, stale
+  roster into skipped_roster_refusals, and only a genuine (regular,
+  planned_for) dedupe hit increments already_present - the same rule in
+  the pre-reset fix-up staging, whose refused fix-ups are reported the
+  same way. The roster-freshness refusal now carries the refused window's
+  unit id so callers can classify it (the per-regular refusal in the
+  plan pre-check carries none, and needs none - the whole regular is
+  skipped before any window is staged).
+
+- **R20 - the sweep pair carries its ledger-walk task text (issue #748).**
+  The pre-reset sweep pair used to carry the ledger-walk task
+  section only when the planner appended it by hand (the 2026-11-07
+  pair has it; the 2026-11-12 pair staged by `plan` carries the
+  generic body instead), so a staged pair could reach the executor
+  with no walk instructions. The production path now appends the
+  standing section to each pair body - first pass or final pass by
+  chain_seq, slot and reset clock times from the unit's own
+  planned_for and expires_at, trade day from its chain_id, ledger
+  line count read live from the ledger - so a staged pair always
+  carries its walk instructions. A unit that is not a sweep pass,
+  or a sweep unit with no chain sequence, keeps the generic body.
+
+- **R21 - create refuses a stale existing branch when --base is given (issue #709).**
+  `pass_worktree.py create --branch B --base R` reuses an existing
+  branch B only when B's tip is R; a branch at any other tip is
+  refused, exit 2, naming both tips, so a pass never decides from
+  a stale main it did not ask for. Ticker-1047 asked for a fresh
+  main worktree and got the stale branch at cc58a605c4 (pre-#704
+  main) instead of current main 96520ae0d4, because create checked
+  out any existing branch and ignored --base; the pass caught it
+  only by verifying the base before deciding, and the defect
+  recurred at ticker-1334 on the same shape. Without --base the
+  checkout semantics stand - an existing branch is checked out
+  as-is, which is how a pass re-opens a records branch - and a
+  branch already at the base is reused and reported, so a
+  re-created worktree after a removal is not an error.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -491,7 +685,7 @@ design - a unit that works a ledger line closes it by the ledger
 standard, and the round summary reports ledger lines with no
 producing unit as unscheduled, never as absent.
 
-**The zero sweep.** Twice before each daily reset - the absolute instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer) - at 90 and 30 minutes before the reset instant (16:30 and 17:30 PST in winter, 17:30 and 18:30 PDT in summer), a sweep unit walks the ledger item
+**The zero sweep.** Twice before each daily reset - the absolute instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer) - at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), a sweep unit walks the ledger item
 by item. Each line is read live - at zero, not at zero, or
 unreadable. A line not at zero gets a priority 1 unit of its own
 type enqueued before the sweep closes, named in the sweep record;
@@ -508,7 +702,7 @@ stages one unit per slot through the same (regular,
 planned_for) invariant, with `not_before` at the slot start,
 `expires_at` at the next expiry clock time and the chain id
 `<prefix><local date>` with one sequence number per slot. The
-sweep pair is that regular (`zero-sweep`, reset-anchored: `reset_utc` 02:00 with `slots_before_reset_minutes` [90, 30], expiry at the reset instant, chain `pre-reset-sweep-<local date>`, priority 1,
+sweep pair is that regular (`zero-sweep`, reset-anchored: `reset_utc` 02:00 with `slots_before_reset_minutes` [120, 60], expiry at the reset instant, chain `pre-reset-sweep-<local date>`, priority 1,
 `est_minutes` 15, activity `daily-activities`); for the reset-anchored form `not_before` is the reset instant minus the slot offset and `expires_at` is the reset instant itself (wall-clock `fixed_slots` behaviour is unchanged for any other regular that uses it); `sync` never
 stages it, because the tracker carries no per-slot done state
 and plan owns its production. Before this interface landed the
@@ -525,6 +719,8 @@ staged with `queue.py sweep` (or `plan`) from a current tree.
 
 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.
 2026-11-07 follow-up (organizer 0432, Refs #147): the four flagged mentions are rewritten in version 0.16.0 - VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3) - all now anchor at the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer). The two dated 19:00 mentions that stay are history, not rules: the 2026-10-27 lapse (section 1) and the 2026-10-28 migration validation (section 9), both from the PDT era when the reset was 19:00 local.
+2026-11-18 sync (organizer 1232, Refs #606): the sweep geometry above moves from [90, 30] to [120, 60] per PR #614 (merged 2026-11-11) - seq-1 at 16:00, fix-ups at the 16:30 midpoint, seq-2 at 17:00 PST in winter - so the final pass spans two ticker passes instead of expiring inside one. The 2026-11-04 correction note above stays as history: it records the geometry the 90/30 form replaced, not the current form.
+2026-11-21 (tool-developer, Refs #748): the pair bodies now carry the ledger-walk task section (rule R20) - the production path appends it, first pass or final pass by chain_seq, so the pair no longer depends on the planner appending the text by hand.
 
 ## 13. The perception layer (scout)
 
@@ -818,6 +1014,20 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.31.0, 2026-11-21 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606; renumbered from 0.23.0, issue #739): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The entry was first labeled 0.23.0 and collided with the R15 entry (PR #715) that already claims 0.23.0; this change renumbers it to the next free version and bumps the frontmatter from its stale 0.17.0 to 0.31.0.
+- 0.30.0, 2026-11-21 - section 4 states the VIP expiry rule explicitly (issue #733): a VIP unit staged for a reset opens that reset day and expires at the next reset, so expires_at is planned_for + 24h; the 2026-11-19T02:00:00Z expiry on vip-2026-11-17-1800 is correct and the ticker-2034 flag is refuted. No tool change: the daily-reset branch already computes planned_utc + 1 day.
+- 0.29.0, 2026-11-21 - section 11 gains rule R21 (worktree-create base check, issue #709): `pass_worktree.py create` with an explicit `--base` reuses an existing branch only when its tip is the base and refuses a stale branch, exit 2, naming both tips, so a pass never decides from a stale main it did not ask for; without `--base` the checkout-as-is semantics stand.
+- 0.28.0, 2026-11-21 - section 11 gains rule R20 (sweep ledger-walk task text, issue #748): the production path appends the standing ledger-walk task section to each pre-reset sweep pair body (first/final pass by chain_seq), so a staged pair carries its walk instructions instead of the generic body; slot and reset times come from the unit's own fields and the ledger line count is read live from the ledger.
+- 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue #744): `plan` and `sweep` report a refused window (expired, duplicate chain step, stale roster) under its own skip list instead of counting it as already present, so already_present equals the units the pool actually holds for the staged windows; the roster-freshness refusal now carries the refused window's unit id so callers can classify it.
+- 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): `enqueue` refuses a chain successor when the chain's latest recorded `event_ends_at` is past, so a dead event's chain stops minting instead of seeding units for it; no reading recorded means no signal and the mint proceeds as before.
+- 0.25.0, 2026-11-21 - section 11 gains rule R17 (doomed-probe zombie preference, issue #746): `next --probe` hands out a queued zombie chain unit ahead of the overlay steering and the normal pick, so a probe pass burns the re-minted chain unit instead of a scout unit; with no zombie unit queued, actionable and inside budget, the probe falls through to the normal pick.
+- 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.
+- 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-step dedupe, issue #712): the production path refuses a window whose computed expiry is already past and a reset-anchored slot whose chain step the pool already holds at another slot, so plan no longer stages a stillborn zero-sweep unit for yesterday's slot or a second sweep pair at the new geometry beside the old one; both refusals are recorded and reported by plan and sweep.
+- 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
+- 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
+- 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
+- 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
+- 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
 - 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
 - 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.
 - 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
