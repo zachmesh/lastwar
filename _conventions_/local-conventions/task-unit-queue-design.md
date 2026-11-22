@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T16:50:28Z
-version: 0.33.0
+modified: 2026-11-22T17:48:31Z
+version: 0.34.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -727,6 +727,25 @@ one to the audit cause it answers.
   decides coverage - ticker-1930 serves the 19:04 slot. The retro's prose ruling
   adjudicates a slot, but only a record or a marker closes it for the check.
 
+- **R23 - the missed-VIP-days count comes from the pool, keyed on the slot date (issue #742).**
+  The ticker states an "Nth consecutive missed VIP day" count in its run records,
+  but the count was kept by hand and the two chains disagreed: the ticker counted
+  seven missed days (Nov 14 to Nov 20) while the knowledge-organizer chain counted
+  eight (Nov 13 to Nov 20), and the Nov 20 retro ruled eight. The Nov 13 unit is
+  the tell - it closed expired with finished_at 2026-11-15T02:22:15Z, a full day
+  after its own reset day, so any count keyed on finished dates drops Nov 13.
+  `_tools_/vip_missed.py count` counts from `_queue_/done/` and the
+  `_queue_/completed/` markers instead: a day is keyed on the date embedded in
+  its unit id (vip-YYYY-MM-DD-HHMM), only the 1800 slot defines a day (a pre-reset
+  fix-up such as vip-2026-11-14-1630 is an extra, never a second day), and a day
+  is missed when its 1800 unit expired/failed or closed done/partial with
+  claimed_count 0 - the Nov 20 case, where the unit closed DONE because both items
+  were already claimed before it ran, so the loop itself claimed nothing. A day
+  with no outcome file, or a marker-only done/partial whose claimed_count is
+  unseen, is unknown and never counted. The ticker states the count the tool
+  reports, and the tool's per-day table is the audit trail when a later count
+  disagrees with a ruling.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -1065,6 +1084,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.34.0, 2026-11-22 - section 11 gains rule R23 (missed-VIP-days count, issue #742): the count comes from the pool via new `_tools_/vip_missed.py`, keyed on the unit-id slot date with only the 1800 slot defining a day, and a day is missed when its 1800 unit expired/failed or closed done/partial with claimed_count 0; the ticker's hand count of seven vs the ruled eight is the live instance (the Nov 13 unit's finished_at fell on Nov 15).
 - 0.33.0, 2026-11-22 - section 11 gains rule R22 (slot coverage, issue #743): every scheduled ticker slot leaves a record or a missed-fire marker; `_tools_/slot_coverage.py check` reports the recordless past-window slots on the :04/:34 grid and `mark` writes a marker, refusing a slot a record already covers; coverage is read from the record title, never the file name alone, so a late-starting pass serves the slot its title states.
 - 0.32.0, 2026-11-22 - section 3 specifies the `_queue_/completed/` completion markers (issue #726): the marker's purpose (issue #438), its four fields, the validity rule, the readers that treat a marker like a local done record, the live-only status, and the sync reaping rule (168 hours, lost closings reported per issue #563). No tool change: `queue.py` already implements all of it; the design document never mentioned the directory.
 - 0.31.0, 2026-11-21 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606; renumbered from 0.23.0, issue #739): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The entry was first labeled 0.23.0 and collided with the R15 entry (PR #715) that already claims 0.23.0; this change renumbers it to the next free version and bumps the frontmatter from its stale 0.17.0 to 0.31.0.
