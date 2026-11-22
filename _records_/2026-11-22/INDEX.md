@@ -213,3 +213,7 @@ status: unverified
 ## 06:39 to about 06:43 - PR catch-all pass (no-op)
 
 - 06:39 PT, pr-catchall-0639 - no-op (8 open PRs scanned, 0 owned; PR 717 conflict resolved branch-side, now MERGEABLE/CLEAN, awaits the 07:00 batch with PR 812; 182 open issues, 0 unclassified, new #814 already labeled play; owner-decision issues 132, 154, 335, 514, 517 unchanged, all over 24 hours, statements current; no adoption, no fix, no hand-off, no stale-owner flag; quiet run, no Slack, no chat). Record: pr-catchall/0639-run.md.
+
+## 06:40 to about 06:49 - Queue planning pass (done)
+
+- 06:40 PT, queue-planning-0640 - 15 staged (mail/help/gifts-1830, harvest/radar/survivors/training/donations/arms-race-1803, vip/daily-missions-1800, train/star-ceremony/duel-score-1830, scout-1800; 63 already present), 5 expired (train/star-ceremony/help/gifts/duel-score-0230); sweep pair not due (17:00-hour run) but complete via plan staging (1630 + 1730); scout diff on the 2026-11-21 observation v1.13.0 applied with 0 counts (basis empty; narrative 463 reads, 0 unexplained), 0 withdrawals; pool inbox 80 / claimed 0 / done 2856; delivery by the VPS worktree route carrying this record, the 15 staged units and the 5 expired units' done files. Record: queue-planning/0640-run.md.
