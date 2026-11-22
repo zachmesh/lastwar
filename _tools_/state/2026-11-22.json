@@ -11,13 +11,13 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-11-22T05:26:25-08:00",
-  "note": "Stack day: 1 task executed, 11 rewards pending, stored 11/40"
+  "at": "2026-11-22T11:38:33-08:00",
+  "note": "Stack day 7: entry verified, no Quick Execute offered (Claim All-only bar, 11 pending), stored 28/40, 6 pins inventoried"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-22T06:21:06-08:00",
-  "note": "All 6 categories swept, nothing claimable, nothing claimed"
+  "at": "2026-11-22T10:32:23-08:00",
+  "note": "0630-slot sweep: 6 categories, no rewards available"
  },
  "harvest": {
   "status": "done",
@@ -33,6 +33,16 @@
   "status": "done",
   "at": "2026-11-22T10:13:15-08:00",
   "note": "Drill Ground Lv.25 upgrade 07:12:47 left, slots 2-4 idle"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-22T10:35:30-08:00",
+  "note": "0630-slot: Regular 753 + Premium 52, level progress +15,580"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-22T10:37:43-08:00",
+  "note": "0630-slot: Help All, 1 request, points 0 to 60/1000"
  },
  "secrets": {
   "status": "done",
