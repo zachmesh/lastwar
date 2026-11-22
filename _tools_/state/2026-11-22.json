@@ -18,5 +18,20 @@
   "status": "done",
   "at": "2026-11-22T06:21:06-08:00",
   "note": "All 6 categories swept, nothing claimable, nothing claimed"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-11-22T08:55:06-08:00",
+  "note": "food +2.4M, coins +1.6M, iron bubbles cleared; truck not loaded"
+ },
+ "research": {
+  "status": "done",
+  "at": "2026-11-22T10:11:48-08:00",
+  "note": "Both slots busy: Armor VIII Lv.3 06:32:07, Defense Training VIII Lv.6 15:51:34; nothing finished"
+ },
+ "building-queues": {
+  "status": "done",
+  "at": "2026-11-22T10:13:15-08:00",
+  "note": "Drill Ground Lv.25 upgrade 07:12:47 left, slots 2-4 idle"
  }
 }
