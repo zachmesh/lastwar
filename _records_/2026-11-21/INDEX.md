@@ -9,6 +9,11 @@ status: unverified
 
 # 2026-11-21
 
+## 22:15 to about 22:21 - PR integration pass (DONE, non-batch)
+
+- 22:15 PT, pr-integration-2230 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges, 1 comment (#425 re-verified CLEAN vs new main 410149dec, still owner-gated OD-20261108-01, age 13 days). Records PR #793 MERGEABLE at head 4c6c0806 (2215 run record landed on the branch), awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #802 merged at the 2200-slot pass (squash 410149de). Delivery via GitHub API (2045/2115/2130/2145/2200/2215 precedent). Sweep clean, 15 open PRs all decided. Record: pr-integration/2230-run.md.
+
+
 ## 22:00 to about 22:12 - PR integration pass (DONE, non-batch, 1 merge)
 
 - 22:00 PT, pr-integration-2215 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). One merge: #802 fix(tools) Coverage prose red-dot accounting (Refs #800, Owner lastwar-tool-developer; squash 410149de, main 5a3baa61 to 410149de; merge-tree clean, py_compile clean, smoke test on the attested prose forms; no improvements.md entry for #800, no backlog update, issue #800 stays open for the retro). Records PR #793 MERGEABLE at head b69fd473 (tool-development 2132 run landed on the branch), merge-tree clean vs new main 410149de, awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX; #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #425 still owner-gated OD-20261108-01 (age 13 days), re-verified open on current main, zero decision lines. Sync-back DEFERRED (reverse-bundle execution-risk deferral, owner go-ahead pending; local main 22601972 verified ancestor of new main 410149de). Delivery via GitHub git-data API (2045/2115/2130/2145/2200 precedent). Sweep clean, 16 open PRs at pass start all decided. Record: pr-integration/2215-run.md.
