@@ -11,7 +11,7 @@ status: unverified
 
 ## 17:32 to about 17:58 - Tool development pass (DONE)
 
-- 17:32 PT, tool-development-1732 - done (issue #744 implemented, PR #789 open: plan/sweep report refused windows under their own skip lists instead of counting them as already_present; R19, changelog 0.27.0; 28/28 fixture assertions on isolated /tmp scratch pools, bug reproduced on main's copy; issue #744 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/1732-run.md.
+- 17:32 PT, tool-development-1732 - done (issue #744 implemented, PR #789 open: plan/sweep report refused windows under their own skip lists instead of counting them as already_present; R19, changelog 0.27.0; 28/28 fixture assertions on isolated /tmp scratch pools, bug reproduced on main's copy; issue #744 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM synced (ts 1795312728.127609). Record: tool-development/1732-run.md.
 
 ## 17:45 to about 17:54 - PR integration pass (DONE, non-batch)
 
