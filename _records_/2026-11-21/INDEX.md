@@ -1,13 +1,17 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T12:16:49Z
+modified: 2026-11-22T14:30:00Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
 ---
 
 # 2026-11-21
+
+## 06:05 to about 06:20 - Ticker pass ticker-0604, scout unit (PARTIAL)
+- 06:05 PT, ticker-0604 - partial (scout unit scout-scout-2026-11-20-016, chain scout-2026-11-20 seq 16, about 15 minutes, computer session cc-107, window 123822). Blue-building count-up timer RESOLVED: the blue building at the far right edge carries a large digital display (12:07 at about 06:11, 12:09 at about 06:14); tapping it opens the To-do List, whose header reads "Server Time 12:09:10" - the display is the server-time clock, counting up in real time, which explains every read rising about 1 per minute. To-do List contents: Alliance Train 14:40 and Zombie Siege 23:15 today, Winter Battlefield 02:00 and Alliance Exercise tomorrow; Zombie Siege is a NEW observed item (a different event from the ended Zombie Invasion). Lightning counter 118 at about 06:11 (crop-verified, not OCR) then 119 at about 06:14 - down 2 from 120 at seq 15 close, cause not established, +1 in about 3 minutes suggests regeneration. Events hub: tabs The Age of Oil, Arms Race, Bingo Task (badge 1), fourth tab cut off ("Bl..."); no Zombie Invasion tab among the visible tabs (bar not scrolled, not a full enumeration - zombie chain stays unseeded); Radar Task Dripper 33128/5000, Secret Task Oil Depot 63037/1000, both 11:49:47. Events back-arrow point corrected to (160,946). A "NEW" tag first noted on the blue-roofed building right-center (about 849,315), identity open. Base re-reads: power 149,417,850 unchanged; food 763.7M, iron 1.1G, coins 107.6M, diamonds 6,436 unchanged; hammer 1/4, flask 2/2; VS countdown 11:52:22 to 11:50:13; radar dish badge 11; WORLD badge 99+. 12 items observed (day total 463); red dots 12 seen, 12 explained, 0 unexplained (eighth zero-unexplained close). Mall floating chest / orange balloon still not re-checked; green-clock timer location still open. Successor seq 17 enqueued. No diamonds or money spent. Record: perception-scout/0604-queue-run.md. Observation file v1.13.0.
+- Correction (same pass): the scout session actually ran about 06:06 to about 06:13 (about 7 minutes), not to about 06:20 - the executor conflated the token lease expiry with the session end. All "about HH:MM" labels in that entry run about 4 to 7 minutes late; findings unaffected. Lightning 120 re-read at about 06:15 in the mail unit of this pass.
 
 ## 04:08 to about 04:13 - Ticker pass ticker-0404, scout unit (PARTIAL)
 

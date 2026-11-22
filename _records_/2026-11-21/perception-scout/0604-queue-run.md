@@ -1,0 +1,27 @@
+---
+title: Scout queue run 0604
+created: 2026-11-22T14:05:00Z
+modified: 2026-11-22T14:22:00Z
+version: 1.0.0
+description: Scout chain scout-2026-11-20 seq 16, ticker-0604, observe-only
+status: unverified
+---
+
+# Scout queue run 0604
+
+- Session about 06:05 to about 06:20 local, computer session cc-107, window 123822 (window mode, 642x951, never brought to front). Observe-only throughout. Token held 06:05 to 06:20.
+- Entry: the game was on the ALLIANCE TECHS panel left open by an earlier pass (Development tab; Troop Movement 5/10, Rallied HP/Attack/Defense 7/10 each; Tech Donation Today 6100, up from 5300 at seq 15 - donations continue). Closed with the panel X at (849,150) first try, revealing the ALLIANCE menu underneath ([AP3x] The Apex, Leader Abyss Apex, Power 14,399,396,624, Members 99/100; Alliance Star (Event 42) Time Left 11:42:34). Closed the menu with the back arrow at the corrected point (194,915) first try.
+- Blue-building count-up timer RESOLVED: the blue cylindrical building at the far right edge of the base carries a large digital display reading 12:07 at about 06:11 and 12:09 at about 06:14. A tap on the building at (955,445) opened the To-do List panel, whose header reads "Server Time 12:09:10" - the display is the server-time clock, which counts up in real time, not a countdown. That is why every read rose about 1 per minute (06:23, 08:06-08:08, 09:43-09:44, 10:09 glimpse, 12:07, 12:09). The building is the base clock; tapping it opens the To-do List. No "Go" button was tapped.
+- To-do List contents (observe-only): Server Time 12:09:10; 2026-11-22 (today) - Alliance Train 14:40, Zombie Siege 23:15; 2026-11-23 - Winter Battlefield 02:00, Alliance Exercise (time cut off below the fold); footnote "Alliance markers with countdowns will also be shown here." Zombie Siege at 23:15 today is a NEW observed item - a different event from the ended Zombie Invasion; no Zombie Invasion entry appears in the To-do List. Closed with the panel X at (846,168) first try.
+- Lightning counter: 118 at about 06:11, verified by cropped enlargement (not an OCR misread), then 119 at about 06:14 and 119 at the about 06:16 close. It read 120 at seq 15 close (about 04:13). The 2-point drop between 04:13 and 06:11 is a real read change, cause not established (no spend was seen in this unit); the +1 inside about 3 minutes suggests the counter regenerates. Successor: re-read twice before treating any change as a spend.
+- Base re-reads (entry about 06:11, close about 06:16): power 149,417,850 (unchanged); food 763.7M, iron 1.1G, coins 107.6M, diamonds 6,436 (unchanged); hammer 1/4 (red dot), flask 2/2; Events badge 1; VS red dot, VS countdown 11:52:22 at about 06:11 to 11:50:13 at about 06:16 (about 2:09 over about 5 minutes of wall time - slower than real time, consistent with the background-throttling finding); Build: Oil Well (0/1); two survivor "?" icons at the front door; radar dish badge 11; trucks red dot; WORLD badge 99+; chat badge 3. A "NEW" tag was first noted at about 06:16 on the blue-roofed building right-center (about 849,315) - identity open, not established whether it appeared in this unit or was missed earlier.
+- Events hub (opened about 06:17, closed about 06:19): tabs visible - The Age of Oil (selected, treasure icon), Arms Race, Bingo Task (badge 1 - this is the Events badge 1, belongs to the events regular), and a fourth tab cut off at the right edge ("Bl..."). The selected tab shows "Unlock Radar Task: Dripper" (33128/5000) and "Unlock Secret Task: Capture the Oil Depot" (63037/1000), both with 11:49:47 timers. NO Zombie Invasion tab among the visible tabs - but the bar was not scrolled, so this is "not seen in the visible tabs", not a full enumeration; the zombie chain stays unseeded. The back arrow at (100,915) did nothing; the working point is (160,946), which closed the hub first try.
+- Red dots seen this unit: 12 (hammer 1/4, Events badge 1, VS, Alliance, Mail, Inventory, trucks, radar dish badge 11, WORLD badge 99+, chat badge 3, Record, VIP13), explained 12, unexplained 0 - the eighth zero-unexplained close of this chain.
+- NOT seen this unit: the Mall floating chest and orange balloon carried open from seq 8 (not re-checked, unit cap); the green-clock timer location (only residual of the rocket identification - the rocket is confirmed, a separate green-clock timer was never re-located); the fourth Events tab's identity.
+- A map drag (500,500) to (220,500) to reveal the right-edge building did NOT move the view - background drags do not drop in this setup (outcome_unknown); do not repeat drags, tap the building instead.
+- No diamonds or money spent. No claim, fight, dispatch, donation or purchase. Nothing was moved, rotated or bought.
+
+## Correction (same pass, before delivery)
+
+- Wall-clock correction: the session actually ran about 06:06 to about 06:13 local (about 7 minutes), not "about 06:05 to about 06:20" (about 15 minutes) as first written - the executor conflated the token lease expiry (06:20:45) with the session end. Every "about HH:MM" label in this file runs about 4 to 7 minutes late; the timer readings, the server-time values and all findings are unaffected. The VS countdown drop (11:52:22 to 11:50:13) happened over about 3 minutes of wall time, not about 5 - still slower than real time, consistent with background throttling.
+- Lightning follow-up, same pass: the mail unit's base re-read at about 06:15 shows the counter at 120 - the 118 to 119 to 120 regeneration to full is confirmed inside this pass.
