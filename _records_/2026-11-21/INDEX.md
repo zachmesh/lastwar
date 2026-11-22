@@ -9,6 +9,11 @@ status: unverified
 
 # 2026-11-21
 
+## 16:22 to about 16:31 - PR integration pass (DONE, non-batch)
+
+- 16:22 PT, pr-integration-1622 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges. One comment: #425 still owner-gated (OD-20261108-01 open, line 278, zero decision lines), re-verified CLEAN vs main da1bdda4, re-verification comment posted. #774 frontmatter defect stands (line 68  glued), head unchanged, no repeat comment. Records PR #762 MERGEABLE/CLEAN at new head aec44364, awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (1500 comments stand). #755/#754/#713 chain conflicts commented at the 1600 pass stand. Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. Sweep clean, 21 open PRs all decided. Quiet run, no Slack DM sync, no chat report. Record: pr-integration/1622-run.md.
+
+
 ## 16:12 to about 16:16 - Ticker pass ticker-1604, scout chain seq 2 (PARTIAL)
 
 - 16:12 PT, ticker-1604 - partial (scout unit scout-scout-2026-11-20-001, chain scout-2026-11-20 seq 2). Events hub finished live: all 7 tabs walked. Black Market (NEW candidate, no regular owns it; Issue #783): 22d 01:46:36 left, cash 7190, top row sold out (Free/Featured/Fantastic), three 500-cash items available, 46/46 refreshes, Pack button red badge; tab "!" explained. Desert Storm Battlefield (New badge explained, tab never visited): event over, Enter Battlefield greyed, ends in 01:45:52. Wanted Boss Code 39 (known event, no owning regular; Issue #784): appears server 00:00, aircraft heroes +50% damage, 1 attack pays coin x6 / 5m speed-up x5 / red crystal x10 / blue triangle x250 / gold shard x25, Go live with 00:45:32 left at the 16:15 PT read. Community tab resolved: Discord-link 500 Diamonds already Claimed. 14 items, 3 red dots seen, 3 explained, 0 unexplained. Arms Race tab and base/store/alliance/mail/VIP/passes/daily-missions/world-map surfaces still unwalked; successor chain unit enqueued. Record: perception-scout/1613-queue-run.md.
