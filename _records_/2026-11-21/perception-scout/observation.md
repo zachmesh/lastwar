@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T03:22:00Z
+modified: 2026-11-22T06:24:00Z
 level: L0
-version: 1.2.0
+version: 1.4.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -318,3 +318,148 @@ worked first attempt; the fullscreen precondition (Issue
   duel and radar; Weekly Deal and Super Monthly Pass
   tabs unopened. The chain continues
   (scout-2026-11-20, successor seq 5 in inbox).
+
+## Seq 5 (ticker-2004, about 20:23-20:28 local)
+
+- Weekly Deal: "Weekly Deal", 2026-11-16 00:00:00 -
+  2026-11-22 23:59:59; Valor Badge (Epic) $99.99
+  (red gem 10.0K, blue 1.0K, 5m speedup 1.2K, gold 80,
+  grey 20, box), Base Upgrade (Epic) $19.99 (red gem
+  2.0K, 5m speedup 180, grey 12, box 12, gold 12,
+  purple 10.0K), UR Set (Elite) $49.99 (red gem 5.0K,
+  5m speedup 600, coin 300.0K, purple 2, gold 2,
+  yellow 750); 1 purchase available each; no free
+  item; no floating chest on the Mall left edge here.
+- Super Monthly Pass: "Monthly Pass", Duration 30
+  Days, Squad 4 Lv.20, "Unlock an extra squad!";
+  Daily Pickup red gem 100 x1, gold 50 x2, gold item
+  x2, 5m speedup 60, blue item 200; "Legendary"
+  badge; Get Now +2500 red gems + 5 items x1; Buy x1
+  button + Switch button, "250" medallion beside Buy
+  (price unread, never tapped); no floating chest on
+  the Mall left edge here. Mall now fully walked (7
+  tabs).
+- Base re-read: power 149,653,371; food 752.7M; iron
+  1.1G; coins 102.4M; diamonds 5,246; stamina 101;
+  Alliance Assembly 21:43:58.
+- NEW: red target/crosshair icon at the right edge
+  (about 935,650), red badge 1, countdown 00:00:02
+  below it - possibly the chain-head 00:00:51
+  countdown, unconfirmed.
+- NEW: small orange balloon floating over the map at
+  about 495,340, absent at 20:22 - possibly a
+  floating reward, not tapped.
+- 99+ badge still at 799,929 above the BASE tab;
+  identity still unverified. Chat NEW! icon still
+  open (chat not opened). Mall floating chest icon
+  not seen on either tab this unit.
+
+## Seq 6 (ticker-2204, about 22:14-22:23 local)
+
+- Alliance panel: [AP3x] The Apex, Overall Rating 5.0,
+  Leader Abŷss Apex, Power 14,354,000,071, Members
+  99/100, Language English. Motto "We are The Apex. An
+  alliance of veteran players. All are welcomed -
+  messages sent in multiple languages." plus the Korean
+  welcome line. Button grid (10): Alliance Wars, Help
+  (red dot), Alliance Gifts (red dot), Members, Alliance
+  Store (red dot), Alliance Techs (red dot), Assemble,
+  Strength Ranking, Alliance Events (red dot), Alliance
+  City. Bottom two rows below the fold; a drag revealed
+  them. Bottom banner "Alliance Star (Event 42), Time
+  Left: 19:34:15" with Enter. Footer: back, Record,
+  Applicants, Alliance Star, Settings.
+- Alliance City (the station): tabs Captured / Ready
+  for Capture; 6 captured cities, all NEW, "Cities
+  owned: 6/6" - Lv.6 (499,411) 54km, Lv.5 (411,336)
+  69km, Lv.5 (587,336) 150km, Lv.5 (336,411) 115km,
+  Lv.4 (336,262) 174km, Lv.4 (499,262) 141km. City
+  Buff button.
+- MY PROFILE: Lv.30 [AP3x]Bears Lair, power 149.6M,
+  48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot),
+  #2110, 1,838 likes. Gift row flower 12, gift box 88,
+  trophy 11, one empty slot. Moments: "No posts
+  found." Footer Record (red dot), Account, Settings,
+  Rankings, Follow.
+- VIP panel: VIP13, 4-day login streak, "Collect 120
+  VIP points tomorrow", progress 1,662,720/2,000,000.
+  Privileges: Crafting Speed 50.00% (NEW), Research
+  Speed 20.00% (NEW), Mega Mode of Trucks 1 (NEW),
+  Food/Iron/Coin Output 25.00% each, Construction
+  Speed 50.00%, March Speed 15.00%, Max Units 5.00%.
+  VIP13 Daily Freebie claimable (green Claim button;
+  the vip unit owns the claim). VIP Exclusive (Epic)
+  $99.99, Availability 1 - paid, never tapped.
+  Bottom timer 4d 19:46:36. Cart and gift-box icons
+  carry red dots.
+- Base re-reads: power 149,653,371; food 752.7M to
+  755.4M, iron 1.1G, coins 102.4M to 103.9M, diamonds
+  5,246; lightning counter 95 to 96 (the OCR "130" /
+  "114" reads were misreads; the 101 at 20:28 per seq
+  5 to 95 drop is unexplained). Train boarding
+  "Boarding closes in: 00:00:58" at about 22:14.
+  VS countdown 19:45:23 to 19:38:05, ticking down in
+  real time. Top-center rocket icon with "04:21".
+  Chat ticker: "Buckeye16: Ty for the train @Abŷ..."
+  - the train ran.
+- NEW unknown item: green countdown timer mid-right
+  edge, 19:10:51 to 19:03:33, ticking down in real
+  time (about a 19 hour scale), identity unknown.
+- Red target icon: red X/crosshair in a circle at the
+  right edge (about 940,665), red badge 1, countdown
+  00:09:18 to 00:06:20 across the unit - a live
+  countdown on about a 10 minute cycle; what it counts
+  down to is still unknown. Identify only, never
+  attack.
+- Orange balloon: absent from the entry and close
+  snapshots - likely a transient floating reward that
+  despawned; identity still open but no longer
+  observable.
+- Gold trophy cup above Alliance: tapped once at
+  (852,686), no panel opened - likely decorative; the
+  passes entry is still unidentified.
+- Base megaphone (gold speech bubble, about 675,843):
+  tapped twice, no Chat panel opened - per R2 no
+  further taps at that point this unit; try a
+  long-press variant or the chat ticker route. The
+  Chat NEW! icon is still open.
+- 99+ badge still at 799,929; identity still
+  unverified. Mall floating chest icon not seen (the
+  Mall was not opened this unit). Left edge, partially
+  cut: an orange icon at about mid-height - candidate
+  for the daily-missions "orange terminal" entry.
+
+## Coverage update (ticker-2204, about 22:23 local)
+
+- Surfaces walked this unit: base (re-read), alliance
+  panel, alliance station (Alliance City), profile,
+  VIP. Items observed this reset day: 266 (198 + 68).
+  Red dots seen this unit: 19, explained 18;
+  unexplained red dots: 1 (99+ badge). Unknown items:
+  1 new (green 19h countdown timer); 3 still open
+  (Chat NEW! icon, 99+ badge, Mall floating chest);
+  2 advanced (red target countdown tracked live,
+  orange balloon absent). Not walked yet: passes,
+  daily missions, world map, duel and radar. The chain
+  continues (scout-2026-11-20, successor seq 7 in
+  inbox).
+
+## Note from the mail unit (ticker-2204, about 22:25 local)
+
+- The Chat screen was found open at the mail unit's
+  activate step - the scout unit's megaphone tap DID
+  open Chat, just slowly (two taps, panel appeared
+  minutes later). The Chat top-bar NEW! icon is now
+  LOCATED: the notepad icon at the top right of the
+  Chat screen (about 839,52) carrying the red NEW!
+  badge, between the compose (+) icon and the gear.
+  Its function is still unidentified (not tapped).
+  Chat tabs: World (red dot), Alliance (selected, red
+  dot), Moments (red dot), Private (red badge 3);
+  sub-tabs Chat / Alliance Announcement (red dot).
+  Announcement popup: "AP3X | TANK SQUAD GEAR GUIDE",
+  2026-11-21 21:14:06 StarFall, 1 like. Banner "Leader
+  calls for enabling notifications for crucial Alliance
+  news." with an Open button - NOT tapped. Full detail
+  in mail-rewards/2236-queue-run.md. Seq 7 still has
+  to identify the icon's function by tapping it.
