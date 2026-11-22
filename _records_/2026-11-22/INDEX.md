@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-22
 created: 2026-11-22T08:06:00Z
-modified: 2026-11-22T08:06:00Z
+modified: 2026-11-22T09:24:13Z
 version: 1.0.0
 description: Day record for 2026-11-22 (America/Los_Angeles)
 status: unverified
@@ -36,3 +36,6 @@ status: unverified
 ## 01:00 to about 01:11 - PR integration pass (DONE)
 
 - 01:00 PT, pr-integration-0115 - done (NON-batch pass, checker RUN: NOT DUE, next batch 03:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 0 merges, 0 comments, 0 PRs opened. Records PRs #807 (8 commits beyond main) and #804 (10) await the 03:00 batch, both CLEAN; #717 conflicting on the action-log only, conflict set unchanged; #425 still owner-gated OD-20261108-01 (age 14 days), re-verified CLEAN, no new comment. #755/#754/#713 still conflicting on the resource-collection INDEX (comments stand); #753 superseded by merged #774, #711 by #719, #751 duplicates #715. Sweep clean, 10 open PRs all decided. Record: pr-integration/0115-run.md.
+## 01:14 to about 01:22 - Ticker pass ticker-0113, donations unit (PARTIAL)
+
+- 01:14 PT, ticker-0113 - partial (donations unit donations-2026-11-21-2203, about 7 minutes, computer session cc-77). 24 coin donations verified live on Quick Construction, Donation Count 30/30 to 6/30 by live reads; final batch of 6 dispatched, button then greyed with a 00:18:14 cooldown timer hiding the count, so the final 0/30 was not live-read and the unit closes partial with verified no for the full 30. Tracker untouched; re-read unit enqueued for after the cooldown (about 09:48 UTC). New observation: the count regenerated from 24/30 (left by ticker-2142 at 21:58 PT) to 30/30 by 01:14 PT in the same reset day - the flat 30-a-day model is incomplete; fresh evidence commented on issue #500. Record: alliance-donations/0114-queue-run.md.
