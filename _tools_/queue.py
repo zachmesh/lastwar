@@ -109,6 +109,17 @@ Usage:
              # day that already closed.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
+             # claim refuses (exit 1, nothing moved) until this
+             # pass recorded its read of the newest queue-ticker
+             # record with `read` (issue #737).
+  queue.py [--root DIR] read --record PATH --executor NAME
+             # record that this pass read the newest queue-ticker
+             # record (issue #737): the receipt is what claim
+             # checks, so a claim is refused until this pass
+             # recorded its read - the standing route change
+             # (re-read the newest queue-ticker record before any
+             # claim) is enforced by the tool instead of by the
+             # pass's pre-step prose.
   queue.py [--root DIR] deadline --unit UNIT
              (--expires-at ISO | --closes-in SECONDS)
              [--priority N] [--reason TEXT]
@@ -3934,6 +3945,14 @@ def cmd_claim(args):
     # the live pool is this root, so the lookup collapses to
     # today's behaviour. The move is one atomic rename; a
     # cross-device failure refuses with nothing moved.
+    # Claim-before-read gate (issue #737): the claim is refused
+    # until this pass recorded its read of the newest
+    # queue-ticker record - the gate runs first, before any pool
+    # state is even looked at, so a breaching pass fails loudly
+    # instead of executing on unread state.
+    refusal = refuse_unread_claim(args)
+    if refusal is not None:
+        return refusal
     live = live_pool_root(args.root)
     live_state, live_path = find_unit(live, args.unit)
     if live_state == "inbox":
@@ -4839,6 +4858,271 @@ def clear_blocker(root, overlay):
     return False
 
 
+# ---------------------------------------------------------------------
+# Claim-before-read gate (issue #737)
+# ---------------------------------------------------------------------
+
+READ_RECEIPT_FILENAME = "read-receipt.md"
+READ_RECEIPT_MAX_AGE_MINUTES = 120
+READ_RECEIPT_ALLOW_ENV = "LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM"
+TICKER_RECORD_DIRNAME = "queue-ticker"
+TICKER_RECORD_NAME = re.compile(r"^\d{4}-.*\.md$")
+RECORD_DATE_DIR = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def repo_root_for_pool(pool_root):
+    """Repository root holding a pool directory.
+
+    The newest queue-ticker record is read from the repository
+    the pass runs in, so ask git for the toplevel of the pool:
+    for a linked worktree that is the worktree root (whose
+    _records_ is the records branch the pass was created from),
+    for the main checkout it is the checkout itself. When git
+    is unavailable or the root is not a repo (tests, scratch
+    dirs), fall back to the pool's parent when the pool is a
+    _queue_ directory, else the root itself.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "-C", pool_root, "rev-parse", "--show-toplevel"],
+            capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        out = None
+    if out is not None and out.returncode == 0 and out.stdout.strip():
+        return os.path.normpath(out.stdout.strip())
+    pool = os.path.normpath(pool_root)
+    if os.path.basename(pool) == "_queue_":
+        return os.path.dirname(pool)
+    return pool
+
+
+def newest_ticker_record(repo_root):
+    """Newest queue-ticker record under a repository root.
+
+    Records are _records_/<YYYY-MM-DD>/queue-ticker/<HHMM>-*.md,
+    so the newest is the maximum by (date directory, file name) -
+    no mtime dependence, so a checkout or a copy never reorders
+    them. Returns (repo-relative path, absolute path), or None
+    when the tree holds no such record.
+    """
+    records_dir = os.path.join(repo_root, "_records_")
+    if not os.path.isdir(records_dir):
+        return None
+    best = None
+    for day in sorted(os.listdir(records_dir)):
+        if not RECORD_DATE_DIR.match(day):
+            continue
+        folder = os.path.join(records_dir, day, TICKER_RECORD_DIRNAME)
+        if not os.path.isdir(folder):
+            continue
+        for name in sorted(os.listdir(folder)):
+            if not TICKER_RECORD_NAME.match(name):
+                continue
+            key = (day, name)
+            if best is None or key > best[0]:
+                rel = os.path.join("_records_", day,
+                                   TICKER_RECORD_DIRNAME, name)
+                best = (key, rel, os.path.join(folder, name))
+    if best is None:
+        return None
+    return best[1], best[2]
+
+
+def read_receipt_home(root):
+    """Shared pool home for the read receipt, like the blockers.
+
+    The receipt is live pool state, not a record: the pass that
+    reads writes it where the claim that follows can see it, so
+    it lives in the main checkout's _queue_ (issue #383) exactly
+    like the token, never in a pass worktree's own _queue_, and
+    _queue_/.gitignore excludes the file so it is never committed.
+    """
+    shared = _shared_token_home(root)
+    return shared if shared is not None else root
+
+
+def read_receipt_path(root):
+    return os.path.join(read_receipt_home(root), READ_RECEIPT_FILENAME)
+
+
+def read_receipt(root):
+    """Fields of the live read receipt, or None when there is none.
+
+    A file that does not parse or names no record is no receipt
+    at all, so a half-written file can never authorise a claim -
+    the pass re-reads and the receipt is rewritten.
+    """
+    path = read_receipt_path(root)
+    if not os.path.exists(path):
+        return None
+    try:
+        fields, _ = read_unit(path)
+    except (OSError, ValueError, UnicodeDecodeError):
+        return None
+    if not fields.get("record"):
+        return None
+    return fields
+
+
+def write_read_receipt(root, record, record_sha256, executor):
+    """Record that executor read record, atomically.
+
+    The write is a temp file plus rename in the same directory,
+    so a concurrent claim never sees a half-written receipt: it
+    sees the previous receipt or the new one, and a stale one
+    refuses with its own message.
+    """
+    home = read_receipt_home(root)
+    os.makedirs(home, exist_ok=True)
+    lines = ["---",
+             f"record: {record}",
+             f"record_sha256: {record_sha256}",
+             f"read_at: {iso(now_utc())}",
+             f"executor: {executor}",
+             "---", ""]
+    path = read_receipt_path(root)
+    tmp = None
+    try:
+        fd, tmp = tempfile.mkstemp(dir=home, prefix=".read-receipt-",
+                                   suffix=".tmp")
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(lines))
+        os.replace(tmp, path)
+    except OSError:
+        if tmp is not None:
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+        raise
+    return path
+
+
+def refuse_unread_claim(args):
+    """Refusal exit code when a claim has no read receipt.
+
+    Issue #737: the standing route change - re-read the newest
+    queue-ticker record before any claim - was breached eight or
+    more times on Nov 18 alone, because the pass's pre-step as
+    written does not enforce it. The claim is the choke point, so
+    the tool enforces it: a claim is refused, exit 1, nothing
+    moved, until this pass recorded its read of the newest
+    record with `queue.py read`. The receipt must name the
+    newest record (a newer record landing after the read refuses
+    the claim until it too is read), carry that record's sha256
+    (an amended record refuses until re-read), name the claiming
+    executor (another pass's read never authorises this pass's
+    claim), and be at most READ_RECEIPT_MAX_AGE_MINUTES old - a
+    pass reads at its start and claims inside its own window.
+    With no queue-ticker record in the tree there is nothing to
+    read and the claim proceeds, so the first pass ever and a
+    scratch pool need no receipt. LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM=1
+    bypasses only for isolated /tmp fixture validation of a new
+    tool version. Returns 1 on refusal, else None.
+    """
+    if os.environ.get(READ_RECEIPT_ALLOW_ENV) == "1":
+        print(f"warning: {READ_RECEIPT_ALLOW_ENV}=1, claim-before-read "
+              f"gate bypassed for isolated validation (issue #737)",
+              file=sys.stderr)
+        return None
+    newest = newest_ticker_record(repo_root_for_pool(args.root))
+    if newest is None:
+        return None
+    rel, path = newest
+    receipt = read_receipt(args.root)
+    if receipt is None:
+        print(f"claim refused: no read receipt for the newest "
+              f"queue-ticker record {rel} - re-read it, then run "
+              f"`queue.py read --record {rel} --executor "
+              f"{args.executor}` before claiming (issue #737)")
+        return 1
+    if receipt.get("record") != rel:
+        print(f"claim refused: read receipt names "
+              f"{receipt.get('record')}, but the newest "
+              f"queue-ticker record is {rel} - re-read {rel}, then "
+              f"run `queue.py read --record {rel} --executor "
+              f"{args.executor}` before claiming (issue #737)")
+        return 1
+    if receipt.get("executor") != args.executor:
+        print(f"claim refused: read receipt was recorded by "
+              f"{receipt.get('executor')}, not {args.executor} - "
+              f"this pass must read {rel} itself before claiming "
+              f"(issue #737)")
+        return 1
+    try:
+        with open(path, "rb") as fh:
+            current_sha = hashlib.sha256(fh.read()).hexdigest()
+    except OSError as exc:
+        print(f"claim refused: cannot read the newest queue-ticker "
+              f"record {rel}: {exc} (issue #737)")
+        return 1
+    if receipt.get("record_sha256") != current_sha:
+        print(f"claim refused: {rel} changed since it was read - "
+              f"re-read it, then run `queue.py read --record {rel} "
+              f"--executor {args.executor}` before claiming "
+              f"(issue #737)")
+        return 1
+    read_at = parse_iso(receipt.get("read_at", ""))
+    if read_at is None or (now_utc() - read_at
+                           > timedelta(minutes=READ_RECEIPT_MAX_AGE_MINUTES)):
+        print(f"claim refused: read receipt for {rel} is older than "
+              f"{READ_RECEIPT_MAX_AGE_MINUTES} minutes or undated - "
+              f"re-read it, then run `queue.py read --record {rel} "
+              f"--executor {args.executor}` before claiming "
+              f"(issue #737)")
+        return 1
+    return None
+
+
+def cmd_read(args):
+    # Record a read of the newest queue-ticker record (issue
+    # #737): the receipt is what claim checks, so read refuses
+    # anything but the newest record - attesting to an older one
+    # would only fail later at claim time with a confusing
+    # message. The record must sit inside this repository, and
+    # the receipt is written to the shared live pool, so a claim
+    # from any worktree of the repo sees it.
+    repo = repo_root_for_pool(args.root)
+    newest = newest_ticker_record(repo)
+    if newest is None:
+        print(f"read refused: no queue-ticker record under "
+              f"{repo}/_records_ - nothing to read (issue #737)")
+        return 1
+    rel, path = newest
+    given = args.record
+    if os.path.isabs(given):
+        given_abs = os.path.normpath(given)
+    elif os.path.isfile(os.path.join(repo, given)):
+        given_abs = os.path.normpath(os.path.join(repo, given))
+    else:
+        given_abs = os.path.normpath(os.path.join(os.getcwd(), given))
+    rel_given = os.path.relpath(given_abs, repo)
+    if rel_given.startswith(".." + os.sep) or rel_given == "..":
+        print(f"read refused: {given} is outside this repository "
+              f"(issue #737)")
+        return 1
+    if rel_given != rel:
+        print(f"read refused: {given} is not the newest "
+              f"queue-ticker record - re-read {rel} instead "
+              f"(issue #737)")
+        return 1
+    try:
+        with open(path, "rb") as fh:
+            sha = hashlib.sha256(fh.read()).hexdigest()
+    except OSError as exc:
+        print(f"read refused: cannot read {rel}: {exc} "
+              f"(issue #737)")
+        return 1
+    try:
+        write_read_receipt(args.root, rel, sha, args.executor)
+    except OSError as exc:
+        print(f"read refused: cannot write the read receipt: {exc} "
+              f"(issue #737)")
+        return 1
+    print(f"read {rel} by {args.executor}")
+    return 0
+
+
 def reap_stale_blockers(root):
     """Drop blockers whose clearing unit is gone (sync hygiene).
 
@@ -5522,6 +5806,11 @@ def main(argv=None):
     p.add_argument("--lease-minutes", type=int,
                    default=DEFAULT_LEASE_MINUTES)
     p.set_defaults(fn=cmd_claim)
+
+    p = sub.add_parser("read")
+    p.add_argument("--record", required=True)
+    p.add_argument("--executor", required=True)
+    p.set_defaults(fn=cmd_read)
 
     p = sub.add_parser("deadline")
     p.add_argument("--unit", required=True)
