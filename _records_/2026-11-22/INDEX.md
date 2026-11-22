@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-22
 created: 2026-11-22T08:06:00Z
-modified: 2026-11-22T09:42:20Z
+modified: 2026-11-22T10:39:29Z
 version: 1.0.0
 description: Day record for 2026-11-22 (America/Los_Angeles)
 status: unverified
@@ -71,3 +71,7 @@ status: unverified
 ## 02:30 to about 02:37 - PR integration pass (DONE)
 
 - 02:30 PT, pr-integration-0245 - done (NON-batch pass, checker RUN: NOT DUE, next batch 03:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 0 merges, 0 comments, 0 PRs opened. Records PRs #807 (18 commits beyond main; head moved +1 since the 0215 pass: the 0215 run record itself) and #804 (11; head moved +1: ticker-0204 scout partial 407ee4320) await the 03:00 batch, both CLEAN; #717 conflicting on the action-log only, conflict set unchanged; #425 still owner-gated OD-20261108-01 (age 14 days), re-verified CLEAN, no new comment. #755/#754/#713 still conflicting on the resource-collection INDEX (comments stand); #753 superseded by merged #774, #711 by #719, #751 duplicates #715. Sweep clean, 10 open PRs all decided. Record: pr-integration/0245-run.md.
+
+## 02:32 to about 02:39 - Tool development pass (DONE)
+
+- 02:32 PT, tool-development-0232 - done (issue #809 implemented, PR #810 open: in-repo held-patches register plus _tools_/held_patches.py step-2 check; 16/16 fixture assertions on isolated /tmp scratch, tree_check exit 0; issue #809 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/0232-run.md.
