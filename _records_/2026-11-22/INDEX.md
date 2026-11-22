@@ -28,3 +28,7 @@ status: unverified
 ## 00:32 to about 00:50 - Tool development pass (DONE)
 
 - 00:32 PT, tool-development-0032 - done (issue #726 implemented, PR #808 open: section 3 of the queue design now specifies _queue_/completed/ completion markers; changelog 0.32.0; 36/36 fixture assertions on isolated /tmp scratch copies, run twice; issue #726 commented). Own PRs first: #751 superseded by merged #715, no author action; #425 still owner-gated on OD-20261108-01, no action. Slack DM sync follows the push. Record: tool-development/0032-run.md.
+
+## 00:45 to about 01:00 - PR integration pass (DONE)
+
+- 00:45 PT, pr-integration-0100 - done (NON-batch pass, checker RUN: NOT DUE, next batch 03:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 1 merge (#808 docs queue-design completed/ markers, Refs #726, squash 2e0f19fe), 2 comments (#717 conflict set shrank two files to one, action-log only; #425 re-verified CLEAN vs new main). 0 records PRs opened. Records PRs #807 (7 commits beyond main) and #804 (10) await the 03:00 batch, both CLEAN vs new main; #717 conflicting on the action-log only; #425 still owner-gated OD-20261108-01 (age 14 days), escalation stands from 2026-11-07. #755/#754/#713 still conflicting on the resource-collection INDEX (comments stand); #753 superseded by merged #774, #711 by #719, #751 duplicates #715. Sync-back for #808 deferred (standing reverse-bundle deferral, owner go-ahead pending; local repo not on main). Slack DM sync posted for the #808 merge. Sweep clean, 11 PRs seen, 0 unprocessed. Record: pr-integration/0100-run.md.
