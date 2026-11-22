@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T06:37:56Z
-version: 0.31.0
+modified: 2026-11-22T08:46:00Z
+version: 0.32.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -104,12 +104,53 @@ _queue_/
   inbox/            - pending units, one file per unit
   claimed/          - units under execution, plus the device token
   done/             - finished units with their result blocks
+  completed/        - completion markers for units closed in a detached worktree (live-only state, never committed; see below)
 ```
 
 Unit file names are `<unit-id>.md` where the id is
 `<regular-id>-<cycle>` and cycle is the local date and hour of the
 producing cycle, for example `vip-2026-10-28-1900.md`. Names stay
 unique across days without a central counter.
+
+### Completion markers (`completed/`)
+
+A unit closed in a detached worktree leaves its done record in that
+worktree, so the main checkout's inbox still holds the unit and the
+next pass would re-execute it (issue #438). The closing therefore
+also records a small marker in the main checkout's `_queue_/completed/`
+(`_tools_/queue.py` `record_completion`, called by the complete path
+and by the dead-letter path; best effort - a write failure warns but
+never fails the closing itself).
+
+A marker is frontmatter only - `unit`, `status`, `finished_at`,
+`executor` - because the full result lives in the done record; the
+marker only has to answer "did this unit already close somewhere".
+A marker suppresses the inbox copy only when it parses, names its
+own unit, and carries a closing status; a file that fails any of
+those suppresses nothing, so a half-written record can never hide
+fresh work. `next`, `claim`, `sync` and `plan` treat a valid marker
+exactly like a local done record, and sync production also blocks a
+fresh unit for a slot whose closing is visible only as a marker
+(issue #466).
+
+Markers are live-only pool state, like the device token and the
+blockers: `_queue_/.gitignore` excludes `completed/`, so markers are
+never committed and never reach the records branches. `sync` reaps a
+marker once the unit's done record lands in the local pool - the
+delivery caught up - or after 168 hours (7 days,
+`COMPLETED_STALE_HOURS`). A valid marker older than 168 hours with
+no local done record is reported as lost (issue #563): the delivery
+never carried that closing, so the retro can triage the named unit
+instead of counting one more bare integer, and the suppression
+lapsing makes the gap visible instead of hiding it behind a stale
+file.
+
+The two stranded units of issue #726 - `harvest-2026-11-11-1003`
+and `zombie-invasion-zombie-2026-11-10-014` - have no full unit file
+in the live pool's `done/` and no live marker: their markers lapsed
+under the 168-hour rule, so their closings count as lost to the pool
+under issue #563. The marker-count discrepancy this surfaced is
+tracked by issue #735.
 
 ## 4. Unit schema
 
@@ -1014,6 +1055,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.32.0, 2026-11-22 - section 3 specifies the `_queue_/completed/` completion markers (issue #726): the marker's purpose (issue #438), its four fields, the validity rule, the readers that treat a marker like a local done record, the live-only status, and the sync reaping rule (168 hours, lost closings reported per issue #563). No tool change: `queue.py` already implements all of it; the design document never mentioned the directory.
 - 0.31.0, 2026-11-21 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606; renumbered from 0.23.0, issue #739): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The entry was first labeled 0.23.0 and collided with the R15 entry (PR #715) that already claims 0.23.0; this change renumbers it to the next free version and bumps the frontmatter from its stale 0.17.0 to 0.31.0.
 - 0.30.0, 2026-11-21 - section 4 states the VIP expiry rule explicitly (issue #733): a VIP unit staged for a reset opens that reset day and expires at the next reset, so expires_at is planned_for + 24h; the 2026-11-19T02:00:00Z expiry on vip-2026-11-17-1800 is correct and the ticker-2034 flag is refuted. No tool change: the daily-reset branch already computes planned_utc + 1 day.
 - 0.29.0, 2026-11-21 - section 11 gains rule R21 (worktree-create base check, issue #709): `pass_worktree.py create` with an explicit `--base` reuses an existing branch only when its tip is the base and refuses a stale branch, exit 2, naming both tips, so a pass never decides from a stale main it did not ask for; without `--base` the checkout-as-is semantics stand.
