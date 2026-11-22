@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T00:22:29Z
+modified: 2026-11-22T03:22:00Z
 level: L0
-version: 1.1.0
+version: 1.2.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -155,3 +155,166 @@ worked first attempt; the fullscreen precondition (Issue
   (scout-2026-11-20, successor seq 3 in inbox); the
   midday pass (scout-midday-2026-11-21-0700) is in the
   inbox.
+
+### Arms Race tab, read live about 17:11 local
+
+- Phase "Base Building", Contest Segment Lv.29-30,
+  00:49:57 left. Tier chests labelled 2,360 / 4,800 /
+  11,800 above thresholds 6,250 / 12,500 / 30,000. Star
+  points 0; chest counter 0/2. Scoring paths: Building
+  Power +1pt +1 star; 1-min Construction Speed-up +10;
+  Buy Packs containing Diamonds (1 Diamond) +30 - the
+  diamond path is a red-line spend, never taken. Own row
+  #2110 [AP3x]Bears Lair, rank 11, score 400; row above
+  #2112 [FLow]LuLLu, rank 10.
+
+### Base "NEW" megaphone - RESOLVED, read live about 17:12 local
+
+- The gold megaphone icon (bottom centre-right, grounded
+  684,857) opens Chat on the Alliance tab with the
+  Alliance Announcement popup. Announcement 2026-11-21
+  16:09:35 from MesutCLK Apex: THP and Main Team
+  screenshots for the weekly check-in, before reset.
+  Comment(1), 1 like. Banner "Leader calls for enabling
+  notifications for crucial Alliance news." with an Open
+  button - NOT tapped (owner action). Chat tabs World /
+  Alliance / Moments / Private (red badge 3); sub-tabs
+  Chat / Alliance Announcement (red dot). Top bar carries
+  a "NEW!" badge on an icon at top right next to the gear
+  - identity unread, unknown item.
+
+### Mail categories, read live about 17:12 local
+
+- Battle Report (red dot), Alliance (gift icon -
+  claimable), Event (gift icon - claimable), System
+  (avatar thumbnail), Regular (red dot), In-app Purchases
+  (red dot), Favorite. Footer: mails older than 30 days
+  are automatically deleted. All dots and gifts route to
+  the mail unit; scout claims nothing.
+
+## Coverage update (ticker-1704, about 17:14 local)
+
+- Surfaces walked this unit: Arms Race tab, base
+  megaphone (resolved), chat, mail categories. Items
+  observed this reset day: 94 (67 + 27). Red dots seen
+  this unit: 8, all explained (Bingo 1 carried, Private
+  3, Alliance Announcement 1, mail 3); unexplained red
+  dots: 0. Unknown items: 1 new (Chat top-bar NEW! icon);
+  1 still open (the 00:00:51 countdown from the chain
+  head). Not walked yet: store, alliance panel and
+  station, VIP, passes, daily missions, world map, duel
+  and radar. The chain continues (scout-2026-11-20,
+  successor seq 4 to be enqueued).
+
+## Pass scout-2026-11-20 executed, unit ticker-1904, Mall top level + 2 tabs
+
+### Base screen, read live about 19:13 local
+
+- Level 30, power 149,653,371. Food 752.7M, iron 1.1G, coins
+  102.4M, diamonds 17.72K, stamina 89, cart 5,246. March
+  Queues 0/3. Events badge 1, VS "Calculating.", Alliance
+  Assembly countdown 22:45:00 (22:40:3x on exit). Radio badge
+  1, Alliance / Mail / Inventory red dots, 99+ chest badge
+  bottom right above BASE (identity not re-verified this unit
+  - unexplained). "Build: Oil Well (0/1)" banner. Toast
+  "Important: President HawksMav appointed...". Breaking News
+  ticker plus two chat lines. Framing note: the game canvas
+  renders wider than the 763-wide window; right-column icons
+  and the rightmost Mall tab are cut at the right edge.
+
+### Mall top level, read live about 19:15 local
+
+- Tabs: Official Event (red dot), Weekly Deal, Super Monthly
+  Pass, Weekly Pass, Diamond, Gold Bullion Mall (name
+  truncated at the right edge, presumed not verified).
+  Headline "Visit the Last War Store for more free rewards!".
+  Carousel: FREE GIFT card, FREE TOMORROW card (x5 / x5 / x5),
+  "Claim points and redeem great rewards" card. Go button, two
+  page dots. Nothing claimed.
+
+### Weekly Deal tab, read live about 19:18 local
+
+- Period 2026-11-16 00:00:00 to 2026-11-22 23:59:59. Valor
+  Badge (Epic) $99.99, Base Upgrade (Epic) $19.99, UR Set
+  (Elite) $49.99, each 1 purchase available. More rows below
+  the fold, unread. All paid; nothing bought.
+
+### Super Monthly Pass tab, read live about 19:20 local
+
+- Monthly Pass, 30 days. Squad 4 Lv.20 "Unlock an extra
+  squad!". Daily Pickup: 100 x1, 50 x2, gold card x2, 5m
+  speed-up 60, iron 200. Legendary badge. Get Now +2500 red
+  crystal plus five items x1, +250. Buy x1 and Switch buttons.
+  Nothing bought. Back arrow returned to the base screen.
+
+## Coverage update (ticker-1904, about 19:21 local)
+
+- Surfaces walked this unit: base (re-read), store-top,
+  store-weekly-deal, store-monthly-pass. Items observed this
+  reset day: 130 (94 + 36). Red dots seen this unit: 7,
+  explained 6, unexplained 1 (the 99+ chest badge). Unknown
+  items: 1 new (Gold Bullion Mall tab name truncated); 2 still
+  open (the 00:00:51 countdown, the Chat top-bar NEW! icon).
+  Not walked yet: remaining Mall tabs, alliance panel and
+  station, VIP, passes, daily missions, world map, duel and
+  radar. The chain continues (scout-2026-11-20, successor
+  seq 4 to be enqueued).
+
+### Mall tabs, read live about 19:38-19:41 local (ticker-1934)
+
+- Tab row, 7 tabs: Official Event, Weekly Deal, Super
+  Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall,
+  Hot Sale Packs. Hot Sale Packs sits off the right edge
+  until the row is scrolled left.
+- Official Event (HOT DEALS): carousel "Visit the Last
+  War Store for more rewards!" and "Claim points and
+  redeem great rewards - POINTS 1000" with a Go button
+  (external store, not tapped); ticker "Thank You Gift:
+  The rumor turns out to be true!"; red dot on the HOT
+  DEALS header (promo marker).
+- Weekly Pass: "Weekly Pass rewards reset at 18:00:00";
+  Free Supply seen (passes unit owns the claim,
+  auto-claimed this reset day per ticker-1834);
+  Legendary "Take All $19.99" (Instant Gain 500 x5, red
+  gem 2.5K, purple chest x1) - red-line, never tapped;
+  S2 Drone Components Weekly Pass $4.99 (Legendary,
+  7 days, daily drone component x1, total x7); S1 Drone
+  Parts Weekly Pass $4.99 (Epic, 7 days, daily gear
+  x15, total x105).
+- Diamond: "Initial Buy Reward - Enjoy Double Diamonds",
+  all packs x2: 10000 $99.99 (+1000), 5000 $49.99
+  (+500), 2000 $19.99 (+200), 1000 $9.99 (+100),
+  500 $4.99 (+50), 100 $0.99 (+10, partially visible).
+  All paid, nothing free.
+- Gold Brick Mall: "Extra 5% Bonus"; packs x500 $4.99
+  (+Free Gift x500), x1000 $9.99 (+Free Gift x1000),
+  x100000 $999.9 (+Free Gift x5000), x50000 $499.9
+  (+Free Gift x2500); further rows below fold, amounts
+  unread. All paid.
+- Hot Sale Packs: "Packs sold out", empty.
+- Weekly Deal and Super Monthly Pass tabs seen but not
+  opened. Floating chest icon at the Mall left edge
+  (about 35,825 image coordinates) unidentified - new
+  unknown item.
+- Base HUD at entry: power 149,653,371; food 752.7M;
+  iron 1.1G; coins 102.4M; diamonds 5,246; stamina 93;
+  March Queues 0/3; Build Oil Well (0/1); Alliance
+  Assembly 22:22:03 countdown; VS "Calculating."
+
+## Coverage update (ticker-1934, about 19:41 local)
+
+- Surfaces walked this unit: mall (all 7 tabs). Items
+  observed this reset day: 171 (130 + 41 Mall). Red dots
+  seen this unit: 6, all explained (base gift box,
+  Events, radar dish, Mail, Inventory, HOT DEALS
+  header); unexplained red dots: 0. Unknown items: 1
+  new (Mall floating chest icon); 2 still open (the
+  00:00:51 countdown from the chain head, the Chat
+  top-bar NEW! icon). Resolved this unit: the seq 3
+  unknown item (Gold Bullion Mall tab name truncated) is
+  the Gold Brick Mall tab (banner read live). Not walked
+  yet: alliance panel
+  and station, VIP, passes, daily missions, world map,
+  duel and radar; Weekly Deal and Super Monthly Pass
+  tabs unopened. The chain continues
+  (scout-2026-11-20, successor seq 5 in inbox).
