@@ -1,0 +1,27 @@
+{
+ "passes": {
+  "status": "done",
+  "at": "2026-11-21T18:44:57-08:00",
+  "note": "Hot Deals Gear Master Pack claimed (chest x1, ore 1500); Free Supply auto-claimed; no owned pass pickup"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-21T15:09:41-08:00",
+  "note": "Both VIP items already claimed this reset day, verified live (freebie countdown 02:52:56, login chest empty)"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-21T22:28:00-08:00",
+  "note": "Event Claim All claimed 3 mails (Arms Race, Bounty Hunter, Duel Weekly Victory); Alliance verified empty"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-21T18:16:54-08:00",
+  "note": "Claimed 747 Regular + 130 Premium gifts"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-21T18:52:26-08:00",
+  "note": "9 tasks Mega Deployed and running; 0 claims; 0 assists (no assistable rows)"
+ }
+}
