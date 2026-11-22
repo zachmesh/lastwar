@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:13:58Z
-version: 1.9.0
+modified: 2026-11-22T10:37:38Z
+version: 1.10.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -73,3 +73,6 @@ in this repository.
   profiled and scheduled under the discovery protocol, the
   scout_diff tool of Phase 2, and the learning and knowledge
   hardening protocol.
+- [Held patches register](held-patches.md) — the in-repo record of tool
+  patches held outside the repository, consulted by the tool-developer
+  step-2 in-flight check before re-implementing an issue (issue #809).
