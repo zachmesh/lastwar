@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-12T10:40:00Z
-version: 0.17.0
+modified: 2026-11-22T06:37:56Z
+version: 0.31.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -143,7 +143,7 @@ colon-free except timestamps, as elsewhere in this repository.
 
 Priority classes from the current regulars.
 
-- **1 expiry-critical** - vip (expires at the trade-day reset, absolute 02:00 UTC), passes when
+- **1 expiry-critical** - vip (expires at the next reset after its slot, absolute 02:00 UTC - the slot opens its reset day, so expires_at is planned_for + 24h), passes when
   a free pack carries its own countdown, events on a check-in day
   boundary.
 - **2 windowed** - arms-race (points only count inside the live phase),
@@ -661,6 +661,21 @@ one to the audit cause it answers.
   carries its walk instructions. A unit that is not a sweep pass,
   or a sweep unit with no chain sequence, keeps the generic body.
 
+- **R21 - create refuses a stale existing branch when --base is given (issue #709).**
+  `pass_worktree.py create --branch B --base R` reuses an existing
+  branch B only when B's tip is R; a branch at any other tip is
+  refused, exit 2, naming both tips, so a pass never decides from
+  a stale main it did not ask for. Ticker-1047 asked for a fresh
+  main worktree and got the stale branch at cc58a605c4 (pre-#704
+  main) instead of current main 96520ae0d4, because create checked
+  out any existing branch and ignored --base; the pass caught it
+  only by verifying the base before deciding, and the defect
+  recurred at ticker-1334 on the same shape. Without --base the
+  checkout semantics stand - an existing branch is checked out
+  as-is, which is how a pass re-opens a records branch - and a
+  branch already at the base is reused and reported, so a
+  re-created worktree after a removal is not an error.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -999,13 +1014,15 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.31.0, 2026-11-21 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606; renumbered from 0.23.0, issue #739): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The entry was first labeled 0.23.0 and collided with the R15 entry (PR #715) that already claims 0.23.0; this change renumbers it to the next free version and bumps the frontmatter from its stale 0.17.0 to 0.31.0.
+- 0.30.0, 2026-11-21 - section 4 states the VIP expiry rule explicitly (issue #733): a VIP unit staged for a reset opens that reset day and expires at the next reset, so expires_at is planned_for + 24h; the 2026-11-19T02:00:00Z expiry on vip-2026-11-17-1800 is correct and the ticker-2034 flag is refuted. No tool change: the daily-reset branch already computes planned_utc + 1 day.
+- 0.29.0, 2026-11-21 - section 11 gains rule R21 (worktree-create base check, issue #709): `pass_worktree.py create` with an explicit `--base` reuses an existing branch only when its tip is the base and refuses a stale branch, exit 2, naming both tips, so a pass never decides from a stale main it did not ask for; without `--base` the checkout-as-is semantics stand.
 - 0.28.0, 2026-11-21 - section 11 gains rule R20 (sweep ledger-walk task text, issue #748): the production path appends the standing ledger-walk task section to each pre-reset sweep pair body (first/final pass by chain_seq), so a staged pair carries its walk instructions instead of the generic body; slot and reset times come from the unit's own fields and the ledger line count is read live from the ledger.
 - 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue #744): `plan` and `sweep` report a refused window (expired, duplicate chain step, stale roster) under its own skip list instead of counting it as already present, so already_present equals the units the pool actually holds for the staged windows; the roster-freshness refusal now carries the refused window's unit id so callers can classify it.
 - 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): `enqueue` refuses a chain successor when the chain's latest recorded `event_ends_at` is past, so a dead event's chain stops minting instead of seeding units for it; no reading recorded means no signal and the mint proceeds as before.
 - 0.25.0, 2026-11-21 - section 11 gains rule R17 (doomed-probe zombie preference, issue #746): `next --probe` hands out a queued zombie chain unit ahead of the overlay steering and the normal pick, so a probe pass burns the re-minted chain unit instead of a scout unit; with no zombie unit queued, actionable and inside budget, the probe falls through to the normal pick.
 - 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.
 - 0.23.0, 2026-11-21 - section 11 gains rule R15 (expired-window and chain-step dedupe, issue #712): the production path refuses a window whose computed expiry is already past and a reset-anchored slot whose chain step the pool already holds at another slot, so plan no longer stages a stillborn zero-sweep unit for yesterday's slot or a second sweep pair at the new geometry beside the old one; both refusals are recorded and reported by plan and sweep.
-- 0.23.0, 2026-11-18 - section 12 synced to the [120, 60] sweep geometry (PR #614, Refs #606): the pair stages at 120 and 60 minutes before the reset instant (16:00 and 17:00 PST in winter, 17:00 and 18:00 PDT in summer), not 90 and 30. The frontmatter version was stale at 0.17.0 while the changelog already ran to 0.22.0; the frontmatter bump to 0.23.0 is dropped on the 2026-11-21 rebase per the integrator review (the landed R15 entry already claims 0.23.0), so the frontmatter staleness stands for a follow-up.
 - 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
 - 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
 - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.

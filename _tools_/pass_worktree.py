@@ -32,13 +32,18 @@ Four commands, standard library only:
            name must be lowercase kebab-case (letters, digits,
            hyphens, dots). --branch defaults to the name; when
            the branch already exists it is checked out instead
-           of created. --base is the start point for a new
-           branch (default HEAD). Any --root or target under
-           the system temp directory is refused, and a name
-           that already exists under the root is refused, so
-           a second create is a clean error, never a duplicate.
-           Exit 0 on success, 1 when git fails, 2 on a usage
-           or input error (bad name, /tmp target, not a repo).
+           of created, unless --base is given: then the branch
+           is reused only when its tip is the base, and a branch
+           at any other tip is refused, exit 2 (issue #709 - a
+           stale branch checked out instead of the requested
+           base hands a pass stale main). --base is the start
+           point for a new branch (default HEAD). Any --root or
+           target under the system temp directory is refused,
+           and a name that already exists under the root is
+           refused, so a second create is a clean error, never
+           a duplicate. Exit 0 on success, 1 when git fails, 2
+           on a usage or input error (bad name, /tmp target,
+           not a repo, stale branch against --base).
   sync   - refresh a pass worktree's ``_activities_`` and
            ``_conventions_`` trees from the fresh tip of main,
            so an executor never plays against a superseded
@@ -234,12 +239,25 @@ def worktree_entries(main):
     return entries
 
 
-def branch_exists(main, branch):
+def resolve_commit(main, ref):
+    """Full sha of `ref` as a commit, or raise ToolError."""
+    proc = run_git(["rev-parse", "--verify", ref + "^{commit}"], cwd=main)
+    if proc.returncode != 0:
+        raise ToolError(
+            "cannot resolve ref %r: %s" % (ref, proc.stderr.strip())
+        )
+    return proc.stdout.strip()
+
+
+def branch_head(main, branch):
+    """Full sha of the branch tip, or None when the branch is absent."""
     proc = run_git(
-        ["show-ref", "--verify", "--quiet", "refs/heads/" + branch],
+        ["rev-parse", "--verify", "refs/heads/" + branch + "^{commit}"],
         cwd=main,
     )
-    return proc.returncode == 0
+    if proc.returncode != 0:
+        return None
+    return proc.stdout.strip()
 
 
 def git_blob_sha(data):
@@ -401,7 +419,33 @@ def cmd_create(args, main, root):
         raise ToolError("worktree path already exists: %s" % target)
     branch = validate_branch(args.branch or name)
     root.mkdir(parents=True, exist_ok=True)
-    if branch_exists(main, branch):
+    existing_head = branch_head(main, branch)
+    base_head = None
+    if existing_head is not None and args.base:
+        # An explicit --base asks for a branch starting at the
+        # base: an existing branch at any other tip is a stale
+        # branch the caller did not ask for (issue #709 -
+        # ticker-1047 asked for a fresh main worktree and got
+        # the stale branch at cc58a605c4, pre-#704 main, instead
+        # of current main 96520ae0d4), so refuse rather than
+        # check it out silently. A branch already at the base
+        # is reused, and the reuse is reported below.
+        base_head = resolve_commit(main, args.base)
+        if existing_head != base_head:
+            raise ToolError(
+                "refusing to check out existing branch %s at %s: "
+                "--base %s resolves to %s (issue #709 - the branch "
+                "is stale, delete it with `git branch -D %s` or use "
+                "a fresh branch name)"
+                % (
+                    branch,
+                    existing_head[:12],
+                    args.base,
+                    base_head[:12],
+                    branch,
+                )
+            )
+    if existing_head is not None:
         cmd = ["worktree", "add", str(target), branch]
     else:
         cmd = ["worktree", "add", str(target), "-b", branch]
@@ -412,10 +456,39 @@ def cmd_create(args, main, root):
         print(proc.stderr.strip(), file=sys.stderr)
         return 1
     if args.format == "json":
-        print(json.dumps({"path": str(target), "branch": branch}, indent=2))
+        report = {
+            "path": str(target),
+            "branch": branch,
+            "branch_existed": existing_head is not None,
+        }
+        if existing_head is not None:
+            report["branch_head"] = existing_head
+        if args.base:
+            report["base"] = args.base
+            if base_head is not None:
+                report["base_head"] = base_head
+        print(json.dumps(report, indent=2))
     else:
         print(str(target))
         print("branch %s" % branch)
+        if existing_head is not None:
+            if args.base:
+                print(
+                    "branch %s already existed at %s, matches "
+                    "--base %s %s"
+                    % (
+                        branch,
+                        existing_head[:12],
+                        args.base,
+                        base_head[:12],
+                    )
+                )
+            else:
+                print(
+                    "branch %s already existed at %s (no --base "
+                    "given; checked out as-is)"
+                    % (branch, existing_head[:12])
+                )
     return 0
 
 
