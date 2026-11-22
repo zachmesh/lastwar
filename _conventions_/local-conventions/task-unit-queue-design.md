@@ -143,7 +143,7 @@ colon-free except timestamps, as elsewhere in this repository.
 
 Priority classes from the current regulars.
 
-- **1 expiry-critical** - vip (expires at the trade-day reset, absolute 02:00 UTC), passes when
+- **1 expiry-critical** - vip (expires at the next reset after its slot, absolute 02:00 UTC - the slot opens its reset day, so expires_at is planned_for + 24h), passes when
   a free pack carries its own countdown, events on a check-in day
   boundary.
 - **2 windowed** - arms-race (points only count inside the live phase),
@@ -1014,6 +1014,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.30.0, 2026-11-21 - section 4 states the VIP expiry rule explicitly (issue #733): a VIP unit staged for a reset opens that reset day and expires at the next reset, so expires_at is planned_for + 24h; the 2026-11-19T02:00:00Z expiry on vip-2026-11-17-1800 is correct and the ticker-2034 flag is refuted. No tool change: the daily-reset branch already computes planned_utc + 1 day.
 - 0.29.0, 2026-11-21 - section 11 gains rule R21 (worktree-create base check, issue #709): `pass_worktree.py create` with an explicit `--base` reuses an existing branch only when its tip is the base and refuses a stale branch, exit 2, naming both tips, so a pass never decides from a stale main it did not ask for; without `--base` the checkout-as-is semantics stand.
 - 0.28.0, 2026-11-21 - section 11 gains rule R20 (sweep ledger-walk task text, issue #748): the production path appends the standing ledger-walk task section to each pre-reset sweep pair body (first/final pass by chain_seq), so a staged pair carries its walk instructions instead of the generic body; slot and reset times come from the unit's own fields and the ledger line count is read live from the ledger.
 - 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue #744): `plan` and `sweep` report a refused window (expired, duplicate chain step, stale roster) under its own skip list instead of counting it as already present, so already_present equals the units the pool actually holds for the staged windows; the roster-freshness refusal now carries the refused window's unit id so callers can classify it.
