@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T06:24:00Z
+modified: 2026-11-22T10:20:00Z
 level: L0
-version: 1.4.0
+version: 1.9.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -463,3 +463,159 @@ worked first attempt; the fullscreen precondition (Issue
   news." with an Open button - NOT tapped. Full detail
   in mail-rewards/2236-queue-run.md. Seq 7 still has
   to identify the icon's function by tapping it.
+
+## Scout section (ticker-2304, about 23:24-23:33 local, chain seq 7)
+
+- Chat NEW! icon IDENTIFIED: the notepad icon at the top right of the
+  Chat screen (about 852,59, between the compose (+) icon and the
+  gear) opens the NEWS CENTER. Tabs News (NEW!), World, Alliance;
+  sub-tabs System News / Guides (NEW!). Four cards, all NEW!:
+  "1604 ROMO: Across borders, we are one family." [15580 likes];
+  "#2162 | Glitch: We Can Never Have Enough Speedups" [21898];
+  "1.1 million registrations achieved - claim 8,000 Gold B..."
+  (1,100,000 image); "#1574 | From the Battlefield to the Dance
+  Floor: A Player-Run...". No card was tapped (observe-only; the
+  registrations card is claim-adjacent). The red NEW! badge on the
+  Chat notepad icon did NOT clear after opening News Center once -
+  it was still present on return to Chat.
+- Chat screen read live: tabs World (red dot), Alliance (selected,
+  red dot), Moments (red dot), Private (red badge 3); sub-tabs
+  Chat / Alliance Announcement (red dot). Announcement popup
+  "AP3X | TANK SQUAD GEAR GUIDE", 2026-11-21 21:14:06 StarFall,
+  1 like. Leader banner "Leader calls for enabling notifications
+  for crucial Alliance news." with an Open button - NOT tapped.
+  Messages: Jerry Apex (VIP 13, R4, Lv.30) "Thank you for the
+  train khal" and "Damn it teeemo you left me behind". A
+  message long-press menu (Copy / Translate / Reply / Report)
+  was open on entry to Chat - nothing in it was tapped; it was
+  dismissed by tapping the announcement X. The megaphone tap
+  opened Chat on the FIRST tap this unit (seq 6 needed two
+  taps and a slow open); the chat ticker tap only scrolled the
+  ticker.
+- Base re-reads (entry about 23:24, close about 23:32): power
+  149,417,850 (unchanged across the unit; down from 149,653,371
+  at 22:14); food 762.6M, iron 1.1G, coins 103.9M, diamonds
+  6,426 (up from 5,246 at 22:14, +1,180 - claimed by another
+  unit, not this observe-only unit). Lightning counter 107 at
+  entry, 108 at close (+1, normal regen; the OCR "114" read was
+  a misread of the nearby 1/4 hammer counter). Hammer 1/4 (red
+  dot), flask 2/2. VS countdown 18:43:04 at entry, 18:41:25 at
+  close - a 99-second drop over about 8 minutes of wall time,
+  NOT real-time ticking (seq 6 read it ticking in real time);
+  discrepancy unexplained, recorded, not asserted. Build: Oil
+  Well (0/1), unchanged. Chat ticker top line changed during
+  the unit to "President HawksMav appointed Aratz as Secretary
+  of Interior!". Resource bubbles ready on many buildings
+  (harvest owns). Base megaphone NEW! still present at close.
+- 99+ badge: ABSENT at entry and at close (it was present at
+  22:25 per seq 6). Cleared sometime between 22:25 and 23:24,
+  most plausibly by opening Chat with the Alliance tab selected
+  (consistent with the 2026-11-09 resolution: unread Alliance
+  chat count, clears on opening the Alliance tab); the exact
+  clearing unit is unrecorded.
+- Red badge above WORLD: read 10 at entry, 3 at close. Identity
+  still open; leading candidate is an unread-chat count that
+  dropped when Chat was opened. Counted as the unit's one
+  unexplained red dot.
+- NOT seen this unit: the red target icon (no crosshair icon on
+  the base at close; its countdown was not re-read - world map
+  unwalked); the green 19-hour countdown timer (not visible on
+  the base at close); the Mall floating chest icon (Mall not
+  opened); the orange terminal / daily-missions entry (no
+  distinct orange terminal icon identifiable on the left edge);
+  the passes entry (gold trophy cup confirmed decorative by
+  seq 6; no other entry found).
+
+## Coverage update (ticker-2304, about 23:33 local)
+
+- Surfaces walked this unit: base (re-read), Chat, News Center.
+  Items observed this reset day: 288 (266 + 22). Red dots seen
+  this unit: 18, explained 17; unexplained red dots: 1 (the
+  badge above WORLD, 10 to 3). Unknown items: 3 still open
+  (Mall floating chest, orange terminal / daily-missions entry,
+  passes entry); 1 resolved (Chat NEW! = News Center); 2 not
+  re-read (red target countdown, green 19h timer). Not walked
+  yet: passes, daily missions, world map, duel and radar. The
+  chain continues (scout-2026-11-20, successor seq 8).
+
+## Pass scout-2026-11-20 executed, unit ticker-2334, daily missions found, duel and radar walked
+
+- Session about 23:38 to 23:47 local, computer session cc-66. Observe-only throughout. Game in window mode (763x1050, window 105986).
+- Base re-reads (entry about 23:38, close about 23:47): power 149,417,850 (unchanged); food 762.6M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 112 at entry, 113 at close (image reads; OCR "114"/"130" are misreads); hammer 1/4 (red dot), flask 2/2; VS countdown 18:19:36 at entry, 18:13:5x at close (irregular ticking, unexplained); Build: Oil Well (0/1); resource bubbles ready on many buildings; ticker lines turned over during the unit.
+- WORLD/BASE toggle badge: 5 at entry, 8 at close - rises as new chat lines arrive, fell 10 to 3 in seq 7 after Chat was opened; leading identification now unread-chat count, confirmation pending (open Chat and watch it drop). March Queues bar gift icon carries a red badge 2 on the world map - identity open (no zombie kills since Nov 14).
+- Passes: MY PROFILE opened via the portrait - Lv.30 [AP3x]Bears Lair, power 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110; gifts flower 12, gift box 88, trophy 11; Moments "No posts found."; Record (red dot), Account, Settings, Rankings, Follow. No passes entry on the profile. Gold cup not tapped per the unit window. Passes entry still unidentified.
+- Daily missions entry FOUND: the yellow/orange terminal device icon at the base left edge bottom (normalized about 63,865, red dot) opens the MISSION panel. MISSION panel, Daily Tasks tab (red badge 4): Next Refresh 18:17:57 at open, 18:17:40 at close (ticks in real time); points bar at 0, chests at 40 / 80 / 120 / 160 / 200; four complete tasks with Claim buttons NOT tapped (Daily Login 1/1, Donate to Alliance Tech 5/5, Greet Visitors 3/3, VIP Activated 1/1 - 70 star points waiting, first chest at 40); a fifth task is cut off below the fold, unread.
+- World map: centred on the home base; March Queues 0/3 with an Add Queue button (not tapped); ally base [AP3x]Roronoa zo... at the right edge; no red target crosshair icon; no green 19h timer visible.
+- Duel: ALLIANCE DUEL walked. Today's Theme (red badge 3), Infinite Roulette, Duel Progress. "Enemy Buster" - Event Ended. Score 1,800,000. Chests (each NEW): 8,020 / 40,000; 9,530 / 150,000; 18,100 / 540,000. Points actions: UR Trade Truck +300,000; UR Secret Task +225,000; 1-min speedups +150 each; Lv.10 rival unit kill +165. Go-to arrows not tapped.
+- Radar: dish icon badge 8 RESOLVED - the screen footer reads "8 task rewards can be claimed" with a Claim All button (not tapped). Radar Lv.13, 533, 100%; tasks 2/40; "12 Radar Task(s) will be restored in 00:54:08." Eight pins visible (blue person, purple skull with red dot, two ally bases, blue "0" with red dot, hero portrait, orange, green skull with red dot, blue pickaxe). No pin tapped.
+- Event Reminder: the base megaphone (normalized about 756,281) opens the EVENT REMINDER, not Chat - tapped twice, same popup. Two NEW! events: "3v3 Brawl" (deploy three squads in best-of-three battles) and "Champion Duel" (cross-warzone clashes) - Proceed buttons NOT tapped. Filed as an Issue (idea class) from this unit; no _activities_ profile exists for either yet.
+- Chat / News Center: entry not found this unit - the ticker tap only scrolls. The News Center NEW! clearing check was NOT performed; deferred to seq 9.
+- NOT seen this unit: the red target countdown (not re-read); the green 19-hour timer (not visible on base or world map home view); the passes entry; the Chat entry route.
+
+## Coverage update (ticker-2334, about 23:47 local)
+
+- Surfaces walked this unit: base (re-read), MY PROFILE, MISSION/daily tasks, world map, Alliance Duel, radar, plus the Event Reminder popup. Items observed this reset day: 318 (288 + 30). Red dots seen this unit: 24, explained 22; unexplained red dots: 2 (the WORLD/BASE badge 8, likely unread chat, confirmation pending; the March Queues gift badge 2). Unknown items: 3 still open (passes entry, News Center NEW! clearing unverified, red target countdown and green 19h timer not re-read); 2 resolved (daily-missions entry, radar dish badge 8); 2 new discoveries (3v3 Brawl, Champion Duel). Not walked yet: passes, Chat/News Center. The chain continues (scout-2026-11-20, successor seq 9).
+
+## Pass scout-2026-11-20 executed, unit ticker-2334, Chat entry found, News Center NEW! does not clear after one card
+
+- Session about 23:50 to 23:52 local, computer session cc-67. Observe-only throughout. Token held from seq 8 (lease to 23:53:36, re-acquire does not extend).
+- Chat entry FOUND (correction to seq 8): on re-entry the Chat screen was already open - the only candidate cause is seq 8's chat-ticker tap, which OPENS Chat with a slow transition; seq 8's "only scrolled" reading caught it mid-transition. The Chat entry is the chat ticker at the bottom of the base screen; allow time for the slow open, do not re-tap on the mid-transition view.
+- Chat screen read live (about 23:50): tabs World (red dot), Alliance (selected, red dot), Moments (red dot), Private (red badge 3); sub-tabs Chat, Alliance Announcement (red dot). Announcement popup still open ("AP3X | TANK SQUAD GEAR GUIDE", 2026-11-21 21:14:06 StarFall, heart 2). Leader banner with Open button (not tapped). Messages: Jerry Apex (VIP 13, R4, Lv.30) "Reply GoldenSonya: Went to WC with ape... Checks out" and "Never heard of winco".
+- News Center: notepad tap opened it. Tabs News (NEW!), World, Alliance; sub-tabs System News, Guides (NEW!). Four cards: ROMO [15596, was 15580], Glitch [21905, was 21898], 1.1M registrations (claim-adjacent, NOT tapped), Dance Floor. The ROMO card was tapped and its article READ (2026-11-16 10:28:20, Blue Doll, Server 1604 / ROMO, 117475 views, 15596 likes, 278 shares, 271 comments). A Cookiebot consent popup appeared (Deny / Customize / Allow all) - NOT tapped.
+- NEW! clearing check DONE: after reading one card, the NEW! badges are STILL present on the News tab, the Guides sub-tab, and the Chat notepad icon. Reading one card does NOT clear the News Center NEW! - clearing presumably needs every NEW! item read.
+- WORLD badge CONFIRMED as unread-chat count: base close re-read 3, down from 8 at seq 8 close, after opening Chat; the residual 3 matches the Private tab badge 3.
+- Base close re-read (about 23:51): power 149,417,850 (unchanged); food 762.6M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 114 (112, 113, 114 across seq 8 and 9); hammer 1/4 (red dot), flask 2/2; VS countdown 18:08:20; Events badge 1; Build: Oil Well (0/1); Event Reminder NEW! tag still present.
+- NOT seen this unit: passes entry, red target countdown, green 19h timer, March Queues gift badge 2 (not re-checked).
+
+## Coverage update (ticker-2334, about 23:52 local)
+
+- Surfaces walked this unit: Chat, News Center, base (re-read). Items observed this reset day: 336 (318 + 18). Red dots seen this unit: 12, explained 12; unexplained red dots: 0 - the first zero-unexplained close of this chain. Unknown items: 3 still open (passes entry, red target countdown and green 19h timer not re-read, March Queues gift badge 2); 2 resolved (Chat entry, WORLD badge); 1 answered (News Center NEW! does not clear after one card). Not walked yet: passes, red target / green timer, gift badge 2, 3v3 / Champion Duel exploration (Issue #805). The chain continues (scout-2026-11-20, successor seq 10).
+
+## Pass scout-2026-11-20 executed, unit ticker-2334, Events hub mapped, gift badge resolved, 3v3 Brawl and Champion Duel explored
+
+- Session about 23:54 to 00:02 local, computer session cc-68. Observe-only throughout. Token renewed 23:52 to 00:07:45 PT (a re-acquire near expiry grants a fresh lease; a re-acquire with time left does not extend).
+- Events hub tab list MAPPED (drag the bar both ways; background drags return outcome_unknown but DO scroll - verify from the next screenshot, do not re-drag on the unknown receipt alone): The Age of Oil, Arms Race, Bingo Task, Black Market, Winter Battlefield, The Doomsday, Community - seven tabs, no passes tab. The October set (Desert Storm Battlefield, Level Swap, Wanted Boss) is gone; the bar now shows only the currently-active events. The Doomsday page: "During the event, Doom Walkers will more easily attack commanders' bases...", timer 18:06:39 at entry, 18:05:51 at close (real-time ticking); "Warzone Guardian" [B3WB]칼리아 Kalia, Total Damage: 3.0G; "Alliance Threat(0)" / "Warzone Threat(24)" tabs, "Threat Neutralized"; Ranking and Rewards buttons not opened.
+- March Queues gift badge 2 RESOLVED: the gift icon at the right end of the March Queues bar (world map, about 315,224) opens the LOOT panel "Alliance Gifts received!" - two unclaimed Doomsday Alliance Gifts. Row 1: "Lv.150 Doom Walker", lightning 0, "First Blood": gold chest x2, gold bars x1, iron 2.9M, food 2.9M, coins 1.8M, hero EXP 2.8M (last figure cut off, unit unread). Row 2: "Lv.1 Doom Elite", lightning -20, "Leader": gold chest x4, iron 7.0K, food 7.0K, coins 3.0K, hero EXP 3.0K, blue item x96. The blue Claim All button was NOT tapped (observe-only; the claims belong to the owning regular, likely events). The gift badge is the Doomsday gift count, not zombie LOOT (no zombie kills since Nov 14).
+- 3v3 Brawl explored read-only (Event Reminder Proceed opened the ARENA screen, 3v3 Brawl tab, red dot): warzones #2112 #2091 #2110 #2093; timer 7d 18:03:46 (week-long event). Podium: 1st #2093 [TF93] D1 O N E (2279 coins, 7427 likes); 2nd #2112 [AAVG] あおたろう Ao (2244, 7348 likes); 3rd #2110 [AP3x] Abyss Apex (2124, 14981 likes) - the alliance leader is 3rd. Ranks 4 to 7: 4th #2110 [B3WB] 삼촌RonMexico 125.0M power, 2114; 5th #2110 [AP3x] ItStartsWithaDream 121.1M, 2094; 6th #2112 [XCM] Soxxxxxxxxx 115.3M, 2081; 7th #2110 [FATC] Missile Apex 114.4M, 1979. Footer: 'Rank in the top 200 in "Total Hero Power" to join the arena challenge.' The user's own rank is not shown on this screen. Rewards button not opened.
+- After viewing 3v3 Brawl, its card VANISHED from the Event Reminder (only Champion Duel remained) - the reminder lists unviewed new events only; viewing one clears it from the reminder.
+- Champion Duel explored read-only (Event Reminder Proceed opened CHAMPION DUEL): tabs Match (selected), Grand Celebration (red dot), Lineup, Group; Schedule progress bar (7 nodes, at node 2). "Registration Announcement: Day 1/1", dates 11.22-11.23, countdown 0d : 18 : 02 : 45 at read (about 18 hours of registration left). Power 149.4M. Speech bubble "Please enter your champion declaration..." with a Go button (NOT tapped - that would start a registration/declaration flow). "You didn't register for this event, join us next time!" Bottom: "Not Registered" grey button, Rewards button not opened. This is an OWNER DECISION: Champion Duel registration is open for about 18 more hours and the account is not registered; entering needs the owner's call, no registration was started.
+- Base re-reads (entry about 23:54, close about 00:02): power 149,417,850 (unchanged); food 762.6M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 114 at entry, 115 at close; hammer 1/4 (red dot), flask 2/2; VS countdown 18:04:58 at the LOOT read, 18:04:28 at close, 18:03:30 on return from the Arena, 18:02:30 at the last base read (irregular ticking continues); WORLD/BASE badge 8 behind the LOOT panel, 9 at the 23:55 base read, 11 at the last base read - still rising with new chat lines, consistent with the unread-chat identification confirmed in seq 9; Events badge 1, VS red dot; Build: Oil Well (0/1).
+- The base camera re-centred after the Arena return (megaphone moved from about 756,281 to about 367,548; a tap at the stale point hit empty ground - re-ground entry points on every return to base, rule R2). The "00:00:3"-like timer at about 929,669 near the Alliance button was seen a third time, identity still open.
+- NOT seen this unit: the passes entry, the red target countdown, the green 19-hour timer.
+
+## Coverage update (ticker-2334, about 00:02 local)
+
+- Surfaces walked this unit: Events hub, world map, LOOT panel, Event Reminder, ARENA/3v3 Brawl, Champion Duel, base (re-read). Items observed this reset day: 362 (336 + 26). Red dots seen this unit: 14, explained 14; unexplained red dots: 0 - the second zero-unexplained close of this chain. Unknown items: 2 still open (passes entry; red target countdown and green 19h timer not re-read); 3 resolved (March Queues gift badge 2 = Doomsday Alliance Gifts; 3v3 Brawl and Champion Duel first reads - Issue #805 candidates now have live data); 1 owner decision flagged (Champion Duel registration open about 18 more hours, account not registered). Not walked yet: passes, red target / green timer. The chain continues (scout-2026-11-20, successor seq 11).
+
+## Pass scout-2026-11-20 executed, unit ticker-0004, passes still not found, rocket timer re-read
+
+- Session about 00:16 to 00:27 local, computer session cc-69. Observe-only throughout. Game in window mode (763x1050, window 105986).
+- Base re-reads (entry about 00:18, close about 00:26): power 149,417,850 (unchanged); food 762.6M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 119 at entry, 120 at close (115 at seq 10 close); hammer 1/4 (red dot), flask 2/2; VS red dot, Events badge 1; Build: Oil Well (0/1); two survivor "?" icons at the front door; radar dish badge 8, trucks badges 3 and 1.
+- Rocket/missile timer re-read live: 17:41:53 at entry, 17:39:41, 17:36:34, 17:36:24 at close - ticks in real time. It read 1d 02:07:38 at about 15:52 on 2026-11-21, so this is one continuous countdown now about 17.6 hours from zero (zero lands near the 18:00 reset on 2026-11-22). This RESOLVES the "green 19h timer": seq 6 read it as "green 19h countdown timer mid-right edge" at 22:13, when this countdown read about 19:46, and the rocket is the only long countdown at the mid-right edge. (The timer text reads white in this unit's screenshots; seq 6's "green" is not confirmed.) The VS countdown was not separately re-read this unit.
+- The "00:00:3"-like timer at about 929,669 near the Alliance button re-read live as 00:00:40 (fourth sighting) - a countdown of about 40 seconds that resets; identity still open.
+- Blue-building timer reads 06:23 at close (06:18, 06:19, 06:20, 06:21 across the unit) - it counts UP about 1 per minute; identity still open.
+- WORLD/BASE badge: 63 at entry, 74, 75, 87, 89 at close - still rising with new chat lines, consistent with the unread-chat identification confirmed in seq 9.
+- Red target icon: a red circular icon sits at the right edge mid-screen (normalized about 989,419, partly off-screen) - no countdown number is readable from the base view, so the red target countdown was NOT re-read this unit.
+- MY PROFILE (portrait tap): Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110; gifts flower 12, gift box 88, trophy 11; Moments "No posts found."; Record (red dot), Account, Settings, Rankings, Follow. No passes entry.
+- VIP screen (VIP13 tap): VIP13, "You've logged in 4 days in a row. Collect 120 VIP points tomorrow.", 1,662,720/2,000,000. Privileges: Crafting Speed 50.00% (NEW), Research Speed 20.00% (NEW), Activate the Mega Mode of Trade Trucks 1 (NEW), Boost Food/Iron/Coin Output 25.00% each, Construction Speed 50.00%, March Speed 15.00%, Max Units 5.00%. VIP13 Daily Freebie shows a green Claim button - NOT tapped (observe-only; the freebie belongs to the VIP regular). VIP Exclusive (Epic), Availability: 1, $99.99 price tag - NOT tapped. Bottom timer 4d 17:42:45. No passes entry on the VIP screen either.
+- Gold cup: the gold trophy at the right edge of the base (normalized about 806,676, above the Alliance button) was tapped twice at its grounded point; both taps selected the nearby Jack-o'-Carriage building instead (Lv.1, pink carriage at the far right edge), showing its decoration controls (red circular-arrow button, green up-arrow button) and panning the camera down. Tapping empty ground (normalized about 655,905) deselected it and re-centred the base both times. Nothing was moved, rotated or bought. Reading: the cup is a golden trophy monument in the base scenery (like the Eiffel Tower and Big Ben), not a tappable UI entry. The passes entry is not the gold cup.
+- NOT seen this unit: the passes entry, the red target countdown, the green 19h timer identification.
+
+## Coverage update (ticker-0004, about 00:27 local)
+
+- Surfaces walked this unit: base (re-read), MY PROFILE, VIP screen. Items observed this reset day: 390 (362 + 28). Red dots seen this unit: 16, explained 16; unexplained red dots: 0 - the third zero-unexplained close of this chain. Unknown items: 4 still open (passes entry; red target countdown not re-read; 00:00:40 Alliance timer identity open; 06:23 building timer identity open); 2 resolved (gold cup is a base decoration, not a passes entry; green 19h timer is the rocket/missile countdown). Not walked yet: passes, red target. The chain continues (scout-2026-11-20, successor seq 12).
+
+## Pass scout-2026-11-20 executed, unit ticker-0204, Record explored, red target resolved as Alliance Wars rally, passes entry resolved to shop tabs
+
+- Session about 02:08 to 02:20 local, computer session cc-79, window 105986 (window mode, never brought to front). Observe-only throughout. Token held 02:05 to 02:20.
+- Red target countdown RESOLVED, and the 00:00:40 Alliance timer with it - the same element. The red circular target icon at the right edge (about 910,657, red badge 1) carries a countdown reading 00:01:00 on the base; one tap opened ALLIANCE WARS (Rally Intel / Individual Intel tabs): rally [AP3x]Celestial88 "Rallying... 00:00:42" against a Lv.30 Doom Elite, Attack, 52km away, Count/Limit (2/5), three green "+" join slots, "Show Popup Tip" checked. The rally was NOT joined. The countdown read 00:00:44 in the observe receipt, 00:00:42 in the screenshot seconds later, and 00:00:2x on the base after returning.
+- Passes entry RESOLVED as a mislabel: the passes regular's entry is the shop - base cart icon opens HOT DEALS, Weekly Pass tab (Free Supply chest, weekly pass cards) and Super Monthly Pass tab (monthly pass daily gift) are its pass pages, per _activities_/shop-claims/INDEX.md v1.3.0. Seq 4 and seq 5 already walked the Mall fully. No separate passes screen is left to find; claimability today belongs to the passes unit in the inbox (passes-2026-11-22-0257.md). No further passes search is owed.
+- Record screen explored: MY PROFILE's Record button opens a social interaction log, not a passes entry. Tabs Interaction (selected), Gift, Battl[e]. Four entries, all 2026-11-16 about 17:50-17:51, each "Thank you for sharing your Lucky Gift!" from #2110 [AP3x]SKRyZeRZ (17:51:37), Jerry Apex (17:51:13), Skinner Box (17:51:07), 꿀밤Bamie (17:50:51). Toggle "Disable Instant Message Notifications" off. First tap at (212,943) produced no visible change; a re-grounded tap on the icon centre (214,933) opened it.
+- Game clock runs slower than wall time while the window is backgrounded (finding, inference flagged): the rocket timer dropped 15:53:39 to 15:51:59 (1:40) and the green-clock timer 15:19:08 to 15:17:27 (1:41) across about 10 minutes of wall time, while the blue-building timer counted UP 08:06 to 08:08 (+2). All four timers moved in lockstep with about 1:40 of game time. This matches seq 11's irregular ticking (rocket 5:29 over about 11 minutes; VS countdown 99 seconds over about 8 minutes in seq 7). Likely mechanism: the iPad app throttles its clock while its window is covered/backgrounded. Recorded as inference, not a measured fact.
+- Base re-reads (entry about 02:09, close about 02:19): power 149,417,850 (unchanged); food 760.8M, iron 1.1G, coins 103.9M, diamonds 6,426 (unchanged); lightning counter 120 at entry and close; hammer 1/4 (red dot), flask 2/2; WORLD/BASE badge 18 at entry and close (89 at seq 11 close; the drop between units is unexplained, most plausibly chat read in another session - cause not established); Events badge 1, VS red dot; Build: Oil Well (0/1); two survivor "?" icons at the front door; radar dish badge 8, trucks badges 3 and 1.
+- MY PROFILE (portrait tap): Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110; flower 12, gift box 88, trophy 11; Moments "No posts found."; Record (red dot), Account, Settings, Rankings, Follow. No passes entry. Whether the Record red dot cleared after viewing was NOT re-checked - left for the successor.
+- NOT seen this unit: the Mall floating chest and orange balloon carried open from seq 8 (not re-checked); the VIP13 Daily Freebie Claim button is live and unclaimed (seq 11) - it belongs to the VIP regular, not to a scout.
+
+## Coverage update (ticker-0204, about 02:20 local)
+
+- Surfaces walked this unit: base (re-read), MY PROFILE, Record screen, Alliance Wars. Items observed this reset day: 422 (390 + 32). Red dots seen this unit: 14, explained 14; unexplained red dots: 0 - the fourth zero-unexplained close of this chain. Unknown items: 2 still open (blue-building count-up timer identity; green-clock 15:17 timer identity); 3 resolved (red target countdown; 00:00:40 Alliance timer - same element; passes entry - shop tabs, already walked); 1 answered (Record is a social log). Not walked yet: the two timer identities (successor seq 13), Record red-dot clearance verification. The chain continues (scout-2026-11-20, successor seq 13).
