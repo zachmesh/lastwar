@@ -9,6 +9,11 @@ status: unverified
 
 # 2026-11-21
 
+## 16:33 to about 16:38 - PR integration pass (DONE, non-batch)
+
+- 16:33 PT, pr-integration-1633 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges. Zero comments. #425 still owner-gated (OD-20261108-01 open, line 278, zero decision lines), re-verified CLEAN vs main da1bdda4, no repeat comment (1622 re-verification stands). #774 frontmatter defect stands (line 68  glued), head unchanged, no repeat comment. Records PR #762 MERGEABLE/CLEAN at new head ef1aab6, awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (1500 comments stand). #755/#754/#713 chain conflicts commented at the 1600 pass stand. Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. Sweep clean, 21 open PRs all decided. Quiet run, no Slack DM sync, no chat report. Record: pr-integration/1633-run.md.
+
+
 ## 16:22 to about 16:31 - PR integration pass (DONE, non-batch)
 
 - 16:22 PT, pr-integration-1622 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 19:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). Zero merges. One comment: #425 still owner-gated (OD-20261108-01 open, line 278, zero decision lines), re-verified CLEAN vs main da1bdda4, re-verification comment posted. #774 frontmatter defect stands (line 68  glued), head unchanged, no repeat comment. Records PR #762 MERGEABLE/CLEAN at new head aec44364, awaits the 19:00 batch; the other seven records PRs still conflict-blocked on _logs_/repo-actions/action-log.jsonl (1500 comments stand). #755/#754/#713 chain conflicts commented at the 1600 pass stand. Tally 42 missed + 12 due-but-unexecuted = 54 unlanded, unchanged. Sweep clean, 21 open PRs all decided. Quiet run, no Slack DM sync, no chat report. Record: pr-integration/1622-run.md.
