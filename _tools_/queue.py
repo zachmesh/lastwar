@@ -941,11 +941,136 @@ def typical_minutes(root, regular):
     return max(1, min(UNIT_CAP_MINUTES, minutes)), len(samples)
 
 
+def _ledger_line_count():
+    """Numbered lines in the daily collection ledger, or None.
+
+    The sweep task text names the count so the executor knows when
+    the walk is complete (issue #748). The ledger lives beside this
+    tool, so the count is read live instead of hard-coded; an
+    unreadable ledger degrades to a count-less walk rather than
+    failing the production.
+    """
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "..", "_conventions_", "local-conventions",
+                        "daily-collection-ledger.md")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+    except OSError:
+        return None
+    count = len(re.findall(r"(?m)^[0-9]+\. ", text))
+    return count if count else None
+
+
+def _sweep_task_text(regular, fields):
+    """Ledger-walk task section for a pre-reset sweep unit (issue #748).
+
+    Returns the section for a first (chain_seq 1) or final (chain_seq
+    2) pass, or "" for any other unit - only the sweep pair carries
+    it. The wording is the standing text the planner used to append
+    by hand (the 2026-11-07 pair), re-anchored to the current
+    geometry: slot and reset clock times come from the unit's own
+    planned_for and expires_at, the trade day from its chain_id, and
+    the ledger line count is read live. A missing timestamp or an
+    unreadable ledger degrades to the timeless / count-less form
+    instead of failing the production.
+    """
+    if regular != "zero-sweep":
+        return ""
+    seq = fields.get("chain_seq")
+    if seq not in (1, 2):
+        return ""
+    slot = parse_iso(fields.get("planned_for", ""))
+    reset = parse_iso(fields.get("expires_at", ""))
+    slot_local = slot.astimezone(LOCAL_TZ) if slot else None
+    reset_local = reset.astimezone(LOCAL_TZ) if reset else None
+    day = ""
+    chain_id = fields.get("chain_id", "")
+    if isinstance(chain_id, str) and chain_id.startswith(
+            "pre-reset-sweep-"):
+        day = chain_id[len("pre-reset-sweep-"):]
+    elif slot_local is not None:
+        day = slot_local.strftime("%Y-%m-%d")
+    slot_time = slot_local.strftime("%H:%M") if slot_local else ""
+    reset_time = reset_local.strftime("%H:%M") if reset_local else ""
+    count = _ledger_line_count()
+    count_clause = (f" - all {count} lines" if count else "")
+    reset_frag = f"{reset_time} local " if reset_time else ""
+    day_frag = f"{day} " if day else "this "
+    heading_time = f" ({slot_time} local)" if slot_time else ""
+    if seq == 1:
+        heading = "first pass"
+        intro = (f"first. This is the first of the two zero sweeps "
+                 f"before the {reset_frag}reset\n"
+                 f"that ends the {day_frag}trade and reset day "
+                 f"(queue design section 12).")
+        middle = ("- A line not at zero - enqueue a priority 1 unit "
+                  "of that line own\n"
+                  "  type before this sweep closes, and name it in "
+                  "the record. Do\n"
+                  "  not do another type work inside this unit - one "
+                  "unit, one task\n"
+                  "  type. The fix-up units run between this sweep "
+                  "and the final\n"
+                  "  sweep.\n"
+                  "- A line unreadable - close it as unverified "
+                  "under rule R1 and\n"
+                  "  name it in the record; the final sweep reads it "
+                  "again.")
+        record = ("Record the execution under `_records_` for the "
+                  "daily-activities\n"
+                  "activity as the sweep record of this pass, "
+                  "listing every line\n"
+                  "outcome and every fix-up unit enqueued.")
+    else:
+        heading = "final pass"
+        intro = (f"first. This is the final zero sweep before the "
+                 f"{reset_frag}reset\n"
+                 f"that ends the {day_frag}trade and reset day "
+                 f"(queue design section 12).\n"
+                 f"The first pass ran earlier today; read its sweep "
+                 f"record before starting.")
+        middle = ("- A line still not at zero - do the line own work "
+                  "now if it fits\n"
+                  "  this unit one task type limit by enqueuing a "
+                  "priority 1 fix-up\n"
+                  "  unit that expires at the reset, and name it in "
+                  "the record; if\n"
+                  "  it cannot complete before the reset, record it "
+                  "as a miss with\n"
+                  "  its reason (rule R6) - it does not roll "
+                  "silently into the next\n"
+                  "  day.\n"
+                  "- A line unreadable in both passes - close it as "
+                  "unverified\n"
+                  "  under rule R1 and name it in the record for the "
+                  "round summary.")
+        record = ("Record the execution under `_records_` for the "
+                  "daily-activities\n"
+                  "activity as the final sweep record of the day, "
+                  "listing every line\n"
+                  "outcome, every fix-up unit enqueued, and every "
+                  "miss with reason.")
+    return (
+        f"\n## Task - pre-reset zero sweep, {heading}{heading_time}\n"
+        f"\nRead `_conventions_/local-conventions/daily-collection-ledger.md`\n"
+        f"{intro}\n"
+        f"\nWalk the ledger item by item{count_clause}. For each line, read\n"
+        f"its state live and record one of three outcomes in the sweep\n"
+        f"record - at zero, not at zero, or unreadable.\n"
+        f"\n{middle}\n"
+        f"- Lines with no producing unit and the owner-named open items\n"
+        f"  (crystal, Glittering Market) are reported by name and age, not\n"
+        f"  skipped - rule R5.\n"
+        f"\n{record}\n")
+
+
 def write_new_unit(root, fields, regular):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     body = (f"# {regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    body += _sweep_task_text(regular, fields)
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
 
@@ -3510,6 +3635,7 @@ def cmd_enqueue(args):
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    body += _sweep_task_text(args.regular, fields)
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
