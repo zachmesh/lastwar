@@ -259,3 +259,62 @@ worked first attempt; the fullscreen precondition (Issue
   station, VIP, passes, daily missions, world map, duel and
   radar. The chain continues (scout-2026-11-20, successor
   seq 4 to be enqueued).
+
+### Mall tabs, read live about 19:38-19:41 local (ticker-1934)
+
+- Tab row, 7 tabs: Official Event, Weekly Deal, Super
+  Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall,
+  Hot Sale Packs. Hot Sale Packs sits off the right edge
+  until the row is scrolled left.
+- Official Event (HOT DEALS): carousel "Visit the Last
+  War Store for more rewards!" and "Claim points and
+  redeem great rewards - POINTS 1000" with a Go button
+  (external store, not tapped); ticker "Thank You Gift:
+  The rumor turns out to be true!"; red dot on the HOT
+  DEALS header (promo marker).
+- Weekly Pass: "Weekly Pass rewards reset at 18:00:00";
+  Free Supply seen (passes unit owns the claim,
+  auto-claimed this reset day per ticker-1834);
+  Legendary "Take All $19.99" (Instant Gain 500 x5, red
+  gem 2.5K, purple chest x1) - red-line, never tapped;
+  S2 Drone Components Weekly Pass $4.99 (Legendary,
+  7 days, daily drone component x1, total x7); S1 Drone
+  Parts Weekly Pass $4.99 (Epic, 7 days, daily gear
+  x15, total x105).
+- Diamond: "Initial Buy Reward - Enjoy Double Diamonds",
+  all packs x2: 10000 $99.99 (+1000), 5000 $49.99
+  (+500), 2000 $19.99 (+200), 1000 $9.99 (+100),
+  500 $4.99 (+50), 100 $0.99 (+10, partially visible).
+  All paid, nothing free.
+- Gold Brick Mall: "Extra 5% Bonus"; packs x500 $4.99
+  (+Free Gift x500), x1000 $9.99 (+Free Gift x1000),
+  x100000 $999.9 (+Free Gift x5000), x50000 $499.9
+  (+Free Gift x2500); further rows below fold, amounts
+  unread. All paid.
+- Hot Sale Packs: "Packs sold out", empty.
+- Weekly Deal and Super Monthly Pass tabs seen but not
+  opened. Floating chest icon at the Mall left edge
+  (about 35,825 image coordinates) unidentified - new
+  unknown item.
+- Base HUD at entry: power 149,653,371; food 752.7M;
+  iron 1.1G; coins 102.4M; diamonds 5,246; stamina 93;
+  March Queues 0/3; Build Oil Well (0/1); Alliance
+  Assembly 22:22:03 countdown; VS "Calculating."
+
+## Coverage update (ticker-1934, about 19:41 local)
+
+- Surfaces walked this unit: mall (all 7 tabs). Items
+  observed this reset day: 171 (130 + 41 Mall). Red dots
+  seen this unit: 6, all explained (base gift box,
+  Events, radar dish, Mail, Inventory, HOT DEALS
+  header); unexplained red dots: 0. Unknown items: 1
+  new (Mall floating chest icon); 2 still open (the
+  00:00:51 countdown from the chain head, the Chat
+  top-bar NEW! icon). Resolved this unit: the seq 3
+  unknown item (Gold Bullion Mall tab name truncated) is
+  the Gold Brick Mall tab (banner read live). Not walked
+  yet: alliance panel
+  and station, VIP, passes, daily missions, world map,
+  duel and radar; Weekly Deal and Super Monthly Pass
+  tabs unopened. The chain continues
+  (scout-2026-11-20, successor seq 5 in inbox).
