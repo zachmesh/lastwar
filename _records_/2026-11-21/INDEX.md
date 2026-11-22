@@ -1,7 +1,7 @@
 ---
 title: Day record 2026-11-21
 created: 2026-11-21T08:06:59Z
-modified: 2026-11-22T06:40:50Z
+modified: 2026-11-22T07:08:00Z
 version: 1.0.0
 description: Day record for 2026-11-21 (America/Los_Angeles) - VPS SSH still down
 status: unverified
@@ -9,6 +9,9 @@ status: unverified
 
 # 2026-11-21
 
+## 23:00 to about 23:08 - PR integration pass (DONE, batch)
+
+- 23:00 PT, pr-integration-2315 - done (BATCH pass, checker DUE, batch window 23:00-00:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 1 merge: #793 records 2026-11-21, merge commit cffa07342 (28 commits beyond main at head 419a5dc15, merge-tree clean vs main 5045dc6f0; branch kept, no --delete-branch); 0 comments. The other seven records PRs still conflict-blocked (1500 and 1915 comments stand; conflict set re-verified unchanged this pass via merge-tree: _logs_/repo-actions/action-log.jsonl content + _queue_/done/scout-scout-2026-11-10-011.md add/add). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #425 still owner-gated OD-20261108-01 (age 13 days), re-verified open on current main, zero decision lines; merge-tree CLEAN vs new main cffa07342. No sync-back owed (records merge only; no knowledge/code merge). Delivery via GitHub git-data API (2045/2115/2130/2145/2200/2215/2230/2245/2300 precedent). Sweep clean, 14 open PRs all decided. Record: pr-integration/2315-run.md.
 ## 22:45 to about 22:55 - PR integration pass (DONE, non-batch)
 
 - 22:45 PT, pr-integration-2300 - done (NON-batch pass, checker NOT DUE, outside every batch window, next batch 23:00 PT; VPS route live, all gh/git ran on the VPS as zachmesh). 1 merge: #803 docs renumber queue-design geometry 0.23.0 to 0.31.0 (Refs #739), squash 5045dc6f0; 0 comments. Records PR #793 MERGEABLE at new head 2d68d61d3 (pr-catchall 2239 record landed on the branch), awaits the 23:00 batch; the other seven records PRs still conflict-blocked (1500 and 1915 comments stand). #755/#754/#713 still conflicting on the resource-collection INDEX (merge-tree re-run first-hand this pass); #753 superseded by merged #774, #711 by #719, #751 duplicates #715; #425 still owner-gated OD-20261108-01 (age 13 days), no new comment - head unchanged since the 2215-slot re-verification. Sync-back of the #803 merge DEFERRED per the standing deferral (owner go-ahead on bundle processing still unanswered; fresh bundle flagged and deleted unprocessed). Delivery via GitHub API (2045/2115/2130/2145/2200/2215/2230/2245 precedent). Sweep clean, 15 open PRs all decided. Record: pr-integration/2300-run.md.
