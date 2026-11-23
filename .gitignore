@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+_tools_/state/cu_bridge.sock
+_tools_/state/cu_bridge.pid
+_tools_/state/cu_bridge.log
+_tools_/state/cu_mcp.log
+_tools_/state/cu_last.png

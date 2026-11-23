@@ -1,0 +1,280 @@
+# TEAM.yaml for the Last War continuous-play team.
+# The platform owns actual session existence, running state and schedules.
+# This file owns planned composition, responsibilities and coordination policy.
+# Read the operating model in
+# _conventions_/local-conventions/continuous-play-team.md before changing it.
+schema: reflection/session-team/v3
+version: 0.2.0
+title: Last War continuous-play team
+updated_at: '2026-11-22T19:12:00-08:00'
+state: active
+runtime: dsh
+project_path: .
+repository:
+  remote: https://github.com/zachmesh/lastwar.git
+  local_path: /Users/zhenchen/zachmesh/lastwar
+  path_base: repository-root
+# This checkout is a standalone GitHub clone, not a folder inside the
+# reflection root, and it carries no REPO.yaml graph edge. The reflection
+# team-record linter therefore resolves reflection.* paths and the person
+# handle locally and reports them missing; they exist in ~/dtadpole/reflection
+# and the roster is JSON-schema valid. Recorded as a declared exception in
+# _records_/2026-11-22/team-operations/setup.md.
+reflection:
+  root_hint: ~/dtadpole/reflection
+  path_base: reflection-root
+  core_conventions: _conventions_/core-conventions/INDEX.md
+  team_convention: _conventions_/session-team-coordination/INDEX.md
+  shared_tools: _tools_/INDEX.md
+  session_tools: _tools_/session-relay/INDEX.md
+  session_relay: _tools_/session-relay/session-relay.py
+  frontmatter_validation: _tools_/frontmatter-validator/INDEX.md
+  tree_validation: _tools_/convention-linter/INDEX.md
+references:
+  team: null
+  objective: _conventions_/local-conventions/continuous-play-team.md
+  baseline: _records_/retro/2026-11-21.md
+  reference_runs: _records_/retro/rolling-7d.md
+  tasks: _conventions_/local-conventions/task-intake-workflow.md
+  resources: _tools_/resources.json
+  decisions: _records_/retro/owner-decisions.md
+  execution_review: _records_/retro/improvements.md
+  idea_register: _records_/retro/improvements.md
+  idea_claims: null
+  convention_maintenance: _conventions_/INDEX.md
+  continuation_policy: _conventions_/local-conventions/continuous-play-team.md
+  setup_verification: _records_/2026-11-22/team-operations/setup.md
+record_owner: coordinator
+coordination:
+  review_interval_minutes: 15
+  seat_review:
+    cadence: one seat per daily review, rotating
+    record: _seats_/coordinator/member-review.md
+  report_channel: pull request on main, plus the action log
+  authorization_ref: null
+  allowed_operations:
+    - read game state through the computer-use MCP and record observations
+    - execute one bounded play unit at a time under the device token
+    - maintain the task queue, its slots and its records
+    - run the perception, research, retro and knowledge-improvement work of the seats
+    - open pull requests for load-bearing changes and push records to the date branch
+  resource_budget_ref: null
+  execution:
+    work_mode: continuous
+    continuation_requirement: the coordinator's 15-minute schedule is the loop clock; every other seat is woken by a bounded assignment and replies with an artifact path
+    coordinator_review_seconds: 900
+    approved_model_ref: null
+    cap_authority_ref: _conventions_/local-conventions/continuous-play-team.md
+  reporting:
+    owner_gateway: coordinator
+    seats_report_to: coordinator
+    peer_communication_policy_ref: _conventions_/local-conventions/continuous-play-team.md
+  mechanical_backstop:
+    session_id: null
+    responsibilities_ref: null
+    content_route: null
+  stopping_policy_ref: _conventions_/local-conventions/continuous-play-team.md
+capacity:
+  normal_max_sessions: 8
+  size_exception: null
+self_improvement:
+  responsible_seats:
+    - coordinator
+    - coach
+  allocation_ref: _records_/retro/improvements.md
+  concerns:
+    - execution-effectiveness
+    - discovery-comprehensiveness
+    - learning-rate
+    - tooling-and-automation
+    - evidence-and-analysis-quality
+people:
+  - {handle: zhenc, role: owner}
+oncall: zhenc
+seats:
+  - key: coordinator
+    principal: zhenc
+    session_id: session-eb024f72-e661-4a77-9303-66af95dbcfd1
+    session_started: '2026-11-23T02:52:00Z'
+    title: '[Last War] Coordinator'
+    assignment: assigned
+    roles:
+      - coordinator
+    responsibilities:
+      - run the 15-minute loop tick and keep the queue clock
+      - dispatch bounded assignments to the other seats and collect their artifacts
+      - own the owner gateway and the owner decisions register
+      - review one seat per day and keep the roster current
+    seat_ref: _seats_/coordinator/INDEX.md
+    task_ref: _records_/retro/improvements.md
+    depends_on: null
+    write_scopes:
+      - TEAM.yaml
+      - _seats_/
+      - _records_/2026-11-22/team-operations/
+      - _records_/retro/improvements.md
+      - _records_/retro/owner-decisions.md
+    excluded_write_scopes: []
+    resource_identity_ref: null
+    handover_ref: _seats_/coordinator/handover.md
+  - key: operator
+    principal: zhenc
+    session_id: session-238b9ce7-1c06-4bc5-9901-42aa8b27e087
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Operator'
+    assignment: assigned
+    roles:
+      - operator
+    responsibilities:
+      - hold the device token and play one bounded unit at a time
+      - read the screen through computer-use and write the unit result
+      - stop at any consequential surface and record needs-owner
+    seat_ref: _seats_/operator/INDEX.md
+    task_ref: _queue_/inbox
+    depends_on: null
+    write_scopes:
+      - _queue_/claimed/
+      - _queue_/done/
+      - _records_/2026-11-22/
+      - _tools_/state/
+    excluded_write_scopes:
+      - _tools_/
+    resource_identity_ref: _tools_/state/device-token.md
+    handover_ref: _seats_/operator/handover.md
+  - key: scout
+    principal: zhenc
+    session_id: session-3f1af320-d120-4b57-acb4-6535dd8a5405
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Scout'
+    assignment: assigned
+    roles:
+      - scout
+    responsibilities:
+      - sweep the base, event hub and activity surfaces on the 2-hour cadence
+      - append one observation pass with counters and unexplained red dots
+      - file candidate activities for anything no profile owns
+    seat_ref: _seats_/scout/INDEX.md
+    task_ref: _activities_/perception-scout/INDEX.md
+    depends_on: null
+    write_scopes:
+      - _records_/2026-11-22/perception-scout/
+      - _records_/2026-11-22/discovery/
+    excluded_write_scopes:
+      - _tools_/
+      - _queue_/
+    resource_identity_ref: null
+    handover_ref: _seats_/scout/handover.md
+  - key: researcher
+    principal: zhenc
+    session_id: session-230e6d4a-0ec3-4790-8a22-dedda4536685
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Researcher'
+    assignment: assigned
+    roles:
+      - researcher
+    responsibilities:
+      - answer two bounded questions per day with dated sources
+      - test every internet claim against one local game observation
+      - file research notes and candidate rule changes
+    seat_ref: _seats_/researcher/INDEX.md
+    task_ref: _knowledge_/strategy-playbook/INDEX.md
+    depends_on: null
+    write_scopes:
+      - _records_/2026-11-22/research/
+      - _knowledge_/strategy-playbook/ by proposal
+    excluded_write_scopes:
+      - _tools_/
+      - _queue_/
+    resource_identity_ref: null
+    handover_ref: _seats_/researcher/handover.md
+  - key: planner
+    principal: zhenc
+    session_id: session-6e9bbd73-729e-4cfe-8d8f-92a7f4c3dca1
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Planner'
+    assignment: assigned
+    roles:
+      - planner
+    responsibilities:
+      - keep the queue clean, expire stale units and stage the next window
+      - run the recovery protocol during the establishment
+      - prove every pass with validate, sync and coverage tools
+    seat_ref: _seats_/planner/INDEX.md
+    task_ref: _queue_/INDEX.md
+    depends_on: null
+    write_scopes:
+      - _queue_/inbox/
+      - _tools_/state/
+      - _records_/2026-11-22/queue-planning/
+    excluded_write_scopes:
+      - _tools_/ code
+    resource_identity_ref: null
+    handover_ref: _seats_/planner/handover.md
+  - key: coach
+    principal: zhenc
+    session_id: session-cfc4492f-b4f7-4ea0-b9c9-772186236af4
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Coach'
+    assignment: assigned
+    roles:
+      - coach
+    responsibilities:
+      - compute the L1, L2 and L3 metrics from the repository records
+      - run the daily retro and the weekly improvement review
+      - keep the improvement backlog and the evaluation dashboard current
+    seat_ref: _seats_/coach/INDEX.md
+    task_ref: _conventions_/local-conventions/evaluation-metrics.md
+    depends_on: null
+    write_scopes:
+      - _records_/retro/
+      - _records_/2026-11-22/retro-review/
+    excluded_write_scopes:
+      - _tools_/ code
+    resource_identity_ref: null
+    handover_ref: _seats_/coach/handover.md
+  - key: toolsmith
+    principal: zhenc
+    session_id: session-97ce007b-ef30-4271-a04d-b45ce133fd08
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Toolsmith'
+    assignment: assigned
+    roles:
+      - tool-developer
+    responsibilities:
+      - implement tool and automation improvements with tests
+      - name the metric each tool exists to move and measure it
+      - keep held patches and the tool index current
+    seat_ref: _seats_/toolsmith/INDEX.md
+    task_ref: _tools_/INDEX.md
+    depends_on: null
+    write_scopes:
+      - _tools_/
+    excluded_write_scopes:
+      - _queue_/
+      - _records_/
+    resource_identity_ref: null
+    handover_ref: _seats_/toolsmith/handover.md
+  - key: scribe
+    principal: zhenc
+    session_id: session-23c14ed5-673e-4876-8ff7-fe5379f52de2
+    session_started: '2026-11-23T03:08:00Z'
+    title: '[Last War] Scribe'
+    assignment: assigned
+    roles:
+      - knowledge-organizer
+    responsibilities:
+      - fold verified records into activities and knowledge
+      - integrate pull requests and keep the conventions current
+      - propose profile changes; never rewrite play records
+    seat_ref: _seats_/scribe/INDEX.md
+    task_ref: _activities_/INDEX.md
+    depends_on: null
+    write_scopes:
+      - _activities_/
+      - _knowledge_/
+      - _conventions_/
+    excluded_write_scopes:
+      - _queue_/
+      - _records_/
+    resource_identity_ref: null
+    handover_ref: _seats_/scribe/handover.md
