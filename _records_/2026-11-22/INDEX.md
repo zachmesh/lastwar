@@ -524,6 +524,7 @@ status: unverified
 ## 17:00 to about 17:20 - PR integration 1700 run
 
 - 17:00 PT, pr-integration-1715 - done (NON-batch pass, checker NOT DUE, next batch 19:00 PT). 0 merges, 0 comments, 0 records PRs opened. Records PR #838 (head 38452628 at verification) awaits the 19:00 batch; #425 still owner-gated OD-20261108-01 (age 14 days), CLEAN by local merge-tree (fb96c10e) on main 511a97cf1, no repeat comment. #828/#827/#755/#754/#753/#713/#711 superseded or conflicting (comments stand). Action-log at delivery base clean (2950 lines, all valid); this run line appended as line 2951. Sync-back none needed: refs/remotes/github/main already 511a97cf1. Sweep clean, 9 open PRs at start, 9 at end, 0 unprocessed. Record: pr-integration/1715-run.md.
+- 17:15 PT, pr-integration-1730 - done (NON-batch pass, checker NOT DUE, next batch 19:00 PT). 0 merges, 0 comments, 0 records PRs opened. Records PR #838 (head 76b61bb8d at delivery) awaits the 19:00 batch; #425 still owner-gated OD-20261108-01 (age 14 days), CLEAN by local merge-tree (fb96c10e) on main 511a97cf1, no repeat comment. #828/#827/#755/#754/#753/#713/#711 superseded or conflicting (comments stand). Action-log at delivery base clean (2952 lines, all valid); this run line appended as line 2953. Sync-back none needed: refs/remotes/github/main already 511a97cf1. Sweep clean, 9 open PRs at start, 9 at end, 0 unprocessed. Record: pr-integration/1730-run.md.
 
 ## 17:09 to about 17:24 - Harvest queue run (partial)
 
