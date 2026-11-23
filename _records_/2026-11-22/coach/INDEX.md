@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T09:47:00Z
+modified: 2026-11-23T10:37:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,7 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [0236-donations-count.md](0236-donations-count.md) - the donations units counted by policy 2532 and the witnessed tap totals.
 - [0145-cross-activity-review.md](0145-cross-activity-review.md) - review of the 100 cross-activity duplicate rows, the 14 not to mark, the donation 1/30 evidence.
 
 ## Sidecars
@@ -48,3 +49,4 @@ sidecars the runs cite.
 - [playbook-rules.csv](playbook-rules.csv), [playbook-activity-stats.csv](playbook-activity-stats.csv), [playbook-pilot-numbers.csv](playbook-pilot-numbers.csv), [playbook-worst-three.csv](playbook-worst-three.csv) and [playbook-rotation.csv](playbook-rotation.csv) - the playbook quality data.
 - [playbook-numbers-lines.csv](playbook-numbers-lines.csv), [playbook-stats-method.py](playbook-stats-method.py) and [queue-parse.py](queue-parse.py) - the numbers line for all 31 activities and the re-runnable script.
 - [run-articles-cross-activity-review.csv](run-articles-cross-activity-review.csv), [run-articles-not-superseded.csv](run-articles-not-superseded.csv) and [run-articles-cross-review-method.py](run-articles-cross-review-method.py) - the 100 reviewed rows, the 14 flagged and the script.
+- [donations-units-new-rule.csv](donations-units-new-rule.csv) - each donations unit with taps logged, taps witnessed and the new status.

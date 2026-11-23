@@ -1,0 +1,13 @@
+kind,slot,item,level,time_left_at_read,read_utc,finish_utc_computed,state,note
+builder,1,Training Base upgrade,to Lv.25,22:54:22,2026-11-23T10:25:51Z,2026-11-24T09:20:13Z,busy,finish about 2026-11-24T09:20:13Z to :17Z
+builder,2,Training Base upgrade,to Lv.25,22:54:25,2026-11-23T10:25:51Z,2026-11-24T09:20:13Z,busy,finish about 2026-11-24T09:20:13Z to :17Z
+builder,3,Training Base upgrade,to Lv.25,22:54:28,2026-11-23T10:25:51Z,2026-11-24T09:20:14Z,busy,finish about 2026-11-24T09:20:13Z to :17Z
+builder,4,Training Base upgrade,to Lv.25,22:54:32,2026-11-23T10:25:51Z,2026-11-24T09:20:14Z,busy,finish about 2026-11-24T09:20:13Z to :17Z
+lab,1,Unlock Oil Well,Lv.0,01:16:54,2026-11-23T10:26:00Z,2026-11-23T11:42:54Z,busy,"frees about 11:43Z, belongs to unit research-growth-convert-2026-11-23-001"
+lab,2,Defense Training VIII,Lv.7,2d 20:53:01,2026-11-23T10:26:00Z,2026-11-26T07:19:01Z,busy,
+training,tent 1,Barracks Lv.30 (name tag),,,2026-11-23T10:26:21Z,,not read,pistol not tapped
+training,"ground tap (250,650)",Farmland Lv.28 selected,,,2026-11-23T10:26:28Z,,none,empty-ground tap landed on a farm; tag read only
+training,tent 2,Barracks Lv.20 (name tag),,,2026-11-23T10:26:36Z,,not read,pistol not tapped
+training,tent 3,"Barracks Lv.20 (name tag), then an upgrade info panel Lv.20 to 21",,,2026-11-23T10:26:56Z,,not read,"panel closed with its X, nothing pressed"
+training,Barracks Lv.24 and the two clock-bubble tents (Lv.27 batch),not found or not tapped,,,,,not read,"clock bubbles seen on the two left-hand tents, not read"
+slots,"idle builders 0, idle labs 0",,,,2026-11-23T10:26Z,,,"no idle slot, nothing to fill, no MISS at builders or labs"
