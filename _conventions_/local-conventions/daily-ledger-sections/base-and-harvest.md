@@ -1,7 +1,7 @@
 ---
 title: Base and harvest
-created: 2026-11-23T08:37:49Z
-modified: 2026-11-23T08:37:49Z
+created: 2026-11-23T09:02:16Z
+modified: 2026-11-23T09:02:16Z
 version: 0.1.0
 sequence: 4
 description: Food bubbles - producing unit, harvest.

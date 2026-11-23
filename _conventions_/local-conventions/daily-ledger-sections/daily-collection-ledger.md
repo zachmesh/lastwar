@@ -1,7 +1,7 @@
 ---
 title: Daily collection ledger
-created: 2026-11-23T08:37:49Z
-modified: 2026-11-23T08:37:49Z
+created: 2026-11-23T09:02:16Z
+modified: 2026-11-23T09:02:16Z
 version: 0.1.0
 sequence: 1
 description: The master collection list for one reset day - the day runs from the trade-day reset
