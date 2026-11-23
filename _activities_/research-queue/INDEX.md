@@ -1,9 +1,9 @@
 ---
 title: Research Queue
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T07:40:44Z
+modified: 2026-11-23T09:56:04Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Completing finished research and keeping research slots working, one activity folder for research knowledge
 status: unverified
 grounded_in:
@@ -31,16 +31,17 @@ Completing finished research and keeping research slots working, one activity fo
 - [What is known from 2026-10-25 part 1](day-20261025-p1.md) - day-20261025 - Two research slots exist.
 - [What is known from 2026-10-25 part 2](day-20261025-p2.md) - day-20261025 - The name is still carried as
 - [Open questions](open-questions.md) - open-questions - The research tree order that best
-- [What the 2026-11-09 0744 scout-discovery unit added -](run-20261109-0744.md) - run-20261109-0744 - Unit scout-scout-discovery-2026-11-09-002 by ticker-0736, about 07:44
-- [What the 2026-11-09 2031 unit added - Defense](run-20261109-2031.md) - run-20261109-2031 - Unit research-2026-11-09-1803 by ticker-1934, about 20:25
-- [What the 2026-11-10 0116 unit added - slot](run-20261110-0116-p1.md) - run-20261110-0116 - Unit research-2026-11-09-2203 by ticker-0104, about 01:13
+- [What the 2026-11-09 0744 scout-discovery unit added -](../../_run_notes_/research-queue/run-20261109-0744.md) - run-20261109-0744 - Unit scout-scout-discovery-2026-11-09-002 by ticker-0736, about 07:44
+- [What the 2026-11-09 2031 unit added - Defense](../../_run_notes_/research-queue/run-20261109-2031.md) - run-20261109-2031 - Unit research-2026-11-09-1803 by ticker-1934, about 20:25
+- [What the 2026-11-10 0116 unit added - slot](../../_run_notes_/research-queue/run-20261110-0116-p1.md) - run-20261110-0116 - Unit research-2026-11-09-2203 by ticker-0104, about 01:13
 - [What the 2026-11-10 0116 unit added - slot](run-20261110-0116-p2.md) - run-20261110-0116 - Result stats: target queue state read
-- [What the 2026-11-10 0846 unit added - slot](run-20261110-0846.md) - run-20261110-0846 - Unit research-2026-11-10-0603 by ticker-0834, about 08:45
-- [What the 2026-11-11 0553 unit added - queue](run-20261111-0553.md) - run-20261111-0553 - Unit research-2026-11-11-0203 by ticker-0534, about 05:52
-- [What the 2026-11-22 1010 and 1310 units added](run-20261122-1010-p1.md) - run-20261122-1010 - Units research-2026-11-22-0603 by ticker-0957 (1010, about
+- [What the 2026-11-10 0846 unit added - slot](../../_run_notes_/research-queue/run-20261110-0846.md) - run-20261110-0846 - Unit research-2026-11-10-0603 by ticker-0834, about 08:45
+- [What the 2026-11-11 0553 unit added - queue](../../_run_notes_/research-queue/run-20261111-0553.md) - run-20261111-0553 - Unit research-2026-11-11-0203 by ticker-0534, about 05:52
+- [What the 2026-11-22 1010 and 1310 units added](../../_run_notes_/research-queue/run-20261122-1010-p1.md) - run-20261122-1010 - Units research-2026-11-22-0603 by ticker-0957 (1010, about
 - [What the 2026-11-22 1010 and 1310 units added](run-20261122-1010-p2.md) - run-20261122-1010 - Result stats: 1010 - target 2,
 - [Changelog](changelog-section.md) - changelog-section - 1.6.0 (2026-11-22): 1010 and 1310 research
 
 ## Changelog
 
 - 1.7.0, 2026-11-23 - Split verbatim into 16 articles, added `rule-digest.md`; `--check` EQUAL, body sha256 6b04543a62c6; unsplit 1.6.0 is commit 11d23ccf.
+- 1.9.0, 2026-11-23 - Links to run notes that moved to _run_notes_/research-queue/ now point there.
