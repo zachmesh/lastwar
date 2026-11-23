@@ -1,9 +1,9 @@
 ---
 title: Research
 created: 2026-11-23T08:05:06Z
-modified: 2026-11-23T08:23:27Z
+modified: 2026-11-23T13:52:53Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: Lab state, the research order under the start rule and under strategy v2.0, and what is measured
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ Labs 2 of 2 busy at 2026-11-23 07:48Z: Unlock Oil Well 03:55:06 left (free about
 - Start rule (`_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`): Development, Economy, Garage 1, the Alliance Duel tree, then the Special Forces gate nodes; same one-third rule and reserves as [build](build.md).
 - Strategy v2.0 (later, [plan](strategy-plan-p1.md)): the first free lab goes to capacity by slots per million coin (step P2): Drill Ground Expansion, 10 levels, 4.6M to 63.8M coin for the first five, and Extra Drill Ground, 61M coin plus 700 Valor if not already done [S1]; labs stay busy and Complete is pressed the moment a node finishes (step P8). The later record governs.
 - The Age of Oil research is open now (wave 2, relayed, unverified); HQ 31 stays off the plan.
+- Superseded 2026-11-23 by OD-20261123-18 (owner, `_records_/retro/owner-decisions-log/od-20261123-18.md`): Base Expansion, the last node of the Age of Oil tree, is prioritized, so HQ 31 and the Age of Oil path are back on the plan; see `_records_/2026-11-22/strategy/plan-of-record.md`.
 
 ## Unknown
 

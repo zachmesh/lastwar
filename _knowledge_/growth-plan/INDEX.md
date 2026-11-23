@@ -1,9 +1,9 @@
 ---
 title: Growth Plan
 created: 2026-11-23T08:05:06Z
-modified: 2026-11-23T09:09:03Z
+modified: 2026-11-23T13:52:53Z
 level: L1
-version: 0.3.0
+version: 0.4.0
 description: The growth plan for the account with the charter, one page per concern, the strategy set and the data tables
 status: unverified
 grounded_in:
@@ -34,3 +34,4 @@ Raw readings are records under `_records_/<date>/growth/` (operator and scout); 
 - 0.1.0, 2026-11-23 - Created by the scribe from the charter draft, strategy v1.5 and decision records 2350 and 2401.
 - 0.2.0, 2026-11-23 - Strategy v2.0 landed (snapshot sha256 2137b1c5a923); the v1.x pages are pointers; coin-history.csv and candidate-ledger.csv added.
 - 0.3.0, 2026-11-23 - Six moved-out articles listed (page budget 300 words).
+- 0.4.0, 2026-11-23 - OD-20261123-18 notes added; Gold Mine and Farmland rows added to the lever table.
