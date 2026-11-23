@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """lint-gate: stop new oversized or misshapen documents and show size growth cheaply.
 
-Subcommands: check, install, watch, record-check. It runs the reflection convention linter
+Subcommands: check, install, watch, record-check, stub-index. It runs the reflection convention linter
 (~/dtadpole/reflection, or LINT_GATE_REFLECTION / --reflection) with the right --root and --vocabulary and
 judges only what the commit adds or changes; legacy findings never block. Standard library only; the word counter
 is the linter's own, loaded from the reflection checkout. Exit 0 ok, 1 blocked or limit reached, 2 cannot run.
@@ -21,7 +21,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 GATE_RULES = ("document-concision", "entry-points", "type-instance-trees")
 HARD_WORDS, SOFT_WORDS, RECORD_LIMIT = 500, 300, 480
 STAGED_TIMEOUT, FULL_TIMEOUT = 25, 600          # seconds; the staged cap keeps the hook under 30 s
@@ -264,6 +264,64 @@ def cmd_record_check(a) -> int:
     return worst
 
 
+# --- stub-index --------------------------------------------------------------------------------------------
+
+STUB = """---
+title: Execution records for {activity} on {date}
+created: {now}
+modified: {now}
+version: 1.0.0
+description: Execution records for {activity} on {date}, one file per run; the day index lists them.
+---
+
+# {activity} records, {date}
+
+Execution records for {activity} on {date}, one file per run; the day index lists them.
+"""
+
+
+def today_pacific() -> str:
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
+    except Exception:   # no tz database: the local date serves
+        return datetime.now().strftime("%Y-%m-%d")
+
+
+def cmd_stub_index(a) -> int:
+    """A static INDEX.md in every _records_/<today>/<activity>/ folder that lacks one; never an older day, never an
+    existing file (exclusive create), a dry run unless --apply."""
+    top = repo_top(Path(a.root).resolve())
+    day = a.today or today_pacific()
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", day):
+        raise GateError(f"--today must be YYYY-MM-DD, got {day!r}")
+    folder = top / "_records_" / day
+    if not folder.is_dir():
+        print(f"lint-gate: no _records_/{day}/ folder; nothing to do.")
+        return 0
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    made, kept = [], 0
+    for child in sorted(folder.iterdir()):
+        if not child.is_dir() or child.is_symlink() or child.name.startswith("."):
+            continue
+        target = child / "INDEX.md"
+        if target.exists():
+            kept += 1
+            continue
+        made.append(target.relative_to(top).as_posix())
+        if a.apply:
+            with open(target, "x", encoding="utf-8") as fh:   # "x": never overwrite
+                fh.write(STUB.format(activity=child.name, date=day, now=now))
+    verb = "created" if a.apply else "would create"
+    for path in made:
+        print(f"{verb} {path}")
+    if not (folder / "INDEX.md").exists():
+        print(f"note: _records_/{day}/INDEX.md (the day index) is missing; the operator writes it.")
+    print(f"lint-gate: stub-index {day}: {len(made)} {verb.split()[-1] if a.apply else 'to create'}, {kept} already had an INDEX.md"
+          f"{'' if a.apply else '; dry run, pass --apply to write'}.")
+    return 0
+
+
 # --- watch -------------------------------------------------------------------------------------------------
 
 def top_folder(path: str) -> str:
@@ -445,6 +503,10 @@ def build_parser() -> argparse.ArgumentParser:
     w.add_argument("--format", choices=("text", "json"), default="text")
     w.add_argument("--no-write", action="store_true")
     w.set_defaults(run=cmd_watch)
+    st = sub.add_parser("stub-index", parents=[common], help="static INDEX.md for today's records folders that lack one")
+    st.add_argument("--apply", action="store_true", help="write the files (the default is a dry run)")
+    st.add_argument("--today", metavar="YYYY-MM-DD", help="override the Pacific date (tests, replays)")
+    st.set_defaults(run=cmd_stub_index)
     r = sub.add_parser("record-check", parents=[common], help="body words of a play record; exit 1 at the limit")
     r.add_argument("paths", nargs="+", metavar="PATH")
     r.add_argument("--limit", type=int, default=RECORD_LIMIT)
