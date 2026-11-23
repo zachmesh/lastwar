@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T04:48:00Z
+modified: 2026-11-23T04:55:00Z
 level: L2
-version: 0.4.0
+version: 0.4.1
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -31,6 +31,8 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 - Toolsmith `A-20261123-0437`: `_tools_/lint-gate/` (check, install, watch, record-check), due 05:20Z. After review, run `install`.
 - Operator: a one-pass trim of its over-limit records (measured rows to sidecars, narrative untouched), then back to play. Next unit: `secrets-2026-11-22-1857`.
 - Not yet assigned: planner stages a duel-score read before the 02:00Z rollover on 11-24; scribe pilot split of alliance-donations; planner and scribe on IMP-20261123-04.
+
+- One-shot claim reminders for the Secret Missions deploy of about 04:50Z: 05:21Z, 05:51Z, 06:51Z and 08:51Z (ids in `2049-tick.md`). Each sends the operator a claim-only assignment; unclaimed finished tasks get plundered.
 
 ## Open owner decisions
 

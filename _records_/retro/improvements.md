@@ -473,6 +473,21 @@ entries to implemented.
   alliance-duel profile states the resume rule (scribe, versioned).
 - status: open - planner and scribe to take it after the lint-gate work.
 
+### IMP-20261123-05 - no continuation or timed-claim unit in the queue
+
+- source: secrets unit 2026-11-23, `_records_/2026-11-22/secret-missions/2049-queue-run.md`
+- class: tooling
+- leak: a unit that deploys timed work (Secret Missions) ends partial with
+  ally assists left and claims due at known times; the queue cannot stage a
+  continuation or a claim at a deploy-finish time, so the coordinator used a
+  one-off assignment and four one-shot reminders. Unclaimed finished tasks get
+  plundered (the 1104 lesson).
+- target metric: timed claims that land inside their window, tracked per
+  deploy; continuations staged by the queue instead of by hand, 0 now.
+- verification: the planner stages a claim unit at each deploy-finish time and
+  the operator closes it before the next deploy finishes.
+- status: open - planner and toolsmith, after the lint-gate work.
+
 ## Closed
 
 None yet. The first closures are expected at the 2026-11-01
