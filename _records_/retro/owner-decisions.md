@@ -428,6 +428,20 @@ one mention in a summary.
 - status: open. Until answered the exchange is never touched; the units wait
   for fragments from the claim runs.
 
+### OD-20261123-03 - may any PvP surface be acted on
+
+- opened: 2026-11-23
+- item: three board cards touch PvP or attack surfaces: #212 Alliance Wars
+  red dot, #268 the Doom Elite rally button, #272 General's Trial. Their
+  Agents (scout, operator, planner) were set by triage and read only.
+- context: board triage slice 8,
+  `_records_/2026-11-22/team-operations/2136-board-triage-8.md`; the Steward
+  asked that the read-only limit be explicit on each card.
+- decision needed: may a unit ever rally, march, fight in the General's Trial
+  or open the Arena or Alliance Wars; if yes, under what limits.
+- status: open. Until answered the three cards are read-only and every unit
+  keeps the red line: no attack, rally, march, Arena or PvP action.
+
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
