@@ -501,3 +501,7 @@ status: unverified
 ## 16:13 to about 16:23 - Scout queue run (partial)
 
 - 16:13 PT, ticker-1604 - scout unit scout-scout-2026-11-21-001 (chain scout-2026-11-21 seq 1, chain head): base re-read done and appended to the day observation file (v1.17.0, 532 items this reset day); two right-rail timer icons still unidentified (both read 01:47:39 at 16:17, 01:46:29 at 16:19, identical) - HUD-rail taps landed on the map (R2, re-grounding owed); Events hub not opened (no zombie-tab enumeration, zombie chain stays unseeded), passes entry not located, 3v3 / Champion Duel not explored; red dots 10 seen, 10 explained, 0 unexplained (twelfth zero-unexplained close); diamonds 6,456 (up 20, cause not established, no claim made); successor seq 2 enqueued. Tracker untouched. Record: perception-scout/1604-queue-run.md.
+
+## 16:39 to about 16:44 - PR catch-all 1644 run, no-op pass
+
+- PR catch-all pass pr-catchall-2026-11-22-1644. 9 open PRs scanned, none owned by this job; five PRs merged at the integrator 1600 batch (#839-#843), main head now 52e92cb26; records PR #838 awaits the 19:00 PT batch; PR 425 still owner-gated OD-20261108-01, re-verification against the new main is the integrator's next batch work; 188 open issues, zero unclassified, no new issues since the 1539 pass; owner-decision issues 132, 154, 335, 514, 517 unchanged, all over 24 hours, statements current. No adoption, fix, reply, hand-off, or stale-owner flag. Quiet run. Record: pr-catchall/1644-run.md.
