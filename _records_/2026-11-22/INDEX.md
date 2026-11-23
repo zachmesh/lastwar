@@ -541,3 +541,7 @@ status: unverified
 ## 17:32 to about 17:52 - Knowledge organization 1732 run
 
 - 17:32 PT, knowledge-organization-1732 - done (FOLDS; own PRs all superseded with successors merged, no unaddressed feedback; 2 profile folds opened, both MERGEABLE/CLEAN - #856 resource-collection 1.70.0 (two-surface finding, Profile panel X repeated failure, Issue #854, R2 close rule), #857 daily-activities 1.45.0 (zero-sweep 1630 first pass) - awaiting the integrator; Issue #854 implemented as PR #855 by the tool-developer 1732 run; the 1730 zero-sweep fold (1.46.0) is owed to the next run, record not landed). Record: knowledge-organization/1732-run.md.
+
+## 17:40 to about 17:50 - Queue planning pass (done)
+
+- 17:40 PT, queue-planning-1740 - 0 staged (pool covered to about 05:43 local 2026-11-23), 0 expired, 0 reaped; sweep pair already present on this 17:00-hour run (1630 done, 1730 in inbox) so no enqueue owed; scout diff on the 2026-11-21 observation v1.17.0 applied with 0 counts but 5 unexplained red dots (same tool-version accounting as 1640; narrative 532 reads, 0 unexplained - twelfth zero-unexplained close), 0 withdrawals; pool inbox 94 / claimed 0 / done 2891; delivery by the VPS worktree route from tip 146c6458; PR #838 already open. Record: queue-planning/1740-run.md.
