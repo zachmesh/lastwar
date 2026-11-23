@@ -1,8 +1,8 @@
 ---
 title: Run Notes
 created: 2026-11-23T09:46:55Z
-modified: 2026-11-23T09:51:21Z
-version: 1.11.0
+modified: 2026-11-23T09:52:31Z
+version: 1.14.0
 description: Run articles superseded by a dated record, one folder per activity
 ---
 
@@ -23,3 +23,6 @@ Run articles that duplicate a dated record: each is marked superseded, then move
 - [arms-race](arms-race/INDEX.md)
 - [alliance-train](alliance-train/INDEX.md)
 - [vip-rewards](vip-rewards/INDEX.md)
+- [hidden-treasures](hidden-treasures/INDEX.md)
+- [daily-activities](daily-activities/INDEX.md)
+- [secret-missions](secret-missions/INDEX.md)
