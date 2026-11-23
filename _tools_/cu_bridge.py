@@ -13,7 +13,13 @@ Commands:
   ensure                        Start the daemon if none is running (never a second one).
   restart                       End every daemon and its MCP child, start a fresh one.
   self-test                     Initialize MCP and list the four tools.
-  start --task TEXT [--app ID]  Start a desktop run on the named apps.
+  start --task TEXT [--app ID]  Start a desktop run on the named apps. Before it asks the server it reads the desktop-run lock
+                                (read-only): a live run or hold, another seat's or this one's, a waiter, or an ORPHAN entry
+                                of a dead run refuses it with a report - retry later; the bridge never waits, retries or
+                                breaks a lock. --skip-lock-check leaves the check to the server; --accept-orphan, only on
+                                the coordinator's word, lets the server reclaim an orphan the way its own protocol does.
+  lock                          Report the desktop-run lock: free, held (run), hold, waiting or orphan. Read-only; exit 0 free,
+                                1 busy or orphan, 2 unreadable.
   status [--run-id ID] [--wait N] [--image PATH]
                                 Poll the latest or named run on the daemon
                                 that owns it; save the final screenshot when
@@ -32,6 +38,17 @@ send. App approval and consent come only from the owner through the
 control link printed by `start`, in a real terminal:
 
   node ~/computer-use/_tools_/agent-core/cli.mjs control-link <run-id>
+
+The desktop-run lock belongs to the computer-use project (`_environments_/macos-desktop/run-lock.mjs`, state under
+/tmp/cu-desktop-run): the server takes it for the life of each run under the `--seat` this bridge passes (CU_SEAT, default
+`cu-lastwar`, as agreed with the cu team 2026-11-23: it fits their seat pattern and resets nothing persistent) and frees it on
+finish, abort and exit; a run killed by a signal leaves an entry the next acquire reclaims once its
+pid is dead. The seat must be a [cu] key, `^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$` (`lastwar` alone would read as no run to their guards):
+a bad CU_SEAT stops `start` with exit 2. CUT-OVER from cu-owner: only between runs, when no run or hold of this seat is live, and
+`cu_bridge.py restart` so the daemon reads the new default; a hold taken as cu-owner is released as cu-owner. An explicit hold
+outside a bridge run (a bridge run needs none) is `node <computer-use checkout>/_environments_/macos-desktop/run-lock.mjs hold
+--seat cu-lastwar --minutes N --reason "<run id>" [--wait-free SECONDS]` and `... release --seat cu-lastwar` in an EXIT trap (exit 0
+done, 1 refused, 2 usage, 3 held but busy: release if you give up); `status` reads it, and `lock` here wraps that.
 
 Exit codes: 0 ok, 1 refused or failed, 2 usage or environment error.
 """
@@ -77,7 +94,9 @@ SERVER = PROJECT / "_tools_/computer-use-mcp" / "server.mjs"
 KEY_FILE = Path(
     os.environ.get("CU_KEY_FILE", str(Path.home() / ".heddle/keys/conclave.api.key"))
 ).expanduser()
-SEAT = os.environ.get("CU_SEAT", "cu-owner")
+SEAT = os.environ.get("CU_SEAT", "cu-lastwar")      # was cu-owner until 2026-11-23: the cu team asked for a name that tells these runs from the owner's
+SEAT_PATTERN = re.compile(r"^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$")      # the computer-use lock's own pattern (run-lock.mjs SEAT_PATTERN)
+RUN_LOCK_DIR = Path(os.environ.get("CU_RUN_LOCK_DIR", "/tmp/cu-desktop-run"))
 DEFAULT_APP = os.environ.get("CU_APP", "com.lastwar.ios")
 NODE = os.environ.get("CU_NODE_BIN") or shutil.which("node") or ""
 
@@ -589,7 +608,90 @@ def _app_list(value: str | None) -> list[str]:
     return apps or [DEFAULT_APP]
 
 
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def lock_state() -> dict:
+    """The desktop-run lock as the computer-use project reports it (`run-lock.mjs status`, one JSON line: hold, run, sentinel,
+    waiter, ownerIdle), read-only, plus one check the status hides: whether the pid in run.json is alive. state is free, held (a
+    live run), hold (a seat's reservation), waiting, orphan (an entry whose process is dead: reported, never broken here) or
+    unknown (the status could not be read). No pid is ever returned."""
+    cli = Path(os.environ.get("CU_RUN_LOCK_CLI") or PROJECT / "_environments_/macos-desktop/run-lock.mjs")
+    if not NODE or not cli.is_file():
+        return {"state": "unknown", "reason": f"run-lock.mjs not found at {cli}"}
+    command = [NODE, str(cli), "status"] + (["--dir", str(RUN_LOCK_DIR)] if "CU_RUN_LOCK_DIR" in os.environ else [])
+    try:
+        out = subprocess.run(command, capture_output=True, text=True, timeout=15)
+        data = json.loads([ln for ln in out.stdout.splitlines() if ln.strip()][-1])
+    except (OSError, subprocess.SubprocessError, ValueError, IndexError):
+        return {"state": "unknown", "reason": "the lock status could not be read"}
+    run, hold, waiter, sentinel = data.get("run"), data.get("hold"), data.get("waiter"), bool(data.get("sentinel"))
+    entry = None
+    try:
+        entry = json.loads((RUN_LOCK_DIR / "run.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        pass
+    report = {"run": None if not run else {k: run.get(k) for k in ("seat", "runId", "startedAt")},
+              "hold": None if not hold else {k: hold.get(k) for k in ("seat", "until", "reason")},
+              "waiter": waiter, "owner_idle_seconds": (data.get("ownerIdle") or {}).get("seconds")}
+    if isinstance(entry, dict) and not entry.get("sentinel") and isinstance(entry.get("pid"), int) and not _pid_alive(entry["pid"]):
+        report.update(state="orphan", run={k: entry.get(k) for k in ("seat", "runId", "startedAt")})
+    elif run and not sentinel:
+        report["state"] = "held"
+    elif hold or sentinel:
+        report["state"] = "hold"
+    elif waiter:
+        report["state"] = "waiting"
+    else:
+        report["state"] = "free"
+    return report
+
+
+def _lock_sentence(state: dict) -> str:
+    run, hold = state.get("run") or {}, state.get("hold") or {}
+    if state["state"] == "free":
+        return "the desktop lock is free"
+    if state["state"] == "unknown":
+        return f"the desktop lock could not be read ({state.get('reason')})"
+    who = run.get("seat") or hold.get("seat") or state.get("waiter") or "another seat"
+    mine = " (this bridge's own seat)" if who == SEAT else ""
+    if state["state"] == "held":
+        return f"the desktop is held by {who}{mine}: run {run.get('runId')} since {run.get('startedAt')}"
+    if state["state"] == "hold":
+        return f"the desktop is on hold for {who}{mine} until {hold.get('until')}" + (f" ({hold.get('reason')})" if hold.get("reason") else "")
+    if state["state"] == "waiting":
+        return f"a waiter ({who}) is queued for the desktop"
+    return (f"ORPHAN desktop lock: run {run.get('runId')} of {who} since {run.get('startedAt')} names a process that is gone; "
+            f"reported, not broken")
+
+
+def cmd_lock(args: argparse.Namespace) -> int:
+    state = lock_state()
+    print(_lock_sentence(state))
+    print(json.dumps(state, sort_keys=True))
+    return {"free": 0, "unknown": 2}.get(state["state"], 1)
+
+
 def cmd_start(args: argparse.Namespace) -> int:
+    if not SEAT_PATTERN.match(SEAT):
+        _die(f"CU_SEAT {SEAT!r} is not a [cu] seat key (^cu-[a-z0-9]+(-[a-z0-9]+){{0,3}}$): the computer-use desktop lock refuses "
+             f"it; use a name such as cu-lastwar", 2)
+    if not args.skip_lock_check and not args.browser:          # the browser has its own gate, capped at two
+        state = lock_state()
+        if state["state"] in ("held", "hold", "waiting"):
+            _die(f"start refused: {_lock_sentence(state)}. Retry later; this bridge never waits, retries or breaks a lock.", 1)
+        if state["state"] == "orphan" and not args.accept_orphan:
+            _die(f"start refused: {_lock_sentence(state)}. Tell the coordinator; --accept-orphan, on the coordinator's word, lets the "
+                 f"computer-use server reclaim it by its own rule.", 1)
+        if state["state"] == "unknown":
+            print(f"cu_bridge: note: {_lock_sentence(state)}; the server still refuses a start while the desktop is held", file=sys.stderr)
     _ensure_daemon()
     if args.browser:
         if not args.start_url:
@@ -622,6 +724,9 @@ def cmd_start(args: argparse.Namespace) -> int:
     if not reply.get("ok"):
         _die(f"start refused: {reply.get('error')}", 1)
     text, _ = _content_text(reply["result"])
+    if reply["result"].get("isError"):                     # the server's own refusal (a held desktop, bad input): report it, once
+        busy = re.search(r"desktop|lock|hold|active|refused", text, re.I)
+        _die(f"start refused: {text[:400]}" + (" Retry later; this bridge never waits, retries or breaks a lock." if busy else ""), 1)
     try:
         started = json.loads(text)
     except json.JSONDecodeError:
@@ -798,6 +903,8 @@ def build_parser() -> argparse.ArgumentParser:
     start.add_argument("--max-steps", type=int, default=20)
     start.add_argument("--max-minutes", type=float, default=10)
     start.add_argument("--max-cost", type=float, default=1.0, help="USD cap")
+    start.add_argument("--skip-lock-check", action="store_true", help="leave the desktop-lock check to the server (it still refuses a held desktop)")
+    start.add_argument("--accept-orphan", action="store_true", help="coordinator's word only: start although an orphan desktop lock is reported")
     start.set_defaults(func=cmd_start)
 
     status = sub.add_parser("status", help="poll a run")
@@ -812,6 +919,8 @@ def build_parser() -> argparse.ArgumentParser:
     control.add_argument("--text", default="")
     control.set_defaults(func=cmd_control)
 
+    lock = sub.add_parser("lock", help="report the desktop-run lock (read-only; exit 0 free, 1 busy or orphan, 2 unreadable)")
+    lock.set_defaults(func=cmd_lock)
     runs = sub.add_parser("runs", help="list recorded runs")
     runs.set_defaults(func=cmd_runs)
 
