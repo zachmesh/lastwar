@@ -112,7 +112,7 @@ class BridgeCase(unittest.TestCase):
         (self.root / "key").write_text("fake-key\n")
         self.inflight, self.release = self.root / "inflight", self.root / "release"
         self.env = dict(os.environ, CU_PROJECT=str(self.root / "fake"), CU_KEY_FILE=str(self.root / "key"),
-                        CU_NODE_BIN=sys.executable, CU_SEAT=f"cu-test-{self.root.name[-8:]}",
+                        CU_NODE_BIN=sys.executable, CU_SEAT="cu-test-" + re.sub(r"[^a-z0-9]", "", self.root.name.lower())[-8:],
                         FAKE_INFLIGHT=str(self.inflight), FAKE_RELEASE=str(self.release))
         self.addCleanup(self.cleanup)
 
