@@ -18,8 +18,11 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
 
-A unit serves a RANKED item when its `serves` is anything but upkeep, snapshot or baseline; a unit with no serves line is
-told by its chain id, regular and file name (growth, convert, collect, promot, capacity, store, inventory, troop-read).
+A unit serves a RANKED item when its `serves` has a part that is a plan item id (PL-17) with a row in the newest forecast ledger -
+the same exact check as `queue.py validate`. An exempt word (upkeep, snapshot, baseline, fill idle slot), an id the ledger has no
+row for, and any other wording ("snapshot (Story 868)") are NOT ranked and are counted apart in the output; with no ledger to read
+an id counts by its shape and the output says so (ranked by wording only). A unit with no serves line is told by its chain id,
+regular and file name (growth, convert, collect, promot, capacity, store, inventory, troop-read).
 The plan file is a CSV `rank,item,trigger_at,serves` (trigger_at in UTC, ISO 8601), kept by the strategist; without one the
 plan-item check is skipped and says so. A kind with no sample (nothing executed, no growth unit) is n/a, never an alarm.
 
@@ -31,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import json
 import os
 import re
@@ -39,7 +43,59 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+# The exact check of queue.py validate: its constants and its ledger reader are used when it can be loaded; these copies are the fallback
+# (a test keeps them equal).
 NON_RANKED = {"upkeep", "snapshot", "baseline"}
+FILL_IDLE = re.compile(r"^fill[- ]idle[- ]slot\b", re.IGNORECASE)
+PLAN_ITEM = re.compile(r"^[A-Z]{2,4}-\d{1,3}$")
+RANKING = {"ids": None, "reason": "not configured", "queue": None}
+
+
+def load_queue_tool():
+    try:
+        spec = importlib.util.spec_from_file_location("queue_for_conformance", HERE.parent / "queue.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+    except Exception:                                  # any failure: the fallback copies above decide
+        return None
+
+
+def configure_ranking(root: Path) -> None:
+    """Read the newest forecast ledger beside the queue: the plan item ids a unit may serve. None, with a reason, when there is none."""
+    tool = load_queue_tool()
+    RANKING["queue"] = tool
+    if tool is None:
+        RANKING.update(ids=None, reason="queue.py could not be loaded")
+        return
+    try:
+        ids, reason = tool.load_forecast_ledger(str(root / "_queue_"))
+    except Exception as exc:
+        ids, reason = None, f"the ledger reader failed ({type(exc).__name__})"
+    RANKING.update(ids=ids, reason=reason or "")
+
+
+def serves_kind(serves: str) -> str:
+    """ranked, exempt, no-row (an id the ledger lacks) or unrecognised; with no ledger an id counts as ranked by its shape (the basis says so)."""
+    tool, ids = RANKING["queue"], RANKING["ids"]
+    exempt = getattr(tool, "FORECAST_EXEMPT", NON_RANKED)
+    fill = getattr(tool, "FORECAST_FILL", FILL_IDLE)
+    plan_id = getattr(tool, "PLAN_ITEM_ID", PLAN_ITEM)
+    kinds = []
+    for part in re.split(r"[;,]", serves or ""):
+        part = " ".join(part.split())
+        if not part:
+            continue
+        if part.lower() in exempt or fill.match(part):
+            kinds.append("exempt")
+        elif plan_id.match(part):
+            kinds.append("ranked" if ids is None or part in ids else "no-row")
+        else:
+            kinds.append("unrecognised")
+    for kind in ("ranked", "no-row", "unrecognised", "exempt"):
+        if kind in kinds:
+            return kind
+    return "exempt"
 GROWTH_MARKERS = ("growth", "convert", "collect", "promot", "capacity", "store", "inventory", "troop-read")
 EXECUTED = ("done", "partial", "failed")
 SLOT_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
@@ -98,14 +154,19 @@ class Unit:
         self.finished = stamp(fields.get("result.finished_at"))
         self.claimed = stamp(fields.get("claimed_at"))
         self.serves = fields.get("serves", "").strip().lower()
+        self.serves_raw = fields.get("serves", "").strip()
         self.activity = fields.get("activity", "")
         hours = number(fields, "result.duration_seconds")
         self.hours = hours / 3600 if hours is not None else (number(fields, "est_minutes", 0) or 0) / 60
 
     @property
+    def serves_kind(self) -> str:
+        return serves_kind(self.serves_raw) if self.serves_raw else "by-name"
+
+    @property
     def ranked(self) -> bool:
-        if self.serves:
-            return self.serves not in NON_RANKED
+        if self.serves_raw:
+            return self.serves_kind == "ranked"
         return self.growth_by_name
 
     @property
@@ -145,6 +206,7 @@ def read_plan(path: Path | None):
 
 
 def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a) -> dict:
+    configure_ranking(root)
     inbox, claimed, done = load(root, "inbox"), load(root, "claimed"), load(root, "done")
     cut = now - timedelta(hours=hours)
     executed = [u for u in done if u.status in EXECUTED and u.finished and u.finished >= cut]
@@ -154,6 +216,10 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
               "by_status": {s: sum(1 for u in executed if u.status == s) for s in EXECUTED},
               "inbox_without_serves": sum(1 for u in inbox if not u.serves),
               "executed_without_serves": sum(1 for u in executed if not u.serves)}
+    kinds = {k: sum(1 for u in executed if u.serves_kind == k) for k in ("ranked", "exempt", "no-row", "unrecognised", "by-name")}
+    counts["serves_kinds"] = {"ranked": kinds["ranked"], "exempt": kinds["exempt"], "no_row": kinds["no-row"], "unrecognised": kinds["unrecognised"],
+                              "no_serves_line": kinds["by-name"], "ranked_by_name": sum(1 for u in executed if u.serves_kind == "by-name" and u.ranked)}
+    counts["ranking_basis"] = "ledger rows" if RANKING["ids"] is not None else f"id shape only, ranked by wording only ({RANKING['reason']})"
     # no execution
     last = max((u.finished for u in done if u.status in EXECUTED and u.finished), default=None)
     age = None if last is None else (now - last).total_seconds() / 60
@@ -234,6 +300,9 @@ def render(result: dict) -> str:
              f"queue: inbox {c['inbox']}  claimed {c['claimed']} | executed in window {c['executed_in_window']} {c['by_status']} | "
              f"expired {c['expired_in_window']}",
              f"serves: inbox units without {c['inbox_without_serves']}, executed without {c['executed_without_serves']}"]
+    k = c["serves_kinds"]
+    lines.append(f"executed serves: ranked {k['ranked']}, exempt {k['exempt']}, id without a ledger row {k['no_row']} (not ranked), other wording {k['unrecognised']} "
+                 f"(not ranked), no serves line {k['no_serves_line']} ({k['ranked_by_name']} ranked by name) | ranking basis: {c['ranking_basis']}")
     last = c["minutes_since_last_execution"]
     lines.append("last execution: " + ("none on record" if last is None else f"{last} min ago"))
     if "coverage_units_percent" in c:
