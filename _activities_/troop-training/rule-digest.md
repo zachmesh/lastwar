@@ -1,9 +1,9 @@
 ---
 title: Troop Training Rule Digest
 created: 2026-11-23T06:48:39Z
-modified: 2026-11-23T09:32:47Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.5.0
+version: 0.6.0
 description: The standing rules an operator must follow when training troops, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -20,11 +20,11 @@ grounded_in:
 5. A tap collects a finished batch; requeue is separate and can meet the Drill Ground Full toast (day-20261031-p3, day-20261031-p4).
 6. 2026-11-22: the toast did not reproduce; Lv.27 and Lv.30 requeued (day-20261031-p5, _records_/2026-11-22/troop-training/0958-queue-run.md).
 7. Leave Quick Dispatch untapped: effect unverified (day-20261031-p1).
-8. Ground tents and the button row fresh; a reused point selected another building (how-to-enter-p1, how-to-enter-p2).
+8. Ground tents and the button row fresh; a reused point selected another building (how-to-enter-p1, how-to-enter-p2). Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
 9. Ruled out: tent long-press, lower-left portrait tent, formation flag (how-to-enter-p2, how-to-enter-p5, day-20261031-p5).
 10. Four identical partials are a process failure; change route first (day-20261031-p3).
 
-Unverified: Drill Ground clearing and capacity (day-20261031-p5); promotion conditions (cadence-section); other-event points (how-it-is-p3); fourth barracks level (open-questions); 143-unit Lv.24 batch against carried 666 (day-20261025); tap routes and window state, old ticker units (how-to-enter-p2, day-20261105).
+Unverified: [claims](unverified-claims.md).
 
 ## Errata
 
@@ -43,3 +43,4 @@ Unverified until a live read settles each; articles stay verbatim, the newer gov
 - 0.2.0, 2026-11-23 - Errata added.
 - 0.3.0, 2026-11-23 - Decision logged.
 - 0.4.0, 2026-11-23 - Growth start rule added.
+- 0.6.0, 2026-11-23 - Tag-text rule.

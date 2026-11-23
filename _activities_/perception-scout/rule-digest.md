@@ -1,9 +1,9 @@
 ---
 title: Perception Scout Rule Digest
 created: 2026-11-23T06:37:16Z
-modified: 2026-11-23T09:50:09Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules a scout operator must follow when walking the game interface, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 3. Log each signal in the day file, append-only (the-job, what-this-activity).
 4. The reset boundary is 02:00 UTC, not 19:00 local (cadence-section).
 5. Never switch the furnace, donate coal, tap Teleport or press Buy (_records_/2026-11-07/perception-scout/2311-queue-run.md, _records_/2026-11-08/perception-scout/0440-queue-run.md, _records_/2026-11-02/perception-scout/1801-queue-run.md).
-6. Ground each tap fresh, never reuse a point after a pan; stop after two no-change taps (_records_/2026-11-02/perception-scout/1801-queue-run.md, _records_/2026-11-10/perception-scout/1521-queue-run.md, run-20261103-0508-p2).
+6. Ground each tap fresh, never reuse a point after a pan; stop after two no-change taps (_records_/2026-11-02/perception-scout/1801-queue-run.md, _records_/2026-11-10/perception-scout/1521-queue-run.md, run-20261103-0508-p2). Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
 7. Re-read the rotating Events strip; re-ground each tab per opening (_records_/2026-11-08/perception-scout/1615-queue-run.md, _records_/2026-11-11/perception-scout/1946-queue-run.md).
 8. Seed no zombie chain unless its tab is seen live; none on 2026-11-21 (_records_/2026-11-21/perception-scout/1551-queue-run.md, _records_/2026-11-07/perception-scout/2121-queue-run.md).
 9. Settled: Gold Bricks on the base, Alliance Contribution in Alliance Techs, WORLD badge is unread chat (day-20261121-p1, day-20261122-p1, day-20261121-p4).

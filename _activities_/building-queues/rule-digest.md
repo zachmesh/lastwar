@@ -1,9 +1,9 @@
 ---
 title: Building Queues Rule Digest
 created: 2026-11-23T06:47:36Z
-modified: 2026-11-23T07:49:01Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.5.0
+version: 0.6.0
 description: The standing rules an operator must follow when checking the build queues, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -21,7 +21,8 @@ grounded_in:
 6. Close building panels from their base area with care (what-this-activity).
 7. The live panel read stands over any older read (day-20261025-p1).
 
-Unverified: the hammer tap point, measured by ticker units, not the current bridge (what-this-activity); whether the Drill Ground upgrade raises troop capacity (open-questions); whether the Builders Hut quest was completed or rotated (day-20261025-p2).
+8. Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
+Unverified: [claims](unverified-claims.md).
 
 ## Errata
 
@@ -39,3 +40,4 @@ Unverified until a live read settles each; articles stay verbatim, the newer gov
 - 0.3.0, 2026-11-23 - Rules 2 to 4 amended per OD-20261109-02.
 - 0.4.0, 2026-11-23 - Decision logged, provenance labels dropped.
 - 0.5.0, 2026-11-23 - Growth start rule added.
+- 0.6.0, 2026-11-23 - Tag-text rule.

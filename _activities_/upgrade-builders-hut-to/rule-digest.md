@@ -1,9 +1,9 @@
 ---
 title: Upgrade Builders Hut Rule Digest
 created: 2026-11-23T07:19:42Z
-modified: 2026-11-23T09:56:00Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules an operator must follow for the Builders Hut Lv.26 upgrade quest, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
 6. Measured 2026-11-09: power 90,800 to 108,300; displayed time 7d 07:16:49 against 15d 08:05:18 original; no reward or deadline shown (_records_/2026-11-09/upgrade-builders-hut-to/0848-queue-run.md).
 7. The banner quest rotated to "Build: Oil Well [0/1]" by 16:03; whether it rotates back is unmeasured (run-20261109-1609, open-questions).
 
+8. Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
 Unverified: the swipe and tap methods, from old ticker units, not the current bridge (how-it-is); which speedups explain the time gap and whether the quest pays a reward (open-questions).
 
 ## Errata

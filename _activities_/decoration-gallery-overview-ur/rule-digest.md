@@ -1,9 +1,9 @@
 ---
 title: Decoration Gallery Overview Rule Digest
 created: 2026-11-23T07:41:47Z
-modified: 2026-11-23T09:54:49Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules an operator must follow when reading the Decoration Gallery Overview, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
 4. Read the Overview in full: Collection Progress per rarity (UR 18/39, SSR 7/19, SR 4/4 on 2026-11-09), Total Decor Combat Power and the seven bonuses; close with the blue back arrow (what-this-activity, _records_/2026-11-09/building-queue-1-of/0744-queue-run.md).
 5. Record each execution under `_records_/<date>/decoration-gallery-overview-ur/`, one file per execution (what-this-activity).
 
+6. Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
 Unverified: the left-edge entry, the popup X and the back-arrow close, measured by old ticker units with stored points, not the current computer-use bridge (_records_/2026-11-09/building-queue-1-of/0744-queue-run.md, _records_/2026-11-09/decoration-gallery-overview-ur/1158-queue-run.md); tabs beyond Overview and per-rarity detail, unmeasured (open-questions, _records_/2026-11-09/building-queue-1-of/0744-queue-run.md); the Overview figures, read once on 2026-11-09 (_records_/2026-11-09/building-queue-1-of/0744-queue-run.md).
 
 ## Errata
