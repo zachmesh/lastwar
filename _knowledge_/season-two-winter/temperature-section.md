@@ -1,7 +1,7 @@
 ---
 title: Temperature
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:06:44Z
+modified: 2026-11-23T09:06:44Z
 version: 0.1.0
 sequence: 2
 description: The map is seven concentric zones, colder toward the Capitol minus 15 at the outer zone,

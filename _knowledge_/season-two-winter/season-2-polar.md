@@ -1,7 +1,7 @@
 ---
 title: Season 2 Polar Storm
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:06:44Z
+modified: 2026-11-23T09:06:44Z
 version: 0.1.0
 sequence: 1
 description: This account is in Season 2, checked in game on 2026-10-25 snow map, a base temperature
