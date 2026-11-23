@@ -48,7 +48,7 @@ Eight seats; the coordinator plus seven roles. All eight are now
 
 | Seat | Session | Mission | Primary output | Cadence |
 |---|---|---|---|---|
-| coordinator | current `[lastwar] Steward` | clock, routing, owner gateway, roster | tick record, assignment, TEAM.yaml | 15 min |
+| coordinator | `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1` `[Last War] Coordinator` | clock, routing, roster | tick record, assignment, TEAM.yaml | 15 min |
 | operator | child `session-238b9ce7...` until migration | play one bounded unit | unit result + per-unit record | every tick |
 | scout | `session-d658da6d-95f9-4762-9648-b4e208b55c08` | perceive the whole surface | observation pass, candidate list | every 2 h |
 | researcher | `session-4335084a-3125-486d-9b61-03d23737b5f7` | internet + local reasoning | research note with a falsification test | 2 per day |
@@ -56,6 +56,22 @@ Eight seats; the coordinator plus seven roles. All eight are now
 | coach | `session-953a3676-cf57-4be2-8008-0ee9bc294d2d` | measure, retro, improve | dashboard, retro, backlog | daily |
 | toolsmith | `session-339995b4-ebd2-4710-94a1-fcc946be01cf` | tool and automation fixes | tested diff, PR | on assignment |
 | scribe | `session-c104e601-b16b-49cf-95a7-888543eb2499` | fold knowledge, integrate PRs | profile/PR | on assignment |
+
+### The Steward and the Coordinator
+
+The owner's root session is the **Steward**, `session-eb024f72-e661-4a77-9303-66af95dbcfd1`,
+titled `[lastwar] Steward`. It is the owner gateway, not a seat: it holds
+no write scope, takes no assignment, and runs no loop schedule. It
+relays owner instructions and approvals to the Coordinator and receives
+`needs-owner` escalations.
+
+By the reflection convention every team has exactly one **Coordinator**.
+The Coordinator is a separate top-level seat
+(`session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`) that owns the 900-second
+loop clock, dispatches the other seats and keeps `TEAM.yaml`. The
+Coordinator seat was moved from the Steward to its own session on
+2026-11-23T04:04Z; the Steward deleted its old 900-second schedule in the
+same turn, so there is exactly one clock.
 
 ### Seat briefs
 
@@ -183,6 +199,19 @@ run is handed over. Before a play run: activate Last War, dismiss
 NotificationCenter, verify `lsappinfo front` names LastWar. If it does
 not, do not claim or start; report `blocked: foreground`.
 
+Measured 2026-11-22 20:03 PT: `com.apple.UserNotificationCenter`
+(`/System/Library/CoreServices/UserNotificationCenter.app`) can hold
+the global front slot for days and flip back within a minute, while the
+screen shows no dialog. A click whose hit-test target is Last War is
+still refused with `excluded_front:os_security`. The working fix is to
+run `killall UserNotificationCenter NotificationCenter` in the same
+shell immediately before the run start, then verify `lsappinfo front`
+names LastWar. A read-only observation is the cheap probe: if its
+`last_step` says `looked at app:lastwar.ios`, the front slot is clear.
+The longer-term fix - judging `excluded_front` on the click's hit-test
+target rather than the global front app - is a computer-use policy
+change and needs the owner's call.
+
 ### App approval
 
 The owner approves `com.lastwar.ios` once with **Always allow**. The
@@ -230,6 +259,7 @@ with the local gate:
 | Phase | Act | State |
 |---|---|---|
 | M0 | spawn six top-level seats (scout, researcher, planner, coach, toolsmith, scribe) | done 2026-11-23T04:01Z |
+| M0b | spawn the top-level Coordinator; move the seat from the Steward; delete the Steward schedule | done 2026-11-23T04:04Z |
 | M1 | verify each seat reads its brief and replies | in progress |
 | M2 | after the operator's current unit closes, spawn `[Last War] Operator`; update its session id | pending |
 | M3 | record the child sessions as predecessors in each handover; stop using them | pending |
@@ -281,9 +311,11 @@ The gate supplies the cookie; no seat reads the DSH launch token.
 
 The organization is accepted when all of these hold:
 
-- [ ] Eight top-level sessions exist, titled `[Last War] <Role>`, and
-      `TEAM.yaml` ids match them.
-- [ ] The coordinator tick fires every 15 minutes and leaves a record.
+- [ ] Eight top-level seats exist (Coordinator plus seven roles), titled
+      `[Last War] <Role>`, and `TEAM.yaml` ids match them; the Steward is
+      outside the roster and holds no schedule.
+- [ ] Exactly one loop schedule exists, owned by the Coordinator, fires
+      every 15 minutes and leaves a record.
 - [ ] The operator closes one unit `done` with complete stats.
 - [ ] The scout appends one perception pass with a red-dot accounting.
 - [ ] The planner leaves no inbox unit older than one window.
