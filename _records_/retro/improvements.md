@@ -443,6 +443,21 @@ entries to implemented.
 - status: open - awaiting the owner's go-ahead on grouping (a convention change,
   scribe by PR; toolsmith to check whether tools hard-code the flat path).
 
+### IMP-20261123-03 - oversized documents and the commit gate
+
+- source: owner instruction 2026-11-23T04:34Z, audit
+  `_records_/2026-11-22/team-operations/2036-lint-audit.md`
+- class: tooling
+- leak: 3,456 of 7,467 documents reach the 500-word hard limit (5 new, all
+  today's operator records); 7 profiles run 39k to 84k words; no commit gate;
+  the day index grows by a line per tick.
+- target metric: new or changed document-concision errors, 5 now, 0 for the
+  next 10 records; profiles over 500 words, 31 now; entry-points errors 454.
+- verification: `lint_gate.py watch` reports the counts from the linter; the
+  pre-commit hook blocks a 600-word new document on a fixture.
+- status: open - toolsmith assignment A-20261123-0437 dispatched; scribe pilot
+  split of alliance-donations next.
+
 ## Closed
 
 None yet. The first closures are expected at the 2026-11-01
