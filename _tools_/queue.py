@@ -611,6 +611,7 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
+DEFAULT_SERVES = "upkeep"      # what a roster regular serves unless its regulars.json entry says otherwise
 UPGRADE_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
 UPGRADE_MARKERS = ("upgrade", "growth-fill")
 
@@ -1948,6 +1949,7 @@ def _produce_for_window(root, item, planned_local, window="",
         "not_before": planned_iso if planned_utc > now_utc() else "",
         "window": window,
         "est_minutes": typical_minutes(root, regular)[0],
+        "serves": " ".join(str(item.get("serves") or DEFAULT_SERVES).split()),
         "chain_id": chain_id, "chain_seq": chain_seq, "attempts": 0,
         "max_attempts": DEFAULT_MAX_ATTEMPTS,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
