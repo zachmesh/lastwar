@@ -7,7 +7,11 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
   no execution      no unit executed (done, partial or failed) for more than --stale-minutes (45)
   idle slot         the latest building-queues, research-queue or troop-training read left a builder, lab or queue slot
                     idle (builders_idle / slots_idle in the unit's stats, less what the same unit started) for more than
-                    --idle-minutes (30)
+                    --idle-minutes (30). A slot BLOCKED BY CAPACITY is not idle in the alarm's sense (the barracks queues
+                    blocked by Drill Ground Full): the planner's slot-read units write slots_blocked_capacity N beside the idle
+                    count (builders_idle, slots_idle, queue_slots_idle, queues_idle, labs_idle or idle_slots, which include the
+                    blocked ones) and the blocker text; N, at most the open slots, is subtracted from the idle count and printed
+                    beside it, with the blocker text when the stats carry one.
   coverage          units, or unit-hours (result duration, else est_minutes), serving a RANKED item are under
                     --coverage-percent (60) of what executed in the window
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
@@ -41,6 +45,9 @@ EXECUTED = ("done", "partial", "failed")
 SLOT_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
 IDLE_KEYS = ("builders_idle", "slots_idle", "queue_slots_idle", "queues_idle", "labs_idle", "idle_slots")
 STARTED_KEYS = ("upgrades_started", "research_started", "training_started", "batches_started")
+BLOCKED_KEYS = ("slots_blocked_capacity", "slots_blocked_by_capacity", "blocked_by_capacity")   # how many idle slots cannot start for want of capacity
+BLOCKER_KEYS = ("capacity_blocker", "blocked_by", "blocker", "blocker_text", "slot_blocker", "slots_blocked_note", "slots_blocked_reason")
+NOT_A_BLOCKER = ("blocker_category", "blocker_overlay")                      # the screen-blocking stats of another rule
 
 
 def flat_frontmatter(text: str) -> dict:
@@ -165,10 +172,21 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
         if value is None:
             continue
         open_slots = max(0, int(value) - int(started))
+        blocked = next((number(latest.f, f"result.stats.{k}") for k in BLOCKED_KEYS if number(latest.f, f"result.stats.{k}") is not None), 0) or 0
+        text = next((str(latest.f.get(f"result.stats.{k}", "")).strip() for k in BLOCKER_KEYS if str(latest.f.get(f"result.stats.{k}", "")).strip()), "")
+        if not text:                                                         # any other stat whose name says blocked or blocker and whose value is words
+            text = next((str(v).strip() for k, v in latest.f.items() if k.startswith("result.stats.") and k.rsplit(".", 1)[1] not in NOT_A_BLOCKER
+                         and re.search(r"block", k) and not re.fullmatch(r"-?\d+(\.\d+)?", str(v).strip()) and str(v).strip()), "")
+        text = re.sub(r"^blocked by capacity:\s*", "", text, flags=re.I)
+        exempt = min(open_slots, max(0, int(blocked)))                       # the planner writes it only for a slot it saw blocked
+        alarmable = open_slots - exempt
         minutes = (now - latest.finished).total_seconds() / 60
-        idle.append({"activity": activity, "idle_slots": open_slots, "minutes_since_read": round(minutes)})
-        if open_slots > 0 and minutes > a.idle_minutes:
-            alarms.append({"alarm": "idle-slot", "activity": activity, "idle_slots": open_slots, "minutes": round(minutes),
+        row = {"activity": activity, "idle_slots": alarmable, "minutes_since_read": round(minutes)}
+        if exempt:
+            row.update(slots_blocked_capacity=exempt, blocker=text[:40])
+        idle.append(row)
+        if alarmable > 0 and minutes > a.idle_minutes:
+            alarms.append({"alarm": "idle-slot", "activity": activity, "idle_slots": alarmable, "minutes": round(minutes),
                            "limit": a.idle_minutes})
     counts["slot_reads"] = idle
     # coverage
@@ -222,7 +240,9 @@ def render(result: dict) -> str:
         lines.append(f"coverage serving a ranked item: units {c['coverage_units_percent']}%, unit-hours {c['coverage_unit_hours_percent']}%")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
-        lines.append(f"slot read {read['activity']}: {read['idle_slots']} idle, read {read['minutes_since_read']} min ago")
+        note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")
+                if read.get("slots_blocked_capacity") else "")
+        lines.append(f"slot read {read['activity']}: {read['idle_slots']} idle{note}, read {read['minutes_since_read']} min ago")
     if "plan_items_checked" in c:
         lines.append(f"plan items checked: {c['plan_items_checked']}")
     for alarm in result["alarms"]:
