@@ -4751,6 +4751,47 @@ def _complete_expired(args, state, path):
     return 0
 
 
+RULE_ID_MAX, RULE_IDS_MAX, RULE_GAP_MAX = 60, 20, 200
+
+
+def _rule_ids(text):
+    """(normalised comma list, warnings) for --rules-used or --rule-failed: ids as the playbook card numbers its rules (R1, R3),
+    whitespace folded, empty items and repeats dropped, at most RULE_IDS_MAX of at most RULE_ID_MAX characters. Never refuses:
+    an optional note must not cost a unit its completion."""
+    warnings, items = [], []
+    for raw in re.split(r"\s*,\s*", " ".join((text or "").split())):
+        item = raw.strip()
+        if not item or item in items:
+            continue
+        if len(item) > RULE_ID_MAX:
+            item = item[:RULE_ID_MAX]
+            warnings.append("a rule id was cut to %d characters" % RULE_ID_MAX)
+        items.append(item)
+    if len(items) > RULE_IDS_MAX:
+        items = items[:RULE_IDS_MAX]
+        warnings.append("more than %d rule ids; the rest were dropped" % RULE_IDS_MAX)
+    return ",".join(items), warnings
+
+
+def _rule_stats(args):
+    """The three optional playbook stats of OD-20261123-15, as (stats, warnings). rules_used: the card rules the unit followed
+    and that helped; rule_failed: the ones that did not hold; rule_gap: one line on a rule that was missing. Named rule_gap,
+    never gap: thirteen older units carry a legacy gap score and the two must not collide."""
+    stats, warnings = {}, []
+    for flag, key in (("rules_used", "rules_used"), ("rule_failed", "rule_failed")):
+        value, warn = _rule_ids(getattr(args, flag, "") or "")
+        if value:
+            stats[key] = value
+        warnings += [f"{key}: {w}" for w in warn]
+    gap = " ".join((getattr(args, "rule_gap", "") or "").split())
+    if gap:
+        if len(gap) > RULE_GAP_MAX:
+            gap = gap[:RULE_GAP_MAX].rstrip()
+            warnings.append(f"rule_gap: cut to {RULE_GAP_MAX} characters")
+        stats["rule_gap"] = gap
+    return stats, warnings
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if args.status == "expired":
@@ -4770,6 +4811,8 @@ def cmd_complete(args):
         if "=" in pair:
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
+    rule_stats, rule_warnings = _rule_stats(args)
+    stats.update(rule_stats)                                    # the flags win over a --stat of the same name
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
@@ -4809,7 +4852,8 @@ def cmd_complete(args):
                            + (["blocker_category not in enum a-i"]
                               if blocker_bad else [])
                            + (["duration exceeds 15-minute unit cap"]
-                              if over_cap else [])),
+                              if over_cap else [])
+                           + rule_warnings),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -6164,6 +6208,12 @@ def main(argv=None):
     p.add_argument("--evidence", default="")
     p.add_argument("--follow-up", default="")
     p.add_argument("--stat", action="append", default=[])
+    p.add_argument("--rules-used", default="",
+                   help="playbook card rules the unit followed and that helped, comma separated (R1,R3); stat rules_used")
+    p.add_argument("--rule-failed", default="",
+                   help="card rules that did not hold, comma separated; stat rule_failed")
+    p.add_argument("--rule-gap", default="",
+                   help="one line on a rule that was missing; stat rule_gap (never the legacy gap score)")
     p.set_defaults(fn=cmd_complete)
 
     p = sub.add_parser("release")
