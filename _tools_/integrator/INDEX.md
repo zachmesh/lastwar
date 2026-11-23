@@ -1,7 +1,7 @@
 ---
 title: Integrator
 created: 2026-11-23T08:56:35Z
-modified: 2026-11-23T08:56:35Z
+modified: 2026-11-23T09:04:17Z
 version: 1.0.0
 description: The Integrator seat's wrapper for landing a branch on main - status, check, push, open, merge, readback
 ---
@@ -14,7 +14,7 @@ through `gh` (already logged in) and git; nothing reads, prints or stores a cred
 | Command | Does |
 |---|---|
 | `status [--json]` | Open PRs, local main ahead and behind origin/main with the local-only SHAs, direct pushes to main in 24 h, the claimed folder, a shallow-clone warning. |
-| `check BRANCH --seat KEY [--test DIR]...` | Scope against the seat's `write_scopes` in TEAM.yaml; the denylist by `git grep -P -i -f` over contents, file names, messages and authors, and by the wrap-aware `lint_gate.py watch --privacy --worktree` in a clean worktree; a positive control on made-up text; no binaries; the lint gate; the named tests; overlap with open PRs. Counts only. |
+| `check BRANCH --seat KEY [--test DIR]...` | Scope against the seat's `write_scopes` in TEAM.yaml; the denylist by `git grep -P -i -f` over contents, file names, messages and authors, and by the wrap-aware `lint_gate.py watch --privacy --worktree` in a clean worktree; a positive control on made-up text; no binaries; the lint gate in its landing form (`--base --landing`: a gate that cannot run, exit 2, blocks); the named tests; overlap with open PRs. Counts only. |
 | `push BRANCH` | Pushes that named branch, never forced, only at a head with a passing check. |
 | `open BRANCH --title T` | Opens the PR into main; the head must be on origin. |
 | `merge PR --head-sha SHA` | `gh pr merge --merge --match-head-commit`; refused when the head moved, base is not main, or no passing check is recorded. |
