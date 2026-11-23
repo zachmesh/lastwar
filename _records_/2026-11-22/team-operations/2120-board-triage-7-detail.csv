@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+477,"idea,knowledge,play",New event: The Age of Oil - exploration needed; Base Expansion II chest unresp,#862,lastwar scout,P3,the-age-of-oil profile exists; verify and close
+475,tooling,Fullscreen taps do not open panels (background input + 1920x1080 geometry mism,#864,lastwar toolsmith,P3,previous executor; verify and close if obsolete
+469,knowledge,Season pass claim path from 2026-10-25 no longer reachable in the Week 8 hub,#862,lastwar scribe,P3,
+466,tooling,Ticker sync re-produces a unit already closed on the remote records branch (lo,#865,lastwar toolsmith,P3,ticker retired; verify and close if obsolete
+461,tooling,Token re-acquire landing just before expiry reports held and never renews; gam,#864,lastwar toolsmith,P2,device-token renewal near expiry
+450,knowledge,Donation Count replenishes during the day; grey button plus badge move do not ,#861,lastwar scribe,P2,same finding as #813 and #500; verify duplicate
+446,tooling,Duplicate unit execution from stale main-checkout pool: ticker-0534 re-ran 3 u,#865,lastwar toolsmith,P3,ticker retired; verify and close if obsolete
+444,knowledge,"Scout-store remainder: Store tab strip Season, Cosmetics and cut-off tabs neve",#862,lastwar scout,P3,read only
+438,tooling,Completed scout units re-executed: main-tree inbox still holds units completed,#865,lastwar toolsmith,P3,ticker retired; verify and close if obsolete
+436,tooling,Queue picker hands out base-screen units while a screen-blocking overlay is op,#861,lastwar toolsmith,P2,picker hands out base-screen units under an overlay
+429,tooling,/tmp ticker worktrees deleted mid-pass; worktrees must live under ~/workspace/,#865,lastwar toolsmith,P3,previous host worktrees; verify and close if obsolete
+427,"idea,knowledge",Marshal's Guard activation 2026-11-09 21:00 and Lv.8 Doomsday Stronghold searc,#862,lastwar researcher,P3,event date has passed; verify and close if obsolete
+423,knowledge,Donation Count rose 1/30 to 5/30 between units with no recorded donations,#861,lastwar scribe,P3,donation counter; may duplicate #450
+422,"tooling,records",Ticker delivery pushed a malformed action-log tail (4 concatenated duplicate p,#865,lastwar toolsmith,P3,action-log tail
+419,"idea,knowledge",New alliance event: Zombie Siege / Alliance Exercise - explore before 2026-11-,#862,lastwar scribe,P2,Zombie Siege tonight 23:15 PT; link #814
+418,"tooling,compliance",Records-batch cadence miss: PR 379 merged 23:49 in the 2300 window after PR 37,#865,lastwar planner,P3,historical compliance
+417,knowledge,Donation-points counter dropped 2700 to 750 after six confirmed donations,#861,lastwar scribe,P3,donation-points counter
+416,records,Arms-race 1633 base-screen HUD read disagrees with every other Nov 7 live read,#865,lastwar coach,P3,
+415,"idea,tooling",Live checkout goes stale again after every main-side tool fix: nothing re-sync,#864,lastwar toolsmith,P3,previous host checkout; verify and close if obsolete
+404,"idea,tooling",Adopt _tools_/log_append.py for action-log appends so concatenated lines canno,#865,lastwar toolsmith,P3,log_append.py for the action log
