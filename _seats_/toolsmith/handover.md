@@ -23,3 +23,9 @@ Updated at establishment, 2026-11-22 19:15 PT.
 
 A holder updates this page before standing down. A replacement reads it
 before taking the seat.
+
+## Predecessor
+
+The delegated child session `session-97ce007b-ef30-4271-a04d-b45ce133fd08` held this seat before the top-level
+migration on 2026-11-23T04:01Z. It is retained idle until the 24-hour
+pilot passes, then archived. Do not use it for new work.

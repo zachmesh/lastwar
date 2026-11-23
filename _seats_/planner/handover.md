@@ -54,3 +54,9 @@ Updated 2026-11-22 19:22 PT.
 - A main-checkout `_queue_` can be a stale snapshot. Measure the live pool
   from the day index and the records branch before calling anything live.
 - A queue reset is a genesis reset; never backfill missed cycles.
+
+## Predecessor
+
+The delegated child session `session-6e9bbd73-729e-4cfe-8d8f-92a7f4c3dca1` held this seat before the top-level
+migration on 2026-11-23T04:01Z. It is retained idle until the 24-hour
+pilot passes, then archived. Do not use it for new work.

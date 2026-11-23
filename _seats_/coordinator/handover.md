@@ -70,3 +70,22 @@ Updated 2026-11-22 19:21 PT.
    M1 to M3 movement rows.
 4. Keep PR #858 moving; when the owner provides `gh` or a merge route, land
    it and reset local `main` to `origin/main`.
+
+## Top-level seat migration, 2026-11-23 04:03Z
+
+- Six seats are now top-level DSH sessions, created through the local
+  gate: scout `session-d658da6d-95f9-4762-9648-b4e208b55c08`,
+  researcher `session-4335084a-3125-486d-9b61-03d23737b5f7`,
+  planner `session-c2652e1a-8fa4-4468-8d44-6d351762ed67`,
+  coach `session-953a3676-cf57-4be2-8008-0ee9bc294d2d`,
+  toolsmith `session-339995b4-ebd2-4710-94a1-fcc946be01cf`,
+  scribe `session-c104e601-b16b-49cf-95a7-888543eb2499`.
+- Their `TEAM.yaml` ids and `session_started` are updated; the child
+  predecessors are recorded in each seat's handover.
+- The operator stays on child `session-238b9ce7-1c06-4bc5-9901-42aa8b27e087`
+  until its current unit closes; then spawn `[Last War] Operator` and
+  update the id.
+- The first full-team tick uses `session-relay send` to the top-level
+  seats. Do not create a second schedule; the coordinator remains the
+  only clock.
+

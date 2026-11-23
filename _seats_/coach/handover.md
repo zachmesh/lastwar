@@ -42,3 +42,9 @@ Updated 2026-11-22 19:22 PT.
 2. File the pool-split finding and the two planner tooling defects as
    issues or owner decisions; do not close anything on an edit alone.
 3. Run the daily retro only after the fresh pool has one full day.
+
+## Predecessor
+
+The delegated child session `session-cfc4492f-b4f7-4ea0-b9c9-772186236af4` held this seat before the top-level
+migration on 2026-11-23T04:01Z. It is retained idle until the 24-hour
+pilot passes, then archived. Do not use it for new work.
