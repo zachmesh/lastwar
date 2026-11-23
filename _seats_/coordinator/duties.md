@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat duties
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:11:00-08:00
+modified: 2026-11-23T04:16:00Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The per-firing checklist for this seat
 status: unverified
 grounded_in:
@@ -11,6 +11,27 @@ grounded_in:
 ---
 
 # Duties - coordinator
+
+## Speed rules (owner, 2026-11-23T04:15Z) - these override the steps below
+
+1. Timebox selection to 60 seconds: `queue.py next`, the eligibility check
+   (`not_before` past, `expires_at` ahead) and the dispatch happen in the same
+   turn. Once `next` names an eligible unit, do not re-read history, read old
+   ticker records or compare candidates.
+2. One unit, one run, one reply. If the operator is already playing (a unit
+   in `_queue_/claimed/` or the session running), do not dispatch a second.
+3. Routine play runs: `--model claude-gateway/claude-sonnet-5-5`,
+   `--max-steps 8`. The opus model only for complex screens.
+4. A run paused by local input is stopped and the unit closed `partial`
+   within 2 minutes.
+5. Target: one routine unit per 2 to 3 minutes while the Mac is idle.
+6. Chaining (coordinator reading of rule 5): the 900-second clock alone
+   allows only 4 units an hour, so when an operator reply closes a unit, the
+   coordinator runs `next` and dispatches the next eligible unit in that same
+   turn. The clock is the backstop for a lost reply, not the pace.
+
+Source: `_records_/2026-11-22/team-operations/2015-speed-incident.md`,
+improvement `IMP-20261123-01`.
 
 ## Each tick
 
