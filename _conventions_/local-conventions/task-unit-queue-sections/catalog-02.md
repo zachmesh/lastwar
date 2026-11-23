@@ -1,28 +1,31 @@
 ---
 title: Catalog 02
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 1.0.0
 description: Catalog 02 of the split Task Unit Queue Design
 ---
 
 # Catalog 02
 
-16 entries of Task Unit Queue Design, from 12-the-daily to changelog-section. Back to the [register page](../task-unit-queue-design.md).
+19 entries of Task Unit Queue Design, from day-20261031 to day-20261031. Back to the [register page](../task-unit-queue-design.md).
 
-- [12. The daily collection ledger and the pre-reset](12-the-daily-p2.md) - 12-the-daily - Generation - the planner interface.
-- [12. The daily collection ledger and the pre-reset](12-the-daily-p3.md) - 12-the-daily - 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30...
-- [13. The perception layer (scout) part 1](13-the-perception-p1.md) - 13-the-perception - The day work set is no longer defined by the static regulars alone.
-- [13. The perception layer (scout) part 2](13-the-perception-p2.md) - 13-the-perception - Result contract.
-- [13. The perception layer (scout) part 3](13-the-perception-p3.md) - 13-the-perception - Perception points are a floor, not a ceiling.
-- [14. Retro review mechanism](14-retro-review.md) - 14-retro-review - The repository is the single source of truth (owner rule, 2026-10-31).
-- [Per-unit measurement](per-unit-measurement.md) - per-unit-measurement - Every unit already closes with a structured result (section 5).
-- [Aggregation - the retro_report.py specification part 1](aggregation-the-retro-p1.md) - aggregation-the-retro - Aggregation is specified here and implemented as _tools_/retro_report.py (landed 2026-11-01).
-- [Aggregation - the retro_report.py specification part 2](aggregation-the-retro-p2.md) - aggregation-the-retro - Its only data sources are inside the repository - the unit results in _queue_/done...
-- [The daily rolling retro](the-daily-rolling.md) - the-daily-rolling - Once a day, timed with the post-reset perception round, a retro pass looks back...
-- [System evaluation metrics](system-evaluation-metrics.md) - system-evaluation-metrics - This section measures the work; the companion specification evaluation metrics measures the system that...
-- [Changelog part 1](changelog-section-p1.md) - changelog-section - 0.37.0, 2026-11-22 - section 11 gains rule R26 (reaped-marker reasons, issue #826): sync reports...
-- [Changelog part 2](changelog-section-p2.md) - changelog-section - 0.32.0, 2026-11-22 - section 3 specifies the _queue_/completed/ completion markers (issue #726): the marker's...
-- [Changelog part 3](changelog-section-p3.md) - changelog-section - 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): enqueue...
-- [Changelog part 4](changelog-section-p4.md) - changelog-section - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): next resolves...
-- [Changelog part 5](changelog-section-p5.md) - changelog-section - 0.11.0, 2026-11-01 - the aggregation of section 14 is implemented as _tools_/retro_report.py - per...
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p1.md) - day-20261031 - The miss audit of 2026-10-31 classified
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p2.md) - day-20261031 - R2 - pivot, then escalate.
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p3.md) - day-20261031 - R4 - Arms Race judged at
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p4.md) - day-20261031 - R8 - reporting splits by-design partials.
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p5.md) - day-20261031 - R10 - run the tool from
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p6.md) - day-20261031 - R11 - never decide from a
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p7.md) - day-20261031 - R12 - next and claim decide
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p8.md) - day-20261031 - R13 - every pass record cites
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p9.md) - day-20261031 - R15 - never stage an already-expired
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p10.md) - day-20261031 - R16 - enqueue reconciles the next
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p11.md) - day-20261031 - R17 - a doomed probe burns
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p12.md) - day-20261031 - R18 - enqueue refuses a chain
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p13.md) - day-20261031 - R19 - already_present counts only units
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p14.md) - day-20261031 - R20 - the sweep pair carries
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p15.md) - day-20261031 - R21 - create refuses a stale
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p16.md) - day-20261031 - R23 - the missed-VIP-days count comes
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p17.md) - day-20261031 - R24 - a scout chain stops
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p18.md) - day-20261031 - R25 - a claim needs a
+- [11. Execution discipline rules - the 2026-10-31 audit](day-20261031-p19.md) - day-20261031 - R26 - sync names each reaped

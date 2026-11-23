@@ -1,9 +1,9 @@
 ---
 title: First retrospective hardening target - radar-tasks
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 27
+sequence: 36
 description: The first profile named for retrospective hardening under this protocol is radar-tasks.
 ---
 ### First retrospective hardening target - radar-tasks

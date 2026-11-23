@@ -1,9 +1,9 @@
 ---
 title: 4. The observed items schema
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 7
+sequence: 10
 description: Every signal a scout records is one observed item, written in the day observation file (section
 ---
 ## 4. The observed items schema

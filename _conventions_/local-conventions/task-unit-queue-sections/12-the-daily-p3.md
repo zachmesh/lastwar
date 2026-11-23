@@ -1,9 +1,9 @@
 ---
 title: 12. The daily collection ledger and the pre-reset zero sweep part 3
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 31
+sequence: 42
 description: 2026-11-04 correction (organizer 0432, Refs 147) - the sweep geometry above replaces the wall-clock 1730/1830 slots
 ---
 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.

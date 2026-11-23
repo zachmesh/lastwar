@@ -1,7 +1,7 @@
 ---
 title: The closing standard
-created: 2026-11-23T08:37:49Z
-modified: 2026-11-23T08:37:49Z
+created: 2026-11-23T09:02:16Z
+modified: 2026-11-23T09:02:16Z
 version: 0.1.0
 sequence: 2
 description: Every line closes on a live read from that day - a counter, a balance, a

@@ -1,9 +1,9 @@
 ---
 title: System evaluation metrics
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 40
+sequence: 54
 description: This section measures the work; the companion specification evaluation metrics measures the system that does the
 ---
 ### System evaluation metrics

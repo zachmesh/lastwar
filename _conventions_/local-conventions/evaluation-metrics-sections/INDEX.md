@@ -1,7 +1,7 @@
 ---
 title: Evaluation Metrics log
-created: 2026-11-23T08:36:55Z
-modified: 2026-11-23T08:36:55Z
+created: 2026-11-23T09:02:25Z
+modified: 2026-11-23T09:02:25Z
 version: 1.0.0
 description: Articles of the Evaluation Metrics register, split verbatim; the register page lists them
 ---

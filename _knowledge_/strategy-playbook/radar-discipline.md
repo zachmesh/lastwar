@@ -1,9 +1,9 @@
 ---
 title: Radar discipline
-created: 2026-11-23T07:46:59Z
-modified: 2026-11-23T07:46:59Z
+created: 2026-11-23T09:06:47Z
+modified: 2026-11-23T09:06:47Z
 version: 0.1.0
-sequence: 4
+sequence: 5
 description: The researched rule (Handbook and the Kimikas guide agree) is finer than save for Monday -
 ---
 ## Radar discipline

@@ -1,9 +1,9 @@
 ---
 title: Miss Audit 2026-10-31
 created: 2026-11-01T04:53:00Z
-modified: 2026-11-23T08:37:03Z
+modified: 2026-11-23T09:03:19Z
 level: L2
-version: 1.2.0
+version: 1.3.0
 description: Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist of eight items
 status: audit-complete
 grounded_in:
@@ -15,7 +15,7 @@ grounded_in:
 
 # Miss Audit 2026-10-31
 
-Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist of eight items. This register stays at this path as an entry page; its text was split verbatim into 26 articles in [miss-audit-sections](miss-audit-sections/INDEX.md), unchanged and in reading order.
+Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist of eight items. This register stays at this path as an entry page; its text was split verbatim into 31 articles in [miss-audit-sections](miss-audit-sections/INDEX.md), unchanged and in reading order.
 
 ## Adding an entry
 
@@ -24,7 +24,9 @@ Add one small article file `miss-audit-sections/<entry-id>.md`, named by an entr
 ## Changelog
 
 - 1.2.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 5,142-word body into 26 key-named articles and 1 catalog page; no word rewritten. `--verify` PASS and `--check` EQUAL, 36717 characters, sha256 bed62e17518c; the unsplit 1.1.1 file is commit 6d019ade.
+- 1.3.0, 2026-11-23 - Re-split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 bed62e17518c; the 1.2.0 split is in git history.
 
 ## Articles
 
-- [Catalog 01](miss-audit-sections/catalog-01.md) - Miss audit 2026-10-31 to day-20261101
+- [Catalog 01](miss-audit-sections/catalog-01.md) - Miss audit 2026-10-31 to item-3-upgrade
+- [Catalog 02](miss-audit-sections/catalog-02.md) - item-4-daily to day-20261101

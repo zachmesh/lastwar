@@ -1,9 +1,9 @@
 ---
 title: G. True miss inside the red lines - 4 units
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 11
+sequence: 14
 description: Instances - all four are Arms Race phases at score 0 with every scoring path proven
 ---
 ### G. True miss inside the red lines - 4 units

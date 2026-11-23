@@ -1,9 +1,9 @@
 ---
 title: Platform facts and enforcement
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 12
+sequence: 15
 description: This policy is enforced by pipeline discipline, a push-route guard and the retro audit - not
 ---
 ## Platform facts and enforcement

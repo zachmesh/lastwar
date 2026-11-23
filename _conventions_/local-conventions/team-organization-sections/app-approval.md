@@ -1,9 +1,9 @@
 ---
 title: App approval and 5 more
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 8
+sequence: 10
 description: The owner approves com.lastwar.ios once with Always allow.
 ---
 ### App approval

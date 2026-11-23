@@ -1,9 +1,9 @@
 ---
 title: Audit
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 11
+sequence: 14
 description: The daily retro's loop-health check scans every commit that landed on main since the previous retro
 ---
 ## Audit

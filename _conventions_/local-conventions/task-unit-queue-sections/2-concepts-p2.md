@@ -1,11 +1,17 @@
 ---
 title: 2. Concepts part 2
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
 sequence: 4
-description: Continuation chain - a long activity is a chain of units under one chain_id.
+description: The 15 minute unit - owner rule of 2026-10-28 - each unit runs at most 15
 ---
+- **The 15 minute unit** - owner rule of 2026-10-28 - **each unit
+  runs at most 15 minutes**. The unit is the scheduling quantum -
+  when a unit ends, the loop re-reads the pool, so work that became
+  due or urgent in the meantime is picked up at the next boundary,
+  at most 15 minutes later. A task that cannot fit in 15 minutes is
+  split into units at intake, never stretched.
 - **Continuation chain** - a long activity is a chain of units under
   one `chain_id`. Each finished unit reports in its result stats
   whether the activity is exhausted; if not, the next unit of the

@@ -1,9 +1,9 @@
 ---
 title: 10. Questions put to the owner
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 15
+sequence: 20
 description: Lease length - 20 minutes proposed.
 ---
 ## 10. Questions put to the owner

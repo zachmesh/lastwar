@@ -1,7 +1,7 @@
 ---
 title: 1. Principle part 2
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
 sequence: 3
 description: Scheduling is observation-triggered, not fixed-slot.
@@ -33,9 +33,4 @@ description: Scheduling is observation-triggered, not fixed-slot.
   and scheduled by the same triggers, or rejected with the
   reason kept. Discovery is part of comprehensiveness, not an
   exception path.
-
-A scout unit never does the work it finds. It observes, records
-and hands over. Execution stays one unit, one task type, under
-the queue design - the scout layer changes where units come
-from, not how they run.
 

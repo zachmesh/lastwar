@@ -1,9 +1,9 @@
 ---
 title: Headquarters and Resources
 created: 2026-10-25T17:58:00Z
-modified: 2026-11-01T07:09:43Z
+modified: 2026-11-23T09:06:40Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: The core resources, headquarters gating, troop tier milestones and the Age of Oil step past level 30
 status: unverified
 grounded_in:
@@ -12,52 +12,15 @@ grounded_in:
   - source: U7Buy economy explainer and Heaven Guardian valor badge guide, accessed 2026-10-25
 ---
 
-# Headquarters and resources
+# Headquarters and Resources
 
-External research. Guide figures drift with game updates, so the in-game
-upgrade screen is the final reference for any single step (a Tank Center
-guide makes the same point about its own table).
+The core resources, headquarters gating, troop tier milestones and the Age of Oil step past level 30. This document was split verbatim into 4 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
 
-## Core resources
+- [Headquarters and resources](headquarters-and-resources.md) - External research.
+- [Core resources](core-resources.md) - core-resources - Food — trains and heals troops, fuels research.
+- [Headquarters gating](headquarters-gating.md) - headquarters-gating - HQ level gates most other content.
+- [For this account](for-this-account.md) - for-this-account - The 2026-10-25 snapshot shows resource figures of 260.9M, 255.3M, 24.4M, 9.9M, 444.4K and 8.22K...
 
-- **Food** — trains and heals troops, fuels research. Produced by farms
-  and similar buildings, collected before it overflows.
-- **Iron** — the main building and upgrade bottleneck from about HQ 15 on.
-  Every HQ table is dominated by iron.
-- **Coin** (gold) — joins upgrade and research costs from HQ level 9
-  (Theria). Scarcer than food and iron.
-- **Diamonds** — premium currency, not lootable. Earned in limited daily
-  amounts from tasks, chests, radar and events (Z2U resource guide).
-- **Valor Badges** — a gated technology resource for advanced Tech Center
-  research such as Special Forces. Not gathered; earned mainly from
-  Alliance Duel reward chests, with events and Warzone VS as supplements
-  (Google Play editorial; Heaven Guardian; LDShop tech guide).
-- **Oil** — arrives with the Age of Oil past HQ 30 and becomes a second
-  upgrade economy (barracks guide, Medium).
+## Changelog
 
-## Headquarters gating
-
-HQ level gates most other content. Each HQ step needs two prerequisite
-buildings near the same level — wall, tech center, barracks, hospital,
-warehouse, drill ground and alliance center rotate through the table
-(Theria summary; BetaSimRacing full table). Milestones from the full
-table, single-source and to be spot-checked in game —
-
-- HQ 20 unlocks the Profession Hall. HQ 24 unlocks T8 troops, HQ 27 T9,
-  HQ 30 T10.
-- HQ 31 needs Tech Center 30, Barracks 30, any troop center 30 and
-  Special Forces research at 40 percent, and unlocks the Age of Oil,
-  raising the hero level cap to 155, then 160 at HQ 32.
-- Costs jump by orders of magnitude — the 1-to-30 Tank Center figures run
-  from about 560K iron at level 10 to roughly 1.1B iron for level 30
-  alone. This account is HQ 30 by its level-30 portrait frame, which is
-  an inference from the login screen, not a checked building level.
-
-## For this account
-
-The 2026-10-25 snapshot shows resource figures of 260.9M, 255.3M, 24.4M,
-9.9M, 444.4K and 8.22K as displayed. Mapping each figure to its resource
-icon on the HUD is an open check, tracked as IMP-20261101-04 in the
-[improvements backlog](../../_records_/retro/improvements.md). The 8.22K star
-figure is consistent with Valor Badges, but is not asserted until seen in
-the Tech Center.
+- 1.1.0, 2026-11-23 - Split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 48f12fa75cee; the 1.0.1 single file is in git history.

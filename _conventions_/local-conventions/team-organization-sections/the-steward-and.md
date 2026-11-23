@@ -1,7 +1,7 @@
 ---
 title: The Steward and the Coordinator
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
 sequence: 4
 description: The owner's root session is the Steward, session-eb024f72-e661-4a77-9303-66af95dbcfd1, titled lastwar Steward.

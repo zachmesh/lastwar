@@ -1,9 +1,9 @@
 ---
 title: Resource map and floors
-created: 2026-11-23T07:46:59Z
-modified: 2026-11-23T07:46:59Z
+created: 2026-11-23T09:06:47Z
+modified: 2026-11-23T09:06:47Z
 version: 0.1.0
-sequence: 6
+sequence: 7
 description: Every run that reads the HUD records a snapshot with _tools_/resource_map.py snap, and every run checks
 ---
 ## Resource map and floors

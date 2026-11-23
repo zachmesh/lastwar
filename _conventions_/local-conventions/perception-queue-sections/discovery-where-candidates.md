@@ -1,9 +1,9 @@
 ---
 title: Discovery - where candidates come from
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 14
+sequence: 18
 description: Roster matching.
 ---
 ### Discovery - where candidates come from

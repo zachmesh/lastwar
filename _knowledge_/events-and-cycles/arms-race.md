@@ -1,7 +1,7 @@
 ---
 title: Arms Race
-created: 2026-11-23T06:18:59Z
-modified: 2026-11-23T06:18:59Z
+created: 2026-11-23T09:06:51Z
+modified: 2026-11-23T09:06:51Z
 version: 0.1.0
 sequence: 2
 description: A daily individual event that never stops.

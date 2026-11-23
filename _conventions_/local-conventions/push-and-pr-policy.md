@@ -1,8 +1,8 @@
 ---
 title: Push and PR Policy
 created: 2026-11-01T05:31:00Z
-modified: 2026-11-23T08:37:00Z
-version: 2.4.0
+modified: 2026-11-23T09:02:35Z
+version: 2.5.0
 status: draft
 description: PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and every executor run checks its own pull requests first and ends by opening one
 grounded_in:
@@ -16,7 +16,7 @@ grounded_in:
 
 # Push and PR Policy
 
-PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and... This register stays at this path as an entry page; its text was split verbatim into 15 articles in [push-pr-policy-sections](push-pr-policy-sections/INDEX.md), unchanged and in reading order.
+PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and... This register stays at this path as an entry page; its text was split verbatim into 19 articles in [push-pr-policy-sections](push-pr-policy-sections/INDEX.md), unchanged and in reading order.
 
 ## Adding an entry
 
@@ -25,16 +25,20 @@ Add one small article file `push-pr-policy-sections/<entry-id>.md`, named by an 
 ## Changelog
 
 - 2.4.0, 2026-11-23 - Split verbatim by split_doc.py into 15 key-named articles; --check EQUAL, sha256 94f082f50a16; the unsplit 2.3.0 file is commit 6d019ade
+- 2.5.0, 2026-11-23 - Re-split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 94f082f50a16; the 2.4.0 split is in git history.
 
 ## Articles
 
 - [Push and PR policy](push-pr-policy-sections/push-and-pr.md)
 - [The rule](push-pr-policy-sections/the-rule.md) - the-rule
 - [Records flow - date branches](push-pr-policy-sections/records-flow-date.md) - records-flow-date
-- [Records pull requests - batch cadence](push-pr-policy-sections/records-pull-requests.md) - records-pull-requests
+- [Records pull requests - batch cadence part 1](push-pr-policy-sections/records-pull-requests-p1.md) - records-pull-requests
+- [Records pull requests - batch cadence part 2](push-pr-policy-sections/records-pull-requests-p2.md) - records-pull-requests
 - [Knowledge and code pull requests](push-pr-policy-sections/knowledge-and-code.md) - knowledge-and-code
-- [Pull request ownership](push-pr-policy-sections/pull-request-ownership.md) - pull-request-ownership
-- [Executor PR discipline](push-pr-policy-sections/executor-pr-discipline.md) - executor-pr-discipline
+- [Pull request ownership part 1](push-pr-policy-sections/pull-request-ownership-p1.md) - pull-request-ownership
+- [Pull request ownership part 2](push-pr-policy-sections/pull-request-ownership-p2.md) - pull-request-ownership
+- [Executor PR discipline part 1](push-pr-policy-sections/executor-pr-discipline-p1.md) - executor-pr-discipline
+- [Executor PR discipline part 2](push-pr-policy-sections/executor-pr-discipline-p2.md) - executor-pr-discipline
 - [PR branches carry no log appends](push-pr-policy-sections/pr-branches-carry.md) - pr-branches-carry
 - [The integrator](push-pr-policy-sections/the-integrator.md) - the-integrator
 - [Break-glass](push-pr-policy-sections/break-glass.md) - break-glass
@@ -43,3 +47,4 @@ Add one small article file `push-pr-policy-sections/<entry-id>.md`, named by an 
 - [Changelog part 1](push-pr-policy-sections/changelog-section-p1.md) - changelog-section
 - [Changelog part 2](push-pr-policy-sections/changelog-section-p2.md) - changelog-section
 - [Changelog part 3](push-pr-policy-sections/changelog-section-p3.md) - changelog-section
+- [Changelog part 4](push-pr-policy-sections/changelog-section-p4.md) - changelog-section

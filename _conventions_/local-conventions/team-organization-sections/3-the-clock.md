@@ -1,9 +1,9 @@
 ---
-title: 3. The clock and 4 more
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+title: 3. The clock and 2 more
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 6
+sequence: 7
 description: Time Owner Act
 ---
 ## 3. The clock
@@ -63,20 +63,4 @@ A reply without an artifact or a measurement is `partial`, not
 
 The queue is the only task list. Do not create a second list in chat
 or in a seat folder.
-
-## 6. Measurement and review
-
-The coach owns the daily dashboard and the retro. The three families
-are fixed in [evaluation metrics](evaluation-metrics.md) and extended
-by [continuous play](continuous-play-team.md) section 2.
-
-- **Daily** - L1 done rate, unverified, duration, attempts; L2 ledger
-  coverage and red dots; L3 open/closed and recurrence.
-- **Weekly** - compare the week with the previous one; name one
-  meta-change; review one seat per day in rotation.
-- **A metric without a source** is a data gap, never zero.
-- **Association is not causation.** A tool landing is reported with
-  the before/after windows and the game-change confounders named.
-
-## 7. Failure playbooks
 

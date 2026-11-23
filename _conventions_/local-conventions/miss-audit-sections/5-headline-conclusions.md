@@ -1,9 +1,9 @@
 ---
 title: 5. Headline conclusions
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 25
+sequence: 30
 description: Repetition without a pivot is the system failure, not the game.
 ---
 ## 5. Headline conclusions

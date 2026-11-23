@@ -1,7 +1,7 @@
 ---
 title: Task unit queue design
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
 sequence: 1
 description: Status - implemented 2026-10-28 on the owner's direction.

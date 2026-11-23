@@ -1,9 +1,9 @@
 ---
 title: Strategy 3 - the plan, part 2
 created: 2026-11-23T08:19:08Z
-modified: 2026-11-23T08:23:27Z
+modified: 2026-11-23T09:08:31Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: Steps five to nine of the plan, heroes, drone, coin, idle slots and Season 3, and the list of things not to do now
 status: unverified
 grounded_in:
@@ -26,11 +26,9 @@ grounded_in:
 
 ## Errata
 
-The original text above stays (C2); the newer record governs.
-
-- "P9 SEASON 3 (about 2026-12-13)": corrected 2026-11-23 from Steer A's wave-2 research, relayed by the coordinator and unverified: 2026-12-13 is most likely the end of the Age of Oil celebration (day 91), not the start of Season 3. The Season 3 date is unknown, verify in game. Main Season 2 (8 weeks) is over and no power cliff is expected from it; the research reports a Season 3 pre-season about Dec 20 to 27 with a 14-day countdown icon under Duel VS (the scout reads it).
-- "NOT NOW: HQ 31, the Age of Oil path": the Age of Oil research is open now (wave 2, relayed, unverified); HQ 31 (510M coin, 1.44M oil, about 111 days of base timer) stays off the plan.
+The corrections to this text, including the Season 3 date, are on [errata](strategy-plan-p2-errata.md).
 
 ## Changelog
 
 - 0.1.0, 2026-11-23 - Landed from strategy v2.0, replacing the v1.5 pages.
+- 0.2.0, 2026-11-23 - The Errata moved verbatim to strategy-plan-p2-errata.md (page budget 300 words).

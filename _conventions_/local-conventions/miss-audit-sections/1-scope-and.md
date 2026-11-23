@@ -1,7 +1,7 @@
 ---
 title: 1. Scope and method
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
 sequence: 2
 description: Primary scope - every queue unit in _queue_/done whose result evidence points into _records_/2026-10-30/ or _records_/2026-10-31/.

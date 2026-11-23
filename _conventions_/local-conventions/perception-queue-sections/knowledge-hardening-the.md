@@ -1,9 +1,9 @@
 ---
 title: Knowledge hardening - the profile and its proficiency
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 23
+sequence: 32
 description: What is learned is written back into the task's _activities_ profile the same session, with the
 ---
 ### Knowledge hardening - the profile and its proficiency

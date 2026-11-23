@@ -1,7 +1,7 @@
 ---
 title: 1. What the audit proved
-created: 2026-11-23T08:36:59Z
-modified: 2026-11-23T08:36:59Z
+created: 2026-11-23T09:01:51Z
+modified: 2026-11-23T09:01:51Z
 version: 0.1.0
 sequence: 2
 description: 198 units executed on 2026-10-30 and 2026-10-31.

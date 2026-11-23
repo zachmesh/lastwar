@@ -1,9 +1,9 @@
 ---
 title: F. Knowledge organiser impact
-created: 2026-11-23T08:36:55Z
-modified: 2026-11-23T08:36:55Z
+created: 2026-11-23T09:02:25Z
+modified: 2026-11-23T09:02:25Z
 version: 0.1.0
-sequence: 7
+sequence: 11
 description: Per organiser run, rolled up weekly.
 ---
 ## F. Knowledge organiser impact

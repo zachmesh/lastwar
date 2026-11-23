@@ -1,9 +1,9 @@
 ---
 title: Item 2. Drone components
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 17
+sequence: 21
 description: Verdict - cannot be confirmed from the records.
 ---
 ### Item 2. Drone components

@@ -1,7 +1,7 @@
 ---
-title: Heating and 3 more
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+title: Heating and 2 more
+created: 2026-11-23T09:06:44Z
+modified: 2026-11-23T09:06:44Z
 version: 0.1.0
 sequence: 3
 description: High-Heat Furnace the season's key building, max level 30, independent of HQ.
@@ -39,14 +39,3 @@ output and dig-site coal, finish season quests and distressed-survivor
 radar tasks, claim the Doom Walker first-kill reward, and time large
 spending with Alliance Duel days.
 
-## Measured on this account - Status Overview, 2026-10-25
-
-The base Status Overview panel (opened from the headquarters area)
-shows this account's live season numbers:
-
-- Basic Resource Output - during the season, in-base Farmland,
-  Iron Mine and Gold Mine output plus 12.5 percent.
-- Thermal Weapon - Troop Durability Damage during game season
-  plus 150.
-- Virus Resistance - 10,500 on this account; the panel says to
-  build and upgrade the High-heat Furnace to raise it.

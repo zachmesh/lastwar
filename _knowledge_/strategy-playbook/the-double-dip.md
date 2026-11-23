@@ -1,9 +1,9 @@
 ---
 title: The double dip
-created: 2026-11-23T07:46:59Z
-modified: 2026-11-23T07:46:59Z
+created: 2026-11-23T09:06:47Z
+modified: 2026-11-23T09:06:47Z
 version: 0.1.0
-sequence: 5
+sequence: 6
 description: Arms Race phases bookend each duel day on theme (events-and-cycles), so a completion landing in the
 ---
 ## The double dip

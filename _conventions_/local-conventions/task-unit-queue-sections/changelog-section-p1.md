@@ -1,9 +1,9 @@
 ---
 title: Changelog part 1
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 41
+sequence: 55
 description: 0.37.0, 2026-11-22 - section 11 gains rule R26 (reaped-marker reasons, issue 826) - sync reports completion_markers_reaped_by_reason
 ---
 ## Changelog
@@ -13,5 +13,3 @@ description: 0.37.0, 2026-11-22 - section 11 gains rule R26 (reaped-marker reaso
 
 - 0.35.0, 2026-11-22 - section 11 gains rule R24 (stale scout chains, issue #818): `enqueue` refuses a scout chain successor after the chain's reset day ended and `next` skips units whose scout chain day is past, so a Nov-20 chain stops minting on Nov-22 instead of seeding units that write observations to the wrong day's file; the day end comes from the chain id's trailing date against the roster's 02:00 UTC reset (post-reset chains end at the following local date's reset, midday chains at their own date's reset), and zombie, sweep and discovery chains are untouched.
 
-- 0.34.0, 2026-11-22 - section 11 gains rule R23 (missed-VIP-days count, issue #742): the count comes from the pool via new `_tools_/vip_missed.py`, keyed on the unit-id slot date with only the 1800 slot defining a day, and a day is missed when its 1800 unit expired/failed or closed done/partial with claimed_count 0; the ticker's hand count of seven vs the ruled eight is the live instance (the Nov 13 unit's finished_at fell on Nov 15).
-- 0.33.0, 2026-11-22 - section 11 gains rule R22 (slot coverage, issue #743): every scheduled ticker slot leaves a record or a missed-fire marker; `_tools_/slot_coverage.py check` reports the recordless past-window slots on the :04/:34 grid and `mark` writes a marker, refusing a slot a record already covers; coverage is read from the record title, never the file name alone, so a late-starting pass serves the slot its title states.

@@ -1,9 +1,9 @@
 ---
 title: Item 5. Alliance Duel daily total against the 3.6M target
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 20
+sequence: 24
 description: Verdict - cannot be confirmed from the records for either day.
 ---
 ### Item 5. Alliance Duel daily total against the 3.6M target

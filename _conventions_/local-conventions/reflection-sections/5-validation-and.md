@@ -1,9 +1,9 @@
 ---
 title: 5. Validation and honest limits
-created: 2026-11-23T08:36:59Z
-modified: 2026-11-23T08:36:59Z
+created: 2026-11-23T09:01:51Z
+modified: 2026-11-23T09:01:51Z
 version: 0.1.0
-sequence: 7
+sequence: 8
 description: tools_/regulars.json parses, the tracker lists daily-missions as due on the daily-reset rule, and a planner run
 ---
 ## 5. Validation and honest limits

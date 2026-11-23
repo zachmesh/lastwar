@@ -1,7 +1,7 @@
 ---
 title: Records flow - date branches
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
 sequence: 3
 description: Append-only trajectories and live state keep their continuity without touching main directly -

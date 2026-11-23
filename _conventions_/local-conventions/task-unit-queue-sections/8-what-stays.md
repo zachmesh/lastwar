@@ -1,9 +1,9 @@
 ---
 title: 8. What stays the same
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 13
+sequence: 18
 description: The red lines, the kick rule for the different-device dialog, the Arms Race just-enough rule and
 ---
 ## 8. What stays the same

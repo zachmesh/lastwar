@@ -1,9 +1,9 @@
 ---
 title: The double dip
-created: 2026-11-23T06:18:59Z
-modified: 2026-11-23T06:18:59Z
+created: 2026-11-23T09:06:51Z
+modified: 2026-11-23T09:06:51Z
 version: 0.1.0
-sequence: 4
+sequence: 5
 description: Since the alignment update, each VS day begins and ends with Arms Race phases matching that
 ---
 ## The double dip
