@@ -1,0 +1,3 @@
+# Documents the commit gate does not block for size. One glob per line, matched against the repository path.
+# Day indexes are append-only evidence that already exceed the limit; remove the line when they are split.
+_records_/*/INDEX.md
