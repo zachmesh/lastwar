@@ -10,18 +10,22 @@ socket and lets short CLI calls start, poll and stop runs.
 Commands:
 
   serve                         Run the daemon in the foreground.
-  ensure                        Start the daemon if it is not running.
+  ensure                        Start the daemon if none is running (never a second one).
+  restart                       End every daemon and its MCP child, start a fresh one.
   self-test                     Initialize MCP and list the four tools.
   start --task TEXT [--app ID]  Start a desktop run on the named apps.
   status [--run-id ID] [--wait N] [--image PATH]
-                                Poll the latest or named run; save the
-                                final screenshot when one is returned.
+                                Poll the latest or named run on the daemon
+                                that owns it; save the final screenshot when
+                                one is returned. Always lists every daemon
+                                (reachable, orphan) and every recorded run.
   control --run-id ID --command pause|resume|stop|guide [--text TEXT]
-                                Send a caller command. Consent and
-                                take-over are human-only and are not
-                                accepted here.
+                                Send a caller command to the owning daemon;
+                                `stop` ends an unreachable owner and its MCP
+                                child instead. Consent and take-over are
+                                human-only and are not accepted here.
   runs                          List runs recorded by this bridge.
-  stop-daemon                   Stop the bridge daemon.
+  stop-daemon                   Stop every bridge daemon and its MCP child.
 
 The bridge never approves an app, a consent request, a purchase or a
 send. App approval and consent come only from the owner through the
@@ -36,8 +40,10 @@ from __future__ import annotations
 
 import argparse
 import base64
+import fcntl
 import json
 import os
+import re
 import shutil
 import signal
 import socket
@@ -63,6 +69,8 @@ RUNS_PATH = STATE / "cu_runs.json"
 MCP_LOG = STATE / "cu_mcp.log"
 BRIDGE_LOG = STATE / "cu_bridge.log"
 LAST_IMAGE = STATE / "cu_last.png"
+DAEMON_LOCK = STATE / "cu_bridge.lock"
+SCRIPT = str(Path(__file__).resolve())
 
 PROJECT = Path(os.environ.get("CU_PROJECT", str(Path.home() / "computer-use"))).expanduser()
 SERVER = PROJECT / "_tools_/computer-use-mcp" / "server.mjs"
@@ -124,6 +132,161 @@ def _update_run(run_id: str, **fields) -> None:
 def _latest_run_id() -> str | None:
     runs = _read_runs().get("runs", [])
     return runs[0].get("run_id") if runs else None
+
+
+# --- daemons: registry, discovery and ending --------------------------------------------------------------------
+# Each daemon binds its own socket (cu_bridge-<pid>.sock) and records itself in cu_bridge-<pid>.json; cu_bridge.sock is a
+# symlink to the current one. A daemon never removes another live daemon's files, and every daemon, registered or only
+# visible in the process table, can be listed and ended together with its MCP child.
+
+def _sock_for(pid: int) -> Path:
+    return STATE / f"cu_bridge-{pid}.sock"
+
+
+def _info_for(pid: int) -> Path:
+    return STATE / f"cu_bridge-{pid}.json"
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def _process_table() -> list[tuple[int, int, str]]:
+    out = subprocess.run(["ps", "-axo", "pid=,ppid=,command="], capture_output=True, text=True).stdout
+    rows = []
+    for line in out.splitlines():
+        parts = line.strip().split(None, 2)
+        if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit():
+            rows.append((int(parts[0]), int(parts[1]), parts[2] if len(parts) > 2 else ""))
+    return rows
+
+
+def _descendants(pid: int, table=None) -> list[int]:
+    table = table if table is not None else _process_table()
+    found, frontier = [], [pid]
+    while frontier:
+        parent = frontier.pop()
+        for child, ppid, _ in table:
+            if ppid == parent and child not in found:
+                found.append(child)
+                frontier.append(child)
+    return found
+
+
+def _is_serve(cmd: str) -> bool:
+    tokens = cmd.split()
+    return SCRIPT in tokens and tokens.index(SCRIPT) + 1 < len(tokens) and tokens[tokens.index(SCRIPT) + 1] == "serve"
+
+
+def _daemon_pids() -> list[int]:
+    """Every daemon of this checkout: the registered ones that are alive and any bridge `serve` process in the process table
+    (an orphan whose files were removed by an older bridge is still found)."""
+    pids = {pid for pid, _, cmd in _process_table() if pid != os.getpid() and _is_serve(cmd)}
+    for info in STATE.glob("cu_bridge-*.json"):
+        try:
+            pid = int(json.loads(info.read_text())["pid"])
+        except (OSError, ValueError, KeyError):
+            continue
+        if _pid_alive(pid):
+            pids.add(pid)
+    return sorted(pids)
+
+
+def _daemon_info(pid: int) -> dict:
+    registry = {}
+    try:
+        registry = json.loads(_info_for(pid).read_text())
+    except (OSError, ValueError):
+        pass
+    sock = _sock_for(pid)
+    reachable = False
+    if sock.exists():
+        try:
+            reachable = _send({"cmd": "ping"}, timeout=3, sock=sock).get("ok") is True
+        except Exception:
+            reachable = False
+    return {"pid": pid, "alive": _pid_alive(pid), "reachable": reachable, "orphan": _pid_alive(pid) and not reachable,
+            "registered": bool(registry), "mcp_pid": registry.get("mcp_pid"), "started_at": registry.get("started_at"),
+            "socket": str(sock)}
+
+
+def _daemons() -> list[dict]:
+    return [_daemon_info(pid) for pid in _daemon_pids()]
+
+
+def _end_daemon(pid: int) -> dict:
+    """End a daemon and the processes below it (its MCP server): ask politely, then SIGTERM, then SIGKILL."""
+    table = _process_table()
+    below = _descendants(pid, table)
+    sock = _sock_for(pid)
+    if sock.exists():
+        try:
+            _send({"cmd": "shutdown"}, timeout=3, sock=sock)
+        except Exception:
+            pass
+    deadline = time.monotonic() + 4
+    while _pid_alive(pid) and time.monotonic() < deadline:
+        time.sleep(0.1)
+    for sig in (signal.SIGTERM, signal.SIGKILL):
+        for target in [pid] + below:
+            if _pid_alive(target):
+                try:
+                    os.kill(target, sig)
+                except ProcessLookupError:
+                    pass
+        deadline = time.monotonic() + 3
+        while any(_pid_alive(t) for t in [pid] + below) and time.monotonic() < deadline:
+            time.sleep(0.1)
+    for path in (sock, _info_for(pid)):
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+    _fix_pointer()
+    return {"pid": pid, "ended": not _pid_alive(pid), "children_ended": [t for t in below if not _pid_alive(t)]}
+
+
+def _fix_pointer() -> None:
+    """Point cu_bridge.sock and cu_bridge.pid at a live daemon, or remove them."""
+    live = [i for i in STATE.glob("cu_bridge-*.json") if _pid_alive(int(json.loads(i.read_text()).get("pid", 0)))] \
+        if STATE.exists() else []
+    for path in (SOCKET_PATH, PID_PATH):
+        if path.is_symlink() or path.exists():
+            if not live or (path == SOCKET_PATH and not SOCKET_PATH.resolve().exists()):
+                path.unlink()
+
+
+def _mark_runs_of(pid: int, state: str, note: str) -> None:
+    data = _read_runs()
+    for run in data.get("runs", []):
+        if run.get("daemon_pid") == pid and run.get("state") not in ("stopped", "completed", "failed", "lost"):
+            run.update(state=state, note=note, updated_at=_now())
+    _write_runs(data)
+
+
+def _owner_of(run_id: str) -> int | None:
+    for run in _read_runs().get("runs", []):
+        if run.get("run_id") == run_id:
+            return run.get("daemon_pid")
+    return None
+
+
+def _listing() -> dict:
+    daemons = _daemons()
+    by_pid = {d["pid"]: d for d in daemons}
+    runs = []
+    for run in _read_runs().get("runs", []):
+        owner = by_pid.get(run.get("daemon_pid"))
+        place = "no owner recorded" if run.get("daemon_pid") is None else (
+            "reachable" if owner and owner["reachable"] else "orphan" if owner and owner["orphan"] else "daemon gone")
+        runs.append({"run_id": run.get("run_id"), "state": run.get("state"), "daemon_pid": run.get("daemon_pid"), "daemon": place})
+    return {"daemons": daemons, "runs": runs}
 
 
 class McpClient:
@@ -259,15 +422,15 @@ def _daemon_alive() -> bool:
         return False
 
 
-def _send(request: dict, timeout: float = 90) -> dict:
-    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:
-        sock.settimeout(timeout)
-        sock.connect(str(SOCKET_PATH))
-        sock.sendall((json.dumps(request) + "\n").encode())
-        sock.shutdown(socket.SHUT_WR)
+def _send(request: dict, timeout: float = 90, sock: Path | None = None) -> dict:
+    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as conn:
+        conn.settimeout(timeout)
+        conn.connect(str(sock or SOCKET_PATH))
+        conn.sendall((json.dumps(request) + "\n").encode())
+        conn.shutdown(socket.SHUT_WR)
         chunks = []
         while True:
-            chunk = sock.recv(65536)
+            chunk = conn.recv(65536)
             if not chunk:
                 break
             chunks.append(chunk)
@@ -277,13 +440,24 @@ def _send(request: dict, timeout: float = 90) -> dict:
     return json.loads(raw)
 
 
-def _ensure_daemon() -> None:
-    if _daemon_alive():
-        return
+def _ensure_daemon() -> dict:
+    """Make sure one daemon answers; never start a second while one is alive, busy or still starting."""
     _ensure_state()
+    deadline = time.monotonic() + 45
+    while True:
+        live = [d for d in _daemons() if d["alive"]]
+        reachable = [d for d in live if d["reachable"]]
+        if reachable:
+            return {"pid": reachable[0]["pid"], "started": False}
+        if not live or time.monotonic() > deadline:
+            break
+        time.sleep(0.5)
+    if live:
+        pids = ", ".join(str(d["pid"]) for d in live)
+        raise RuntimeError(f"bridge daemon(s) {pids} alive but not answering; run `cu_bridge.py restart` to end them")
     with open(BRIDGE_LOG, "a", encoding="utf-8") as log:
         subprocess.Popen(
-            [sys.executable, str(Path(__file__).resolve()), "serve"],
+            [sys.executable, SCRIPT, "serve"],
             stdin=subprocess.DEVNULL,
             stdout=log,
             stderr=log,
@@ -291,66 +465,108 @@ def _ensure_daemon() -> None:
         )
     deadline = time.monotonic() + 20
     while time.monotonic() < deadline:
-        if _daemon_alive():
-            return
+        for d in _daemons():
+            if d["reachable"]:
+                return {"pid": d["pid"], "started": True}
         time.sleep(0.25)
     raise RuntimeError(f"bridge daemon did not start; see {BRIDGE_LOG}")
 
 
-def serve() -> int:
+def _raise_exit(_signum, _frame):
+    raise SystemExit(0)
+
+
+def serve(replace: bool = False) -> int:
     _ensure_state()
-    for stale in (SOCKET_PATH, PID_PATH):
+    with open(DAEMON_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)           # two simultaneous starts cannot both pass the check below
+        others = [pid for pid in _daemon_pids() if pid != os.getpid()]
+        if others:
+            if not replace:
+                print(f"cu_bridge: another daemon is alive (pid {', '.join(map(str, others))}); not starting a second. "
+                      f"Use `restart` to replace it.", file=sys.stderr)
+                return 1
+            for pid in others:
+                _end_daemon(pid)
         try:
-            stale.unlink()
+            mcp = McpClient()
+        except Exception as error:
+            print(f"cu_bridge: cannot start MCP: {error}", file=sys.stderr)
+            return 1
+        me = os.getpid()
+        sock_path = _sock_for(me)
+        for stale in (sock_path,):
+            try:
+                stale.unlink()
+            except FileNotFoundError:
+                pass
+        server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        server.bind(str(sock_path))
+        server.listen(8)
+        _info_for(me).write_text(json.dumps({"pid": me, "socket": str(sock_path), "mcp_pid": mcp.proc.pid,
+                                             "started_at": _now()}) + "\n")
+        tmp_link = SOCKET_PATH.with_name(".cu_bridge.sock.new")
+        try:
+            tmp_link.unlink()
         except FileNotFoundError:
             pass
-    try:
-        mcp = McpClient()
-    except Exception as error:
-        print(f"cu_bridge: cannot start MCP: {error}", file=sys.stderr)
-        return 1
-    server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    server.bind(str(SOCKET_PATH))
-    server.listen(4)
-    PID_PATH.write_text(f"{os.getpid()}\n")
+        os.symlink(sock_path.name, tmp_link)
+        os.replace(tmp_link, SOCKET_PATH)
+        PID_PATH.write_text(f"{me}\n")
+    signal.signal(signal.SIGTERM, _raise_exit)       # the finally below must run so the MCP child ends with us
+    signal.signal(signal.SIGINT, _raise_exit)
+    mcp_lock = threading.Lock()
     try:
         while True:
             conn, _ = server.accept()
-            with conn:
-                try:
-                    raw = b""
-                    while not raw.endswith(b"\n"):
-                        chunk = conn.recv(65536)
-                        if not chunk:
-                            break
-                        raw += chunk
-                    request = json.loads(raw.decode() or "{}")
-                    reply = handle(mcp, request)
-                except Exception as error:
-                    reply = {"ok": False, "error": str(error)}
-                conn.sendall((json.dumps(reply) + "\n").encode())
+            threading.Thread(target=_serve_connection, args=(conn, mcp, mcp_lock), daemon=True).start()
     finally:
         server.close()
         mcp.close()
-        for path in (SOCKET_PATH, PID_PATH):
+        for path in (sock_path, _info_for(me)):
             try:
                 path.unlink()
             except FileNotFoundError:
                 pass
+        _fix_pointer()
     return 0
 
 
-def handle(mcp: McpClient, request: dict) -> dict:
+def _serve_connection(conn: socket.socket, mcp: McpClient, mcp_lock: threading.Lock) -> None:
+    """One request per connection, each in its own thread, so a ping or a stop is answered while a long poll waits; the
+    calls into the one MCP server are taken in turn."""
+    with conn:
+        try:
+            raw = b""
+            while not raw.endswith(b"\n"):
+                chunk = conn.recv(65536)
+                if not chunk:
+                    break
+                raw += chunk
+            request = json.loads(raw.decode() or "{}")
+            reply = handle(mcp, request, mcp_lock)
+        except Exception as error:
+            reply = {"ok": False, "error": str(error)}
+        try:
+            conn.sendall((json.dumps(reply) + "\n").encode())
+        except OSError:
+            pass
+
+
+def handle(mcp: McpClient, request: dict, mcp_lock: threading.Lock | None = None) -> dict:
     cmd = request.get("cmd")
+    mcp_lock = mcp_lock or threading.Lock()
     if cmd == "ping":
         return {"ok": True, "pid": os.getpid()}
     if cmd == "tools":
-        return {"ok": True, "result": mcp.request("tools/list", {})}
+        with mcp_lock:
+            return {"ok": True, "result": mcp.request("tools/list", {})}
     if cmd == "call":
         name = request.get("name")
         arguments = request.get("arguments") or {}
         timeout = float(request.get("timeout", 60))
-        return {"ok": True, "result": mcp.call(name, arguments, timeout=timeout)}
+        with mcp_lock:
+            return {"ok": True, "result": mcp.call(name, arguments, timeout=timeout), "daemon_pid": os.getpid()}
     if cmd == "shutdown":
         threading.Thread(target=_shutdown_after_reply, daemon=True).start()
         return {"ok": True, "stopping": True}
@@ -410,6 +626,7 @@ def cmd_start(args: argparse.Namespace) -> int:
     _remember(
         {
             "run_id": run_id,
+            "daemon_pid": reply.get("daemon_pid"),
             "task": args.task,
             "apps": payload.get("apps", []),
             "started_at": _now(),
@@ -425,12 +642,40 @@ def cmd_start(args: argparse.Namespace) -> int:
     return 0
 
 
+def _route(run_id: str, for_stop: bool = False) -> tuple[Path | None, str]:
+    """(socket of the daemon that owns the run, note). A run with no recorded owner goes to the current daemon. When the
+    owner is unreachable the note says what to do; for a stop the owner is ended instead (socket None)."""
+    owner = _owner_of(run_id)
+    if owner is None:
+        _ensure_daemon()
+        return SOCKET_PATH, ""
+    info = _daemon_info(owner)
+    if info["reachable"]:
+        return Path(info["socket"]), ""
+    if info["alive"]:
+        if for_stop:
+            ended = _end_daemon(owner)
+            _mark_runs_of(owner, "stopped", f"unreachable daemon {owner} ended with its MCP child")
+            return None, f"daemon {owner} was alive but unreachable (an orphan); it and its MCP child were ended: {json.dumps(ended)}"
+        raise RuntimeError(f"run {run_id} belongs to daemon {owner}, alive but unreachable (an orphan); "
+                           f"`control --run-id {run_id} --command stop` ends it")
+    _mark_runs_of(owner, "lost", f"its daemon {owner} is gone")
+    if for_stop:
+        return None, f"the daemon {owner} that owned run {run_id} is gone; nothing of it is running"
+    raise RuntimeError(f"run {run_id}: its daemon {owner} is gone, so the run is lost")
+
+
 def cmd_status(args: argparse.Namespace) -> int:
-    _ensure_daemon()
     run_id = args.run_id or _latest_run_id()
     if not run_id:
+        print(json.dumps({"bridge": _listing()}, indent=2))
         _die("no run recorded; start one first", 1)
     wait = max(0, min(int(args.wait), MAX_WAIT))
+    try:
+        sock, _ = _route(run_id)
+    except RuntimeError as error:
+        print(json.dumps({"bridge": _listing()}, indent=2))
+        raise
     reply = _send(
         {
             "cmd": "call",
@@ -439,6 +684,7 @@ def cmd_status(args: argparse.Namespace) -> int:
             "timeout": wait + 15,
         },
         timeout=wait + 25,
+        sock=sock,
     )
     if not reply.get("ok"):
         _die(f"status refused: {reply.get('error')}", 1)
@@ -456,17 +702,23 @@ def cmd_status(args: argparse.Namespace) -> int:
         pass
     if state:
         _update_run(run_id, state=state, last_text=text[:500])
+    print(json.dumps({"bridge": _listing()}, indent=2))
     return 0
 
 
 def cmd_control(args: argparse.Namespace) -> int:
-    _ensure_daemon()
+    stop = args.command == "stop"
+    sock, note = _route(args.run_id, for_stop=stop)
+    if sock is None:                                  # the owner was ended or is gone: a stop has done its work
+        print(json.dumps({"ok": True, "run_id": args.run_id, "note": note}))
+        return 0
     arguments = {"run_id": args.run_id, "command": args.command}
     if args.text:
         arguments["text"] = args.text
     reply = _send(
         {"cmd": "call", "name": "computer_use_control", "arguments": arguments, "timeout": 30},
         timeout=40,
+        sock=sock,
     )
     if not reply.get("ok"):
         _die(f"control refused: {reply.get('error')}", 1)
@@ -486,22 +738,33 @@ def cmd_self_test(_args: argparse.Namespace) -> int:
 
 
 def cmd_runs(_args: argparse.Namespace) -> int:
-    print(json.dumps(_read_runs(), indent=2))
+    print(json.dumps({**_read_runs(), "bridge": _listing()}, indent=2))
     return 0
 
 
 def cmd_ensure(_args: argparse.Namespace) -> int:
-    _ensure_daemon()
-    print(json.dumps({"ok": True, "socket": str(SOCKET_PATH)}))
+    got = _ensure_daemon()
+    print(json.dumps({"ok": True, "socket": str(SOCKET_PATH), "pid": got["pid"], "started": got["started"]}))
+    return 0
+
+
+def cmd_restart(_args: argparse.Namespace) -> int:
+    """End every daemon and the MCP server below it, then start one fresh daemon."""
+    ended = []
+    for pid in _daemon_pids():
+        ended.append(_end_daemon(pid))
+        _mark_runs_of(pid, "lost", f"daemon {pid} was restarted")
+    got = _ensure_daemon()
+    print(json.dumps({"ok": True, "ended": ended, "started": got["pid"]}))
     return 0
 
 
 def cmd_stop(_args: argparse.Namespace) -> int:
-    try:
-        _send({"cmd": "shutdown"}, timeout=5)
-    except Exception:
-        pass
-    print(json.dumps({"ok": True, "stopped": not _daemon_alive()}))
+    ended = []
+    for pid in _daemon_pids():
+        ended.append(_end_daemon(pid))
+        _mark_runs_of(pid, "stopped", f"daemon {pid} was stopped")
+    print(json.dumps({"ok": True, "stopped": not _daemon_pids(), "ended": ended}))
     return 0
 
 
@@ -509,10 +772,15 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("serve", help="run the bridge daemon in the foreground").set_defaults(func=lambda _a: serve())
+    serve_p = sub.add_parser("serve", help="run the bridge daemon in the foreground (refuses while another is alive)")
+    serve_p.add_argument("--replace", action="store_true", help="end any other daemon and its MCP child first")
+    serve_p.set_defaults(func=lambda a: serve(replace=a.replace))
 
-    ensure = sub.add_parser("ensure", help="start the daemon if it is not running")
+    ensure = sub.add_parser("ensure", help="start the daemon if none is running; never a second")
     ensure.set_defaults(func=cmd_ensure)
+
+    restart = sub.add_parser("restart", help="end every daemon and its MCP child, then start a fresh one")
+    restart.set_defaults(func=cmd_restart)
 
     test = sub.add_parser("self-test", help="initialize MCP and list its tools")
     test.set_defaults(func=cmd_self_test)
@@ -543,7 +811,7 @@ def build_parser() -> argparse.ArgumentParser:
     runs = sub.add_parser("runs", help="list recorded runs")
     runs.set_defaults(func=cmd_runs)
 
-    stop = sub.add_parser("stop-daemon", help="stop the bridge daemon")
+    stop = sub.add_parser("stop-daemon", help="stop every bridge daemon and its MCP child")
     stop.set_defaults(func=cmd_stop)
 
     return parser

@@ -198,6 +198,15 @@ class FixtureRuns(unittest.TestCase):
         self.assertIn("fixture file missing", r.stderr)
 
 
+class Defaults(unittest.TestCase):
+    def test_the_default_board_is_the_current_team_board(self):
+        self.assertEqual((bc.DEFAULT_OWNER, bc.DEFAULT_PROJECT), ("zachmesh", 1))
+        r = run_cli("--fixture", str(FIX / "lastwar-11"))
+        self.assertEqual((json.loads(r.stdout)["owner"], json.loads(r.stdout)["project"]), ("zachmesh", 1))
+        r = run_cli("--help")
+        self.assertIn("default 1 of owner zachmesh", " ".join(r.stdout.split()))
+
+
 class Token(unittest.TestCase):
     def test_token_comes_only_from_the_environment(self):
         self.assertEqual(bc.token_from_env({"GH_TOKEN": "a", "GITHUB_TOKEN": "b"}), "a")

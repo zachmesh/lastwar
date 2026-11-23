@@ -19,10 +19,10 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 CONVENTION = "_conventions_/issue-driven-work/project-boards.md (reflection)"
 API = "https://api.github.com/graphql"
-DEFAULT_OWNER, DEFAULT_PROJECT = "dtadpole", 11
+DEFAULT_OWNER, DEFAULT_PROJECT = "zachmesh", 1
 
 # --- the convention, as data -----------------------------------------------------------------------------------
 STATUS = ["Draft", "Ready", "In progress", "Waiting", "In review", "Needs owner", "Done", "Sunset"]
@@ -469,7 +469,8 @@ def text_report(r: dict) -> str:
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="board_check.py", description=__doc__.split("\n\n")[0])
     p.add_argument("--owner", default=DEFAULT_OWNER)
-    p.add_argument("--project", type=int, default=None, help=f"project number (default {DEFAULT_PROJECT}, this team's board)")
+    p.add_argument("--project", type=int, default=None,
+                   help=f"project number (default {DEFAULT_PROJECT} of owner {DEFAULT_OWNER}, this team's board, linked to its repository)")
     p.add_argument("--repo", action="append", default=[], metavar="OWNER/NAME",
                    help="repository whose open issues are checked (default: the board's, plus TEAM.yaml's for the default project)")
     p.add_argument("--team", help="the team name in Agent options (default: the board title)")
