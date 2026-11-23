@@ -2568,10 +2568,13 @@ def refuse_if_tool_stale(cmd):
         return None
     print(f"{cmd} refused: this copy of queue.py differs from "
           f"main's _tools_/queue.py and is not ahead of it - main's "
-          f"copy is newer or the two histories diverged. Run the tool "
-          f"from a fresh main checkout (a pass worktree, never the "
-          f"main working tree) so the pass decides on current "
-          f"behaviour (issue #694)", file=sys.stderr)
+          f"copy is newer or the two histories diverged. Run "
+          f"_tools_/tool-sync/tool_sync.py to bring this checkout's "
+          f"tools up to main (silent when equal; it refuses and "
+          f"names the files when one has a local change), or run "
+          f"the tool from a fresh main checkout (a pass worktree, "
+          f"never the main working tree) so the pass decides on "
+          f"current behaviour (issue #694)", file=sys.stderr)
     return 1
 
 
