@@ -1,8 +1,8 @@
 ---
 title: 5. Computer use
 created: 2026-11-23T07:20:36Z
-modified: 2026-11-23T20:05:56Z
-version: 0.2.0
+modified: 2026-11-23T21:25:06Z
+version: 0.3.0
 sequence: 10
 description: Play happens through dtadpole/computer-use on this Mac, using its MCP server.
 ---
@@ -25,12 +25,14 @@ Local rules:
   by the computer-use policy and are never proposed.
 - One desktop run at a time. A live run holds the Mac's desktop-run
   lock; a second start is refused, not queued.
-- Owner-idle wait RESTORED by the owner's decision of 2026-11-23T19:48Z (OD-20261123-23,
-  `_records_/retro/owner-decisions-log/od-20261123-23.md`; code in PR 937). The opt-out
-  `CU_OWNER_IDLE_SECONDS=0`, which `_tools_/cu_bridge.py` set under commit fd83c35f on an owner
-  request of 2026-11-22, is gone: the bridge no longer defaults the variable, the lock's
-  constant is 300 s, and a refusal `owner_active` is the wait. The quiet windows and the
-  exclusive token lease (PR 911) are the other two cu-coordination rules.
+- Owner-idle wait, dated: restored 20:04Z on 2026-11-23 (OD-20261123-23,
+  `_records_/retro/owner-decisions-log/od-20261123-23.md`; code in PR 937), then TEMPORARILY 0 from
+  the bridge restart after 21:20Z (OD-20261123-27, `_records_/retro/owner-decisions-log/od-20261123-27.md`)
+  until CU-720 arrives with the tree move (CU-721). The code default is
+  300 s and `_tools_/cu_bridge.py` sets no default: only the environment variable
+  `CU_OWNER_IDLE_SECONDS=0` in the bridge daemon says 0. The older opt-out (commit fd83c35f,
+  2026-11-22) ended with OD-23. A refusal `owner_active` is the wait; the
+  quiet windows and the exclusive token lease (PR 911) are the other two cu-coordination rules.
 - Consent is human-only. The bridge prints the control-link command
   for the owner; no seat can approve an app, a purchase, a send or a
   consequential step through the tool.
