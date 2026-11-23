@@ -1,43 +1,32 @@
 ---
-title: Research speed multiplier M - bounds from the queue timers - 2026-11-23 13:07Z
+title: Research speed of the account - bounds from the queue timers - 2026-11-23 13:16Z
 created: 2026-11-23T05:07:00-08:00
-modified: 2026-11-23T05:16:00-08:00
+modified: 2026-11-23T05:20:00-08:00
 level: L3
-version: 0.2.0
-description: A first measured bound on the account's research speed from the Coin Output V and Food Output V timers, using Steer B's frame times and the guide sheet's base time
+version: 0.4.0
+description: The account's research speed from the Coin Output V and Food Output V timers, first without and then with the speed-up items the other device used; the current bound is a divisor of about 2.2 (plus 121 percent)
 status: done
 activity: research-queue
 run_id: research-queue-2026-11-23-1307-speed-bounds
-trigger: Steer B's frame forensics at 12:44Z and the operator's survey 1257 (queue rows read at 12:56:50Z)
+trigger: Steer B's frame forensics at 12:44Z, the operator's queue read at 12:56:50Z and its Backpack read at 13:11Z
 started_at: 2026-11-23T05:05:00-08:00
-finished_at: 2026-11-23T05:12:00-08:00
-verified: base time 485,100 s from /tmp/oilres/aoo-sheet.csv (the Last War Tutorial sheet, [G] as a guide value, not read on screen); frame times from Steer B (two screenshots under ~/.computer-use/runs, not in the repository); end times from the operator's queue read
+finished_at: 2026-11-23T05:20:00-08:00
+verified: base time 485,100 s from /tmp/oilres/aoo-sheet.csv (a guide sheet, [G]); frame times from Steer B (screenshots under ~/.computer-use/runs, not in the repository); timers and stock from the operator's records 1257 and 1308; the steps are in the sidecar CSV
 ---
 
-# Research speed multiplier M: first bounds
+# Research speed: current bound
 
 ## Inputs
 
-- Guide base time of level 1 of both Output V nodes: 485,100 s (5d 14h 45m) [G]; power on completion 3,900 each [G, equals the measured Complete of Unlock Oil Well].
-- Frames (Steer B): at 12:09:04Z lab slot 2 was IDLE and Defense Training VIII ran in slot 1; at 12:11:30Z both labs read busy.
-- Queue read at about 12:56:50Z: Coin Output V 1d 02:02:20 left (ends about 2026-11-24T14:59:10Z); Food Output V 1d 04:33:08 left (ends about 17:29:58Z).
+- Guide base time of level 1 of both Output V nodes: 485,100 s (134.75 h) [G]; completion power 3,900 each [G, equals the measured Complete of Unlock Oil Well].
+- Slot 2, Coin Output V: started between 12:09:04Z (slot idle in the operator's frame) and 12:11:30Z (labs 2/2 in a dimmed frame), ends 2026-11-24T14:59:10Z: effective 26h47m40s to 26h50m06s.
+- Slot 1, Food Output V: 28h33m08s left at 12:56:50Z, start after 12:09:04Z: effective 28h33m to 29h18m.
+- Backpack, 13:11Z against 11:26Z: the tech speed-up items (blue disc, 8h and 1h) fell by 3,960 minutes; general and construction items were not used.
 
-## Result [D]
+## Current bound [D]
 
-| Node | Effective total | M = base / effective | Natural time of the 879 base days |
-|---|---|---|---|
-| Coin Output V L1 (slot 2) | 26h47m40s to 26h50m06s | 5.02 to 5.03 | about 175 days |
-| Food Output V L1 (slot 1) | 28h33m to 29h18m | 4.60 to 4.72 | about 186 to 191 days |
+The first reading (divisors 5.02 and 4.6 to 4.7, speed +402 percent) assumed no speed-up was used and is SUPERSEDED (sidecar steps 1 and 2). With 66 hours of speed-ups split between two nodes that share one base time and one multiplier, the only consistent solution is a natural duration of 60.7 to 61.1 hours each (about 34 h of speed-up on Coin, 32 h on Food): divisor M = 2.21 to 2.22, research speed about +121 percent. The 879 base days on two labs take about 398 natural days. Convention: M is the divisor (base over effective); research speed is M minus 1; every ETA names both.
 
-The two differ by about 0.3 to 0.4: a bonus that applies only at the start (Steer A's analysts: Secretary of Science, VIP) is the likely cause; the plain multiplier is about 4.6 to 4.7.
+## Stock and assumptions
 
-## Assumptions and unknowns
-
-- The other device used no speed-up item on either node (unknown; the speed-up stock read will show it).
-- The guide base time is right for this account (a panel read of an idle node would confirm: a lab idles at 2026-11-24T14:59Z).
-- Coin fell about 4.6M at the Coin node's start against a guide cost of 6.2M: the account may carry a research cost reduction (unverified).
-
-## Convention and one precision note (Steer B, 13:12Z; appended, nothing above is edited)
-
-- M here is the DIVISOR (base time over effective time). The account's research speed is M minus 1: about +402 percent (Coin Output V, divisor 5.02) and +360 to +372 percent (Food Output V). The 879 base days take about 175 days at divisor 5.02; read as '+502 percent' the same number would give 146 days, a 17 percent error: every ETA names 'research speed +402 percent, divisor 5.02'.
-- The earliest possible start of Food Output V is 12:09:04Z (Defense Training VIII still ran then), not 12:11:30Z: its divisor lower bound is 4.591, not 4.598.
+Remaining: tech 11,400 min (7.9 days), general 351,687 min (244 days), construction 167,895 min. Assumed: all 3,960 minutes went to these two nodes, the guide base holds, no start-only bonus. A clean read (an idle node panel, 2026-11-24T14:59Z) settles it.
