@@ -24,6 +24,11 @@ roster entry in regulars.json (default upkeep); `enqueue` refuses a unit with no
 the roster, which then supplies it; `validate` reports a live inbox unit without one as an error (sync only
 warns, so an untagged unit never stops the tick).
 
+The forecast switch: when TEAM.yaml carries `coordination.queue.require_forecast: true` (off when the key or the file is absent), every path
+that creates a unit - `enqueue`, and the minting of `plan`, `sweep` and `sync` - refuses a unit whose serves is not a plan item with a row in the
+newest `_records_/<date>/strategy/forecast-ledger.csv` or an exempt word (upkeep, snapshot, baseline, fill idle slot). `--no-require-forecast`
+skips it for one call (an emergency enqueue; the refusal names it), `--require-forecast` forces it on; LASTWAR_TEAM_FILE names another file.
+
 They also refuse when this copy - or the pool it would decide on -
 sits under the system temp directory (issue #429): a pass worktree
 under /tmp can vanish mid-pass to the runtime's /tmp sweep, so a
@@ -750,6 +755,100 @@ def forecast_warnings(units, ids, reason):
     return out
 
 
+# The forecast gate switch (OD of the strategy-observed rule): `coordination.queue.require_forecast: true` in TEAM.yaml makes every code
+# path that creates a unit - enqueue, and the minting of plan, sweep and sync - refuse a unit whose serves is not a ledger plan item or an
+# exempt word. Off (the default) until the coordinator flips it. --require-forecast forces it on for one call; --no-require-forecast
+# forces it off for an emergency enqueue (the refusal text names it). LASTWAR_TEAM_FILE points at another roster file (tests, scratch).
+TEAM_FILE_ENV = "LASTWAR_TEAM_FILE"
+_TEAM_SWITCH = {"loaded": None, "path": None}
+_FORECAST_OVERRIDE = {"value": None}
+_FORECAST_LEDGER_CACHE = {}
+_FORECAST_REFUSALS = []
+
+
+def _team_file():
+    return os.environ.get(TEAM_FILE_ENV) or os.path.join(os.path.dirname(_tool_dir()), "TEAM.yaml")
+
+
+def _scan_require_forecast(text):
+    """Without PyYAML: the value of coordination.queue.require_forecast by indentation, or None."""
+    stack = []
+    for raw in text.splitlines():
+        if not raw.strip() or raw.lstrip().startswith("#"):
+            continue
+        indent = len(raw) - len(raw.lstrip())
+        key, _sep, value = raw.strip().partition(":")
+        while stack and stack[-1][0] >= indent:
+            stack.pop()
+        if not value.strip():
+            stack.append((indent, key))
+        elif [k for _i, k in stack] == ["coordination", "queue"] and key == "require_forecast":
+            return value.split("#", 1)[0].strip()
+    return None
+
+
+def team_requires_forecast():
+    """(value, warning): the TEAM.yaml switch; False when the file or the key is absent, False with a warning when the file cannot be read."""
+    path = _team_file()
+    if _TEAM_SWITCH["loaded"] is not None and _TEAM_SWITCH["path"] == path:
+        return _TEAM_SWITCH["loaded"]
+    result = (False, None)
+    try:
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+    except FileNotFoundError:
+        text = None
+    except (OSError, UnicodeDecodeError) as exc:
+        result = (False, f"cannot read {path} ({type(exc).__name__}): require_forecast is treated as off")
+        text = None
+    if text is not None:
+        try:
+            try:
+                import yaml
+                data = yaml.safe_load(text) or {}
+                raw = ((data.get("coordination") or {}).get("queue") or {}).get("require_forecast")
+            except ImportError:
+                raw = _scan_require_forecast(text)
+            result = (raw is True or str(raw).strip().lower() in ("true", "yes", "on", "1"), None)
+        except Exception as exc:
+            result = (False, f"cannot parse {path} ({type(exc).__name__}): require_forecast is treated as off")
+    _TEAM_SWITCH.update(loaded=result, path=path)
+    return result
+
+
+def forecast_required(args=None):
+    """(on, source, warning): the per-call flags first (--no-require-forecast, --require-forecast), then the TEAM.yaml switch."""
+    off, on = getattr(args, "no_require_forecast", False), getattr(args, "require_forecast", False)
+    if off and on:
+        return None, "", "--require-forecast and --no-require-forecast contradict each other"
+    if off:
+        return False, "--no-require-forecast", None
+    if on:
+        return True, "--require-forecast", None
+    value, warning = team_requires_forecast()
+    return value, "coordination.queue.require_forecast in TEAM.yaml" if value else "", warning
+
+
+def set_forecast_override(args):
+    """Minting commands (plan, sweep, sync) take the same flags as enqueue; remember them for _produce_for_window."""
+    on, source, _w = forecast_required(args)
+    _FORECAST_OVERRIDE["value"] = on if source.startswith("--") else None
+
+
+def forecast_gate(root, serves):
+    """None when the unit may be minted, else the verdict (no-row, unknown or unchecked) the forecast check refuses it with. Ledger read once
+    per root and process."""
+    override = _FORECAST_OVERRIDE["value"]
+    if override is False or (override is None and not team_requires_forecast()[0]):
+        return None
+    key = _repo_top(root)
+    if key not in _FORECAST_LEDGER_CACHE:
+        _FORECAST_LEDGER_CACHE[key] = load_forecast_ledger(root)
+    ids, _reason = _FORECAST_LEDGER_CACHE[key]
+    verdict = forecast_class(serves, ids)
+    return None if verdict == "ok" else verdict
+
+
 def _inbox_serves(rel, text):
     """(rel, serves) for a live inbox unit that has a serves line, else None (a missing one is already an error)."""
     if rel.split("/", 1)[0] != "inbox" or not _frontmatter_top_keys(text)[1]:
@@ -1386,6 +1485,7 @@ def _window_aged_priority1(root):
 
 
 def cmd_sync(args):
+    set_forecast_override(args)
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
@@ -1500,6 +1600,7 @@ def cmd_sync(args):
         closed.setdefault(unit, "completion marker in another "
                                 "worktree")
     produced, already, skipped_closed = [], [], []
+    skipped_forecast = []
     for item in due_items:
         if item.get("cadence") == "fixed-slots":
             # Plan-produced only: the tracker carries no per-slot
@@ -1517,6 +1618,8 @@ def cmd_sync(args):
         elif _unit_id_for_window(item, planned_local) in closed:
             skipped_closed.append(
                 _unit_id_for_window(item, planned_local))
+        elif _unit_id_for_window(item, planned_local) in {r["unit"] for r in _FORECAST_REFUSALS}:
+            skipped_forecast.append(_unit_id_for_window(item, planned_local))
         else:
             already.append(item["id"])
     # 4. window aged unscheduled priority-1 units (issue #128) -
@@ -1534,12 +1637,14 @@ def cmd_sync(args):
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
+                      "skipped_forecast_refusals": skipped_forecast,
+                      "forecast_refusals": _FORECAST_REFUSALS,
                       "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
                       "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
-    return 0
+    return 1 if _FORECAST_REFUSALS else 0
 
 
 def chain_seq_next(root, chain_id):
@@ -2094,6 +2199,15 @@ def _produce_for_window(root, item, planned_local, window="",
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
     if os.path.exists(unit_path(root, "inbox", fields["unit"])):
+        return None
+    verdict = forecast_gate(root, fields["serves"])
+    if verdict:
+        # The forecast switch (coordination.queue.require_forecast): the roster's serves for this regular is not a ledger plan item or an
+        # exempt word, so the unit is not minted. Recorded for the command to report; the command exits 1.
+        _FORECAST_REFUSALS.append({"unit": unit_id, "regular": regular, "reason": verdict})
+        print(f"refused: {unit_id} - the roster's serves for {regular} fails the forecast check ({verdict}); not staging it - give the "
+              f"regular a ledger plan item or an exempt serves in regulars.json, or pass --no-require-forecast for an emergency",
+              file=sys.stderr)
         return None
     write_new_unit(root, fields, regular)
     return fields["unit"]
@@ -2875,6 +2989,7 @@ def drop_branch_done_duplicates(root, done_ids, branch):
 
 
 def cmd_plan(args):
+    set_forecast_override(args)
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
@@ -2959,6 +3074,7 @@ def cmd_plan(args):
     # genuine dedupe hits below.
     skipped_chain_seq = []
     skipped_roster_refusals = []
+    skipped_forecast = []
     fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
@@ -3030,6 +3146,8 @@ def cmd_plan(args):
             elif uid in {r.get("unit")
                          for r in _ROSTER_FRESH_REFUSALS}:
                 skipped_roster_refusals.append(uid)
+            elif uid in {r["unit"] for r in _FORECAST_REFUSALS}:
+                skipped_forecast.append(uid)
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -3053,13 +3171,15 @@ def cmd_plan(args):
                       "skipped_expired": skipped_expired,
                       "skipped_chain_seq": skipped_chain_seq,
                       "skipped_roster_refusals": skipped_roster_refusals,
+                      "skipped_forecast_refusals": skipped_forecast,
+                      "forecast_refusals": _FORECAST_REFUSALS,
                       "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
                       "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
                       "roster_stale_regulars": stale_roster,
                       "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
-    return 1 if _ROSTER_FRESH_REFUSALS else 0
+    return 1 if _ROSTER_FRESH_REFUSALS or _FORECAST_REFUSALS else 0
 
 
 def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
@@ -3142,6 +3262,7 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     produced, already, skipped = [], 0, []
     skipped_expired, skipped_chain_seq = [], []
     skipped_roster_refusals = []
+    skipped_forecast = []
     for fid in fixups:
         unit_id = _unit_id_for_window(by_id[fid], slot)
         unit = _produce_for_window(
@@ -3161,6 +3282,8 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
         elif unit_id in {r.get("unit")
                          for r in _ROSTER_FRESH_REFUSALS}:
             skipped_roster_refusals.append(unit_id)
+        elif unit_id in {r["unit"] for r in _FORECAST_REFUSALS}:
+            skipped_forecast.append(unit_id)
         else:
             already += 1
     return {"produced": produced, "already_present": already,
@@ -3168,6 +3291,7 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
             "skipped_expired": skipped_expired,
             "skipped_chain_seq": skipped_chain_seq,
             "skipped_roster_refusals": skipped_roster_refusals,
+            "skipped_forecast_refusals": skipped_forecast,
             "error": None}
 
 
@@ -3207,6 +3331,7 @@ def cmd_sweep(args):
     pass and a post-reset 18:30 unit. A correct pair already in
     the pool passes, so an idempotent re-run still succeeds.
     """
+    set_forecast_override(args)
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
@@ -3339,6 +3464,7 @@ def cmd_sweep(args):
     produced, already = [], 0
     skipped_expired, skipped_chain_seq = [], []
     skipped_roster_refusals = []
+    skipped_forecast = []
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
             label = "first pass" if idx == 0 else "final pass"
@@ -3358,6 +3484,8 @@ def cmd_sweep(args):
         elif uid in {r.get("unit")
                      for r in _ROSTER_FRESH_REFUSALS}:
             skipped_roster_refusals.append(uid)
+        elif uid in {r["unit"] for r in _FORECAST_REFUSALS}:
+            skipped_forecast.append(uid)
         else:
             already += 1
     print(json.dumps({
@@ -3367,6 +3495,8 @@ def cmd_sweep(args):
         "skipped_expired": skipped_expired,
         "skipped_chain_seq": skipped_chain_seq,
         "skipped_roster_refusals": skipped_roster_refusals,
+        "skipped_forecast_refusals": skipped_forecast,
+        "forecast_refusals": _FORECAST_REFUSALS,
         "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
         "expired_window_refusals": _EXPIRED_WINDOW_REFUSALS,
         "chain_seq_refusals": _CHAIN_SEQ_REFUSALS,
@@ -3376,9 +3506,10 @@ def cmd_sweep(args):
         "fixups_skipped_expired": fix["skipped_expired"],
         "fixups_skipped_chain_seq": fix["skipped_chain_seq"],
         "fixups_skipped_roster_refusals":
-            fix["skipped_roster_refusals"]},
+            fix["skipped_roster_refusals"],
+        "fixups_skipped_forecast_refusals": fix["skipped_forecast_refusals"]},
         ensure_ascii=False))
-    return 1 if _ROSTER_FRESH_REFUSALS else 0
+    return 1 if _ROSTER_FRESH_REFUSALS or _FORECAST_REFUSALS else 0
 
 
 def cmd_sweep_status(args):
@@ -3940,15 +4071,21 @@ def cmd_enqueue(args):
               f"(what it serves, one line); roster regulars inherit it from "
               f"regulars.json and {args.regular!r} is not in the roster")
         return 1
-    if getattr(args, "require_forecast", False):
+    required, source, warning = forecast_required(args)
+    if required is None:
+        print(f"refused: {warning}")
+        return 2
+    if warning:
+        print(f"warning: {warning}", file=sys.stderr)
+    if required:
         ids, reason = load_forecast_ledger(root)
         verdict = forecast_class(serves, ids)
         if verdict != "ok":
             what = {"unchecked": f"{reason}, so its serves line cannot be checked",
                     "no-row": "its serves line names a plan item id that has no row in the forecast ledger",
                     "unknown": "its serves line is neither a ledger plan item nor an exempt word (upkeep, snapshot, baseline, fill idle slot)"}[verdict]
-            print(f"refused: --require-forecast: {what} - serve a plan item the Strategist has put in the ledger, or one of the exempt "
-                  f"words; nothing queued")
+            print(f"refused: forecast check ({source}): {what} - serve a plan item the Strategist has put in the ledger, or one of the exempt "
+                  f"words; for an emergency enqueue pass --no-require-forecast; nothing queued")
             return 1
     # Unretirable-window refusal (issue #859): the design defines
     # an empty expires_at as "no deadline" (task-unit-queue-design.md
@@ -6264,6 +6401,14 @@ def cmd_stats(args):
     return 0
 
 
+def _forecast_flags(p):
+    p.add_argument("--require-forecast", action="store_true",
+                   help="refuse a unit whose serves is not a plan item with a row in the newest forecast ledger or an exempt word (upkeep, "
+                        "snapshot, baseline, fill idle slot); on by default when TEAM.yaml coordination.queue.require_forecast is true")
+    p.add_argument("--no-require-forecast", action="store_true",
+                   help="emergency: skip the forecast check for this call even when TEAM.yaml requires it")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=os.path.join(
@@ -6287,9 +6432,7 @@ def main(argv=None):
     p.add_argument("--max-attempts", type=int,
                    default=DEFAULT_MAX_ATTEMPTS)
     p.add_argument("--regulars-json", default="")
-    p.add_argument("--require-forecast", action="store_true",
-                   help="refuse a unit whose serves is not a plan item with a row in the newest forecast ledger or an exempt word "
-                        "(upkeep, snapshot, baseline, fill idle slot); off until the Strategist calls the ledger stable")
+    _forecast_flags(p)
     p.set_defaults(fn=cmd_enqueue)
 
     p = sub.add_parser("list")
@@ -6359,16 +6502,19 @@ def main(argv=None):
     p.set_defaults(fn=cmd_reap)
 
     p = sub.add_parser("sync")
+    _forecast_flags(p)
     p.add_argument("--due-json", default="")
     p.set_defaults(fn=cmd_sync)
 
     p = sub.add_parser("plan")
+    _forecast_flags(p)
     p.add_argument("--hours", type=int, default=12)
     p.add_argument("--regulars-json", default="")
     p.add_argument("--tracker-json", default="")
     p.set_defaults(fn=cmd_plan)
 
     p = sub.add_parser("sweep")
+    _forecast_flags(p)
     p.add_argument("--regular", default="zero-sweep")
     p.add_argument("--date", default="")
     p.add_argument("--regulars-json", default="")
