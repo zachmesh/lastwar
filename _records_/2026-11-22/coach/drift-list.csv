@@ -13,3 +13,4 @@ D11,lab 1 idle since 11:42:55Z,"finished 11:42:55Z, Complete 11:53:00Z, restart 
 D12,a retired lever is still a data row,"growth-plan/lever-table.csv still lists Extra Drill Ground research (61M coin and 700 Valor, S1) though ranking v3 and decision 01 v1.2 retire it",strategist and scribe,low
 D13,tags are still free text,"27 distinct tag texts, none a PL-id; the coach keeps a mapping; PL-01 to PL-18 exist in plan-of-record.csv",planner,medium
 D14,this report is late,"due 12:00Z, published about 13:05Z; the coach has no schedule, so no wake reached it between 10:58Z and 12:55Z",coordinator,low
+D15,RETIRED: the hospital level read as Lv.20 on the base map and Lv.25 in the treatment panel,"the plunder record of 14:25Z reads the tag Hospital Lv.25 in the treatment panel and so did 2357; the base map's Lv.20 was a tap shifted by the camera; resolved toward Lv.25; an example for check (g), where the tag text sits beside the numbers",none,retired

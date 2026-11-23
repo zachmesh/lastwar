@@ -1,8 +1,8 @@
 ---
 title: Operator handover 0054 detail
 created: 2026-11-23T09:10:00Z
-modified: 2026-11-23T12:20:00Z
-version: 1.1.0
+modified: 2026-11-23T14:52:00Z
+version: 1.2.0
 description: Sidecar of the operator handover - commands, screen coordinates, inventory map, ledger and record paths; the base map and the tag index moved out to their own records
 status: handover
 grounded_in:
@@ -50,3 +50,13 @@ frame, game window at about x 73-715, y 62-980.
 - Ledger `_records_/2026-11-22/growth/ledger.csv`; records in `_records_/2026-11-22/`.
 - Base map and hazards: [1030-base-map.md](1030-base-map.md); Drill Grounds: [1047-f1b-drill-ground.md](1047-f1b-drill-ground.md),
   [1054-f1c-drill-grounds.md](1054-f1c-drill-grounds.md); building tags: [tag-index.csv](tag-index.csv).
+
+## Routes proven 2026-11-23 14:40Z (session f364ec2c; records alliance-donations 1441, resource-collection 1445)
+
+| Route | Points |
+|---|---|
+| Donations | Alliance 670,708; Techs tile 514,677; node with the thumbs-up 245,525; coin Donate 495,756; never the gem Donate 292,756 |
+| Close donations | dialog X 611,222; Techs X 614,172 lands on the full Alliance screen; its blue back arrow 177,919 leaves to the base |
+| Harvest panels | icons coin 443,82, food 230,82, iron 338,82; Collect 553,552; panel X 612,209; never a Use or Open All row |
+| Run shape | an 8-step cap gives 7 effective actions (the 8th turn never runs); a click plus a wait in one turn closes a panel; three harvest panels take 11 turns, so two runs |
+

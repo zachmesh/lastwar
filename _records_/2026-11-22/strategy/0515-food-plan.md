@@ -1,7 +1,7 @@
 ---
 title: Food plan for the long line
 created: 2026-11-23T13:11:00Z
-modified: 2026-11-23T14:03:00Z
+modified: 2026-11-23T14:30:00Z
 version: 2.0.0
 level: L3
 description: Where the food comes from for Base Expansion, the Oil Well, HQ 31 and the first three ground levels, and what waits
@@ -42,7 +42,7 @@ Output 10.6M a day gives 0.64G in 60 days against 2.5G: the chests (fixed 273.7M
 2. Typed Food Chests UR; SSR and SR Food Chests if they exist (F-071); plain chests as food (208M).
 3. Choice chests as food (UR 4.06M, 67 percent more than as coin).
 4. Harvest bubbles (the 1330 Collect gave 0.7M food), alliance help; Food Output V adds 2.5 percent.
-5. Truck plunder: costs power (decision 04), not a food plan.
+5. Truck plunder: one fight paid 0.95M food and iron and 0.6M coin with no wounds; at 3 fights a day about 2.9M food, which moves the typed-and-plain date from 2027-02-23 to about 2027-02-07 (decision 04).
 
 ## Rules
 

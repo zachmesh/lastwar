@@ -1,8 +1,8 @@
 ---
 title: Base Expansion ETA for the owner
 created: 2026-11-23T13:09:00Z
-modified: 2026-11-23T14:04:00Z
-version: 5.0.0
+modified: 2026-11-23T14:32:00Z
+version: 6.0.0
 level: L3
 description: The estimated dates for Base Expansion and HQ 31 as a range with the measured research speed, its convention and its assumptions
 status: proposed
@@ -13,22 +13,25 @@ grounded_in:
 
 # Base Expansion ETA
 
-Convention: the divisor is base time over effective time; research speed is divisor minus 1. Cases in [the sidecar](base-expansion-eta.csv).
+Convention: divisor is base time over time; the clock is the Finish Now clock. Cases in [the sidecar](base-expansion-eta.csv).
 
 ## Range
 
-- **Base Expansion complete: 2027-01-08 to 2027-01-23** if about 71 to 77 percent of the speed-up stock goes to the chain and oil holds (oil-bound, day 45 to 60) [G].
-- **The 100,000-minute general reserve costs little now:** kept, the lab date is day 57 (2027-01-20), inside the oil range. With no speed-ups: 2027-07-20.
-- **HQ 31 complete about 2027-01-25 to 2027-02-10:** it starts when Base Expansion is done and its oil, coin and food are held; the construction stock (about 74K minutes after the well and three grounds) cuts its 52-day build to days.
+- **Base Expansion complete: 2027-01-08 to 2027-01-23** if 80 to 85 percent of the speed-up stock goes to the chain and oil holds (oil-bound, day 45 to 60) [G].
+- **With the 100,000-minute general reserve kept: 2027-02-10** (day 78): the reserve now costs 18 to 33 days. With no speed-ups: 2027-08-11.
+- **HQ 31 complete about 2027-01-25 to 2027-02-10** (to 2027-03-15 with the reserve kept); its 52-day build falls to days with the construction stock (about 74K minutes after the well and three grounds).
 - HQ 35 is not plausible (60.8M oil).
+- **Unverified branch:** if research nodes cost no oil (H112), the lab sets the date: about 2026-12-16 at the weekly cap.
 
 ## Evidence
 
-- **Research speed is +268 percent, divisor 3.678** [M]: Iron Output V started at 14:00:54.5Z and its timer read 1d 12:37:59 (131,879 s) against the base 485,100 s, nothing sped up; the Finish Now clock agrees. The 879 base days take 239 natural days. The blue Research button showed 147,000 s (divisor 3.30), about 11 percent long: read the Finish Now clock or the started timer, not that button. The progress-bar estimate (3.5 to 3.7) agreed; 2.2, 3.095, 3.30 and 4.6 to 5.0 are retired.
-- **Costs run at 0.90 of the sheet** [M]: Iron Output V costs iron 1.8M, food 1.8M, coin 5.6M against 2.0M, 2.0M and 6.2M; no oil on that node.
-- **Stock:** tech 9,895 minutes plus general 351,687: about 251 days. Oil is 647K, enough for all ten Oil Output I levels, so those waits are time-bound and speed-ups pay; from Oil Output II (1.2M oil) oil sets the pace and speed-ups are wasted.
-- **Power per speed-up minute:** the ground ladder about 24 per construction minute, the chain about 1.3 per research minute; the owner's order is strategic.
+- **Research speed** [M, four nodes read 14:10Z]: the Research button is base over 3.30 on every node (Iron Output V, Oil Output I, Parts Workshop 3.3000, Base Expansion 3.2999). The Finish Now clock, and the lab, run it minus a flat 15,120 s (4h12m): Iron Output V 147,000 to 131,880 s (timer confirmed), Oil Output I level 1 205,800 to 190,680 s. The apparent 3.678 was a short node. Over the 39 levels of the critical path the 879 base days take 260 natural days, not 239.
+- **Costs run at 0.90 of the sheet** on all five nodes read: coin 10.0M (Fast Builder V), 28.7M (Parts Workshop), 174.1M (Base Expansion), iron and food 58.0M; no oil row was visible, but the panel shows five rows (H112).
+- **Stock:** tech 9,895 minutes plus general 351,687: 251 days. Oil 647K covers the ten Oil Output I levels if the sheet's 60K each holds.
+- Per-stage natural days are in [the path table](base-expansion-path.csv): Oil Output I 43 days (level 1 is 53 hours, level 10 about 6.6 days), Oil Output II 67, Oil Output III 99, Base Expansion 17, the other stages 2 to 7 each.
+- The second lab is free for the 43-day Oil Output I chain (about 10 days if compressed); fill it by power per lab-day, never delaying a chain level.
+- The ground ladder returns about 24 power per construction minute, the chain about 1.3 per research minute; the owner's order is strategic.
 
 ## Assumptions
 
-Divisor 3.678 holds for later starts (read the Finish Now clock at each); the oil model holds (well, one 30K depot a day, More Oil Wells); the other device uses no more speed-ups.
+The flat deduction holds at later starts and with speed-ups; the oil model holds (well, one 30K depot a day, More Oil Wells); no more speed-ups by the other device.

@@ -18,6 +18,37 @@ max_attempts: 3
 claimed_by: operator
 claimed_at: 2026-11-23T14:05:02Z
 lease_until: 2026-11-23T14:25:02Z
+result:
+  status: partial
+  started_at: 2026-11-23T14:05:02Z
+  finished_at: 2026-11-23T14:30:58Z
+  duration_seconds: 1556
+  executor: operator
+  summary: Trade truck plunder session 1, seven runs (claude-gateway/claude-sonnet-5-5; claimed 14:05:02Z): hospital treatment panel (tag Hospital Lv.25) 364 wounded, 5,306 completed, capacity 7,999, free room 2,329 before and after; one fight at 14:25:40Z on a UR Lv.30 truck (guard 21.0M, UR shard stacks in the right half): Squad 1 25.61M against 21.06M, Quick Plunder once and Battle once, Mission Completed: iron +951.8K, food +951.8K, coin +607.5K, UR shard x9, no troops wounded, plunder count 1/4; at 14:29Z five more gold and purple trucks all failed a check, so no second fight; no Collect or Heal; no player names recorded.
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/truck-plunder/1405-queue-run.md and 1405-queue-run.csv; growth/ledger.csv row 14:25:40Z; runs 20261123T140502Z-37b59f, 20261123T141548Z-ab7c4d, 20261123T141932Z-100841, 20261123T142109Z-6f85a6, 20261123T142249Z-62e6dc, 20261123T142439Z-807dc6, 20261123T142807Z-1a0e07
+  follow_up: a second plunder session after the truck list reshuffles (count 1/4, unit window to 18:00Z); the guard stands (stop under 1,000 free room or two fights each wounding over 100)
+  stats:
+    target: trade truck plunder with the casualty guard, at most two fights
+    achieved: one fight won (victory, 0 troops wounded); no second target passed
+    resources_gained: iron +951.8K, food +951.8K, coin +607.5K, UR shard x9
+    points: 0
+    costs: model 1.112144 USD in seven runs; no troops wounded; no resources spent
+    verified: yes
+    blocker_category: c
+    run_id: 20261123T142439Z-807dc6
+    run_steps: 94
+    actions_done: 120
+    actions_refused: 0
+    model_s_per_step: 6.5
+    cost_usd: 1.112144
+    device_takeovers: 0
+    rules_used: R1,R9,R10
+    rule_failed: none
+    rule_gap: The hospital figures sit behind the orange middle button of Hospital Lv.25, not Building Details; the truck list reshuffles on every entry.
+  stats_missing: []
+  stats_warnings: [duration exceeds 15-minute unit cap]
 ---
 
 # trucks

@@ -1,0 +1,6 @@
+resource,panel_title,collect_utc,owned_before,available_before,collected,owned_after,available_after,per_hour,note
+coin,"COIN panel (top bar coin icon at 443,82)",2026-11-23T14:45:23.697Z,"12,575,037","553,348","555,712","13,130,749",0,444.5K/H,"Collect pressed once; capacity bar 16,474,999, owned below it; Use and Open All x40 and x71 rows not pressed; run 20261123T144502Z-3381ef"
+food,"FOOD panel (top bar bread icon at 230,82)",2026-11-23T14:46:17.597Z,"653,841,655","847,427","848,362","654,690,017",0,674.9K/H,"owned above the capacity bar 49,642,724; Collect still worked; run 20261123T144558Z-65ae31"
+iron,"IRON panel (top bar iron icon at 338,82)",2026-11-23T14:46:39.623Z,"1,065,914,089","781,045","781,908","1,066,695,997",0,622.7K/H,"owned above the capacity bar 59,840,549; Collect still worked; run 20261123T144558Z-65ae31"
+Total Power,HUD,,"150,416,946",,,"150,416,946",,,unchanged
+oil,HUD,,647.0K,,,647.0K,,,"counter read at 14:46:48Z, no oil panel opened (the Oil Well has its own units)"

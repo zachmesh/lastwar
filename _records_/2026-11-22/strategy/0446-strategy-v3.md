@@ -1,7 +1,7 @@
 ---
 title: Strategy v3.0
 created: 2026-11-23T12:48:00Z
-modified: 2026-11-23T14:04:00Z
+modified: 2026-11-23T14:16:00Z
 version: 3.0.0
 level: L3
 description: The growth strategy of record after the owner orders of 2026-11-23, with a long line for Base Expansion and oil, a short line for training slots, the ranked levers, the forecasts and the dates
@@ -17,7 +17,7 @@ Replaces v2.0, which stays as written. Times Mac UTC. Power 150,215,709 at 11:53
 
 ## Two lines
 
-**Long line, owner order OD-20261123-18 to -20: Base Expansion** (the last Age of Oil node; opens HQ 31 to 35; HQ 31 also needs Research Center 30, a Tank, Air or Missile Center 30 and Barracks 30). Oil binds: 434K held against about 4.08M for the path and 1.2M for HQ 31 [S1]. Both labs on the critical path in dependency order from real previews, first node OIL OUTPUT I, tech speed-ups first; one builder on the Oil Well from 11-24 09:20Z; oil collected every 8 hours. ETA to Base Expansion 2027-01-08 to 2027-01-23 with 71 to 77 percent of the speed-up stock on the chain (the 100,000-minute reserve costs little); HQ 31 complete 2027-01-25 to 2027-02-10; HQ 35 is not plausible (60.8M oil) [G]. Research speed +268 percent (divisor 3.678, started timer 14:00:54Z); the path uses 71 to 77 percent of the 251-day speed-up stock ([ETA note](0510-base-expansion-eta.md)).
+**Long line, owner order OD-20261123-18 to -20: Base Expansion** (the last Age of Oil node; opens HQ 31 to 35; HQ 31 also needs Research Center 30, a Tank, Air or Missile Center 30 and Barracks 30). Oil binds: 434K held against about 4.08M for the path and 1.2M for HQ 31 [S1]. Both labs on the critical path in dependency order from real previews, first node OIL OUTPUT I, tech speed-ups first; one builder on the Oil Well from 11-24 09:20Z; oil collected every 8 hours. ETA to Base Expansion 2027-01-08 to 2027-01-23 with 80 to 85 percent of the speed-up stock on the chain (2027-02-10 with the 100,000-minute reserve kept); HQ 31 complete 2027-01-25 to 2027-02-10; HQ 35 is not plausible (60.8M oil) [G]. Research speed +230 percent (button divisor 3.30, minus 4h12m a level on the clock); the path uses 80 to 85 percent of the 251-day speed-up stock ([ETA note](0510-base-expansion-eta.md)).
 
 **Short line: training slots first.** Four Drill Grounds (Lv.26, 27, 28, 30): nine levels, +1,800 slots, about +3.2M; two to three start at 09:20Z on 11-24 inside the Tuesday window, coin from fixed Coin Chests and food from typed Food Chests UR ([decision 02](dec-20261123-02.md)). Hero Tier 5 stars for Lucius and Schuyler (120 of 680 universal shards held, about +0.3M to +1.0M [G]) in the Thursday window; promotion to T10 +2.75M when its panel opens. The 5,306 hospital troops are a ceiling, not a target (H16).
 
