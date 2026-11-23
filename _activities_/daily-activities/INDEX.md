@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-22T00:32:17Z
+modified: 2026-11-23T01:50:00Z
 level: L1
-version: 1.44.0
+version: 1.45.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -54,6 +54,7 @@ grounded_in:
   - source: queue-planning execution record 2026-11-12 0240 run (12 units staged for the 14:03/14:30 slots, 62 already present, scout diff 6-pass observation 52 observed 11 unexplained with 0 counts, pool inbox 78, done 1646; record commit 63947af68 on records/2026-11-12)
   - source: pr-integration execution records 2026-11-12 0300 run (BATCH, PR #681 merged, PR #685 conflicts with new main - commented, not merged, branch-side resolution for the 07:00 batch; PR #425 owner-gated) and 0330 run (NON-batch, PR #685 re-verified CLEAN against main 0dc85d79, awaits the 07:00 batch; record commits 7c30af3183b and ea3d9d0c5 on records/2026-11-12)
   - source: ticker-1634 daily-activities execution record 2026-11-21 1636 queue run (partial, pre-reset zero-sweep 1630 first of the pair, 15-minute cap, donations shortfall 30/30 with zero coin donations this reset day, Tech Donation Today 3150 points unresolved, Alliance entry blocker did not reproduce, VIP13 login chest red dot, mail and gifts fix-up units in inbox; record commit e17343ed on records/2026-11-21)
+  - source: zero-sweep 1630 execution record 2026-11-22 1634 queue run (partial, first of the pair, bubbles standing, survivors waiting, VIP freebie timer-gated, badges read, Profile panel left open; record commit a7638217b on records/2026-11-22)
 ---
 
 # Routine activities
@@ -762,3 +763,15 @@ claims cited below were read in this pass's passes unit
 - Follow-up: second sweep zero-sweep-2026-11-21-1730 staged for 17:30 PT; it re-walks the lines this unit could not reach.
 - Result stats: partial; 15-minute cap reached mid-walk; no diamonds or money spent; no game input beyond the sweep reads.
 - No other claim in this profile changes; the sweep-pair and donations rules stand unchanged.
+
+## Pre-reset zero sweep - first pass, 2026-11-22 1634 (partial)
+
+- Unit zero-sweep-2026-11-22-1630 by ticker-1634, session 16:41-16:48 PT (computer session cc-171, window 127196, window mode, never brought to front), chain pre-reset-sweep-2026-11-22 seq 1. Status partial, verification-only: nothing claimed, no truck dispatched or plundered, no donation made, no chest claimed, no secret task tapped, no pass button tapped inside this unit. Evidence in `_records_/2026-11-22/daily-activities/1634-queue-run.md` (commit a7638217b on records/2026-11-22). First of the two pre-reset sweeps for the 2026-11-22 reset day (reset 18:00 PST).
+- Live reads: base screen about 16:44 - food, iron and coin bubbles standing across the farmland (several food bubbles in the 765.4K class, iron and coin bubbles alongside), NOT at zero; fix-up unit harvest-2026-11-22-1630 already in inbox. EXP and titanium bubbles not separately read. Survivors at the front door - two "?" icons standing, NOT at zero; fix-up unit survivors-2026-11-22-1803 already in inbox. VIP - VIP13, logged in 4 days in a row, points 1,666,520/2,000,000; Daily Freebie shows a timer of 01:13:18 at about 16:48, not claimable now (available after the reset, about 18:01 PST); the login chest icon top-right of the VIP panel was not read; fix-up unit vip-2026-11-22-1630 already in inbox. Badges read, not opened - Events badge 1, radar dish badge 11, trucks red dot, WORLD 99+, hammer 1/4 (red dot), flask 2/2; their producing units sit in the inbox for their slots (events-2026-11-22-1857, radar-2026-11-22-1630, trucks-2026-11-22-1630). Right-rail timers - the two unidentified timer icons read 01:16:34 and 01:16:33 at about 16:44, still unidentified, same as the ticker-1604 scout read earlier today. Build - Oil Well [0/1].
+- Base HUD at sweep start: power 147,972,269; food 765.4M, iron 1.1G, coins 109.2M, diamonds 6,456, Gold Bricks 17.72K, lightning 120.
+- Lines unread in this unit (closed at 7.4 minutes, token lease ending): mail categories, alliance gifts tabs, donations count, trucks dispatch/plunder counters, train station panel, daily activity chests, duel daily total, radar posture, shop Daily Pickup / Free Supply, pass daily pickups, drone components, upgrade ore, screws, Armed Truck timer, secrets, treasures, arms-race phase. Crystal: not located (rule R5, age 28 days from 2026-10-25). Glittering Market: not located (rule R5, age 22 days from 2026-10-31). No new information on either this unit.
+- Fix-ups: none enqueued. Every not-at-zero line found already has a producing unit in the inbox for its slot (harvest-1630, survivors-1803, vip-1630); the VIP freebie is timer-gated, not claimable. Crystal and Glittering Market have no producing unit but their status is not-located, so no fix-up unit can act on them; the 17:30 sweep re-checks.
+- Method notes (R2): the VIP back-arrow tap at the measured point (109,936) first returned outcome_unknown with a permissions error and no verified change; a second tap at the same point closed the VIP panel to Profile. A single measured point retried once after a verified no-change is the pivot, not a blind repeat. Element-number close-button clicks (element 29 on the VIP panel, element 1 on the Profile panel) twice produced a "Google Chrome came to the front" artifact with no verified close. The next unit should close panels with coordinate taps on the panel's own back arrow, never element-number close buttons.
+- The Profile panel was left open at session end (its close button misbehaved per the method note above); the next unit navigates from there. Follow-up, recorded by the next unit: the harvest-2026-11-22-1630 unit (ticker-1704) spent its whole budget on the same panel and could not close it either - the two-surface finding and the X-tap repeated failure are filed as tooling Issue #854 (see resource-collection 1.70.0); the 17:30 sweep must re-check the 1630 fix-up.
+- Follow-up: second sweep zero-sweep-2026-11-22-1730 staged for 17:30 PST; it re-walks the lines this unit could not reach. At this fold's close the 1730 sweep record has not landed on the records branch, so its fold is owed to the next run. The VIP login chest state (top-right chest icon) was not read; vip-2026-11-22-1630 must read it.
+- Result stats: partial; about 8 minutes device time (unit duration 443 seconds, 16:42:05-16:49:28 PST); no diamonds or money spent; the VIP Exclusive $99.99 offer was not tapped; no claim, fight, dispatch, donation or purchase. Blocker category h (by-design partial - unit closed at 7.4 minutes with the token lease ending, second sweep staged).
