@@ -1,9 +1,9 @@
 ---
 title: Aggregation - the retro_report.py specification part 2
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 38
+sequence: 52
 description: Its only data sources are inside the repository - the unit results in _queue_/done and the
 ---
 Its only data sources are inside the repository - the unit

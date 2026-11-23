@@ -1,7 +1,7 @@
 ---
 title: 2. Concepts part 1
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
 sequence: 3
 description: Task unit - one regular from _tools_/regulars.json, sized to finish in a few minutes.
@@ -34,9 +34,3 @@ description: Task unit - one regular from _tools_/regulars.json, sized to finish
   token, pick the best unit, run it, write its result, pick the next
   one. The loop is driven by one periodic ticker (section 6), not by
   the three segment schedules, which this design retires.
-- **The 15 minute unit** - owner rule of 2026-10-28 - **each unit
-  runs at most 15 minutes**. The unit is the scheduling quantum -
-  when a unit ends, the loop re-reads the pool, so work that became
-  due or urgent in the meantime is picked up at the next boundary,
-  at most 15 minutes later. A task that cannot fit in 15 minutes is
-  split into units at intake, never stretched.

@@ -1,7 +1,7 @@
 ---
 title: 1. Problem
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
 sequence: 2
 description: The 3 segment schedules work, but each segment run is one long subagent session, and the

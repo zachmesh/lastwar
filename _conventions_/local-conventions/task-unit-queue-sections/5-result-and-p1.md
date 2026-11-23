@@ -1,9 +1,9 @@
 ---
-title: 5. Result and result statistics
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+title: 5. Result and result statistics part 1
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 8
+sequence: 10
 description: On completion the executor writes a result mapping into the same frontmatter (via _tools_/queue.py complete) and
 ---
 ## 5. Result and result statistics
@@ -49,7 +49,4 @@ reliably across the whole pool - counts by state and by regular,
 result status totals, duration averages and maxima, units finished
 after their expiry, units expired while waiting, and claims past
 their lease - in text, YAML or JSON.
-
-The matching `_records_` execution file is still written as today
-(C1 append-only audit); the unit references it under `evidence`.
 

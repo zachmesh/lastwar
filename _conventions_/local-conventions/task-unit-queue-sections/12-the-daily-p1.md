@@ -1,9 +1,9 @@
 ---
 title: 12. The daily collection ledger and the pre-reset zero sweep part 1
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 29
+sequence: 40
 description: The daily collection ledger is the master list of everything collectible or due in one reset
 ---
 ## 12. The daily collection ledger and the pre-reset zero sweep

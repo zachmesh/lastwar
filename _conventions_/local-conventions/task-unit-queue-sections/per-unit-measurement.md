@@ -1,9 +1,9 @@
 ---
 title: Per-unit measurement
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 36
+sequence: 50
 description: Every unit already closes with a structured result (section 5).
 ---
 ### Per-unit measurement

@@ -1,9 +1,9 @@
 ---
-title: 7. The planner - a 12 hour horizon
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+title: 7. The planner - a 12 hour horizon part 1
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 12
+sequence: 16
 description: Production has two layers (owner direction 2026-10-28).
 ---
 ## 7. The planner - a 12 hour horizon
@@ -37,9 +37,3 @@ Production has two layers (owner direction 2026-10-28).
   runs first attaches `planned_for` now and a 4 hour expiry, and
   the unit then surfaces as an expired miss instead of aging
   silently if it still is not executed.
-- A unit whose slot has fully passed unexecuted is expired into
-  `done` with status `expired` by the next reap - the following
-  slot's unit supersedes it, and the miss stays visible in the
-  statistics. Chains are not planned; they are seeded and
-  continued by the ticker as before.
-

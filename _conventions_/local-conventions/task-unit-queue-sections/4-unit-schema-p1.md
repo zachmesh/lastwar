@@ -1,9 +1,9 @@
 ---
-title: 4. Unit schema
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+title: 4. Unit schema part 1
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 7
+sequence: 8
 description: The unit frontmatter is the single structured source for the unit - what the task is,
 ---
 ## 4. Unit schema
@@ -37,14 +37,4 @@ colon-free except timestamps, as elsewhere in this repository.
 | `lease_until` | claim expiry; past it the unit returns to inbox |
 
 Priority classes from the current regulars.
-
-- **1 expiry-critical** - vip (expires at the next reset after its slot, absolute 02:00 UTC - the slot opens its reset day, so expires_at is planned_for + 24h), passes when
-  a free pack carries its own countdown, events on a check-in day
-  boundary.
-- **2 windowed** - arms-race (points only count inside the live phase),
-  radar on release days (claims score at claim time), donations before
-  the daily settlement, trucks on a duel UR day.
-- **3 standard** - everything else.
-- **4 background** - continuation chains that soak up idle quanta
-  and always yield at the next boundary (Zombie Invasion units).
 

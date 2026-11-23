@@ -1,27 +1,12 @@
 ---
 title: Changelog part 4
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 44
-description: 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue 694) - next resolves the
+sequence: 58
+description: 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue 744)
 ---
-- 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
-- 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
-- 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
-- 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
-- 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.
-- 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
-  the ops execution records standard: the loop's own
-  activities are executions and record themselves in the
-  repository, and the retro measures them from those records.
-- 0.13.0, 2026-11-01 - a cross-reference to the new push and
-  PR policy: the queue's own outputs are tier-1 direct pushes,
-  and changes to the design and tools are tier-2 pull requests
-  under the audit of section 14's loop-health check.
-- 0.12.0, 2026-11-01 - section 14 gains a cross-reference to
-  the new evaluation metrics specification - the system-level
-  companion that measures execution efficiency, perception,
-  discovery, retro effectiveness and the impact of the tool
-  developer and the knowledge organiser, with its computation
-  extending _tools_/retro_report.py.
+- 0.27.0, 2026-11-21 - section 11 gains rule R19 (already_present counts only genuine dedupe hits, issue #744): `plan` and `sweep` report a refused window (expired, duplicate chain step, stale roster) under its own skip list instead of counting it as already present, so already_present equals the units the pool actually holds for the staged windows; the roster-freshness refusal now carries the refused window's unit id so callers can classify it.
+- 0.26.0, 2026-11-21 - section 11 gains rule R18 (chain event-end guard, issue #745): `enqueue` refuses a chain successor when the chain's latest recorded `event_ends_at` is past, so a dead event's chain stops minting instead of seeding units for it; no reading recorded means no signal and the mint proceeds as before.
+- 0.25.0, 2026-11-21 - section 11 gains rule R17 (doomed-probe zombie preference, issue #746): `next --probe` hands out a queued zombie chain unit ahead of the overlay steering and the normal pick, so a probe pass burns the re-minted chain unit instead of a scout unit; with no zombie unit queued, actionable and inside budget, the probe falls through to the normal pick.
+- 0.24.0, 2026-11-21 - section 11 gains rule R16 (enqueue chain-seq reconciliation, issue #750): `enqueue` takes the next chain seq from the highest seq named by the live pool, its completion markers, or the given root's snapshot pool, so a finished seq the live pool forgot is never re-minted. 0.23.0 is now claimed by the merged R15 change (PR #715); the competing R15 branch PR #751 stands superseded, and the geometry fold (PR #761) still claims 0.23.0 per issue #739 and must renumber on rebase, so this change takes the next free number.

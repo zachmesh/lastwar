@@ -1,9 +1,9 @@
 ---
 title: The daily rolling retro
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 39
+sequence: 53
 description: Once a day, timed with the post-reset perception round, a retro pass looks back over the
 ---
 ### The daily rolling retro

@@ -1,9 +1,9 @@
 ---
 title: 12. The daily collection ledger and the pre-reset zero sweep part 2
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 30
+sequence: 41
 description: Generation - the planner interface.
 ---
 **Generation - the planner interface.** The planner (section 7)

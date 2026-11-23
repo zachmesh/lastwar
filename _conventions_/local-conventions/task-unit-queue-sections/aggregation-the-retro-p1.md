@@ -1,9 +1,9 @@
 ---
 title: Aggregation - the retro_report.py specification part 1
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 37
+sequence: 51
 description: Aggregation is specified here and implemented as _tools_/retro_report.py (landed 2026-11-01).
 ---
 ### Aggregation - the retro_report.py specification

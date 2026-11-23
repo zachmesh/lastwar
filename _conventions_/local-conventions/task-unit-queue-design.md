@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-23T08:37:05Z
-version: 0.39.0
+modified: 2026-11-23T09:03:48Z
+version: 0.40.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -17,17 +17,20 @@ grounded_in:
 
 # Task Unit Queue Design
 
-Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28. This register stays at this path as an entry page; its text was split verbatim into 45 articles in [task-unit-queue-sections](task-unit-queue-sections/INDEX.md), unchanged and in reading order.
+Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28. This register stays at this path as an entry page; its text was split verbatim into 63 articles in [task-unit-queue-sections](task-unit-queue-sections/INDEX.md), unchanged and in reading order.
 
 ## Adding an entry
 
 Add one small article file `task-unit-queue-sections/<entry-id>.md`, named by an entry id that starts with letters (for example `entry-20261123-01.md`), with the frontmatter fields title, created, modified, version and description, then add one line for it at the end of this page: `- [Title](task-unit-queue-sections/entry-20261123-01.md) one sentence`. Never edit an existing article.
 
-## Articles
-
-- [Catalog 01](task-unit-queue-sections/catalog-01.md) - Task unit queue design to 12-the-daily
-- [Catalog 02](task-unit-queue-sections/catalog-02.md) - 12-the-daily to changelog-section
-
 ## Changelog
 
 - 0.39.0, 2026-11-23 - Split verbatim by split_doc.py into 45 articles and 2 catalog pages; --check EQUAL, sha256 7df4ea20c516; the unsplit 0.38.0 file is commit 6d019ade
+- 0.40.0, 2026-11-23 - Re-split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 7df4ea20c516; the 0.39.0 split is in git history.
+
+## Articles
+
+- [Catalog 01](task-unit-queue-sections/catalog-01.md) - Task unit queue design to 10-questions-put
+- [Catalog 02](task-unit-queue-sections/catalog-02.md) - day-20261031 to day-20261031
+- [Catalog 03](task-unit-queue-sections/catalog-03.md) - 12-the-daily to changelog-section
+- [Catalog 04](task-unit-queue-sections/catalog-04.md) - changelog-section to changelog-section

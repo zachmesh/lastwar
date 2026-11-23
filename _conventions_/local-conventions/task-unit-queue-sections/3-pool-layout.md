@@ -1,7 +1,7 @@
 ---
 title: 3. Pool layout
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
 sequence: 5
 description: queue_/ INDEX.md - the type index, points here unit-template.md - the unit file template inbox/ -

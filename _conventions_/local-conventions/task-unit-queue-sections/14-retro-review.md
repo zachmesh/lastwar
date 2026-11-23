@@ -1,9 +1,9 @@
 ---
 title: 14. Retro review mechanism
-created: 2026-11-23T08:37:05Z
-modified: 2026-11-23T08:37:05Z
+created: 2026-11-23T09:03:48Z
+modified: 2026-11-23T09:03:48Z
 version: 0.1.0
-sequence: 35
+sequence: 49
 description: The repository is the single source of truth (owner rule, 2026-10-31).
 ---
 ## 14. Retro review mechanism
