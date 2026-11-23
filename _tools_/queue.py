@@ -19,6 +19,11 @@ the tool from a stale working tree fails loudly instead of deciding
 on old behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for
 isolated /tmp fixture validation of a new tool version.
 
+Every unit carries a serves line (what it serves, one line). Plan, sync and sweep copy it from the
+roster entry in regulars.json (default upkeep); `enqueue` refuses a unit with none unless its regular is in
+the roster, which then supplies it; `validate` reports a live inbox unit without one as an error (sync only
+warns, so an untagged unit never stops the tick).
+
 They also refuse when this copy - or the pool it would decide on -
 sits under the system temp directory (issue #429): a pass worktree
 under /tmp can vanish mid-pass to the runtime's /tmp sweep, so a
@@ -613,6 +618,7 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
+DEFAULT_SERVES = "upkeep"      # what a roster regular serves unless its regulars.json entry says otherwise
 UPGRADE_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
 UPGRADE_MARKERS = ("upgrade", "growth-fill")
 
@@ -632,12 +638,24 @@ def _unit_warnings(rel, text):
     serves, so the executor and the planner can weigh it. Only live units (inbox and claimed) are looked at; a unit
     already done is history."""
     state = rel.split("/", 1)[0]
-    if state not in ("inbox", "claimed"):
+    if state != "claimed":                   # an inbox unit without serves is an error (_missing_serves), done is history
         return []
     fields, _ = parse_frontmatter(text)
     if is_upgrade_type(fields) and not str(fields.get("serves", "")).strip():
         return [f"{rel}: upgrade-type unit has no serves line (what it serves, one line; enqueue --serves TEXT)"]
     return []
+
+
+def _missing_serves(rel, text):
+    """The error for a live inbox unit with no serves line: enforcement of the tag, reported by validate (and
+    validate --ref), never by the integrity guard sync stops on."""
+    if rel.split("/", 1)[0] != "inbox" or not _frontmatter_top_keys(text)[1]:   # no frontmatter is already an integrity error
+        return []
+    fields, _ = parse_frontmatter(text)
+    if str(fields.get("serves", "")).strip():
+        return []
+    return [f"{rel}: live inbox unit has no serves line (enqueue --serves TEXT; roster regulars get serves: upkeep "
+            f"from regulars.json)"]
 
 
 def _validate_unit_text(rel, text):
@@ -672,7 +690,7 @@ def _validate_unit_text(rel, text):
     return problems
 
 
-def validate_pool(root, warnings=None):
+def validate_pool(root, warnings=None, tagging=None):
     """Pool-integrity problems in the unit files, as strings.
 
     A bad merge resolution that lands on the records branch used to
@@ -704,10 +722,12 @@ def validate_pool(root, warnings=None):
             problems.extend(_validate_unit_text(rel, text))
             if warnings is not None:
                 warnings.extend(_unit_warnings(rel, text))
+            if tagging is not None:
+                tagging.extend(_missing_serves(rel, text))
     return problems
 
 
-def validate_ref(root, ref, warnings=None):
+def validate_ref(root, ref, warnings=None, tagging=None):
     """Pool-integrity problems in the _queue_ tree at a git ref.
 
     Issue #661: merge dd865af64b ("Merge main into
@@ -776,16 +796,19 @@ def validate_ref(root, ref, warnings=None):
         problems.extend(_validate_unit_text(rel, shown.stdout))
         if warnings is not None:
             warnings.extend(_unit_warnings(rel, shown.stdout))
+        if tagging is not None:
+            tagging.extend(_missing_serves(rel, shown.stdout))
     return problems, None
 
 
 def cmd_validate(args):
-    warnings = []
+    warnings, tagging = [], []
     if getattr(args, "ref", ""):
-        problems, error = validate_ref(args.root, args.ref, warnings)
+        problems, error = validate_ref(args.root, args.ref, warnings, tagging)
         if error is not None:
             print(error, file=sys.stderr)
             return 2
+        problems = problems + tagging
         for warning in warnings:
             print(f"warning: {warning}")
         for problem in problems:
@@ -797,7 +820,7 @@ def cmd_validate(args):
             return 1
         print(f"pool valid at {args.ref}{note}")
         return 0
-    problems = validate_pool(args.root, warnings)
+    problems = validate_pool(args.root, warnings, tagging) + tagging
     for warning in warnings:
         print(f"warning: {warning}")
     for problem in problems:
@@ -1273,7 +1296,11 @@ def cmd_sync(args):
     # file used to stay silent until next handed out a phantom unit
     # claim could never find. Refuse to reap or stage anything on a
     # corrupt pool - repair the unit files and re-run.
-    problems = validate_pool(live)
+    untagged = []
+    problems = validate_pool(live, tagging=untagged)
+    if untagged:       # enforcement is validate's job: a missing serves line warns here and never stops the tick
+        print(f"warning: {len(untagged)} inbox unit(s) carry no serves line; validate reports them as errors "
+              f"(first: {untagged[0].split(':', 1)[0]})", file=sys.stderr)
     if problems:
         for problem in problems:
             print(problem, file=sys.stderr)
@@ -1950,6 +1977,7 @@ def _produce_for_window(root, item, planned_local, window="",
         "not_before": planned_iso if planned_utc > now_utc() else "",
         "window": window,
         "est_minutes": typical_minutes(root, regular)[0],
+        "serves": " ".join(str(item.get("serves") or DEFAULT_SERVES).split()),
         "chain_id": chain_id, "chain_seq": chain_seq, "attempts": 0,
         "max_attempts": DEFAULT_MAX_ATTEMPTS,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
@@ -3733,6 +3761,20 @@ def _chain_head_refusal(root, regular, chain_id, chain_seq):
     return None
 
 
+def _roster_serves(regular, defs_path):
+    """What the roster says a regular serves (DEFAULT_SERVES when its entry has no serves key); "" when the regular is not
+    in the roster or the roster cannot be read."""
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            items = json.load(fh).get("regulars", [])
+    except (OSError, ValueError):
+        return ""
+    for item in items:
+        if item.get("id") == regular:
+            return " ".join(str(item.get("serves") or DEFAULT_SERVES).split())
+    return ""
+
+
 def cmd_enqueue(args):
     # Live-pool production (issue #598): resolve the pool first,
     # before the wrong-root gate and before anything is read or
@@ -3772,6 +3814,17 @@ def cmd_enqueue(args):
     if getattr(args, "serves", "") and not serves:
         print("refused: --serves is empty text - say what the unit serves "
               "or leave the option out")
+        return 1
+    if not serves:
+        # A roster regular inherits what its regulars.json entry serves
+        # (upkeep unless the entry says otherwise), so the chain
+        # successors and fix-ups the scouts enqueue stay tagged; any
+        # other unit - a growth fill, a one-off - must say it.
+        serves = _roster_serves(args.regular, getattr(args, "regulars_json", "") or _default_regulars_path())
+    if not serves:
+        print(f"refused: a unit needs a serves line - pass --serves TEXT "
+              f"(what it serves, one line); roster regulars inherit it from "
+              f"regulars.json and {args.regular!r} is not in the roster")
         return 1
     # Unretirable-window refusal (issue #859): the design defines
     # an empty expires_at as "no deadline" (task-unit-queue-design.md

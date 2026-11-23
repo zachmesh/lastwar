@@ -77,7 +77,7 @@ class GuardCase(unittest.TestCase):
 
     def enqueue(self, repo=None, env=None):
         return self.run_queue(repo or self.live, "enqueue", "--regular", "daily-activities", "--activity", "daily-activities",
-                              "--est-minutes", "5", env=env)
+                              "--est-minutes", "5", "--serves", "upkeep", env=env)
 
 
 class States(GuardCase):
