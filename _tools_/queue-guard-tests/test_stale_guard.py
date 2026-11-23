@@ -112,6 +112,7 @@ class States(GuardCase):
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
         self.assertIn("enqueue refused", r.stderr)
         self.assertIn("not ahead of it", r.stderr)
+        self.assertIn("_tools_/tool-sync/tool_sync.py", r.stderr)                        # the refusal names the fix
         self.assertEqual(list((self.live / "_queue_" / "inbox").glob("*.md")), [])      # nothing was queued
 
     def test_diverged_is_refused(self):
@@ -121,6 +122,7 @@ class States(GuardCase):
         r = self.enqueue()
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
         self.assertIn("histories diverged", r.stderr)
+        self.assertIn("_tools_/tool-sync/tool_sync.py", r.stderr)
 
     def test_a_live_copy_that_pulls_the_newer_main_runs_again(self):
         self.commit(self.other, "landed")
