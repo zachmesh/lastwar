@@ -54,9 +54,12 @@ outside a bridge run (a bridge run needs none) is `node <computer-use checkout>/
 --seat cu-lastwar --minutes N --reason "<run id>" [--wait-free SECONDS]` and `... release --seat cu-lastwar` in an EXIT trap (exit 0
 done, 1 refused, 2 usage, 3 held but busy: release if you give up); `status` reads it, and `lock` here wraps that.
 
-OWNER-IDLE WAIT (rule D-066, CU-191): the computer-use server makes every synthetic input wait for 300 s without local input. The bridge
-passes CU_OWNER_IDLE_SECONDS through from its own environment and sets no default, so the wait applies unless the owner exports
-CU_OWNER_IDLE_SECONDS=0 (or 1 to 300) for the daemon. The MCP child reads it once at import, so a change takes effect only after
+OWNER-IDLE WAIT (rule D-066, CU-191): the computer-use lock makes every synthetic input wait for 300 s without local input. The effective
+value is read from, in order: CU_OWNER_IDLE_SECONDS in the daemon's own environment (source: env); the LAUNCHER setting in this file,
+LAUNCHER_OWNER_IDLE_SECONDS (source: launcher; OD-20261123-27 sets it to 0 until the lock stops counting the harness's own clicks, CU-720, then it
+returns to 300: change that one line to None); else nothing is set and the lock's own default of 300 applies (source: default). The
+daemon prints `owner_idle_seconds=N (source: ...)` when it starts (`ensure` and `restart` repeat it) and `status` and `runs` show the
+daemon's own value, so any session reads what is in force. The MCP child reads it once at import: a change takes effect only after
 `cu_bridge.py restart`, run between runs with no run or hold of ours live (`lock` shows it).
 
 Exit codes: 0 ok, 1 refused or failed, 2 usage or environment error.
@@ -108,6 +111,33 @@ SEAT_PATTERN = re.compile(r"^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$")      # the compute
 RUN_LOCK_DIR = Path(os.environ.get("CU_RUN_LOCK_DIR", "/tmp/cu-desktop-run"))
 DEFAULT_APP = os.environ.get("CU_APP", "com.lastwar.ios")
 NODE = os.environ.get("CU_NODE_BIN") or shutil.which("node") or ""
+# OWNER-IDLE LAUNCH SETTING (OD-20261123-27). The owner decided on 2026-11-23 that the owner-idle wait for bridge runs is 0 seconds for now: the lock
+# counts the harness's own last click as local input, which cost about 28 percent of the available minutes. The target is 300 s AGAIN when CU-720 (the
+# lock stops counting our own input) is on our computer-use tree. This ONE line is where the setting lives and where it is restored: set it to None to
+# hand the wait back to the computer-use default (300). An explicit CU_OWNER_IDLE_SECONDS in the daemon's own environment still wins and is reported.
+LAUNCHER_OWNER_IDLE_SECONDS = 0
+
+def effective_owner_idle(environ=None) -> tuple[int, str, str]:
+    """(seconds in force, source, note): env when the daemon's environment names CU_OWNER_IDLE_SECONDS, else launcher when LAUNCHER_OWNER_IDLE_SECONDS
+    is set, else default (nothing set: the lock's own 300). The lock ignores a value outside 0 to 300 and uses 300; the note says so."""
+    environ = os.environ if environ is None else environ
+    if "CU_OWNER_IDLE_SECONDS" in environ:
+        raw = environ["CU_OWNER_IDLE_SECONDS"]
+        try:
+            number = float(raw)
+        except ValueError:
+            number = -1
+        if 0 <= number <= 300:
+            return int(number), "env", ""
+        return 300, "env", f"CU_OWNER_IDLE_SECONDS={raw!r} is outside 0 to 300, so the lock uses 300"
+    if LAUNCHER_OWNER_IDLE_SECONDS is not None:
+        return int(LAUNCHER_OWNER_IDLE_SECONDS), "launcher", ""
+    return 300, "default", ""
+
+
+def owner_idle_line(seconds, source, note: str = "") -> str:
+    return f"owner_idle_seconds={seconds} (source: {source})" + (f" - {note}" if note else "")
+
 
 MAX_WAIT = 50
 
@@ -245,7 +275,8 @@ def _daemon_info(pid: int) -> dict:
             break
     return {"pid": pid, "alive": _pid_alive(pid), "reachable": reachable, "orphan": _pid_alive(pid) and not reachable,
             "registered": bool(registry), "mcp_pid": registry.get("mcp_pid"), "started_at": registry.get("started_at"),
-            "socket": str(sock)}
+            "owner_idle_seconds": registry.get("owner_idle_seconds"), "owner_idle_source": registry.get("owner_idle_source"),
+            "owner_idle_note": registry.get("owner_idle_note") or "", "socket": str(sock)}
 
 
 def _daemons() -> list[dict]:
@@ -337,10 +368,11 @@ class McpClient:
         env.pop("NODE_PATH", None)
         env.pop("NODE_OPTIONS", None)
         env.pop("DYLD_INSERT_LIBRARIES", None)
-        # CU_OWNER_IDLE_SECONDS is passed through from this process's own environment and NEVER defaulted here: the computer-use
-        # owner-idle wait (300 s without local input before synthetic input, rule D-066, CU-191) applies until the owner decides
-        # otherwise (CU-721). To opt a Mac out for bridge runs the owner sets CU_OWNER_IDLE_SECONDS=0 in the daemon's environment
-        # (it is read once at import: restart the daemon, between runs). A tree whose run-lock does not read the variable ignores it.
+        # The owner-idle wait (D-066): the launcher setting is put into the server's environment unless the daemon's own environment already names the
+        # variable (see LAUNCHER_OWNER_IDLE_SECONDS at the top of this file); the effective value is kept for the start line and the info file.
+        self.owner_idle = effective_owner_idle(env)
+        if self.owner_idle[1] == "launcher":
+            env["CU_OWNER_IDLE_SECONDS"] = str(self.owner_idle[0])
         self.log = open(MCP_LOG, "a", encoding="utf-8")
         self.proc = subprocess.Popen(
             [NODE, str(SERVER), "--seat", SEAT, "--key-file", str(KEY_FILE)],
@@ -535,8 +567,11 @@ def serve(replace: bool = False) -> int:
         server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         server.bind(str(sock_path))
         server.listen(8)
-        _info_for(me).write_text(json.dumps({"pid": me, "socket": str(sock_path), "mcp_pid": mcp.proc.pid,
-                                             "started_at": _now()}) + "\n")
+        idle_seconds, idle_source, idle_note = mcp.owner_idle
+        _info_for(me).write_text(json.dumps({"pid": me, "socket": str(sock_path), "mcp_pid": mcp.proc.pid, "started_at": _now(),
+                                             "owner_idle_seconds": idle_seconds, "owner_idle_source": idle_source,
+                                             "owner_idle_note": idle_note}) + "\n")
+        print(f"cu_bridge: {owner_idle_line(idle_seconds, idle_source, idle_note)}", flush=True)       # the daemon's start line, in its log
         tmp_link = SOCKET_PATH.with_name(".cu_bridge.sock.new")
         try:
             tmp_link.unlink()
@@ -813,10 +848,15 @@ def cmd_status(args: argparse.Namespace) -> int:
     except json.JSONDecodeError:
         pass
     note = _question_note(body, run_id)
-    if note and isinstance(body, dict):
-        body["bridge_note"] = note
+    match = re.search(r"cu_bridge-(\d+)\.sock$", str(sock))
+    idle_line = daemon_idle_line(int(match.group(1)) if match else None)         # the value in force in the daemon that owns this run
+    print(f"cu_bridge: {idle_line}", file=sys.stderr)
+    if isinstance(body, dict):
+        body["bridge_owner_idle"] = idle_line
+        if note:
+            body["bridge_note"] = note
+            print(f"cu_bridge: {note}", file=sys.stderr)
         text = json.dumps(body, indent=2)
-        print(f"cu_bridge: {note}", file=sys.stderr)
     print(text)
     if image:
         target = Path(args.image) if args.image else LAST_IMAGE
@@ -911,9 +951,19 @@ def cmd_runs(_args: argparse.Namespace) -> int:
     return 0
 
 
+def daemon_idle_line(pid) -> str:
+    """The owner-idle value in force in a running daemon, from its own info file (a daemon older than this field says so)."""
+    info = _daemon_info(pid) if pid else {}
+    if info.get("owner_idle_seconds") is None:
+        return "owner_idle_seconds=unknown (source: unknown) - this daemon started before the bridge recorded it; restart it between runs"
+    return owner_idle_line(info["owner_idle_seconds"], info.get("owner_idle_source") or "unknown", info.get("owner_idle_note") or "")
+
+
 def cmd_ensure(_args: argparse.Namespace) -> int:
     got = _ensure_daemon()
-    print(json.dumps({"ok": True, "socket": str(SOCKET_PATH), "pid": got["pid"], "started": got["started"]}))
+    line = daemon_idle_line(got["pid"])
+    print(f"cu_bridge: {line}", file=sys.stderr)
+    print(json.dumps({"ok": True, "socket": str(SOCKET_PATH), "pid": got["pid"], "started": got["started"], "owner_idle": line}))
     return 0
 
 
@@ -924,7 +974,9 @@ def cmd_restart(_args: argparse.Namespace) -> int:
         ended.append(_end_daemon(pid))
         _mark_runs_of(pid, "lost", f"daemon {pid} was restarted")
     got = _ensure_daemon()
-    print(json.dumps({"ok": True, "ended": ended, "started": got["pid"]}))
+    line = daemon_idle_line(got["pid"])
+    print(f"cu_bridge: {line}", file=sys.stderr)
+    print(json.dumps({"ok": True, "ended": ended, "started": got["pid"], "owner_idle": line}))
     return 0
 
 
