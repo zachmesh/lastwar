@@ -12,9 +12,6 @@ _records_/2026-11-22/mail-rewards/2028-queue-run.md
 _records_/2026-11-22/troop-training/2017-queue-run.md
 _records_/2026-11-22/alliance-donations/2013-queue-run.md
 _records_/2026-11-22/survivor-intake/2003-queue-run.md
-# Append-only registers over the limit - temporary, remove each line when its split lands (IMP-20261123-03). Exact paths.
-_records_/retro/owner-decisions.md
-_records_/retro/improvements.md
 # Optional lever, off by default: exempt folders from the missing-INDEX.md check, one `folder GLOB` per line, for example
 # the records activity folders that carry no INDEX.md (an owner decision). A new folder then no longer blocks a commit.
 # folder _records_/*/*
