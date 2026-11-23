@@ -23,8 +23,8 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "1.0.0"
-ARTICLE_LIMIT, INDEX_LIMIT, CATALOG_BUDGET = 450, 300, 360
+VERSION = "1.1.0"
+ARTICLE_LIMIT, INDEX_LIMIT, CATALOG_BUDGET, HEADROOM = 450, 300, 360, 60
 TARGETS = (440, 420, 380, 320, 250)        # packing targets, tried in turn until every real count is within the limit
 NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+){1,3}$")
 FENCE = re.compile(r"^ {0,3}(`{3,}|~{3,})")
@@ -271,17 +271,18 @@ def entry_line(file: str, title: str, sentence: str, cap: int) -> str:
     return f"- [{t}]({file})" + (f" - {s}" if s else "") + "\n"
 
 
-def fit_page(entries: list[tuple], budget: int, counter: Counter) -> str | None:
-    for cap in (14, 10, 6):   # never a titles-only page: paginate instead
+def fit_page(entries: list[tuple], budget: int, counter: Counter, caps=(14, 10, 6)) -> str | None:
+    for cap in caps:   # an INDEX is never titles-only: it paginates instead; an entry page may be
         text = "".join(entry_line(f, t, s, cap) for f, t, s in entries)
         if counter.words(text) <= budget:
             return text
     return None
 
 
-def layout(entries: list[tuple], budget: int, counter: Counter, now: str, doc_title: str) -> tuple[str, dict]:
+def layout(entries: list[tuple], budget: int, counter: Counter, now: str, doc_title: str,
+           back: tuple = ("index", "INDEX.md"), top_caps=(14, 10, 6)) -> tuple[str, dict]:
     """The entry lines for INDEX.md within `budget` words and, when they do not fit, the catalog pages below it."""
-    text = fit_page(entries, budget, counter)
+    text = fit_page(entries, budget, counter, top_caps)
     if text is not None:
         return text, {}
     pages, level = {}, entries
@@ -297,11 +298,11 @@ def layout(entries: list[tuple], budget: int, counter: Counter, now: str, doc_ti
         for n, g in enumerate(groups, 1):
             name, title = f"{prefix}-{n:02d}.md", f"{prefix.title()} {n:02d}"
             body = (f"\n# {title}\n\n{len(g)} entries of {plain(doc_title)}, from {g[0][1]} to {g[-1][1]}. "
-                    f"Back to the [index](INDEX.md).\n\n" + fit_page(g, CATALOG_BUDGET, counter))
+                    f"Back to the [{back[0]}]({back[1]}).\n\n" + fit_page(g, CATALOG_BUDGET, counter))
             pages[name] = front(title, f"{title} of the split {plain(doc_title)}", now, "1.0.0") + body
             upper.append((name, title, f"{g[0][1]} to {g[-1][1]}"))
         level = upper
-        text = fit_page(level, budget, counter)
+        text = fit_page(level, budget, counter, top_caps)
         if text is not None:
             return text, pages
     raise Refused("the document has too many articles for three index levels")
@@ -320,9 +321,11 @@ class Plan:
         self.body = ""
         self.target = 0
         self.index_words = 0
+        self.entry: tuple[str, str] | None = None   # --keep-entry: (the original file name, the generated entry page)
 
 
-def build(original: str, stem: str, counter: Counter, now: str) -> Plan:
+def build(original: str, stem: str, counter: Counter, now: str, keep: str | None = None, doc_name: str = "",
+          example: str = "entry-20261123-01") -> Plan:
     plan = Plan()
     frontmatter, body = split_frontmatter(original)
     plan.body = body
@@ -340,13 +343,6 @@ def build(original: str, stem: str, counter: Counter, now: str) -> Plan:
         (plain(HEADING.match(l.rstrip("\r\n")).group(2)) for l in body.splitlines() if HEADING.match(l)), stem)
     full = plain(field(frontmatter, "description") or "")
     summary = " ".join(full.split()[:25]) + ("..." if len(full.split()) > 25 else ".") if full else ""
-    intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This document was split verbatim into {len(slices)} "
-             f"articles in reading order, numbered from 001; nothing was rewritten, and `split_doc.py --check` "
-             f"rebuilds the original body from them. Find an entry by its heading; each line gives the heading and "
-             f"its first sentence.\n\n")
-    budget = INDEX_LIMIT - counter.words(intro) - 8
-    lines, pages = layout(entries, budget, counter, now, doc_title)
-    plan.files += list(pages.items())
     version = bump_minor(field(frontmatter, "version"))
     if frontmatter:
         fm = frontmatter
@@ -355,13 +351,42 @@ def build(original: str, stem: str, counter: Counter, now: str) -> Plan:
         fm = re.sub(r"(?m)^modified:.*$", f"modified: {now}", fm, count=1) if field(fm, "modified") is not None else fm
     else:
         fm = front(doc_title, summary or f"Split from {stem}", now, "0.1.0")
+    if keep:
+        howto = (f"## Adding an entry\n\nAdd one small article file `{keep}/<entry-id>.md`, named by an entry id that starts "
+                 f"with letters (for example `{example}.md`), with the frontmatter fields title, created, modified, version "
+                 f"and description, then add one line for it at the end of this page: `- [Title]({keep}/{example}.md) one "
+                 f"sentence`. Never edit an existing article.\n\n")
+        intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This register stays at this path as an entry page; "
+                 f"its text was split verbatim into {len(slices)} articles in [{keep}]({keep}/INDEX.md), unchanged and in "
+                 f"reading order.\n\n{howto}## Articles\n\n")
+        budget = INDEX_LIMIT - counter.words(intro) - HEADROOM - 8     # headroom: room for the lines added later
+        lines, pages = layout(entries, budget, counter, now, doc_title, back=("register page", f"../{doc_name}"),
+                              top_caps=(14, 10, 6, 0))
+        lines = re.sub(r"\]\(([^)]+\.md)\)", lambda m: f"]({keep}/{m.group(1)})", lines)
+        plan.files += list(pages.items())
+        plan.entry = (doc_name, fm + intro + lines)
+        plan.index_words = counter.file_words(plan.entry[1])
+        shown = plain(doc_title)
+        plan.files.append(("INDEX.md", front(f"{shown} log", f"Articles of the {shown} register, split verbatim; the register "
+                                             f"page lists them", now, "1.0.0") +
+                           f"\n# {shown} log\n\nThe articles of [{shown}](../{doc_name}), split verbatim from the "
+                           f"original in reading order. The register page lists every article and says how to add one; "
+                           f"later entries are single files named by entry id, for example `{example}.md`.\n"))
+        return plan
+    intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This document was split verbatim into {len(slices)} "
+             f"articles in reading order, numbered from 001; nothing was rewritten, and `split_doc.py --check` "
+             f"rebuilds the original body from them. Find an entry by its heading; each line gives the heading and "
+             f"its first sentence.\n\n")
+    budget = INDEX_LIMIT - counter.words(intro) - 8
+    lines, pages = layout(entries, budget, counter, now, doc_title)
+    plan.files += list(pages.items())
     index = fm + intro + lines
     plan.index_words = counter.file_words(index)
     plan.files.append(("INDEX.md", index))
     return plan
 
 
-def verify(plan: Plan, counter: Counter, written: dict[str, str] | None = None) -> list[str]:
+def verify(plan: Plan, counter: Counter, written: dict[str, str] | None = None, written_entry: str | None = None) -> list[str]:
     """Problems found re-reading the files (as rendered, or as written): empty when the proof holds."""
     texts = dict(written if written is not None else plan.files)
     problems, joined = [], ""
@@ -378,6 +403,15 @@ def verify(plan: Plan, counter: Counter, written: dict[str, str] | None = None) 
             problems.append(f"{name}: {words} words, limit {limit}")
     if len(texts) != len(plan.files):
         problems.append("file count differs from the plan")
+    if plan.entry:
+        entry = written_entry if written_entry is not None else plan.entry[1]
+        words = counter.file_words(entry)
+        if words > INDEX_LIMIT:
+            problems.append(f"entry page {plan.entry[0]}: {words} words, limit {INDEX_LIMIT}")
+        prose = re.sub(r"`[^`]*`", "", split_frontmatter(entry)[1])      # an example link in code is no link
+        for target in re.findall(r"\]\(([^)#]+)\)", prose):
+            if "/" in target and target.split("/", 1)[1] not in texts:
+                problems.append(f"entry page links to a missing file: {target}")
     return problems
 
 
@@ -412,24 +446,35 @@ def process(path: Path, args, counter: Counter) -> int:
     original = path.read_bytes().decode("utf-8")
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     is_index = path.name == "INDEX.md"
-    folder = path.parent if is_index else path.with_suffix("")
+    keep = args.keep_entry
+    if keep:
+        if is_index:
+            raise Refused(f"{path}: --keep-entry applies to a single-file document, not INDEX.md")
+        if not NAME.match(keep) or keep == path.stem:
+            raise Refused(f"--keep-entry {keep!r}: a kebab-case name of 2 to 4 words, different from {path.stem!r}")
+    folder = (path.parent / keep) if keep else (path.parent if is_index else path.with_suffix(""))
     stem = path.parent.name if is_index else path.stem
-    plan = build(original, stem, counter, now)
+    plan = build(original, stem, counter, now, keep, path.name, args.entry_example)
     problems = verify(plan, counter) if (args.verify or args.apply) else []
     sizes = [counter.file_words(t) for n, t in plan.files if n in plan.articles]
     original_words = counter.m.count_words(original)
     pages = len(plan.files) - len(plan.articles) - 1
+    label = f"entry page {path.name}" if keep else "INDEX.md"
     verdict = "not run (pass --verify)" if not (args.verify or args.apply) else ("FAIL: " + "; ".join(problems) if problems else
               f"PASS, article bodies rebuild the original body byte for byte (sha256 {hashlib.sha256(plan.body.encode()).hexdigest()[:12]})")
     print(f"{path}: {original_words:,} body words -> {len(plan.articles)} articles (max {max(sizes)} words, packed to {plan.target}), "
-          f"INDEX.md {plan.index_words} words, {pages} catalog page(s); target folder {folder}")
+          f"{label} {plan.index_words} words, {pages} catalog page(s); target folder {folder}")
     print(f"  verify: {verdict}")
     refs = inbound_references(repo_top(path), path)
-    if refs:
+    if keep:
+        print(f"  --keep-entry: {path.name} stays as the entry page, so the {len(refs)} file(s) citing it keep working")
+    elif refs:
         print(f"  inbound references to {path.parent.name}/{path.name} in {len(refs)} file(s), first {refs[:5]}; they need updating after the move")
     if is_index:
         print("  INDEX.md keeps its path; links to headings inside it may break")
     if args.list:
+        if plan.entry:
+            print(f"    {counter.file_words(plan.entry[1]):4d}  {plan.entry[0]} (entry page)")
         for name, text in plan.files:
             print(f"    {counter.file_words(text):4d}  {name}")
     if problems:
@@ -449,11 +494,16 @@ def apply(path: Path, folder: Path, is_index: bool, plan: Plan, counter: Counter
             raise Refused(f"{folder}: would overwrite {clash[0]}; nothing written")
     staging = Path(tempfile.mkdtemp(prefix=".split-doc-", dir=path.parent))
     os.chmod(staging, 0o755)
+    entry_tmp = path.with_name(f".{path.name}.split-doc-new") if plan.entry else None
     try:
         for name, text in plan.files:
             (staging / name).write_bytes(text.encode("utf-8"))
         written = {n: (staging / n).read_bytes().decode("utf-8") for n, _ in plan.files}
-        problems = verify(plan, counter, written)
+        written_entry = None
+        if entry_tmp:
+            entry_tmp.write_bytes(plan.entry[1].encode("utf-8"))
+            written_entry = entry_tmp.read_bytes().decode("utf-8")
+        problems = verify(plan, counter, written, written_entry)
         if problems:
             print("  verify after writing: FAIL: " + "; ".join(problems))
             return 1
@@ -465,11 +515,18 @@ def apply(path: Path, folder: Path, is_index: bool, plan: Plan, counter: Counter
         else:
             os.rename(staging, folder)
             staging = None
-            os.remove(path)
+            if entry_tmp:
+                os.replace(entry_tmp, path)     # the original path becomes the generated entry page
+                entry_tmp = None
+            else:
+                os.remove(path)
     finally:
         if staging is not None:
             shutil.rmtree(staging, ignore_errors=True)
-    print(f"  applied: {len(plan.files)} files in {folder}; verified from disk; original {'replaced' if is_index else 'removed'}")
+        if entry_tmp is not None and entry_tmp.exists():
+            entry_tmp.unlink()
+    what = "kept as the entry page" if plan.entry else ("replaced" if is_index else "removed")
+    print(f"  applied: {len(plan.files)} files in {folder}; verified from disk; original {what}")
     return 0
 
 
@@ -490,6 +547,9 @@ def main(argv=None) -> int:
     p.add_argument("--apply", action="store_true", help="write the folder and remove the original (default: dry run)")
     p.add_argument("--verify", action="store_true", help="prove the planned bodies rebuild the original byte for byte")
     p.add_argument("--list", action="store_true", help="list every planned file with its word count")
+    p.add_argument("--keep-entry", metavar="LOGDIR", help="keep the original path as a small entry page and put the articles in "
+                   "the sibling folder LOGDIR (kebab-case, 2 to 4 words), so no reference to the path breaks")
+    p.add_argument("--entry-example", default="entry-20261123-01", help="an example entry id shown in the entry page (default %(default)s)")
     p.add_argument("--check", nargs=2, metavar=("FOLDER", "ORIGINAL"), help="verify an applied split against a copy of the original")
     p.add_argument("--reflection", help="the reflection checkout (default ~/dtadpole/reflection or LINT_GATE_REFLECTION)")
     args = p.parse_args(argv)
@@ -499,6 +559,8 @@ def main(argv=None) -> int:
             return check_folder(Path(args.check[0]), Path(args.check[1]), counter)
         if not args.paths:
             p.error("name at least one document")
+        if args.keep_entry and len(args.paths) != 1:
+            p.error("--keep-entry takes exactly one document")
         worst = 0
         for name in args.paths:
             try:
