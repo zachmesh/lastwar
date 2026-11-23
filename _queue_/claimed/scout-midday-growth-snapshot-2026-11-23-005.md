@@ -13,11 +13,11 @@ est_minutes: 8
 serves: snapshot (Story 868)
 chain_id: growth-snapshot-2026-11-23
 chain_seq: 5
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-23T11:01:29Z
+lease_until: 2026-11-23T11:21:29Z
 ---
 
 # scout-midday
@@ -38,4 +38,5 @@ Budget: at most 8 steps and 8 minutes. Notes: Never tap the green arrow here (pr
 
 Rules: stop rules R1 to R7 in `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md`; red lines and the snap command in `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. Snap takes only K or M numbers: write 1.1G as 1100M. Do not enqueue a chain successor.
 
+Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

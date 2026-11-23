@@ -30,7 +30,7 @@ serves: baseline (fixed-state Total Power)
 
 Read-only unit for the coach, window 13:00Z to 15:00Z. Rules and red lines: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md` and stop rules R1 to R7 in `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md`; never press Power Up, Train, requeue, Claim or Complete.
 
-COLLECT FIRST, because troops count only when collected. Read Total Power on the HUD with its decimals. Collect every finished barracks batch (tap its bubble or tent); read Total Power after each. Then press the Hospital Collect exactly ONCE, the one read per day: it is all-or-nothing and needs at least 5,306 free slots at once. On 2026-11-23 at 08:00Z it failed with 'Drill Ground Full: Unable to add 5306 units'; if the toast appears, write it verbatim with the number and the time and stop. Never retry it. The green arrow on a barracks is the building Upgrade: never press it. Collecting is the only exception to R1.
+COLLECT FIRST, because troops count only when collected. Read Total Power on the HUD with its decimals. Collect every finished barracks batch (tap its bubble or tent); read Total Power after each. Then press the Hospital Collect exactly ONCE, the one read per day: it is all-or-nothing and needs at least 5,306 free slots at once. At 08:00Z it failed with 'Drill Ground Full: Unable to add 5306 units'; if the toast appears, write it verbatim with the time and stop. Never retry. The green arrow on a barracks is the building Upgrade: never press it. Collecting is the only exception to R1.
 
 Then open Power Details: tap the HUD figure once, expand every chevron, swipe up with a screenshot after each scroll, close with X. Record Total Power and EVERY category and sub-row including tech and troop, the UTC time to the second, and whether troops are marching or wounded.
 
@@ -40,4 +40,7 @@ Slot B, 2026-11-23: no batch is due yet (Lv.27 T9 x726 about 19:56Z, Lv.30 T10 x
 
 At most 8 steps and 10 minutes. Do not enqueue a chain successor.
 
+Barracks taps (base map `_records_/2026-11-22/growth/1030-base-map.md`, fresh frame): Lv.27 (462,585), Lv.30 (530,637), Lv.24 (628,562), Lv.20 (668,535); the pistol is the middle button under the tag; a portrait bubble may be the Hospital. Close menus with an empty-ground tap (200,610); never tap WORLD (660,940) with a menu open low.
+
+Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

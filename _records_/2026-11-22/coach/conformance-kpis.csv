@@ -20,3 +20,4 @@ conf-1,2026-11-23T08:36Z,"e1 power gain per day, drone",2026-11-08 to 11-22,2291
 conf-1,2026-11-23T08:36Z,"e1 power gain per day, building",2026-11-08 to 11-22,-37271,,per day,"includes the 641,100 step of 11-08"
 conf-1,2026-11-23T08:36Z,"e1 power gain per day, unit plus tech",2026-11-08 to 11-22,-6020,,per day,
 conf-1,2026-11-23T08:36Z,e2 collect-first fixed-state reads,since restart,0,1,0 of 1,slot A 03:55Z unfixed; slot B pending
+conf-1b,2026-11-23T10:57Z,g building-read rows carrying their tag text,12 growth CSVs,26,67,39%,name-and-level proxy; target 100 percent; rows without it are [G]

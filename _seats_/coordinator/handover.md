@@ -1,7 +1,7 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T10:08:00Z
+modified: 2026-11-23T10:56:00Z
 level: L2
 version: 0.9.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
@@ -34,7 +34,7 @@ Strategy v2.0 (the Strategist owns it, forecast ledger exists). Coin is not the 
 
 ## Landings (Integrator; branch names, never push local main)
 
-Merged: 873, 875 to 878, 880. Queue: serves-enforce (879), next-skips-expired, doc-budget-on-origin, integrator-wrapper, strategy-conformance, strategist-health. The tick runs `_tools_/tool-sync/tool_sync.py` first (silent when equal): the stale-tool guard refuses `next` when queue.py is behind origin's. Origin cannot be merged into local main (246 conflicts): records land as snapshots after the scribe's branches, excluding `_activities_`.
+Local main equals origin plus my unlanded commits (converged 10:36Z; backup ref `refs/backup/main-before-converge-*`). Deliver: stage explicit paths, commit, `git branch land/records-<UTC> HEAD`, verify in a CLEAN worktree (`check --base origin/main`; the live tree has untracked files that give false findings), whole-tree scan with `/tmp/lw-scan-branch.py` (git archive, wrap-aware), hand the branch name to the Integrator; after each merge: `git fetch && git rebase --autostash origin/main`. The tick runs `_tools_/tool-sync/tool_sync.py` first (the stale-tool guard refuses `next` when queue.py is behind origin's). Never merge origin into this checkout (it was 246 conflicts; no longer needed).
 
 ## Open owner decisions
 
