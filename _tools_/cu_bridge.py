@@ -25,6 +25,10 @@ Commands:
                                 that owns it; save the final screenshot when
                                 one is returned. Always lists every daemon
                                 (reachable, orphan) and every recorded run.
+  respond --run-id ID --question-id QID --answer TEXT
+                                Answer a question the agent asked (status shows it as `question` and as a bridge_note).
+                                Questions only: consent and take-over stay human-only. A question left unanswered for 15
+                                minutes ends the run as `needs_input`, which status now reports as a question, not a timeout.
   control --run-id ID --command pause|resume|stop|guide [--text TEXT]
                                 Send a caller command to the owning daemon;
                                 `stop` ends an unreachable owner and its MCP
@@ -798,20 +802,71 @@ def cmd_status(args: argparse.Namespace) -> int:
     if not reply.get("ok"):
         _die(f"status refused: {reply.get('error')}", 1)
     text, image = _content_text(reply["result"])
+    body = None
+    try:
+        body = json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    note = _question_note(body, run_id)
+    if note and isinstance(body, dict):
+        body["bridge_note"] = note
+        text = json.dumps(body, indent=2)
+        print(f"cu_bridge: {note}", file=sys.stderr)
     print(text)
     if image:
         target = Path(args.image) if args.image else LAST_IMAGE
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(image)
         print(f"\nfinal image: {target}")
-    state = ""
-    try:
-        state = json.loads(text).get("state", "")
-    except json.JSONDecodeError:
-        pass
+    state = body.get("state", "") if isinstance(body, dict) else ""
     if state:
-        _update_run(run_id, state=state, last_text=text[:500])
+        fields = {"state": state, "last_text": text[:500]}
+        question = (body.get("question") or {}) if isinstance(body, dict) else {}
+        result = (body.get("result") or {}) if isinstance(body, dict) else {}
+        if question:
+            fields.update(question_id=question.get("question_id", ""), question=str(question.get("text", ""))[:300], ended_on_question=False)
+        elif result.get("status") == "needs_input":
+            fields.update(question_id="", question=str(result.get("finalMessage") or "")[:300], ended_on_question=True)
+        else:
+            fields.update(question_id="", question="", ended_on_question=False)
+        _update_run(run_id, **fields)
     print(json.dumps({"bridge": _listing()}, indent=2))
+    return 0
+
+
+def _question_note(body, run_id: str) -> str:
+    """A line for a run that waits on a question, or that ended on one (status needs_input), else empty. The question text is the
+    model's own words about the task, never a secret; the answer command is spelled out."""
+    if not isinstance(body, dict):
+        return ""
+    question = body.get("question") or {}
+    if question.get("question_id"):
+        return (f"QUESTION PENDING in run {run_id}: {str(question.get('text', ''))[:300]!r}. Answer it within 15 minutes or the run ends "
+                f"on it: cu_bridge.py respond --run-id {run_id} --question-id {question['question_id']} --answer '<answer>'")
+    result = body.get("result") or {}
+    if body.get("state") == "finished" and result.get("status") == "needs_input":
+        return (f"RUN {run_id} ENDED ON A QUESTION (needs_input), not a timeout: {str(result.get('finalMessage') or '')[:300]!r}. "
+                f"Nothing answered it. Start a new run with the answer in the task text, or say 'never ask' in the task.")
+    return ""
+
+
+def cmd_respond(args: argparse.Namespace) -> int:
+    if not args.answer.strip():
+        _die("respond needs a non-empty --answer", 2)
+    sock, _note = _route(args.run_id)
+    reply = _send(
+        {"cmd": "call", "name": "computer_use_respond",
+         "arguments": {"run_id": args.run_id, "question_id": args.question_id, "answer": args.answer}, "timeout": 30},
+        timeout=40,
+        sock=sock,
+    )
+    if not reply.get("ok"):
+        _die(f"respond refused: {reply.get('error')}", 1)
+    text, _ = _content_text(reply["result"])
+    if reply["result"].get("isError"):
+        _die(f"respond refused: {text[:400]}", 1)
+    _update_run(args.run_id, question_id="", question="", answered_at=_now())
+    print(text)
     return 0
 
 
@@ -913,6 +968,11 @@ def build_parser() -> argparse.ArgumentParser:
     status.add_argument("--image", default="")
     status.set_defaults(func=cmd_status)
 
+    respond = sub.add_parser("respond", help="answer a question the agent asked (questions only; never consent)")
+    respond.add_argument("--run-id", required=True)
+    respond.add_argument("--question-id", required=True)
+    respond.add_argument("--answer", required=True)
+    respond.set_defaults(func=cmd_respond)
     control = sub.add_parser("control", help="pause, resume, stop or guide a run")
     control.add_argument("--run-id", required=True)
     control.add_argument("--command", required=True, choices=["pause", "resume", "stop", "guide"])
