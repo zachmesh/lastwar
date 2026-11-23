@@ -1,8 +1,8 @@
 ---
 title: 9. Tool - _tools_/scout_diff.py (Phase 2, implemented) part 2
 created: 2026-11-23T09:03:33Z
-modified: 2026-11-23T09:03:33Z
-version: 0.1.0
+modified: 2026-11-23T13:46:17Z
+version: 0.2.0
 sequence: 27
 description: The observation is the day observation file, or any file in the same shape - a
 ---
@@ -33,3 +33,4 @@ description: The observation is the day observation file, or any file in the sam
 
 **Inputs**
 
+2026-11-23: with coordination.queue.require_forecast on, enqueue, plan, sweep and sync refuse a unit whose serves is not a ledger plan item or one of upkeep, snapshot, baseline, fill idle slot; --no-require-forecast is the emergency override.

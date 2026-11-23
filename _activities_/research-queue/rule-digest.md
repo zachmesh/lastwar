@@ -1,9 +1,9 @@
 ---
 title: Research Queue Rule Digest
 created: 2026-11-23T06:46:30Z
-modified: 2026-11-23T09:56:00Z
+modified: 2026-11-23T13:46:17Z
 level: L1
-version: 0.4.0
+version: 0.5.0
 description: The standing rules an operator must follow when checking and completing research, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -22,20 +22,12 @@ grounded_in:
 7. Speed Up is read, never tapped (_records_/2026-11-22/research-queue/1010-queue-run.md).
 8. Bottom-bar taps are passive readouts (how-it-is-p1).
 
-Unverified: whether the flask tap lands on the list panel or the tree, which varies by session; tap points measured by ticker units, not the current bridge (how-it-is-p1).
-
-## Errata
-
-Unverified until a live read settles each. Articles stay verbatim; the newer one governs.
-
-- day-20261025-p1 "both slots idle" (2026-10-25): superseded by its own 2026-11-09 live read.
-- day-20261025-p1 carried "Missile Mastery II" name: superseded by day-20261025-p2 (2026-11-22, newer).
-- open-questions "no owning regular": closed by its own 2026-11-09 2031 update.
-- how-it-is-p1 "flask tap opens the tree" (2026-11-10): did not reproduce per its own 2026-11-22 update.
-- what-this-activity "Starting a new research is a direction decision": superseded 2026-11-23 for resource-only starts by the growth start rule (_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md), owner-delegated: seats fill idle labs at most a third of each stock, above the reserves (_records_/2026-11-22/team-operations/2340-growth-charter-draft.csv); never speed-ups, never reorder a running item.
+9. A blocked slot closes with slots_blocked_by_capacity=<N> and capacity_blocker="<text>" (for example "Drill Ground Full"); a count without a blocker exempts nothing (`_tools_/strategy-conformance/INDEX.md`).
+Unverified: whether the flask tap lands on the list panel or the tree, which varies by session; tap points measured by ticker units, not the current bridge (how-it-is-p1). Errata: [errata](errata.md).
 
 ## Changelog
 
 - 0.2.0, 2026-11-23 - Errata added.
 - 0.3.0, 2026-11-23 - Growth start rule (record 2350) in the Errata, rule 6 follows it.
 - 0.4.0, 2026-11-23 - Citations of moved run articles point to their records (OD-20261123-14).
+- 0.5.0, 2026-11-23 - Capacity stat names; Errata moved to errata.md.

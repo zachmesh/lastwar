@@ -1,8 +1,8 @@
 ---
 title: 9. Tool - _tools_/scout_diff.py (Phase 2, implemented) part 4
 created: 2026-11-23T09:03:33Z
-modified: 2026-11-23T09:03:33Z
-version: 0.1.0
+modified: 2026-11-23T13:46:17Z
+version: 0.2.0
 sequence: 29
 description: The enqueue plan - one entry per unit to create or raise, in the exact field
 ---
@@ -38,3 +38,4 @@ description: The enqueue plan - one entry per unit to create or raise, in the ex
    promotion or rejection recorded as a proposed metadata edit,
    never applied silently.
 
+2026-11-23: with coordination.queue.require_forecast on, enqueue, plan, sweep and sync refuse a unit whose serves is not a ledger plan item or one of upkeep, snapshot, baseline, fill idle slot; --no-require-forecast is the emergency override.
