@@ -4165,6 +4165,10 @@ def cmd_claim(args):
         print(f"cannot claim {args.unit}: not before "
               f"{fields.get('not_before')}")
         return 1
+    if _expired(fields, now_utc()):
+        print(f"cannot claim {args.unit}: its window closed at {fields.get('expires_at')} - sync expires it; "
+              f"do not run an expired unit")
+        return 1
     stamp = now_utc()
     try:
         fields["attempts"] = int(fields.get("attempts", 0)) + 1

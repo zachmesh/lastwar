@@ -16,7 +16,7 @@ def iso(delta_minutes):
     return (datetime.now(timezone.utc) + timedelta(minutes=delta_minutes)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-class NextSkipsExpired(PoolCase):
+class ExpiredCase(PoolCase):
     def unit(self, regular, priority, expires_in, activity="x-activity"):
         """Enqueue a live unit, then move its expiry (minutes from now, negative = past) in the file."""
         r = self.queue("enqueue", "--regular", regular, "--activity", activity, "--est-minutes", "5", "--priority", str(priority),
@@ -30,6 +30,9 @@ class NextSkipsExpired(PoolCase):
 
     def next(self, *extra):
         return self.queue("next", *extra)
+
+
+class NextSkipsExpired(ExpiredCase):
 
     def test_an_expired_priority_one_unit_does_not_beat_a_live_priority_two_unit(self):
         expired = self.unit("building-queues-growth-fill", 1, -25)
@@ -74,3 +77,21 @@ class NextSkipsExpired(PoolCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("rank 1", r.stdout)                                             # the expired unit is not ahead of it
         self.assertNotEqual(expired, live)
+
+
+class ClaimRefusesExpired(ExpiredCase):
+    def test_claim_refuses_an_expired_unit_by_name_and_leaves_it_in_the_inbox(self):
+        expired = self.unit("building-queues-growth-fill", 1, -25)
+        r = self.queue("claim", "--unit", expired, "--executor", "tester")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("its window closed at", r.stdout)
+        self.assertTrue(self.path("inbox", expired).exists())
+        self.assertFalse(self.path("claimed", expired).exists())
+
+    def test_claim_still_takes_a_live_unit_and_one_with_no_expiry(self):
+        live = self.unit("building-queues", 2, 120)
+        never = self.unit("research-queue", 3, None)
+        for unit in (live, never):
+            r = self.queue("claim", "--unit", unit, "--executor", "tester")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertTrue(self.path("claimed", unit).exists())
