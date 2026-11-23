@@ -1,9 +1,9 @@
 ---
 title: Item 4. Daily activity chests
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 19
+sequence: 23
 description: Verdict - cannot be confirmed from the records, and the agent-side gap is structural.
 ---
 ### Item 4. Daily activity chests

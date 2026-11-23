@@ -1,7 +1,7 @@
 ---
 title: A. Window closure and deferral past the window - 6 units
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
 sequence: 5
 description: Instances -

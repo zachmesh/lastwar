@@ -1,9 +1,9 @@
 ---
 title: 4. Owner-expanded checklist audit
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 14
+sequence: 17
 description: Eight owner-named collection items, checked line by line against the same two days of records.
 ---
 ## 4. Owner-expanded checklist audit

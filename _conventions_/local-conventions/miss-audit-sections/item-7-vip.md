@@ -1,9 +1,9 @@
 ---
 title: Item 7. VIP daily claims, Daily Freebie and login chest
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 22
+sequence: 27
 description: Verdict - proven complete on 2026-10-30 and proven unclaimed on 2026-10-31, both from live reads.
 ---
 ### Item 7. VIP daily claims, Daily Freebie and login chest

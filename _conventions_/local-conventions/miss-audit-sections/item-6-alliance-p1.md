@@ -1,9 +1,9 @@
 ---
-title: Item 6. Alliance train completeness per service
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+title: Item 6. Alliance train completeness per service part 1
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 21
+sequence: 25
 description: Verdict - participation cannot be confirmed for any service on either day.
 ---
 ### Item 6. Alliance train completeness per service
@@ -33,11 +33,4 @@ per-service check exists at all.
   arrival mail held no claimable reward at that read
   (`_records_/2026-10-31/mail-rewards/0317-queue-run.md`). That is
   a mail read, not a boarding record.
-
-Prevention rule 6 - the train item becomes a per-service ledger.
-The station panel is opened at least once inside each service
-window, and every service of the day is logged by name as boarded
-(with carriage and ticket), no train in preparation (panel read,
-not banner only), or missed. A banner-only check does not close
-the train line on the master checklist.
 

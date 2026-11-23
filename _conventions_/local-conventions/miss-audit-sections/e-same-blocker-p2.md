@@ -1,16 +1,11 @@
 ---
-title: E. Same blocker repeated with no escalation - 42 units
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+title: E. Same blocker repeated with no escalation - 42 units part 2
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 9
-description: This is the largest category, 42 percent of all non-done units.
+sequence: 11
+description: Survivors, 11 of 11 units partial.
 ---
-### E. Same blocker repeated with no escalation - 42 units
-
-This is the largest category, 42 percent of all non-done units.
-Clusters, with counts across the two days:
-
 - Survivors, 11 of 11 units partial. Quick Dispatch did not run in
   a single unit on either day. The gate line was not found in 5
   units, found without a verified recruit in most others, and two
@@ -53,11 +48,4 @@ Clusters, with counts across the two days:
   (`_records_/2026-10-31/alliance-donations/1437-queue-run.md`).
   The two survivor units lost to the same stall pattern are counted
   in the survivors cluster above.
-
-Prevention rule E - three strikes stops the loop for that regular.
-The third consecutive partial with the same blocker writes the
-blocker into the activity metadata, changes the entry route or
-method before any further unit of that type runs, and surfaces the
-blocker in that day round summary. A fourth identical partial is a
-process failure, not a result.
 

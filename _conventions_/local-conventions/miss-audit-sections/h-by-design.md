@@ -1,9 +1,9 @@
 ---
 title: H. By-design partial, not a miss - 11 units
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:19Z
+modified: 2026-11-23T09:03:19Z
 version: 0.1.0
-sequence: 12
+sequence: 15
 description: Instances -
 ---
 ### H. By-design partial, not a miss - 11 units
