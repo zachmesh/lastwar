@@ -1,15 +1,15 @@
-stage,nodes,dependency,oil,time_power_cost,labs,tag
-1,Unlock Oil Well,none,0,"485,100 s base; power +3,900 [M, equals the sheet]",done 11:53Z,S1 sheet and M
-2,Coin Output V; Iron Output V; Food Output V (parallel),Unlock Oil Well,0,"485,100 s base each (5.6 days); power +3,900 each; coin 6.2M, iron 2.0M, food 2.0M","Food V lab 1 (ends 11-24 17:29:58Z), Coin V lab 2 (ends 14:59:10Z), both started on the other device; Iron V not started",S1 sheet; queue read 1257 [M]
-3,"Oil Output I, 10 levels serial",Level 1 needs all three Output V at Level 1,600K (60K a level),"679,140 s to 1,928,220 s a level, 148.2 base days; power +69,600 in all",one lab; the other lab has no critical work,S1 sheet
-4,Fast Builder V; Research Enhancement V (parallel),Oil Output I Level 10 (all ten levels),0,"679,140 s each; +5,200 power each; Research Enhancement V +2.5 percent research speed",both labs,S1 sheet
-5,3rd Tech Center,Fast Builder V Level 1 and Research Enhancement V Level 1,180K,"950,640 s; +6,100",one lab,S1 sheet
-6,Focused Training V; Rapid Field Dressing V (parallel),3rd Tech Center,0,"950,640 s each; +6,100 each",both,S1 sheet
-7,"Oil Output II, 10 levels serial",Level 1 needs both stage 6 nodes,1.2M (120K a level),"1,236,060 s to 2,776,680 s a level, 228.3 base days; +96,400",one lab,S1 sheet
-8,Infirmary Expansion V; Emergency Capacity I (parallel),Oil Output II Level 10,0,"1,236,060 s each; +7,000 each",both,S1 sheet
-9,More Oil Wells,both stage 8 nodes,120K,"1,606,860 s; +7,800",one lab,S1 sheet
-10,Training Cost I; Healing Cost II (parallel),More Oil Wells,0,"1,606,860 s each; +7,800 each",both,S1 sheet
-11,Drone Parts Workshop,both stage 10 nodes,180K,"1,928,220 s; +8,700",one lab,S1 sheet
-12,"Oil Output III, 10 levels serial",Level 1 needs Parts Workshop,1.2M (120K a level),"1,928,220 s to 3,998,400 s a level, 332.2 base days; +133,200",one lab,S1 sheet
-13,HQ Expansion (Base Expansion),Oil Output III Level 10,600K,"4,798,020 s (55.5 days); coin 193.5M, iron 64.4M, food 64.4M; +21,300",one lab,S1 sheet
-total,"19 nodes, 46 levels",63 base days of 942 can run in parallel; the second lab is idle for most of the path,4.08M,"iron 617.8M, food 617.8M, coin 1.83B; 942 base lab-days; power +411K in all",,S1 sheet
+stage,nodes,dependency,oil,time_power_cost,labs,tag,natural_days_at_button_3.30_minus_4h12m_a_level
+1,Unlock Oil Well,none,0,"485,100 s base; power +3,900 [M, equals the sheet]",done 11:53Z,S1 sheet and M,done
+2,Coin Output V; Iron Output V; Food Output V (parallel),Unlock Oil Well,0,"485,100 s base each (5.6 days); power +3,900 each; coin 6.2M, iron 2.0M, food 2.0M","Food V lab 1 (ends 11-24 17:29:58Z), Coin V lab 2 (ends 14:59:10Z), both started on the other device; Iron V not started",S1 sheet; queue read 1257 [M],"in progress; Food V ends 11-24 17:30Z, Iron V 11-25 02:39Z"
+3,"Oil Output I, 10 levels serial",Level 1 needs all three Output V at Level 1,600K (60K a level),"679,140 s to 1,928,220 s a level, 148.2 base days; power +69,600 in all",one lab; the other lab has no critical work,S1 sheet,43.2
+4,Fast Builder V; Research Enhancement V (parallel),Oil Output I Level 10 (all ten levels),0,"679,140 s each; +5,200 power each; Research Enhancement V +2.5 percent research speed",both labs,S1 sheet,2.2
+5,3rd Tech Center,Fast Builder V Level 1 and Research Enhancement V Level 1,180K,"950,640 s; +6,100",one lab,S1 sheet,3.2
+6,Focused Training V; Rapid Field Dressing V (parallel),3rd Tech Center,0,"950,640 s each; +6,100 each",both,S1 sheet,3.2
+7,"Oil Output II, 10 levels serial",Level 1 needs both stage 6 nodes,1.2M (120K a level),"1,236,060 s to 2,776,680 s a level, 228.3 base days; +96,400",one lab,S1 sheet,67.4
+8,Infirmary Expansion V; Emergency Capacity I (parallel),Oil Output II Level 10,0,"1,236,060 s each; +7,000 each",both,S1 sheet,4.2
+9,More Oil Wells,both stage 8 nodes,120K,"1,606,860 s; +7,800",one lab,S1 sheet,5.5
+10,Training Cost I; Healing Cost II (parallel),More Oil Wells,0,"1,606,860 s each; +7,800 each",both,S1 sheet,5.5
+11,Drone Parts Workshop,both stage 10 nodes,180K,"1,928,220 s; +8,700",one lab,S1 sheet,6.6
+12,"Oil Output III, 10 levels serial",Level 1 needs Parts Workshop,1.2M (120K a level),"1,928,220 s to 3,998,400 s a level, 332.2 base days; +133,200",one lab,S1 sheet,98.9
+13,HQ Expansion (Base Expansion),Oil Output III Level 10,600K,"4,798,020 s (55.5 days); coin 193.5M, iron 64.4M, food 64.4M; +21,300",one lab,S1 sheet,16.7
+total,"19 nodes, 46 levels",63 base days of 942 can run in parallel; the second lab is idle for most of the path,4.08M,"iron 617.8M, food 617.8M, coin 1.83B; 942 base lab-days; power +411K in all",,S1 sheet,"256 from stage 3 on, about 259.6 from the start"

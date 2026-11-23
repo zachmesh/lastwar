@@ -50,3 +50,5 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 906](landing-pr-906.md) - strategy_conformance, idle alarm leaves out capacity-blocked slots
 - [PR 907](landing-pr-907.md) - forecast switch on the enqueue pages, blocked-slot stats in three digests
 - [PR 908](landing-pr-908.md) - gate-ignored, the gate skips git-ignored paths
+- [PR 909](landing-pr-909.md) - eighth records snapshot, measured research speed, queue state
+- [PR 910](landing-pr-910.md) - integrator wrapper and the lint_gate landing flag

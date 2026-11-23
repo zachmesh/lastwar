@@ -1,0 +1,8 @@
+hypothesis,period_s,entry_time_utc,predicted_count_at_entry,"next_grid_point_after_entry (the first timer should end here, within 3 s)",predicted_timer_if_last_tap_1_min_after_entry,note
+H35 (Researcher derivation),2100,17:45:00Z,5,17:52:57.397Z,6:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+H35 (Researcher derivation),2100,17:55:00Z,6,18:27:57.397Z,31:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+H35 (Researcher derivation),2100,18:30:00Z,7,19:02:57.397Z,31:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+"H20 (the old rate, the historical timers)",1200,17:45:00Z,9,17:57:57.397Z,11:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+"H20 (the old rate, the historical timers)",1200,17:55:00Z,9,17:57:57.397Z,1:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+"H20 (the old rate, the historical timers)",1200,18:30:00Z,11,18:37:57.397Z,6:57,"count = 1 + grid points passed since 14:57:57.397Z, no tap between"
+both,,,,,,"If the 17:44Z pass finds count 5 and a first timer ending near 17:52:57, H35 holds; count 9 and an end near 17:57:57, H20 holds; anything else, neither grid fits and the refill is not a fixed-period grid."

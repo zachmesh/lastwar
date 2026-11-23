@@ -5,7 +5,7 @@ activity: resource-collection
 segment: 1
 priority: 2
 created_at: 2026-11-23T12:59:49Z
-expires_at: 2026-11-24T08:30:00Z
+expires_at: 2026-11-24T09:00:00Z
 planned_for:
 not_before: 2026-11-24T05:30:00Z
 window: oil well read and collect every eight hours

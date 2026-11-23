@@ -1,7 +1,7 @@
 ---
 title: Lever ranking for strategy v3.0 draft
 created: 2026-11-23T09:02:00Z
-modified: 2026-11-23T13:24:00Z
+modified: 2026-11-23T14:30:00Z
 version: 0.4.0
 level: L3
 description: The merged capacity and materials ranking by power per scarce unit, with the evidence tag and the read that would change each rank
@@ -36,4 +36,4 @@ The Extra Drill Ground and new-ground lever (rank 1 on 11-23 08:00Z) is retired:
 
 ## Last
 
-Truck plunder (decision 04): on my numbers it costs more power than it returns. Gear stars and hero levels stay off until previews.
+Gear stars and hero levels stay off until previews. Truck plunder (decision 04) is a food and coin supplement, ranked fifth after the first fight cost no troops (n=1).

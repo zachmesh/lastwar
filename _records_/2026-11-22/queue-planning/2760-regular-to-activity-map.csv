@@ -1,0 +1,26 @@
+regular_id,activity_folder,rule_digest,segment,cadence,what_it_does
+mail,mail-rewards,_activities_/mail-rewards/rule-digest.md,2,every-run,Mail - check every category and Claim All
+help,alliance-help,_activities_/alliance-help/rule-digest.md,2,every-run,"Alliance help - Help All, plus the main-screen help bubble whenever it pops"
+gifts,alliance-gifts,_activities_/alliance-gifts/rule-digest.md,2,every-run,Alliance gifts - Claim All on Regular and Premium tabs
+harvest,resource-collection,_activities_/resource-collection/rule-digest.md,1,every-run,Harvest all resource bubbles (center taps; one farmland tap collects all food)
+vip,vip-rewards,_activities_/vip-rewards/rule-digest.md,2,daily-reset,VIP Daily Freebie - claim; claim again in any round after the daily reset
+passes,shop-claims,_activities_/shop-claims/rule-digest.md,3,every-run,Passes - weekly/monthly daily pickups and Free Supply in the shop
+daily-missions,daily-missions,_activities_/daily-missions/rule-digest.md,3,daily-reset,"Daily missions - claim completed Mission tasks one by one, re-checking after each, and claim the activity chests at their thresholds"
+secrets,secret-missions,_activities_/secret-missions/rule-digest.md,3,every-run,"Secret missions - claim finished (one Claim takes all), Mega Deploy the rest (UR Only off; on duel UR days Mega Refresh first), check Reward Recovery"
+treasures,hidden-treasures,_activities_/hidden-treasures/rule-digest.md,3,every-run,Hidden treasures - dig when a full set of 7 fragments is on hand (tab badge counts digs)
+radar,radar-tasks,_activities_/radar-tasks/rule-digest.md,1,every-run,"Radar - Quick Execute to empty, Claim All, do special pins individually, claim the free 75 stamina when offered"
+survivors,survivor-intake,_activities_/survivor-intake/rule-digest.md,1,every-run,"Survivor intake - take in the gate line, then Quick Dispatch in building panels"
+trucks,truck-plunder,_activities_/truck-plunder/rule-digest.md,3,every-run,"Trucks - settle returned trucks via Truck Details, claim trade Reward Recovery, dispatch to fill (duel UR days Mega + UR only, other days SR/SSR/UR), plunder to the cap by the UR shard rule"
+train,alliance-train,_activities_/alliance-train/rule-digest.md,2,every-run,Alliance train - if a train is in preparation board carriage 2 with a 3-contract ticket; claim train arrival mail
+training,troop-training,_activities_/troop-training/rule-digest.md,1,every-run,Troop training - requeue any finished barracks at its highest tier
+research,research-queue,_activities_/research-queue/rule-digest.md,1,every-run,Research queue - press Complete on finished research and record the power change; never start new research without a standing owner direction
+building-queues,building-queues,_activities_/building-queues/rule-digest.md,1,every-run,"Building queues - read the four build queues, record running upgrades and idle slots; read-only, never start builds"
+donations,alliance-donations,_activities_/alliance-donations/rule-digest.md,1,every-run,Alliance tech donations - every run: donate with the coin button to the recommended tech whenever today coin donations remain (never diamonds); claim the daily donation reward when claimable
+events,event-claims,_activities_/event-claims/rule-digest.md,3,every-run,"Event claims - claim every earned reward on the Events screen and inside each event, including Battle Pass daily login, Halloween check-in while it runs and all Arms Race rewards; finish only after a final sweep shows no bouncing chest or reward red dot remains; never grind, never buy"
+arms-race,arms-race,_activities_/arms-race/rule-digest.md,1,every-run,"Arms Race - read the phase and score; meet the live target; claim all earned rewards, not only the three point chests; return to the Events screen for a final sweep and claim any bouncing chest or reward red dot"
+ghost-ops,ghost-ops,_activities_/ghost-ops/rule-digest.md,3,weekly-thu,"Ghost Ops - event day only (Thursdays, server windows); help allies 3x, claim manually"
+star-ceremony,alliance-duel,_activities_/alliance-duel/rule-digest.md,2,every-run,"Alliance Star Ceremony - when the trophy icon shows; send at least 3 hearts, claim the rewards"
+duel-score,alliance-duel,_activities_/alliance-duel/rule-digest.md,2,every-run,"Alliance Duel score - read the personal daily total on the VS duel panel and record it against the 3,600,000 target (stats target/achieved/gap, live read only); the last read before the daily reset (02:00 UTC) is the day closing figure; read-only, never grind, spend or buy"
+scout,perception-scout,_activities_/perception-scout/rule-digest.md,1,daily-reset,"Scout - post-reset full perception pass (floor anchor, not the ceiling); walk the whole interface, record observed items and unmatched labels, do no work"
+scout-midday,perception-scout,_activities_/perception-scout/rule-digest.md,2,daily-reset,"Scout - midday perception pass (floor anchor); re-walk the interface for state-dependent availability (trains, phase rotations, market refreshes); full passes also fire on detected state change between anchors"
+zero-sweep,daily-activities,_activities_/daily-activities/rule-digest.md,3,fixed-slots,"Pre-reset zero sweep - walk the daily collection ledger item by item, enqueue priority-1 fix-ups for lines not at zero, final pass verifies the fix-ups"
