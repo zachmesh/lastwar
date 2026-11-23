@@ -6,7 +6,7 @@ live checkout. `snapshot` therefore does not merge: it builds a branch on the or
 changes. It never pushes, never touches main, the index or the working tree of the live checkout, and never deletes.
 
   records_snapshot.py snapshot [--base origin/main] [--branch land/records-<UTC>] [--exclude PATH ...] [--on-conflict main|origin|stop] [--dry-run]
-  records_snapshot.py converge [--base origin/main] [--exclude PATH ...] [--dry-run]
+  records_snapshot.py converge [--base origin/main] [--exclude PATH ...] [--dry-run] [--accept-newer [--accept-main-deleted PREFIX ...]]
 
 snapshot: refuse unless the clone is whole and the working branch is main; make a scratch worktree of the branch on the base tip; take, from
 local main, every ADDED or MODIFIED file (a rename is an add of the new path) outside the excluded paths, plus `_tools_/state/`; copy those
@@ -17,6 +17,11 @@ newer), both changed it or both added it differently (--on-conflict: main's vers
 (skip). A path origin has and main lacks is never touched. Exit 0 only when the scan finds nothing, the landing check passes and the
 parent is the base tip. Default excludes: `_tools_` code (not `_tools_/state/`) and `_activities_`, which the scribe's branches own;
 giving any --exclude replaces the defaults.
+
+converge --accept-newer: also safe when every difference is newer local content (added or modified on main, or an older origin version already in
+main's history); refuses a true conflict (an origin blob main never had) and an origin file main deleted. Then the same ref move and mixed reset, and a
+counts-only report of the tracked paths now modified, missing or untracked by folder, and of the untracked files at an OLD path in
+`_run_notes_/moved-paths/moved-paths.csv` (counted, never deleted).
 
 converge: when every tracked file of local main outside the excluded paths equals origin's, move the branch ref main to the base without
 touching the working tree (`git update-ref`, then a mixed `git reset`), keep the old tip under refs/backup/, and print how many tracked
@@ -53,8 +58,9 @@ class Refusal(Exception):
         self.code = code
 
 
-def git(root: Path, *args: str, ok=(0,), text=True, input=None, timeout=600):
+def git(root: Path, *args: str, ok=(0,), text=True, input=None, timeout=600, env_extra=None):
     env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_")}
+    env.update(env_extra or {})
     try:
         out = subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=text, input=input, timeout=timeout, env=env)
     except (OSError, subprocess.SubprocessError) as exc:
@@ -337,9 +343,120 @@ def cmd_snapshot(a, root: Path) -> int:
     return 0 if clean and parent_ok else 1
 
 
+MOVED_PATHS = "_run_notes_/moved-paths/moved-paths.csv"
+
+
+def judge_newer(root: Path, base: str, excludes, accept_deleted=()):
+    """(conflicts, deleted_by_main, accepted): the two things --accept-newer refuses on, outside the excluded paths. A path both lines hold with different
+    content is a conflict unless origin's blob is already in main's history of it (origin holds an older version of main's: newer local content).
+    A path origin holds that main lacks is a refusal when main once had it and deleted it (converge would bring it back)."""
+    main, origin = tree(root, "main"), tree(root, base)
+    differing = [p for p, v in origin.items() if p in main and main[p] != v and not excluded(p, excludes)]
+    in_main = histories(root, "main", differing)
+    conflicts = [p for p in differing if origin[p][1] not in in_main[p]]
+    gone = {n.lstrip("\n") for n in git(root, "log", "--diff-filter=D", "--name-only", "--format=", "--no-renames", "-m", "-z", "main",
+                                         text=False).decode("utf-8", "surrogateescape").split("\0")}
+    deleted = [p for p in origin if p not in main and p in gone and not excluded(p, excludes)]
+    accepted = [p for p in deleted if any(p == q.strip("/") or p.startswith(q.strip("/") + "/") for q in accept_deleted)]
+    return sorted(conflicts), sorted(set(deleted) - set(accepted)), sorted(accepted)
+
+
+def after_status(root: Path, sha: str, simulate: bool) -> tuple[Counter, list[str]]:
+    """Tracked paths modified or missing, and untracked ones, relative to the new HEAD: counted by (state, top folder), plus the untracked paths.
+    simulate reads the answer through a temporary index holding the base tree, so nothing of the live index is touched."""
+    env_extra, tmp = None, None
+    if simulate:
+        tmp = Path(tempfile.mkdtemp(prefix="converge-index-")) / "index"
+        git(root, "read-tree", f"--index-output={tmp}", sha)
+        env_extra = {"GIT_INDEX_FILE": str(tmp)}
+    try:
+        out = git(root, "status", "--porcelain=v1", "--untracked-files=all", "-z", text=False, env_extra=env_extra).decode("utf-8", "surrogateescape")
+    finally:
+        if tmp:
+            shutil.rmtree(tmp.parent, True)
+    counts, untracked = Counter(), []
+    for entry in (e for e in out.split("\0") if len(e) > 3):
+        state, path = entry[:2], entry[3:]
+        if state == "??":
+            kind = "untracked"
+        elif state[1] == "D":                               # only the working-tree column counts: a simulated index differs from HEAD in the first
+            kind = "missing"
+        elif state[1] in "MT":
+            kind = "modified"
+        else:
+            continue
+        counts[(kind, folder(path))] += 1
+        if kind == "untracked":
+            untracked.append(path)
+    return counts, untracked
+
+
+def old_path_untracked(root: Path, base: str, untracked) -> int:
+    shown = subprocess.run(["git", "-C", str(root), "show", f"{base}:{MOVED_PATHS}"], capture_output=True, text=True)
+    text = shown.stdout if shown.returncode == 0 else (root / MOVED_PATHS).read_text(encoding="utf-8") if (root / MOVED_PATHS).is_file() else ""
+    if not text:
+        return 0
+    import csv
+    import io
+    old = {row.get("old_path", "") for row in csv.DictReader(io.StringIO(text))}
+    return sum(1 for p in untracked if p in old)
+
+
+def newer_report(counts: Counter, untracked, root: Path, base: str, prefix: str) -> list[str]:
+    by_folder_text = "; ".join(f"{f} " + " ".join(f"{k} {counts[(k, f)]}" for k in ("modified", "missing", "untracked") if counts[(k, f)])
+                               for f in sorted({f for _k, f in counts}))
+    totals = {k: sum(v for (kk, _f), v in counts.items() if kk == k) for k in ("modified", "missing", "untracked")}
+    return [f"{prefix}tracked paths now modified {totals['modified']}, missing {totals['missing']}, untracked {totals['untracked']} relative to the new HEAD "
+            f"(newer local records, and under _activities_ the old-path run articles the run-notes move superseded) | by folder: {by_folder_text or 'none'}",
+            f"{prefix}untracked files at an OLD path of {MOVED_PATHS}: {old_path_untracked(root, base, untracked)} (counted, never deleted)"]
+
+
+def accepted_note(accepted) -> str:
+    return (f"; {len(accepted)} origin file(s) main deleted were accepted by --accept-main-deleted (by folder: "
+            f"{by_folder([(p, 'accepted') for p in accepted])}) and show as missing" if accepted else "")
+
+
+def converge_newer(a, root: Path, base_sha: str, excludes) -> int:
+    conflicts, deleted, accepted = judge_newer(root, a.base, excludes, a.accept_main_deleted)
+    if conflicts or deleted:
+        parts = []
+        if conflicts:
+            parts.append(f"{len(conflicts)} true conflict(s) - origin holds a version main's history never had; by folder: "
+                         + by_folder([(p, "conflict") for p in conflicts]))
+        if deleted:
+            parts.append(f"{len(deleted)} file(s) origin holds that main deleted, which converge would bring back; by folder: "
+                         + by_folder([(p, "main-deleted") for p in deleted]))
+        print("records_snapshot converge --accept-newer refused: " + " | ".join(parts))
+        return 1
+    old = git(root, "rev-parse", "main").strip()
+    if old == base_sha:
+        print("records_snapshot converge: main already is the base")
+        return 0
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    backup = f"refs/backup/main-before-converge-{stamp}"
+    if a.dry_run:
+        counts, untracked = after_status(root, base_sha, simulate=True)
+        print(f"records_snapshot converge --accept-newer (dry run): no true conflict, no refused deletion{accepted_note(accepted)}; would keep {old[:8]} "
+              f"as {backup} and move main to {base_sha[:8]} ({a.base}); nothing changed")
+        for line in newer_report(counts, untracked, root, a.base, "would be: "):
+            print(line)
+        return 0
+    git(root, "update-ref", backup, old)
+    git(root, "update-ref", "refs/heads/main", base_sha, old)
+    git(root, "reset", "-q")                                   # mixed: the index follows the new main, the working tree is not touched
+    counts, untracked = after_status(root, base_sha, simulate=False)
+    print(f"records_snapshot converge --accept-newer: main moved from {old[:8]} to {base_sha[:8]} ({a.base}); index reset, working tree untouched; "
+          f"the old tip is kept as {backup}{accepted_note(accepted)}")
+    for line in newer_report(counts, untracked, root, a.base, ""):
+        print(line)
+    return 0
+
+
 def cmd_converge(a, root: Path) -> int:
     base_sha = preflight(root, a.base)
     excludes = tuple(a.exclude) if a.exclude else DEFAULT_EXCLUDES
+    if a.accept_newer:
+        return converge_newer(a, root, base_sha, excludes)
     main, origin = tree(root, "main"), tree(root, a.base)
     differ = [(p, "differs") for p, v in main.items() if not excluded(p, excludes) and origin.get(p) != v]
     if differ:
@@ -383,6 +500,12 @@ def main(argv=None) -> int:
     s.add_argument("--dry-run", action="store_true", help="print what would land (counts by folder); create no branch or worktree")
     c = sub.add_parser("converge", parents=[common])
     c.add_argument("--dry-run", action="store_true")
+    c.add_argument("--accept-main-deleted", action="append", default=[], metavar="PREFIX",
+                   help="with --accept-newer: a path prefix whose files main deleted but origin still holds (queue units that moved state) are not a "
+                        "refusal; they show as missing after the move (repeatable)")
+    c.add_argument("--accept-newer", action="store_true",
+                   help="also converge when every difference is newer local content (an added or modified file, or an older origin version already in "
+                        "main's history); refuses a true conflict and a file main deleted that origin holds")
     a = p.parse_args(argv)
     for name, value in (("root", str(HERE.parent.parent)), ("base", "origin/main"), ("exclude", [])):
         if not hasattr(a, name):                              # not given before or after the subcommand

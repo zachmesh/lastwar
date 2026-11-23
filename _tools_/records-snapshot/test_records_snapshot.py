@@ -45,6 +45,7 @@ class Lines(unittest.TestCase):
         self.git(self.dev, "checkout", "-q", "-b", "main")
         for rel, text in {"_records_/INDEX.md": "# records\n", "_records_/shared.md": "shared v0\n", "_records_/both.md": "both v0\n",
                           "_records_/origin-only-changed.md": "oc v0\n", "_records_/deleted-locally.md": "dl v0\n", "_records_/ren-old.md": "ren v0\n", "_records_/ahead.md": "ahead v0\n", "_records_/oa.md": "oa v0\n",
+                          "_activities_/alpha-one/run-old.md": "run article body kept private\n",
                           "_tools_/code.py": "code v0\n", "_tools_/state/queue-state.json": "{}\n", "_activities_/alpha-one/INDEX.md": "act v0\n",
                           "_knowledge_/page.md": "k v0\n"}.items():
             self.put(self.dev, rel, text)
@@ -60,6 +61,11 @@ class Lines(unittest.TestCase):
         self.put(self.dev, "_records_/oa.md", "oa v1\n")
         self.commit(self.dev, "O1a")
         self.put(self.dev, "_records_/oa.md", "oa v2\n")                                                  # and has moved on from it
+        self.git(self.dev, "mv", "_activities_/alpha-one/run-old.md", "_activities_/alpha-one/run-moved.md")      # origin moved a run article to _run_notes_
+        (self.dev / "_run_notes_/alpha-one").mkdir(parents=True)
+        self.git(self.dev, "mv", "_activities_/alpha-one/run-moved.md", "_run_notes_/alpha-one/run-old.md")
+        self.put(self.dev, "_run_notes_/moved-paths/moved-paths.csv",
+                 "old_path,new_path,record\n_activities_/alpha-one/run-old.md,_run_notes_/alpha-one/run-old.md,_records_/r.md\n")
         self.put(self.dev, "_tools_/code2.py", "code two\n")
         self.put(self.dev, "_activities_/alpha-one/INDEX.md", "act origin\n")
         self.commit(self.dev, "O1")
@@ -343,6 +349,106 @@ class Converge(Lines):
         shallow = self.tmp / "shallow"
         subprocess.run(["git", "clone", "-q", "--depth", "1", f"file://{self.origin}", str(shallow)], check=True, capture_output=True)
         self.assertIn("shallow", self.run_tool("converge", root=shallow).stdout)
+
+
+class ConvergeNewer(Lines):
+    def make_newer_only(self, restore_deleted=True):
+        """Local main differs from origin only by newer local content: take origin's version where origin holds one main never had, and (by
+        default) bring back what main deleted that origin holds."""
+        for rel in ("_records_/both.md", "_records_/oa.md", "_records_/origin-only-changed.md") + (
+                ("_records_/deleted-locally.md", "_records_/ren-old.md") if restore_deleted else ()):
+            self.put(self.live, rel, self.git(self.live, "show", f"origin/main:{rel}") + "\n")
+        self.commit(self.live, "take origin's versions" + (", restore what main deleted" if restore_deleted else ""))
+
+    def hashes(self):
+        out = {}
+        for p in sorted(self.live.rglob("*")):
+            rel = p.relative_to(self.live).as_posix()
+            if p.is_file() and not rel.startswith(".git/"):
+                out[rel] = p.read_bytes()
+        return out
+
+    def test_refuses_a_true_conflict_and_a_file_main_deleted_that_origin_holds(self):
+        r = self.run_tool("converge", "--accept-newer")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("3 true conflict(s) - origin holds a version main's history never had; by folder: _records_ conflict 3", r.stdout)
+        self.assertIn("2 file(s) origin holds that main deleted, which converge would bring back; by folder: _records_ main-deleted 2", r.stdout)
+        self.assertNotEqual(self.git(self.live, "rev-parse", "main"), self.git(self.live, "rev-parse", "origin/main"))
+        self.assertEqual(self.git(self.live, "for-each-ref", "refs/backup/"), "")
+
+    def test_a_dry_run_changes_nothing_and_reports_the_same_counts_as_the_real_run(self):
+        self.make_newer_only()
+        refs, status, cached = self.refs(self.live), self.git(self.live, "status", "--porcelain"), self.git(self.live, "diff", "--cached", "--name-only")
+        dry = self.run_tool("converge", "--accept-newer", "--dry-run")
+        self.assertEqual(dry.returncode, 0, dry.stdout + dry.stderr)
+        self.assertIn("(dry run): no true conflict, no refused deletion", dry.stdout)
+        self.assertEqual((self.refs(self.live), self.git(self.live, "status", "--porcelain"), self.git(self.live, "diff", "--cached", "--name-only")),
+                         (refs, status, cached))
+        real = self.run_tool("converge", "--accept-newer")
+        self.assertEqual(real.returncode, 0, real.stdout + real.stderr)
+        count_line = lambda out, key: next(l for l in out.splitlines() if key in l).split("relative to the new HEAD")[0].split("tracked paths now ")[1]
+        self.assertEqual(count_line(dry.stdout, "tracked paths now"), count_line(real.stdout, "tracked paths now"))
+
+    def test_converges_main_keeps_every_file_byte_for_byte_and_reports_the_moved_old_paths(self):
+        self.make_newer_only()
+        old = self.git(self.live, "rev-parse", "main")
+        before = self.hashes()
+        r = self.run_tool("converge", "--accept-newer")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        new = self.git(self.live, "rev-parse", "origin/main")
+        self.assertEqual(self.git(self.live, "rev-parse", "main"), new)
+        self.assertIn(old, self.git(self.live, "for-each-ref", "--format=%(refname) %(objectname)", "refs/backup/"))
+        self.assertEqual(self.git(self.live, "diff", "--cached", "--name-only"), "")                      # the index follows the new main
+        self.assertEqual(self.hashes(), before)                                                          # the working tree is byte for byte what it was
+        status = subprocess.run(["git", "-C", str(self.live), "status", "--porcelain", "--untracked-files=all"], capture_output=True, text=True).stdout.splitlines()
+        self.assertIn("?? _activities_/alpha-one/run-old.md", status)                                    # the old path of the moved run article
+        self.assertIn(" M _records_/shared.md", status)                                                 # newer local content, now a modification
+        self.assertIn("?? _records_/new-1.md", status)
+        self.assertIn(" D _run_notes_/alpha-one/run-old.md", status)                                    # origin's new path, not in this working tree
+        self.assertIn("untracked files at an OLD path of _run_notes_/moved-paths/moved-paths.csv: 1 (counted, never deleted)", r.stdout)
+        untracked = sum(1 for l in status if l.startswith("??"))
+        modified = sum(1 for l in status if l.startswith(" M"))
+        missing = sum(1 for l in status if l.startswith(" D"))
+        self.assertIn(f"tracked paths now modified {modified}, missing {missing}, untracked {untracked} relative to the new HEAD", r.stdout)
+        self.assertIn("_activities_ ", r.stdout)
+        for text in ("shared local", "new record one", "kept private"):
+            self.assertNotIn(text, r.stdout)                                                             # counts only
+        self.assertEqual(self.run_tool("converge", "--accept-newer").stdout.strip(), "records_snapshot converge: main already is the base")
+
+    def test_a_file_main_deleted_that_origin_holds_can_be_accepted_by_prefix_and_shows_as_missing(self):
+        self.make_newer_only(restore_deleted=False)
+        refused = self.run_tool("converge", "--accept-newer", "--dry-run")
+        self.assertEqual(refused.returncode, 1)
+        self.assertIn("2 file(s) origin holds that main deleted", refused.stdout)
+        partial = self.run_tool("converge", "--accept-newer", "--dry-run", "--accept-main-deleted", "_records_/deleted-locally.md")
+        self.assertEqual(partial.returncode, 1)
+        self.assertIn("1 file(s) origin holds that main deleted", partial.stdout)
+        before = self.hashes()
+        ok = self.run_tool("converge", "--accept-newer", "--accept-main-deleted", "_records_/deleted-locally.md", "--accept-main-deleted", "_records_/ren-old.md")
+        self.assertEqual(ok.returncode, 0, ok.stdout + ok.stderr)
+        self.assertIn("2 origin file(s) main deleted were accepted by --accept-main-deleted (by folder: _records_ accepted 2) and show as missing", ok.stdout)
+        status = subprocess.run(["git", "-C", str(self.live), "status", "--porcelain"], capture_output=True, text=True).stdout.splitlines()
+        self.assertIn(" D _records_/deleted-locally.md", status)
+        self.assertIn(" D _records_/ren-old.md", status)
+        self.assertEqual(self.hashes(), before)                                                          # still nothing was deleted or restored on disk
+
+    def test_excluded_paths_are_not_judged_unless_the_exclude_list_says_so(self):
+        self.make_newer_only()
+        self.put(self.dev, "_tools_/code.py", "code origin\n")
+        self.commit(self.dev, "origin changes code")
+        self.git(self.dev, "push", "-q", "origin", "main")
+        self.git(self.live, "fetch", "-q", "origin")
+        ok = self.run_tool("converge", "--accept-newer", "--dry-run")
+        self.assertEqual(ok.returncode, 0, ok.stdout + ok.stderr)                                        # _tools_ code is excluded by default
+        strict = self.run_tool("--exclude", "_knowledge_", "converge", "--accept-newer", "--dry-run")
+        self.assertEqual(strict.returncode, 1)
+        self.assertIn("_tools_ conflict 1", strict.stdout)
+
+    def test_the_plain_converge_is_unchanged_and_still_refuses_any_difference(self):
+        self.make_newer_only()
+        r = self.run_tool("converge", "--dry-run")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("converge refused:", r.stdout)
 
 
 if __name__ == "__main__":
