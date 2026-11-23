@@ -1,0 +1,48 @@
+{
+  "assignment": "A-20261123-0601-planner",
+  "issue": 814,
+  "written_at": "2026-11-23T06:08:00Z",
+  "seat": "planner",
+  "mode": "file-only; nothing enqueued, staged, claimed or played",
+  "evidence_rows": [
+    {"id": 1, "topic": "offset", "verdict": "UTC-2 (verified)", "source": "_activities_/perception-scout/INDEX.md:2102", "reading": "Server Time 2026-11-8 10:17:10 at about 04:18 PT (12:18Z)", "implied_offset": "-2h00m50s"},
+    {"id": 2, "topic": "offset", "verdict": "UTC-2 (verified)", "source": "_activities_/perception-scout/INDEX.md:2101", "reading": "same unit, Alliance Store footer: refresh Monday 00:00 server time, timer 13:43:38 at about 04:17 PT, so server midnight = 18:00 PST = 02:00Z; 10:17:10 + 13:43:38 = 24:00:48, internally consistent", "implied_offset": "-2h"},
+    {"id": 3, "topic": "offset", "verdict": "UTC-2 (verified)", "source": "_records_/2026-11-21/perception-scout/0604-queue-run.md:15 and _records_/2026-11-22/INDEX.md:29", "reading": "To-do List header Server Time 12:09:10 at about 06:14 PT; the day index corrects the unit labels to run 4 to 7 minutes late, so 06:07 to 06:10 PT (14:07Z to 14:10Z)", "implied_offset": "-1h58m to -2h01m"},
+    {"id": 4, "topic": "offset", "verdict": "UTC-2, approximate", "source": "_activities_/perception-scout/INDEX.md:1388", "reading": "Server Time 2026-11-3 15:46:52 at the 0949 walk; the section tag is read as local PST (17:49Z), not confirmed", "implied_offset": "-2h02m"},
+    {"id": 5, "topic": "reset anchor", "verdict": "ruled", "source": "_knowledge_/events-and-cycles/INDEX.md:69 and :117", "reading": "daily reset 02:00Z (18:00 PST), ruled by retro 2026-11-19 flag (l); with rows 1 and 2, server 00:00 equals the reset"},
+    {"id": 6, "topic": "event time", "verdict": "supports case A (fold only)", "source": "_activities_/resource-collection/INDEX.md:1926", "reading": "unit 17:09-17:24 PT on 2026-11-22: banner 'Zombie Siege is about to attack: 00:02:49' at about 17:20, timer 23:12 to 23:15 across the unit. Server = PT + 6h = UTC-2, and the siege was live at about 17:15-17:25 PT, not 23:15 PT. The raw record 1704-queue-run.md is on the records branch (commit 76b61bb8d) and is not in this checkout; only the fold was read."},
+    {"id": 7, "topic": "unexplained residual", "verdict": "unverified", "source": "_activities_/event-claims/INDEX.md:843", "reading": "Wanted Boss 'appears at server 00:00': Go countdown 12:15:04 at about 04:47 PT (2026-11-09) and 14:39:59 at about 02:20 PT (2026-11-10) both end near 17:00 PT = 01:00Z, one hour before the 02:00Z reset. Read alone they imply UTC-1. Cause open. Both UTC-1 (00:15Z) and UTC-2 (01:15Z) put the siege in the past."},
+    {"id": 8, "topic": "what it is", "verdict": "text verified, outcome unverified", "source": "_records_/2026-11-02/perception-scout/observation.md:404-413 and _activities_/perception-scout/INDEX.md:1899", "reading": "tab Zombie Siege, mode Alliance Exercise: Battle Stage 30 minutes; highest total alliance damage pays all members; top-damage Commander may multiply all members' rewards 10x; Offline Participation auto-joins allied rallies when offline (slots open 20 s before departure), already checked, not toggled"},
+    {"id": 9, "topic": "pays", "verdict": "verified for the Alliance Exercise mail only", "source": "_activities_/mail-rewards/INDEX.md:687-698", "reading": "[Alliance Exercise] Alliance Reward claimed 2026-11-03: EXP 105.8M, coin 12.1M, food 19.0M, iron 19.0M, 120 five-minute speedups in five stacks, plus card items; HUD food, iron and coin rose by the popup amounts"},
+    {"id": 10, "topic": "pays", "verdict": "unverified", "source": "_activities_/mail-rewards/INDEX.md:1054 and :444-449", "reading": "Zombie Siege Reports (Alliance) and (Individual) recur and carried no attachments when read alone; the last pair was 2d old at the 2026-11-22 06:19 PT read. A 'Defense Success Reward (Zombie)' mail exists (2026-11-09). What the siege itself pays is not established."},
+    {"id": 11, "topic": "cadence", "verdict": "unresolved", "source": "_records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md:88-89", "reading": "guide text: Zombie Siege first Alliance join triggers no 48-hour cooldown; semantics of the cooldown unread"},
+    {"id": 12, "topic": "exploration gap", "verdict": "verified", "source": "_records_/retro/2026-11-09.md:568 and _records_/retro/2026-11-10.md:686", "reading": "issue #419 exploration never ran; no closing read of the 2026-11-09 15:00 PT Zombie Siege / Alliance Exercise event"},
+    {"id": 13, "topic": "origin of the 23:15 PT assumption", "verdict": "unverified", "source": "_records_/2026-11-22/team-operations/2053-board-triage-1.md:42", "reading": "'runs 2026-11-22 23:15 PT ... planner must stage a unit before 07:15Z' - the server-equals-PT reading; no reading in rows 1 to 7 supports it"},
+    {"id": 14, "topic": "post-event mail", "verdict": "inconclusive", "source": "_records_/2026-11-22/mail-rewards/2028-queue-run.md", "reading": "mail unit at 04:28Z (about 3h after 01:15Z) saw no marker on Alliance or Event; reports may carry no marker, so a Siege Report dated about 01:15-02:00Z was neither seen nor ruled out"}
+  ],
+  "candidates": [
+    {"case": "A", "status": "supported by rows 1-6", "server_offset": "UTC-2", "event_utc": "2026-11-23T01:15:00Z", "event_pt": "2026-11-22 17:15 PST", "stage_window_utc": "2026-11-23T01:15:00Z to 2026-11-23T01:45:00Z", "state_at_0605z": "started about 4h50 ago, ended about 4h20 ago"},
+    {"case": "B", "status": "assumed by the coordinator; no supporting reading", "server_offset": "server time equals PT (UTC-8)", "event_utc": "2026-11-23T07:15:00Z", "event_pt": "2026-11-22 23:15 PST", "stage_window_utc": "2026-11-23T07:15:00Z to 2026-11-23T07:45:00Z", "state_at_0605z": "opens in about 1h10"}
+  ],
+  "drafts_not_run": [
+    {
+      "case": "A (event closed; settle and learn the next siege)",
+      "note": "No unit for the closed occurrence. One read-only unit reads the To-do List and Alliance Events. Window opens at 06:20Z and ends at the reset-day end 02:00Z on 2026-11-24.",
+      "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --priority 2 --est-minutes 3 --not-before 2026-11-23T06:20:00Z --expires-at 2026-11-24T02:00:00Z --window \"issue 814 read only - To-do List server time and next Zombie Siege time\""
+    },
+    {
+      "case": "B (event at 07:15Z; watch window)",
+      "note": "Only if the To-do List read shows the siege still ahead. Window starts 15 minutes before the event and ends with the 30-minute stage.",
+      "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --priority 1 --est-minutes 5 --not-before 2026-11-23T07:00:00Z --expires-at 2026-11-23T07:45:00Z --window \"issue 814 read only - Zombie Siege 07:15Z watch\""
+    }
+  ],
+  "enqueue_limits": [
+    "enqueue writes a fixed body ('executor reads the activity metadata and the standing rules'); only --window carries free text, so the brief below travels in the operator assignment, or the planner appends it to the inbox unit body (inbox is planner scope) when told to.",
+    "no regular owns Zombie Siege; scout-midday (perception-scout, read-only) is the closest owner. events (event-claims) is rejected because it is a claim regular.",
+    "a hand-minted unit has an empty planned_for, so it does not collide with the scout-midday tracker slot; not exercised, because enqueue was not run.",
+    "timestamps must be UTC in the form YYYY-MM-DDTHH:MM:SSZ; --not-before without --expires-at is refused (issue #859); expiry must be after not-before."
+  ],
+  "unit_brief": "Read-only observation, no game input beyond opening panels and closing them. Open the To-do List by tapping the blue clock building at the far right of the base (point (955,445) in the 2026-11-21 record, re-ground it this session) and record the header Server Time to the second together with the UTC time of the screenshot, then every listed item with its server date and time for 2026-11-22, 2026-11-23 and 2026-11-24, scrolling below the fold for the Alliance Exercise time. Close with the panel X (846,168 in the same record, re-ground it). Then open Alliance Events, read the Zombie Siege tab countdown and the Your Time Zone line, and open Alliance mail to note whether a Zombie Siege Report dated about 01:15Z to 02:00Z exists; do not toggle Offline Participation. Red lines: no attack, rally, join, march, troop dispatch or PvP of any kind, no Build, no purchase, no diamonds, no reward claim. Any such surface stops the unit as needs-owner and the operator records the screenshot and the control point.",
+  "settling_observation": "To-do List header Server Time read beside UTC, plus the Zombie Siege and Alliance Exercise rows for server dates 11-23 and 11-24. Server time near 04:05 while UTC is 06:05 confirms case A; server time near 22:05 confirms case B.",
+  "labels": {"verified": "read from a cited record or tool output this turn", "unverified": "inference or a reading with no independent check"}
+}

@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-23T06:06:00Z
-version: 2.12.0
+modified: 2026-11-23T06:22:00Z
+version: 2.13.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -18,7 +18,7 @@ The standing register of items that only the owner can decide - each with its co
 
 Add one small article file `owner-decisions-log/<entry-id>.md`, named by an entry id that starts with letters (for example `od-20261123-04.md`), with the frontmatter fields title, created, modified, version and description, then add one line for it at the end of this page: `- [Title](owner-decisions-log/od-20261123-04.md) one sentence`. Never edit an existing article.
 
-## Open now (14, read from the articles' own status lines at 2026-11-23T06:05Z)
+## Open now (15, read from the articles' own status lines at 2026-11-23T06:05Z)
 
 - OD-20261031-01 - arms race phases with no scoring path ([article](owner-decisions-log/od-20261031-01.md))
 - OD-20261031-02 - Halloween Day 07 decoration choice ([article](owner-decisions-log/od-20261031-02.md))
@@ -34,8 +34,10 @@ Add one small article file `owner-decisions-log/<entry-id>.md`, named by an entr
 - OD-20261123-01 - unidentified mid-base trophy bubble (Arena?) ([article](owner-decisions-log/od-20261123-01.md))
 - OD-20261123-02 - ally exchange for fragment M5 ([article](owner-decisions-log/od-20261123-01.md))
 - OD-20261123-03 - may any PvP surface be acted on ([article](owner-decisions-log/od-20261123-01.md))
+- OD-20261123-04 - public repository carries the owner account name and alliance tag ([article](owner-decisions-log/od-20261123-04.md))
 - OD-20261109-01 (Transfer Surge) was decided by expiry on 2026-11-12; its first entry still reads open.
 
 ## Articles
 
 - [Catalog 01](owner-decisions-log/catalog-01.md) - Owner decisions register to day-20261121
+- [OD-20261123-04](owner-decisions-log/od-20261123-04.md) - the public repository carries the owner account name and alliance tag; redaction and history are the owner's call.

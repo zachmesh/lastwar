@@ -1,0 +1,73 @@
+{
+  "assignment": "A-20261123-0611-planner",
+  "written_at": "2026-11-23T06:16:00Z",
+  "seat": "planner",
+  "decisions_applied": [
+    "1. brief sentence added to the siege watch: the sweep pair has priority; if the stage has ended, read the result mail first",
+    "2. sweep pair for 2026-11-24 staged with queue.py sweep, not by hand",
+    "3. Alliance Exercise watch minted, p2, both bounds; Winter Battlefield not minted"
+  ],
+  "sweep": {
+    "command": "python3 _tools_/queue.py sweep --regular zero-sweep --date 2026-11-23",
+    "exit": 0,
+    "reset_at": "2026-11-24T02:00:00Z",
+    "pair": [
+      {"unit": "zero-sweep-2026-11-23-1600", "priority": 1, "est_minutes": 15, "not_before": "2026-11-24T00:00:00Z", "expires_at": "2026-11-24T02:00:00Z", "chain_id": "pre-reset-sweep-2026-11-23", "chain_seq": 1},
+      {"unit": "zero-sweep-2026-11-23-1700", "priority": 1, "est_minutes": 15, "not_before": "2026-11-24T01:00:00Z", "expires_at": "2026-11-24T02:00:00Z", "chain_id": "pre-reset-sweep-2026-11-23", "chain_seq": 2}
+    ],
+    "fixups_staged_by_the_same_call": {
+      "note": "sweep stages one priority 1 fix-up per ledger regular at the pair midpoint; the assignment named the pair only",
+      "not_before": "2026-11-24T00:30:00Z",
+      "expires_at": "2026-11-24T02:00:00Z",
+      "units_and_est_minutes": {"daily-missions-2026-11-23-1630": 11, "harvest-2026-11-23-1630": 9, "donations-2026-11-23-1630": 7, "trucks-2026-11-23-1630": 7, "vip-2026-11-23-1630": 6, "radar-2026-11-23-1630": 6, "gifts-2026-11-23-1630": 5, "mail-2026-11-23-1630": 5, "passes-2026-11-23-1630": 4, "train-2026-11-23-1630": 3, "duel-score-2026-11-23-1630": 2, "star-ceremony-2026-11-23-1630": 2},
+      "est_minutes_sum": 67
+    },
+    "warning": "fetch of records/2026-11-23 failed, branch reconcile skipped; expected, the branch does not exist yet"
+  },
+  "ae_watch": {
+    "unit": "scout-midday-2026-11-23-0612",
+    "regular": "scout-midday",
+    "activity": "perception-scout",
+    "segment": 2,
+    "priority": 2,
+    "est_minutes": 15,
+    "created_at": "2026-11-23T06:12:27Z",
+    "not_before": "2026-11-23T22:55:00Z",
+    "expires_at": "2026-11-23T23:35:00Z",
+    "event": "Alliance Exercise 21:00 server on 2026-11-23 = 2026-11-23T23:00Z = 15:00 PT",
+    "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --segment 2 --priority 2 --est-minutes 15 --not-before 2026-11-23T22:55:00Z --expires-at 2026-11-23T23:35:00Z --window \"read only watch of Alliance Exercise at 2300Z - no rally join or attack\"",
+    "exit": 0,
+    "brief": "appended to the unit body after minting: read the countdown or the stage, record the [Alliance Exercise] Alliance Reward mail, do not tap Claim All, red lines no attack, rally, join, march or PvP, any such surface stops as needs-owner"
+  },
+  "winter_battlefield_hold": {
+    "event": "Winter Battlefield 09:00 server on 2026-11-23 = 2026-11-23T11:00Z = 03:00 PT",
+    "decision": "NOT minted, held by the coordinator at A-20261123-0611",
+    "reason": "5v5 PvP matchmaking (_activities_/event-claims/INDEX.md:887, :902); OD-20261123-03 (may any PvP surface be acted on) is open",
+    "release": "a yes on OD-20261123-03, then the drafted command in 2210-watch-unit-rows.json proposals_not_minted"
+  },
+  "proof": {
+    "counts_before_sweep": {"at": "2026-11-23T06:12:43Z", "inbox": 18, "claimed": 0, "done": 2633},
+    "counts_after_sweep": {"inbox": 32, "claimed": 0, "done": 2633, "note": "14 sweep units added (2 pair, 12 fix-ups)"},
+    "validate": "pool valid, exit 0, run after the sweep",
+    "sweep_status_2026-11-23": "exit 1; both passes location inbox, status pending, executed false, geometry_ok true; exit 1 is the not-yet-executed state, not a geometry fault"
+  },
+  "sequencing_check": {
+    "method": "queue.py pick_key and _actionable imported read-only and applied to the live inbox at each instant, units unexpired at that instant, worst case with nothing yet done",
+    "rule": "pick_key = (effective expiry, effective priority, created_at); effective priority drops one per 2 hours of age (AGING_STEP_HOURS = 2, queue.py:828), so a priority 2 unit older than 2 hours counts as priority 1",
+    "at_2026-11-23T22:56Z": ["scout-midday-2026-11-23-0612 (AE watch, earliest expiry 23:35Z)", "vip-2026-11-22-1800", "scout-2026-11-22-1800"],
+    "at_2026-11-24T01:10Z": [
+      "1 vip-2026-11-22-1800", "2 scout-2026-11-22-1800", "3 scout-midday-2026-11-23-0609 (siege watch)",
+      "4-15 the twelve 1630 fix-ups", "16 zero-sweep-2026-11-23-1600", "17 zero-sweep-2026-11-23-1700"
+    ],
+    "reading": "once actionable at 01:10Z the siege watch outranks every fix-up and both sweep passes, because it is older (created 06:09Z against 06:12Z) and aged to effective priority 1. The queue order does NOT put the pair first; dispatch by name does.",
+    "fix_options": [
+      "A. coordinator dispatches the final pass by name before the watch (no queue change)",
+      "B. withdraw scout-midday-2026-11-23-0609 and mint a replacement after the sweep units, so created_at sorts it after the pair at equal expiry and effective priority; new id, requires the coordinator's word because the assignment said keep the units as minted"
+    ],
+    "load": {
+      "by_estimates": "12 fix-ups 67 min + pair 30 min + siege watch 15 min = 112 min of estimates; from 00:30Z the fix-ups, final pass and watch need 97 min in 90 min",
+      "observed_pace": "13 unit runs from 20:13 to 20:49 PT on 2026-11-22, about 3.0 minutes per unit (_records_/2026-11-22/INDEX.md); at that pace the 12 fix-ups take about 36 minutes and the load fits; projection, unverified for the passes"
+    },
+    "leftovers": "vip-2026-11-22-1800 and scout-2026-11-22-1800 (expiry 2026-11-24T02:00Z) are older than every sweep unit and rank first at each instant they remain; vip is the current next"
+  }
+}
