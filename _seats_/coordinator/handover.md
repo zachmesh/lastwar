@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T05:35:00Z
+modified: 2026-11-23T05:50:00Z
 level: L2
-version: 0.4.5
+version: 0.4.6
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -35,6 +35,8 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 - Not yet assigned: planner stages a duel-score read before the 02:00Z rollover on 11-24; scribe pilot split of alliance-donations; planner and scribe on IMP-20261123-04.
 
 - One-shot claim reminders for the Secret Missions deploy of about 04:50Z: 05:21Z, 05:51Z, 06:51Z and 08:51Z (ids in `2049-tick.md`). Each sends the operator a claim-only assignment; unclaimed finished tasks get plundered.
+
+- Splitting oversized files (`2147-split-plan.md`): `split-doc` is merged. Scribe splits `alliance-donations` then six more profiles; toolsmith adds `--keep-entry` so the two registers keep their paths as entry pages; the exempt lines go when each register is split; the coach then writes dated retro notes to the daily retro, not the registers.
 
 ## Open owner decisions
 
