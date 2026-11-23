@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+788,knowledge,resource-collection Changelog missing 1.63.0/1.64.0/1.65.0 entries; newest ent,#865,lastwar scribe,P3,changelog hygiene
+784,play,Wanted Boss has no owning regular: live Go windows are observed but never acte,#861,lastwar planner,P2,Wanted Boss has no regular; stage coverage
+783,"idea,play","Candidate task type: Black Market (Events hub tab, 7190 cash held, no owning r",#862,lastwar scout,P2,Black Market purchases are owner-only; read only
+750,tooling,Enqueue landing point vs live done can duplicate-mint a chain unit (zombie 036,#864,lastwar toolsmith,P2,duplicate-mint risk
+749,records,"Day-INDEX mirror/branch drift, Nov 19 (89 vs 78 sections)",#865,lastwar planner,P3,"day-INDEX drift, Nov 19"
+748,"tooling,records",Pre-reset sweep units carry no ledger-walk text,#862,lastwar toolsmith,P2,ledger-walk text in sweep units
+747,"records,play",Duel day 1 Radar Training RELEASE lost whole (Nov 16),#861,lastwar planner,P2,"duel release window lost, stage the window"
+746,tooling,Doomed-probe picker burns scout units although a zombie unit is queued - apply,#862,lastwar toolsmith,P3,
+744,tooling,Planner already_present counting difference,#865,lastwar toolsmith,P3,
+743,"tooling,records",Ticker recordless slots: every scheduled slot must leave a record or a missed-,#865,lastwar coach,P3,ticker retired; verify and close if obsolete
+742,"tooling,records",Ticker VIP-day count drops Nov 13,#865,lastwar coach,P3,ticker retired; verify and close if obsolete
+741,"records,play","Mac offline, duel day 5 lost whole, day 6 Enemy Buster at risk",#861,lastwar coach,P3,"historical duel loss, Nov 15"
+740,"records,play","Window lost, duel day 4 lost whole, day 5 Total Mobilization at risk",#861,lastwar coach,P3,historical duel loss
+739,tooling,Queue-design version collision 0.23.0,#865,lastwar scribe,P3,version collision
+738,records,"pr-integration 1945 record hidden-only, no day-INDEX section",#865,lastwar scribe,P3,pr-integration record
+737,"tooling,records",Claim-before-read is now the ticker's normal behavior,#865,lastwar toolsmith,P3,documentation of ticker behaviour; ticker retired
+736,"records,play","Window lost, duel day 3 lost whole, day 4 at risk",#861,lastwar coach,P3,historical duel loss
+735,"tooling,records","_queue_/completed/ stub count moved 5 to 4, one stub unaccounted for",#865,lastwar planner,P3,
+734,records,Retro snapshot-cutoff discipline,#863,lastwar coach,P3,retro discipline
+733,tooling,VIP expires_at a day past its slot,#864,lastwar toolsmith,P3,VIP expires_at one day late
