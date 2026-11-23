@@ -5,7 +5,7 @@ activity: perception-scout
 segment: 2
 priority: 2
 created_at: 2026-11-23T08:08:28Z
-expires_at: 2026-11-23T12:50:00Z
+expires_at: 2026-11-23T12:00:00Z
 planned_for:
 not_before: 2026-11-23T11:45:00Z
 window: growth snapshot A1 read only never press Upgrade
