@@ -80,7 +80,7 @@ Session window about 10:54 to 11:09 America/Los_Angeles.
   Goals, Profession and Rewards buttons and a Season
   Contributions button. Season Contributions opens the
   Alliance Contribution Ranking (Mutual Assistance tab,
-  Season Total Ranking; [AP3x] Bears Lair rank 69 with
+  Season Total Ranking; [AP3x] owner account rank 69 with
   4,110,000 points; reward chest x0) - a ranking screen,
   not a pass claim. No Season Battle Pass free tiers and
   no Season Weekly Pass Daily Freebie or Daily Pickup were

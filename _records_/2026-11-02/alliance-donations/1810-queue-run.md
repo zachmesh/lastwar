@@ -122,7 +122,7 @@ grounded_in:
   rank 2 Abuss Apex 216,125,369; rank 3 StarFall
   207,761,433; rank 4 papillon707 203,535,837;
   rank 5 Missile Apex 198,709,407; rank 6 Echo Apex
-  196,836,790; own account rank 31, R3, Bears Lair,
+  196,836,790; own account rank 31, R3, owner account,
   power 149,311,528 - unchanged from the 13:53
   scout read. This confirms the 146,610,448
   mid-HUD figure seen in this pass is NOT account

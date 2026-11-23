@@ -24,7 +24,7 @@ grounded_in:
 - Events hub opened on the Arms Race page (Hero Advancement phase,
   Contest Segment Lv.29-30, score 0, point chests 2,000 / 4,000 /
   12,000 all unreached, cumulative 0/2, phase timer 03:37:48, warzone
-  rank 10 #2110 [AP3x]Bears Lair 0 points). Nothing claimable there;
+  rank 10 #2110 [AP3x]owner account 0 points). Nothing claimable there;
   Arms Race scoring is the arms-race unit's job, not this claim round.
 - Age of Oil tab (badge 1) opened. Milestone 1 "Unlock Tech: The Age
   of Oil", 1631/500 Tech Research, already claimed at 19:08 on
@@ -34,7 +34,7 @@ grounded_in:
   chest ignored five taps across four methods there): the ranking
   icon on the milestone 2 card was tapped first and opened the
   CONSTRUCTION RANKING panel (warzone-wide building-upgrade counts;
-  own row [AP3x] Bears Lair Unlisted 0; top [B3WB] WoW 42) - no claim
+  own row [AP3x] owner account Unlisted 0; top [B3WB] WoW 42) - no claim
   route there, and the Ranking Reward button was not tapped. Back on
   the Age of Oil page, a tap on the card body produced no change (the
   card opens no detail page). A single tap on the gold chest itself

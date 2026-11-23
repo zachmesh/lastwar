@@ -23,7 +23,7 @@ Session window about 18:41 to 18:53 America/Los_Angeles.
   (0,-360), Issue 282). No "active on a different device"
   dialog appeared, so no takeover was needed or made.
 - Game was on the MY PROFILE panel at entry (leftover state,
-  Lv.30 [AP3x]Bears Lair, 149.8M power, VIP13, #2110). Closed
+  Lv.30 [AP3x]owner account, 149.8M power, VIP13, #2110). Closed
   with the X at [838,43]; base screen read Total Power
   149,850,353.
 - Hot Deals: GEAR MASTER PACK on display, Availability 1,

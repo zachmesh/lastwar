@@ -20,7 +20,7 @@ Session window about 22:04 to 22:14 America/Los_Angeles.
   Alliance, Help (red dot on the Help entry).
 - HELP popup read live at entry: "Today's points gained from
   Alliance Help: 100/1,000". The four visible rows were only
-  this account's own requests (Bears Lair - Missile Mastery II
+  this account's own requests (owner account - Missile Mastery II
   research, Lv.27 Drill Ground, Defense Training VIII
   research, Lv.30 Aircraft Center), each already at 30/30.
 - Help All pressed: the game answered "Allies are very

@@ -328,7 +328,7 @@ of 2026-10-28.
   open and the boarding tap cost the window - the next
   train unit taps the carriage-2 plus first. Account not
   aboard (carriage 3 passenger list read: 6 riders, no
-  Bears Lair); the train departs in about 4 minutes
+  owner account); the train departs in about 4 minutes
   without this account. No contracts spent. Full detail
   in alliance-train/0209-queue-run.md.
 

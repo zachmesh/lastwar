@@ -1,60 +1,59 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T04:14:00Z
+modified: 2026-11-23T07:00:00Z
 level: L2
-version: 0.3.0
-description: The operator's live state after the move to the top-level session - game live, app approved, front-slot pre-start step mandatory
+version: 0.4.0
+description: The operator's live recipe - launch route, first-tap settling rule, guards, red lines, what to read instead of giant profiles, open claim times
 status: unverified
 grounded_in:
   - source: team establishment 2026-11-22 19:12 PT
-  - source: cu_bridge self-test 2026-11-22 19:13 PT
-  - source: survivor unit record _records_/2026-11-22/survivor-intake/2003-queue-run.md, first landed play unit
-  - source: coordinator tick _records_/2026-11-22/team-operations/2011-tick.md, top-level operator spawn
+  - source: operator runs 20261123T064816Z-7f1c49 and 20261123T065128Z-63e9d0, the launch and the settling observation, 2026-11-23T06:48Z to 06:52Z
+  - source: coordinator assignments A-20261123-0648-operator to A-20261123-0659-operator, including the owner decision of 06:47Z on the account dialog
 ---
 
 # Handover - operator
 
-Updated 2026-11-23 04:14Z (2026-11-22 20:14 PT).
-
 ## Holder
 
-- Seat: `operator`, session `session-b718c7de-6aab-4159-b87e-41aa424237e9`
-  (`[Last War] Operator`, top-level), since 2026-11-23T04:12:26Z.
-- Predecessor: delegated child session `238b9ce7-1c06-4bc5-9901-42aa8b27e087`
-  of the Steward, from 2026-11-23T03:08Z to 04:12Z. It is idle, holds no
-  claim and no token, and is no longer dispatched. DSH routes messages to it
-  only through its parent ("owned by subagent routing"), so the coordinator
-  could not reach it - the reason for the M2 spawn.
-- Scope: `_queue_/claimed/`, `_queue_/done/`, `_records_/<date>/`,
-  `_tools_/state/`; code and profiles are excluded.
+- Seat `operator`, session `session-b718c7de-6aab-4159-b87e-41aa424237e9`. Write scope:
+  queue claimed and done, `_records_/<date>/`, `_tools_/state/`.
 
-## State
+## Run recipe
 
-- The game is live. The owner approved `com.lastwar.ios` with Always allow at
-  about 19:55 PT; the approval is persistent.
-- Units played on this Mac so far: harvest 1955 failed and radar 2000 failed,
-  both with zero clicks landed because a system surface held the front slot;
-  survivors 2003 done, the first unit whose clicks landed.
-- First assignment of this holder: `A-20261123-0411-operator`,
-  unit `donations-2026-11-22-1803`.
+- Pre-start, same shell: `killall -9 UserNotificationCenter NotificationCenter`, then
+  `lsappinfo front` must name LastWar.
+- If the game is not running (check `lsappinfo list`, never start a second copy):
+  `osascript -e 'tell application "LastWar" to activate'`. It reaches the front in about
+  seven seconds. Never `open_app`, never Chrome.
+- First taps after a fresh launch may be inert for a minute: wait, retry once.
+- An 8-step cap executes 7. One action per turn, no zoom. Must-execute actions go by step 7. A claim may first ask
+  for `queue.py read --record <path> --executor operator`.
+- Server time is UTC minus 2 hours. The reset is 02:00Z.
 
-## Mandatory pre-start step, every play unit
+## Guards
 
-In the same shell, immediately before `cu_bridge.py start`:
+- Account-elsewhere dialog: the owner approved Confirm once, as a standing rule. If it
+  returns within 30 minutes of a Confirm, stop, report, pause desktop play 30 minutes, then retry.
+- A "Boarding closes in" banner with 70 seconds or more at the first frame: board first,
+  carriage 2, 3 Trade Contracts.
+- Non-UR days: dispatch SR or above trucks only.
 
-    killall -9 UserNotificationCenter NotificationCenter
-    lsappinfo front
+## Red lines
 
-`lsappinfo front` must name LastWar. If it does not, do not start the run:
-release the unit and the token and reply `blocked: foreground`.
+No real-money, diamond or premium spend. No PvP, attack, rally, march, Arena or General's
+Trial. No diplomacy, no ally-exchange trade. Quick Dispatch frozen. The mid-base trophy
+bubble is never tapped. No identifier values in any file or message: write "owner
+account", "[tag]", "the owner alliance", "an ally".
 
-## Lessons
+## Reading and records
 
-- One device token, one desktop run. A second input path is a defect.
-- A run that ends `waiting_for_person` is `blocked`, with the control link;
-  never `done`.
-- Never `open_app` when the game is already running; activate the existing
-  window (duplicate-window finding, Issue #822).
-- `queue.py claim` refuses a unit before its `not_before`; pick from
-  `queue.py next`, never by name ahead of its window.
+- Never read the giant profiles. Use the digest
+  `/tmp/lw-ps-digest.md`, or grep.
+- Record bodies 350 words or fewer, rows in a sidecar. Run `stub-index --apply` for new
+  records folders.
+
+## Open times (UTC)
+
+- 4-hour UR Capture the Oil Depot due about 08:51Z: jeep, Your Tasks, Claim first.
+- Then a treasures re-read.

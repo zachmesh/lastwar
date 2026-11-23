@@ -7,7 +7,7 @@
 
 ## Entry state (read live)
 
-- MY PROFILE: Lv.30 [AP3x]Bears Lair, 149.2M power, 48.6K kills, [AP3x]The Apex, VIP13 badge with red dot, #2110, likes 1,825
+- MY PROFILE: Lv.30 [AP3x]owner account, 149.2M power, 48.6K kills, [AP3x]The Apex, VIP13 badge with red dot, #2110, likes 1,825
 - Popularity popup on entry: "You're very popular! [AP3x]spac3cadet, [AP3x]Boss Hog 05 — 2 people think you're awesome! 1,820 +2" — dismissed with Awesome!
 - VIP screen: VIP13, "You've logged in 5 days in a row. Collect 140 VIP points tomorrow." Points **1,634,170 / 2,000,000** on entry.
 

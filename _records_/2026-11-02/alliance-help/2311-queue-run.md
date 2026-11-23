@@ -28,7 +28,7 @@ unit cap.
 - Pressed Help All. The game answered "Allies are very grateful
   for your assistance".
 - Header re-read live after the press: still 760 of 1,000, unchanged.
-  The visible rows were all this account's own requests (Bears Lair:
+  The visible rows were all this account's own requests (owner account:
   Morale research, Lv.30 Aircraft Center building, Healing Help,
   Lv.27 Drill Ground building), each showing 30 of 30 after the
   press. A player cannot help their own requests, so the unchanged

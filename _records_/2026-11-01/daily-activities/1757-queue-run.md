@@ -43,7 +43,7 @@ secret task tapped.
   secrets-2026-11-01-1857.
 - Duel total line: read in this pass star-ceremony
   unit, not in this sweep unit itself - League S38
-  calculating, Weekly Ranking Bears Lair rank 190 with
+  calculating, Weekly Ranking owner account rank 190 with
   17,240,439 weekly points, personal daily total
   unverified. Re-read fix-up
   star-ceremony-2026-11-01-1830.

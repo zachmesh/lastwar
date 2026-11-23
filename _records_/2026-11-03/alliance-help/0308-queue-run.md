@@ -20,7 +20,7 @@ Executor ticker-0304, unit help-2026-11-03-0230, status done.
   panel and opened Help at the visually grounded position.
 - Help page header read Today's points gained from Alliance
   Help 980 of 1,000. The listed requests were all this
-  account's own (Bears Lair, 30 of 30): Precision Targeting II
+  account's own (owner account, 30 of 30): Precision Targeting II
   research, Lv.30 Aircraft Center building, Morale research,
   and Healing Help.
 - Pressed Help All. The game answered "Allies are very

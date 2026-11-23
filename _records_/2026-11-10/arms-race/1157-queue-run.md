@@ -28,7 +28,7 @@ Activity: arms-race. Executor: ticker-1134.
   - Use at least 2,000 Hero EXP at a time: +1
   - Buy Packs containing Diamonds (1 Diamond): +30 -
     red-lined, never used.
-- Ranking row: #2110 [AP3x]Bears Lair, position 9 in the
+- Ranking row: #2110 [AP3x]owner account, position 9 in the
   segment, bar reading 90,500 (displayed figure, meaning
   unverified - it is not the phase score, which is 0).
   The row above is #2110 [AP3x]Awesome v2.

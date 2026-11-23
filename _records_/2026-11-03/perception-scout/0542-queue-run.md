@@ -30,7 +30,7 @@ button was tapped.
   Alliance Gifts and Alliance Techs, matching the
   0539 read minutes earlier.
 - Help panel, read live: Today's points gained from
-  Alliance Help 1,240/1,000. Four Bears Lair requests:
+  Alliance Help 1,240/1,000. Four owner account requests:
   building Lv.27 Drill Ground (time reduced 1d
   03:17:41), building Lv.30 Aircraft Center (3d
   23:58:04), Morale research (10:35:47), Precision

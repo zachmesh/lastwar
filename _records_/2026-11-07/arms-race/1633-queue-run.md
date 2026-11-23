@@ -22,7 +22,7 @@ after the 1204 pass capture failure (Issue 282).
 - Phase read live twice (16:37 and 16:46): Base Building,
   Contest Segment Lv.29-30, score 0, timer 01:22:22 then
   01:20:37 left in the phase, chest thresholds 6,250 /
-  12,500 / 30,000, account rank #2110 [AP3x]Bears Lair,
+  12,500 / 30,000, account rank #2110 [AP3x]owner account,
   segment rank 12, 0 points.
 - Scoring paths, all read live: Increase Building Power by
   1pt pays +1, Use 1-min Construction Speed-up pays +10,

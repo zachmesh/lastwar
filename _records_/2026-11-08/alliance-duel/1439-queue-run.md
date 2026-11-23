@@ -34,7 +34,7 @@ running on the Mac mini.
 - Ranking button: Weekly Rank, all alliances in the
   league. Top three all [AP3x]: TTS Rage Apex
   236,736,235; 끝밤 Bamie 173,482,410; 벌꿀오소리 Teemo
-  164,488,144. Own row (green highlight): Bears Lair,
+  164,488,144. Own row (green highlight): owner account,
   rank 178, 10,493,243 points. This is the WEEKLY
   cumulative total, not a daily total, and is recorded
   here as context only - it never substitutes for the
@@ -56,8 +56,8 @@ running on the Mac mini.
 ## Figures read live on screen
 
 - Power 149,850,353 at entry and at close.
-- Duel day 7 (settlement): weekly ranking own row Bears
-  Lair rank 178 with 10,493,243 weekly points (context
+- Duel day 7 (settlement): weekly ranking own row owner
+  account rank 178 with 10,493,243 weekly points (context
   only, not the daily total).
 - Duel total vs 3,600,000: unmeasured (verified no for
   that line).

@@ -14,7 +14,7 @@ status: partial
 - Time left 03:49:02 at first read, about 03:45:55 at the
   re-read after the chest tap. Phase ends about 06:02 local.
 - Score 9,300, segment rank 8, warzone 2110
-  ([AP3x]Bears Lair). Chest thresholds 6,250 / 12,500 /
+  ([AP3x]owner account). Chest thresholds 6,250 / 12,500 /
   30,000. Scoring rows read live: Increase Building Power
   by 1pt +1, Use 1-min Construction Speed-up +10 (red line,
   not used), Buy Packs containing Diamonds +30 per diamond

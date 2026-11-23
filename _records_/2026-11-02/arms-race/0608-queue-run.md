@@ -30,7 +30,7 @@ status: partial
   matching the 2026-10-26 pattern of progress carrying into the
   next tier.
 - Ranking-row chest, not claimed: the ranking row still shows the
-  finished Hero Advancement result (#2110 [AP3x]Bears Lair,
+  finished Hero Advancement result (#2110 [AP3x]owner account,
   40,500). One tap on its chest opened only the contents preview
   (Iron Chest (SR) 3, Food Chest (SR) 3, Coin Chest (SR) 3), with
   no Claim button, even though the phase has ended. Where the

@@ -117,11 +117,11 @@ Full unit record at `perception-scout/0919-queue-run.md`.
 - Strength Ranking Kills: 1 Teemo 71,222,940; 2 TTS Rage
   Apex 37,105,456; 3 Missile Apex 29,909,611; 4 Abŷss
   Apex 24,756,940; 5 ItStartsWithaDream 21,390,596;
-  6 Bamie 20,018,107; own 92 Bears Lair 48,638.
+  6 Bamie 20,018,107; own 92 owner account 48,638.
 - Strength Ranking Donation (Daily): 1 KaBoom420
   23,150; 2 DCna8ive 13,250; 3 Texan Apex 10,300;
-  4 MrCallejon 8,750; 5 Kkkayyyyy 8,550; own 32 Bears
-  Lair 5,300. Donate and Rewards observed only.
+  4 MrCallejon 8,750; 5 Kkkayyyyy 8,550; own 32 owner
+  account 5,300. Donate and Rewards observed only.
 - City List Rare Soil: 5.88K/h, 6/6 cities. City List
   Coal: 13.53K/h, 4/4 strongholds; Lv.6 cities
   +3,456/h, Lv.5 +3,312/h. Captures left 2/2, war
@@ -142,7 +142,7 @@ Full unit record at `perception-scout/0919-queue-run.md`.
 
 ### Scout-events, 2150 unit (ticker-2134, stale 11-04 midday chain) - late catch-up read 2026-11-07 about 21:44 to 21:50 local
 
-- Drone Boost (star-icon tab): Contest Segment Lv.29-30, 0/2 chests, score 0, timer 00:14:48; tiers 1,500 / 10,000 / 30,000 at 2,360 / 4,800 / 11,800; scoring rows Drone Battle Data +1, Stamina +100, diamond packs +30 (observed only). Own rank 7, #2110 [AP3x]Bears Lair, score 0.
+- Drone Boost (star-icon tab): Contest Segment Lv.29-30, 0/2 chests, score 0, timer 00:14:48; tiers 1,500 / 10,000 / 30,000 at 2,360 / 4,800 / 11,800; scoring rows Drone Battle Data +1, Stamina +100, diamond packs +30 (observed only). Own rank 7, #2110 [AP3x]owner account, score 0.
 - Frontline Breakthrough (tab badge 1): timer 20:04:23, phase Saving Soldiers, 42%; reward row red gem 100, gold card 10, crates 18, coins 18, 3, 3; Challenge button red dot (observed only).
 - Winter Battlefield (5v5): "Event is starting soon", countdown 20:14:01; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00, Base Lv.15+; Match greyed.
 - The Doomsday (tab badge 22): timer 20:12:58; Warzone Guardian [CTR1]초리vv, Total Damage 1.8G; Alliance Threat (0), Warzone Threat (0), "Threat Neutralized"; Rewards dot. Known label (event-claims metadata), not new.

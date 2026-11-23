@@ -38,7 +38,7 @@ dialog, no login demand.
 - Arms Race page, read live: current phase Hero
   Advancement, Contest Segment Lv.29-30, timer
   01:20:18 remaining, personal score 40,500, rank
-  #2110 [AP3x]Bears Lair, chest thresholds 2,000 /
+  #2110 [AP3x]owner account, chest thresholds 2,000 /
   4,000 / 12,000 shown. Observed only - the arms-race
   regular owns any tier work, and its 0603 unit is
   already queued. No tier claim state is asserted

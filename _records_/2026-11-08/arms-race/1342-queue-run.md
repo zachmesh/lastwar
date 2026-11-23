@@ -37,7 +37,7 @@ grounded_in:
   tags 2,360 / 4,800 / 11,800). No chest earned at
   score 0. Cumulative counter chest at top left reads
   0/2, not full, no bounce. Ranking row #2110
-  [AP3x]Bears Lair with score 0, matching the phase
+  [AP3x]owner account with score 0, matching the phase
   score; its chest is preview-only per precedent and
   was not tapped.
 - Scoring table unchanged from the 1333 read: Train a

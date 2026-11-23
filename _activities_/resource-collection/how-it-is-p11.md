@@ -1,0 +1,12 @@
+---
+title: How it is done part 11
+created: 2026-11-23T06:19:33Z
+modified: 2026-11-23T06:19:33Z
+version: 0.1.0
+sequence: 13
+description: News Center back-arrow blocker (2026-11-22 0842 unit, third unit to hit it after scout seq 18's
+---
+- News Center back-arrow blocker (2026-11-22 0842 unit, third unit to hit it after scout seq 18's two taps): the News Center panel was left open by the ticker-0812 scout seq 18, and its back arrow is unresponsive to a single tap at the fresh-ground centre (90,910), a 1-second long-press at the same point, a frontmost-window retry of the same tap, and a tap on the dimmed margin at (30,500). The working route is close-and-relaunch (macOS red close button, then open_app; the Last War > Quit Last War menu item reports disabled). The blocker is carried to the scout seq 19 successor for the R2 metadata write - the button, not the panel, is the blocker. Open question, NOT claimed: the 1133 unit's duplicate-window finding (Issue #822) raises whether this blocker is also input going to a dead window rather than a dead control - untested.
+- The gold truck icon is not a verified loot-panel entry - measured 2026-11-07 (1941 unit): tapping the gold truck icon at norm 681,814 panned the map down to the Drill Ground area instead of opening a loot panel. The loot panel entry remains unlocated and the Armed Truck loot state stays unverified.
+- The gold circle with a blue gem above the blue truck vehicle is a radar shortcut, not the truck loot - measured 2026-11-09 (0636 unit): tapping it opened the world/radar map showing "6 task rewards can be claimed" with a Claim All button; the rewards belong to the radar unit and were left untouched, and the truck vehicle itself was not tapped, so the Armed Truck loot state stays unverified.
+- Armed Truck, R2 escalation 2026-11-10 (Issue #566): the loot check has now been deferred three consecutive harvest units (2026-11-09 0636, 1220, 2026-11-10 0257) because no executor has located the truck on the base screen. The 0257 unit's negative datapoints: the blue vehicle at the gate is 2nd Squad Lv.20, not the Armed Truck (tapping it opens no panel); a tap on the teal vehicle at the bottom-left edge (norm 70,820) produced no change; the gate toast "...ies are fully loaded, ...e claim them" was seen a third time (also in the 0318 radar record) with the full text off-frame left, and it is NOT established whether it is the Armed Truck loot notice. Per rule R2 the blocker belongs in the activity metadata with a changed entry route before any further unit of this type runs;

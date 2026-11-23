@@ -150,7 +150,7 @@ Warzone! Send scouts!"
 - Tiers: 2,360 at 6,250; 4,800 at 12,500; 11,800 at 30,000.
 - Paths: Building Power +1 per pt; 1-min Construction
   Speed-up +10; Buy Packs containing Diamonds +30.
-- Ranking: #2110 [AP3x]Bears Lair, segment rank 8, score 0.
+- Ranking: #2110 [AP3x]owner account, segment rank 8, score 0.
 - Flag: only the Building Power path sits inside the red
   lines; arms-race unit judges under R4.
 
@@ -222,7 +222,7 @@ as the chain successor.
   timer 3d 22:21:10. Both bars far past their 500 targets.
 - Arms Race (carried read 19:23 local, same pass, zombie unit 019):
   "Base Building", Contest Segment Lv.29-30, timer 02:36:14,
-  our rank #2110 [AP3x]Bears Lair, 0 points. Tasks: Increase
+  our rank #2110 [AP3x]owner account, 0 points. Tasks: Increase
   Building Power by 1pt (+1), Use 1-min Construction Speed-up
   (+10), Buy Packs containing Diamonds (+30). Rewards tiers
   6,250 / 12,500 / 30,000.
@@ -546,7 +546,7 @@ box) - to be enqueued by this unit as the chain successor.
 ### Help, read live about 23:52 local
 
 - "Today's points gained from Alliance Help: 0/1,000".
-- Requests waiting (4 visible): Bears Lair (the user) - Need
+- Requests waiting (4 visible): owner account (the user) - Need
   help with building Lv.30 Aircraft Center, "Time reduced:
   3d 23:58:04"; Jerry Apex - Need help with Missile Expansion
   II research; Dogo - Need help with building Lv.25 Barracks;

@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T00:42:23Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -358,7 +358,7 @@ that drag is the sweep-completeness check, not wasted motion.
   claimable. Events hub opened from the base right rail
   at norm 927,137. No bouncing chest was seen on the hub.
 - Arms Race, Unit Progression stage, read live: account
-  score 0, rank #2110 [AP3x]Bears Lair, stage countdown
+  score 0, rank #2110 [AP3x]owner account, stage countdown
   about 01:11. Point chests at 15,000, 30,000 and 75,000
   are all unearned at 0 points, and the top chest reads
   0/2, so no Arms Race chest was claimable. No grinding
@@ -397,7 +397,7 @@ that drag is the sweep-completeness check, not wasted motion.
 - Events hub opened from the base right rail. It
   landed on the current Arms Race phase page, Hero
   Advancement, Contest Segment Lv.29-30, read live:
-  account score 40,500, rank #2110 [AP3x]Bears Lair,
+  account score 40,500, rank #2110 [AP3x]owner account,
   phase countdown 02:08:44 falling. Point chest
   thresholds 2,000, 4,000 and 12,000 are all passed at
   this score. The top-left cumulative chest reads 6/2.
@@ -462,8 +462,8 @@ that drag is the sweep-completeness check, not wasted motion.
   6,250 chest produced no change, consistent with the
   phase score still at 0 as recorded by the 0608
   arms-race unit. The bottom ranking row still shows the
-  finished Hero Advancement result (#2110 [AP3x]Bears
-  Lair, 40,500), whose ranking chest was already
+  finished Hero Advancement result (#2110 [AP3x]owner
+  account, 40,500), whose ranking chest was already
   inspected in the 0608 unit (contents preview only, no
   Claim button). No bouncing chest, no reward red dot
   on this page.
@@ -534,8 +534,8 @@ that drag is the sweep-completeness check, not wasted motion.
   claim. Score reads 0; the three point chests
   (thresholds 1,500 / 10,000 / 30,000) show no claim
   state. The bottom ranking row still shows the
-  finished Hero Advancement result (#2110 [AP3x]Bears
-  Lair, 40,500), whose ranking chest was already
+  finished Hero Advancement result (#2110 [AP3x]owner
+  account, 40,500), whose ranking chest was already
   inspected in earlier units (contents preview only, no
   Claim button). No bouncing chest, no reward red dot
   on this page. Phase work itself belongs to the
@@ -604,8 +604,8 @@ that drag is the sweep-completeness check, not wasted motion.
   not full, nothing to claim. Score reads 9,300; the
   three point chests (thresholds 15,000 / 30,000 /
   75,000) are all above the score, no claim state.
-  The bottom ranking row shows #2110 [AP3x]Bears
-  Lair, 9,300. Phase work itself belongs to the
+  The bottom ranking row shows #2110 [AP3x]owner
+  account, 9,300. Phase work itself belongs to the
   arms-race unit, not this sweep. No bouncing chest,
   no reward red dot on this page.
 - Desert Battlefield (Desert Storm Battlefield):
@@ -647,7 +647,7 @@ that drag is the sweep-completeness check, not wasted motion.
   score 0, cumulative chest 0/2 (not full, not
   bouncing), point chests 6,250 / 12,500 / 30,000
   all locked. The bottom rank row reads #2110
-  [AP3x]Bears Lair with 9,300 - phase context only,
+  [AP3x]owner account with 9,300 - phase context only,
   not a claim, and not the current phase score.
   Pushing the phase is the arms-race unit's job,
   not this sweep.
@@ -1099,7 +1099,7 @@ that drag is the sweep-completeness check, not wasted motion.
   (event ended 2026-10-30, chain closed) and no Desert Storm
   Battlefield tab in the current rotation.
 - Arms Race (Tech Research stage, Contest Segment Lv.29-30): score 0,
-  rank #2110 [AP3x]Bears Lair, stage countdown 02:57:24. Point chests
+  rank #2110 [AP3x]owner account, stage countdown 02:57:24. Point chests
   at 6,250 / 12,500 / 30,000 all unreached. The 0/2 chest counter at
   the top is unread (meaning not established this unit). No grinding
   done (research speed-ups and diamond packs are costs, not claims).
@@ -1173,7 +1173,7 @@ that drag is the sweep-completeness check, not wasted motion.
 - Arms Race checked - Base Building phase, Contest Segment Lv.29-30,
   score 0, point chests 6,250 / 12,500 / 30,000 all unreached,
   cumulative chest 0/2, phase timer 02:45:50, warzone rank 9
-  (#2110 [AP3x]Bears Lair, 0 points). Nothing claimable. Scoring
+  (#2110 [AP3x]owner account, 0 points). Nothing claimable. Scoring
   paths are building power +1, 1-min construction speedup +10
   (burning items, not done) and diamond packs +30 (paid, not done).
   Arms Race grinding is the arms-race unit's job, not this claim
@@ -1238,9 +1238,9 @@ that drag is the sweep-completeness check, not wasted motion.
 
 - Unit events-2026-11-08-2257 by ticker-0204, about 02:21 to 02:24 local, status partial. Evidence in `_records_/2026-11-09/event-claims/0224-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211. No different-device dialog appeared.
 - Age of Oil milestone 2 CLAIMED - the 1914 blocker is discharged. Milestone 1 "Unlock Tech: The Age of Oil", 1631/500 Tech Research, already claimed at 19:08 on 2026-11-08. Milestone 2 "Unlock Stage: Base Expansion II", 9000/500 Building Upgrades, gold chest still showing, stage badge still 1.
-- Milestone 2 chest, different entry route per the 1914 unit (the chest ignored five taps across four methods there): the ranking icon on the milestone 2 card was tapped first and opened the CONSTRUCTION RANKING panel (warzone-wide building-upgrade counts; own row [AP3x] Bears Lair Unlisted 0; top [B3WB] WoW 42) - no claim route there, and the Ranking Reward button was not tapped. Back on the Age of Oil page, a tap on the card body produced no change (the card opens no detail page). A single tap on the gold chest itself then opened the CONGRATULATIONS dialog at once. The chest blocker is discharged: the chest responds to a direct tap now, and the round-trip through the ranking panel (a fresh page state) is the recorded difference from the 1914 attempts. The 1914 section's "milestone 2 chest unresponsive" wording is superseded by this claim, not carried as a live blocker.
+- Milestone 2 chest, different entry route per the 1914 unit (the chest ignored five taps across four methods there): the ranking icon on the milestone 2 card was tapped first and opened the CONSTRUCTION RANKING panel (warzone-wide building-upgrade counts; own row [AP3x] owner account Unlisted 0; top [B3WB] WoW 42) - no claim route there, and the Ranking Reward button was not tapped. Back on the Age of Oil page, a tap on the card body produced no change (the card opens no detail page). A single tap on the gold chest itself then opened the CONGRATULATIONS dialog at once. The chest blocker is discharged: the chest responds to a direct tap now, and the round-trip through the ranking panel (a fresh page state) is the recorded difference from the 1914 attempts. The 1914 section's "milestone 2 chest unresponsive" wording is superseded by this claim, not carried as a live blocker.
 - Milestone 2 rewards read live in the dialog: coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2 - the same payout as milestone 1. Verification: after dismissing the dialog, the gold chest is gone from the Base Expansion II card and the Age of Oil tab badge is cleared. The stage track still shows stage 1 active. Issue #477: the milestone-2 chest question is now answered (chest claimed, method recorded); the ticker job already commented #477 with this evidence, and the issue stays open for the retro to close - no re-comment from this run.
-- Arms Race read in the same unit (cross-read for the arms-race profile): Events hub opened on the Arms Race page (Hero Advancement phase, Contest Segment Lv.29-30, score 0, point chests 2,000 / 4,000 / 12,000 all unreached, cumulative 0/2, phase timer 03:37:48, warzone rank 10 #2110 [AP3x]Bears Lair 0 points). Nothing claimable there; Arms Race scoring is the arms-race unit's job, not this claim round.
+- Arms Race read in the same unit (cross-read for the arms-race profile): Events hub opened on the Arms Race page (Hero Advancement phase, Contest Segment Lv.29-30, score 0, point chests 2,000 / 4,000 / 12,000 all unreached, cumulative 0/2, phase timer 03:37:48, warzone rank 10 #2110 [AP3x]owner account 0 points). Nothing claimable there; Arms Race scoring is the arms-race unit's job, not this claim round.
 - Not performed (carried): the check-in gift (Hot Deals check-in banner, "FREE TOMORROW" card) was not claimed in this unit; it belongs to the events regular and carries to the next events unit. Hub tabs NOT swept this unit - Winter Battlefield, Level Swap, Wanted Boss, Community, Desert Battlefield (red ! badge). The 15:06 sweep on 2026-11-08 found nothing claimable on Winter Battlefield, Level Swap, Wanted Boss and Community; this unit did not re-verify them. They carry to the next events unit.
 - No diamonds or money spent. No speedups burned. No paid button tapped. The game was left on the base screen.
 - Result stats: target 3, achieved 1, resources_gained coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2, costs about 4 minutes of unit time, no items spent, verified yes, blocker_category c (carried items only).
@@ -1275,7 +1275,7 @@ that drag is the sweep-completeness check, not wasted motion.
 ## What the 2026-11-09 1500 unit added - partial hub sweep, Hero Advancement just started, Desert Storm badge is a notice, check-in tab does not exist in the hub
 
 - Unit events-2026-11-09-1057 by ticker-1434, about 14:55 to 15:00 local, status partial - hub sweep started but not finished; two tabs checked, five tabs unswept. Evidence in `_records_/2026-11-09/event-claims/1500-queue-run.md` (commit 4860808ff on records/2026-11-09). Unit expiry 22:57:00Z passed mid-unit; the pass budget was reached at close.
-- Arms Race page (Hero Advancement, Contest Segment Lv.29-30): phase just started, timer 03:04:14 left, score 0, point chests at 2,000 / 4,000 / 12,000 all locked, cumulative chest 7/8 (not full, not claimable). Ranking #2110 [AP3x]Bears Lair, 90,500 shown. No claimable reward here; the phase is the arms-race unit's job (arms-race-2026-11-09-1403 in the inbox). Cross-read folded into arms-race 1.70.0.
+- Arms Race page (Hero Advancement, Contest Segment Lv.29-30): phase just started, timer 03:04:14 left, score 0, point chests at 2,000 / 4,000 / 12,000 all locked, cumulative chest 7/8 (not full, not claimable). Ranking #2110 [AP3x]owner account, 90,500 shown. No claimable reward here; the phase is the arms-race unit's job (arms-race-2026-11-09-1403 in the inbox). Cross-read folded into arms-race 1.70.0.
 - Desert Storm Battlefield (red "!" badge on its tab): Registration ends in 2d 03:03:28, Battle Day 2026-11-13 03:00-03:30, Task Force A (You) vs B, Participants 20/20. Buttons Select Time / Select Participants only - a registration event, nothing personal to claim. The badge was a notice, not a claim.
 - Tab bar scrolled: remaining tabs are Wanted Boss, Community (plus Age of Oil, Winter Battlefield and Level Swap on the other side). No check-in tab exists in the Events hub - the shop carousel's check-in FREE GIFT is NOT reachable from here, so the passes unit's Events-hub follow-up (proposed in the 1449 record) is a dead end; the gift's only known entry is the shop Go button, which ignores background clicks. The 0450 section's pivot suggestion to try the Events hub is now closed. Remaining ideas for the gift are a foreground-click attempt on the shop Go button (or a different input route), owned by the passes units.
 - NOT performed (carried): the unswept tabs - Age of Oil, Winter Battlefield, Level Swap, Wanted Boss, Community - and the Arms Race cumulative chest re-check (7/8, one tier away from claimable). The next events unit sweeps them.
@@ -1303,7 +1303,7 @@ that drag is the sweep-completeness check, not wasted motion.
 ## What the 2026-11-10 0519 unit added - hub sweep complete, nothing claimable, Survey Center opened, Desert Storm re-read, hub roster now six tabs
 
 - Unit events-2026-11-10-0257 by ticker-0504, about 05:15 to 05:19 local, status done - the hub sweep the 02:21 unit left unfinished is now complete; nothing claimable was found on any tab. Evidence in `_records_/2026-11-10/event-claims/0519-queue-run.md` (commit 19608e2c9e on records/2026-11-10). Computer session cc-404 on the owner Mac mini.
-- Arms Race page (Base Building phase): timer 00:44:05 left at entry, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). Rank #2110 [AP3x]Bears Lair. The phase itself is the arms-race unit's job, not this unit's. Cross-read folded into arms-race 1.76.0.
+- Arms Race page (Base Building phase): timer 00:44:05 left at entry, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). Rank #2110 [AP3x]owner account. The phase itself is the arms-race unit's job, not this unit's. Cross-read folded into arms-race 1.76.0.
 - Survey Center (red badge 1): one entry - Season 11: Polar World Experience Survey, Proceed button. A survey to fill in, not an earned reward; filling it needs the owner's own answers, so it was left untouched. Follow-up for the owner: the survey is open and unanswered. Commented on Issue #506 by this run - the issue's "never opened" is now answered; the survey needs the owner, not a unit.
 - Community: 500 diamonds already Claimed; the Facebook, Discord, X and Reddit visit buttons are links, not claims. Nothing claimable.
 - Desert Storm Battlefield (red "!" badge on its tab): Registration ends in 1d 12:41:57, Battle Day 2026-11-13 03:00 to 03:30 local, Participants 20/20, Task Force A (You) vs Task Force B. Achievement Wall reads "No data available...". No Claim button, no bouncing chest. The red "!" badge's cause is unexplained - registration is complete (20/20, You in Task Force A), so it reads as a notice about the upcoming battle or the registration close, not a claim. Commented on Issue #550 by this run.
@@ -1331,7 +1331,7 @@ that drag is the sweep-completeness check, not wasted motion.
 
 - Unit events-2026-11-10-1057 by ticker-1343, about 13:52 to 13:58 local, status done. Evidence in `_records_/2026-11-10/event-claims/1358-queue-run.md` (commit b2c2b7a43 on records/2026-11-10). Computer sessions cc-463 then cc-464 on the owner Mac mini - cc-463 dropped mid-unit, cc-464 started, LastWar re-selected, no game state lost.
 - Events hub opened from the base Events icon. All six tabs read live in this unit, completing the 10:45 unit's follow-up (Survey Center and Community were unread then). The follow-up is closed.
-- Arms Race tab: Hero Advancement phase live, 00:05:51 remaining at the read (phase ends about 14:03), score 0, cumulative chest 0/2, point chests thresholds 2,000 / 4,000 / 12,000. Scoring paths: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never). No chest claimable. The account row reads rank 9, #2110 [AP3x]Bears Lair, 90,500 - the 90,500 is the cumulative event figure shown on that row, while the live phase score is 0; the two figures are not the same (the row figure is the lagging previous-phase display, see the arms-race profile). The 10:45 R4 judgment stands: the free paths cannot reach tier 3 (12,000) this phase. This is recorded here only; the phase is the arms-race unit's work - cross-read folded into arms-race 1.80.0.
+- Arms Race tab: Hero Advancement phase live, 00:05:51 remaining at the read (phase ends about 14:03), score 0, cumulative chest 0/2, point chests thresholds 2,000 / 4,000 / 12,000. Scoring paths: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never). No chest claimable. The account row reads rank 9, #2110 [AP3x]owner account, 90,500 - the 90,500 is the cumulative event figure shown on that row, while the live phase score is 0; the two figures are not the same (the row figure is the lagging previous-phase display, see the arms-race profile). The 10:45 R4 judgment stands: the free paths cannot reach tier 3 (12,000) this phase. This is recorded here only; the phase is the arms-race unit's work - cross-read folded into arms-race 1.80.0.
 - Age of Oil tab: warzone track stages 1-4. "Unlock Tech: The Age of Oil" - Complete 500 Tech Research, 4377/500, 5d 04:04:17 left. "Unlock Stage: Base Expansion II" - Complete 500 Building Upgrades, 17987/500. Both bars full, no claim. Progress grew since the 10:45 read (4219 to 4377, 17573 to 17987). The stage-1 badge 1 marks the node as unviewed, not a claimable reward (same as the 10:45 read).
 - Desert Battlefield tab: Desert Storm Battlefield, registered (Task Force A, You), registration ends in 1d 04:03:45, battle 2026-11-13 03:00-03:30, Participants 20/20. Nothing claimable.
 - Wanted Boss tab: Code 64, "Appears at server time: 00:00", Go button with 03:03:19 countdown and a red dot. Rewards pay on completing 1 attack; the boss has not appeared yet, so no attack and no claim is possible now. Go not tapped.

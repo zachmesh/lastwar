@@ -23,7 +23,7 @@ Activity: arms-race. Computer session cc-563.
 - Scoring paths as displayed: Increase Tech Power by 1pt +1; Use
   1-min Research Speed-up +10 (red line, never burned); Buy Packs
   containing Diamonds +30 per diamond (red line, never spent).
-- Ranking row: #2113 [AOSS]Mizuame on top; #2110 [AP3x]Bears Lair
+- Ranking row: #2113 [AOSS]Mizuame on top; #2110 [AP3x]owner account
   rank 9 with 50,500 - recorded as observed, it is the cumulative
   day figure (9,000 + 41,500 from the Hero Advancement phase), not
   the live phase score (0), matching the documented ranking-row

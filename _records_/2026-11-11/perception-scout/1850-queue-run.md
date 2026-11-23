@@ -72,7 +72,7 @@ our Warzone! Send scouts!"
   1-min Construction Speed-up, +10; Buy Packs containing
   Diamonds (1 Diamond), +30.
 - Ranking row: #2103 [WINA]Zhie688 above; #2110
-  [AP3x]Bears Lair, segment rank 8, score 0.
+  [AP3x]owner account, segment rank 8, score 0.
 - Calendar button top-right, not opened.
 - Flag for the arms-race unit: score 0 with 3h07m left and
   tier 3 at 30,000. Of the three paths, only Building Power

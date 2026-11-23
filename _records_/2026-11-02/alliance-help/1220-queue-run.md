@@ -26,7 +26,7 @@ Session window 12:18 to 12:20 PST on the owner Mac mini.
   points gained from Alliance Help 400 of 1,000, the same
   figure the 0836 unit closed on.
 - The visible list held only this account's own four
-  requests (Bears Lair: Lv.28 Drill Ground building, Lv.30
+  requests (owner account: Lv.28 Drill Ground building, Lv.30
   Aircraft Center building, Morale research, Precision
   Targeting II research), showing Time reduced displays
   on entry.

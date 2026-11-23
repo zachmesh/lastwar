@@ -26,7 +26,7 @@ phase verdict per rule R4.
   1-min Training Speed-up +10; Buy Packs containing
   Diamonds +30 per diamond. The speedup and pack paths
   are red lines and were not used.
-- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is
+- Ranking row figure 10,000 for #2110 [AP3x]owner account is
   the lagging previous-phase row (same figure as the
   2026-11-04 0722 Base Building record) and was NOT used
   as this phase score.

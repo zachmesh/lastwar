@@ -21,7 +21,7 @@ session cc-440.
   "You're very popular!" popup from [AP3x]papillon707
   (1,805 +1 likes) was dismissed with Awesome!, taking
   likes to 1,806 as displayed.
-- Profile read live: Lv.30 [AP3x]Bears Lair, VIP13 badge
+- Profile read live: Lv.30 [AP3x]owner account, VIP13 badge
   with no red dot visible on it. No red dot means the
   freebie state could not be confirmed from the badge
   alone, so the VIP screen itself had to be opened.

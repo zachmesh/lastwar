@@ -28,7 +28,7 @@ work began; no other pass could have taken it in between
   ended 2026-10-30, chain closed) and no Desert Storm
   Battlefield tab in the current rotation.
 - Arms Race (Tech Research stage, Contest Segment
-  Lv.29-30): score 0, rank #2110 [AP3x]Bears Lair,
+  Lv.29-30): score 0, rank #2110 [AP3x]owner account,
   stage countdown 02:57:24. Point chests at 6,250 /
   12,500 / 30,000 all unreached. The 0/2 chest counter
   at the top is unread (meaning not established this

@@ -1,9 +1,9 @@
 ---
 title: Survivor Intake Rule Digest
 created: 2026-11-23T06:30:02Z
-modified: 2026-11-23T06:30:02Z
+modified: 2026-11-23T07:13:14Z
 level: L1
-version: 0.1.0
+version: 0.3.0
 description: The standing rules an operator must follow when taking survivors in at the base gate, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -14,22 +14,28 @@ grounded_in:
 # Rule digest
 
 1. Take every survivor in; recruiting is free (scope-and-availability).
-2. Tap the survivor figure, not the bubble; crop the gate and confirm the "?" and the figure before any tap (how-to-enter-p2, how-to-enter-p5).
+2. Tap the figure, not the bubble; crop the gate and confirm "?" and figure first (how-to-enter-p2, how-to-enter-p5).
 3. Not survivors: pet markers, chat-bar bubbles, tent face bubbles, "!" visitors (how-to-enter-p3, how-to-enter-p4, how-to-enter-p5).
-4. A smiley or a cleared "?" is processed state, not a verified recruit; with no card read, record the intake unverified (how-a-recruit-p1).
-5. The line is clear only when no "?" bubbles remain; an empty gate is not presumed clear; if unverifiable, close unverified with a named re-read unit (how-a-recruit-p1, day-20261031-p1).
+4. A smiley or a cleared "?" is processed state, not a verified recruit; with no card read, record it unverified (how-a-recruit-p1).
+5. The line is clear only when no "?" bubbles remain; never presumed from an empty gate; if unverifiable, close unverified and name a re-read unit (how-a-recruit-p1, day-20261031-p1).
 6. Re-verify the line before tapping a second figure (how-a-recruit-p2).
-7. The gate sits at the bottom edge behind the chat bar; pan down, and the banner can cover the figures (how-to-enter-p2).
-8. After an intake, Quick Dispatch is the first action of the next unit (R7): tap the building body, then the paw; the centre tap is retired (scope-and-availability, day-20261031-p1, day-20261031-p5).
+7. The gate sits at the bottom edge behind the chat bar; pan down; the banner can cover figures (how-to-enter-p2).
+8. After an intake, Quick Dispatch is the next unit's first action (R7): tap the building body, then the paw; the centre tap is retired (scope-and-availability, day-20261031-p1, day-20261031-p5).
 9. Never press Escape; it quit the game (day-20261101).
 10. The fourth identical partial is a process failure reported to the owner (R2) (day-20261031-p1).
 
-Unverified: the Quick Dispatch button's effect, 24th consecutive unit without a verified run (day-20261031-p5, changelog-section-p1); window-state and move-wait-click methods, measured by ticker units, not the current bridge (how-to-enter-p1, how-a-recruit-p2); line refill rate (open-questions-p1).
+Unverified: Quick Dispatch effect, 24 consecutive units unverified (day-20261031-p5, changelog-section-p1); window-state and move-wait-click methods, from ticker units, not the current bridge (how-to-enter-p1, how-a-recruit-p2); line refill rate (open-questions-p1).
 
 ## Errata
 
-Unverified until a live read settles each. Articles stay verbatim; the newer one governs.
+Unverified until a live read settles each; articles stay verbatim, the newer governs.
 
-- how-to-enter-p1 "windowed 642x951": bounded by how-to-enter-p2 (2026-11-21, newer), windowed 788x1083, precondition clear.
+- how-to-enter-p1 "windowed 642x951": bounded by how-to-enter-p2 (2026-11-21, newer), 788x1083.
 - day-20261031-p1 "blocker no longer stands": Quick Dispatch still unverified per changelog-section-p1 (2026-11-22, newer).
-- open-questions-p5 "next pass hits the same wall": superseded by its own 2026-11-11 correction.
+- open-questions-p5 "next pass hits the same wall": superseded by its 2026-11-11 correction.
+- rule 8 Quick Dispatch: the 2026-11-23 freeze is lifted here, the owner saying it answers "no survivors available" cleanly (relayed, not logged); it stays for troop-training.
+
+## Changelog
+
+- 0.2.0, 2026-11-23 - Errata added.
+- 0.3.0, 2026-11-23 - Freeze lifted for survivors.

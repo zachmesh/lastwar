@@ -57,7 +57,7 @@ donated, joined or bought anywhere in this unit.
     Alliance Language R5, Disband Alliance R5, Transfer
     Leadership R5, Edit Announcement R5+R4, Invite Teleport
     R5, Set Alliance Assembly Point R5+R4, Send Mails to
-    Members R5+R4. R3 Bears Lair holds no permission in this
+    Members R5+R4. R3 owner account holds no permission in this
     matrix, consistent with Applicants being permission-gated
     (unit 005). Toast seen mid-screen: "Alliance Gift (R)
     received!".
@@ -141,8 +141,8 @@ donated, joined or bought anywhere in this unit.
 - Loot box re-check (world map, live about 23:13): gift box
   at the right end of the March Queues bar, badge 3, tapped
   at the freshly grounded point; LOOT panel holds the same
-  three rows unit 2153 read at 21:51 - Bears Lair Claimed
-  (bread 720.0K), Bears Lair Claimed (red gem 85), Lv.1 Doom
+  three rows unit 2153 read at 21:51 - owner account Claimed
+  (bread 720.0K), owner account Claimed (red gem 85), Lv.1 Doom
   Elite, lightning -20, Leader tag, gold chest x2, red gem
   20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (cut off)
   - still UNCLAIMED, no Claimed label, now unclaimed for

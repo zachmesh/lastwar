@@ -69,7 +69,7 @@ the same pass.
   Use 1-min Construction Speed-up, +10 stars; Buy Packs
   containing Diamonds (1 Diamond), +30 stars - the diamond
   path is a red-line spend and is never taken.
-- Own row: #2110 [AP3x]Bears Lair, rank 11, score 400.
+- Own row: #2110 [AP3x]owner account, rank 11, score 400.
   Row above: #2112 [FLow]LuLLu, rank 10.
 - The arms-race unit owns acting on this phase; scout
   records only.

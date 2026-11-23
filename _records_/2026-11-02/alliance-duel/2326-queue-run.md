@@ -34,7 +34,7 @@ the next tick re-produces this regular.
 - Personal row hunt: the visible MVP list showed Abyss Apex
   18,306,600, [Kmf] 11,296,350 and [Kmf] Maison JP 10,407,300.
   One upward drag scrolled the list to further rows, but the
-  account's own row (Bears Lair) was not reached before the
+  account's own row (owner account) was not reached before the
   pass budget ended. The personal daily total is therefore
   UNREAD in this unit, and no total or gap against 3,600,000
   is reported: a fragment or alliance figure never substitutes

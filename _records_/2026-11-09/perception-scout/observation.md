@@ -516,7 +516,7 @@ not a chest, and it responds.
   9465/10000, green bar still filling, gold chest icon at
   the bar's right end and a greyed hexagon below (both
   unmeasured).
-- Research Ranking read live: owner [AP3x] Bears Lair
+- Research Ranking read live: owner [AP3x] owner account
   Unlisted at 0; leader [AP3x] Teemo 31, then 29/25/22/21/
   16/16. Ranking rewards measured in full, top 20 only:
   No.1 25K badge x1 + gold x20 + 5m x20 + red gem x100;

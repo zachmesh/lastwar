@@ -47,10 +47,10 @@ tracker is left untouched.
   93.5M, Raze Cromwell 145.4M, all Online). Manage buttons
   not tapped.
 - Strength Ranking, all three tabs: Power top 6 and own
-  #34 Bears Lair 147,744,234 (HUD read 149,850,353 minutes
+  #34 owner account 147,744,234 (HUD read 149,850,353 minutes
   earlier; discrepancy noted, unverified); Kills top 6 and
-  own #94 Bears Lair 48,638; Donation Daily top 5 and own
-  #46 Bears Lair 1150. Donate and Rewards buttons observed
+  own #94 owner account 48,638; Donation Daily top 5 and own
+  #46 owner account 1150. Donate and Rewards buttons observed
   only, not tapped. Weekly subtab not opened.
 - Alliance Events: single tab seen, Zombie Siege, mode
   Alliance Exercise (30-minute Battle Stage, top-damage
@@ -66,7 +66,7 @@ tracker is left untouched.
   Message and Event tabs not opened.
 - Applicants: two taps produced no page change; the second
   surfaced the toast "Permission needed to execute this
-  action." R3 Bears Lair cannot open Applicants
+  action." R3 owner account cannot open Applicants
   (officer-only surface). Resolved by permission, not
   unwalked.
 - Nothing claimed, fought, dispatched, donated, joined or

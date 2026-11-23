@@ -37,7 +37,7 @@ grounded_in:
 
 ## MY PROFILE, read live about 04:52 local
 
-- Lv.30 [AP3x]Bears Lair, power 149.8M, 48.6K kills,
+- Lv.30 [AP3x]owner account, power 149.8M, 48.6K kills,
   Lv.63, Lv.2, [AP3x]The Apex, VIP13 with a red dot,
   #2110. Likes 1,810. Gift display: flower 12, gift box
   88, trophy 11, one empty slot. Moments: "No posts

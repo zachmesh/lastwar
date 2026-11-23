@@ -24,8 +24,8 @@ first tap; no foreground repair was needed.
   active this morning); that red dot belongs to the next gifts
   unit, not this one.
 - Help dialog at entry: Today's points gained from Alliance
-  Help 720/1,000 (unchanged since the 0140 unit). Rows: Bears
-  Lair (own) Missile Mastery II research 30/30, Bears Lair
+  Help 720/1,000 (unchanged since the 0140 unit). Rows: owner
+  account (own) Missile Mastery II research 30/30, owner account
   (own) Lv.30 Aircraft Center 30/30, 1717Flower Lv.25
   Farmland, 1717Flower Lv.25 Farmland (second row cut off at
   the fold, same ally and building).

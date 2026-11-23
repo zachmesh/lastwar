@@ -109,7 +109,7 @@ the only action it offers (Apply to transfer warzones) is a
 consequential owner-only move - leaving Warzone #2110 and the
 AP3x alliance - so this is NOT proposed as an executable
 regular. Filed as an owner-decision Issue (see unit result):
-whether Bears Lair should apply to transfer during Application
+whether owner account should apply to transfer during Application
 Day, deadline 2026-11-12 18:00:00 UTC. No diamonds or money
 spent, nothing applied for, nothing used.
 

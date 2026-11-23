@@ -22,7 +22,7 @@ status: partial
     correction is recorded here for the next help unit.
   - Help page header read live: Today's points gained from
     Alliance Help 440 of 1,000.
-  - Visible rows at entry: four own (Bears Lair) requests, all
+  - Visible rows at entry: four own (owner account) requests, all
     already time-reduced - Morale research, Precision Targeting
     II research, Lv.30 Aircraft Center building, Lv.28 Drill
     Ground building. A player cannot help their own requests.

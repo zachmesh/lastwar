@@ -29,7 +29,7 @@ regular.
   window runs to about 17:57 local.
 - Live score: 0, read from the star bar at the top left
   of the phase page. The ranking row's 40,500 for
-  [AP3x]Bears Lair is the lagging previous-phase row
+  [AP3x]owner account is the lagging previous-phase row
   (the same figure the 2026-11-02 1015 record flagged
   as lag), not this phase's score.
 - Point chest thresholds: 2,000 / 4,000 / 12,000

@@ -22,9 +22,9 @@ Session window about 22:12 to 22:20 America/Los_Angeles.
   Top scorers: [TFox] Mihye 41,111,404; [AP3x] Texas Boy
   32,838,375; [TFox] yang godain ditabok 32,593,063.
 - Scrolled the Today's Duel ranking down through ranks 6-14
-  (scores 16.6M down to 9.0M) without finding Bears Lair.
+  (scores 16.6M down to 9.0M) without finding owner account.
 - Opened Ranking, Daily Rank: the Mon. tab is selected and
-  the pinned own row reads Bears Lair [AP3x] The Apex,
+  the pinned own row reads owner account [AP3x] The Apex,
   Unlisted, 0 points.
 - Opened Today's Theme: the personal points counter at the
   top reads 0. Two independent live reads agree: today's

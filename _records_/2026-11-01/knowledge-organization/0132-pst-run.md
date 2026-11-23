@@ -77,7 +77,7 @@ or cron definition was edited.
   Roulette 0 tokens wheel 0/10, League S38 Gold Tier 38-7
   AP3x rank 3 with the "Calculating..." banner at 13d
   18:53, Match Record Week 2 AP3x vs [Sync] IMPERIUM 7-6,
-  Weekly Ranking Bears Lair rank 190 with 17,240,439
+  Weekly Ranking owner account rank 190 with 17,240,439
   weekly cumulative points (explicitly not a daily
   total), daily total closed unverified with the
   Achievements pill and Your Alliance routes dropped
@@ -89,7 +89,7 @@ or cron definition was edited.
   THANK THE CONDUCTOR dialog at quantity 1 with 156
   Trade Contracts closed with X without gifting because
   the carriage was unverified, the platform read
-  (carriage 1 3/7, carriage 2 7/7 with the Bears Lair
+  (carriage 1 3/7, carriage 2 7/7 with the owner account
   portrait, carriage 3 4/7, carriage 4 10/7), the account
   already aboard carriage 2 so no boarding and no second
   carriage, and no contracts spent.

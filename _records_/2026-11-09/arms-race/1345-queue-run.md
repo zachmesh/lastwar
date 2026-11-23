@@ -22,7 +22,7 @@ Unit: arms-race-2026-11-09-1003. Status: partial. Target missed.
   Stamina +100; Buy Packs containing Diamonds (1 Diamond) +30 (banned,
   untouched).
 - Cumulative counter chest: 6/8 at start, 7/8 at close. Ranking row:
-  #2110 [AP3x]Bears Lair, rank 8, cumulative event points 88,500 at
+  #2110 [AP3x]owner account, rank 8, cumulative event points 88,500 at
   start, 90,500 at close.
 
 ## What was done

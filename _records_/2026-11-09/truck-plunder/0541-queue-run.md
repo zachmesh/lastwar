@@ -46,8 +46,8 @@ below Squad 1 at 24.96M. Trade day ends 18:00 PT.
   vehicle-front icon does not open trade.
 - Method 2 (changed variant): a tap at norm (913,940) on the
   bottom-right WORLD corner, the 0242 WORLD-corner route.
-  It opened the world map (alliance territory, [AP3x]Bears
-  Lair base centre, March Queues 1/4), not Intercity Trade -
+  It opened the world map (alliance territory, [AP3x]owner
+  account base centre, March Queues 1/4), not Intercity Trade -
   the 0242 route did not reproduce in this framing.
 - Returned to base with the BASE button. Per queue rule R2,
   both methods end inside this unit; the next trucks unit

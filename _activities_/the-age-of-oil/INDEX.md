@@ -1,9 +1,9 @@
 ---
 title: The Age of Oil
 created: 2026-11-09T20:32:17Z
-modified: 2026-11-12T04:32:17Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Season II warzone collective-progression event in the Events hub - three warzone-wide counters with per-commander ranking rewards, ends about 2026-11-15 in the late afternoon PT, no recurring agent action
 status: unverified
 grounded_in:
@@ -102,7 +102,7 @@ candidate is tracked in GitHub Issue #477.
 - Research Ranking, 2026-11-09 11:42 PT: rank 1 [AP3x] Teemo 31, rank
   2 [AP3x] Bamie 29, rank 3 [W77] 25, rank 4 [B3WB] etre 22, rank 5
   [CTR1] Lt grills 21, rank 6 [aP3x] jbG 16, rank 7 [W77] 16. The
-  owner, [AP3x] Bears Lair, is Unlisted at 0 - no Tech Research
+  owner, [AP3x] owner account, is Unlisted at 0 - no Tech Research
   counted in this window.
 - Milestone claim state: milestone 1 (Unlock Tech) claimed by the
   2026-11-08 1914 unit - CONGRATULATIONS paid coin chest x3, red

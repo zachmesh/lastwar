@@ -64,7 +64,7 @@ up for, or bought. Full unit record at
 
 - Arms Race: phase Hero Advancement, Contest Segment
   Lv.29-30, timer 01:20:18, personal score 40,500,
-  rank #2110 [AP3x]Bears Lair, chest thresholds
+  rank #2110 [AP3x]owner account, chest thresholds
   2,000 / 4,000 / 12,000.
 - Desert Storm Battlefield: registration ends in
   2d 13:19:58, Task Force A and B, limited to Top 32
@@ -176,7 +176,7 @@ bought. Full unit record at `perception-scout/0539-queue-run.md`.
 
 - Arms Race: phase Hero Advancement, Contest Segment
   Lv.29-30, timer 00:22:12, personal score 40,500,
-  rank #2110 [AP3x]Bears Lair, chest thresholds
+  rank #2110 [AP3x]owner account, chest thresholds
   2,000 / 4,000 / 12,000. Unchanged score and rank from
   the 0441 read at 04:41 the same morning.
 - Desert Storm Battlefield: registration ends in
@@ -386,16 +386,16 @@ execution-date folder; this section stays in the pass day file).
 - Power: #1 R4 ItStartsWithaDream 271,007,082; #2 R5 Abyss
   Apex 266,630,621; #3 R4 StarFall 207,190,321; #4 R3 Nuna
   Knuckles 206,479,264; #5 R3 xChroniApex 201,010,910; #6 R4
-  KillerInstinct14 197,573,798; own #34 R3 Bears Lair
+  KillerInstinct14 197,573,798; own #34 R3 owner account
   147,744,234 (HUD power 149,850,353 read minutes earlier;
   the discrepancy is noted, unverified).
 - Kills: #1 R4 Teemo 71,985,826; #2 R4 TTS Rage Apex
   39,938,810; #3 R3 Missile Apex 30,312,818; #4 R5 Abyss
   Apex 25,185,511; #5 R4 ItStartsWithaDream 21,394,076;
-  #6 R3 Bamie 21,330,771; own #94 R3 Bears Lair 48,638.
+  #6 R3 Bamie 21,330,771; own #94 R3 owner account 48,638.
 - Donation (Daily subtab): #1 R2 KaBoom420 6000; #2 R3
   Skinner Box 5300; #3 R3 MrCallejon 5100; #4 R3 ANGEL777
-  Apex 4350; #5 R1 MUZIQUE Apex 3850; own #46 R3 Bears Lair
+  Apex 4350; #5 R1 MUZIQUE Apex 3850; own #46 R3 owner account
   1150. Donate and Rewards buttons observed only, not
   tapped. Weekly subtab not opened.
 
@@ -433,7 +433,7 @@ execution-date folder; this section stays in the pass day file).
 
 - Two taps on the Applicants bottom-bar button produced no
   page change; the second surfaced the toast "Permission
-  needed to execute this action." R3 Bears Lair cannot open
+  needed to execute this action." R3 owner account cannot open
   Applicants (officer-only surface). Recorded as resolved
   by permission, not unwalked.
 
@@ -469,7 +469,7 @@ not the execution end.
 ### Scout-alliance remainder, 2153 unit (ticker-2134, stale 11-02 chain) - re-check 2026-11-07 about 21:48 to 21:53 local
 
 - Station panel: no train icon in the left column, no "Boarding closes in" banner, so no train preparing; third independent confirmation of this state inside this pass. Building countdown 03:48 (direction unverified).
-- LOOT box re-check: world map centred on own base, March Queues 3/4 (three squads out, actor unresolved). Gift badge 3; LOOT panel holds two Claimed Bears Lair rows (bread 720.0K; red gem 85) and one UNCLAIMED Lv.1 Doom Elite row (gold chest x2, red gem 20, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0) - unclaimed work for the owning regular (gifts); Claim All observed only, never tapped. The three Lv.60 Doom Elite rows from 2026-11-03 are gone; the panel turns over.
+- LOOT box re-check: world map centred on own base, March Queues 3/4 (three squads out, actor unresolved). Gift badge 3; LOOT panel holds two Claimed owner account rows (bread 720.0K; red gem 85) and one UNCLAIMED Lv.1 Doom Elite row (gold chest x2, red gem 20, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0) - unclaimed work for the owning regular (gifts); Claim All observed only, never tapped. The three Lv.60 Doom Elite rows from 2026-11-03 are gone; the panel turns over.
 - Red dot accounting: 8 seen, 8 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60]; the 03:48 building timer identity; the owner of the three marches.
 - Carried unwalked: Alliance Star, Settings, Record Member/Message/Event tabs.
 ### Scout-alliance remainder, 2311 unit (ticker-2304) - 2026-11-07 about 23:05 to 23:15 local
@@ -608,7 +608,7 @@ subtab. Full unit record at `_records_/2026-11-08/perception-scout/0213-queue-ru
   85,149,100; #2 [AP3x] ANGEL777 Apex 72,859,500; #3 [AP3x]
   Ripper Apex 38,164,640; #4 [AP3x] Raze Cromwell
   35,377,640; #5 [AP3x] 꿀밤Bamie 32,306,360; #6 [AP3x]
-  KouKat 29,757,500; own #69 [AP3x] Bears Lair 4,110,000,
+  KouKat 29,757,500; own #69 [AP3x] owner account 4,110,000,
   reward chest x1. Bottom chest x0.
 - Mutual Assistance, Weekly: "No new data on the current
   leaderboard.", own row Unlisted.
@@ -620,22 +620,22 @@ subtab. Full unit record at `_records_/2026-11-08/perception-scout/0213-queue-ru
   #2 [AP3x] xChroni Apex 1,402,300; #3 Commander 3edb72110
   1,345,270 (no [AP3x] tag); #4 [AP3x] Missile Apex
   1,216,790; #5 [AP3x] ANGEL777 Apex 1,194,940; #6 [AP3x]
-  MegaLoki Apex 1,178,730; own #84 [AP3x] Bears Lair
+  MegaLoki Apex 1,178,730; own #84 [AP3x] owner account
   52,500, reward chest x8. Reward column x16 for the top
   rows. Bottom chest x0.
 - Rare Soil War, Season Total: #1 [AP3x] 벌꿀오소리Teemo
   5,106,552; #2 [AP3x] Missile Apex 2,618,712; #3 [AP3x]
   TTS Rage Apex 2,056,076; #4 [AP3x] 꿀밤Bamie 1,656,432;
   #5 [AP3x] Abyss Apex 989,700; #6 [AP3x] 두...Dogo
-  895,066 (name partly unread); own Unlisted, [AP3x] Bears
-  Lair 0, reward chest x0. Reward column x10 for the top
+  895,066 (name partly unread); own Unlisted, [AP3x] owner
+  account 0, reward chest x0. Reward column x10 for the top
   rows. Bottom chest x0.
 - Defeat, Season Total: #1 [AP3x] 벌꿀오소리Teemo
   298,994,880; #2 [AP3x] Missile Apex 95,488,371; #3 [AP3x]
   Abyss Apex 94,547,214; #4 [AP3x] TTS Rage Apex
   79,273,749; #5 [AP3x] 꿀밤Bamie 64,616,874; #6 [AP3x]
-  ItStartsWithaDream 38,218,743; own Unlisted, [AP3x] Bears
-  Lair 0, reward chest x0. Reward column x8 for the top
+  ItStartsWithaDream 38,218,743; own Unlisted, [AP3x] owner
+  account 0, reward chest x0. Reward column x8 for the top
   rows. Bottom chest x0.
 
 ### Season Milestones (MILESTONE), read live
@@ -684,7 +684,7 @@ subtab. Full unit record at `_records_/2026-11-08/perception-scout/0213-queue-ru
   #2 R5 Abyss Apex 266,260,167; #3 StarFall 208,552,393;
   #4 R3 Nuna Knuckles 204,829,707; #5 R3 xChroniApex
   200,974,370; #6 R4 KillerInstinct14 197,573,798; own
-  #34 R3 Bears Lair 147,744,234 (unchanged from the
+  #34 R3 owner account 147,744,234 (unchanged from the
   2026-11-07 read; the top rows moved both ways since).
   Kills tab not re-read this unit (read 2026-11-07).
 - Donation, Daily: #1 Skinner Box 6850; #2 KaBoom420 6000;
@@ -693,8 +693,8 @@ subtab. Full unit record at `_records_/2026-11-08/perception-scout/0213-queue-ru
   green own row, below the top 5).
 - Donation, Weekly: #1 R3 DCna8ive 161,250; #2 R2 KaBoom420
   151,500; #3 R4 Texan Apex 98,900; #4 R3 MrCallejon
-  89,250; #5 R3 specialist Donut 75,350; own #84 R3 Bears
-  Lair 24,900. Donate and Rewards buttons observed only,
+  89,250; #5 R3 specialist Donut 75,350; own #84 R3 owner
+  account 24,900. Donate and Rewards buttons observed only,
   not tapped.
 
 ### Red dot accounting for this section

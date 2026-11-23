@@ -19,7 +19,7 @@ status: partial
 
 - Phase: Unit Progression, Contest Segment Lv.29-30,
   02:45:21 left at entry (phase ends about 22:05 PST).
-- Score: 9,300, segment rank 2110, account [AP3x]Bears Lair.
+- Score: 9,300, segment rank 2110, account [AP3x]owner account.
 - Chest thresholds: 15,000 / 30,000 / 75,000.
   Tier-3 gap: 75,000 minus 9,300 equals 65,700 points.
 - Scoring table, read live: Train a Lv.10 unit +31,

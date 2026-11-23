@@ -37,16 +37,16 @@ donated, matched or bought anywhere in this unit.
 
 ## LOOT box re-check
 
-- World map, centred on the own base [AP3x]Bears Lair: March
+- World map, centred on the own base [AP3x]owner account: March
   Queues 3/4 (three squads out - not dispatched by this unit;
   owner or an earlier regular's marches, not resolved here).
   Gift icon at the right end of the March Queues bar, badge 3,
   tapped at the freshly grounded point on this map view; the
   LOOT panel opened at once.
 - LOOT panel, read live about 21:51 local, three rows:
-  - Row 1: Bears Lair, lightning 0, "Claimed" - picture item,
+  - Row 1: owner account, lightning 0, "Claimed" - picture item,
     bread 720.0K.
-  - Row 2: Bears Lair, lightning 0, "Claimed" - picture item,
+  - Row 2: owner account, lightning 0, "Claimed" - picture item,
     red gem 85.
   - Row 3: Lv.1 Doom Elite, lightning -20, "Leader" tag -
     gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin

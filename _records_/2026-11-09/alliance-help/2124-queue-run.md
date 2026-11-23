@@ -24,7 +24,7 @@ Activity: alliance-help.
   Mistress Sam: "Got you Papi".
 - Help page (opened after the bubble for the closing read):
   Today's points gained from Alliance Help 420/1,000. Only
-  the account's own two requests remain - Bears Lair, Missile
+  the account's own two requests remain - owner account, Missile
   Mastery II research (Time reduced: 15:00:22) and Lv.30
   Aircraft Center (Time reduced: 3d 23:58:04) - both already
   helped to the maximum, and a player cannot help their own

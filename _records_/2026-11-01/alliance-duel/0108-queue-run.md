@@ -29,7 +29,7 @@ different-device dialog.
   the banner "Calculating the number of Alliances
   promoted and demoted..." with 13d 18:53 left. Match
   Record Week 2 shows [AP3x]The Apex vs [Sync]
-  IMPERIUM 7-6. Weekly Ranking shows [AP3x]Bears Lair
+  IMPERIUM 7-6. Weekly Ranking shows [AP3x]owner account
   rank 190 with 17,240,439 points, a weekly cumulative
   figure, not a daily total.
 - Daily total line closed as unverified: no themed

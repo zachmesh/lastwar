@@ -35,7 +35,7 @@ grounded_in:
   thresholds 2,000 / 4,000 / 12,000 (ruby tags 2,360 / 4,800 /
   11,800). Gap to tier 3: 12,000.
 - Cumulative counter chest top-left read 1/2 at entry.
-- Ranking row at entry showed #2110 [AP3x]Bears Lair rank 9 with
+- Ranking row at entry showed #2110 [AP3x]owner account rank 9 with
   9,000 - recorded as observed; it is not the live phase score
   (0), and matches the documented ranking-row lag pattern.
 - Scoring paths as displayed: 1 Hero Recruitment +400; Use at least

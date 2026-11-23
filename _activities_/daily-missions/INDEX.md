@@ -1,9 +1,9 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-22T23:42:21Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
@@ -503,7 +503,7 @@ status done). Evidence in
 ## What the 2026-11-11 1638 unit added - two completed rows claimed on one tap, activity 100, list would not scroll, done
 
 - Unit daily-missions-2026-11-10-1800 by ticker-1634, about 16:38 to 16:46 local, status done - every completed row was claimed and the visible list holds no Claim button; the below-fold rows were not re-read (see the scroll failure below), so the unit closes done on the visible list, not on a full-list re-check. Evidence in `_records_/2026-11-11/daily-missions/1638-queue-run.md` (commit 1fe3a5e69 on records/2026-11-11). Computer session cc-639 on the owner Mac mini, LastWar window 676414. No device-access error, no different-device dialog, no login demanded.
-- Account verified live at entry: My Profile read Lv.30 [AP3x]Bears Lair, 149.2M power, VIP13, [AP3x]The Apex, Warzone #2110. The VIP screen seen on arrival was left open by an earlier session; no purchase touched.
+- Account verified live at entry: My Profile read Lv.30 [AP3x]owner account, 149.2M power, VIP13, [AP3x]The Apex, Warzone #2110. The VIP screen seen on arrival was left open by an earlier session; no purchase touched.
 - Entry, read live: Mission, Daily Tasks tab. Activity star 80, Next Refresh 01:19:37 (points to about 18:00 local - another missions-panel pointer to the 18:00 reset, Issue #242). Chests at 40 and 80 standing.
 - Completed rows at entry: Help Allies 5 Times (20/5) with Claim, Kill 5 zombie(s) on World Map (5/5) with Claim. Row rewards shown: 10 activity points plus 5.0K iron plus 5.0K food each.
 - One Claim tap on Help Allies 5 Times (normalized 791,414). On the re-read both completed rows were gone from the list and the activity star read 100, a rise of 20 points. The mechanism is unverified - possibly one Claim tap claims every completed row, or the list refreshed on claim. This is the same phenomenon the 2026-11-10 1426 unit recorded (one Claim tap, four completed rows gone). The end state is live-verified for the visible list: no completed row with a Claim button remains. This is the sixth observation consistent with the one-tap-multi-claim mechanism VERIFIED by the 1519 unit's before/after reads; the 1519 verification stands, this unit adds a consistent observation, not a new verification.

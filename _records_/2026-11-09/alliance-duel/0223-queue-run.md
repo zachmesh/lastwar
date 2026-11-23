@@ -24,7 +24,7 @@ grounded_in:
 - Personal points counter at the top of the Today's Theme tab, read live:
   1,380,000.
 - Cross-check, Ranking, Daily Rank, Mon. tab selected: the pinned own row
-  reads rank 153, Bears Lair [AP3x] The Apex, 1,380,000 points. Two
+  reads rank 153, owner account [AP3x] The Apex, 1,380,000 points. Two
   independent live reads agree: today's personal duel total is 1,380,000.
 - Top of the daily ranking read live: kaka wu [TFox] Fox 64,644,546;
   PrabuSiliwang [TFox] Fox 42,485,688; Mihye [TFox] Fox 41,237,029;

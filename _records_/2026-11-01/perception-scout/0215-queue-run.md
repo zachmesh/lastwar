@@ -39,7 +39,7 @@ as a partial requires.
   returned to the base screen. The earlier points had
   clipped the overlapping portrait icon.
 - Base screen and HUD read live from one full capture:
-  [AP3x]Bears Lair level 30, power 148,957,193; top row
+  [AP3x]owner account level 30, power 148,957,193; top row
   289.2M, 477.2M, 10.6M, 2,366 by the cart icon;
   lightning 135 and 11.72K second row, labels for the
   second row not legible and recorded as displayed only.

@@ -20,7 +20,7 @@ status: unverified
 - Arms Race page (Base Building phase): timer 00:44:05 left at
   entry, score 0, point chests at 6,250 / 12,500 / 30,000 all
   locked. Cumulative chest at top left reads 0/2 (not full, not
-  claimable). Rank #2110 [AP3x]Bears Lair. The phase itself is
+  claimable). Rank #2110 [AP3x]owner account. The phase itself is
   the arms-race unit's job, not this unit's.
 - Survey Center (red badge 1): one entry - Season 11: Polar
   World Experience Survey, Proceed button. A survey to fill in,

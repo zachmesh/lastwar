@@ -19,7 +19,7 @@ Activity: arms-race. Phase: Hero Advancement, Contest Segment Lv.29-30.
 - Phase page (read about 05:38 PT): Hero Advancement, points
   82,500 at entry, timer 00:21:49, chest thresholds 2,000 / 4,000 /
   12,000 (top chest 12,000), cumulative counter chest 6/8, rank
-  #2110 [AP3x]Bears Lair, segment rank 8, 82,500 points.
+  #2110 [AP3x]owner account, segment rank 8, 82,500 points.
 - The 82,500 figure is unchanged from the 0306 unit's closing
   read (McGregor Lv.145 to 146, 165.0M EXP, 82,500 points) - the
   phase target was already met in this phase by that unit and

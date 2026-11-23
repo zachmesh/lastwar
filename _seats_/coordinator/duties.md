@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat duties
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T04:16:00Z
+modified: 2026-11-23T07:02:00Z
 level: L2
-version: 0.2.0
+version: 0.3.0
 description: The per-firing checklist for this seat
 status: unverified
 grounded_in:
@@ -25,25 +25,19 @@ grounded_in:
 4. A run paused by local input is stopped and the unit closed `partial`
    within 2 minutes.
 5. Target: one routine unit per 2 to 3 minutes while the Mac is idle.
-6. Chaining (coordinator reading of rule 5): the 900-second clock alone
-   allows only 4 units an hour, so when an operator reply closes a unit, the
-   coordinator runs `next` and dispatches the next eligible unit in that same
-   turn. The clock is the backstop for a lost reply, not the pace.
+6. Chaining: the 900-second clock allows only 4 units an hour, so when an
+   operator reply closes a unit, run `next` and dispatch the next eligible
+   unit in that same turn. The clock is the backstop for a lost reply.
 
-Source: `_records_/2026-11-22/team-operations/2015-speed-incident.md`,
-improvement `IMP-20261123-01`.
+Source: `_records_/2026-11-22/team-operations/2015-speed-incident.md` (`IMP-20261123-01`).
 
 ## Each tick
 
-1. Read the newest queue ticker record, the queue state and the coach's latest
-   dashboard.
-2. Pick the one next act: a play unit for the operator, a perception pass for
-   the scout, a research question for the researcher, a queue repair for the
-   planner, or a measurement for the coach.
-3. Send one bounded assignment with a question, the expected evidence and a
-   completion condition.
-4. Collect the reply, check the artifact exists, and record the tick in
-   `_records_/<date>/team-operations/`.
+1. Read the queue state and the coach's latest dashboard.
+2. Pick the one next act: a play unit for the operator, or a perception,
+   research, queue-repair or measurement task for another seat.
+3. Send one bounded assignment: a question, the expected evidence, a completion condition.
+4. Verify the artifact exists and record the tick in `_records_/<date>/team-operations/`.
 5. If the evidence shows a defect, file or update one improvement entry with a
    target metric. Do not file duplicates.
 
@@ -52,26 +46,26 @@ improvement `IMP-20261123-01`.
 - Review one seat against its duties and record the verdict in
   `_seats_/coordinator/member-review.md`.
 - Reconcile `TEAM.yaml` with the actual DSH sessions.
-- Ask the owner only for decisions that are genuinely owner-only.
+- Never ask the owner about operational choices (owner, 2026-11-23): decide, record why, tell the Steward in one line. Fixed: no purchase or diamond spend, PvP, march, Arena, diplomacy, ally exchange or identifier values.
 
 ## The project board (owner, 2026-11-22)
 
-The team's GitHub Project is <https://github.com/users/dtadpole/projects/11>
-(see `team-organization.md` section 13). This seat owns it. It cannot be linked
-to the repository, so nothing feeds it automatically.
+The team's GitHub Project is <https://github.com/users/zachmesh/projects/1>
+(see `team-organization.md` section 13), linked to this repository. This seat
+owns it. Nothing adds issues automatically yet, so the pass below feeds it.
 
 - **Each daily pass:** add repository issues that are missing from the board
   (`addProjectV2ItemById` is idempotent), set Status, and keep the Agent field's
   options equal to the seats in `TEAM.yaml`. Use small batches (8 or fewer) and
   confirm by reading the board back; a large batch can lose its responses.
 - **Triage until done:** parent every open issue to an Epic (#861 to #865,
-  `Maintenance` if none fits), set its Agent, and set Priority. Work in slices
-  of at most 20 issues per pass so the tick stays short; delegate slices to the
-  coach. Target: every open issue has an Epic and an Agent within three days.
+  `Maintenance` if none fits), set its Agent and Priority, in slices of at most
+  20 per pass; delegate slices to the coach. Target: every open issue has an
+  Epic and an Agent within three days.
 - **Move cards as work happens:** one `In progress` card per seat; a closed
   issue is `Done`, or `Sunset` when closed as not planned.
-- **Run the board check** (`_tools_/board_check.py`, once the toolsmith lands
-  it) every pass and fix drift the same day.
+- **Board check:** the Steward runs `_tools_/board-check/board_check.py` each
+  pass (it holds the token); fix drift the same day.
 
 ## Record
 

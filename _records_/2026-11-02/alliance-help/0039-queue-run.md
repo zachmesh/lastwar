@@ -28,7 +28,7 @@ help-2026-11-01-2230, executor ticker-0034. Status: done.
   not a dead entry route.
 - Help page, read live: header "Today's points gained from
   Alliance Help: 240/1,000". Every visible request was the
-  account's own (Bears Lair, each 30/30): Precision
+  account's own (owner account, each 30/30): Precision
   Targeting II research, Morale research, Lv.28 Drill
   Ground building, Lv.30 Aircraft Center building. A player
   cannot help their own requests.

@@ -1,8 +1,8 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-23T06:02:05Z
-version: 1.2.0
+modified: 2026-11-23T06:44:00Z
+version: 1.3.0
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
 grounded_in:
@@ -22,3 +22,5 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 ## Articles
 
 - [Catalog 01](improvements-log/catalog-01.md) - Improvements backlog to closed-section
+- [IMP-20261123-07](improvements-log/imp-20261123-07.md) - a bridge restart leaves an orphan daemon and a stuck run that stop cannot reach.
+

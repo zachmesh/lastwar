@@ -33,7 +33,7 @@ re-grounded from each fresh screenshot before tapping.
   Scoring rows: Use 10 Drone Battle Data points +1, Use 1
   Stamina +100, Buy Packs containing Diamonds (1 Diamond) +30
   (price row observed only, never tapped). Own rank 7,
-  #2110 [AP3x]Bears Lair, score 0; #2088 [Teki] above.
+  #2110 [AP3x]owner account, score 0; #2088 [Teki] above.
 - Frontline Breakthrough (badge 1 on its tab): timer 20:04:23,
   phase Saving Soldiers, progress 42%. Reward row: red gem 100,
   gold card 10, crates 18, coins 18, 3, 3. Challenge button

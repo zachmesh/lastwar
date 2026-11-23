@@ -20,13 +20,13 @@ no foreground repair was needed.
 - Entry: from the Alliance Gifts screen, back arrow to the
   Alliance panel, then the Help tile (norm 698,510).
 - Help dialog at entry: header "Today's points gained from
-  Alliance Help: 0/1,000". Four rows: own Bears Lair "Need help
+  Alliance Help: 0/1,000". Four rows: own owner account "Need help
   with Missile Mastery II research" and "Need help with
   building Lv.30 Aircraft Center", specialist Donut "Need help
   with Oil Output I research", Teemo "Need help with Missile
   Vehicle - Defense II research".
 - First Help All (norm 498,764): both ally rows cleared live -
-  only the two own Bears Lair rows remained. Header still
+  only the two own owner account rows remained. Header still
   0/1,000 in-session, the known lag.
 - Close and reopen: header read live at 40/1,000 - the two
   helps moved the counter, 20 points each. A new ally row had

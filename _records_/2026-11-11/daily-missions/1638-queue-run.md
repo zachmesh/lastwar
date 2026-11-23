@@ -14,7 +14,7 @@ Computer session cc-639 on Zhen's Mac mini, LastWar window 676414.
 
 ## Account verified live
 
-My Profile read live at entry: Lv.30 [AP3x]Bears Lair, 149.2M power,
+My Profile read live at entry: Lv.30 [AP3x]owner account, 149.2M power,
 VIP13, [AP3x]The Apex, Warzone #2110. The VIP screen seen on arrival
 was left open by an earlier session; no purchase touched.
 

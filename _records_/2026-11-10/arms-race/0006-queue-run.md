@@ -26,7 +26,7 @@ phase start.
   Use 1-min Research Speed-up (+10), Buy Packs containing
   Diamonds (1 Diamond) (+30).
 - Cumulative counter chest top left: 0/2, locked, not bouncing.
-- Ranking row: segment rank 9, #2110 [AP3x]Bears Lair, figure
+- Ranking row: segment rank 9, #2110 [AP3x]owner account, figure
   90,500 - the lagging previous-phase display (the live score
   is 0; same lag documented 2026-10-26).
 

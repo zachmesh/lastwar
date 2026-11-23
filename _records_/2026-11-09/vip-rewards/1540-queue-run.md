@@ -38,7 +38,7 @@ grounded_in:
   ([AP3x]namolla liked the profile, 1,810 +1) and was
   dismissed with the plain blue "Awesome!" button, no
   price tag, no spend. Clean profile: Lv.30
-  [AP3x]Bears Lair, 149.2M power, 48.6K kills, Lv.63,
+  [AP3x]owner account, 149.2M power, 48.6K kills, Lv.63,
   Lv.2, [AP3x]The Apex, VIP13 badge WITH a red dot,
   #2110, likes 1,815, Moments "No posts found."
 - VIP screen, read live about 15:41 local: VIP13,

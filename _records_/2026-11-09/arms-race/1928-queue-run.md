@@ -26,7 +26,7 @@ Unit: arms-race-2026-11-09-1803. Status: partial. Target not yet met.
   (1 Diamond) +30 (red line, never used).
 - Cumulative counter chest at top left: 0/2, not full, not claimable,
   no bounce.
-- Ranking row: #2110 [AP3x]Bears Lair, rank 9, 90,500 - the lagging
+- Ranking row: #2110 [AP3x]owner account, rank 9, 90,500 - the lagging
   previous-phase row (the same 90,500 the 1345 unit read at the Drone
   Boost close), NOT this phase's score. Its chest is preview-only
   while the phase is live per standing precedent; the tap method was

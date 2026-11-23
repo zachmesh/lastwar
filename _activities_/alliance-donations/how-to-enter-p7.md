@@ -1,0 +1,10 @@
+---
+title: How to enter part 7
+created: 2026-11-23T06:11:49Z
+modified: 2026-11-23T06:11:49Z
+version: 0.1.0
+sequence: 9
+description: Entry, 2026-11-21 1340 - the Alliance button does NOT open its menu in the windowed 788x1083
+---
+- Entry, 2026-11-21 1340: the Alliance button does NOT open its menu in the windowed 788x1083 state, through any input route tried. Fresh measured centre by visual grounding: bbox (888, 689)-(992, 751) in image coordinates, centre window (940, 720); label centre (940, 735). Coordinate tap at (940, 720) - no change, menu did not open, camera did not pan. Coordinate tap at (940, 735) - only the announcement banner/chat advanced; menu still closed. Accessibility click_element on the 'Alliance' OCR text (element 13, fresh observation) - 1 percent visual change, menu still closed. This is NOT the 2026-11-02 failure signature: those taps panned the camera to the Drill Ground cluster. Here the taps neither open the menu nor move the camera - the button itself does not respond. The "wrong tap point" hypothesis from 2026-11-02 is therefore DISPROVEN for this window state: the fresh measured centre fails exactly like the grounding point did. The 2026-11-02 metadata centre (903, 787) is stale for this window geometry and stays withdrawn. The entry route MUST change before the next donations unit runs - candidates: tap the Alliance HQ building on the map itself, or re-enter the base view first. This is the fourth consecutive donations partial on the Alliance-entry blocker (0621, 1020, 1427 on 2026-11-02, now this unit) - a process failure under queue rule R2, not a result. No donation made, no Donation Count read (live read required by the hard closing rule; no arithmetic close attempted). HUD at entry: food 730.5M, iron 1.1G, coin 88.2M, diamonds 5,236, total power 149,653,371. Canvas taps elsewhere this pass DID land (hero select, empty-ground tap), so this is a button-specific failure, not a dead canvas. The #648 fullscreen precondition is clear this pass (windowed 788x1083, input works); the Alliance-button failure is NOT that issue.
+

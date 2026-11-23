@@ -21,7 +21,7 @@ no paid button tapped (VIP Exclusive $99.99 untouched).
 ## Entry
 
 - From the base screen, the commander avatar at norm
-  [60,85] opened MY PROFILE (Lv.30 [AP3x]Bears Lair,
+  [60,85] opened MY PROFILE (Lv.30 [AP3x]owner account,
   likes 1,797, up from 1,796 on 2026-10-31; no popularity
   popup this time). The VIP13 badge at norm [514,352],
   carrying a red dot, opened the VIP screen.

@@ -23,9 +23,9 @@ Computer session cc-219 on the owner Mac mini.
 - Help page opened at norm 685,515. Header read live:
   "Today's points gained from Alliance Help: 520/1,000".
 - Rows before Help All: three own requests, all already
-  30/30 - Bears Lair, Missile Mastery II research;
-  Bears Lair, Defense Training VIII research; Bears
-  Lair, building Lv.30 Aircraft Center - and one ally
+  30/30 - owner account, Missile Mastery II research;
+  owner account, Defense Training VIII research; owner
+  account, building Lv.30 Aircraft Center - and one ally
   request: 꿀밤Bamie, Oil Output I research.
 - Help All tapped at norm 495,765. The toast read live:
   "Allies are very grateful for your assistance!"

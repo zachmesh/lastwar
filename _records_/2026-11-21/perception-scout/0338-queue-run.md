@@ -16,7 +16,7 @@ status: unverified
 - Entry: the game was still on MY PROFILE, left open by seq 13
   (ticker-0304). Closed it with the panel X at (823,46), first try,
   back to the base view. MY PROFILE re-read unchanged: Lv.30
-  [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex,
+  [AP3x]owner account, 149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex,
   VIP13 (red dot - the Daily Freebie, belongs to the VIP regular),
   #2110; flower 12, gift box 88, trophy 11; Moments "No posts
   found."; Record red dot still present (persistent per seq 13).

@@ -19,7 +19,7 @@ device" dialog appeared. No paid button was touched.
   left reads 0/2, not full, nothing to claim. Score reads
   9,300; the three point chests (thresholds 15,000 / 30,000 /
   75,000) are all above the score, no claim state. The bottom
-  ranking row shows #2110 [AP3x]Bears Lair, 9,300. Phase work
+  ranking row shows #2110 [AP3x]owner account, 9,300. Phase work
   itself belongs to the arms-race unit, not this sweep. No
   bouncing chest, no reward red dot on this page.
 - Desert Battlefield (Desert Storm Battlefield): Battle Day

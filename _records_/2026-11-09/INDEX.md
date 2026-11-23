@@ -1626,7 +1626,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Honorable Campaign, Armed Truck, Bullseye Loot, Bounty
   Hunter, Glittering Market, Total Mobilization, Weekly Deal).
   Applying is an owner-only move, so no regular is proposed:
-  owner-decision Issue filed for whether Bears Lair should
+  owner-decision Issue filed for whether owner account should
   apply before the 11/12 deadline. Full detail in
   season-ii-countdown-6d/0812-queue-run.md.
 ## 08:15 to about 08:23 — PR integration pass
@@ -2899,7 +2899,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - PR integration pass pr-integration-2026-11-09-2200 (done). NON-batch pass (checker _tools_/records_batch.py due - not due, outside every batch window, next batch 23:00 PT; merge-aware agrees); no merges, no new comments: main unchanged at abeaffadf since the 2145 pass, heads of 425/351/301 unchanged; records PR 545 re-probed CLEAN and tree-safe at new head ad3030b7 (the 2145 run record landing), awaits the 23:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, OD-20261108-01 still open. Status: done. Full detail in pr-integration/2200-run.md.
 ## 21:50 to 21:54 - Ticker pass ticker-2148, duel-score unit done
 
-- Duel-score unit duel-score-2026-11-09-1830 done: personal daily total read live twice, both 0 - Today's Theme counter 0 and Ranking Daily Rank pinned row Bears Lair Unlisted 0. Theme Base Expansion, 20:07 remaining. Alliance 256,949,555 (45%) vs [TFox] Fox 307,894,587 (55%), trailing; top scorers Kang Umam 14,112,300, engin 0101 12,702,750, kaka wu 10,492,350. Slot 18:30 executed after the 19:00 reset, so this is the new duel day's opening figure, not the closed day's total. Gap against the 3,600,000 target: 3,600,000. No ceremony trophy on the base screen. Full detail in alliance-duel/2154-queue-run.md.
+- Duel-score unit duel-score-2026-11-09-1830 done: personal daily total read live twice, both 0 - Today's Theme counter 0 and Ranking Daily Rank pinned row owner account Unlisted 0. Theme Base Expansion, 20:07 remaining. Alliance 256,949,555 (45%) vs [TFox] Fox 307,894,587 (55%), trailing; top scorers Kang Umam 14,112,300, engin 0101 12,702,750, kaka wu 10,492,350. Slot 18:30 executed after the 19:00 reset, so this is the new duel day's opening figure, not the closed day's total. Gap against the 3,600,000 target: 3,600,000. No ceremony trophy on the base screen. Full detail in alliance-duel/2154-queue-run.md.
 
 - Star-ceremony unit star-ceremony-2026-11-09-1830 done: base screen checked live at 21:55, no Star Ceremony trophy icon beside the Alliance button, so no ceremony is waiting; nothing played or claimed. Full detail in alliance-duel/2156-queue-run.md.
 

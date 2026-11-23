@@ -83,7 +83,7 @@ grounded_in:
   link tapped.
 - Arms Race page read live about 17:03 local: phase Tech
   Research, Contest Segment Lv.29-30, timer 01:03:01
-  remaining, personal score 0, rank #2110 [AP3x]Bears Lair
+  remaining, personal score 0, rank #2110 [AP3x]owner account
   (tied with #2110 [FATC]·루피 above it). Chest thresholds
   6,250 / 12,500 / 30,000 with the displayed progress
   figures 2,360 / 4,800 / 11,800 above them (meaning not

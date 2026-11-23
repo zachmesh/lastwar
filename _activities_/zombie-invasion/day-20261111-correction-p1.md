@@ -1,0 +1,13 @@
+---
+title: Correction 2026-11-11 - Zoom to Fit canvas input lands, the stop-rule is withdrawn part 1
+created: 2026-11-23T06:53:20Z
+modified: 2026-11-23T06:53:20Z
+version: 0.1.0
+sequence: 77
+description: The WINDOW-STATE PRECONDITION in How to enter (above) is corrected by the ticker-1332 pass, records 1340
+---
+## Correction 2026-11-11 - Zoom to Fit canvas input lands, the stop-rule is withdrawn
+
+- The WINDOW-STATE PRECONDITION in How to enter (above) is corrected by the ticker-1332 pass, records 1340 (training) and 1347 (arms-race), record commit ed2cb2614 on records/2026-11-11. The 1259 survivors unit's claim - "the canvas simply does not take background input in this state" - is superseded by same-unit on-screen evidence from those two units, which ran in the same fullscreen framing (window still in Zoom to Fit, capture 1280x720) with canvas taps landing: radar-map back arrow (326,948), Iron Mine Lv.27 selection at (395,455), Mall open at (645,62), Mall back arrow (316,952). The Home button ((688,958)/(645,950), matching 1259's (645,925)) and the labelled Events icon (707,146) are the controls that do not respond in this framing, not the canvas as a whole.
+- The stop-rule ("a unit that finds the window in Zoom to Fit stops") is WITHDRAWN: units proceed in the fullscreen framing on verified working points, re-grounding fresh. The green-zoom-button ban stands (that click put the window here). The no-remote-restore-path finding stands; the window is still in Zoom to Fit as of the 1347 close (13:57 PT 2026-11-11) and the owner's mouse action remains the only restore route - but it is no longer a blocker for play. The 1332 organizer run's Slack message to the owner (window stuck, owner mouse action needed before the next pass) is corrected by this run: play proceeded in the fullscreen framing in the very next pass.
+- QUALIFICATION 2026-11-11 1456 (ticker-1439 zombie-invasion unit 016, record commit 34be97f28): the "no remote restore path" finding is now qualified - no IN-PLACE un-zoom exists, but a menu Quit + relaunch IS a remote route back to windowed 642x951. The 1456 unit quit via menu Last War > Quit Last War (the menu title is "Last War" with a space) and relaunched with open_app; the app returned to the base screen with state intact, windowed 642x951 (new window 676414, replacing the 1920x1080 window 636402). The relaunch is a legitimate remote restore when the unit can budget it (it costs the app restart and the window id changes); it is not free - the mail-detail exit that forced it in 1456 is a cost, not a routine step. The owner's mouse action is therefore no longer the ONLY restore route. This qualification also applies to the WINDOW-STATE PRECONDITION in How to enter above.

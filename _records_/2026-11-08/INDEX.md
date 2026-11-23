@@ -920,7 +920,7 @@ of 2026-10-28.
 
 ## 04:15 to about 04:19 - Ticker-0404 scout-alliance remainder
 
-- Ticker-0404, unit scout-scout-2026-11-02-008 (chain scout-2026-11-02, seq 8), status partial, observe-only. Walked live: Help (points 0/1,000, four Bears Lair requests all 30/30), Alliance Store read-only (Honor 301.3K; Campaign tab red dot, star balance 1,260, UR shard 10/10 at 200), Alliance City both tabs (Rare Soil 5.88K/h 6/6, Coal 13.53K/h 4/4, identical to the 0446 read), Alliance Wars both tabs (no rally, no ongoing war; Wars dot Issue #212 still unexplained). The left-column vehicle icon opens the Trucks panel, not the station (Trade Count 0/5, four trucks shown, nothing dispatched); station panel not reached, successor seq 010 enqueued for it. New labels on the scrolled Alliance panel: Season Contributions, Season Milestones, Alliance Furnace (unmatched, candidate filing to the diff/retro step). Red dots seen 14, explained 8, unexplained 6. Full detail in perception-scout/0415-queue-run.md and the appended observation sections.
+- Ticker-0404, unit scout-scout-2026-11-02-008 (chain scout-2026-11-02, seq 8), status partial, observe-only. Walked live: Help (points 0/1,000, four owner account requests all 30/30), Alliance Store read-only (Honor 301.3K; Campaign tab red dot, star balance 1,260, UR shard 10/10 at 200), Alliance City both tabs (Rare Soil 5.88K/h 6/6, Coal 13.53K/h 4/4, identical to the 0446 read), Alliance Wars both tabs (no rally, no ongoing war; Wars dot Issue #212 still unexplained). The left-column vehicle icon opens the Trucks panel, not the station (Trade Count 0/5, four trucks shown, nothing dispatched); station panel not reached, successor seq 010 enqueued for it. New labels on the scrolled Alliance panel: Season Contributions, Season Milestones, Alliance Furnace (unmatched, candidate filing to the diff/retro step). Red dots seen 14, explained 8, unexplained 6. Full detail in perception-scout/0415-queue-run.md and the appended observation sections.
 ## 04:15 to about 04:20 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-08-0415.
@@ -1907,7 +1907,7 @@ of 2026-10-28.
   +2.4K Achievements lower bound is still unexplained.
   Winter Battlefield History read live (Highest Win Streak
   4, Battle Count 15, Victory Count 6, 9 rows in full, tail
-  unread); Achievement Wall (Bears Lair Lv.30; Unyielding
+  unread); Achievement Wall (owner account Lv.30; Unyielding
   Stand x3, Battlefield Medic x1, Stand Ready x5, Assault
   x2, Rescue x3, Defense x9); Doomsday guardian rotated to
   [AP3x]Nuna Knuckles 6.5G, Warzone Threat 43; Winter
@@ -2486,7 +2486,7 @@ of 2026-10-28.
   Deals pack; no Free Supply payout seen on opening (already
   claimed this reset day by ticker-2234). Season hub claim path
   probed from the Calculating card (Week 8 screen) and Season
-  Contributions (Alliance Contribution Ranking; Bears Lair rank
+  Contributions (Alliance Contribution Ranking; owner account rank
   69, 4,110,000 points): no Season Battle Pass free tiers and no
   Season Weekly Pass Daily Freebie or Daily Pickup found; Goals
   and Profession buttons unprobed, carry to the next passes unit.
@@ -2604,7 +2604,7 @@ of 2026-10-28.
   Grouping, Rules, Goals, Profession and Rewards buttons
   and a Season Contributions button; Season Contributions
   opens the Alliance Contribution Ranking (Mutual
-  Assistance tab, Season Total Ranking; [AP3x] Bears Lair
+  Assistance tab, Season Total Ranking; [AP3x] owner account
   rank 69 with 4,110,000 points; reward chest x0) - a
   ranking screen, not a pass claim; no Season Battle Pass
   free tiers and no Season Weekly Pass Daily Freebie or
@@ -2734,7 +2734,7 @@ of 2026-10-28.
   Doomsday count finish is fully read live - Rewards
   first-kill rows Lv.100-220 (13 rows) and cumulative
   rows 20-100 (9 rows), all claimed; Damage Ranking top
-  6 (Nuna Knuckles 7.5G first; self Bears Lair Unlisted,
+  6 (Nuna Knuckles 7.5G first; self owner account Unlisted,
   0 damage); Ranking Reward tiers No.1 x50 down to
   No.51-200 x25. Chain scout-2026-11-03 complete, no
   successor. Red dots 0 seen, 0 explained, 0
@@ -3330,7 +3330,7 @@ of 2026-10-28.
   anywhere on the duel panel on this settlement day (day 7, no
   scoring actions). Roulette 0 tokens, 0/10; League S38 Gold
   Tier 38-7, AP3x rank 4 (W1 Win, W2 Win, W3 Lose, W4 pending).
-  Weekly Rank own row: Bears Lair rank 178, 10,493,243 weekly
+  Weekly Rank own row: owner account rank 178, 10,493,243 weekly
   points - context only, never the daily total. Tracker
   untouched. Full detail in alliance-duel/1439-queue-run.md.
 

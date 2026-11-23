@@ -22,7 +22,7 @@ and the next tick re-produces this regular.
 - Events hub opened from the base right rail. It landed on the
   current Arms Race phase page, Hero Advancement, Contest
   Segment Lv.29-30, read live: account score 40,500, rank
-  #2110 [AP3x]Bears Lair, phase countdown 02:08:44 falling.
+  #2110 [AP3x]owner account, phase countdown 02:08:44 falling.
   Point chest thresholds 2,000, 4,000 and 12,000 are all
   passed at this score. The top-left cumulative chest reads
   6/2.

@@ -156,23 +156,23 @@ grounded_in:
   2 R5 Abŷss Apex 266,260,167; 3 R4 StarFall 208,552,393;
   4 R3 Nuna Knuckles 204,828,060; 5 R3 xChroniApex
   201,091,043; 6 R3 papillon707 198,801,977. Own row
-  (green, pinned): #34, R3 Bears Lair, 149,850,353 -
+  (green, pinned): #34, R3 owner account, 149,850,353 -
   matches the HUD power read this pass.
 - Kills tab top 6: 1 R4 벌꿀오소리Teemo 71,985,826; 2 R4 TTS
   Rage Apex 39,938,810; 3 R3 Missile Apex 30,319,816;
   4 R5 Abŷss Apex 25,185,511; 5 R4 ItStartsWithaDream
   21,394,076; 6 R3 꿀밤Bamie 21,330,771. Own row: #94,
-  R3 Bears Lair, 48,638 kills.
+  R3 owner account, 48,638 kills.
 - Donation tab: Daily sub-tab top 5: 1 R3 papillon707
   9,600; 2 R3 Skinner Box 7,500; 3 R3 Sanction Apex
   7,100; 4 R3 Krazy Sully 7,000; 5 R4 벌꿀오소리Teemo
-  6,650. Own row: #30, R3 Bears Lair, 3,450 donation
+  6,650. Own row: #30, R3 owner account, 3,450 donation
   points today - a live cross-check for the donations
   regular (its units today add to this figure). Weekly
   sub-tab top 5: 1 R3 DCna8ive 161,250; 2 R2 KaBoom420
   151,500; 3 R4 Texan Apex 101,600; 4 R3 MrCallejon
-  89,250; 5 R3 papillon707 77,700. Own row: #82, R3 Bears
-  Lair, 26,000 donation points this week (was #84 with
+  89,250; 5 R3 papillon707 77,700. Own row: #82, R3 owner
+  account, 26,000 donation points this week (was #84 with
   24,900 at the 1801 read on 2026-11-02).
 - The Donate button and the Rewards button were not
   tapped; the donations regular owns donations.

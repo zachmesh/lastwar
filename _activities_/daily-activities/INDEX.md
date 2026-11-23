@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-23T01:50:00Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.45.0
+version: 1.46.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -204,7 +204,7 @@ only; the final sweep is a separate record.
   task was tapped; fix-up secrets-2026-11-01-1857. The duel
   total line was read in this pass's star-ceremony unit,
   not in the sweep unit itself (League S38 calculating,
-  Weekly Ranking Bears Lair rank 190 with 17,240,439
+  Weekly Ranking owner account rank 190 with 17,240,439
   weekly points, personal daily total unverified);
   re-read fix-up star-ceremony-2026-11-01-1830.
 - Count: 23 lines walked - 11 not at zero, 6 unreadable,

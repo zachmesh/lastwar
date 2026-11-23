@@ -13,7 +13,7 @@ status: done
   of the same pass (after training partial and gifts done).
 - Help page header read live: Today's points gained from
   Alliance Help 80 of 1,000, before and after the tap.
-- Visible requests were all the account's own (Bears Lair):
+- Visible requests were all the account's own (owner account):
   Lv.30 Aircraft Center building, Morale research, Precision
   Targeting II research, Lv.28 Drill Ground building. A player
   cannot help their own requests, and no ally request was

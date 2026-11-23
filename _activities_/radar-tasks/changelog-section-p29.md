@@ -1,0 +1,12 @@
+---
+title: Changelog part 29
+created: 2026-11-23T06:25:33Z
+modified: 2026-11-23T06:25:33Z
+version: 0.1.0
+sequence: 90
+description: 1.37.0 (2026-11-06) - 0004 radar unit folded - sixty-third consecutive pass with a Mac device-access blocker,
+---
+- 1.37.0 (2026-11-06): 0004 radar unit folded - sixty-third consecutive pass with a Mac device-access blocker, twenty-fourth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 16h50m, unchanged since the 1025 pass and identical to the 2303 reading, five invokes zero responses, no probe run since last_seen unrefreshed, no recovery-device attempts); release-day check for the slot unexecuted (duel day 5) - the day 4 stack sits unclaimed and the release window runs until 2026-11-06 18:00 local; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; sixty-third occurrence commented onto Issue #282 by this run.
+- 1.38.0 (2026-11-06): 0342 radar unit folded - sixty-sixth consecutive pass with a Mac device-access blocker, twenty-seventh in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 20h10m, unchanged since the 0234 pass, five invokes zero responses, no probe run since last_seen unrefreshed, no recovery-device attempts - the 0234 pass recovery-channel attempt timed out after 25s); release-day check for the slot unexecuted (duel day 5, planned 02:03 local, expires 06:03 local) - the day 4 stack sits unclaimed and the release window runs until 2026-11-06 18:00 local; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; sixty-sixth occurrence commented onto Issue #282 by this run.
+- 1.39.0 (2026-11-06): 0741 radar unit folded - seventy-fourth consecutive pass with a Mac device-access blocker, thirty-fifth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 24h10m, unchanged since the 0704 pass, five invokes zero responses, no probe run since last_seen unrefreshed, recovery-device health check and native repair both timed out after 25s - new against the 0342/0634/0704 passes, which made no recovery-device attempts, matching the 0234 signature); release-day check for the slot unexecuted (duel day 5, planned 06:03 local, expires 10:03 local) - the day 4 stack sits unclaimed and the release window runs until 2026-11-06 18:00 local; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; seventy-fourth occurrence commented onto Issue #282 by this run.
+

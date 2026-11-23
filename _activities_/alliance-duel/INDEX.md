@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-23T00:45:00Z
-version: 1.44.0
+modified: 2026-11-23T07:23:28Z
+version: 1.45.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -244,7 +244,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   Week 4 sleeping, and the banner "Calculating the number of
   Alliances promoted and demoted..." with 13d 18:53 left. Match
   Record Week 2 shows [AP3x]The Apex vs [Sync] IMPERIUM 7-6.
-  Weekly Ranking shows [AP3x]Bears Lair rank 190 with 17,240,439
+  Weekly Ranking shows [AP3x]owner account rank 190 with 17,240,439
   points - a weekly cumulative figure, NOT a daily total, and
   never to be reported as one.
 - Daily total line closed as unverified, per the 2026-10-31 fix:
@@ -301,7 +301,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   demoted..." with 13d 02:16 left, down from 13d 18:53 at
   the 0108 read, consistent with the time elapsed. Match
   Record Week 2 shows [AP3x]The Apex vs [Sync] IMPERIUM
-  7-6. Weekly Ranking shows [AP3x]Bears Lair rank 190
+  7-6. Weekly Ranking shows [AP3x]owner account rank 190
   with 17,240,439 points, unchanged from the 0108 read -
   a weekly cumulative figure, NOT a daily total, and never
   to be reported as one.
@@ -663,8 +663,8 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   ended the hunt: the visible MVP list showed Abyss
   Apex 18,306,600, [Kmf] 11,296,350 and [Kmf] Maison
   JP 10,407,300. One upward drag scrolled the list
-  to further rows, but the account's own row (Bears
-  Lair) was not reached before the pass budget
+  to further rows, but the account's own row (owner
+  account) was not reached before the pass budget
   ended. The personal daily total is therefore
   UNREAD in this unit, and no total or gap against
   3,600,000 is reported: a fragment or alliance
@@ -731,7 +731,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   against 58 percent 460,462,861).
 - Personal daily total, read live on the Ranking
   panel, Daily Rank tab, Tues. day tab: this account's
-  highlighted row reads rank 162, Bears Lair [AP3x] The
+  highlighted row reads rank 162, owner account [AP3x] The
   Apex, 1,714,950 points. That is 1,714,950 of the
   3,600,000 target, gap 1,885,050, about 47.6 percent
   of target. Handover note: per the 2026-11-01
@@ -777,7 +777,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   452,542,821 against 57 percent 608,585,563).
 - Personal daily total, read live on the Ranking
   panel, Daily Rank tab, Tues. day tab: this account's
-  highlighted row reads rank 169, Bears Lair [AP3x] The
+  highlighted row reads rank 169, owner account [AP3x] The
   Apex, 1,714,950 points. That is 1,714,950 of the
   3,600,000 target, gap 1,885,050, about 47.6 percent
   of target. The total is unchanged since the 0718
@@ -822,7 +822,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Rollover correction, measured: the Ranking panel,
   Daily Rank tab, read live with the Wed. day tab
   selected on entry and this account's highlighted row
-  reading Unlisted, Bears Lair [AP3x] The Apex,
+  reading Unlisted, owner account [AP3x] The Apex,
   0 points - the new duel day had already started. The
   timer value puts the rollover at about 18:00 local,
   an hour before the 19:00 general reset. This
@@ -836,7 +836,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   fold.
 - Closed day total, read live on the Tues. day tab:
   this account's highlighted row reads rank 177,
-  Bears Lair [AP3x] The Apex, 2,014,950 points. That
+  owner account [AP3x] The Apex, 2,014,950 points. That
   is the closed Tues. duel day total: 2,014,950 of
   the 3,600,000 target, gap 1,585,050, about 56.0
   percent of target. The day is a MISS against the
@@ -951,8 +951,8 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Gap - EVENT 40 ending unrecorded: the 1441 record (ticker-1416, 14:26-14:32) left ceremony EVENT 40 at step 10 of 13, hearts sent on steps 3, 6, 7 and 8, with the trophy icon still present on the base screen and the successor unit told to re-enter and continue. No star-ceremony unit ran between 14:32 and this check, and no record in _records_/2026-11-08 shows steps 11-13, the MVP finale, the golden chest or the Participation Prize being claimed - yet the trophy is now gone. Either the owner finished it on his phone, another session finished it without recording, or the ceremony window expired. Which one is unobserved and unrecorded. Filed as GitHub Issue (class records) from this unit: zachmesh/lastwar#488. The fold references it; no comment is posted (filed by the unit with full evidence).
 - Fold note, stated plainly: the 1441 record itself was never folded into this profile by any earlier run - there is no 1441 fold section and no 1441 grounded_in entry, although it landed at 14:39 local (commit 5d70a0117), between the 1432 and 1532 organizer runs. Its state is carried forward here via the 2218 record's citation: trophy long-press entry at norm 812,702 (single taps ignored twice that session); played to step 10 of 13 (step 3 Alliance Champion TTS Rage Apex, step 6 Devil Trainer JerryLogDog 46,522 units, step 7 Great Destroyer TTS Rage Apex 986,110 durability damage, step 8 Grind King SKRyZeRZ 8,545 Stamina); steps 2 Little Sun and 5 Soldier Crusher carried no emote bar; steps 4 and 9 were intro cards whose winners went unrecorded (forwarded past too fast, the Event 38 caution); chest counter 0/1 to 1/1 after the first heart, 2/1 at step 9; unit cap reached at step 10, exited by the back button before the finale; whether re-entry resumes at step 10 or restarts the show was unobserved. Flagged for the retro as a missed fold, not silently repaired - the 1441 facts above are the 2218 record's citation, not a re-read.
 - Duel-score unit duel-score-2026-11-08-1830 by ticker-2201, about 22:10 to 22:14 local, status done. Evidence in `_records_/2026-11-08/alliance-duel/2220-queue-run.md` (commit 8960535c on records/2026-11-08).
-- VS medallion, Duel Progress, Today's Duel. Theme: Radar Training, 19:47 remaining at entry (the new duel day ends about 2026-11-09 18:00). Alliance score: [AP3x] The Apex 261,068,886 (41%) vs [TFox] Fox 380,634,584 (59%) - the alliance trails. Top scorers: [TFox] Mihye 41,111,404; [AP3x] Texas Boy 32,838,375; [TFox] yang godain ditabok 32,593,063. Scrolled the Today's Duel ranking down through ranks 6-14 (scores 16.6M down to 9.0M) without finding Bears Lair.
-- Ranking, Daily Rank: the Mon. tab is selected and the pinned own row reads Bears Lair [AP3x] The Apex, Unlisted, 0 points. Today's Theme: the personal points counter at the top reads 0. Two independent live reads agree: today's personal duel total is 0.
+- VS medallion, Duel Progress, Today's Duel. Theme: Radar Training, 19:47 remaining at entry (the new duel day ends about 2026-11-09 18:00). Alliance score: [AP3x] The Apex 261,068,886 (41%) vs [TFox] Fox 380,634,584 (59%) - the alliance trails. Top scorers: [TFox] Mihye 41,111,404; [AP3x] Texas Boy 32,838,375; [TFox] yang godain ditabok 32,593,063. Scrolled the Today's Duel ranking down through ranks 6-14 (scores 16.6M down to 9.0M) without finding owner account.
+- Ranking, Daily Rank: the Mon. tab is selected and the pinned own row reads owner account [AP3x] The Apex, Unlisted, 0 points. Today's Theme: the personal points counter at the top reads 0. Two independent live reads agree: today's personal duel total is 0.
 - Theme scoring actions read live: Use 1 Stamina +375, Complete 1 Radar Task +30,000, Use 660 Hero EXP +2.5, Use 1 Drone Battle Data point +7.5, Use 1 Drone Part +6,250, Buy Packs +30 per Diamond, Gather 100 Food +50. Chest thresholds: 40,000 / 150,000 / 540,000 points.
 - Reading of the 0: this unit's slot is 18:30, but it executed at 22:10, after the 19:00 daily reset, so it reads the NEW duel day, not the closing figure of the day that ended at 19:00. The new day is 3 hours old, the theme is Radar Training, and no radar task, stamina use or drone part has been spent since the reset, so 0 is the true opening figure for the new day. Gap against the 3,600,000 owner target: 3,600,000. The ENDED day's closing total is still unknown - the 1904 delta test is still owed, and no duel-score unit read the closing figure; the 22:30 unit reads later tonight. No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read.
 - Correction, from the record itself: the unit ran 22:10 to 22:14 local, about 4 minutes (duration_seconds 235), not 22:12 to 22:20. The closing figures (personal total 0, read twice) are unaffected.
@@ -963,7 +963,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 ## What the 2026-11-09 0223 and 0217 units added - duel day total 1,380,000 read twice, rank 153, gap 2,220,000; no ceremony waiting
 
 - Duel-score unit duel-score-2026-11-08-2230 by ticker-0204, 02:13:27 to 02:15:37 local (130 seconds; the 0223 file heading is the estimate at writing time), status done (read-only tracking unit; no grinding, no spending). Evidence in `_records_/2026-11-09/alliance-duel/0223-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-209, same session as the gifts and train units of this pass. No different-device dialog appeared.
-- Opened the gold VS medallion on the base screen. Alliance Duel panel: Today's Theme tab, Radar Training, countdown 15:46:12 at entry. Personal points counter at the top of the Today's Theme tab, read live: 1,380,000. Cross-check, Ranking, Daily Rank, Mon. tab selected: the pinned own row reads rank 153, Bears Lair [AP3x] The Apex, 1,380,000 points. Two independent live reads agree: today's personal duel total is 1,380,000.
+- Opened the gold VS medallion on the base screen. Alliance Duel panel: Today's Theme tab, Radar Training, countdown 15:46:12 at entry. Personal points counter at the top of the Today's Theme tab, read live: 1,380,000. Cross-check, Ranking, Daily Rank, Mon. tab selected: the pinned own row reads rank 153, owner account [AP3x] The Apex, 1,380,000 points. Two independent live reads agree: today's personal duel total is 1,380,000.
 - Top of the daily ranking read live: kaka wu [TFox] Fox 64,644,546; PrabuSiliwang [TFox] Fox 42,485,688; Mihye [TFox] Fox 41,237,029; Texas Boy [AP3x] The Apex 32,838,375; yang godain ditabok [TFox] Fox 32,827,423.
 - Theme scoring actions read live (same values as the 2220 read): Use 1 Stamina +375, Complete 1 Radar Task +30,000, Use at least 660 Hero EXP Points at a time +2.5, Use 1 Drone Battle Data point +7.5, Use 1 Drone Part +6,250, Buy Packs containing Diamonds +30.0 per Diamond, Gather 100 Food +50.0. Chest thresholds: 40,000 / 150,000 / 540,000 points.
 - Reading of the 1,380,000: this is the Radar Training duel day that began at the 19:00 reset on 2026-11-08. The 22:12 unit on 2026-11-08 read 0 on this same day, so 1,380,000 was earned between about 22:12 and 02:15; which actions produced it was not observed in this unit and is not asserted. Gap against the 3,600,000 owner target: 2,220,000. The day does not roll over until about 18:00 local, so this is a mid-day snapshot, not the day closing figure. No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read.
@@ -978,7 +978,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Entry: gold VS medallion tapped at norm 916,210 from the base screen. The Alliance Duel panel opened on the "Today's Theme" tab.
 - Theme read live: Radar Training, countdown 13:37:36 at the panel read. Chest thresholds 40,000 / 150,000 / 540,000, all three progress bars full with checkmarks.
 - Personal daily total read live on the theme panel: 2,005,000 (gold medal figure under the theme title).
-- Cross-check on the Ranking tab (Daily Rank, Mon.): Bears Lair [AP3x] The Apex, rank 144, 2,005,000, highlighted as the own row. The panel figure and the ranking figure agree exactly. Top of the board: kaka wu [TFox] Fox 65,184,546; 안 Mihye [TFox] Fox 57,805,038; PrabuSiliwang [TFox] Fox 42,485,688.
+- Cross-check on the Ranking tab (Daily Rank, Mon.): owner account [AP3x] The Apex, rank 144, 2,005,000, highlighted as the own row. The panel figure and the ranking figure agree exactly. Top of the board: kaka wu [TFox] Fox 65,184,546; 안 Mihye [TFox] Fox 57,805,038; PrabuSiliwang [TFox] Fox 42,485,688.
 - Exit: Ranking back arrow centre measured at norm 64,944 on this screen (the 0223 record's 145,947 point produced no change here, and a second tap at that point was not repeated per rule R2); the duel panel back arrow at norm 145,947 returned the game to the base screen. Back-arrow positions are panel-specific; ground the centre fresh. This REFINES the 0223 fold, which recorded 145,947 as the duel-panel back arrow - that still stands; 145,947 is not the Ranking-tab back arrow, (64,944) is.
 - Closing reads: personal duel total 2,005,000 of the 3,600,000 owner target, gap 1,595,000, rank 144. Movement since the 02:15 read (1,380,000, rank 153): plus 625,000, rank up 9. This is a mid-day snapshot: the Radar Training duel day began at the 19:00 reset on 2026-11-08 and rolls over about 18:00 local today, so this is not the day closing figure. No grinding, no spending, no buying to chase the target.
 - Stats correction (appended 04:24, same pass, in the record): the queue tool warned on completion that points must not duplicate achieved - points is score gained inside the unit, and this is a read-only unit, so points is 0 and the 2,005,000 total lives in achieved only. The done unit file was corrected to points 0. blocker_category h was added to the unit stats: the achieved-below-target gap is by design (mid-day read on a read-only tracking unit, day not over), not a miss.
@@ -1000,7 +1000,7 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Unit duel-score-2026-11-09-1830 by ticker-2148, about 21:50 to 21:54 local, status done. Evidence in `_records_/2026-11-09/alliance-duel/2154-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
 - Opened the VS medallion, Today's Theme. Theme: Base Expansion, 20:07:38 remaining at entry. Personal points counter at the top reads 0. Chest thresholds: 40,000 / 150,000 / 540,000 points. Theme scoring actions read live: Use 1-min Construction Speed-up +150, Increase Building Power by 1pt +30, Dispatch UR Trade Truck 1 time +300,000, Perform 1 UR Secret Task +225,000, Buy Packs +30 per Diamond, Recruit Survivor 1 time +4,500.
 - Opened Duel Progress, Today's Duel. Alliance score: [AP3x] The Apex 256,949,555 (45%) vs [TFox] Fox 307,894,587 (55%) - the alliance trails. Top scorers: [TFox] Kang Umam 14,112,300; [TFox] engin 0101 12,702,750; [TFox] kaka wu 10,492,350. Today's winning Alliance will earn 2 Alliance Duel Score(s).
-- Opened Ranking, Daily Rank: the Tues. tab is selected and the pinned own row reads Bears Lair [AP3x] The Apex, Unlisted, 0 points. Two independent live reads agree: today's personal duel total is 0.
+- Opened Ranking, Daily Rank: the Tues. tab is selected and the pinned own row reads owner account [AP3x] The Apex, Unlisted, 0 points. Two independent live reads agree: today's personal duel total is 0.
 - CORRECTION on the reset attribution: the record says this unit "executed at 21:50, after the 19:00 daily reset" - that 19:00 attribution is superseded by the countdown arithmetic. The theme showed 20:07:38 remaining at about 21:50, which ends about 17:58 the next day, so the Base Expansion theme began about 18:00. The theme countdown is the first live timer of the new reset day pointing at the about-18:00 rollover (Issue #242), joining the three timers from the previous reset day (14:52:31 at the 0306 cross-read, 13:37:36 at the 0423 panel read, 13:20:41 at 04:39 in the 0441 unit). The 0 is the new day's opening figure (the day about 3 hours 50 minutes old at the read, no scoring action spent since the reset). The 22:30 unit reads later tonight. Commented on Issue #242 by this run.
 - Returned to the base screen and checked for the Star Ceremony trophy icon beside the Alliance button: none present, so no ceremony is waiting. The spot holds the truck tile. Right edge shows Events (1), VS, radar, Alliance (red dot), Mail and Inventory (red dots).
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent. Stamina read 109 at entry and 110 at exit (passive regen).

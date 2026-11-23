@@ -30,7 +30,7 @@ grounded_in:
   Recruitment +400, Use at least 2,000 Hero EXP at a
   time +1, Buy Packs containing Diamonds (1 Diamond)
   +30 (red-lined, never). No chest claimable. The
-  account row reads rank 9, #2110 [AP3x]Bears Lair,
+  account row reads rank 9, #2110 [AP3x]owner account,
   90,500 - the 90,500 is the cumulative event figure
   shown on that row, while the live phase score is 0.
   The 10:45 R4 judgment stands: the free paths cannot

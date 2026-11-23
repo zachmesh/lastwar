@@ -57,7 +57,7 @@ reset on 2026-10-30.
 ## Arms Race - Hero Advancement phase
 
 - Phase: Hero Advancement. Contest Segment: Lv.29-30. Timer
-  01:49:42 left. Score 0, rank #2110 [AP3x]Bears Lair (rank
+  01:49:42 left. Score 0, rank #2110 [AP3x]owner account (rank
   bracket 10). Chest progress 0/2.
 - Tier thresholds: 2,000 / 4,000 / 12,000 points; chest values
   2,360 / 4,800 / 11,800 (red gems).

@@ -23,7 +23,7 @@ Activity: arms-race. Computer session cc-672.
   unexecuted, so the phase was not checked early.
 - Score: 0 at entry and at close. Thresholds 6,250 /
   12,500 / 30,000 (ruby tags 2,360 / 4,800 / 11,800).
-  Rank 8 in segment, #2110 [AP3x]Bears Lair, 0 points.
+  Rank 8 in segment, #2110 [AP3x]owner account, 0 points.
 - Scoring paths as displayed: Increase Building Power by
   1pt +1; Use 1-min Construction Speed-up +10 (red line,
   never burned); Buy Packs containing Diamonds +30 per

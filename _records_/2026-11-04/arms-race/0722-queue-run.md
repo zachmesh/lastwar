@@ -28,7 +28,7 @@ no chest claimed, no scoring action executed.
   1-min Construction Speed-up +10; Buy Packs containing Diamonds
   +30 per diamond. The speedup and pack paths are red lines and
   were not used.
-- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the
+- Ranking row figure 10,000 for #2110 [AP3x]owner account is the
   lagging previous-phase row (same figure as the 0307 Tech
   Research record) and was NOT used as this phase score.
 - Entry note: the Events tab bar needed one drag to the right

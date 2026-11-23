@@ -4,9 +4,9 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.5.0
+version: 0.6.0
 title: Last War continuous-play team
-updated_at: '2026-11-23T04:14:00Z'
+updated_at: '2026-11-23T07:25:00Z'
 state: active
 runtime: dsh
 project_path: .
@@ -52,20 +52,34 @@ record_owner: coordinator
 # from this session to its own session at 2026-11-23T04:04Z.
 steward:
   session_id: session-eb024f72-e661-4a77-9303-66af95dbcfd1
-  title: '[Last War] Steward'
+  title: 'Steer A'
+  # Retitled by the owner 2026-11-23T07:19Z (same session; earlier records say Steward).
   role: owner-gateway
+  roles:
+    - owner-gateway
+    - steer
+    - watchdog
+  # Not a roster seat and NOT the integrator: the owner decided on 2026-11-23 that
+  # integration is a dedicated seat. It keeps the board feeding and the owner-decision relay.
   principal: zhenc
 coordination:
   review_interval_minutes: 15
   # The team's GitHub Project board (reflection issue-driven-work/project-boards.md).
-  # Owned by the dtadpole user because a project can only link to a repository with
-  # the same owner and the repository belongs to zachmesh, so the board is fed by
-  # the Coordinator's pass, not by a repository link.
+  # Owned by the repository owner and LINKED to zachmesh/lastwar since 2026-11-23;
+  # the earlier board under another user is a superseded, closed backup. Nothing adds
+  # issues automatically yet, so the Coordinator's pass still feeds it.
   project:
-    owner: dtadpole
-    number: 11
-    url: https://github.com/users/dtadpole/projects/11
+    owner: zachmesh
+    number: 1
+    url: https://github.com/users/zachmesh/projects/1
     repository: zachmesh/lastwar
+  # Landing on the protected main of the repository goes through the integrator seat.
+  integration:
+    repository: zachmesh/lastwar
+    seat: integrator
+    lanes: [records, code]
+    landing: the coordinator hands the integrator a local branch name; the integrator scans the whole branch tree, pushes that named branch, opens the PR, merges with a merge commit and the head SHA guard, reads main back, and replies with the merge SHA
+    never: [push to main, force-push, squash, rebase main, delete a branch, merge its own change, change repository settings or the board]
   seat_review:
     cadence: one seat per daily review, rotating
     record: _seats_/coordinator/member-review.md
@@ -97,7 +111,7 @@ coordination:
   stopping_policy_ref: _conventions_/local-conventions/continuous-play-team.md
 capacity:
   normal_max_sessions: 8
-  size_exception: null
+  size_exception: 'integrator seat added 2026-11-23, giving 9 roster rows (the coordinator plus 8 seats): one disjoint role (landing on a protected main), no write conflicts with any other seat, reviewed daily by the coordinator'
 self_improvement:
   responsible_seats:
     - coordinator
@@ -153,8 +167,8 @@ seats:
     handover_ref: _seats_/coordinator/handover.md
   - key: operator
     principal: zhenc
-    session_id: session-b718c7de-6aab-4159-b87e-41aa424237e9
-    session_started: '2026-11-23T04:12:26Z'
+    session_id: session-7f6dd658-ebba-4854-9a29-e2f173975825
+    session_started: '2026-11-23T07:03:23Z'
     title: '[Last War] Operator'
     assignment: assigned
     roles:
@@ -298,7 +312,7 @@ seats:
       - knowledge-organizer
     responsibilities:
       - fold verified records into activities and knowledge
-      - integrate pull requests and keep the conventions current
+      - keep the conventions current (pull request integration moved to the integrator seat)
       - propose profile changes; never rewrite play records
     seat_ref: _seats_/scribe/INDEX.md
     task_ref: _activities_/INDEX.md
@@ -312,3 +326,28 @@ seats:
       - _records_/
     resource_identity_ref: null
     handover_ref: _seats_/scribe/handover.md
+  - key: integrator
+    principal: zhenc
+    session_id: session-bc838015-7852-464e-8cab-cf2fcc70a335
+    session_started: '2026-11-23T07:15:00Z'
+    title: '[Last War] Integrator'
+    assignment: assigned
+    roles:
+      - integrator
+    responsibilities:
+      - land coordinator-handed local branches on the protected main through pull requests and merge commits
+      - privacy-scan the whole branch tree before any push and read main back after every merge
+      - merge code pull requests only after their checks and never one it authored
+    seat_ref: _seats_/integrator/INDEX.md
+    task_ref: null
+    depends_on: null
+    write_scopes:
+      - _records_/*/integration/
+    excluded_write_scopes:
+      - _queue_/
+      - _activities_/
+      - _knowledge_/
+      - _conventions_/
+      - _tools_/
+    resource_identity_ref: null
+    handover_ref: _seats_/integrator/handover.md

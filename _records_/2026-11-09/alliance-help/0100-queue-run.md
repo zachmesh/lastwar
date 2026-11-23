@@ -18,7 +18,7 @@ Activity: alliance-help.
 
 - Help page (first read about 00:58 PT): "Today's points gained
   from Alliance Help: 360/1,000". Four rows - three own
-  (Bears Lair: Missile Mastery II research, Defense Training
+  (owner account: Missile Mastery II research, Defense Training
   VIII research, building Lv.30 Aircraft Center) and one ally
   (벨라다, building Lv.21 Crystal Factory).
 - After Help All (about 00:59 PT): toast "Allies are very

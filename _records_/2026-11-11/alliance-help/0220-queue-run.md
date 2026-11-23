@@ -26,8 +26,8 @@ Activity: alliance-help. Computer session cc-539.
 
 - Header: "Today's points gained from Alliance Help:
   80/1,000".
-- Own requests: Bears Lair Lv.30 Aircraft Center
-  30/30, Bears Lair Missile Mastery II research 30/30.
+- Own requests: owner account Lv.30 Aircraft Center
+  30/30, owner account Missile Mastery II research 30/30.
 - Waiting ally requests: miss direction, Aircraft
   Synergy - Attack I research; Amarky257, Tank Mastery
   II research; a further row was cut off at the bottom

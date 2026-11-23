@@ -25,7 +25,7 @@ HidingAnt504" toast, confirming the owner's account.
 - Verification on the Alliance Help page, read live:
   header "Today's points gained from Alliance Help:
   520/1,000". All listed rows are this account's own
-  Bears Lair requests (Defense Training VIII research,
+  owner account requests (Defense Training VIII research,
   Lv.30 Aircraft Center building, Weapon Training VIII
   research, Lv.27 Drill Ground building), each carrying
   a green "Time reduced" badge; no ally rows were
