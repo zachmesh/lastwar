@@ -1,8 +1,8 @@
 ---
 title: 5. Computer use
 created: 2026-11-23T07:20:36Z
-modified: 2026-11-23T07:20:36Z
-version: 0.1.0
+modified: 2026-11-23T20:05:56Z
+version: 0.2.0
 sequence: 10
 description: Play happens through dtadpole/computer-use on this Mac, using its MCP server.
 ---
@@ -25,11 +25,12 @@ Local rules:
   by the computer-use policy and are never proposed.
 - One desktop run at a time. A live run holds the Mac's desktop-run
   lock; a second start is refused, not queued.
-- This Mac opts out of the 300-second owner-idle wait for bridge runs:
-  `_tools_/cu_bridge.py` sets `CU_OWNER_IDLE_SECONDS=0` in the MCP child
-  environment. The computer-use default stays 300 for every other caller,
-  and the override is a local, reversible decision, not a change to the
-  shared rule.
+- Owner-idle wait RESTORED by the owner's decision of 2026-11-23T19:48Z (OD-20261123-23,
+  `_records_/retro/owner-decisions-log/od-20261123-23.md`; code in PR 937). The opt-out
+  `CU_OWNER_IDLE_SECONDS=0`, which `_tools_/cu_bridge.py` set under commit fd83c35f on an owner
+  request of 2026-11-22, is gone: the bridge no longer defaults the variable, the lock's
+  constant is 300 s, and a refusal `owner_active` is the wait. The quiet windows and the
+  exclusive token lease (PR 911) are the other two cu-coordination rules.
 - Consent is human-only. The bridge prints the control-link command
   for the owner; no seat can approve an app, a purchase, a send or a
   consequential step through the tool.
