@@ -85,9 +85,43 @@ def run_linter(paths: dict[str, Path], root: Path, extra: list[str], timeout: in
     except subprocess.TimeoutExpired:
         raise GateError(f"the linter did not finish in {timeout}s")
     try:
-        return json.loads(proc.stdout)
+        report = json.loads(proc.stdout)
     except ValueError:
         raise GateError(f"the linter gave no JSON (exit {proc.returncode}): {proc.stderr.strip()[-300:]}")
+    return drop_ignored(root, report)
+
+
+def ignored_among(top: Path, names) -> set[str]:
+    """The names git ignores (a path under an ignored folder counts), by one `git check-ignore`; a tracked path is never ignored. An error from git
+    ignores nothing: the gate then judges as it did before."""
+    wanted = sorted({n for n in names if n and not n.startswith("/") and ".." not in n.split("/")})
+    if not wanted:
+        return set()
+    env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_") or k == "GIT_INDEX_FILE"}
+    try:
+        out = subprocess.run(["git", "-C", str(top), "check-ignore", "-z", "--stdin"], input=("\0".join(wanted) + "\0").encode("utf-8", "surrogateescape"),
+                             capture_output=True, env=env, timeout=120)
+    except (OSError, subprocess.SubprocessError):
+        return set()
+    if out.returncode not in (0, 1):
+        return set()
+    return {n for n in out.stdout.decode("utf-8", "surrogateescape").split("\0") if n}
+
+
+def drop_ignored(top: Path, report: dict) -> dict:
+    """The linter walks the working tree, so a folder `.gitignore` excludes (the queue's live-only completed/ is one) showed up as a content folder
+    with no entry point and its documents were counted. Findings and document rows about ignored paths are dropped; everything else is unchanged."""
+    errors = report.get("errors", [])
+    budgets = report.get("document_budgets") or {}
+    rows = budgets.get("documents") or []
+    ignored = ignored_among(top, {path_of(e) for e in errors} | {r["path"] for r in rows if isinstance(r, dict) and r.get("path")})
+    if not ignored:
+        return report
+    out = dict(report)
+    out["errors"] = [e for e in errors if path_of(e) not in ignored]
+    if rows:
+        out["document_budgets"] = dict(budgets, documents=[r for r in rows if r.get("path") not in ignored])
+    return out
 
 
 def load_counter(paths: dict[str, Path]):
