@@ -85,7 +85,8 @@ class Conforming(PoolCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("conforming", r.stdout)
         self.assertIn("executed in window 10", r.stdout)
-        self.assertIn("coverage serving a ranked item: units 60%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context): units 60%", r.stdout)
+        self.assertIn("coverage SINCE CUTOVER: not set", r.stdout)
         self.assertNotIn(SECRET, r.stdout + r.stderr)                     # no summary, target or unit text
         self.assertNotIn("mail-2026", r.stdout)                           # no unit ids either
 
@@ -321,6 +322,134 @@ class RankedExactly(PoolCase):
             want = q.forecast_class(serves, {"PL-01"})
             kind = sc.serves_kind(serves)
             self.assertEqual({"ok": kind in ("ranked", "exempt"), "no-row": kind == "no-row", "unknown": kind == "unrecognised"}[want], True, (serves, want, kind))
+
+
+class Cutover(PoolCase):
+    """The coverage verdict counts the units executed since the roster remap landed; the rolling window is context."""
+
+    def old_and_new(self, old_unranked=8, new_ranked=4, new_unranked=0, old_ago=600, new_ago=20, old_hours=0.25, new_hours=0.25):
+        for i in range(old_unranked):
+            self.unit("done", ago=old_ago + i, serves="upkeep", hours=old_hours)
+        for i in range(new_ranked):
+            self.unit("done", ago=new_ago + i, serves="PL-17", hours=new_hours)
+        for i in range(new_unranked):
+            self.unit("done", ago=new_ago + 10 + i, serves="upkeep", hours=new_hours)
+
+    def data(self, *args):
+        r = self.run_tool("--format", "json", *args)
+        self.assertIn(r.returncode, (0, 1), r.stdout + r.stderr)
+        return r, json.loads(r.stdout)
+
+    def test_both_lines_are_printed_and_the_since_line_is_the_verdict(self):
+        self.old_and_new()
+        r = self.run_tool("--since", iso(180))
+        self.assertIn("coverage ROLLING 12 h (context, not the verdict): units 33%", r.stdout)
+        self.assertIn("coverage SINCE CUTOVER", r.stdout)
+        self.assertIn("(--since) - THE VERDICT: units 100%, unit-hours 100% of 4 units | serving nothing 0 units, 0 h of 1 h", r.stdout)
+        self.assertEqual(r.returncode, 0, r.stdout)                                  # the rolling 33 percent does not alarm any more
+
+    def test_the_json_carries_both_with_the_units_that_serve_nothing_and_their_hours(self):
+        self.old_and_new(old_unranked=8, new_ranked=3, new_unranked=1, old_hours=0.5, new_hours=0.25)
+        _r, d = self.data("--since", iso(180))
+        rolling, since = d["counts"]["rolling"], d["counts"]["since_cutover"]
+        self.assertEqual((rolling["executed"], rolling["ranked_units"], rolling["units_percent"]), (12, 3, 25))
+        self.assertEqual((rolling["serves_nothing_units"], rolling["serves_nothing_hours"], rolling["total_hours"]), (9, 4.25, 5.0))
+        self.assertEqual((since["executed"], since["units_percent"], since["unit_hours_percent"]), (4, 75, 75))
+        self.assertEqual((since["serves_nothing_units"], since["serves_nothing_hours"], since["total_hours"]), (1, 0.25, 1.0))
+        self.assertEqual((since["source"], d["counts"]["coverage_verdict_basis"]), ("--since", "since-cutover"))
+
+    def test_a_low_figure_since_the_cutover_alarms_whatever_the_rolling_window_says(self):
+        self.old_and_new(old_unranked=0, new_ranked=1, new_unranked=3, old_ago=700)
+        for i in range(6):
+            self.unit("done", ago=400 + i, serves="PL-01")                                 # rolling is full of ranked units
+        r, d = self.data("--since", iso(180))
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual((alarm["basis"], alarm["below"], alarm["units_percent"], alarm["executed"]), ("since-cutover", ["units", "unit-hours"], 25, 4))
+        self.assertTrue(alarm["since"].endswith("Z"))
+        self.assertGreater(d["counts"]["rolling"]["units_percent"], 60)
+
+    def test_unit_hours_can_alarm_since_the_cutover_on_their_own(self):
+        self.old_and_new(old_unranked=0, new_ranked=3, new_unranked=1, new_hours=0.25)
+        self.unit("done", ago=40, serves="upkeep", hours=3.0)
+        _r, d = self.data("--since", iso(180))
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual(alarm["basis"], "since-cutover")
+
+    def test_no_unit_since_the_cutover_is_not_applicable_and_not_an_alarm(self):
+        self.old_and_new(old_unranked=8, new_ranked=0)
+        r, d = self.data("--since", iso(5))
+        self.assertIn("coverage-since-cutover", d["not_applicable"])
+        self.assertNotIn("coverage", {a["alarm"] for a in d["alarms"]})
+        self.assertIn("no unit executed since yet (n/a)", self.run_tool("--since", iso(5)).stdout)
+
+    def test_without_a_cutover_the_rolling_figure_is_the_verdict_as_before(self):
+        self.old_and_new(old_unranked=8, new_ranked=1)
+        r, d = self.data()
+        self.assertEqual(d["counts"]["coverage_verdict_basis"], "rolling")
+        self.assertIsNone(d["counts"]["since_cutover"])
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual(alarm["basis"], "rolling")
+        self.assertIn("the rolling figure is the verdict", self.run_tool().stdout)
+
+    def test_the_state_file_is_read_and_the_flag_beats_it(self):
+        self.old_and_new()
+        state = self.root / "_tools_" / "state"
+        state.mkdir(parents=True)
+        (state / "strategy-cutover.json").write_text(json.dumps({"since": iso(180)}))
+        _r, d = self.data()
+        self.assertEqual(d["counts"]["since_cutover"]["source"], "state file _tools_/state/strategy-cutover.json")
+        self.assertEqual(d["counts"]["since_cutover"]["executed"], 4)
+        _r, d = self.data("--since", iso(1000))
+        self.assertEqual((d["counts"]["since_cutover"]["source"], d["counts"]["since_cutover"]["executed"]), ("--since", 12))
+
+    def test_a_broken_state_file_falls_through_to_not_set(self):
+        self.old_and_new()
+        state = self.root / "_tools_" / "state"
+        state.mkdir(parents=True)
+        (state / "strategy-cutover.json").write_text("{not json")
+        _r, d = self.data()
+        self.assertIsNone(d["counts"]["since_cutover"])
+
+    def test_git_gives_the_merge_that_introduced_the_roster_serves_ids(self):
+        import os
+        env = dict(os.environ, GIT_AUTHOR_NAME="t", GIT_AUTHOR_EMAIL="t@example.org", GIT_COMMITTER_NAME="t", GIT_COMMITTER_EMAIL="t@example.org")
+
+        def git(*args, when=None):
+            e = dict(env, GIT_COMMITTER_DATE=when, GIT_AUTHOR_DATE=when) if when else env
+            return subprocess.run(["git", "-C", str(self.root), *args], check=True, capture_output=True, text=True, env=e).stdout
+
+        git("init", "-q", "-b", "main")
+        tools = self.root / "_tools_"
+        tools.mkdir(exist_ok=True)
+        (tools / "regulars.json").write_text('{"regulars":[{"id":"radar","serves":"upkeep"}]}')
+        git("add", "_tools_/regulars.json")
+        git("commit", "-q", "-m", "roster", when="2026-11-23T08:00:00+00:00")
+        git("checkout", "-q", "-b", "work/roster-serves")
+        (tools / "regulars.json").write_text('{"regulars":[{"id":"radar","serves":"PL-17"}]}')
+        git("commit", "-q", "-am", "remap", when="2026-11-23T08:05:00+00:00")
+        git("checkout", "-q", "main")
+        (self.root / "other.txt").write_text("x")
+        git("add", "other.txt")
+        git("commit", "-q", "-m", "other work on main", when="2026-11-23T08:10:00+00:00")
+        git("merge", "-q", "--no-ff", "-m", "Merge the remap", "work/roster-serves", when="2026-11-23T08:30:00+00:00")
+        git("config", "user.email", "t@example.org")
+        self.old_and_new()
+        _r, d = self.data("--now", "2026-11-23T09:00:00Z")
+        since = d["counts"]["since_cutover"]
+        self.assertEqual(since["since"], "2026-11-23T08:30:00Z")                       # the merge, not the remap commit on the branch
+        self.assertEqual(since["source"], "git: the merge that introduced the roster serves ids")
+
+    def test_a_bad_since_is_a_usage_error(self):
+        self.old_and_new()
+        r = self.run_tool("--since", "yesterday-ish")
+        self.assertEqual(r.returncode, 2)
+        self.assertIn("--since is not an ISO 8601 time", r.stderr)
+
+    def test_a_unit_that_finished_exactly_at_the_cutover_counts_and_the_output_stays_counts_only(self):
+        self.unit("done", ago=60, serves="PL-17")
+        r = self.run_tool("--since", iso(60))
+        self.assertIn("of 1 units", r.stdout)
+        self.assertNotIn(SECRET, r.stdout + r.stderr)
 
 
 class Coverage(PoolCase):

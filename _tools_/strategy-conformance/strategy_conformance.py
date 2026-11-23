@@ -13,7 +13,13 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     blocked ones) and the blocker text; N, at most the open slots, is subtracted from the idle count and printed
                     beside it, with the blocker text when the stats carry one.
   coverage          units, or unit-hours (result duration, else est_minutes), serving a RANKED item are under
-                    --coverage-percent (60) of what executed in the window
+                    --coverage-percent (60) of what executed. Two lines are printed: the ROLLING window (--hours, 12; context, it
+                    stays low while old units age out) and SINCE THE CUTOVER (units executed after the roster remap landed): the
+                    verdict, which the alarm and the Coach quote. The cutover is, in order: --since TIME; the state file
+                    `_tools_/state/strategy-cutover.json` ({"since": "ISO UTC"}); the first-parent commit in git that introduced a
+                    plan item id as a roster serves (`_tools_/regulars.json`), i.e. the merge of the remap. With none of them the
+                    rolling figure is the verdict and the output says so. Both lines also give the units that serve nothing
+                    (not ranked) with their hours of the total.
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
@@ -26,7 +32,7 @@ regular and file name (growth, convert, collect, promot, capacity, store, invent
 The plan file is a CSV `rank,item,trigger_at,serves` (trigger_at in UTC, ISO 8601), kept by the strategist; without one the
 plan-item check is skipped and says so. A kind with no sample (nothing executed, no growth unit) is n/a, never an alarm.
 
-  strategy_conformance.py [--root PATH] [--hours 12] [--now ISO] [--plan CSV] [--format text|json]
+  strategy_conformance.py [--root PATH] [--hours 12] [--since TIME] [--now ISO] [--plan CSV] [--format text|json]
 
 Exit 0 conforming, 1 at least one alarm, 2 the queue cannot be read. Standard library only.
 """
@@ -38,6 +44,7 @@ import importlib.util
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -73,6 +80,46 @@ def configure_ranking(root: Path) -> None:
     except Exception as exc:
         ids, reason = None, f"the ledger reader failed ({type(exc).__name__})"
     RANKING.update(ids=ids, reason=reason or "")
+
+
+CUTOVER_STATE = "_tools_/state/strategy-cutover.json"
+
+
+def resolve_cutover(root: Path, since_flag: str):
+    """(instant, source) of the roster remap, or (None, why): --since, then the state file, then git (the first-parent commit that introduced a
+    plan item id as a roster serves, which is the merge of the remap). Never reads anything but the state file and git log."""
+    if since_flag:
+        at = stamp(since_flag)
+        return (at, "--since") if at else (None, "--since is not an ISO 8601 time")
+    state = root / CUTOVER_STATE
+    if state.is_file():
+        try:
+            at = stamp(json.loads(state.read_text(encoding="utf-8")).get("since"))
+        except (OSError, ValueError, AttributeError):
+            at = None
+        if at:
+            return at, f"state file {CUTOVER_STATE}"
+    try:
+        out = subprocess.run(["git", "-C", str(root), "log", "--first-parent", "--format=%cI", "--reverse", "-S", '"serves":"PL-', "--",
+                              "_tools_/regulars.json"], capture_output=True, text=True, timeout=60)
+        first = next((ln for ln in out.stdout.splitlines() if ln.strip()), "") if out.returncode == 0 else ""
+    except (OSError, subprocess.SubprocessError):
+        first = ""
+    at = stamp(first) if first else None
+    return (at, "git: the merge that introduced the roster serves ids") if at else (None, "no cutover: give --since TIME, write " + CUTOVER_STATE + ", or land the remap")
+
+
+def coverage_stats(units: list) -> dict:
+    """Units and unit-hours serving a ranked item, and the units that serve nothing (not ranked) with their hours of the total."""
+    ranked = [u for u in units if u.ranked]
+    total_hours = sum(u.hours for u in units)
+    ranked_hours = sum(u.hours for u in ranked)
+    unit_pct = percent(len(ranked), len(units))
+    hour_pct = percent(ranked_hours, total_hours)
+    return {"executed": len(units), "ranked_units": len(ranked),
+            "units_percent": None if unit_pct is None else round(unit_pct), "unit_hours_percent": None if hour_pct is None else round(hour_pct),
+            "total_hours": round(total_hours, 2), "ranked_hours": round(ranked_hours, 2),
+            "serves_nothing_units": len(units) - len(ranked), "serves_nothing_hours": round(total_hours - ranked_hours, 2)}
 
 
 def serves_kind(serves: str) -> str:
@@ -255,19 +302,33 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
             alarms.append({"alarm": "idle-slot", "activity": activity, "idle_slots": alarmable, "minutes": round(minutes),
                            "limit": a.idle_minutes})
     counts["slot_reads"] = idle
-    # coverage
-    if executed:
-        unit_cov = percent(sum(1 for u in executed if u.ranked), len(executed))
-        total_hours = sum(u.hours for u in executed)
-        hour_cov = percent(sum(u.hours for u in executed if u.ranked), total_hours)
-        counts["coverage_units_percent"] = None if unit_cov is None else round(unit_cov)
-        counts["coverage_unit_hours_percent"] = None if hour_cov is None else round(hour_cov)
-        low = [name for name, v in (("units", unit_cov), ("unit-hours", hour_cov)) if v is not None and v < a.coverage_percent]
-        if low:
-            alarms.append({"alarm": "coverage", "below": low, "units_percent": counts["coverage_units_percent"],
-                           "unit_hours_percent": counts["coverage_unit_hours_percent"], "limit": a.coverage_percent})
+    # coverage: the rolling window is context; the verdict is the units executed since the cutover when one is known
+    cutover, cutover_source = resolve_cutover(root, a.since)
+    rolling = coverage_stats(executed)
+    counts["rolling"] = {"hours": hours, **rolling}
+    since_stats = None
+    if cutover is not None:
+        since_units = [u for u in done if u.status in EXECUTED and u.finished and cutover <= u.finished <= now]
+        since_stats = coverage_stats(since_units)
+        counts["since_cutover"] = {"since": cutover.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": cutover_source, **since_stats}
     else:
-        na.append("coverage")
+        counts["since_cutover"] = None
+        counts["cutover_note"] = cutover_source
+    counts["coverage_units_percent"] = rolling["units_percent"]
+    counts["coverage_unit_hours_percent"] = rolling["unit_hours_percent"]
+    verdict, basis = (since_stats, "since-cutover") if since_stats is not None else (rolling, "rolling")
+    counts["coverage_verdict_basis"] = basis
+    if verdict["executed"]:
+        low = [name for name, v in (("units", verdict["units_percent"]), ("unit-hours", verdict["unit_hours_percent"]))
+               if v is not None and v < a.coverage_percent]
+        if low:
+            alarm = {"alarm": "coverage", "basis": basis, "below": low, "units_percent": verdict["units_percent"],
+                     "unit_hours_percent": verdict["unit_hours_percent"], "limit": a.coverage_percent, "executed": verdict["executed"]}
+            if basis == "since-cutover":
+                alarm["since"] = counts["since_cutover"]["since"]
+            alarms.append(alarm)
+    else:
+        na.append("coverage" if basis == "rolling" else "coverage-since-cutover")
     # growth partial rate
     growth = [u for u in executed if u.ranked]
     counts["growth_executed"] = len(growth)
@@ -305,8 +366,20 @@ def render(result: dict) -> str:
                  f"(not ranked), no serves line {k['no_serves_line']} ({k['ranked_by_name']} ranked by name) | ranking basis: {c['ranking_basis']}")
     last = c["minutes_since_last_execution"]
     lines.append("last execution: " + ("none on record" if last is None else f"{last} min ago"))
-    if "coverage_units_percent" in c:
-        lines.append(f"coverage serving a ranked item: units {c['coverage_units_percent']}%, unit-hours {c['coverage_unit_hours_percent']}%")
+    r = c["rolling"]
+    if r["executed"]:
+        lines.append(f"coverage ROLLING {r['hours']:g} h (context{', not the verdict' if c['coverage_verdict_basis'] == 'since-cutover' else ''}): "
+                     f"units {r['units_percent']}%, unit-hours {r['unit_hours_percent']}% of {r['executed']} units | serving nothing "
+                     f"{r['serves_nothing_units']} units, {r['serves_nothing_hours']:g} h of {r['total_hours']:g} h")
+    sc = c["since_cutover"]
+    if sc is None:
+        lines.append(f"coverage SINCE CUTOVER: not set ({c['cutover_note']}); the rolling figure is the verdict")
+    elif sc["executed"]:
+        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}) - THE VERDICT: units {sc['units_percent']}%, unit-hours "
+                     f"{sc['unit_hours_percent']}% of {sc['executed']} units | serving nothing {sc['serves_nothing_units']} units, "
+                     f"{sc['serves_nothing_hours']:g} h of {sc['total_hours']:g} h")
+    else:
+        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}): no unit executed since yet (n/a)")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
         note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")
@@ -328,6 +401,8 @@ def main(argv=None) -> int:
     p.add_argument("--root", default=str(HERE.parent.parent), help="the repository (default: the one holding this tool)")
     p.add_argument("--hours", type=float, default=12, help="the window of executed units")
     p.add_argument("--now", default="", help="the instant to judge at, ISO 8601 UTC (default: now)")
+    p.add_argument("--since", default="", help="the roster remap's cutover, ISO 8601 UTC: the coverage verdict counts units executed after it "
+                                               "(default: the state file, else git)")
     p.add_argument("--plan", default="", help="plan-of-record CSV: rank,item,trigger_at,serves")
     p.add_argument("--top", type=int, default=3, help="plan items up to this rank are checked")
     p.add_argument("--stale-minutes", type=float, default=45)
@@ -341,6 +416,9 @@ def main(argv=None) -> int:
     now = stamp(a.now) if a.now else datetime.now(timezone.utc)
     if now is None:
         print("strategy_conformance: --now is not an ISO 8601 time", file=sys.stderr)
+        return 2
+    if a.since and stamp(a.since) is None:
+        print("strategy_conformance: --since is not an ISO 8601 time", file=sys.stderr)
         return 2
     plan = Path(a.plan) if a.plan else None
     try:
