@@ -77,6 +77,13 @@ Usage:
              # this check a Nov-20 chain keeps minting on Nov-22
              # and the units it seeds write observations to the
              # wrong day's file.
+             # enqueue refuses a future --not-before with no
+             # --expires-at, and any --not-before / --expires-at
+             # it cannot parse (issue #859): the design defines an
+             # empty expires_at as "no deadline", so _expire_stale
+             # never touches such a unit and no maintenance pass
+             # can retire it - the window end must be stated, and
+             # a timestamp that never parses is the same defect.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
@@ -163,6 +170,17 @@ Usage:
              # sync and plan all treat a marker like a local
              # done record, and sync reaps markers once the done
              # record lands in the local pool or after 7 days.
+             # complete also closes a unit as expired (issue
+             # #859): --status expired on an inbox or claimed
+             # unit writes the same result _expire_stale writes,
+             # needs a --summary naming why the window passed,
+             # refuses a unit that already has a done record or a
+             # completion marker (run sync to drop the stale
+             # copy), refuses a unit whose expires_at is still
+             # ahead (it never sheds live work), and writes no
+             # completion marker - this is the supported way to
+             # retire a unit whose empty expires_at no expiry
+             # pass can reach.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
              # a re-acquire by the same executor always renews the
@@ -3658,6 +3676,48 @@ def cmd_enqueue(args):
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
         return 1
+    # Unretirable-window refusal (issue #859): the design defines
+    # an empty expires_at as "no deadline" (task-unit-queue-design.md
+    # section 6), so _expire_stale is gated on a value that is
+    # absent and no maintenance pass can close the unit - enqueue
+    # used to accept any string here, so not only an omitted expiry
+    # but a timestamp it could not parse minted queue debt that only
+    # a hand edit could retire. Both are refused before any file is
+    # created: a future not_before must state the window end, and a
+    # timestamp must be the UTC form the rest of the pool uses.
+    not_before = None
+    if args.not_before:
+        not_before = parse_iso(args.not_before)
+        if not_before is None:
+            print(f"refused: --not-before {args.not_before!r} is not "
+                  "a UTC timestamp YYYY-MM-DDTHH:MM:SSZ - an "
+                  "unparsable window start never becomes actionable "
+                  "(issue #859)")
+            return 1
+    expires = None
+    if args.expires_at:
+        expires = parse_iso(args.expires_at)
+        if expires is None:
+            print(f"refused: --expires-at {args.expires_at!r} is not "
+                  "a UTC timestamp YYYY-MM-DDTHH:MM:SSZ - an "
+                  "unparsable expiry never expires the unit "
+                  "(issue #859)")
+            return 1
+    if not_before is not None and expires is None:
+        print("refused: --not-before needs --expires-at - a unit "
+              "with a future window start and no window end is "
+              "unretirable, because expiry is gated on expires_at "
+              "(issue #859); pass --expires-at at the window end, "
+              "or omit --not-before for a unit that is actionable "
+              "now")
+        return 1
+    if not_before is not None and expires is not None \
+            and expires <= not_before:
+        print(f"refused: --expires-at {iso(expires)} is not after "
+              f"--not-before {iso(not_before)} - a window that ends "
+              "before it starts would stage an unusable unit "
+              "(issue #859)")
+        return 1
     refusal = _sweep_enqueue_refusal(args)
     if refusal is not None:
         print(refusal)
@@ -4441,8 +4501,88 @@ def blocker_category_not_enum(stats):
                 and (len(text) == 1 or text[1] in " -:"))
 
 
+def _complete_expired(args, state, path):
+    """Close a unit as expired from a supported command (issue #859).
+
+    The design defines an empty expires_at as "no deadline"
+    (task-unit-queue-design.md section 6), so _expire_stale never
+    touches such a unit and reap, sync and plan cannot retire it -
+    the genesis pass on 2026-11-22 could only do it by editing two
+    inbox files by hand. This path writes the same result
+    _expire_stale writes, for an operator that knows the window
+    passed, and it writes no completion marker: the marker records
+    an executed closing that next, claim, sync and plan must treat
+    as done, and an expiry carries no execution at all.
+
+    Guarded like the ordered queue paths: a unit that already has a
+    done record or a completion marker is stale, so sync drops the
+    copy and this refuses instead of overwriting a real closing
+    with a miss. A unit whose expires_at is still ahead is refused
+    too - this path is for a window that already ended, so a
+    closing call can never shed live work as expired. A claimed
+    unit keeps its claim stamp in started_at and its executor, so
+    who held it when it expired stays legible, but it is still an
+    expiry, not an executed closing (EXECUTED_RESULT_STATUSES
+    excludes it).
+    """
+    unit = args.unit
+    if state not in ("inbox", "claimed"):
+        print(f"cannot expire {unit}: state is {state}")
+        return 1
+    summary = (args.summary or "").strip()
+    if not summary:
+        print(f"refused: --status expired needs --summary naming why "
+              f"the window passed - an expiry with no stated reason "
+              f"is a record with no evidence (issue #859)")
+        return 1
+    if _has_done_record(args.root, unit):
+        print(f"cannot expire {unit}: already has a done record - "
+              f"the inbox copy is stale, run sync to drop it "
+              f"instead of expiring it (issue #859)")
+        return 1
+    if has_completion_marker(args.root, unit):
+        print(f"cannot expire {unit}: already closed in another "
+              f"worktree - the inbox copy is stale, run sync to "
+              f"drop it instead of expiring it (issue #859)")
+        return 1
+    fields, body = read_unit(path)
+    # A live window is never expirable by hand (issue #859): this
+    # path exists for a window that already passed, and letting a
+    # closing call retire work whose expires_at is still ahead
+    # would be a way to shed a unit instead of executing it. A
+    # past expiry is allowed - reap just has not run yet.
+    expires = parse_iso(fields.get("expires_at", ""))
+    if expires is not None and expires > now_utc():
+        print(f"refused: {unit} expires_at {iso(expires)} has not "
+              f"passed - --status expired is for a window that "
+              f"already ended, and reap closes this one when it "
+              f"does (issue #859)")
+        return 1
+    fields["result"] = {
+        "status": "expired",
+        "started_at": fields.get("claimed_at", ""),
+        "finished_at": iso(now_utc()),
+        "duration_seconds": "",
+        "executor": fields.get("claimed_by", ""),
+        "summary": summary,
+        "claimed": [], "claimed_count": 0,
+        "evidence": args.evidence or "",
+        "follow_up": args.follow_up or "none",
+        "stats": {},
+        "stats_missing": missing_stats_keys("expired", {}),
+        "stats_warnings": [],
+    }
+    os.makedirs(state_dir(args.root, "done"), exist_ok=True)
+    write_unit(path, fields, body)
+    os.rename(path, unit_path(args.root, "done", unit))
+    print(f"expired {unit} (no expires_at needed)")
+    return 0
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
+    if args.status == "expired":
+        return _complete_expired(args, state, path)
     if state != "claimed":
         print(f"cannot complete {args.unit}: state is {state}")
         return 1
@@ -5842,7 +5982,7 @@ def main(argv=None):
     p.add_argument("--unit", required=True)
     p.add_argument("--status", default="done",
                    choices=["done", "partial", "failed",
-                            "skipped-needs-owner"])
+                            "skipped-needs-owner", "expired"])
     p.add_argument("--summary", default="")
     p.add_argument("--claimed-items", default="")
     p.add_argument("--evidence", default="")
