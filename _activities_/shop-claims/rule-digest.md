@@ -1,9 +1,9 @@
 ---
 title: Shop Claims Rule Digest
 created: 2026-11-23T07:22:18Z
-modified: 2026-11-23T10:03:28Z
+modified: 2026-11-23T10:25:21Z
 level: L1
-version: 0.4.0
+version: 0.5.0
 description: The standing rules an operator must follow when claiming free shop items, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ Status, then the date of the newest supporting record, then up to 2 records.
 6. Read the button after each claim tap: Claimed means it landed, a still-green Claim means it did not. verified 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md` `_records_/2026-11-01/shop-claims/1843-queue-run.md`
 7. Before claiming a unit check the precondition: device online, LastWar window present and in front; if not, stop the pass. verified 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md` `_records_/2026-11-19/shop-claims/1434-queue-run.md`
 8. Season hub: no pass claim found 2026-11-08, and on 2026-11-22 the base showed no Season entry; do not hunt for it. verified 2026-11-22. `_records_/2026-11-22/shop-claims/2354-queue-run.md` `_records_/2026-11-08/shop-claims/1455-queue-run.md`
-9. The check-in FREE GIFT Go has no in-game claim; taps swipe the carousel or open the web store. verified 2026-11-22. `_records_/2026-11-22/shop-claims/1059-queue-run.md` `_records_/2026-11-16/shop-claims/2240-queue-run.md`
+9. The check-in FREE GIFT Go has no in-game claim; taps swipe the carousel or open the web store. unverified 2026-11-22. `_records_/2026-11-22/shop-claims/1059-queue-run.md` `_records_/2026-11-16/shop-claims/2240-queue-run.md`
 10. The weekly pass list rotates; re-read the cards and verify each tab switch. verified 2026-11-11. `_records_/2026-11-11/shop-claims/1531-queue-run.md` `_records_/2026-11-04/shop-claims/0511-queue-run.md`
 
 Unverified: Iron and Coin cards below the fold on 2026-11-22; Season Rules button.

@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T09:39:12Z
+modified: 2026-11-23T10:32:26Z
 level: L1
-version: 1.108.0
+version: 1.110.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -145,34 +145,30 @@ grounded_in:
 
 # Alliance donations playbook card
 
-Goal: donate every run to the recommended technology, closing each unit on a live count.
+Goal: donate every run to the recommended technology.
 
 ## Route
-1. Restore the base framing if panned.
-2. Tap the Alliance shield, ground fresh, then the Techs tile.
-3. Find the red-panda recommended badge (drag the War tree up).
-4. Open that node; read count and coin cost.
-5. Tap coin Donate once; re-read the count.
-6. Stop at the live-read 1/30; never tap diamonds.
-7. Return to base.
-Shown in `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, step 1 in `_records_/2026-11-22/alliance-donations/0554-queue-run.md`.
+1. Restore base framing.
+2. Ground the Alliance shield fresh; open Techs.
+3. Find the recommended badge (red panda).
+4. Open it; read count and coin cost.
+5. Tap coin Donate once; re-read count.
+6. Tap while the count reads 1 or more, read EXP and badge after the last tap, never diamonds.
 
 ## Rules
-- R1 Stop at the live-read 1/30; last one to a named re-read unit (by-design partial, blocker h). Status: tested. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
-- R2 Close only on a live count; a timer hiding it means close unverified, tracker untouched. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/0554-queue-run.md`
+- R1 Donate while the count reads 1 or more; a tap from a live 1/30 lands. After the last tap read Tech EXP and badge; grey Donate with a timer means the count is spent. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`
+- R2 A count needs a live read in the same unit; after the last tap close as count spent on the witness and never write a count. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`, `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
 - R3 Read recommended node and coin cost fresh each unit. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
 - R4 Re-read the count after every tap. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`
 - R5 Ground the Alliance shield fresh each screenshot. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
 
 ## Failures
-- Count hidden by timer - fix: R1, else wait and re-read. `_records_/2026-11-22/alliance-donations/0114-queue-run.md`
-- Window or device lost - fix: owner clicks the LastWar Dock icon once. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
-- Alliance button ignores the tap - fix: restore framing, re-ground. `_records_/2026-11-22/alliance-donations/0554-queue-run.md`
+- Count hidden by timer - by design after the last tap; close on the witness. `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
+- Window or device lost - fix: owner clicks the Dock icon. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
 
 ## Open questions
-- Does a tap from a live 1/30 land? Test: tap once, wait out the timer, re-read count; run by researcher.
-- What are the refill rate and closing standard? Test: live reads every 10 minutes after a live zero; run by researcher.
-- Why does Alliance ignore taps in the windowed 788x1083 state? Test: enter there, then in 642x951; run by operator.
+- Is the grey timer a per-tap cooldown, a daily lock or the refill countdown, and what is the refill interval? Test: log the timer at the last tap and the next entry count with times; run by operator.
+- Does the badge item witness every node? Test: read it before and after a counted tap at Quick Construction and at Rallied Attack; run by operator.
 
 ## Numbers
 Numbers, 7 days to 2026-11-23: 12 units; done 0%; done-or-by-design 42%; partial 9, failed 3; mean steps 7 (1 of 12 report it); top blocker h by-design partial (5 of 12 non-done).
@@ -180,5 +176,3 @@ Numbers, 7 days to 2026-11-23: 12 units; done 0%; done-or-by-design 42%; partial
 ## Links
 - [Rule digest](rule-digest.md)
 - [All catalogs](article-catalogs.md)
-- [Newest record](../../_records_/2026-11-22/alliance-donations/2340-queue-run.md)
-- [Open questions](open-questions-p1.md)
