@@ -611,19 +611,29 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
-UPGRADE_WORD = re.compile(r"(^|-)upgrades?(-|$)")
+UPGRADE_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
+UPGRADE_MARKERS = ("upgrade", "growth-fill")
+
+
+def is_upgrade_type(fields):
+    """True for a unit that spends growth: its activity is building-queues, research-queue or troop-training, or its
+    activity, regular or unit id contains upgrade or growth-fill (the planner's fill units are
+    building-queues-growth-fill-*)."""
+    if str(fields.get("activity", "")) in UPGRADE_ACTIVITIES:
+        return True
+    named = " ".join(str(fields.get(k, "")) for k in ("activity", "regular", "unit")).lower()
+    return any(marker in named for marker in UPGRADE_MARKERS)
 
 
 def _unit_warnings(rel, text):
-    """Warnings (never errors) about one unit file's text: an upgrade-type unit - an activity or regular id with the word
-    upgrade in it - should say what it serves, so the executor and the planner can weigh it. Only live units (inbox and
-    claimed) are looked at; a unit already done is history."""
+    """Warnings (never errors) about one unit file's text: an upgrade-type unit (see is_upgrade_type) should say what it
+    serves, so the executor and the planner can weigh it. Only live units (inbox and claimed) are looked at; a unit
+    already done is history."""
     state = rel.split("/", 1)[0]
     if state not in ("inbox", "claimed"):
         return []
     fields, _ = parse_frontmatter(text)
-    named = f"{fields.get('activity', '')} {fields.get('regular', '')}".split()
-    if any(UPGRADE_WORD.search(str(n)) for n in named) and not str(fields.get("serves", "")).strip():
+    if is_upgrade_type(fields) and not str(fields.get("serves", "")).strip():
         return [f"{rel}: upgrade-type unit has no serves line (what it serves, one line; enqueue --serves TEXT)"]
     return []
 

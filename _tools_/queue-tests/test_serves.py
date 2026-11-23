@@ -132,12 +132,31 @@ class Warnings(PoolCase):
         self.assertNotIn("warning", r.stdout)
         self.assertIn("pool valid", r.stdout)
 
-    def test_a_regular_id_with_the_word_upgrade_counts_but_a_word_part_does_not(self):
-        self.enqueue(activity="research-queue", regular="tech-upgrade")
-        self.enqueue(activity="upgradeless-thing", regular="upgradeless-thing")
-        r = self.validate()
-        self.assertEqual(r.stdout.count("warning: inbox/"), 1)
-        self.assertIn("tech-upgrade", r.stdout)
+    def warned(self):
+        return re.findall(r"warning: inbox/(\S+?)\.md", self.validate().stdout)
+
+    def test_the_three_growth_activities_are_upgrade_type_whatever_the_regular(self):
+        units = [self.enqueue(activity=a, regular=f"r-{i}") for i, a in
+                 enumerate(("building-queues", "research-queue", "troop-training"))]
+        self.assertEqual(sorted(self.warned()), sorted(units))
+
+    def test_an_id_containing_upgrade_or_growth_fill_is_upgrade_type_in_activity_regular_or_unit(self):
+        by_activity = self.enqueue(activity="x-upgrade-y", regular="plain-one")
+        by_regular = self.enqueue(activity="plain-act", regular="tech-upgrade")
+        by_fill = self.enqueue(activity="plain-act", regular="building-queues-growth-fill")     # the planner's fill units
+        by_substring = self.enqueue(activity="plain-act", regular="upgradeless-thing")           # contains the word: counts
+        plain = self.enqueue(activity="daily-activities", regular="daily-activities")
+        warned = self.warned()
+        self.assertEqual(sorted(warned), sorted([by_activity, by_regular, by_fill, by_substring]))
+        self.assertNotIn(plain, warned)
+        self.assertIn("growth-fill", by_fill)                                                    # the unit id carries it too
+
+    def test_a_unit_id_alone_is_enough(self):
+        queue = load_queue_module()
+        self.assertTrue(queue.is_upgrade_type({"unit": "building-queues-growth-fill-2026-11-23-0801", "activity": "x", "regular": "y"}))
+        self.assertTrue(queue.is_upgrade_type({"unit": "z-upgrade-2026", "activity": "x", "regular": "y"}))
+        self.assertFalse(queue.is_upgrade_type({"unit": "daily-2026", "activity": "daily-activities", "regular": "daily-activities"}))
+        self.assertFalse(queue.is_upgrade_type({}))
 
     def test_claimed_units_warn_and_done_units_do_not(self):
         unit = self.enqueue()
