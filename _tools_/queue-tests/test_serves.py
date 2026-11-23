@@ -203,7 +203,8 @@ class Validate(PoolCase):
         # the refusal must never land without the roster default: every roster regular is both accepted by enqueue
         # without --serves and minted with one
         for item in json.loads((QUEUE.parent / "regulars.json").read_text())["regulars"]:
-            self.assertEqual(load_queue_module()._roster_serves(item["id"], str(QUEUE.parent / "regulars.json")), "upkeep", item["id"])
+            self.assertEqual(load_queue_module()._roster_serves(item["id"], str(QUEUE.parent / "regulars.json")),
+                             " ".join(str(item["serves"]).split()), item["id"])
 
 
 class UpgradeType(unittest.TestCase):
