@@ -488,6 +488,23 @@ entries to implemented.
   the operator closes it before the next deploy finishes.
 - status: open - planner and toolsmith, after the lint-gate work.
 
+### IMP-20261123-06 - the last step of a capped run never executes
+
+- source: truck continuation 2026-11-23,
+  `_records_/2026-11-22/truck-plunder/2105-queue-run.md`
+- class: tooling
+- leak: with `--max-steps 8` the eighth request is recorded but never
+  executed, in every run today, so a run executes 7 steps; the step reserved
+  to return to the base did not fire and the game was left on the trade
+  screen. Unit step budgets, which assume 8, are one step short.
+- target metric: runs that end on the screen the assignment asked for; runs
+  whose last step executes (0 of 12 today).
+- verification: the toolsmith measures the cap semantics on a no-input run
+  and documents them; assignments then budget any must-execute action at
+  step N-1, or the owner approves a cap of 9 for routine runs (a rule change
+  for the owner and the Steward).
+- status: open - toolsmith, after the lint-gate install.
+
 ## Closed
 
 None yet. The first closures are expected at the 2026-11-01
