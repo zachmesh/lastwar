@@ -505,3 +505,7 @@ status: unverified
 ## 16:39 to about 16:44 - PR catch-all 1644 run, no-op pass
 
 - PR catch-all pass pr-catchall-2026-11-22-1644. 9 open PRs scanned, none owned by this job; five PRs merged at the integrator 1600 batch (#839-#843), main head now 52e92cb26; records PR #838 awaits the 19:00 PT batch; PR 425 still owner-gated OD-20261108-01, re-verification against the new main is the integrator's next batch work; 188 open issues, zero unclassified, no new issues since the 1539 pass; owner-decision issues 132, 154, 335, 514, 517 unchanged, all over 24 hours, statements current. No adoption, fix, reply, hand-off, or stale-owner flag. Quiet run. Record: pr-catchall/1644-run.md.
+
+## 16:40 to about 16:49 - Queue planning pass (done)
+
+- 16:40 PT, queue-planning-1640 - 0 staged (pool covered to about 04:40 local 2026-11-23), 0 expired, 0 reaped; sweep pair not due (17:00-hour run) but complete (1630 claimed and executing, 1730 in inbox); scout diff on the 2026-11-21 observation v1.17.0 applied with 0 counts but 5 unexplained red dots (same tool-version accounting as 1540; narrative 532 reads, 0 unexplained - twelfth zero-unexplained close), 0 withdrawals; pool inbox 95 / claimed 1 / done 2890; delivery by the VPS worktree route from tip d6f5b299; PR #838 already open. Record: queue-planning/1640-run.md.
