@@ -1,0 +1,13 @@
+---
+title: queue.py, part 2 of 4
+created: 2026-11-23T04:53:59Z
+modified: 2026-11-23T04:53:59Z
+version: 1.0.0
+description: Verbatim index text for queue.py
+---
+
+# queue.py, part 2 of 4
+
+Moved verbatim from the former `_tools_/INDEX.md` row for [queue.py](../queue.py); only link destinations are adjusted. Back to the [tool index](../INDEX.md). Continues [part 1](queue-part-1.md). The text continues in [part 3](queue-part-3.md).
+
+Purpose, continued: `sync` splits every reaped completion marker by reason (done-landed, aged-out/lost, invalid) in `completion_markers_reaped_by_reason`, so the ticker's sync section names a lost closing as lost instead of folding it into the bare reaped count, and the aged-out warning prints to stderr so sync stdout stays one parseable JSON object (issue #826); `complete` warns when a star-ceremony closing writes a duel screen total into stats.achieved (issue #483); `enqueue` and the sync/plan/sweep production path mint new units into the live pool even when this copy runs from a linked worktree (issue #598); `sweep-status` reports one reset day's sweep pair by result.status (done/partial), never by pool membership, so an expired pass sitting in done cannot read as complete (issue #610); `complete` flags a closing whose duration runs over the 15-minute unit cap in result.stats_warnings, and `cap-audit` lists every over-cap closing in a finished-date window, so the retro no longer hand-counts them (issue #608); `duel_window_text` counts duel days in absolute 24h steps from the anchor, so a slot in the 18:00-19:00 PST hour after the daylight-saving end is stamped with the live duel day instead of one day behind (issue #603); `deadline` stamps a real deadline onto an inbox unit - a train unit's boarding close from the banner countdown - so `next` picks it before units whose slot expiry is later (issue #623); `complete` warns when a trucks closing writes a Handbook-rate expected score into stats.points (issue #300); `enqueue` refuses a chain head when the chain already has a staged unit under another id (the plan-staged head carries no chain_id and the new head an empty planned_for, so the (regular, planned_for) invariant cannot catch it) or unsequenced units, so a tracker still showing a regular due mid-execution cannot mint a second head (issue #664); `complete` warns when a closing writes a running total into stats.points beside a descriptive string stats.achieved naming the same total, and `stats` counts those closings (issue #672); `plan` and `sweep` refuse reset-anchored slots when this copy's roster geometry differs from main's, so a stale tree cannot stage the old pair geometry for a day after the roster moves, and exit 1 naming the stale regular (issue #606);
