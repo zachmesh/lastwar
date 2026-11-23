@@ -1,7 +1,7 @@
 ---
 title: Lever ranking for strategy v3.0 draft
 created: 2026-11-23T09:02:00Z
-modified: 2026-11-23T12:57:00Z
+modified: 2026-11-23T13:11:00Z
 version: 0.4.0
 level: L3
 description: The merged capacity and materials ranking by power per scarce unit, with the evidence tag and the read that would change each rank
@@ -21,7 +21,7 @@ The owner ordered Base Expansion as the strategy's priority, so "HQ 31 and the A
 
 ## Top four
 
-1. **Base Expansion line.** Oil binds: 3.65M more at 35K to 100K a day, ETA 5 to 15 weeks, point 9 [G]. It also carries the 3rd Tech Center, Fast Builder V and hospital capacity.
+1. **Base Expansion line.** The path nodes give +411K power in all [S1] and HQ 31 +63,700 [M] with Hero Level Cap 155; oil binds, ETA 2027-01-11 for Base Expansion ([ETA note](0510-base-expansion-eta.md)). It also carries the 3rd Tech Center, Fast Builder V and hospital capacity.
 2. **Promotion, +2.75M,** when the panel opens.
 3. **Nine ground levels, about +3.2M,** +0.36M each; three start at 09:20Z on 11-24.
 4. **Weapons and shards** from stores; boxes unranked.

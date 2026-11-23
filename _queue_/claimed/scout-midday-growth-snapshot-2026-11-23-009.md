@@ -13,11 +13,11 @@ est_minutes: 10
 serves: snapshot (Story 868)
 chain_id: growth-snapshot-2026-11-23
 chain_seq: 9
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-23T13:15:05Z
+lease_until: 2026-11-23T13:35:05Z
 ---
 
 # scout-midday

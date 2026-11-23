@@ -21,3 +21,16 @@ conf-1,2026-11-23T08:36Z,"e1 power gain per day, building",2026-11-08 to 11-22,-
 conf-1,2026-11-23T08:36Z,"e1 power gain per day, unit plus tech",2026-11-08 to 11-22,-6020,,per day,
 conf-1,2026-11-23T08:36Z,e2 collect-first fixed-state reads,since restart,0,1,0 of 1,slot A 03:55Z unfixed; slot B pending
 conf-1b,2026-11-23T10:57Z,g building-read rows carrying their tag text,12 growth CSVs,26,67,39%,name-and-level proxy; target 100 percent; rows without it are [G]
+conf-2,2026-11-23T12:58Z,a1 executed units with any serves tag,6h,27,34,79.4%,tags now include plan-item-like text; 7 untagged
+conf-2,2026-11-23T12:58Z,a1 executed units with any serves tag,24h,27,78,34.6%,
+conf-2,2026-11-23T12:58Z,a2 executed units serving a growth action,6h,4,34,11.8%,"fill idle slot 3 (1 done, 2 partial), capacity source 1 (partial); read or measure 17, upkeep 6"
+conf-2,2026-11-23T12:58Z,a3 queued units by tag class,now,22,77,28.6% growth action,"read or measure 17 (22.1%), system-test 4 (5.2%), upkeep 34 (44.2%)"
+conf-2,2026-11-23T12:58Z,a4 busy slot-minutes started by a plan item,24h,0,7854,0.0%,"no plan item has started a slot; the Complete on Unlock Oil Well at 11:53Z is the first state-changing growth action with a power effect (+3,900)"
+conf-2,2026-11-23T12:58Z,"b1 idle slot-minutes, all slots",24h,5106,12960,39.4%,"builders 57.1, labs 2.6, training 40.3; 6 h: 13.4% (builders 0, labs 10.4, training 33.3)"
+conf-2,2026-11-23T12:58Z,c plan triggers started within trigger plus 2h,now,2,2,100%,"slot A read (unfixed) and the lab Complete (+10 min); T3 opens 13:00Z, T4b restart due 13:53Z"
+conf-2,2026-11-23T12:58Z,d1 partial rate of executed units,6h,18,34,52.9%,"done 16, failed 0"
+conf-2,2026-11-23T12:58Z,d1 partial rate of executed units,24h,41,78,52.6%,"done 35, failed 2; partial plus failed 55.1%"
+conf-2,2026-11-23T12:58Z,d2 partial rate of executed growth-chain units,24h,12,20,60.0%,"8 done, 12 partial"
+conf-2,2026-11-23T12:58Z,d3 blocker letters of growth partials,24h,"c 10, f 2",12,top two c and f,"c tap method 10 of 12; all units: h 16, c 12, f 6, e 5, a 2, d 1, g 1"
+conf-2,2026-11-23T12:58Z,e1 power change since the 07:47Z breakdown,11-23,3900,,"tech, one event","Complete of Unlock Oil Well at 11:53:00Z, 150,211,809 to 150,215,709 [M]; fixed-state reads 0 of 1; slot B opens 13:00Z"
+conf-2,2026-11-23T12:58Z,g building-read rows carrying their tag text,16 growth CSVs,44,87,51%,from 39% (26 of 67); 7 CSVs carry none

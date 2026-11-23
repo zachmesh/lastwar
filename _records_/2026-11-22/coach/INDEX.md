@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T10:58:00Z
+modified: 2026-11-23T13:06:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,8 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [0501-conformance-report-2.md](0501-conformance-report-2.md) - the second conformance report at 12:58Z, published late.
+- [0501-calibration-report.md](0501-calibration-report.md) - calibration of the five closed forecasts.
 - [0255-tag-text-check.md](0255-tag-text-check.md) - the building-read tag text check and its baseline.
 - [0236-donations-count.md](0236-donations-count.md) - the donations units counted by policy 2532 and the witnessed tap totals.
 - [0145-cross-activity-review.md](0145-cross-activity-review.md) - review of the 100 cross-activity duplicate rows, the 14 not to mark, the donation 1/30 evidence.
@@ -52,3 +54,4 @@ sidecars the runs cite.
 - [run-articles-cross-activity-review.csv](run-articles-cross-activity-review.csv), [run-articles-not-superseded.csv](run-articles-not-superseded.csv) and [run-articles-cross-review-method.py](run-articles-cross-review-method.py) - the 100 reviewed rows, the 14 flagged and the script.
 - [donations-units-new-rule.csv](donations-units-new-rule.csv) - each donations unit with taps logged, taps witnessed and the new status.
 - [building-read-tag-check.csv](building-read-tag-check.csv) - building-read rows with and without their tag text, by file.
+- [forecast-calibration.csv](forecast-calibration.csv) - the five closed forecasts with in_range, error_pct and brier for the Strategist to enter.

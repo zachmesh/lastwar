@@ -1,0 +1,12 @@
+building,tag_text,level,coin,iron,food,effective_time,power_gain,prerequisite,fresh_frame_x,fresh_frame_y,note
+Headquarters,Headquarters Lv.30,Lv.30 to 31,"55,963 of 433.5M (red)",1.0G of 1.3G (red),653.9M of 1.3G (red),52d 14:17:16 (original 111d 18:21:40),"+63,700 (388,300 to 452,000)","Lv.1 Base Expansion (research, red, button Research); Lv.30 Any Tech Center met; Lv.30 Barracks met; Lv.30 Any Tank, Missile Vehicle or Aircraft Center met",565,405,"also oil 647,039 of 1.2M (red); Hero EXP 210.0M; Hero Level Cap 150 to 155; Hero HP +15,000 to +16,000; Attack +714.3 to +761.9; Defense +142.9 to +152.4; Finish Now 1,847,528 diamonds not pressed; no Go buttons, only Research and Obtain"
+Tech Center,not found,at least Lv.30 (green check),,,,,,met,,,"the HQ row reads 'Lv.30 Any Tech Center' with a green check; the building itself was not located, so its exact level is unread"
+"Tank, Missile Vehicle or Aircraft Center",not found,at least Lv.30 (green check),,,,,,met,,,"the HQ row reads 'Lv.30 Any Tank, Missile Vehicle, or Aircraft Center' with a green check"
+Barracks,Barracks Lv.30,Lv.30,,,,,,met,530,637,tent B; the HQ row reads 'Lv.30 Barracks' with a green check
+Gold Mine,Gold Mine Lv.28,Lv.28,,,,,,,200,610,"the 'empty ground' tap (200,610) hit this building and opened its radial menu: use (400,640) instead"
+Backpack oil tiles,3.0K x6 and 6.0K x32 at 11:21Z,,,,,,,,,,"GONE at 13:09Z; the oil counter went 434.1K (11:18Z) to 647.0K (12:51Z, 13:09Z): +212.9K, the 210K barrels were used by the other device and the counter includes them"
+Backpack coin tiles,"coin 6.0K x174, 600 x5,713",,,,,,,,,,"GONE at 13:09Z (about 4.47M coin); SR Coin Chest 122 to 40 (82 opened, 8.33M coin); UR 87 and SSR 71 unchanged"
+Speed-up general,"8h 94, 3h 266, 1h 1,196, 15m 1, 5m 32,402 (was 32,394), 1m 24,902","351,687 min (was 351,647)",,,,,,,,,unchanged apart from 8 more 5m: no general speed-up used
+Speed-up construction,"8h 10, 1h 26, 5m 28,494 (was 28,477), 1m 19,065 (was 19,015)","167,895 min (was 167,760)",,,,,,,,,unchanged apart from 17 more 5m and 50 more 1m: none used
+"Speed-up blue disc (type unlabelled, probably research)","8h 8 (was 16), 1h 126 (was 128), 5m 2,053, 1m 5,722","27,387 min",,,,,,,,,"DROP: 8 items of 8h and 2 of 1h = 3,960 minutes used between 11:18Z and 13:11Z (the 5m and 1m rows had no earlier read)"
+Speed-up green helmet and chevron-plus,"helmet: 8h 5, 1h 10, 5m 6,299, 1m 38,938; chevron: 8h 18, 1h 36, 5m 7,827, 1m 10,476","73,433 and 60,411 min",,,,,,,,,"no earlier read, types unlabelled (probably training and healing)"

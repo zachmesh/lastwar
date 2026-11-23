@@ -1,0 +1,8 @@
+item,tag_text,value,read_utc,finish_utc_computed,note
+first frame dialog,TIPS 'active on a different device',NOT showing,2026-11-23T12:56:38Z,,condition 1 held
+HUD,,"food 653.9M, iron 1.0G, coin 55.9K, oil 647.0K, gold chip 26.72K, diamonds 11,113, Total Power 150,413,046",2026-11-23T12:56:38Z,,same as 12:51Z
+research slot 1,Lv.0 Food Output V upgrade in progress,Time Left 1d 04:33:08,2026-11-23T12:56:50Z,2026-11-24T17:29:58Z,running; Food Output V is on the Age of Oil path list
+research slot 2,Lv.0 Coin Output V upgrade in progress,Time Left 1d 02:02:20,2026-11-23T12:56:50Z,2026-11-24T14:59:10Z,running; Coin Output V is on the Age of Oil path list
+Defense Training VIII,(no longer in the queue),"it read 2d 19:10:43 left at 12:08Z, slot 1",2026-11-23T12:56:50Z,,absent: cancelled or replaced between 12:12Z and 12:56Z by the other device; not the operator's
+research speed percent,not found,the queue panel shows none,,,the hub and tree screens were not reachable
+TECH hub and trees,not reached,the flask opens the Research Queue panel when both labs are busy; the panel has no route to the hub (a tap on a row picture does nothing),,,every node of the Age of Oil path is unread

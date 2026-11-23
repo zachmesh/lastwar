@@ -3,8 +3,13 @@ D1,RETIRED: the serves field survives claim and complete in the frontmatter when
 D2,executed units are almost all untagged,29 of 32 in 6 h and 60 of 63 in 24 h have no tag; they pre-date the field,planner,"low, shrinks as new units run"
 D3,"tags are free text, not plan item ids","9 distinct strings, none names P1 to P9; coverage needs a mapping the coach keeps",strategist and planner,medium
 D4,upkeep crowds the queue,38 of 79 queued units (48.1%) are upkeep against 21 growth actions; 2 blocker-b misses in 24 h,planner,medium
-D5,no state-changing growth action since the plan landed,"0 executed; all 21 queued growth actions wait on a trigger (11:43Z, 2026-11-24T09:20Z) or on Drill Ground room",coordinator,high
+D5,few state-changing growth actions: 1 with a power effect since the plan landed,"the Complete on Unlock Oil Well at 11:53:00Z (+3,900); 22 queued growth actions wait on a trigger or on Drill Ground room",coordinator,medium
 D6,fixed-state read taken before collecting,"03:55Z read of 150,080,120 is unfixed; slot B due 13:00Z to 15:00Z",operator,medium
 D7,lab state reads contradict each other,10:10 and 13:10 PT reads versus 20:22 PT in research-queue/2022-queue-run.md:46-52; 16 h unobserved,operator,medium
 D8,the same refusal is re-probed,7 Drill Ground Full refusals in 4.3 h on Lv.24 and the hospital; the answer has not changed,planner,medium
 D9,growth runs outside the queue are not counted,"operator continuations 2344, 2357 and 0030 (9 runs) are records, not units, so unit KPIs understate growth effort",coordinator,low
+D10,the snapshot log has not grown for 2 h 35 min,"resources.jsonl has 20 rows and the last is 10:23:54Z; the 11:53Z Complete (+3,900) is not in it",operator,medium
+D11,lab 1 idle since 11:42:55Z,"finished 11:42:55Z, Complete 11:53:00Z, restart (PL-04 Food Output V) not recorded by 12:58Z; operator stood down 12:11Z to 12:50Z",operator and planner,high until restarted
+D12,a retired lever is still a data row,"growth-plan/lever-table.csv still lists Extra Drill Ground research (61M coin and 700 Valor, S1) though ranking v3 and decision 01 v1.2 retire it",strategist and scribe,low
+D13,tags are still free text,"27 distinct tag texts, none a PL-id; the coach keeps a mapping; PL-01 to PL-18 exist in plan-of-record.csv",planner,medium
+D14,this report is late,"due 12:00Z, published about 13:05Z; the coach has no schedule, so no wake reached it between 10:58Z and 12:55Z",coordinator,low
