@@ -1,8 +1,8 @@
 ---
 title: 12. The daily collection ledger and the pre-reset zero sweep part 2
 created: 2026-11-23T09:03:48Z
-modified: 2026-11-23T09:03:48Z
-version: 0.1.0
+modified: 2026-11-23T13:46:17Z
+version: 0.2.0
 sequence: 41
 description: Generation - the planner interface.
 ---
@@ -31,3 +31,4 @@ wall-clock geometry pre-empted the subcommand's correct pair on
 2026-11-05/06, so the manual path now fails loudly and the pair is
 staged with `queue.py sweep` (or `plan`) from a current tree.
 
+2026-11-23: with coordination.queue.require_forecast on, enqueue, plan, sweep and sync refuse a unit whose serves is not a ledger plan item or one of upkeep, snapshot, baseline, fill idle slot; --no-require-forecast is the emergency override.
