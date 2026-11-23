@@ -27,6 +27,7 @@ and staging runtime state.
 | [spawn-seat](spawn-seat/INDEX.md) | the only way to spawn a roster seat: model fixed from TEAM.yaml, read back | [own index](spawn-seat/INDEX.md) |
 | [model-guard](model-guard/INDEX.md) | quiet check that every roster seat runs the approved model | [own index](model-guard/INDEX.md) |
 | [strategy-conformance](strategy-conformance/INDEX.md) | read-only counts-only check that the strategy reaches the queue (five alarms) | [own index](strategy-conformance/INDEX.md) |
+| [strategist-health](strategist-health/INDEX.md) | read-only counts-only check that the Strategist is observed and learning | [own index](strategist-health/INDEX.md) |
 | [scout_diff.py](scout_diff.py) | observations to work | [planning](tool-details/planning-and-scouting-tools.md) |
 | [observation.py](observation.py) | observation file writer | [records](tool-details/records-and-worktree-tools.md) |
 | [observation-tests](observation-tests/INDEX.md) | observation.py rollover tests | [own index](observation-tests/INDEX.md) |
