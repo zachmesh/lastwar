@@ -1,8 +1,8 @@
 ---
 title: 2. Roster
 created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:26:00Z
-version: 0.2.0
+modified: 2026-11-23T08:20:00Z
+version: 0.3.0
 sequence: 3
 description: Eight seats; the coordinator plus seven roles.
 ---
@@ -22,5 +22,6 @@ Eight seats; the coordinator plus seven roles. All eight are now
 | toolsmith | `session-339995b4-ebd2-4710-94a1-fcc946be01cf` | tool and automation fixes | tested diff, PR | on assignment |
 | scribe | `session-c104e601-b16b-49cf-95a7-888543eb2499` | fold knowledge, keep conventions current | profile/PR | on assignment |
 | integrator | `session-bc838015-7852-464e-8cab-cf2fcc70a335` | land branches on the protected main (merge commit, head SHA guard, read main back) | GitHub PR operations; `_records_/<date>/integration/` | on landing request |
+| strategist | `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4` | own the growth strategy of record, hypothesis register, resource policy, 7-day plan; red-team the plan | `_records_/<date>/strategy/` | daily |
 
-The roster has 9 rows: the coordinator plus 8 seats. The integrator is one disjoint role (landing on a protected main) with no write conflicts, reviewed daily; the owner gateway (Steer A, owner-gateway, steer and watchdog) sits outside the roster and is not the integrator.
+The roster has 10 rows: the coordinator plus 9 seats. The integrator is one disjoint role (landing on a protected main) and the strategist one distinct, previously orphaned duty (the growth strategy of record), both with no write conflicts and reviewed weekly; the owner gateway (Steer A, owner-gateway, steer and watchdog) sits outside the roster and is not the integrator.

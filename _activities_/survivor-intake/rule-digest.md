@@ -1,9 +1,9 @@
 ---
 title: Survivor Intake Rule Digest
 created: 2026-11-23T06:30:02Z
-modified: 2026-11-23T07:13:14Z
+modified: 2026-11-23T07:22:25Z
 level: L1
-version: 0.3.0
+version: 0.4.0
 description: The standing rules an operator must follow when taking survivors in at the base gate, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -24,7 +24,7 @@ grounded_in:
 9. Never press Escape; it quit the game (day-20261101).
 10. The fourth identical partial is a process failure reported to the owner (R2) (day-20261031-p1).
 
-Unverified: Quick Dispatch effect, 24 consecutive units unverified (day-20261031-p5, changelog-section-p1); window-state and move-wait-click methods, from ticker units, not the current bridge (how-to-enter-p1, how-a-recruit-p2); line refill rate (open-questions-p1).
+Unverified: Quick Dispatch effect before the 07:05Z probe, 24 units unverified (day-20261031-p5, changelog-section-p1); window-state and move-wait-click methods, from ticker units, not the current bridge (how-to-enter-p1, how-a-recruit-p2); line refill rate (open-questions-p1).
 
 ## Errata
 
@@ -33,9 +33,10 @@ Unverified until a live read settles each; articles stay verbatim, the newer gov
 - how-to-enter-p1 "windowed 642x951": bounded by how-to-enter-p2 (2026-11-21, newer), 788x1083.
 - day-20261031-p1 "blocker no longer stands": Quick Dispatch still unverified per changelog-section-p1 (2026-11-22, newer).
 - open-questions-p5 "next pass hits the same wall": superseded by its 2026-11-11 correction.
-- rule 8 Quick Dispatch: the 2026-11-23 freeze is lifted here, the owner saying it answers "no survivors available" cleanly (relayed, not logged); it stays for troop-training.
+- rule 8 Quick Dispatch: freeze lifted here by OD-20261031-03 (owner): it answers "no survivors available" cleanly, the 2026-11-23 07:05Z probe pressed it once with no dialog; troop and barracks stay untouched.
 
 ## Changelog
 
 - 0.2.0, 2026-11-23 - Errata added.
 - 0.3.0, 2026-11-23 - Freeze lifted for survivors.
+- 0.4.0, 2026-11-23 - Quick Dispatch decision logged.

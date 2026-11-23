@@ -1,0 +1,7 @@
+week,week_start_pt,week_end_pt,readings,days_with_readings,power_start,power_end,gain,elapsed_days,gain_per_day,daily_max_start,daily_max_end,daily_max_days,daily_max_gain_per_day,hero_gain,troop_gain,tech_gain,building_gain,unattributed_gain,levers_captured,plan_item_served,plan_gain_per_day,plan_vs_actual,fixed_state_am,fixed_state_pm,note
+W1,2026-10-25,2026-10-31,16,7,149689618,148957193,-732425,6.03,-121424,149689618,148957193,6,-122071,,,,,,,,,,,,"Starts at the 10-25 21:20 PT baseline; week ends inside the 10-29 dip recovery; the 10-26 and 10-29 dips are unexplained, no reading 11-05 to 11-06 follows."
+W2,2026-11-01,2026-11-07,13,5,148957193,149850353,893160,6.83,130853,148957193,149850353,7,127594,,,,,,,,,,,,"No reading 11-05 and 11-06; the 11-07 reading of 147,749,175 was followed by 149,850,353 an hour later."
+W3,2026-11-08,2026-11-14,16,4,149850353,149118973,-731380,3.51,-208552,149850353,149118973,4,-182845,,,,,,,,,,,,"11-09 drop DERIVED and UNVERIFIED (2,480,382 on the confirmed level, 1,506 T10 units; issue 549), cause unverified; no reading 11-12 to 11-15."
+W4,2026-11-15,2026-11-21,3,2,149118973,149653371,534398,9.82,54407,149118973,149653371,10,53440,,,,,,,,,,,,"Two readings only, 11-16 and 11-21; no reading 11-17 to 11-20."
+W5,2026-11-22,2026-11-28,5,1,149653371,150211809,558438,1.92,291465,149653371,150211809,1,558438,,,,,,,,,,,,"Partial week, one trade day, 11-22 to 22:48 PT; 11-22 dipped to 147,972,169 at 10:59 and recovered to 150,080,120 by 19:55."
+W6,2026-11-29,2026-12-05,,,,,,,,,,,,,,,,,,,,,,,

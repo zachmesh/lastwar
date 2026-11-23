@@ -1,0 +1,2 @@
+utc,action,slot,cost,power_before,power_after,delta,serves
+2026-11-23T08:00:34Z,Hospital Collect tapped once (5306 healed units waiting) - refused by toast "Drill Ground Full: Unable to add 5306 units.",hospital,none,150211809,150211809,0,collect first - realize troop power

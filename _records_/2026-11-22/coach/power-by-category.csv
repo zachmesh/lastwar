@@ -1,0 +1,18 @@
+category,panel_line,value_2026-11-08_0958_pt,value_2026-11-22_2347_pt,change,change_per_day,recorded_gain_in_window,unattributed,note
+hero,Hero Level,41841684,42492064,650380,44620,8219,642161,recorded gain is Morrison 11-10 only; McGregor 11-09 has no power figure
+hero,Decorations and Building Stats,7264676,7376484,111808,7671,,,
+hero,Gear,5647815,5771364,123549,8476,,,
+hero,Hero Skill,4267150,4282510,15360,1054,,,
+hero,Hero Tier,3971468,4009282,37814,2594,,,
+hero,Exclusive Weapon,2182608,2182608,0,0,,,
+hero,Wall of Honor,106950,127100,20150,1382,,,
+hero,Hero Power total,65282351,66241412,959061,65797,8219,950842,
+drone,Drone Level,3459213,3492600,33387,2291,,,
+drone,Drone Component,1639876,1639876,0,0,,,
+drone,Skill Chip,708200,708200,0,0,,,
+drone,Drone Power total,5807288,5840675,33387,2291,0,33387,
+building,Buildings,7170500,6612900,-557600,-38255,21600,-579200,"recorded gain is Drill Ground Lv.27 on 11-10; the 11-08 step-down of 641,100 (issue 482) came after the 11-08 read"
+building,Survivor,3121775,3136125,14350,984,,,2026-11-08 value derived as Building total minus Buildings
+building,Building Power total,10292275,9749025,-543250,-37270,21600,-564850,
+unit-tech,Unit plus Tech,68468439,68380697,-87742,-6020,1298143,-1385885,"2026-11-08 value derived as HUD total minus hero, drone and building; recorded = troop batches 11-10 x2 and 11-22 plus Defense Training VIII; now Unit 63,512,120 and Tech 4,868,577"
+total,HUD Total Power,149850353,150211809,361456,24798,1327962,-966506,

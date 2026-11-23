@@ -1,0 +1,12 @@
+choice,default,reason,evidence,owner_question
+objective,total power gain per day,the one number every upgrade panel shows,power readings 2026-10-25 and 2026-11-23,Q1
+target,set after snapshot and research (review 2026-11-30) with a fixed-state reading twice a day,200M in 90 days needs 554665 a day = 41x; the 2026-11-09 fall of about 2.47M is DERIVED (149217331 to 146730949) and its cause is unverified,issue 482 and the two readings,Q2
+rank metric,power per binding resource per day from previews,builder-days research-days and hero EXP are different constraints,hut panel 17500 power 7.29 days,none
+focus order,Drill Ground capacity first then barracks Lv.24 to 30 and troop promotion and queues then research then heroes then other buildings,measured: 599782 power per barracks-day vs 2400 per builder-day = 250x and about 1600x cheaper per resource unit,T8 batch +707958 for 2.9M food+2.9M iron in 1d 04h; T9 +423176 for 313 troops,Q3
+guardrails,no diamond or real-money spend no speed-ups no fights; resource-only upgrades at 3x stock,owner standing rules 2026-11-23,OD-20261109-02,Q4
+time gates,finish long builds before their theme day; collect on Base Expansion day,power registers on collection,planner and researcher notes,none
+cadence,snapshot weekly plan review weekly owner digest weekly,matches the duel week,coach baseline,Q5
+decision threshold,record and digest above one builder-day or 5 percent of a stock,keeps the owner out of routine choices,owner rule 2026-11-23,Q6
+unit field,serves: <plan item> on every upgrade unit,traceability of spend to plan,Steer A proposal,none
+evidence rule,label measured sourced or guess; first ranked item needs a measured preview,C4 and C5,constitution,none
+reserves,floors food 100M iron 150M coin 10M; diamonds untouched; duel-day reservation; spend above the floors,owner allowed reserves 2026-11-23,Steer A relay 07:55Z,Q4

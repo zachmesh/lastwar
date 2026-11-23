@@ -1,9 +1,9 @@
 ---
 title: The Age of Oil
 created: 2026-11-09T20:32:17Z
-modified: 2026-11-23T07:23:28Z
+modified: 2026-11-23T07:26:56Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Season II warzone collective-progression event in the Events hub - three warzone-wide counters with per-commander ranking rewards, ends about 2026-11-15 in the late afternoon PT, no recurring agent action
 status: unverified
 grounded_in:
@@ -18,181 +18,20 @@ grounded_in:
 
 # The Age of Oil
 
-## What this activity is
+Read rule-digest.md first.
 
-The Season II warzone collective-progression event, the leftmost tab
-of the Events hub. Three warzone-wide counters advance as the whole
-warzone plays - Tech Research, Building Upgrades, Hero Recruitments -
-toward stage unlocks, with a per-commander ranking per task that pays
-reward tiers to the top 20. The account's own research and building
-activity feeds the warzone totals, but there is no personal target and
-no recurring agent action on this page: the goals advance passively,
-and the only thing to watch is the Hero Mobilization count and its
-unmeasured chest. This is not a scoring event for the account and not
-a routine executable task. Executions are recorded in
-`_records_/<date>/the-age-of-oil/`, one file per execution. The
-candidate is tracked in GitHub Issue #477.
+Season II warzone collective-progression event in the Events hub - three warzone-wide counters with per-commander ranking rewards, ends about 2026-11-15 in the late afternoon PT,... This document was split verbatim into 9 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
 
-## How it is done
+- [The Age of Oil](the-age-of.md)
+- [What this activity is](what-this-activity.md) - what-this-activity - The Season II warzone collective-progression event, the leftmost tab of the Events hub.
+- [How it is done](how-it-is.md) - how-it-is - Enter from the Events hub, The Age of Oil tab (leftmost tab; the tab...
+- [What is known from 2026-11-09 0829 and 1146](run-20261109-0829-p1.md) - run-20261109-0829 - Entry: Events hub, The Age of Oil tab (leftmost).
+- [What is known from 2026-11-09 0829 and 1146](run-20261109-0829-p2.md) - run-20261109-0829 - Rewards, Research Ranking read in full 2026-11-09 11:42 PT: No.1 - gold badge 25K...
+- [Open questions](open-questions.md) - open-questions - Hero Mobilization gold chest (at the right end of the card-3 progress bar) and...
+- [What the 2026-11-09 1146 scout-discovery unit added -](run-20261109-1146.md) - run-20261109-1146 - Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about 11:36 to 11:46 local, status done.
+- [What the 2026-11-11 1850 scout cross-read added -](run-20261111-1850.md) - run-20261111-1850 - Cross-read only, not an Age of Oil unit execution: the ticker-1843 perception-scout events-group unit...
+- [What the 2026-11-11 1946 scout cross-read added -](run-20261111-1946.md) - run-20261111-1946 - Cross-read only, not an Age of Oil unit execution: the ticker-1919 perception-scout events-group remainder...
 
-- Enter from the Events hub, The Age of Oil tab (leftmost tab; the tab
-  strip scrolls horizontally, two rightward drags may be needed to
-  bring it into view).
-- Read the three task cards and their counters, the stage track 1-2-3-4
-  across the top (stage 1 highlighted), and the countdown timer.
-- The small bars icon at a card's top right opens that task's ranking;
-  the ranking popup carries the full reward tiers. Read the tiers
-  before closing it.
-- The circular icons below the cards are stage-info buttons, not
-  rewards: one tap opens a stage popup with a Go button. Do not tap Go
-  - it navigates toward the base expansion, an action outside
-  read-only learning. Do not tap any chest or priced button without
-  the owner's direction.
+## Changelog
 
-## What is known from 2026-11-09 0829 and 1146
-
-- Entry: Events hub, The Age of Oil tab (leftmost). Tab order: The Age
-  of Oil, Arms Race, Winter Battlefield, Desert Battlefield, Wanted
-  Boss, Survey Center, Community. No Zombie Invasion tab - the event
-  is still ended.
-- Mechanism: warzone-wide collective counters toward stage unlocks -
-  500 Tech Research, 500 Building Upgrades, 10000 Hero Recruitments -
-  plus a per-commander ranking per task, ranked top 20. The warzone
-  totals are the whole warzone's counts; the ranking counts each
-  commander separately.
-- Counters, two live reads: 2026-11-09 08:29 PT - Tech 2383/500,
-  Building 10721/500, Heroes 8833/10000, timer 6d 09:28:43;
-  2026-11-09 11:38 PT - Tech 2607/500, Building 11186/500, Heroes
-  9465/10000, timer 6d 06:20:41. The first two goals are already
-  exceeded by the warzone; the third is at about 95% and still
-  filling.
-- Counters, third live read 2026-11-11 18:53 PT (scout cross-read,
-  not an Age of Oil unit): Tech 9475/500, Building 22232/500 - both
-  exceeded, bars full; timer 3d 23:06:56 remaining. Stage 1 active
-  with a red badge 1; stages 2, 3, 4 locked. The reward claim state
-  is UNMEASURED in this read - the reward icons below each card
-  were not scrolled to or tapped, so the stage-1 badge 1 is NOT
-  proven to be a claimable reward; the exceeded counters are only
-  a candidate cause. Handed to the event-claims / diff unit to
-  verify. The 0450 verification (both milestone chests gone) is
-  not re-litigated: this badge is a new signal, not the old
-  milestone chests.
-- Counters, fourth live read 2026-11-11 19:33 PT (scout cross-read,
-  ticker-1919 unit 002, not an Age of Oil unit): Tech 9511/500,
-  Building 22379/500 - both exceeded, bars full; timer 3d 22:21:10
-  remaining. Stage 1 still active with badge 1. The badge is now
-  EXPLAINED as the progress-track step-1 marker (the first hub
-  tab's present/gift icon is the Age of Oil page; its badge 1
-  marks progress-track step 1) - see Issue #477. The reward claim
-  state is STILL UNMEASURED - the reward icons below each card
-  were not scrolled to or tapped in this read either; the badge's
-  meaning is settled, whether it is claimable is not. Handed to
-  the event-claims / diff unit to verify.
-- Cycle and deadline: one event window, ends about 2026-11-15 17:56 PT
-  (derived from the 6d 06:20 timer at 11:36 PT; the 0829 timer implies
-  the same end within a minute).
-- Rewards, Research Ranking read in full 2026-11-09 11:42 PT: No.1 -
-  gold badge 25K x1, gold x20, 5m speedup x20, red gem x100; No.2 -
-  500 badge x4, gold x15, 5m x15, red x80; No.3 to 5 - 500 badge x3,
-  gold x12, 5m x12, red x60; No.6 to 10 - 500 badge x2, gold x10, 5m
-  x10, red x50; No.11 to 20 - 500 badge x1, gold x8, 5m x8, red x40.
-  No tiers below No.20 - the list ends there. The first item's exact
-  name is unread (a gold medal/badge icon); the red gem is likewise
-  unnamed in the popup. Both are recorded by icon and count only.
-- Research Ranking, 2026-11-09 11:42 PT: rank 1 [AP3x] Teemo 31, rank
-  2 [AP3x] Bamie 29, rank 3 [W77] 25, rank 4 [B3WB] etre 22, rank 5
-  [CTR1] Lt grills 21, rank 6 [aP3x] jbG 16, rank 7 [W77] 16. The
-  owner, [AP3x] owner account, is Unlisted at 0 - no Tech Research
-  counted in this window.
-- Milestone claim state: milestone 1 (Unlock Tech) claimed by the
-  2026-11-08 1914 unit - CONGRATULATIONS paid coin chest x3, red
-  diamond x50, Oil 3.0K x6, 5-minute speedup x2. Milestone 2 (Unlock
-  Stage, Base Expansion II) claimed by the 2026-11-09 0224 unit after
-  the 1914 chest blocker. Both verified gone by the 0450 unit at
-  04:44-04:50 PT; no chest sits on cards 1-2 at the 11:38 read. The
-  0829 unit's "reward claim state unmeasured" is superseded by the
-  0224 claim and the 0450 verification.
-- Base Expansion II icon, corrected 2026-11-09 11:45 PT: the circular
-  green-arrows icon below card 2 is NOT a chest and NOT unresponsive.
-  One tap opened a popup - "Stage: Base Expansion II - A new stage is
-  unlocked, your base is ready to expand further." - with a blue Go
-  button, which was NOT tapped. This corrects Issue #477's "Base
-  Expansion II chest unresponsive": that phrase conflated the
-  milestone-2 chest (unresponsive at the 1914 unit, claimed by the
-  0224 unit) with this stage-info icon, which responds and is not a
-  reward.
-- Cost: free. No diamonds, no money, no priced button anywhere on
-  this path.
-- Scoring: per-commander counts per task, ranked top 20; the owner
-  sits at 0 research, leader at 31.
-- Base screen on return: coin 46.2M, power 149,217,331 - unchanged.
-
-## Open questions
-
-- Hero Mobilization gold chest (at the right end of the card-3
-  progress bar) and the greyed-out hexagon below card 3: contents
-  unmeasured, not tapped in either exploration. Follow-up is on Issue
-  #477.
-- The play button at the stage track's right end: not tapped,
-  contents unknown.
-- The Building Upgrades and Hero Recruitments ranking tables and
-  reward tiers: not opened, assumed parallel to the Research Ranking,
-  not verified.
-- A red "!" badge sits at the right edge of the tab bar in every Age
-  of Oil screenshot; it was not attributed to a tab in either
-  exploration (likely Desert Battlefield's badge, not verified).
-  (2026-11-11 1850 update: the scout read the Age of Oil tab
-  carrying a red badge 1, the same signal as the stage-1 node
-  badge - the tab badge is the stage-1 badge, not a separate
-  tab-bar "!". The Zombie Invasion tab also carried badge 1, and
-  the base Events badge 2 is accounted for by those two. The "!"
-  itself is not separately re-read; the attribution stays open.)
-  (2026-11-11 1946 update: the scout read the Desert Battlefield
-  tab carrying a red badge (!) - the attribution now leans Desert
-  Battlefield, still not proven as that tab's. The Age of Oil tab
-  badge 1 is now explained as the stage-1 badge, not a tab-bar
-  "!". The Desert tab badge is one of the two unexplained dots
-  from the 1946 pass.)
-
-## What the 2026-11-09 1146 scout-discovery unit added - Age of Oil learned with ranking rewards, Base Expansion II icon corrected
-
-- Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about
-  11:36 to 11:46 local, status done. Evidence in
-  `_records_/2026-11-09/the-age-of-oil/1146-queue-run.md` (commit
-  d2df49670 on records/2026-11-09). Read-only exploration: opened The
-  Age of Oil, read all three cards and the stage track, opened the
-  Research Ranking and its full Rewards list, and tested the Base
-  Expansion II circular icon with one tap, reading its popup and
-  closing it without tapping Go. Returned the game to the base screen.
-  Nothing claimed, nothing spent, nothing answered, nothing navigated
-  to.
-- The 0829 exploration (unit 007, ticker-0804, record
-  `_records_/2026-11-09/the-age-of-oil/0829-queue-run.md`, commit
-  b58fc31b6 on records/2026-11-09) was sourced in perception-scout
-  but never got its own profile until this fold; its mechanism read
-  and first counter values are folded here alongside the 1146 read.
-- The provisional profile was NOT written into `_activities_/` by
-  either unit (tier 2, left for the knowledge PR flow); this profile
-  is that write, by the knowledge organizer.
-- Result stats: target learn-the-age-of-oil-profile-fields, achieved 6
-  of 7 (Hero Mobilization chest contents unmeasured), resources_gained
-  none, costs about 10 minutes of unit time, no items spent, verified
-  yes, blocker_category none, points 0, surfaces_walked events-hub,
-  the-age-of-oil-page, research-ranking, ranking-rewards,
-  stage-info-popup, items_observed 3 task cards (tech 2607/500,
-  building 11186/500, heroes 9465/10000), red_dots_seen 1,
-  red_dots_explained 0, unexplained_red_dots 1, unknown_items 1.
-
-## What the 2026-11-11 1850 scout cross-read added - stage 1 badge 1, Tech 9475/500 and Base Expansion II 22232/500 exceeded, claim state unmeasured
-
-- Cross-read only, not an Age of Oil unit execution: the ticker-1843 perception-scout events-group unit (scout-scout-2026-11-10-001, about 18:50 to 19:01 local) walked the Events hub and read The Age of Oil page live. Evidence in `_records_/2026-11-11/perception-scout/1850-queue-run.md` (commit 7b944422a4 on records/2026-11-11). Nothing claimed, nothing spent, nothing tapped beyond reading. The claim-state verification is handed to the event-claims / diff unit.
-- Live read, about 18:53 to 19:00 local: stage track: stage 1 active with a red badge 1; stages 2, 3, 4 locked. Play button top-right, not tapped. "Unlock Tech: The Age of Oil", 3d 23:06:56 remaining: "Complete a total of 500 Tech Research in this Warzone", 9475/500 - exceeded, bar full. "Unlock Stage: Base Expansion II", 3d 23:06:56: "Complete a total of 500 Building Upgrades in this Warzone", 22232/500 - exceeded, bar full.
-- Reward claim state UNMEASURED - the reward icons below each card were not scrolled to or tapped, so the stage-1 badge 1 is NOT proven to be a claimable reward; the exceeded counters are only a candidate cause. The 0450 verification (both milestone chests gone) is not re-litigated: this badge is a new signal, not the old milestone chests. See the updated Counters entry and Issue #477 (commented by this run).
-- Result stats: target read the Age of Oil page live; achieved counters and stage track read live, claim state unmeasured; resources_gained none; points 0; costs none (scout unit time); verified partial - counters, stage track and timer read live in the scout unit, claim state not verified; blocker_category none.
-
-## What the 2026-11-11 1946 scout cross-read added - Tech 9511/500 and Building Upgrades 22379/500, badge 1 explained as progress-track step 1, claim state still unmeasured
-
-- Cross-read only, not an Age of Oil unit execution: the ticker-1919 perception-scout events-group remainder unit (scout-scout-2026-11-10-002, about 19:33 to 19:46 local) walked the Events hub and re-read The Age of Oil page live. Evidence in `_records_/2026-11-11/perception-scout/1946-queue-run.md` (commit c8d8022079 on records/2026-11-11). Nothing claimed, nothing spent, nothing tapped beyond reading. The claim-state verification is handed to the event-claims / diff unit.
-- Live read, about 19:33 to 19:46 local: stage track: stage 1 active with a red badge 1; stages 2, 3, 4 locked. "Unlock Tech: The Age of Oil", 3d 22:21:10 remaining: "Complete a total of 500 Tech Research in this Warzone", 9511/500 - exceeded, bar full. "Unlock Stage: Base Expansion II", 3d 22:21:10: "Complete a total of 500 Building Upgrades in this Warzone", 22379/500 - exceeded, bar full. Counters still climbing since the 1850 read (9475/500 and 22232/500).
-- Badge meaning SETTLED: the first hub tab's icon (present/gift) is The Age of Oil page; its badge 1 marks progress-track step 1. This explains the tab badge the 1850 read recorded. Reward claim state UNMEASURED - the reward icons below each card were not scrolled to or tapped, so the stage-1 badge 1 is still NOT proven to be a claimable reward; the badge's meaning is settled, its claimability is not. See the updated Counters entry and Issue #477 (commented by this run).
-- Result stats: target read the Age of Oil page live; achieved counters, stage track and timer read live, badge meaning explained, claim state unmeasured; resources_gained none; points 0; costs none (scout unit time); verified partial - counters, stage track and timer read live in the scout unit, claim state not verified; blocker_category none.
+- 1.4.0, 2026-11-23 - Owner name already replaced on main by the tree-wide pass (commit 0467e3ef), then split verbatim by `split_doc.py` from the body into ? key-named articles and 0 catalog pages, and added `rule-digest.md`. `--check` EQUAL against that file, body sha256 354056a6509d; the unsplit 1.3.0 file is commit 0467e3ef.

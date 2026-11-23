@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T06:48:51Z
+modified: 2026-11-23T07:40:44Z
 level: L1
-version: 1.49.0
+version: 1.50.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -27,7 +27,7 @@ grounded_in:
   - source: ticker-2134 troop-training execution record 2026-11-03 2144 queue run (partial, production grid is factories not tents, 1552 point selects Factory No.3 in this framing, Issue 150)
   - source: ticker-0134 troop-training execution record 2026-11-04 0143 queue run (partial, factories confirmed again, 1552 tent point not re-tried, Tank Base Lv.28 to 29 upgrade in progress, Issue 150)
   - source: ticker-0434 troop-training execution record 2026-11-04 0440 queue run (partial, tent point 585,548 selects Barracks Lv.24, Drill Ground Full confirmed live again, Training Count +666, Issue 150)
-  - source: ticker-0804 troop-training execution record 2026-11-04 0814 queue run (partial, 0440 tent point selects Arena in this framing, Lv.20 verified via Details, framing instability measured, Drill Ground Full neither reconfirmed nor cleared, Issue #150 comment deferred)
+  - source: "ticker-0804 troop-training execution record 2026-11-04 0814 queue run (partial, 0440 tent point selects Arena in this framing, Lv.20 verified via Details, framing instability measured, Drill Ground Full neither reconfirmed nor cleared, Issue #150 comment deferred)"
   - source: ticker-1134 troop-training execution record 2026-11-04 1147 queue run (partial, fullscreen framing mismatch, four grounded tent taps opened no panel, centre drag moved no view, session drop reopened, Issue 150)
   - source: ticker-1734 troop-training execution record 2026-11-04 1734 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eleventh consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-0534 troop-training execution record 2026-11-05 0534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-fourth consecutive pass, probe classification OFF_SCREEN_WINDOW, Chrome observes normally in the same session, Issue 284)
@@ -52,9 +52,9 @@ grounded_in:
   - source: ticker-0155 troop-training execution record 2026-11-11 0213 queue run (partial, Lv.30 pistol x2 and paw x1 close the button row with no panel, Drill Ground screen still not read live, fourth consecutive unit on the same blocker, changed entry route needed; record commit 72b82b0e3 on records/2026-11-11)
   - source: ticker-0534 troop-training execution record 2026-11-11 0548 queue run (partial, Lv.24 barracks busy 11:01:26, 1 of 4 checked, radar-entrance wrong turn, Drill Ground live read not done, duration corrected to about 4 minutes; record commit a3ef6b276 on records/2026-11-11)
   - source: ticker-1332 troop-training execution record 2026-11-11 1340 queue run (partial, 0 of 4 barracks checked, tent grounding missed again, Drill Ground tap landed on Iron Mine Lv.27, radar-map exit by back arrow, Home button unresponsive in the fullscreen framing; record commit ed2cb2614 on records/2026-11-11)
-  - source: ticker-2133 troop-training execution record 2026-11-11 2136 queue run (partial, Lv.27 idle, requeue blocked by Drill Ground Full live toast, Building Details route tried - no Drill Ground link, yard tap opened Alliance mail, duration corrected to 603 seconds, Issue #678 filed; record commit bca5a948c on records/2026-11-11)
-  - source: ticker-1318 troop-training execution record 2026-11-21 1340 queue run (partial, Drill Ground still unlocated, portrait tent is not a barracks, view cannot be panned, Issue #678; record commit 9418b215a4 on records/2026-11-21)
-  - source: ticker-2104 troop-training execution record 2026-11-21 2124 queue run (partial, Lv.27 selected live, pistol deliberately not tapped, formation-flag tap selects 2nd Squad Lv.20, fifth consecutive partial, Issue #678; record commit e1d4f7c05 on records/2026-11-21)
+  - source: "ticker-2133 troop-training execution record 2026-11-11 2136 queue run (partial, Lv.27 idle, requeue blocked by Drill Ground Full live toast, Building Details route tried - no Drill Ground link, yard tap opened Alliance mail, duration corrected to 603 seconds, Issue #678 filed; record commit bca5a948c on records/2026-11-11)"
+  - source: "ticker-1318 troop-training execution record 2026-11-21 1340 queue run (partial, Drill Ground still unlocated, portrait tent is not a barracks, view cannot be panned, Issue #678; record commit 9418b215a4 on records/2026-11-21)"
+  - source: "ticker-2104 troop-training execution record 2026-11-21 2124 queue run (partial, Lv.27 selected live, pistol deliberately not tapped, formation-flag tap selects 2nd Squad Lv.20, fifth consecutive partial, Issue #678; record commit e1d4f7c05 on records/2026-11-21)"
   - source: ticker-0134 troop-training execution record 2026-11-22 0134 queue run (partial, Lv.27 requeued T9 x726, Drill Ground Full blocker did not reproduce, Lv.30 Details Training Count +793, button-row tap-precision lesson; record commit 0028b8f92 on records/2026-11-22)
   - source: ticker-0957 troop-training execution record 2026-11-22 0958 queue run (partial, Lv.30 requeued T10 x793 verified by exact food delta, T10 stats corrected live 38.87/7.87, Drill Ground Full did not block; record commit e859f4993 on records/2026-11-22)
   - source: ticker-0957 arms-race execution record 2026-11-22 1005 queue run (partial, Lv.24 finished batch of 143 Lv.8 collected, power +152,009, recorded as observed not reconciled; record commit e859f4993 on records/2026-11-22)

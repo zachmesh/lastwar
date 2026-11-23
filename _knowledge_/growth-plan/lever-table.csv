@@ -1,0 +1,41 @@
+lever,metric,value,unit,tag,source
+builder,power per builder-day,2400,power per builder-day,M,strategy 2 and _activities_/upgrade-builders-hut-to/INDEX.md
+builder,Builders Hut Lv.25 to 26 gain,17500,power,M,strategy 2
+barracks Lv.30 T10,troops per batch,793,troops,M,_records_/2026-10-31/troop-training/0304-queue-run.md
+barracks Lv.30 T10,power per troop,1647,power,M,_records_/2026-10-31/troop-training/0304-queue-run.md
+barracks Lv.30 T10,batch gain,1306071,power,M,_records_/2026-10-31/troop-training/0304-queue-run.md
+barracks Lv.30 T10,batch cost,5.5M food + 5.5M iron in 1d 17h,resources,M,_records_/2026-10-31/troop-training/0304-queue-run.md
+barracks Lv.30 T10,power per barracks-day,759000,power,M,strategy 2 (about)
+barracks Lv.24 T8,batch gain,707958,power,M,_records_/2026-11-10/troop-training/1229-queue-run.md
+barracks Lv.24 T8,troops x power per troop,666 x 1063,power,M,_records_/2026-11-10/troop-training/1229-queue-run.md
+barracks Lv.24 T8,batch cost,2.9M food + 2.9M iron in 1d 4h,resources,M,strategy 2
+barracks Lv.24 T8,power per barracks-day,607000,power,M,strategy 2 (about)
+T9,power per troop,1352,power,S3,strategy 2 (313 troops = +423176)
+troops versus builder-day,ratio,250,times,M,strategy 2 (about)
+troops saturation,power per troop at 39460 capacity,1609 = 97.7 percent of T10 1647,power,D,strategy 0 (capacity figure not read live)
+exclusive weapon,milestone gain,0.3M squad power each at unlock L10 L20 L30,power,S1,strategy 2
+gear star,coin per star,93.75M to 206M,coin,S1,strategy 2
+Drill Ground,troops per level L10 to L30,200,troops,S1,strategy 2
+Drill Ground,coin per level L25 L26 L27,39M 54M 70M,coin,S1,strategy 2
+Drill Ground,power per million coin L25 L26 L27,9K 6.5K 5K,power,D,strategy 2
+HQ 29 to 30,gain,59800 for 1.4G food + 1.4G iron + 460M coin,power,S1,strategy 2
+Tech Center,gain,57200,power,S1,strategy 2
+Barracks,gain,43900,power,S1,strategy 2
+Drill Ground,gain,35800,power,S1,strategy 2 (26 to 27 measured +21600)
+HQ 30 to 31,gain,63700,power,S1,strategy 2
+Special Forces VIII,gain per level,15000,power,M,strategy 2
+Age of Oil path to HQ 31,gain,411000,power,S1,strategy 2 (19 nodes about 48 levels 618M iron + 618M food + 1.83B coin + 4.08M oil 942 lab-days)
+Total Power,pace 29 days,13466,power per day,M,strategy 1 (+390502 in 29 days)
+capacity,power per 1000 free slots filled with T10,+1.647M for 6.9M food + 6.9M iron,power,D,strategy v2.0 section 2
+Drill Ground level,slots and power per level,+200 slots (+329K) for 39M to 70M coin,power,D,strategy v2.0 section 2
+hospital backlog,healed troops waiting,5306,troops,M,_records_/2026-11-22/growth/2357-troop-read.md
+hospital backlog,power of the healed troops at the T10 power per troop,8738982 (5.8 percent of 150211809),power,D,5306 x 1647; tier of the healed troops unread; _records_/2026-11-22/growth/2357-troop-read.md
+2026-11-09 fall,troop units and power,1506 T10 units = 2480382,power,M,654 + 407 + 445 units x 1647; cause unverified; _records_/2026-11-22/coach/2358-fall-analysis.md
+Drill Ground Expansion research,coin for the first five of 10 levels,4.6M to 63.8M,coin,S1,strategy v2.0 section 2
+Extra Drill Ground research,cost,61M coin plus 700 Valor if not already done,coin,S1,strategy v2.0 section 2
+coin income,per day,16M to 26M,coin,M,strategy v2.0 section 1
+coin spending by the owner,bursts of about,100M and 118M,coin,M,strategy v2.0 section 1
+owner builds,Training Base Lv.25 return per level,about 17.5K,power,stated,strategy v2.0 section 7
+capacity,return per million coin,about 8K or more (20 times the Training Base builds),power,stated,strategy v2.0 section 7
+HQ 31 and the Age of Oil path,coin,about 2.3B,coin,S1,strategy v2.0 section 1
+exclusive weapon,milestone and Lv.20 effect,+0.3M per milestone and +7.5 percent at Lv.20; six exist this season,power,S1,strategy v2.0 section 3 P5

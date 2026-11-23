@@ -1,14 +1,14 @@
 ---
 title: Held Patches Register
 created: 2026-11-22T10:32:17Z
-modified: 2026-11-22T10:32:17Z
-version: 1.0.0
+modified: 2026-11-23T08:05:51Z
+version: 1.1.0
 description: The in-repo record of tool patches held outside the repository, so the tool-developer step-2 in-flight check can see them
 grounded_in:
-  - source: issue #809 - held patches in hidden_files are invisible to the tool-developer in-flight check
+  - source: "issue #809 - held patches in hidden_files are invisible to the tool-developer in-flight check"
   - source: hidden_files/tool-development/held-patches/RECONCILED-2026-11-22.md - the reconciled held-patch inventory this register mirrors
-  - source: merged PR #792 (squash d2b0512b8) implements issue #709 on main
-  - source: merged PR #715 (squash 8b9a83bc0) implements issue #712 on main
+  - source: "merged PR #792 (squash d2b0512b8) implements issue #709 on main"
+  - source: "merged PR #715 (squash 8b9a83bc0) implements issue #712 on main"
 ---
 
 # Held patches register

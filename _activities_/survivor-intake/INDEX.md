@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-23T06:30:02Z
-version: 1.63.0
+modified: 2026-11-23T07:41:41Z
+version: 1.65.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -13,7 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1644 survivors unit)
   - source: survivor-intake execution record 2026-11-01 2048 queue run (ticker-2034 unit, partial, gate line unverified)
   - source: survivor-intake execution record 2026-11-02 0016 queue run (ticker-0004 unit, partial, gate line unverified)
-  - source: survivor-intake execution record 2026-11-02 0320 queue run (ticker-0308 unit, partial, gate line unverified, Issue #168)
+  - source: "survivor-intake execution record 2026-11-02 0320 queue run (ticker-0308 unit, partial, gate line unverified, Issue #168)"
   - source: survivor-intake execution record 2026-11-02 0747 queue run (ticker-0734 unit, partial, gate line unverified, Polar Guest dialog)
   - source: survivor-intake execution record 2026-11-02 1107 queue run (ticker-1104 unit, partial, gate line unverified, drag-pan retired)
   - source: survivor-intake execution record 2026-11-02 1640 queue run (ticker-1631 recovery unit, partial, gate point no-change, recovery-written)
@@ -56,15 +56,15 @@ grounded_in:
   - source: ticker-0135 survivor-intake execution record 2026-11-11 0144 queue run (partial, radar exit blocker broken with fresh-grounded Home (916,953) first try, gate line verified with 2 survivors, intake unverified after blind double-tap, Quick Dispatch not run; record commit a77e4e1d0 on records/2026-11-11)
   - source: ticker-0504 survivor-intake execution record 2026-11-11 0520 queue run (partial, one gate bubble vanished on tap with no recruit card read, remaining figure is a red-panda pet marker, intake unverified, Quick Dispatch not run; record commit 74344e28b on records/2026-11-11)
   - source: ticker-0936 survivor-intake execution record 2026-11-11 0941 queue run (partial, one gate survivor processed by the \"?\"-cleared sequence on two screenshots, 0 recruits identified, gate line clear as observed, Quick Dispatch not run, 0520 pet-marker confusion resolved by pre-tap crop; record commit 5c18f9174 on records/2026-11-11)
-  - source: ticker-1259 survivor-intake execution record 2026-11-11 1259 queue run (partial, unverified, no recruit verified, gate line never reached - the executor's zoom click left the game window in Zoom to Fit 1920x1080 and the control channel could not tap the canvas or restore the windowed state, new failure mode, tooling Issue #648; record commit 33e4fae5e on records/2026-11-11)
-  - source: GitHub Issue #675 (play class, filed 2026-11-12T05:29:50Z by the 2026-11-11 daily retro): survivor at the Zombies gate vanishes after three no-change tap variants, 0 recruits verified; execution record _records_/2026-11-11/survivor-intake/2115-queue-run.md (ticker-2105, unit survivors-2026-11-11-1803, 21:15-21:24 PT) - not yet on the records branch at this run's close, re-verified against the execution record by the 2332 run: record commit 546fa2cc7 on ticker-2105-delivery (STRANDED at fold time, not on records/2026-11-11 - see Issue #682; LANDED 2026-11-12 07:53Z as 9f6e149bb on records/2026-11-11, rides PR #681 at the 03:00 batch); figures confirmed exactly, see the 2115 section
+  - source: "ticker-1259 survivor-intake execution record 2026-11-11 1259 queue run (partial, unverified, no recruit verified, gate line never reached - the executor's zoom click left the game window in Zoom to Fit 1920x1080 and the control channel could not tap the canvas or restore the windowed state, new failure mode, tooling Issue #648; record commit 33e4fae5e on records/2026-11-11)"
+  - source: "GitHub Issue #675 (play class, filed 2026-11-12T05:29:50Z by the 2026-11-11 daily retro): survivor at the Zombies gate vanishes after three no-change tap variants, 0 recruits verified; execution record _records_/2026-11-11/survivor-intake/2115-queue-run.md (ticker-2105, unit survivors-2026-11-11-1803, 21:15-21:24 PT) - not yet on the records branch at this run's close, re-verified against the execution record by the 2332 run: record commit 546fa2cc7 on ticker-2105-delivery (STRANDED at fold time, not on records/2026-11-11 - see Issue #682; LANDED 2026-11-12 07:53Z as 9f6e149bb on records/2026-11-11, rides PR #681 at the 03:00 batch); figures confirmed exactly, see the 2115 section"
   - source: ticker-1332 troop-training execution record 2026-11-11 1340 queue run (partial, 0 of 4 barracks checked, tent grounding missed again, Drill Ground tap landed on Iron Mine Lv.27, radar-map exit by back arrow, Home button unresponsive in the fullscreen framing; record commit ed2cb2614 on records/2026-11-11)
   - source: ticker-1332 arms-race execution record 2026-11-11 1347 queue run (partial, phase never read, Events entry failed twice - (645,62) opens the Mall, labelled Events icon (707,146) took two no-change taps, Mall exit back arrow (316,952); record commit ed2cb2614 on records/2026-11-11)
-  - source: ticker-1408 alliance-help execution record 2026-11-11 1410 queue run (done, Help All pressed twice for 3 ally helps, points 500 to 520, Alliance button opens in fullscreen at re-grounded (652,711) snap off, Help dialog X background-click-resistant) and mail-rewards execution record 2026-11-11 1422 queue run (partial, Event Claim All paid medal 280, tap offset measured - background canvas taps land about -23 x, +10 y normalized in the fullscreen window, tooling Issue #652; record commit d00afba5a on records/2026-11-11)
-  - source: ticker-1318 survivor-intake execution record 2026-11-21 1335 queue run (partial, fullscreen precondition cleared, gate figures without '?' bubbles, tap no-change, view cannot be panned, Issue #648; record commit 9418b215a4 on records/2026-11-21)
+  - source: "ticker-1408 alliance-help execution record 2026-11-11 1410 queue run (done, Help All pressed twice for 3 ally helps, points 500 to 520, Alliance button opens in fullscreen at re-grounded (652,711) snap off, Help dialog X background-click-resistant) and mail-rewards execution record 2026-11-11 1422 queue run (partial, Event Claim All paid medal 280, tap offset measured - background canvas taps land about -23 x, +10 y normalized in the fullscreen window, tooling Issue #652; record commit d00afba5a on records/2026-11-11)"
+  - source: "ticker-1318 survivor-intake execution record 2026-11-21 1335 queue run (partial, fullscreen precondition cleared, gate figures without '?' bubbles, tap no-change, view cannot be panned, Issue #648; record commit 9418b215a4 on records/2026-11-21)"
   - source: ticker-2104 survivor-intake execution record 2026-11-21 2116 queue run (partial, 3 named recruits Charles/Alyssa/Chloe plus 1 dialog survivor, gate line verified clear, Quick Dispatch not run; record commit e1d4f7c05 on records/2026-11-21)
   - source: ticker-0537 survivor-intake execution record 2026-11-22 0548 queue run (partial, 7 named recruits plus 1 dialog survivor, gate verified clear, tap-building-centre method retired, Quick Dispatch not run; record commit 84ae3c5ff on records/2026-11-22)
-  - source: ticker-1159 survivor-intake execution record 2026-11-22 1215 queue run (done, 1 gate survivor processed by ?-cleared sequence on two post-tap reads, 0 recruits, visible gate only; record commit 7f72b84b5 on records/2026-11-22, PR #821)
+  - source: "ticker-1159 survivor-intake execution record 2026-11-22 1215 queue run (done, 1 gate survivor processed by ?-cleared sequence on two post-tap reads, 0 recruits, visible gate only; record commit 7f72b84b5 on records/2026-11-22, PR #821)"
   - source: ticker-0910 survivor-intake execution record 2026-11-22 0932 queue run (partial, Quick Dispatch panel entry FOUND via tap-building-body-then-paw, Iron Mine Lv.27 panel read live, Quick Dispatch tapped once effect unverified, 1 survivor waiting at gate; record commit fe17d6b4e on delivery branch ticker-0910-records-1122, not yet on main or records/2026-11-22)
 ---
 
@@ -83,3 +83,4 @@ Collecting the survivors who queue at the base front gate - recruit cards, dialo
 ## Changelog
 
 - 1.63.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 1,841-line, 39,152-word body into 127 key-named articles and 5 catalog pages, and added `rule-digest.md`; no word rewritten, no claim superseded. `--verify` PASS and `--check` EQUAL, body sha256 29ab6ce89d08; the unsplit 1.62.0 file is commit 2086a07b.
+- 1.65.0, 2026-11-23 - A platform account label (a 'Signed in as' banner) replaced with 'owner account' in 1 line of 1 file; no other change.

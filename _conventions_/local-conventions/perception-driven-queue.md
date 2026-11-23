@@ -1,9 +1,9 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-11T09:32:17Z
+modified: 2026-11-23T08:05:51Z
 level: L2
-version: 1.2.4
+version: 1.3.0
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-2-landed
 grounded_in:
@@ -11,7 +11,7 @@ grounded_in:
   - source: owner refinement of 2026-10-31 - no fixed schedule; check and perceive where tasks are needed and schedule them automatically; discover potentially new tasks, learn about them, create their task profile and metadata, and start scheduling executions for them
   - source: miss audit of 2026-10-31 - whole classes of work had no execution channel because no static model named them
   - source: reflection of 2026-10-31 in this folder
-  - source: organizer 0432 run 2026-11-07 (Refs #147, #247) - the two standing 19:00 reset anchors rewritten to the absolute reset instant 02:00 UTC
+  - source: "organizer 0432 run 2026-11-07 (Refs #147, #247) - the two standing 19:00 reset anchors rewritten to the absolute reset instant 02:00 UTC"
 ---
 
 # Perception-driven queue - the scout layer

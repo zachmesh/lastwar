@@ -1,0 +1,8 @@
+tent,level,state,bubble_result,popup_text,cost,power_before,power_after
+A (left),Barracks Lv.27,busy (clock bubble),not tapped,none,none,150211809,150211809
+B (bottom),Barracks Lv.30,busy (clock bubble; Lv.10 x793 training in progress 1d 03:16:03 at 08:02Z),n/a,"green up arrow = building Upgrade panel Lv.30 to 31 (not Promote): Unit Training Cap 570 to 575, Power 283100 to 329100, needs Lv.31 Headquarters (Construct), Original Time 83d 19:46:15, Upgrade 39d 10:42:57, Finish Now 564732 diamonds",food 638.0M of 671.5M and coin 9.6M of 272.0M (short; not pressed),150211809,150211809
+B (bottom),Barracks Lv.30,busy,n/a,"pistol = TRAIN UNITS in-progress view: tiers Lv.7 1116, Lv.8 2141, Lv.9 1878, Lv.10 35.1K (Lv.6 cut off); green arrows on the Lv.7 Lv.8 Lv.9 tabs; only button Speed Up (not tapped); tab arrow tap only selected the tab (twice)",none,150211809,150211809
+C (lower right),Barracks Lv.24,idle (no clock bubble),bubble over C tapped once at 07:49Z: no toast no change,"pistol: toast ""Drill Ground Full: Unable to add more units."" no panel",none,150211809,150211809
+D (upper right),Barracks Lv.20,not probed,"portrait bubble at the neighbouring building opened the HOSPITAL panel (see next row)",none,none,150211809,150211809
+Hospital Lv.25,Hospital Lv.25,"Severely Wounded 364/7999 (Lv.10 x364); Completed 5306 waiting",Collect tapped once at 08:00:34Z: toast "Drill Ground Full: Unable to add 5306 units." panel closed,"none beyond the toast",none,150211809,150211809
+Power Details,n/a,Hero 66241412 Drone 5840675 Building 9749025 unchanged; Unit and Tech below the fold not re-read,n/a,none,none,150211809,150211809

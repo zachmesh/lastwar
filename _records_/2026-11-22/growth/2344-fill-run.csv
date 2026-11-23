@@ -1,0 +1,12 @@
+slot,state_before,action,cost,power_preview,stock_check,serves
+builder 1,busy Lv.25 Training Base 1d 01:34:57 left at 07:45:3xZ (finish 2026-11-24T09:20:2xZ),none,none,none,n/a (not idle),n/a
+builder 2,busy Lv.25 Training Base 1d 01:35:00 left,none,none,none,n/a (not idle),n/a
+builder 3,busy Lv.25 Training Base 1d 01:35:03 left,none,none,none,n/a (not idle),n/a
+builder 4,busy Lv.25 Training Base 1d 01:35:07 left,none,none,none,n/a (not idle),n/a
+lab 1,busy Lv.0 Unlock Oil Well 03:55:06 left at 07:48Z (finish about 11:43Z),none,none,none,n/a (not idle),n/a
+lab 2,busy Lv.7 Defense Training VIII 2d 23:31:14 left at 07:48Z,none,none,none,n/a (not idle),n/a
+barracks Lv.30,busy (clock bubble above the tent; timer not readable),none,none,none,n/a (not idle),n/a
+barracks second clock tent,busy (clock bubble; level not read),none,none,none,n/a (not idle),n/a
+barracks Lv.24,idle (no clock bubble; portrait bubble; inferred),pistol tap,none,none,food 638.0M iron 1.0G both above floor and 3x of a T8 batch; coin not needed,fill idle slot - BLOCKED by toast "Drill Ground Full: Unable to add more units."
+barracks fourth tent,portrait bubble like Lv.24 (inferred idle),not tried,none,none,not run,fill idle slot - not tried after the toast
+Drill Ground,Lv.28 Unit Count +9211; four survivors all post Officer; no next-level text on the panel,read only,none,none,Upgrade not pressed (planner unit only),capacity is the blocker for training

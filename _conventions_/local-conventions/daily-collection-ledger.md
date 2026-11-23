@@ -1,16 +1,16 @@
 ---
 title: Daily Collection Ledger
 created: 2026-11-01T05:00:00Z
-modified: 2026-11-07T12:32:17Z
+modified: 2026-11-23T08:05:51Z
 level: L2
-version: 1.1.0
+version: 1.2.0
 description: The master list of everything collectible or due in one reset day, each line with the live read that closes it
 status: active
 grounded_in:
   - source: miss audit of 2026-10-31, section 4 umbrella rule
   - source: owner expanded collection checklist of 2026-10-31
   - source: owner direction of 2026-10-31 to reflect and fix
-  - source: organizer 0432 run 2026-11-07 (Refs #147) - the reset-day definition rewritten to the absolute reset instant 02:00 UTC
+  - source: "organizer 0432 run 2026-11-07 (Refs #147) - the reset-day definition rewritten to the absolute reset instant 02:00 UTC"
 ---
 
 # Daily collection ledger

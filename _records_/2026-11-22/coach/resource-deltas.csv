@@ -1,0 +1,4 @@
+resource,at_2026-10-28T02-40_local,at_2026-11-22T23-49_local,change,change_per_day_25.88d,source,note
+food,130400000,638000000,507600000,19606025,_tools_/state/resources.jsonl rows 14 and 15,far above the 100M floor
+iron,323600000,1000000000,676400000,26125917,_tools_/state/resources.jsonl rows 14 and 15,"2026-11-22 value is the HUD rounded 1.0G entered as 1000M, so the change is approximate; above the 150M floor"
+coin,33900000,9600000,-24300000,-938586,_tools_/state/resources.jsonl rows 14 and 15,"0.4M under the 10M floor; the four Training Base upgrades started on the other device are the likely cause, unverified"

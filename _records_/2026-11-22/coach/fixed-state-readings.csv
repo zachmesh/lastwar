@@ -1,0 +1,6 @@
+date_z,slot,window_utc,reading_utc,total_power,collected_first,breakdown_read,source,status
+2026-11-22,A,02:00Z to 04:00Z,,,unknown,no,,"no reading in window; first after the reset at 18:10Z, 149,569,859; windows confirmed by the coordinator"
+2026-11-22,B,13:00Z to 15:00Z,,,unknown,no,,no reading in window; windows confirmed by the coordinator
+2026-11-23,A,02:00Z to 04:00Z,2026-11-23T03:55Z,150080120,not recorded; no batch was due at the read,no,_records_/2026-11-22/resource-collection/1955-queue-run.md:42,"UNFIXED by the collect-first rule; in window, HUD total only; breakdown last read 2026-11-08; windows confirmed by the coordinator"
+2026-11-23,B,13:00Z to 15:00Z,,,unknown,,,pending; falls after the 12:00Z first report; windows confirmed by the coordinator
+2026-11-23,none,outside A and B,2026-11-23T07:47Z,150211809,no,yes,_records_/2026-11-22/growth/2344-power-breakdown.csv,"not a fixed-state reading; first breakdown since 2026-11-08, exact lines, five sections sum to the total"

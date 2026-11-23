@@ -1,0 +1,44 @@
+---
+unit: scout-midday-growth-snapshot-2026-11-23-013
+regular: scout-midday
+activity: perception-scout
+segment: 2
+priority: 2
+created_at: 2026-11-23T08:08:26Z
+expires_at: 2026-11-23T09:27:00Z
+planned_for:
+not_before: 2026-11-23T09:05:00Z
+window: growth snapshot D1 read only never press Upgrade
+est_minutes: 10
+chain_id: growth-snapshot-2026-11-23
+chain_seq: 13
+attempts: 0
+max_attempts: 3
+claimed_by:
+claimed_at:
+lease_until:
+---
+
+# scout-midday
+
+Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
+
+## Brief (planner, growth snapshot D1, Story 868, from the scout's updated unit table)
+
+serves: snapshot (Story 868)
+
+Read-only unit D1. Queue placement: Next after S1, behind the Secrets claim, ahead of the routine claims.
+
+Question: What are the drone level and stocks and the Wall of Honor entries, and what do their next steps cost?
+
+Route: Drone Center: tap its body, the plane icon in the radial menu opens the drone screen; read; back. Wall of Honor: the orange medal icon on the base screen, or the Wall of Honor tab inside a Tank, Aircraft or Missile Center, whichever opens; read; back.
+
+Read: Drone Center level, drone level, Drone Parts and Battle Data stock, skill chip stock, Combat Boost tier, next-level cost and power gain if shown; per Wall of Honor entry the hero, level, next shard cost and bonus line; total Wall of Honor power if shown.
+
+Budget: at most 8 steps and 10 minutes. Notes: Output _records_/<date>/growth/<HHMM>-d1-drone-wall.csv, schema g_drone_wall. Power Details on 2026-11-22 reads Drone Level 3,492,600, Drone Component 1,639,876, Skill Chip 708,200, Wall of Honor 127,100; Component and Chip have not moved since 2026-11-08. The Drone Center read Lv.1 once (label, unverified). A tap on the HUD rail Events point selected the Drone Center, so ground fresh. Never press Upgrade, Level Up, Invest or any shard control; one tap there may spend.
+
+Stop rules from `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md` (here S1 to S7 are the protocol's rule numbers, not unit names): R1 never press Upgrade, Finish Now, Speed Up, Construct, Research, Train, Hire, Complete, Claim, Quick Dispatch, Promote, Unlock, Use, Open, Sell or Equip. R2 read a diamond or price figure, never tap it. R3 stop at any march, attack, rally, Arena or PvP surface. R4 close any Confirm dialog with Cancel or X. R5 close a preview only by X or left-edge swipe-back, never a low tap. R6 two failed taps on one target end the unit as partial. R7 no owner name or ID; skip profile and ranking screens.
+
+If this unit reads the HUD, run `python3 _tools_/resource_map.py snap food=<n> iron=<n> coin=<n> --note <this unit id>`. The tool reads only plain numbers with a K or M suffix: write 1.1G as 1100M. Do not enqueue a chain successor; the planner owns this chain.
+
+Red lines: no purchase or diamond spend, no PvP, attack, rally, march, Arena fight or General's Trial fight, no alliance diplomacy, no ally-exchange trade, no speedup or Finish Now, no owner name or identifier values in any record. Any such surface stops the unit as needs-owner.

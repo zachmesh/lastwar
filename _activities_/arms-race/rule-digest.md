@@ -1,9 +1,9 @@
 ---
 title: Arms Race Rule Digest
 created: 2026-11-23T06:37:07Z
-modified: 2026-11-23T07:13:14Z
+modified: 2026-11-23T07:22:25Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing Arms Race rules an operator must follow, each cited to the split article file that carries it, with the stale lines listed
 status: unverified
 grounded_in:
@@ -33,8 +33,9 @@ Unverified until a live read settles each; articles stay verbatim, newer governs
 - cadence-section-p1 ranking reward claimed by "the next run": superseded by run-20261109-1838 (2026-11-09).
 - run-20261104-1604 "running fullscreen": superseded by day-20261105 (2026-11-05).
 - run-20261110-1712-p2 "Oil Well" upgrade: superseded by run-20261110-1756-p1 (2026-11-10).
-- cadence-section-p2 "No research or building is started", run-20261107-1633-p1 "skipped-needs-owner": superseded 2026-11-23 by OD-20261123-05 (seats decide) and OD-20261031-01 (relayed): no scoring path closes "no safe scoring path", once a day, not an owner item.
+- cadence-section-p2 "No research or building is started", run-20261107-1633-p1 "skipped-needs-owner": superseded 2026-11-23 by OD-20261123-05 (seats decide) and OD-20261031-01 (decided): no scoring path closes "no safe scoring path", once a day, not an owner item.
 
 ## Changelog
 
 - 0.2.0, 2026-11-23 - Errata updated.
+- 0.3.0, 2026-11-23 - Decision logged.
