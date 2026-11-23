@@ -194,10 +194,14 @@ Usage:
              # retire a unit whose empty expires_at no expiry
              # pass can reach.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
-  queue.py [--root DIR] token-acquire --executor NAME
+  queue.py [--root DIR] token-acquire --executor NAME [--lease-minutes N] [--exclusive]
              # a re-acquire by the same executor always renews the
              # lease (issue #461); any other holder is refused
-             # while the lease is live.
+             # while the lease is live. --lease-minutes (1 to 60,
+             # default 15; a renewal takes it again) is for a longer
+             # window; --exclusive makes claim refuse every other
+             # executor while the token is live (another team's quiet
+             # window; claim --ignore-token is the emergency way past).
   queue.py [--root DIR] token-release --executor NAME
              # the token lives in the main checkout's _queue_/claimed/,
              # shared by every worktree of the repo (issue #383), so a
@@ -355,6 +359,7 @@ from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
+TOKEN_MAX_LEASE_MINUTES = 60    # token-acquire --lease-minutes: a quiet window for another team, never open-ended
 UNIT_CAP_SECONDS = UNIT_CAP_MINUTES * 60   # 900: the cap, in seconds
 # Issue #461: a same-holder re-acquire always renews the lease.
 # The 2026-11-08 rule renewed only within 60 seconds of expiry, but
@@ -4444,6 +4449,11 @@ def cmd_claim(args):
     refusal = refuse_unread_claim(args)
     if refusal is not None:
         return refusal
+    held = None if getattr(args, "ignore_token", False) else exclusive_token_holder(args.root, args.executor)
+    if held:
+        print(f"cannot claim {args.unit}: the device token is held exclusively by {held[0]} until {held[1]} - a quiet window; "
+              f"claim after it is released or expires (--ignore-token is the emergency way past it)")
+        return 1
     live = live_pool_root(args.root)
     live_state, live_path = find_unit(live, args.unit)
     if live_state == "inbox":
@@ -5985,13 +5995,36 @@ def _write_token_file(path, fields):
                  f"claimed_by: {fields['claimed_by']}\n"
                  f"claimed_at: {fields['claimed_at']}\n"
                  f"lease_until: {fields['lease_until']}\n"
-                 "---\n\n# Device token\n")
+                 + ("exclusive: true\n" if fields.get("exclusive") else "")
+                 + "---\n\n# Device token\n")
     os.rename(tmp, path)
 
 
+def exclusive_token_holder(root, executor):
+    """(holder, lease_until) when a DIFFERENT executor holds a live token it marked exclusive (token-acquire --exclusive), else None.
+    An ordinary token never blocks a claim: the operator acquires its own before it claims."""
+    path = token_path(root)
+    if not os.path.exists(path):
+        return None
+    try:
+        fields, _ = read_unit(path)
+    except (OSError, ValueError, UnicodeDecodeError):
+        return None
+    lease = parse_iso(fields.get("lease_until", ""))
+    holder = fields.get("claimed_by", "")
+    if str(fields.get("exclusive", "")).lower() != "true" or not lease or lease <= now_utc() or holder in ("", executor):
+        return None
+    return holder, fields.get("lease_until", "")
+
+
 def cmd_token_acquire(args):
+    minutes = args.lease_minutes if args.lease_minutes is not None else UNIT_CAP_MINUTES
+    if not 1 <= minutes <= TOKEN_MAX_LEASE_MINUTES:
+        print(f"refused: --lease-minutes {minutes} is outside 1 to {TOKEN_MAX_LEASE_MINUTES}")
+        return 2
     path = token_path(args.root)
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    exclusive = bool(args.exclusive)
     if os.path.exists(path):
         fields, _ = read_unit(path)
         lease = parse_iso(fields.get("lease_until", ""))
@@ -6005,16 +6038,19 @@ def cmd_token_acquire(args):
             # holder's game input then ran with no token. A
             # different executor is still refused while the lease
             # is live, so the mutual-exclusion guarantee is
-            # unchanged.
+            # unchanged. A renewal takes --lease-minutes again
+            # (default 15) and keeps the token exclusive if it was.
             if fields.get("claimed_by") == args.executor:
                 fields = {"claimed_by": args.executor,
                           "claimed_at": fields.get("claimed_at", "")
                           or iso(now_utc()),
                           "lease_until": iso(now_utc() + timedelta(
-                              minutes=UNIT_CAP_MINUTES))}
+                              minutes=minutes)),
+                          "exclusive": exclusive or str(fields.get("exclusive", "")).lower() == "true"}
                 _write_token_file(path, fields)
                 print(f"token renewed by {args.executor} "
-                      f"until {fields['lease_until']}")
+                      f"until {fields['lease_until']}"
+                      + (" (exclusive)" if fields["exclusive"] else ""))
                 return 0
             print(f"token held by {fields.get('claimed_by', '?')} "
                   f"until {fields.get('lease_until')}")
@@ -6022,10 +6058,11 @@ def cmd_token_acquire(args):
     fields = {"claimed_by": args.executor,
               "claimed_at": iso(now_utc()),
               "lease_until": iso(now_utc() + timedelta(
-                  minutes=UNIT_CAP_MINUTES))}
+                  minutes=minutes)),
+              "exclusive": exclusive}
     _write_token_file(path, fields)
     print(f"token acquired by {args.executor} "
-          f"until {fields['lease_until']}")
+          f"until {fields['lease_until']}" + (" (exclusive)" if exclusive else ""))
     return 0
 
 
@@ -6453,6 +6490,8 @@ def main(argv=None):
     p.add_argument("--executor", required=True)
     p.add_argument("--lease-minutes", type=int,
                    default=DEFAULT_LEASE_MINUTES)
+    p.add_argument("--ignore-token", action="store_true",
+                   help="emergency: claim although another executor holds an exclusive device token")
     p.set_defaults(fn=cmd_claim)
 
     p = sub.add_parser("read")
@@ -6492,6 +6531,10 @@ def main(argv=None):
 
     p = sub.add_parser("token-acquire")
     p.add_argument("--executor", required=True)
+    p.add_argument("--lease-minutes", type=int, default=None,
+                   help=f"lease length, 1 to {TOKEN_MAX_LEASE_MINUTES} (default {UNIT_CAP_MINUTES}); a renewal takes it again")
+    p.add_argument("--exclusive", action="store_true",
+                   help="a quiet window: while this token is live, claim refuses every other executor (use for another team's window)")
     p.set_defaults(fn=cmd_token_acquire)
 
     p = sub.add_parser("token-release")
