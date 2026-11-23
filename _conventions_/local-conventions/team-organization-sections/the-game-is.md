@@ -1,9 +1,9 @@
 ---
 title: The game is not frontmost
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 7
+sequence: 9
 description: A notification or another app in front makes a click land on the wrong app.
 ---
 ### The game is not frontmost

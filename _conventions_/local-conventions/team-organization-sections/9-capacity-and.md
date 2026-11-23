@@ -1,9 +1,9 @@
 ---
 title: 9. Capacity and resource budget and 1 more
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 11
+sequence: 13
 description: Sessions - maximum 8 top-level seats; no nested team.
 ---
 ## 9. Capacity and resource budget

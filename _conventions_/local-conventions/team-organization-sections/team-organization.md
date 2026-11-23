@@ -1,7 +1,7 @@
 ---
 title: Team organization
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
 sequence: 1
 description: This page is the organization plan for the team.

@@ -1,9 +1,9 @@
 ---
-title: 13. The project board
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:54Z
-version: 0.2.0
-sequence: 14
+title: 13. The project board part 1
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
+version: 0.1.0
+sequence: 16
 description: Work is tracked as GitHub issues in zachmesh/lastwar and shown on one GitHub Project - https
 ---
 ## 13. The project board
@@ -41,15 +41,3 @@ other boards exactly. The Coordinator owns it.
 
 Known limits, as on the `nexus` and `dsh-web-ops` boards:
 
-- The `Feedback loop` view groups by Status, not by Feedback state: the API
-  has no input for a board's column field, so changing it is a web-UI step.
-  It stays empty until feedback items exist.
-- The built-in project workflows (item closed -> Done and the like) are
-  disabled; the API can delete workflows but not enable them.
-- Open issues are not yet parented to an Epic or given an Agent; the
-  Coordinator's triage pass does that, `Maintenance` first.
-
-
-## Changelog
-
-- 0.2.0, 2026-11-23 - Board moved to the linked project 1 and the feeding paragraph corrected (the board is now linked); the earlier board is a closed backup.

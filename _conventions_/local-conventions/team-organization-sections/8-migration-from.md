@@ -1,9 +1,9 @@
 ---
 title: 8. Migration from child sessions
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 9
+sequence: 11
 description: The first team used delegated child sessions.
 ---
 ## 8. Migration from child sessions

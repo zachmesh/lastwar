@@ -1,9 +1,9 @@
 ---
 title: Model policy
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
-sequence: 10
+sequence: 12
 description: Owner decision, 2026-11-22 2022 PT - every DSH session under /Users/zhenchen/zachmesh/lastwar runs Claude Sonnet 5.5 at
 ---
 ### Model policy

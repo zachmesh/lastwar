@@ -1,7 +1,7 @@
 ---
-title: Seat briefs
-created: 2026-11-23T07:02:07Z
-modified: 2026-11-23T07:02:07Z
+title: Seat briefs part 1
+created: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:04:37Z
 version: 0.1.0
 sequence: 5
 description: Coordinator.
@@ -45,8 +45,4 @@ closes.
 metric. Checks the held-patches register first. Tests on an isolated
 fixture. Opens a PR with the improvement id, target metric and
 validation.
-
-**Scribe.** Folds verified records into activities and knowledge with
-a version bump and a changelog line. Never rewrites a play record.
-Lands load-bearing changes by PR.
 
