@@ -150,6 +150,7 @@ Usage:
   tapcal.py narrow --x X --y Y --half-width W --half-height H
                    --comp FILE [--format text|json]
                    [--geometry G]
+  tapcal.py close --case FILE [--format text|json]
 
 A verification case for `verify` is a JSON object:
 
@@ -239,6 +240,87 @@ half-extent from its grounded bounds; the dialog X, which
 stayed unresponsive in the ticker-1408 unit, is the next
 narrow control to try compensated first.
 
+Panel-close ladder (issue #854): the MY PROFILE panel X
+ignored single coordinate taps in two consecutive units -
+ticker-1634 (element-number close clicks, Chrome-front
+artifact) and ticker-1704 (four coordinate X taps, press
+highlight only, no close) - and the first three 1704
+attempts never reached the panel at all: they were sent
+while the base window 127196 was selected, so they passed
+through to the base view underneath the panel's own surface
+127250. `verify` cannot tell such a wrong-surface tap from
+a miss or an ignored tap, and its input-blocked recovery
+(re-front the app and re-probe) is wrong for a panel on a
+covering surface. `close` decides one step of the close
+ladder for a panel-close target instead:
+
+  tap -> double-tap -> long-press -> click-element -> relaunch
+
+`click-element` (click_element on the X's OCR element number)
+is in the ladder only when the case names ocr_number - the
+issue's candidate list makes it conditional on the X ever
+appearing in the catalog. Each method gets R2's budget of
+two no-change taps on the correct surface
+(task-unit-queue-design.md section 11: two no-change taps
+at one point end that method inside the unit); a tap sent
+while another surface is selected is wrong-surface, not a
+miss and not an ignored tap, and consumes no method budget
+because it never reached the panel. A method whose two
+on-surface taps both landed on target with no change is
+exhausted and the ladder moves on; when every method is
+exhausted the verdict is exhausted and the panel stays open
+- R2's third-consecutive-blocked-unit rule then applies and
+the blocker is a process failure to report to the owner,
+not a fourth identical attempt.
+
+A close case for `close` is a JSON object:
+
+  activity          string, e.g. "resource-collection"
+  panel             string, e.g. "MY PROFILE"
+  target            {"x": int, "y": int}, the grounded X
+  surface_covering  optional string, the surface the panel
+                    lives on, e.g. "127250"; when it is
+                    absent a tap cannot be judged
+                    wrong-surface and is read as on-surface
+  ocr_number        optional int >= 0, the X's element
+                    number in the catalog when present
+  attempts          list, in order, of:
+    attempt         int, consecutive from 1
+    method          one of tap, double-tap, long-press,
+                    click-element, relaunch
+    surface_selected optional string, the surface selected
+                    when the attempt was sent; null when it
+                    was not recorded
+    aim             {"x": int, "y": int}, where the executor aimed
+    tapped          {"x": int, "y": int} or null, where the tap
+                    actually landed (null when no tap was placed)
+    changed         bool, whether the panel closed
+    observed        {"x": int, "y": int} or null, where grounding
+                    found the X after the attempt (null when
+                    it was not re-grounded)
+
+  A relaunch attempt places no tap: aim carries the X point
+  and tapped is null; when the panel is still open after the
+  relaunch the method counts as one spent attempt of its
+  budget, not as an unverified non-measurement.
+
+The verdict is verified when any attempt closed the panel;
+not-started when no attempt exists yet (the next step is
+the first ladder method at the target, after activating the
+covering surface when one is named); wrong-surface when the
+last attempt was sent while another surface was selected
+(the next step is the same method at the same point after
+activating the covering surface); retry-same-method when
+the last on-surface attempt missed the point, was never
+placed, or is the first of the method's two no-change taps
+(the next step is the same method at the fresh measured
+centre); next-method when the last method spent its two
+no-change taps on target (the next step is the following
+ladder method); exhausted when every ladder method spent
+its budget with no change; unverified when the last attempt
+carries no measurement at all. A verified attempt ends the
+ladder, so no attempt may follow one.
+
 The compensation file for `compensate` is the JSON object
 `calibrate` writes with --out (or an equivalent {"dx":..,
 "dy":..} object). Exit codes: 0 success (even when the rate
@@ -251,7 +333,7 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.5.0"
+TOOL_VERSION = "1.6.0"
 COORD_MIN = 0
 COORD_MAX = 1000
 
@@ -1189,6 +1271,378 @@ def fmt_verify(result):
     return "\n".join(lines) + "\n"
 
 
+# Panel-close method ladder (issue #854). The MY PROFILE panel
+# X ignored single coordinate taps in ticker-1634 and
+# ticker-1704, and the first three 1704 attempts were sent
+# while the base window was selected, so they passed through
+# to the base view underneath the panel's own surface.
+CLOSE_METHODS = ("tap", "double-tap", "long-press", "click-element", "relaunch")
+CLOSE_METHOD_TAP = "tap"
+CLOSE_METHOD_CLICK_ELEMENT = "click-element"
+# R2 (task-unit-queue-design.md section 11): two no-change
+# taps at one point end that method inside the unit.
+CLOSE_METHOD_BUDGET = 2
+
+
+def check_close_method(value, where):
+    if value not in CLOSE_METHODS:
+        raise InputError(
+            f"{where}: method must be one of "
+            f"{', '.join(CLOSE_METHODS)}, got {value!r}"
+        )
+    return value
+
+
+def check_surface(value, where):
+    if value is None:
+        return None
+    if not isinstance(value, str) or not value:
+        raise InputError(f"{where}: expected a non-empty string, got {value!r}")
+    return value
+
+
+def parse_close_attempt(entry, index):
+    where = f"close attempt {index}"
+    if not isinstance(entry, dict):
+        raise InputError(f"{where}: expected an object")
+    attempt = entry.get("attempt")
+    if isinstance(attempt, bool) or not isinstance(attempt, int) or attempt < 1:
+        raise InputError(f"{where}: attempt must be an integer >= 1")
+    if "method" not in entry:
+        raise InputError(f"{where}: missing required field 'method'")
+    method = check_close_method(entry["method"], f"{where} method")
+    surface_selected = check_surface(
+        entry.get("surface_selected"), f"{where} surface_selected"
+    )
+    if "aim" not in entry:
+        raise InputError(f"{where}: missing required field 'aim'")
+    aim = check_point(entry["aim"], f"{where} aim")
+    tapped = entry.get("tapped")
+    if tapped is not None:
+        tapped = check_point(tapped, f"{where} tapped")
+    if entry.get("changed") is None:
+        raise InputError(f"{where}: missing required field 'changed'")
+    changed = check_bool(entry.get("changed"), f"{where} changed")
+    observed = entry.get("observed")
+    if observed is not None:
+        observed = check_point(observed, f"{where} observed")
+    return {
+        "attempt": attempt,
+        "method": method,
+        "surface_selected": surface_selected,
+        "aim": aim,
+        "tapped": tapped,
+        "changed": changed,
+        "observed": observed,
+    }
+
+
+def parse_close_case(data, path):
+    if not isinstance(data, dict):
+        raise InputError(f"{path}: expected a close case object")
+    activity = data.get("activity")
+    if not isinstance(activity, str) or not activity:
+        raise InputError(f"{path}: activity must be a non-empty string")
+    panel = data.get("panel")
+    if not isinstance(panel, str) or not panel:
+        raise InputError(f"{path}: panel must be a non-empty string")
+    if "target" not in data:
+        raise InputError(f"{path}: missing required field 'target'")
+    target = check_point(data["target"], f"{path} target")
+    surface_covering = check_surface(
+        data.get("surface_covering"), f"{path} surface_covering"
+    )
+    ocr_number = data.get("ocr_number")
+    if ocr_number is not None:
+        if (
+            isinstance(ocr_number, bool)
+            or not isinstance(ocr_number, int)
+            or ocr_number < 0
+        ):
+            raise InputError(
+                f"{path}: ocr_number must be an integer >= 0, "
+                f"got {ocr_number!r}"
+            )
+    attempts_data = data.get("attempts", [])
+    if not isinstance(attempts_data, list):
+        raise InputError(f"{path}: attempts must be a list")
+    attempts = [
+        parse_close_attempt(entry, i) for i, entry in enumerate(attempts_data)
+    ]
+    for position, attempt in enumerate(attempts):
+        if attempt["attempt"] != position + 1:
+            raise InputError(
+                f"close attempt {position}: attempt must be "
+                f"{position + 1}, got {attempt['attempt']} "
+                "(attempts are consecutive from 1)"
+            )
+    for position, attempt in enumerate(attempts[:-1]):
+        if attempt["changed"]:
+            raise InputError(
+                f"close attempt {position}: changed is true before the "
+                "last attempt - a verified close ends the ladder, "
+                "later attempts must not exist"
+            )
+    if ocr_number is None and any(
+        attempt["method"] == CLOSE_METHOD_CLICK_ELEMENT
+        for attempt in attempts
+    ):
+        raise InputError(
+            f"{path}: click-element attempts need ocr_number - the "
+            "X's element number in the catalog (issue #854)"
+        )
+    return {
+        "activity": activity,
+        "panel": panel,
+        "target": target,
+        "surface_covering": surface_covering,
+        "ocr_number": ocr_number,
+        "attempts": attempts,
+    }
+
+
+def close_ladder(case):
+    """Ladder methods available for this case, in order.
+
+    click-element needs the X's element number in the catalog
+    (issue #854 names it only when the X ever appears there),
+    so it drops out of the ladder when ocr_number is absent.
+    """
+    methods = list(CLOSE_METHODS)
+    if case["ocr_number"] is None:
+        methods.remove(CLOSE_METHOD_CLICK_ELEMENT)
+    return methods
+
+
+def close_case(case):
+    target = case["target"]
+    covering = case["surface_covering"]
+    attempts = case["attempts"]
+    ladder = close_ladder(case)
+    attempt_results = []
+    for attempt in attempts:
+        if attempt["changed"]:
+            verdict = "verified"
+        elif attempt["method"] == "relaunch":
+            # A relaunch places no tap: when the panel is still
+            # open afterwards, the method ran and failed - that
+            # is one spent attempt of its budget, not an
+            # unverified non-measurement.
+            verdict = "ignored"
+        elif (
+            covering is not None
+            and attempt["surface_selected"] is not None
+            and attempt["surface_selected"] != covering
+        ):
+            # Sent while another surface was selected: the tap
+            # passed through to the base view underneath the
+            # panel (ticker-1704's first three attempts). It
+            # never reached the panel, so it is neither a miss
+            # nor an ignored tap and consumes no method budget.
+            verdict = "wrong-surface"
+        elif attempt["tapped"] is not None and attempt["tapped"] == target:
+            # Landed exactly on the X and changed nothing: the
+            # tap reached the right pixel and the panel ignored
+            # it (ticker-1704's three on-surface X taps, press
+            # highlight only). That is one spent tap of the
+            # method's R2 budget of two, not a miss.
+            verdict = "ignored"
+        elif attempt["tapped"] is not None:
+            verdict = "miss"
+        elif attempt["observed"] is not None:
+            verdict = "re-grounded"
+        else:
+            verdict = "unverified"
+        attempt_results.append(
+            {
+                "attempt": attempt["attempt"],
+                "verdict": verdict,
+                "method": attempt["method"],
+                "surface_selected": attempt["surface_selected"],
+                "aim": attempt["aim"],
+                "tapped": attempt["tapped"],
+                "observed": attempt["observed"],
+                "changed": attempt["changed"],
+            }
+        )
+    # On-surface ignored taps per method: only those spend the
+    # method's R2 budget of two. Wrong-surface attempts never
+    # reached the panel; misses never landed on the point.
+    ignored_by_method = {}
+    for result in attempt_results:
+        if result["verdict"] == "ignored":
+            ignored_by_method[result["method"]] = (
+                ignored_by_method.get(result["method"], 0) + 1
+            )
+    methods_tried = []
+    for method in ladder:
+        if any(
+            result["method"] == method and result["verdict"] != "wrong-surface"
+            for result in attempt_results
+        ):
+            methods_tried.append(method)
+    methods_remaining = [
+        method
+        for method in ladder
+        if ignored_by_method.get(method, 0) < CLOSE_METHOD_BUDGET
+    ]
+    next_method = None
+    next_aim = None
+    next_surface = None
+    if any(result["verdict"] == "verified" for result in attempt_results):
+        verdict = "verified"
+    elif not attempts:
+        verdict = "not-started"
+        next_method = ladder[0]
+        next_aim = dict(target)
+        next_surface = covering
+    elif attempt_results[-1]["verdict"] == "wrong-surface":
+        # The method was never tested: retry it at the same
+        # point once the covering surface is selected - unless
+        # it already spent its two on-surface taps, in which
+        # case the ladder moves on instead of repeating it.
+        verdict = "wrong-surface"
+        last_method = attempts[-1]["method"]
+        if ignored_by_method.get(last_method, 0) >= CLOSE_METHOD_BUDGET:
+            remaining = [
+                method
+                for method in ladder
+                if ignored_by_method.get(method, 0) < CLOSE_METHOD_BUDGET
+                and method != last_method
+            ]
+            if remaining:
+                next_method = remaining[0]
+                next_aim = dict(target)
+                next_surface = covering
+            else:
+                verdict = "exhausted"
+        else:
+            next_method = last_method
+            next_aim = dict(target)
+            next_surface = covering
+    elif attempt_results[-1]["verdict"] == "unverified":
+        verdict = "unverified"
+    elif not methods_remaining:
+        verdict = "exhausted"
+    elif attempt_results[-1]["verdict"] in ("miss", "re-grounded"):
+        # Never landed on the point: the method is untested at
+        # the point, so retry it at the fresh measured centre
+        # (the re-grounded point when one was measured).
+        verdict = "retry-same-method"
+        next_method = attempts[-1]["method"]
+        last_observed = attempts[-1]["observed"]
+        next_aim = dict(last_observed) if last_observed else dict(target)
+        next_surface = covering
+    else:
+        # Last on-surface attempt was ignored: one spent tap of
+        # the method's budget of two, or the second, which ends
+        # the method and moves the ladder on.
+        last_method = attempts[-1]["method"]
+        spent = ignored_by_method.get(last_method, 0)
+        if spent < CLOSE_METHOD_BUDGET:
+            verdict = "retry-same-method"
+            next_method = last_method
+            next_aim = dict(target)
+            next_surface = covering
+        else:
+            remaining = [
+                method
+                for method in ladder
+                if ignored_by_method.get(method, 0) < CLOSE_METHOD_BUDGET
+                and method != last_method
+            ]
+            if remaining:
+                verdict = "next-method"
+                next_method = remaining[0]
+                next_aim = dict(target)
+                next_surface = covering
+            else:
+                verdict = "exhausted"
+    return {
+        "tool": "tapcal",
+        "version": TOOL_VERSION,
+        "activity": case["activity"],
+        "panel": case["panel"],
+        "target": target,
+        "surface_covering": covering,
+        "ocr_number": case["ocr_number"],
+        "verdict": verdict,
+        "attempts_used": len(attempts),
+        "methods_tried": methods_tried,
+        "methods_remaining": methods_remaining,
+        "attempts": attempt_results,
+        "next_method": next_method,
+        "next_aim": next_aim,
+        "next_surface": next_surface,
+    }
+
+
+def fmt_close(result):
+    lines = [
+        f"verdict: {result['verdict']}",
+        f"attempts used: {result['attempts_used']}",
+        f"methods tried: {', '.join(result['methods_tried']) or 'none'}",
+        f"methods remaining: "
+        f"{', '.join(result['methods_remaining']) or 'none'}",
+    ]
+    for attempt in result["attempts"]:
+        detail = f"{attempt['method']}: {attempt['verdict']}"
+        notes = []
+        if attempt["surface_selected"] is not None:
+            notes.append(f"surface {attempt['surface_selected']}")
+        if attempt["tapped"] is not None:
+            notes.append(
+                f"tapped {attempt['tapped']['x']},{attempt['tapped']['y']}"
+            )
+        if notes:
+            detail += " (" + "; ".join(notes) + ")"
+        lines.append(f"attempt {attempt['attempt']}: {detail}")
+    if result["next_method"] is not None:
+        step = f"next method: {result['next_method']}"
+        if result["next_aim"] is not None:
+            aim = result["next_aim"]
+            step += f" at {aim['x']},{aim['y']}"
+        lines.append(step)
+        if result["next_surface"] is not None:
+            lines.append(
+                f"activate surface first: {result['next_surface']}"
+            )
+    if result["verdict"] == "verified":
+        lines.append("recovery: panel closed; continue the unit")
+    if result["verdict"] == "not-started":
+        lines.append(
+            "recovery: activate the covering surface first when "
+            "one is named, then tap the measured centre"
+        )
+    if result["verdict"] == "wrong-surface":
+        lines.append(
+            "recovery: activate the covering surface, then retry "
+            "the same method at the same point; a tap sent while "
+            "another surface is selected passes through to the "
+            "base view and never reaches the panel"
+        )
+    if result["verdict"] == "retry-same-method":
+        lines.append(
+            "recovery: re-ground the X fresh, then retry the same "
+            "method at the measured centre (one of the method's "
+            "two no-change taps under R2)"
+        )
+    if result["verdict"] == "next-method":
+        lines.append(
+            "recovery: this method spent its two no-change taps "
+            "under R2 - switch to the next method at the measured "
+            "centre; do not repeat the spent method"
+        )
+    if result["verdict"] == "exhausted":
+        lines.append(
+            "recovery: every close method is exhausted - stop "
+            "tapping, leave the panel open, and report the "
+            "blocker as a process failure (R2: a third "
+            "consecutive unit blocked the same way)"
+        )
+    return "\n".join(lines) + "\n"
+
+
 def fmt_variant(advice):
     lines = [
         f"control: {advice['control']}",
@@ -1260,6 +1714,12 @@ def build_parser():
     variant.add_argument("--control", default=None)
     variant.add_argument("--list", action="store_true")
     variant.add_argument("--format", choices=("text", "json"), default="text")
+
+    close = sub.add_parser(
+        "close", help="panel-close ladder decision for one panel"
+    )
+    close.add_argument("--case", required=True)
+    close.add_argument("--format", choices=("text", "json"), default="text")
 
     narrow = sub.add_parser(
         "narrow", help="compensate-first decision for a narrow control"
@@ -1402,6 +1862,16 @@ def main(argv=None):
                 print(json.dumps(advice, indent=2, sort_keys=True))
             else:
                 print(fmt_variant(advice), end="")
+            return 0
+
+        if args.command == "close":
+            data = load_json(args.case)
+            case = parse_close_case(data, args.case)
+            result = close_case(case)
+            if args.format == "json":
+                print(json.dumps(result, indent=2, sort_keys=True))
+            else:
+                print(fmt_close(result), end="")
             return 0
 
         if args.command == "narrow":
