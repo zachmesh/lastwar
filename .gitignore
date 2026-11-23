@@ -6,3 +6,4 @@ _tools_/state/cu_bridge.pid
 _tools_/state/cu_bridge.log
 _tools_/state/cu_mcp.log
 _tools_/state/cu_last.png
+_tools_/state/*.png
