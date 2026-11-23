@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:31:29Z (wait 0),2026-11-23T22:31:29Z,see growth/0054-waits.csv
+first frame,"base, no dialog; red dots on the Alliance button and the Help tile",2026-11-23T22:31:45Z,
+header before,"Today's points gained from Alliance Help: 660/1,000",2026-11-23T22:32:00Z,
+rows,"four rows, each 'Need help with building Lv.26 Training Base' 30/30 and 'Time reduced: 10:02:00', the owner account's own requests; the fourth cut off at the fold, not scrolled",2026-11-23T22:32:00Z,
+Help All,green; pressed once; no toast; no rows disappeared,2026-11-23T22:32:10Z,
+header after reopen,"680/1,000 (+20)",2026-11-23T22:32:35Z,rule 6: read after close and reopen
+HUD,"resources unchanged, Total Power 150,416,946; a timer icon 00:00:57 above the Alliance button, not touched",2026-11-23T22:32:50Z,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 22:13:43Z (wait 0),2026-11-23T22:13:43Z,see growth/0054-waits.csv
+labs counter,2/2 at the start and after closing the panel,2026-11-23T22:13:50Z,
+lab 1,"Food Output V (shown Lv.0), in progress: Time Left 19:15:58 at 22:13:56.6Z and 19:15:52 at 22:14:02.3Z: ends 2026-11-24T17:29:54Z",2026-11-23T22:14:02.305Z,tag text: Food Output V (panel row)
+lab 2,"Iron Output V (shown Lv.0), in progress: Time Left 1d 04:24:59 at 22:13:56.6Z and 1d 04:24:53 at 22:14:02.3Z: ends 2026-11-25T02:38:55Z",2026-11-23T22:14:02.305Z,
+buttons,"a blue Speed Up on each lab, not pressed; no Finish Now or Complete text visible",2026-11-23T22:14:02Z,the Finish Now clock was not read
+slots,slots_idle 0; slots_blocked_by_capacity 0,2026-11-23T22:14:10Z,

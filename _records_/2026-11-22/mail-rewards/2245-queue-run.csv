@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:44:58Z (wait 0),2026-11-23T22:44:58Z,see growth/0054-waits.csv
+rail,"red dots on Alliance, Event, Regular, In-app Purchases; none on Battle Report, System, Favorite; no gift icon on any category",2026-11-23T22:45:20Z,rule 3: a red dot is not a claim
+Event list,"ally train notices ('train has ...', 'train has ar...', 'train has de...'), a Mega Express mail, Returned Items; only the newest (5h old) unread; no gift icon; Claim All blue, not pressed",2026-11-23T22:45:35Z,list not scrolled
+Train arrival reward,no mail with that title in the visible list,2026-11-23T22:45:35Z,no notice text to read
+System,"six read President Mail notices in language variants and the Warzone Duel one, 18h old, no gift icon",2026-11-23T22:45:50Z,Claim All not pressed
+Alliance,"three unread New Alliance Marker mails (9h old), then read Daily and Weekly Donation Rankings and a marker mail; no gift icon",2026-11-23T22:46:00Z,Claim All not pressed
+HUD,"food 674.4M, iron 1.0G, coin 272.5M, diamonds 11,113, energy 48, Total Power 150,416,946 unchanged",2026-11-23T22:46:15Z,no TIPS popup at Mail close

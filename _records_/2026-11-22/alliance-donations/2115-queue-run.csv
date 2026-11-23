@@ -1,0 +1,16 @@
+item,value,read_utc,note
+wait,"requested 21:15:36Z idle 1513 s, previous run last click 20:50:23.630Z, granted 21:15:36Z, 0.0 minutes",2026-11-23T21:15:36Z,see growth/0054-waits.csv
+entry count,"10/30, coin Donate green at 1000, no timer, node Quick Construction 9/10; the dialog first on screen at the 21:16:03.393Z frame, read as 10/30 from the 21:16:11.083Z frame",2026-11-23T21:16:11.083Z,"BEFORE any Donate tap; registered prediction 10: matched, no flag"
+tap 1,21:16:15.280Z: count 9/30 (Crit x2 animation),2026-11-23T21:16:17.741Z,
+tap 2,21:16:21.834Z: 8/30 (Crit x3),2026-11-23T21:16:23.044Z,
+tap 3,21:16:27.404Z: 7/30,2026-11-23T21:16:36.926Z,
+tap 4,"21:16:42.071Z: count hidden by the animation; coin 23,044,977",2026-11-23T21:16:44.164Z,"coin before the pass 23,048,977"
+tap 5,"21:16:51.749Z: count hidden; coin 23,043,977",2026-11-23T21:16:52.947Z,
+tap 6,"21:16:59.978Z: count hidden; coin 23,042,977",2026-11-23T21:17:01.192Z,
+tap 7,"21:17:07.384Z: 3/30 partly covered; coin 23,041,977",2026-11-23T21:17:08.570Z,
+tap 8,21:17:13.814Z: 2/30,2026-11-23T21:17:15.036Z,
+tap 9,"21:17:21.177Z: 1/30, button green (the live count before the last tap)",2026-11-23T21:17:22.382Z,
+tap 10 LAST,21:17:28.150Z: the coin Donate went grey with a timer,2026-11-23T21:17:29.350Z,"diamond Donate never pressed; 10,000 coins"
+first timer,00:00:19 read at 21:17:38.083Z (ends 21:17:57.08Z); 00:00:03 read at 21:17:54.525Z (ends 21:17:57.5Z),2026-11-23T21:17:38.083Z,grid 21:17:57.397Z: within 0.4 s and 0.1 s
+witness,"Tech EXP bar 4.5M/8.0M; HUD badge item 113.7K; Donation Reward 50 Tech EXP and 50 medals each; after closing the dialog Tech Donation Today read 7,450, up from 6,350",2026-11-23T21:18:25Z,a rise corroborates
+stop,the run ended at max_cost at step 21 after the dialog X and the Techs X (cost 0.291 USD); the Alliance screen was left open for a cleanup run,2026-11-23T21:18:26Z,no final message

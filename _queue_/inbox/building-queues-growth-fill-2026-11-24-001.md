@@ -8,7 +8,7 @@ created_at: 2026-11-23T07:55:27Z
 expires_at: 2026-11-24T00:40:00Z
 planned_for:
 not_before: 2026-11-24T00:25:00Z
-window: growth read then fill idle slots window 11-24T09:10Z
+window: growth read then fill idle slots, window 2026-11-24T00:25Z to 00:40Z
 est_minutes: 10
 serves: fill idle slot
 chain_id: growth-fill-2026-11-24

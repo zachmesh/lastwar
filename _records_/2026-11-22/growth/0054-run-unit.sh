@@ -10,20 +10,20 @@ killall -9 UserNotificationCenter NotificationCenter 2>/dev/null
 F=$(lsappinfo info -only name "$(lsappinfo front)" | head -1)
 case "$F" in *LastWar*) ;; *) echo "FRONT NOT LASTWAR: $F"; exit 3;; esac
 OUT=$(python3 _tools_/cu_bridge.py start --app com.lastwar.ios --model claude-gateway/claude-sonnet-5-5 --max-steps "$STEPS" --max-cost 0.5 --task "$(cat "$TASK")")
-RID=$(echo "$OUT" | python3 -c "import sys,json; print(json.JSONDecoder().raw_decode(sys.stdin.read())[0]['run_id'])")
+RID=$(echo "$OUT" | python3 -c "import sys,json; print(json.JSONDecoder().raw_decode((lambda t: t[t.index('{'):])(sys.stdin.read()))[0]['run_id'])")
 echo "claimed $CLAIMED run $RID"
 for i in $(seq 1 40); do
   sleep 8
   F=$(lsappinfo info -only name "$(lsappinfo front)" | head -1 | cut -d: -f1)
   S=$(python3 _tools_/cu_bridge.py status 2>&1 | python3 -c "
 import sys,json
-d,_=json.JSONDecoder().raw_decode(sys.stdin.read()); print(d['state'],d['steps'])" 2>/dev/null)
+d,_=json.JSONDecoder().raw_decode((lambda t: t[t.index('{'):])(sys.stdin.read())); print(d['state'],d['steps'])" 2>/dev/null)
   case "$F" in *LastWar*) ;; *) echo "FOREGROUND SWITCH to $F at $(date -u +%T)"; python3 _tools_/cu_bridge.py control --run-id "$RID" --command stop 2>&1 | head -2; exit 4;; esac
   case "$S" in finished*|failed*|stopped*) break;; esac
 done
 python3 _tools_/cu_bridge.py status 2>&1 | python3 -c "
 import sys,json
-d,_=json.JSONDecoder().raw_decode(sys.stdin.read())
+d,_=json.JSONDecoder().raw_decode((lambda t: t[t.index('{'):])(sys.stdin.read()))
 r=d.get('result') or {}
 print('STATE',d['state'],'steps',d['steps'],'actions',r.get('actions'),'cost',r.get('usage',{}).get('costUsd'))
 print(r.get('finalMessage'))

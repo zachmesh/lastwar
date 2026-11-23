@@ -5,7 +5,7 @@ activity: building-queues
 segment: 1
 priority: 1
 created_at: 2026-11-23T16:00:26Z
-expires_at: 2026-11-23T23:50:00Z
+expires_at: 2026-11-24T01:21:00Z
 planned_for:
 not_before: 2026-11-23T23:20:15Z
 window: oil well level 20 to 21 builder b1 chain complete the previous level and start this one

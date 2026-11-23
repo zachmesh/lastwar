@@ -1,7 +1,7 @@
 ---
 title: Food plan for the long line
 created: 2026-11-23T13:11:00Z
-modified: 2026-11-23T16:02:00Z
+modified: 2026-11-23T22:38:00Z
 version: 2.0.0
 level: L3
 description: Where the food comes from for Base Expansion, the Oil Well, HQ 31 and the first three ground levels, and what waits
@@ -20,6 +20,8 @@ Food 674.9K an hour (16.2M a day), iron 622.7K (14.9M a day), coin 441.9K (10.6M
 ## Needs to the HQ 31 start [D, panels and sheet]
 
 HQ 31 1.30G, Base Expansion path about 556M (research cost factor 0.90 [M]), Oil Well 0 to 175M (the Lv.21 panel shows iron only; the sheet adds food for later levels), three ground levels 978M: about 3.0G. Coin about 2.5G (path about 1.65G, HQ 31 433.5M, grounds 262M, well 116M to 137M); iron about 2.8G, covered by the typed iron stock.
+
+If the ground levels cost no food (H75 conflicts), the need is about 1.9G: output alone reaches it by 2027-02-09, typed and plain chests by 2026-12-16 (22 days), so oil, not food, binds.
 
 ## Food date: when held food plus supply meets 3.0G
 

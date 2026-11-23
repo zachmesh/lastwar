@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 22:17:21Z (wait 0),2026-11-23T22:17:21Z,see growth/0054-waits.csv
+survivor bubble,beside the avatar: '43min' (the hero-portrait bubble read 86min at 21:35Z): unchanged after the tap,2026-11-23T22:17:40Z,a new survivor about 23:00Z
+gate,"one white '?' bubble at about (146,649) beside a vehicle icon, a small figure below it at about (143,687); no other '?' bubble on the base",2026-11-23T22:17:45Z,
+tap,"one tap on the figure at (144,686): a speech bubble at the left edge, 'This is my welcome...' (the rest cut off); no survivor card, name, role, level or button",2026-11-23T22:17:55Z,tag text [G]
+after,the speech bubble and the '?' bubble gone; only the vehicle icon left,2026-11-23T22:18:00Z,processed but unverified: nobody counted as recruited
+HUD,"unchanged: Total Power 150,416,946, diamonds 11,113, builders 4/4, lab 2/2",2026-11-23T22:18:05Z,

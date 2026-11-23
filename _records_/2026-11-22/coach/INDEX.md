@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T20:29:00Z
+modified: 2026-11-23T21:29:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,7 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [1327-pass-002-and-wait-cost.md](1327-pass-002-and-wait-cost.md) - donation pass 002 scored; the measured cost of the 300 s wait for the owner's D-066 note.
 - [1206-capacity-release-curve.md](1206-capacity-release-curve.md) - what a Drill Ground level releases: a step or a ramp, and the startable idle minutes.
 - [1012-builders-time-correction.md](1012-builders-time-correction.md) - the builders free tonight at 23:20Z, my files corrected, window margins of every trigger.
 - [0953-refill-test-score.md](0953-refill-test-score.md) - the refill test scored: H20 holds; the donations count by policy 2532.

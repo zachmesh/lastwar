@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:12:33Z (wait 0),2026-11-23T22:12:33Z,see growth/0054-waits.csv
+builders counter,"4/4 on the first frame, after closing the panel and on the last frame",2026-11-23T22:12:41Z,
+builder 1,"Training Base to Lv.25, Time Left 01:07:19 at 22:12:53.5Z: ends 23:20:12.5Z",2026-11-23T22:12:53.528Z,tag text: Training Base (panel row)
+builder 2,"Training Base to Lv.25, 01:07:23: ends 23:20:16.5Z",2026-11-23T22:12:53.528Z,
+builder 3,"Training Base to Lv.25, 01:07:26: ends 23:20:19.5Z",2026-11-23T22:12:53.528Z,
+builder 4,"Training Base to Lv.25, 01:07:30: ends 23:20:23.5Z",2026-11-23T22:12:53.528Z,the first frame read 6 s higher: counting down
+idle,slots_idle 0; slots_blocked_by_capacity 0,2026-11-23T22:13:00Z,no capacity blocker on builders

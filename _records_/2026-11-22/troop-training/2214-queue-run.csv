@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 22:14:45Z (wait 0),2026-11-23T22:14:45Z,see growth/0054-waits.csv
+camera,the first frame was off the brief; WORLD then BASE re-centred it and the tents matched,2026-11-23T22:15:10Z,
+Barracks Lv.24,"pistol: toast 'Drill Ground Full: Unable to add more units.', no panel; idle, blocked",2026-11-23T22:15:40Z,tag text Barracks Lv.24
+Barracks Lv.20,"pistol: the same toast, no panel; idle, blocked",2026-11-23T22:15:50Z,tag text Barracks Lv.20
+Barracks Lv.27,"pistol: the same toast, no panel (the finished batch of 726 still waits; no collect retry made)",2026-11-23T22:16:03.837Z,tag text Barracks Lv.27
+Barracks Lv.30,"pistol opened TRAIN UNITS: Lv.10 batch of 793, 'Training in progress 13:01:56' at 22:16:28.3Z: ends 2026-11-24T11:18:24Z; Power 1647, Morale 750.0, Squad Load Capacity 2200, Unit HP 4779.05, Attack 38.87, Defense 8.04; Speed Up not pressed",2026-11-23T22:16:28.277Z,tag text Barracks Lv.30
+slots,"slots_idle 3 (Lv.24, Lv.20, Lv.27); slots_blocked_by_capacity 3; capacity_blocker 'Drill Ground Full'",2026-11-23T22:16:30Z,blocked by capacity: Drill Ground Full
+HUD,"food 674.4M, iron 1.0G, coin 27.2M, Total Power 150,416,946 unchanged",2026-11-23T22:16:50Z,

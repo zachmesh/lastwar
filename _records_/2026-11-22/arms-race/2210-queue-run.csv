@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:10:18Z (wait 0),2026-11-23T22:10:18Z,see growth/0054-waits.csv
+phase,"Hero Advancement, contest segment Lv.29-30, timer 03:49:14 (ends about 02:00Z)",2026-11-23T22:10:45Z,previous phase Drone Boost 18:05Z
+owner points,0,2026-11-23T22:10:45Z,"a ranking row reading rank 10 with 94,900 points is another row, not the owner's"
+point chests,"2,000 points (2,360 rubies), 4,000 (4,800 rubies), 12,000 (11,800 rubies): all locked, no bounce, no red dot",2026-11-23T22:10:45Z,"the prices are on the chests, never pressed"
+cumulative chest,"top left 9 of 18, not full, not bouncing",2026-11-23T22:10:45Z,
+scoring rows,"1 Hero Recruitment +400 (Go); Use at least 2,000 Hero EXP at a time +1 (Go); Buy Packs containing Diamonds +30 (Go)",2026-11-23T22:10:50Z,no Go pressed; no safe free path confirmed; no scrolling
+HUD,"food 674.4M, iron 1.0G, coin 27.2M, oil 664.1K, energy 41, Total Power 150,416,946",2026-11-23T22:11:15Z,
