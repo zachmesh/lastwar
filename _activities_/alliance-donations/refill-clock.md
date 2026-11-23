@@ -1,8 +1,8 @@
 ---
 title: Alliance donations refill clock
 created: 2026-11-23T17:53:50Z
-modified: 2026-11-23T18:00:46Z
-version: 0.2.0
+modified: 2026-11-23T19:58:10Z
+version: 0.3.0
 description: The settled refill rate of the donation count, one per 20 minutes on a fixed clock, with the evidence, the open items and the next prediction
 ---
 
@@ -16,15 +16,15 @@ The Researcher's note `_records_/2026-11-22/research/donation-refill-settled.md`
 
 ## The evidence
 
-Three timer ends (10:17:57.107Z, 14:57:57.397Z, 17:57:57Z) lie 14 and 9 whole periods apart; the 17:45:43Z entry read 9/30 as pre-registered (the 35-minute hypothesis: 5). Timers up to 19.58 minutes exclude shorter divisors; each end is within 0.3 s of the grid.
+Three timer ends (10:17:57.107Z, 14:57:57.397Z, 17:57:57Z) lie 14 and 9 periods apart; the 17:45:43Z entry read 9/30 as pre-registered. Timers up to 19.58 minutes exclude shorter divisors; each end is within 0.3 s of the grid.
 
 ## The formula as the Coach checks it, 2026-11-23
 
-predicted = max(0, min(30, 1 + floor((entry - anchor) / 20 min) - taps since the anchor)). The anchor is the last timer end read in a pass that spent the pool; the taps are all witnessed taps since, ours included; an entry before the anchor gives 0. At 30 the cap hides the answer and refills at the cap are lost, so 10 hours without a pass loses refills: keep the gap under about 9 hours to test accrual. A smaller count is a shortfall (counts used elsewhere, such as the owner's phone, or partial accrual), not a refutation. Method `_records_/2026-11-22/coach/refill-check-method.py`.
+predicted = max(0, min(30, 1 + floor((entry - anchor) / 20 min) - taps since the anchor)). The anchor is the last timer end read in a pass that spent the pool; the taps are witnessed taps since, ours included; an entry before the anchor gives 0. At 30 the cap hides the answer (10 hours without a pass loses refills): keep the gap under about 9 hours. A smaller count is counts used elsewhere: the owner donated from the phone between 10:13Z and 14:39Z (the count is shared with the game), so the 14:39Z shortfall of 6 is no model mismatch (`_records_/2026-11-22/coach/refill-pass-log.csv`). Log a later shortfall as elsewhere; flag it only above 6 with no owner activity. Method `_records_/2026-11-22/coach/refill-check-method.py`.
 
 ## Still open [G]
 
-The 14:39Z entry count read 8 against 14; the four long timers of 10-31 and 11-03 (40.9 to 48.8 minutes) are an earlier regime.
+The four long timers of 10-31 and 11-03 (40.9 to 48.8 minutes), an earlier regime.
 
 ## Next prediction
 

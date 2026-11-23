@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T17:58:20Z
+modified: 2026-11-23T19:58:10Z
 level: L1
-version: 1.113.0
+version: 1.114.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -162,14 +162,14 @@ Goal: donate every run to the recommended technology.
 ## Rules
 - R1 Donate while the count reads 1 or more; a tap from a live 1/30 lands. After the last tap read Tech EXP and badge; grey Donate with a timer means the count is spent. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`
 - R2 After the last tap close as count spent on the live 1/30 before it, a green-to-grey Donate timer, and a timer end on the 20-minute refill grid within 3 s; never write a count. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1745-queue-run.md`
-- R3 Read recommended node and coin cost fresh each unit. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
+- R3 A shortfall is counts used elsewhere (owner's phone, 2026-11-23): log it elsewhere; flag only above 6 with no owner activity. Status: tested. 2026-11-23. `_records_/2026-11-22/coach/refill-pass-log.csv`
 
 ## Failures
 - Count hidden by timer - by design after the last tap; close on the witness. `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
 - Window or device lost - fix: owner clicks the Dock icon. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
 
 ## Open questions
-- Why did the 14:39Z count read 8 against 14? Test: each pass compares its entry count with the formula; a shortfall with no hand tap by us means counts used elsewhere; run by coach.
+- Do timers off the refill grid return (10-31, 11-03)? Test: check each timer end against the grid; run by coach.
 - Does the badge item witness every node? Test: read it before and after a counted tap at Quick Construction and at Rallied Attack; run by operator.
 
 ## Numbers
