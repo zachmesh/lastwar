@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T11:20:00Z
+modified: 2026-11-23T11:56:00Z
 level: L2
-version: 0.10.0
+version: 0.11.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -17,7 +17,7 @@ Updated 2026-11-23 09:25Z (Mac UTC; quote `date -u`, the gateways' labels have r
 
 ## Holder, clock, roster
 
-- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s); daily `schedule-e1887d97` (12:00Z word-budget `watch`); weekly `schedule-fee71877` (Sundays 17:00 PT strategy review). One-shots today: lab frees 11:43Z `schedule-ceb293d6` (research conversion unit by name), Secrets claim 12:50:30Z `schedule-4aef1bc1`; tomorrow 09:20Z the three Drill Ground starts (units `building-queues-growth-convert-2026-11-24-001` and `-002`): schedule a one-shot for them tonight.
+- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s); daily `schedule-e1887d97` (12:00Z word-budget `watch`); weekly `schedule-fee71877` (Sundays 17:00 PT strategy review). One-shots today: lab frees 11:43Z `schedule-ceb293d6` (research conversion unit by name), Secrets claim 12:50:30Z `schedule-4aef1bc1`; tomorrow 09:21Z `schedule-f3804b22` the three Drill Ground starts (units `building-queues-growth-convert-2026-11-24-001`, `-002`, `-003` in that order; the cu team knows the slot).
 - TEAM.yaml 0.7.2: 10 roster rows; operator is now `session-c08193d1-e6c0-489e-aa09-f812877c65ec` (09:07Z). Steer A (`session-eb024f72-e661-4a77-9303-66af95dbcfd1`) and Steer B (`session-e127662e-07ba-4385-b905-3d0e90fd1eeb`) both relay the owner; if two orders collide, tell Steer A.
 
 ## Respawn checklist (owner order: Sonnet 5.5 xhigh for every seat)
