@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-11T10:32:17Z
+modified: 2026-11-23T00:45:00Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-0934 alliance-train execution record 2026-11-10 0946 queue run (partial, checked only, both preparation signals absent, no train preparing, (905,790) is not a BASE button, (59,428) locomotive label was a mislabel; record commit 226f5c37 on records/2026-11-10)
   - source: ticker-1314 alliance-train execution record 2026-11-10 1322 queue run (partial, checked only, both preparation signals absent, no train preparing, red-badge countdown icon at the right edge is a different event; record commit d781dac9d on records/2026-11-10)
   - source: ticker-0155 alliance-train execution record 2026-11-11 0209 queue run (failed, boarding missed - plus buttons gone at platform timer 00:04:55, boarding closes about 5 minutes before departure, account not aboard, pick-order gap filed as tooling Issue #623; record commit 72b82b0e3 on records/2026-11-11)
+  - source: ticker-1352 alliance-train execution record 2026-11-22 1356 queue run (partial, checked only, no train preparing - both preparation signals absent, 10:30 slot may already have departed, duplicate window #822 present with input staying on 127196; record commit 84e1e0ab0, landed via merged records PR #821)
 ---
 
 # Alliance train
@@ -1189,3 +1190,11 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Verification - account not aboard: carriage 3's passenger list was opened (6/7): [AP3x] Dogo, [AP3x]AshenRise, [AP3x]LAMP 1, [AP3x]Janet A, [AP3x]sebfin13, [AP3x]Raze Cromwell. [AP3x]Bears Lair is not among them. The account is not aboard this train. The train departs in about 4 minutes (timer 00:03:37 at close) without this account. No Trade Contracts were spent, no dialog was opened, no other carriage was tapped for boarding. No diamonds or money spent. No login or verification demanded. No "active on a different device" dialog appeared.
 - Follow-up: Issue #623 (tooling) filed for the pick-order gap behind this miss: train units are picked by slot expiry, not by the boarding close, so a closing boarding is invisible to the queue's pick order. The issue links this record; the tool-developer owns it (worktree work/train-boarding-close-623 already open). The next train unit (train-2026-11-11-0230, not_before 02:30) covers the next preparation. The game was left on the STATION PLATFORM screen.
 - Result stats: target board carriage 2 with 3 Trade Contracts; achieved not boarded - boarding closed before the plus tap landed; resources_gained none; points 0; costs about 5 minutes, no items spent, no contracts spent; verified yes (platform, occupancies, passenger list and missing plus buttons all read live in-unit); blocker_category a; boarded no, carriage_target 2, carriage_2_occupancy 7/7, train_rating 108350, timer_at_entry 00:05:19, timer_at_close 00:03:37, boarding_close_about 02:04:30, contracts_spent 0, device_takeovers 0.
+
+## What the 2026-11-22 1356 unit added - checked only, no train preparing, both preparation signals absent, duplicate window #822 present
+
+- Unit train-2026-11-22-1030 by ticker-1352, about 13:52 to 13:54 PT, status partial. Evidence in `_records_/2026-11-22/alliance-train/1356-queue-run.md` (commit 84e1e0ab0, landed via merged records PR #821).
+- No train preparing at check time; both preparation signals absent on a clean base view: no "Boarding closes in" banner under the resource bar, and no train icon in the left icon column. Per the preparation-only surface rule the unit closed here without panning the base edge. No Trade Contracts spent, no seat taken, no dialog opened. The next train unit (train-2026-11-22-1430) is already in the inbox for its slot.
+- Slot note: this unit's slot was 10:30 PT (expires 14:30), picked at about 13:53 PT and finished inside its window. "The preparation window is short (the banner showed 00:02:57 on first sight), so a 10:30-slot train may already have departed - or none was scheduled for this slot." The short preparation window is already in this profile (see "How to enter"); no new mechanic.
+- Duplicate window #822 present: a second LastWar window (127250, 642x919, untitled) sat unbound beside the live window (127196); input stayed on 127196 and the duplicate was not touched. Cross-reference Issue #822 (tooling: duplicate window as a dead input target) - see also the resource-collection profile's 1133 section for the same class explaining the 2026-11-11 Secret Command Post back-arrow blocker.
+- Result stats: target board carriage 2 of a preparing train with 3 Trade Contracts; achieved no train preparing at check time, nothing boarded; costs about 3 minutes; verified yes (both preparation signals read live on a clean base view); blocker_category f (missing precondition - no train in preparation).
