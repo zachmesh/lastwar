@@ -1,0 +1,7 @@
+slot,state_before,state_after,detail,utc,note
+1,returned (chest icon),idle,"SR truck Hero Escorts settled via Truck Details: iron 2.5M, bread 2.5M, gold 1.6M, 500 badge x1, blue chest x20 twice (x40), green item x1, red-gem-looking item '50' x1",2026-11-23T09:53:17Z,reward text: Intercity Trade Reward!
+2,returned (chest icon),idle,"settled with the first: iron 2.5M, bread 2.5M, gold 1.6M, 500 badge, blue chests x60, green item",2026-11-23T09:53:17Z,"seen on the confetti overlay (Squad 2), not opened separately"
+3,idle,idle,"offer read on slot 1: N 04:47:49, after one Free refresh R 04:41:52 (chest, '50' item, iron 2.0M, bread 2.0M, gold 1.2M)",2026-11-23T09:53:47Z,"Refresh then 267/1 (contract), not tapped"
+4,locked,locked,,2026-11-23T09:53:25Z,
+count,2/5,2/5,Today's Trade Count unchanged; no dispatch,2026-11-23T09:53:25Z,
+hud,"food 643.4M iron 1.0G coin 11.1M diamonds 11,136","food 648.5M iron 1.0G coin 14.4M diamonds 11,136","Total Power 150,211,809 both",2026-11-23T09:55:00Z,from the close-out run 20261123T095440Z-dad0cc

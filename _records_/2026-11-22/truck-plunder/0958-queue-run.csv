@@ -1,0 +1,6 @@
+truck,offers_seen_in_order,refreshes,dispatched,dispatch_utc,returns_about_utc,note
+1,"R 04:41:52 (50 item, 2 chests x20, document, iron 2.0M, bread 2.0M, gold 1.2M); UR 03:46:05 (2 chests x25, gold bar, document, puzzle piece, gold chest x10, blue item, iron 3.8M, bread 3.8M, gold 2.4M)","1 (Trade Contract, 267 to 266)",UR,2026-11-23T09:59:00Z,2026-11-23T13:45Z,dice button showed a contract icon and 267/1 then 266/1
+2,"SSR 03:34:26 (500 medals x3 twice, puzzle piece, 2 gold chests x10, blue item, iron 3.0M, bread 3.0M, gold 1.9M)",0 (button said Free),SSR,2026-11-23T09:59:14Z,2026-11-23T13:34Z,
+3,"R 04:29:22 (3 chests x20 incl a 50 item, iron 2.0M, bread 2.0M, gold 1.2M); SSR 04:17:55 (2 puzzle pieces, gold bar, 500 medals x3, gold chest x10, silver chest, iron 3.0M, bread 3.0M, gold 1.9M)",1 (Free),SSR,2026-11-23T09:59:42Z,2026-11-23T14:18Z,contracts stay 266
+count,"Today's Trade Count 2/5 at the start, 4/5 at the last look",,,,,"expected 5/5 after the third dispatch, not seen"
+contracts,"267 before, 266 after (1 spent; limit 30, floor 200 kept)",,,,,

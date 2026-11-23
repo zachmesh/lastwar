@@ -1,0 +1,8 @@
+shot,utc,seconds_after_tap,count,tech_exp,badge,donate_button,note
+before,2026-11-23T10:12:40.251Z,-3.96,1/30,7.8K/2.0M,82.8K,"green coin Donate 600, active","no timer; diamond Donate 2 active (not pressed); previous tap 10:06:58.225Z, 345.984 s before the test tap"
+tap,2026-11-23T10:12:44.209Z,0,1/30,,,,"one click at (496,756), no wait"
+at once,2026-11-23T10:12:47.107Z,+2.9,count text replaced by timer 00:05:10 labelled Donate,7.9K/2.0M,82.9K,"grey Donate 600, grey coin","LANDED: EXP +0.1K, badge +0.1K, timer started"
+later 1,2026-11-23T10:12:54.523Z,+10.3,timer 00:05:04,7.9K/2.0M,82.9K,grey,gold announcement banner at the top
+later 2,2026-11-23T10:13:02.908Z,+18.7,timer 00:04:54,7.9K/2.0M,hidden by the Boarding closes in pop-up,grey,
+later 3,2026-11-23T10:13:08.875Z,+24.7,timer 00:04:49,7.9K/2.0M,hidden by the pop-up,grey,"panel left open; diamond Donate still shown active, never pressed"
+verdict,,,,,,,"a tap from a live 1/30 LANDS (R1 and digest rule 5 refuted by this one trial); the count after the tap is hidden behind the cooldown timer (0/30 expected, unread)"

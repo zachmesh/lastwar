@@ -1,0 +1,42 @@
+kind,store,tab,item,currency,price,limit_over_stock,refresh,balance,note
+item,store,Campaign,Skill Chip Chest (SSR),campaign star,10000,1/1,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260","red price, above the balance; read 09:49Z"
+item,store,Campaign,Universal Exclusive Weapon Shard,campaign star,300,10/10,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260","300 stars each; 1,260 stars buy 4; whole stock 3,000 stars; read 09:49Z"
+item,store,Campaign,Upgrade Ore x1.0K,campaign star,300,10/10,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260",read 09:49Z
+item,store,Campaign,Skill Chip Chest (R),campaign star,not seen,about 30/30,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260",row 4 partly visible
+item,store,Campaign,Drone Parts,campaign star,not seen,about 30/30,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260",row 4 partly visible; 300 in the earlier read
+item,store,Campaign,Hero Recruitment Ticket,campaign star,not seen,about 30/30,00:00 every Monday (server time); about 6d 16:13 at 09:47Z,"1,260",row 4 partly visible
+item,store,Honor,Emote: Victory Fest,honor medal,100000,1/1,00:00 on the 1st of every month (server time),130.1K,last tile of the Honor store; nothing below it
+balance,store,Season,season token balance,season token,,,not shown on this tab,800,read 09:47Z
+item,store,Season,Dominance Sanctuary (Permanent),season token,1000,1/1,not shown,800,"red price, above the balance"
+item,store,Season,Doomsday Castle (Permanent),season token,1500,1/1,not shown,800,"red price, above the balance"
+item,store,Season,Glacial Palace (Permanent),season token,1500,Purchasable in S3,not shown,800,red price; text says purchasable in Season 3
+item,store,Season,Gear Blueprint (MR),season token,100,10/10,not shown,800,
+item,store,Season,God of Judgment,season token,80,5/5,not shown,800,
+item,store,Season,Throne of Blood,season token,40,5/5,not shown,800,
+item,store,Season,S1 Skill Point,season token,50,5/5,not shown,800,
+item,store,Season,S2 Skill Point,season token,50,5/5,not shown,800,
+item,store,Season,Profession Change Certificate,season token,50,2/2,not shown,800,
+item,store,Season,Profession Skill Reset Book,season token,10,5/5,not shown,800,
+item,store,Season,Sandstorm Master (Permanent),season token,,SOLD,not shown,800,
+item,store,Season,UR Hero Badge,season token,50,1/1,not shown,800,
+item,store,Alliance,Skill Chip Chest (SR),alliance coin icon,,SOLD,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Drone Combat Boost EXP Card,alliance coin icon,,SOLD,00:00 every Monday (server time),"81,010",
+item,store,Alliance,8-Hour Shield,alliance coin icon,7500,7/7,00:00 every Monday (server time),"81,010",
+item,store,Alliance,name not seen,alliance coin icon,2500,3/3,00:00 every Monday (server time),"81,010","two tiles of 3/3 at 2,500 in the same row"
+item,store,Alliance,name not seen,alliance coin icon,2500,3/3,00:00 every Monday (server time),"81,010",
+item,store,Alliance,name not seen,alliance coin icon,800,20/20,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Synthetic Resin,alliance coin icon,200,70/70,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Superalloy,alliance coin icon,50,100/100,00:00 every Monday (server time),"81,010",Superalloy at 50 alliance coin each; the Refined Iron Module assembles 4 into one
+item,store,Alliance,Resource Choice Chest (SSR),alliance coin icon,12000,50/50,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Survivor's Token,alliance coin icon,4,2500/2500,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Transfer Ticket,alliance coin icon,4000,3/3,00:00 every Monday (server time),"81,010","warzone transfer item, never to be bought"
+item,store,Alliance,1h Construction Speed-up,alliance coin icon,,SOLD,00:00 every Monday (server time),"81,010",
+item,store,Alliance,12-Hour Shield,alliance coin icon,10000,2/2,00:00 every Monday (server time),"81,010",
+item,store,Alliance,24-Hour Shield,alliance coin icon,,SOLD,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Advanced Teleporter,alliance coin icon,7500,1/1,00:00 every Monday (server time),"81,010",
+item,store,Alliance,Alliance Teleporter,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue
+item,store,Alliance,Random Teleporter,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue
+item,store,Alliance,Dielectric Ceramic,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue
+item,store,Alliance,8h Construction Speed-up,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue
+item,store,Alliance,1h Training Speed-up,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue
+item,store,Alliance,8h Training Speed-up,alliance coin icon,not seen,not seen,00:00 every Monday (server time),"81,010",stock and price not seen; the list may continue

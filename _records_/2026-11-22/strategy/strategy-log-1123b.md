@@ -1,7 +1,7 @@
 ---
 title: Strategy log continuation 2026-11-23
 created: 2026-11-23T09:19:00Z
-modified: 2026-11-23T09:39:00Z
+modified: 2026-11-23T09:47:00Z
 version: 1.0.0
 level: L3
 description: Continuation of the strategy log for 2026-11-23 after the first file reached its word limit
@@ -18,3 +18,4 @@ grounded_in:
 - 2026-11-23 black market. Policy v1 written after the BM1 read (cash 10,350, market ends near 2026-12-14T02:00Z, bottom row 500 cash each, free refresh 62 of 62). Names first, a ladder with weapon shards on top, one free refresh test, a closing sweep 36 hours before the end. Forecast rows F-041 to F-045.
 - 2026-11-23 black market order. Steer A fixed the order (read, buy ranked tiles on screen, then at most 10 free refreshes a day, label Free checked before every tap). Policy aligned; ranking is the go signal; the end-of-market rule depends on whether cash persists (H55, unread). F-047 is a per-refresh binary row.
 - 2026-11-23 season clock. SC1: the Season II icon is gone and no Season 3 date or chrono-story day is readable from the base, so Season 3 stays unknown (H30). Fixed dates for the plan: Black Market and its cash end 2026-12-14T02:00Z; the Challenge, the cash source, ends 2026-11-30T02:00Z; Duel VS day ends 2026-11-24T02:00Z. F-048 forecasts the free stage 3 claims.
+- 2026-11-23 stores. ST1 read. Red-team catch: 417 universal weapon shards were held on 11-10 and the weapon line did not move to 11-22, so the stock, not supply, is idle; no purchase before the weapon and star reads; then honor UEWS x25, honor URU x10, stars URU x6 by 2026-11-26T02:00Z; apply stock in the Thursday window. F-049 to F-056.

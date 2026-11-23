@@ -1,0 +1,7 @@
+step,utc,action,reading
+1,2026-11-23T10:14:09.808Z,"tapped the 'Boarding closes in' pop-up at (353,100)","platform screen opened (Station Platform, timer 00:06:10)"
+2,2026-11-23T10:14:25.462Z,"tapped the plus of carriage 2 at (390,521)",THANK THE CONDUCTOR dialog
+3,2026-11-23T10:14:32.697Z,plus once,quantity 2
+4,2026-11-23T10:14:37.891Z,plus once,"quantity 3, stock 266 Trade Contracts"
+5,2026-11-23T10:14:46.240Z,"Gift Contract at (508,729)",avatar shown in carriage 2; occupancy label 17/7 before and after
+6,2026-11-23T10:14:55.389Z,"back arrow at (113,927)","base; banner back at 00:00:54, departure timer 00:05:54"

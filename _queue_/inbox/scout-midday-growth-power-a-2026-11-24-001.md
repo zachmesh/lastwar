@@ -36,7 +36,7 @@ Then open Power Details: tap the HUD figure once, expand every chevron, swipe up
 
 Run `python3 _tools_/resource_map.py snap total_power=<n> power_hero=<n> power_drone=<n> power_building=<n> power_tech=<n> power_troop=<n> food=<n> iron=<n> coin=<n> --note <this unit id>`, adding a pair for any other category. K or M numbers only: write 1.1G as 1100M. The power_* keys print an unknown-resource warning but are saved.
 
-Slot A, 2026-11-24: the Lv.27 T9 x726 batch finished about 19:53Z on 2026-11-23; collect it and log the exact power change. The Lv.30 T10 x793 batch is due about 11:13Z on 2026-11-24, which slot B collects.
+Slot A, 2026-11-24: the Lv.27 T9 x726 batch finished about 19:56Z on 2026-11-23; collect it and log the exact power change. The Lv.30 T10 x793 batch is due about 11:18Z on 2026-11-24, which slot B collects.
 
 At most 8 steps and 10 minutes. Do not enqueue a chain successor.
 
