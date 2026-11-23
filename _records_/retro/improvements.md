@@ -1,8 +1,8 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-23T06:44:00Z
-version: 1.3.0
+modified: 2026-11-23T09:20:00Z
+version: 1.3.5
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
 grounded_in:
@@ -23,4 +23,11 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 
 - [Catalog 01](improvements-log/catalog-01.md) - Improvements backlog to closed-section
 - [IMP-20261123-07](improvements-log/imp-20261123-07.md) - a bridge restart leaves an orphan daemon and a stuck run that stop cannot reach.
-
+- [IMP-20261123-08](improvements-log/imp-20261123-08.md) - the only power pace is a two-point difference, so the metric moves to fixed-state readings.
+- [IMP-20261123-09](improvements-log/imp-20261123-09.md) - the snapshot log stopped on 2026-10-28 and idle slots go uncounted.
+- [IMP-20261123-10](improvements-log/imp-20261123-10.md) - owner priority P1, word budget enforcement at commit, merge and daily review, 20 oversized INDEX files split, legacy documents only shrink.
+- [IMP-20261123-11](improvements-log/imp-20261123-11.md) - power moves in whole troop units and slot reads are not collect-first.
+- [IMP-20261123-12](improvements-log/imp-20261123-12.md) - 1,767 per-run articles in activities duplicate the records; the fold updates the topic article, an audit follows, GitHub Actions stays off.
+- [IMP-20261123-13](improvements-log/imp-20261123-13.md) - owner decided to mark the 1,108 duplicate run articles superseded and move them to a new local type, P2.
+- [IMP-20261123-14](improvements-log/imp-20261123-14.md) - activity folders become playbook cards with verified rules and a weekly improvement loop owned by scribe, coach, researcher and operator, P2.
+- [IMP-20261123-15](improvements-log/imp-20261123-15.md) - playbook quality baselines and the metrics that close an improvement.

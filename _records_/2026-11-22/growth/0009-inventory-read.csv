@@ -1,0 +1,33 @@
+tab,item,count,description_text,gives,daily_limit,class
+Special,Emote Choice Chest II,1,"Open to choose 1 of 7 Emotes or 1,000 Diamonds.",an emote or 1000 diamonds,none seen,other
+Special,Mystery Supply Box,299,"Completing Secret Tasks grants Mystery Supply Boxes, said to contain Universal UR Shards and 5,000 Diamonds.",Universal UR Shards and 5000 diamonds,none seen,hero-lever
+Special,Violet's Loot,139,A gift from a named character. Use it to randomly obtain resources or upgrade materials. (A chance to get a shard or 2500 Alliance Contribution Points),random resources or materials,none seen,other
+Special,unnamed tiles (gold chest VII 1; rocket 11; orange card 1; pink crystal 4442; blue-grey crystal 213200; turkey dinner 1; star ticket 12; food sack 10; silver-gold chest 2; four cut-off chests),see item,not read,unknown,unknown,other
+Resources,"5,000 Diamonds (and 10 other diamond item sizes)",16 of 5.0K; 6 of 10.0K; 981 of 100; 15 of 200; 1 of 1.0K; 13 of 500; 2644 of 5; 2500 of 1; 294 of 10; 49 of 20; 195 of 50,"Use this item to gain Diamonds. (read for 5,000 only; other sizes from tile labels)","about 277,990 diamonds if all labels are amounts",none seen,other
+Resources,Resource Choice Chest (UR),552,"Use this item to choose one of the following: Food Chest (UR), Iron Chest (UR) or Coin Chest (UR).",coin option = Coin Chest (UR) 2.43M coin each (inferred),none seen,coin-convertible
+Resources,Resource Choice Chest (SSR),587,"Use this item to choose one of the following: Food Chest (SSR), Iron Chest (SSR) or Coin Chest (SSR).",coin option = Coin Chest (SSR) 812.16K coin each (inferred),none seen,coin-convertible
+Resources,Resource Choice Chest (SR),1523,"Use this item to choose one of the following: Food Chest (SR), Iron Chest (SR) or Coin Chest (SR).",coin option = Coin Chest (SR) 101.52K coin each (inferred),none seen,coin-convertible
+Resources,Resource Chest,20753,"Use this item to choose from one of the following: 10K Food, 10K Iron or 6K Coins.",6K coin each,none seen,coin-convertible
+Resources,Coin Chest (UR),87,"At the current Base Level, you can obtain 2.43M Coins",2.43M coin each,none seen,coin-convertible
+Resources,Coin Chest (SSR),71,"At the current Base Level, you can obtain 812.16K Coins",812.16K coin each,none seen,coin-convertible
+Resources,Coin Chest (SR),122,"At the current Base Level, you can obtain 101.52K Coins",101.52K coin each,none seen,coin-convertible
+Resources,coin items 6.0K and 600,174 and 5713,"tile labels only, description not read",6000 and 600 coin each (label),none seen,coin-convertible
+Resources,Food Chest (UR),169,"At the current Base Level, you can obtain 4.06M Food",4.06M food each,none seen,other
+Resources,"Food Chests (SSR, SR, R)","1428 reported, 7960, 60","not read (SSR count equals the iron SSR count, unverified)",food,none seen,other
+Resources,Iron Chest (UR),275,"At the current Base Level, you can obtain 4.06M Iron",4.06M iron each,none seen,other
+Resources,Iron Chest (SSR),1428,"At the current Base Level, you can obtain 1.35M Iron",1.35M iron each,none seen,other
+Resources,Iron Chest (SR),7981,"At the current Base Level, you can obtain 169.20K Iron",169.20K iron each,none seen,other
+Resources,Iron Chest (R),17,"At the current Base Level, you can obtain 16.92K Iron",16.92K iron each,none seen,other
+Resources,"bread items 50.0K, 10.0K, 1.0K","1284, 6550, 109180",tile labels only,food per label,none seen,other
+Resources,"iron items 50.0K, 10.0K, 1.0K","1247, 6338, 108052",tile labels only,iron per label,none seen,other
+Resources,oil barrels 3.0K and 6.0K,6 and 27,tile labels only,oil per label,none seen,other
+Speed-up,"general 8h, 3h, 1h, 15m, 5m, 1m","94, 266, 1196, 1, 32394, 24902",tile labels only,speed-up time,n/a,speed-up-or-stamina
+Speed-up,"construction 8h, 1h, 5m, 1m","10, 26, 28477, 19015",tile labels only,speed-up time,n/a,speed-up-or-stamina
+Speed-up,tech 8h and 1h; more rows cut off,16 and 128,tile labels only,speed-up time,n/a,speed-up-or-stamina
+Heroes,Skill Medal,9521,For hero skill upgrades.,hero skill upgrades,none seen,hero-lever
+Heroes,New Era Recruitment Ticket,not visible,"name read, description cut off",hero recruitment,none seen,other
+Heroes,"other tiles (chests II 4 and IV 2; golden puzzle chest 94; EXP book stacks 3 and 100; blue medal 3000; gear box 104; winged chests IV 25 and V 20; gold bars 126; winged plaque 182; paw card, orange and purple puzzle pieces)",see item,names not read,unknown,unknown,hero-lever
+Gear,Drone Parts,183,"This item is for upgrading Drone Hardware and can be acquired via Daily Tasks, the VIP Store, and various Packs.",drone upgrades,none seen,other
+Gear,"other tiles (blue drone tile 2.8M; red blueprint 12; lightning book 6276; cream blueprint 17; honeycomb 3; blue ingot 2600; crystal blocks 36.0K; bolt 50.2K; triangle crystal 9429; exclusive weapons Lv.40 x2, Lv.30, Lv.20 x3)",see item,names not read,unknown,unknown,hero-lever
+Gift,seven gift tiles (flower 68; teacup 44; handshake trophy 211; fist emblem 37; music note 24; rocket 2; sparkler 2),see item,names not read,gifts,none seen,other
+any,"Bond Badges, Guidebooks, Training Certificates, Black Market currency",not located,names not read on any visible tile,unknown,unknown,other

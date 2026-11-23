@@ -10,6 +10,7 @@ planned_for: 2026-11-24T00:30:00Z
 not_before: 2026-11-24T00:30:00Z
 window: pre-reset fix-up for 2026-11-23 sweep
 est_minutes: 11
+serves: upkeep
 chain_id:
 chain_seq:
 attempts: 0

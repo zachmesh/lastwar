@@ -1,8 +1,8 @@
 ---
 title: Growth snapshot protocol
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T08:05:00Z
-version: 1.1.0
+modified: 2026-11-23T08:35:00Z
+version: 1.3.0
 description: Read-only snapshot protocol for Story 868 with routes, fields, stop rules and operator units
 status: unverified
 grounded_in:
@@ -24,7 +24,7 @@ Design only, no game input. Sidecars hold the [schemas](2345-snapshot-schemas.cs
 | e Heroes | HEROES, list, detail page (known); stars, skills, weapon, gear, tier (unknown) | per hero |
 | f Previews | green arrow Upgrade panel (known) | power, cost, time |
 
-Ten core units, extensions P2, S1, S1b, C1, D1, D1b, A1 and optional O1, O2 are in the sidecar. Run T units and P2 right after the regular training unit. Refresh weekly, P1 also daily.
+Ten core units, extensions P2, S1, S1b, C1, D1, D1b, A1, BM1, SC1, ST1, ST1b and optional O1, O2 are in the sidecar. Run T units and P2 right after the regular training unit. Refresh weekly, P1 also daily.
 
 ## Stop rules
 
@@ -45,4 +45,4 @@ Ten core units, extensions P2, S1, S1b, C1, D1, D1b, A1 and optional O1, O2 are 
 
 ## Unknowns
 
-Hero sub-pages, squad panel, Hospital and research node previews have no live read. Tent taps often missed.
+Hero sub-pages, squad panel, Hospital and research node previews have no live read.

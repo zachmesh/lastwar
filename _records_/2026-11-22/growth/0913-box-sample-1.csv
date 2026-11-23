@@ -1,0 +1,11 @@
+n,utc,item,rarity,count,box_count_before,box_count_after,diamonds_hud,run_id,notes
+1,2026-11-23T08:55:43Z,"chest tile, name not shown",blue frame (SR),1,366,365,11136 before and after,20261123T085537Z-03abd4,opened before this assignment; see 0054-box-chest-read
+2,2026-11-23T09:13:42Z,"chest tile, name not shown",blue frame (SR),1,365,364,11136 (run start and end),20261123T091324Z-8428ef,alliance-gift toast on the popup was an unrelated event banner
+3,2026-11-23T09:13:58Z,"chest tile, name not shown",blue frame (SR),1,364,363,11136 (run start and end),20261123T091324Z-8428ef,
+4,2026-11-23T09:17:01Z,"chest tile, name not shown",blue frame (SR),1,363,362,11136 (run start and end),20261123T091640Z-e3a6bc,
+5,2026-11-23T09:17:27Z,Refined Iron Module (white-silver crystal blocks),green frame,20,362,361,11136 (run start and end),20261123T091640Z-e3a6bc,"first non-chest result; named by run 20261123T092205Z-e727f5 in the Gear tab (tile 36.1K, was 36.0K): Assemble 4 Refined Iron Modules to create a Superalloy; batch 1 was paused here and resumed by decision"
+6,2026-11-23T09:23:19Z,"chest x1, blue frame, read as SR choice chest",blue frame (SR),1,361,360,11136 (run start and end),20261123T092256Z-aab5c3,
+7,2026-11-23T09:23:34Z,"chest x1, blue frame, read as SR choice chest",blue frame (SR),1,360,359,11136 (run start and end),20261123T092256Z-aab5c3,
+8,2026-11-23T09:23:47Z,"chest x1, blue frame, read as SR choice chest",blue frame (SR),1,359,358,11136 (run start and end),20261123T092256Z-aab5c3,
+9,2026-11-23T09:26:15Z,"chest x1, blue frame, read as SR choice chest",blue frame (SR),1,358,357,11136 (run start and end),20261123T092603Z-8e9f57,"run restarted once after a local_input pause, see record"
+10,2026-11-23T09:26:32Z,"chest x1, blue frame, read as SR choice chest",blue frame (SR),1,357,356,11136 (run start and end),20261123T092603Z-8e9f57,Doom Walker Loot toast on screen was a game notice

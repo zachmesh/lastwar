@@ -1,0 +1,10 @@
+rank,sink,power_per_million_coin,needs_a_queue,earliest_start,basis
+1,"Drill Ground to L21 to L24, lowest first","at least 29,945 / 21,960 / 18,300 / 14,322 (capacity case, building power left out)","yes, a builder",2026-11-24T09:20Z when the builders free,"strategy coin schedule 11M, 15M, 18M, 23M; +329,400 per level at T10; guide, unverified"
+2,"Drill Ground to L25, L26, L27","8,856 / 6,450 / 5,014","yes, a builder",2026-11-24T09:20Z,guide table plus capacity case
+3,Special Forces VIII or IX level,"+15,000 per level, coin unread","yes, a lab",about 11:43Z on 2026-11-23,"measured gain, cost unread; scout R1 and A1 read the node cost"
+4,Gear levels,unread,no,any time once a preview is read,scout C1 and H2 or H3 previews
+5,Hero skills,unread,no,any time once a preview is read,scout H2 or H3 previews
+6,Training Base L26,845,"yes, a builder",owner is upgrading it by hand,"guide, unverified"
+7,Builders Hut L26,795 only if the guide's 22M coin applies,"yes, a builder",after the builders free,the 2026-11-09 panel listed iron and food only: conflict
+8,"Barracks L30, Tech Center L30, HQ L30",151 / 143 / 130,"yes, a builder",not funded; HQ 31 and Age of Oil stay off,"guide, unverified"
+9,Gear star promotion,"power unread, 93.75M to 206M coin per star",no,unfunded until a preview is read,"guides, 1-2 sources"

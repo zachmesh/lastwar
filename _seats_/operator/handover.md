@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T07:00:00Z
+modified: 2026-11-23T09:12:00Z
 level: L2
-version: 0.4.0
+version: 0.5.0
 description: The operator's live recipe - launch route, first-tap settling rule, guards, red lines, what to read instead of giant profiles, open claim times
 status: unverified
 grounded_in:
@@ -14,46 +14,25 @@ grounded_in:
 
 # Handover - operator
 
+Updated 2026-11-23 09:12Z from the outgoing operator's handover (`_records_/2026-11-22/growth/0054-operator-handover.md`, detail with commands, coordinates and the inventory map in `0054-operator-handover-detail.md`). Earlier versions are in git history.
+
 ## Holder
 
-- Seat `operator`, session `session-b718c7de-6aab-4159-b87e-41aa424237e9`. Write scope:
-  queue claimed and done, `_records_/<date>/`, `_tools_/state/`.
+- Seat `operator`; the outgoing session `session-7f6dd658-ebba-4854-9a29-e2f173975825` (started 07:03Z, respawned at 86 percent context) is replaced by a fresh top-level session recorded in `TEAM.yaml`. Only the operator holds the device token and sends game input. Write scope: queue claimed and done, `_records_/<date>/`, `_tools_/state/`. Reply to the coordinator in four lines.
 
 ## Run recipe
 
-- Pre-start, same shell: `killall -9 UserNotificationCenter NotificationCenter`, then
-  `lsappinfo front` must name LastWar.
-- If the game is not running (check `lsappinfo list`, never start a second copy):
-  `osascript -e 'tell application "LastWar" to activate'`. It reaches the front in about
-  seven seconds. Never `open_app`, never Chrome.
-- First taps after a fresh launch may be inert for a minute: wait, retry once.
-- An 8-step cap executes 7. One action per turn, no zoom. Must-execute actions go by step 7. A claim may first ask
-  for `queue.py read --record <path> --executor operator`.
-- Server time is UTC minus 2 hours. The reset is 02:00Z.
+- Per run: `queue.py token-acquire`, `claim` for a queue unit, then in one shell `killall -9 UserNotificationCenter NotificationCenter`, check `lsappinfo front` names the game, then `cu_bridge.py start --task ... --model claude-gateway/claude-sonnet-5-5 --max-steps N` (N steps means N-1 executed; the last turn is the report). One action per turn, never zoom, never Escape. The harness cost cap stops near 0.36 of the stated `--max-cost`; a step costs 0.012 to 0.015 USD.
+- Interrupts: the account dialog (Confirm once, never twice within 30 minutes); a train boarding banner with 70 seconds or more (board first); local pointer input pauses a run (stop it with `cu_bridge.py control --command stop`, relaunch, tell the coordinator the time and what else ran).
 
-## Guards
+## Hard safeguards for any Use press
 
-- Account-elsewhere dialog: the owner approved Confirm once, as a standing rule. If it
-  returns within 30 minutes of a Confirm, stop, report, pause desktop play 30 minutes, then retry.
-- A "Boarding closes in" banner with 70 seconds or more at the first frame: board first,
-  carriage 2, 3 Trade Contracts.
-- Non-UR days: dispatch SR or above trucks only.
+The Mystery Supply Box quantity defaults to its FULL count, and the Resources tab selects the 5,000-diamond tile by default. Check in a frame that the number field reads exactly 1 before Use, press Use once per run, split the check and the press into two runs, read the popup. Never open boxes or chests without an assignment. No purchase, diamond spend, speed-up or Finish Now, PvP or march, diplomacy or ally exchange.
 
-## Red lines
+## Growth rules
 
-No real-money, diamond or premium spend. No PvP, attack, rally, march, Arena or General's
-Trial. No diplomacy, no ally-exchange trade. Quick Dispatch frozen. The mid-base trophy
-bubble is never tapped. No identifier values in any file or message: write "owner
-account", "[tag]", "the owner alliance", "an ally".
+Read first (builders, labs, training), fill only idle slots under the 3x rule above the reserves, collect first before a power read, press Complete the moment a node finishes, never retry the hospital Collect (all-or-nothing), never cancel a running item. Every unit carries a `serves:` line.
 
-## Reading and records
+## Open
 
-- Never read the giant profiles. Use the digest
-  `/tmp/lw-ps-digest.md`, or grep.
-- Record bodies 350 words or fewer, rows in a sidecar. Run `stub-index --apply` for new
-  records folders.
-
-## Open times (UTC)
-
-- 4-hour UR Capture the Oil Depot due about 08:51Z: jeep, Your Tasks, Claim first.
-- Then a treasures re-read.
+Scout reads S1b and ST1 (Universal Shard counts, store balances); the next 4-hour claim about 12:51Z; the Lv.27 barracks batch about 19:56Z; a lab frees about 11:43Z; builders free 2026-11-24T09:20Z.

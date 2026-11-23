@@ -1,0 +1,15 @@
+item,exact_text,value,evidence
+soldier icon count and cap on the HUD or base,no soldier or troop icon with an x/y text on the HUD or the base,not found,run 20261123T083008Z-f82839 turn 1 base read
+soldier portrait bubbles above the right-hand tents,"tiny digits under the bubbles: about 523 under the lower one and about 110 under the upper one (read on a 6x crop of a 07:49Z frame, not confirmed)","523 and about 110, meaning unknown","frame step-0003.png of run 20261123T074925Z-33ab37, crop by the operator"
+Hospital panel Severely Wounded Units line,Severely Wounded Units 364/7999,364 of 7999,"frame step-0006.png of run 20261123T075737Z-10f416, 07:58Z, not re-read"
+"Hospital quantity selector, wounded row","one Lv.10 unit row 364 with a slider at maximum, minus, plus and number field 364",selector exists for the wounded row only,same frame
+"Hospital quantity selector, Completed troops","Completed bar 5306 and one green Collect button; no slider, minus, plus or number field","no selector, Collect is the only control",same frame and the 08:00Z Collect toast
+Hospital Collect toast,Drill Ground Full: Unable to add 5306 units.,5306 attempted at once,frame step-0001.png of run 20261123T080021Z-522249
+Hospital (i) info text,not read,unread,two reopen attempts at 08:30Z and 08:33Z gave no panel
+Drill Ground Building Details title and level,"Drill Ground, Lv.28, Building Details",Lv.28,"runs 20261123T074723Z-fdee03 (07:48Z) and 20261123T083008Z-f82839 (08:30Z), identical"
+Drill Ground Unit Count,Unit Count +9211,+9211,same two reads
+Drill Ground used over cap wording,none on the panel,no used or cap figure,same two reads
+Drill Ground officer slots,"four survivor slots, all post Officer",4 slots,same two reads
+Drill Ground panel buttons,Quick Dispatch only (not tapped),1 button,same two reads
+number of Drill Ground formations,"two separate red formations seen: the large one labelled Drill Ground Lv.28 and a second at the bottom right edge, its label unread because the WORLD button covers its spot","at least 1 confirmed, 2 formations visible",run 20261123T083008Z-f82839 turns 1 and 7
+Barracks Lv.20 versus Hospital Lv.20,upper-right tent tag read Barracks Lv.20 at 08:26Z and Hospital Lv.20 at 08:23Z in another camera view,both exist,runs 20261123T082546Z-831319 and 20261123T082236Z-f0bb84

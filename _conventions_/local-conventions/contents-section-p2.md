@@ -1,8 +1,8 @@
 ---
 title: Contents part 2
 created: 2026-11-23T09:05:48Z
-modified: 2026-11-23T09:05:48Z
-version: 0.1.0
+modified: 2026-11-23T09:18:36Z
+version: 0.2.0
 sequence: 3
 description: Ops execution records a mental-model convention for the whole repository, not only a record format -
 ---
@@ -39,3 +39,6 @@ description: Ops execution records a mental-model convention for the whole repos
 - [Held patches register](held-patches.md) — the in-repo record of tool
   patches held outside the repository, consulted by the tool-developer
   step-2 in-flight check before re-implementing an issue (issue #809).
+- [Activity playbook card](activity-playbook-card.md) — each activity INDEX is a
+  take-away card of 300 words or fewer, rules cited to records.
+- [Activity card template](activity-card-template.md) — the blank card.

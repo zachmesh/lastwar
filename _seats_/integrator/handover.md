@@ -1,9 +1,9 @@
 ---
 title: Integrator handover
 created: 2026-11-23T07:25:00Z
-modified: 2026-11-23T07:25:00Z
+modified: 2026-11-23T09:08:00Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The live state a replacement integrator starts from
 status: unverified
 grounded_in:
@@ -33,6 +33,10 @@ Updated 2026-11-23 07:25Z. Earlier versions are in git history.
   `origin/main`.
 - The owner exception: the owner's own in-game name is redacted tree-wide
   (OD-20261123-04); history is not rewritten; the repository stays public.
+
+## Owner rules (2026-11-23)
+
+The landing check `check --base origin/main` BLOCKS on exit 2: a landing is refused until the gate runs (OD-20261123-06). No GitHub Actions or `.github/workflows`, ever (OD-20261123-08). Landed so far: PRs 873, 875, 876, 877.
 
 ## Lessons
 

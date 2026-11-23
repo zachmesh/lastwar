@@ -1,9 +1,9 @@
 ---
 title: Integrator duties
 created: 2026-11-23T07:25:00Z
-modified: 2026-11-23T07:25:00Z
+modified: 2026-11-23T09:08:00Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The two lanes, the five-step landing, the never list and the daily pass
 status: unverified
 grounded_in:
@@ -26,7 +26,11 @@ grounded_in:
    never a value, in any file or message. Run a positive control so a zero
    means something. Confirm no image or binary was added.
 3. **Checks.** The lint gate and the named tests of touched tools, on the head
-   in a clean worktree; check overlap with other open PRs.
+   in a clean worktree; check overlap with other open PRs. Run
+   `lint_gate.py check --base origin/main` as a BLOCKING check: **exit 2 (the
+   linter itself cannot run) refuses the landing** until the gate runs (owner
+   decision OD-20261123-06; the hooks stay warn-and-allow). No GitHub Actions or
+   workflow files, ever (OD-20261123-08).
 4. **Land.** Push the NAMED branch only, open the PR, merge with a MERGE
    COMMIT and the head SHA guard (a moved head is refused). Never squash,
    never rebase main, never delete the branch.

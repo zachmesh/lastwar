@@ -1,9 +1,9 @@
 ---
 title: Typed-folder Adoption
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-23T09:17:00Z
 level: L2
-version: 1.3.2
+version: 1.4.0
 description: Adoption of reflection typed-folder format and constitutions, with the local type registry
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ Introducing a type registers it here in the same commit.
 | `_logs_` | append-only repository entries | reflection vocabulary |
 | `_conventions_` | convention articles, agent-maintainable | reflection vocabulary |
 | `_queue_` | task units of the play routine, in inbox, claimed and done state subfolders | local, registered 2026-10-28 |
+| `_run_notes_` | per-run notes that a dated record already holds, one instance folder per activity, each note marked superseded with a pointer to its record (owner decision OD-20261123-14) | local, registered 2026-11-23 |
 | `_tools_` | executable helpers, configuration and runtime state | local, registered 2026-11-01 |
 | `_context_` | gathered source material that grounds a topic | reflection vocabulary |
 
