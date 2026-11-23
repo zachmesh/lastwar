@@ -54,6 +54,11 @@ outside a bridge run (a bridge run needs none) is `node <computer-use checkout>/
 --seat cu-lastwar --minutes N --reason "<run id>" [--wait-free SECONDS]` and `... release --seat cu-lastwar` in an EXIT trap (exit 0
 done, 1 refused, 2 usage, 3 held but busy: release if you give up); `status` reads it, and `lock` here wraps that.
 
+OWNER-IDLE WAIT (rule D-066, CU-191): the computer-use server makes every synthetic input wait for 300 s without local input. The bridge
+passes CU_OWNER_IDLE_SECONDS through from its own environment and sets no default, so the wait applies unless the owner exports
+CU_OWNER_IDLE_SECONDS=0 (or 1 to 300) for the daemon. The MCP child reads it once at import, so a change takes effect only after
+`cu_bridge.py restart`, run between runs with no run or hold of ours live (`lock` shows it).
+
 Exit codes: 0 ok, 1 refused or failed, 2 usage or environment error.
 """
 
@@ -332,10 +337,10 @@ class McpClient:
         env.pop("NODE_PATH", None)
         env.pop("NODE_OPTIONS", None)
         env.pop("DYLD_INSERT_LIBRARIES", None)
-        # The owner has opted this Mac out of the 300 s local-input wait for
-        # runs the Last War bridge starts (CU-191/D-066). The computer-use
-        # default stays 300; a caller that wants it can set the variable.
-        env.setdefault("CU_OWNER_IDLE_SECONDS", "0")
+        # CU_OWNER_IDLE_SECONDS is passed through from this process's own environment and NEVER defaulted here: the computer-use
+        # owner-idle wait (300 s without local input before synthetic input, rule D-066, CU-191) applies until the owner decides
+        # otherwise (CU-721). To opt a Mac out for bridge runs the owner sets CU_OWNER_IDLE_SECONDS=0 in the daemon's environment
+        # (it is read once at import: restart the daemon, between runs). A tree whose run-lock does not read the variable ignores it.
         self.log = open(MCP_LOG, "a", encoding="utf-8")
         self.proc = subprocess.Popen(
             [NODE, str(SERVER), "--seat", SEAT, "--key-file", str(KEY_FILE)],
