@@ -42,6 +42,6 @@ TRAIN: never retry the Hospital Collect; it is all-or-nothing, needs at least 5,
 
 Run one growth unit at a time. Do not enqueue a chain successor.
 
-Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
+Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column. A fill that reads every slot and finds none idle closes DONE ('nothing to fill', `--stat slots_idle=0`), as policy 2532 does for donations.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

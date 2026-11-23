@@ -1,0 +1,14 @@
+utc,event,front_app,source,note
+2026-11-23T15:10:45Z,claim passes-playbook-t3-2026-11-23-001 and token,LastWar,queue.py,
+2026-11-23T15:11:00Z,run 20261123T151100Z-91131b started,LastWar,front log (1 s resolution),"base, no panel; no different-device dialog"
+2026-11-23T15:11:06.619Z,cart click (633 82) done,LastWar,run events,"attempted 15:11:06.515Z; shop opened on Official Event"
+2026-11-23T15:11:14.951Z,ONE click on Go (395 925) done,LastWar,run events,"attempted 15:11:14.843Z; no second click"
+2026-11-23T15:11:14,last LastWar sample,LastWar,front log (1 s resolution),
+2026-11-23T15:11:15,first Google Chrome sample,Google Chrome,front log (1 s resolution),"switch within 1.05 s of the click; banner on its second slide, POINTS 1000, in frame step-0002"
+2026-11-23T15:11:20.718Z,consent request class new_app rule app:not_approved,Google Chrome,run events,"what: 'use com.google.Chrome, an app this run has no approval for (frontmost)'; raised by the run's own wait action; lifetimes once, run, always"
+2026-11-23T15:11:50.714Z,consent answer approved false lifetime once answeredBy stop,Google Chrome,run events,"the operator's stop of the run, not an approval; the action was recorded as declined"
+2026-11-23T15:13:00Z,coordinator told (needs-owner),Google Chrome,session relay,
+2026-11-23T15:16:06Z,Chrome still in front (4 min 51 s),Google Chrome,hand polling,
+2026-11-23T15:17:22Z,UserNotificationCenter in front (to 15:19:02 and later),UserNotificationCenter,hand polling every 10 s,"content not looked at; no key or click sent"
+2026-11-23T15:19:24Z,"standard killall of the notification apps then mac_lastwar_front.sh, exit 0",Google Chrome then LastWar,shell,"coordinator ruling 'RUN FRONT SCRIPT'; activates the game window only; Chrome and its page untouched"
+2026-11-23T15:19:26Z,LastWar frontmost again,LastWar,lsappinfo (first check 1 s after the script),"stayed in front through the next unit"

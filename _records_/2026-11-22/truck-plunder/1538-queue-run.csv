@@ -1,0 +1,10 @@
+item,utc,value,note
+trade screen before,2026-11-23T15:38:46Z,"Today's Trade Count 5/5; 'No more dispatches available'; slots 1 to 3 returned trucks (blue chest bubbles), slot 4 locked","entry by the left-column icon (107,580), Your Truck tab at once; no contract count shown"
+settle tap,2026-11-23T15:38:48.874Z,"one tap on slot 1 (298,370) opened Truck Details","CONGRATULATIONS panel; all three slots cleared afterwards"
+truck 1 rarity,2026-11-23T15:38:55Z,"UR, five Lv.150 Hero Escorts, Squad 3",
+truck 1 reward panel,2026-11-23T15:38:55Z,"iron 2.2M, food 2.2M, coin 1.4M, 500-badge UR shard x3, 5m speed-up tiles x2, x2, x4, x2, one chest, one gold bar","no Claim button on the screen; none pressed; the panel did not close by tapping empty space; left by the back arrow (113,930)"
+trucks 2 and 3,,"settled in the same tap, rarity and cargo not read",
+HUD before,2026-11-23T15:38:37Z,"food 655.1M, iron 1.0G, coin 13.4M, oil 650.7K, diamonds 11,113, Total Power 150,416,946",
+HUD after,2026-11-23T15:39:44Z,"food 662.7M, iron 1.0G, coin 18.3M, oil 650.7K, diamonds 11,113, Total Power 150,416,946","food +7.6M, coin +4.9M across the three trucks (iron too coarse to read); diamonds unchanged"
+trade screen after,2026-11-23T15:39:32Z,"count 5/5; slots 1 to 3 empty with +; slot 4 locked; Recover without a red dot; Others' Trucks badge 2","frame step-0008"
+dispatch,,"none: 'No more dispatches available'","no refresh, no Mega Mode, no contract spent (count not shown, floor 200 untouched)"

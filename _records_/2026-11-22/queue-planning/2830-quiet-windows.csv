@@ -1,0 +1,5 @@
+id,type,start_utc,end_utc,recurrence,who,status,approved_by,note
+QW1,quiet-window,2026-11-23T16:10:00Z,2026-11-23T16:35:00Z,once,cu team (the operator claims nothing inside),provisional,"Steer A, provisional until the owner answers the cu coordinator",cu team gate needs 25 continuous minutes; the cu team may take the device token
+QW2,quiet-window,2026-11-23T17:10:00Z,2026-11-23T17:25:00Z,once,cu team (the operator claims nothing inside),provisional,"Steer A, provisional until the owner answers the cu coordinator","cu team consent fix #1368, 15 minutes"
+QW3,quiet-window,2026-11-23T18:35:00Z,2026-11-23T18:50:00Z,once,cu team (the operator claims nothing inside),provisional,"Steer A, provisional until the owner answers the cu coordinator","cu team desktop runs #930, about 9 minutes of app launches"
+QW4,quiet-window,2026-11-24T08:00:00Z,2026-11-24T08:25:00Z,daily from 2026-11-24,cu team (the operator claims nothing inside),provisional,"Steer A, provisional until the owner answers the cu coordinator",standing daily window proposed to the cu team

@@ -1,0 +1,10 @@
+item,utc,before,after,note
+oil counter (HUD),2026-11-23T15:34:12Z,647.0K,650.7K,"top-bar barrel icon at (231,115)"
+OIL panel owned,2026-11-23T15:34:18Z,"647,039","650,799","+3,760; no capacity figure shown, the bar is full green"
+Available Resources,2026-11-23T15:34:18Z,3760,0,"Collect pressed ONCE at 15:34:22.728Z (button at 553,501)"
+Building Acquisition,2026-11-23T15:34:18Z,1.2K/H,1.2K/H,"no building name, level or storage shown on the panel; Details never pressed"
+panel rows not pressed,2026-11-23T15:34:18Z,,,"Details, Go (The Age of Oil), Go (Radar Vehicle), Oil Special Offer Pack $19.99"
+accrued minutes,2026-11-23T15:34:22Z,,,"3,760 at 1.2K/H is about 188 minutes, so accrual began about 12:26Z [G]; Unlock Oil Well completed 11:53:01Z; first collection, no earlier collection to measure"
+Food Iron Coin HUD,2026-11-23T15:34:30Z,"655.1M / 1.0G / 13.4M","655.1M / 1.0G / 13.4M",unchanged
+Total Power,2026-11-23T15:34:12Z,"150,416,946","150,416,946",unchanged
+not read,,,,"Oil Well tag (name and level), storage, Lv.1 to 2 upgrade preview (cost food iron coin oil, time, power): the building was not located"

@@ -1,0 +1,13 @@
+forecast_id,lever,evidence_source,g_flag,low,point,high,actual_used,in_range,error_pct,status,note
+F-001,materials,G,G,1,5,20,0,0,-100.0,closed,
+F-005,research,S,-,4000,8000,12000,3900,0,-51.2,closed,
+F-089,plunder,S,G,400000,1200000,2200000,918700.0,1,-23.4,provisional,"fight 1 607.5K + fight 2 311.2K = 918.7K; two more fights at the record 607.5K would total 2.13M, still under the 2.2M high"
+F-091,plunder,G,G,1,3,6,12,0,300.0,provisional,"fight 1 9 + fight 2 3 shards, at least 12; above the high 6, it can only rise"
+F-092,plunder,G,G,20,60,110,0,0,-100.0,closed (2 fights),0 on fight 1 and 0 on fight 2
+F-102,research,M,-,2.9,3.1,4.3,3.678,1,18.6,closed,clean M; the 5.02 first read included speed-ups
+F-104,research,D,-,1.5,1.8,2.6,1.53,1,-15.0,closed,"131,900 s at M 3.678, no speed-up"
+F-111,research,D,-,36,44,62,36.6,1,-16.8,closed,"started timer 131,879 s"
+F-129,research,M,-,48,51,58,52.97,1,3.9,provisional,"preview read 14:10Z, 190,680 s; confirm at the start"
+F-135,plunder,M,G,400000,950000,1600000,492500.0,1,-48.2,closed on fight 2,fight 2 is the first out-of-sample value
+F-136,plunder,M,G,250000,600000,1000000,311200.0,1,-48.1,closed on fight 2,same
+F-137,plunder,M,G,4,9,18,3,0,-66.7,closed on fight 2,fight 2 paid 3 shards; the range was written after fight 1

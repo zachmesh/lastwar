@@ -22,3 +22,8 @@ Ginkgo Tree,Lv.1,115,188,a decoration
 Builders Hut,not found,,,still unlocated
 Gold Mine,Lv.28,200,610,"the (200,610) 'empty ground' spot is this building: close menus at (400,640) instead"
 Tech Center,at least Lv.30,,,"HQ 31 prerequisite 'Lv.30 Any Tech Center' met (green check); building unlocated, exact level unread"
+Smelter,Lv.26,330,250,"orange dome structure, top left of the fresh frame; read 2026-11-23T15:41:51Z, run b841fc"
+Iron Mine,Lv.27,215,472,"dark pump-like structure, left side; read 2026-11-23T15:42:08Z; the camera drifts after selections"
+Material Workshop,Lv.20,152,182,"blue and brown group, top left; read 2026-11-23T15:42:30Z"
+Secret Command Post,Lv.1,,,"outpost in the far-left corner after pan 3 (about 130,775 on that frame); read 2026-11-23T15:49:58Z, run c7387c"
+Oil Well,Lv.20,1090,340,"north-east wall beside grey tanks, off-screen right of the fresh frame (derived from two pans: drag 400 580 to 150 830, then 660 470 to 390 620; tap about 572 740 on the second frame); preview Lv.20 to 21 costs iron 8.5M, time 19:50:38 original and 09:20:18 effective; read 2026-11-23T15:54:02Z, run 884a03"

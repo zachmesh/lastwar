@@ -1,0 +1,9 @@
+window,slot_type,slot_minutes,raw_idle,in_quiet_windows,adjusted_idle,adjusted_share
+24h,builders,5760,2910,0,2910,50.5%
+24h,labs,2880,52,0,52,1.8%
+24h,training,4320,1433,0,1433,33.2%
+24h,ALL,12960,4395,0,4395,33.9%
+6h,builders,1440,0,0,0,0.0%
+6h,labs,720,52,0,52,7.3%
+6h,training,1080,360,0,360,33.3%
+6h,ALL,3240,412,0,412,12.7%

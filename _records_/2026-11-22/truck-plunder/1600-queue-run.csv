@@ -1,0 +1,20 @@
+item,utc,value,note
+hospital before,2026-11-23T16:00:08Z,"Severely Wounded Units 364/7999; Completed 5,306; free room 2,329","tag Hospital Lv.25; guard met; Collect never pressed"
+plunder count before,2026-11-23T16:01:09Z,2/4,"scan at about 16:01Z, one look, no refresh"
+card 1 (taken),2026-11-23T16:01:54Z,"SSR Lv.30; guard 22.2M; arrives 02:02:34; 500-badge shards x3 in slots 2 and 3 (6, left half); slot 1 purple chest; 4 and 6 puzzle pieces; 5 red 100 item; 7 iron 3.0M; 8 food 3.0M","reopened before the fight; the most shards among passing cards"
+card 2 (failed),2026-11-23T16:01:24Z,"UR Lv.30; guard 13.4M; arrives 00:25:51; 500-badge shards x3 in slots 1, 3 and 4 (9)","arrival under 30 minutes"
+card 3 (passed),2026-11-23T16:01:35Z,"SSR Lv.30; guard 12.8M; arrives 01:04:39; 500-badge x3 in slot 3 (3, left half)","fewer shards than card 1"
+card 4 (passed),2026-11-23T16:01:47Z,"UR Lv.29; guard 17.5M; arrives 02:33:30; 500-badge x3 in slot 3 (3, left half)","fewer shards than card 1"
+preparation,2026-11-23T16:02:01.884Z,"Squad 1 25.61M against 22.29M","Quick Plunder click; Battle had no price"
+battle,2026-11-23T16:02:09.341Z,Battle pressed once,"no second fight"
+loot iron,2026-11-23T16:02:10Z,761.5K,"25.4 percent of the 3.0M iron on the card"
+loot food,2026-11-23T16:02:10Z,761.5K,"25.4 percent of the 3.0M food (slot 8 figure cut off on the card)"
+loot coin,2026-11-23T16:02:10Z,486.2K,"no coin slot on the card, share not computable"
+loot shards 500-badge,2026-11-23T16:02:10Z,0,"0 of 6 offered (two x3 stacks in slots 2 and 3, left half)"
+loot other,2026-11-23T16:02:10Z,"purple chest x1; puzzle piece x1; Extra puzzle piece x1","slot 1 chest and both puzzle pieces paid"
+reclaimed,2026-11-23T16:02:10Z,"red 100 item x1 marked Reclaimed","note on screen: goods reclaimed by the truck owner cannot be acquired; not counted as won"
+result,2026-11-23T16:02:10Z,Mission Completed,"damage taken per hero 2.6M, 5.0M, 1.1M, 784.7K, 880.1K (DMG Taken tab, read by the model)"
+count after,2026-11-23T16:02:31Z,3/4,
+hospital after,2026-11-23T16:03:41Z,"Severely Wounded Units 364/7999; Completed 5,306; free room 2,329","unchanged: 0 troops wounded"
+Total Power,2026-11-23T16:03:28Z,"150,416,946 before and after",
+comparison,,"fight 1 stacks in slots 1, 5, 6, 7 paid shard x9; fight 2 stacks in slots 2 and 3 paid x3 of 6; fight 3 stacks in slots 2 and 3 paid 0 of 6","shard payout is not decided by the half alone; three fights"

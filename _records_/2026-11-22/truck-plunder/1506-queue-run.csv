@@ -1,0 +1,8 @@
+card,read_utc,rarity,level,guard,arrives_in,cargo_row,shard_slots,passed,reason
+1,2026-11-23T15:06:05Z,UR gold,29,22.9M,03:06:49,"truck item, puzzle piece, 100-badge shard, iron 2.3M, food 2.3M, coin 1.4M, two blocked slots",none at 500 badge (one 100-badge in slot 3),no,no 500-badge UR shard stack
+2,2026-11-23T15:06:16Z,UR gold,30,18.9M,00:53:47,"blue chest x25, gold chest x10, 500-badge shard x3, 500-badge shard x3, puzzle piece, truck item, purple item, iron 3.8M","500-badge x3 in slots 3 and 4 (left half)",no,shards only in the left half; guard and arrival pass; same truck as the 14:29Z read
+3,2026-11-23T15:06:25Z,SSR purple,26,8.3M,00:02:11,"gold chest x10, blue chest x25, gold chest x10, truck item, iron 1.9M, food 1.9M, coin 1.2M, one blocked slot",none,no,arrival under 30 minutes; no shards
+4,2026-11-23T15:06:33Z,SSR purple,30,25.5M,00:05:24,"three 100-badge shards (slots 1 to 3), puzzle piece, truck item, gold chest x10, iron 3.0M, food 3.0M",none at 500 badge,no,guard above 24.96M; arrival under 30 minutes; no 500-badge shard
+skipped,2026-11-23T15:06:03Z,UR gold train,,131.0M,,,,no,long gold train guard 131.0M; the other trucks on the list were white, green or cyan (below SSR)
+hospital,2026-11-23T15:04:43Z,Hospital Lv.25,,,,"Severely Wounded Units 364/7999, Completed 5306, free room 2,329",,guard met,"read before the scan; Collect, Heal and Speed Up not pressed"
+count,2026-11-23T15:06:03Z,Your Plunder Count Today,,,,1/4,,,unchanged; no fight made

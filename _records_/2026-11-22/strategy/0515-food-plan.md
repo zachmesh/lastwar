@@ -1,7 +1,7 @@
 ---
 title: Food plan for the long line
 created: 2026-11-23T13:11:00Z
-modified: 2026-11-23T14:30:00Z
+modified: 2026-11-23T16:02:00Z
 version: 2.0.0
 level: L3
 description: Where the food comes from for Base Expansion, the Oil Well, HQ 31 and the first three ground levels, and what waits
@@ -19,7 +19,7 @@ Food 674.9K an hour (16.2M a day), iron 622.7K (14.9M a day), coin 441.9K (10.6M
 
 ## Needs to the HQ 31 start [D, panels and sheet]
 
-HQ 31 1.30G, Base Expansion path about 556M (research cost factor 0.90 [M]), Oil Well 181M to 213M, three ground levels 978M: about 3.0G. Coin about 2.5G (path about 1.65G, HQ 31 433.5M, grounds 262M, well 116M to 137M); iron about 2.8G, covered by the typed iron stock.
+HQ 31 1.30G, Base Expansion path about 556M (research cost factor 0.90 [M]), Oil Well 0 to 175M (the Lv.21 panel shows iron only; the sheet adds food for later levels), three ground levels 978M: about 3.0G. Coin about 2.5G (path about 1.65G, HQ 31 433.5M, grounds 262M, well 116M to 137M); iron about 2.8G, covered by the typed iron stock.
 
 ## Food date: when held food plus supply meets 3.0G
 
@@ -42,7 +42,7 @@ Output 10.6M a day gives 0.64G in 60 days against 2.5G: the chests (fixed 273.7M
 2. Typed Food Chests UR; SSR and SR Food Chests if they exist (F-071); plain chests as food (208M).
 3. Choice chests as food (UR 4.06M, 67 percent more than as coin).
 4. Harvest bubbles (the 1330 Collect gave 0.7M food), alliance help; Food Output V adds 2.5 percent.
-5. Truck plunder: one fight paid 0.95M food and iron and 0.6M coin with no wounds; at 3 fights a day about 2.9M food, which moves the typed-and-plain date from 2027-02-23 to about 2027-02-07 (decision 04).
+5. Truck plunder: two fights paid 0.95M and 0.49M food and iron (coin 0.6M and 0.3M) with no wounds; at 3 fights a day about 2.2M food, which moves the typed-and-plain date from 2027-02-23 to about 2027-02-13 (decision 04).
 
 ## Rules
 

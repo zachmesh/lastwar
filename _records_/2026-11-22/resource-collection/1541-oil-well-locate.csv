@@ -1,0 +1,13 @@
+step,utc,candidate,position_on_frame,tag_read,result
+2,2026-11-23T15:41:39Z,grey fuel tanks or barrels (bottom of the first frame),"(440,800)","none","no selection tag: decoration"
+3,2026-11-23T15:41:45Z,the same tanks,"(430,797)","none","no selection tag"
+4,2026-11-23T15:41:51Z,orange dome structure (top left),"(330,250)",Smelter Lv.26,not the well
+5,2026-11-23T15:42:08Z,dark pump-like structure (left side),"(215,472)",Iron Mine Lv.27,not the well
+6,2026-11-23T15:42:17Z,flame structure (left),"(172,580)",Gold Mine Lv.28,not the well (matches the tag index)
+7,2026-11-23T15:42:30Z,blue and brown structure (top left),"(152,182)",Material Workshop Lv.20,not the well
+8,2026-11-23T15:42:40Z,same group,"(207,264)",none,no change
+9,2026-11-23T15:42:53Z,pan 1 drag,"(540,780) to (290,530)",,"the view moved toward the bottom right"
+10,2026-11-23T15:43:03Z,orange building with a green drum,"(527,680)",Tavern Lv.20,not the well
+11,2026-11-23T15:43:14Z,grey tank pair (lower middle),"(335,712)",none,"no selection tag: decoration"
+12,2026-11-23T15:43:29Z,pan 2 drag,"(400,470) to (150,220)",,"the view reached the south-east edge: open snow beyond the wall"
+covered,2026-11-23T15:43:46Z,"core base (HQ, airfield, top-left industrial cluster); left mines and farmland; centre and right tents; bottom troop grounds, wall and tank yards; south-east edge",,,"NOT seen: the upper left and top of the base (both pans moved toward the bottom right)"

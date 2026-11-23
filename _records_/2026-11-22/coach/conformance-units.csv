@@ -1,11 +1,4 @@
 unit,chain_id,activity,status,finished_at,serves_tag,serves_class,plan_item,blocker,growth_chain
-harvest-2026-11-22-0203,,resource-collection,partial,2026-11-22T13:23:26Z,,untagged,,h,no
-radar-2026-11-22-0203,,radar-tasks,done,2026-11-22T13:26:25Z,,untagged,,,no
-survivors-2026-11-22-0203,,survivor-intake,partial,2026-11-22T13:49:40Z,,untagged,,e,no
-donations-2026-11-22-0203,,alliance-donations,partial,2026-11-22T13:55:19Z,,untagged,,d,no
-scout-scout-2026-11-20-016,scout-2026-11-20,perception-scout,partial,2026-11-22T14:12:43Z,,untagged,,h,no
-mail-2026-11-22-0230,,mail-rewards,done,2026-11-22T14:21:06Z,,untagged,,,no
-scout-scout-2026-11-20-017,scout-2026-11-20,perception-scout,partial,2026-11-22T16:01:25Z,,untagged,,h,no
 scout-scout-2026-11-20-018,scout-2026-11-20,perception-scout,partial,2026-11-22T16:25:08Z,,untagged,,h,no
 training-2026-11-22-0603,,troop-training,partial,2026-11-22T18:05:14Z,,untagged,,h,no
 arms-race-2026-11-22-0603,,arms-race,partial,2026-11-22T18:09:35Z,,untagged,,h,no
@@ -77,3 +70,25 @@ scout-midday-growth-snapshot-2026-11-23-007,growth-snapshot-2026-11-23,perceptio
 research-growth-convert-2026-11-23-001,growth-convert-2026-11-23,research-queue,partial,2026-11-23T12:02:13Z,capacity source: Drill Ground Expansion (lab at about 11:43Z),growth-action,P2,c,yes
 secrets-2026-11-23-0944,,secret-missions,done,2026-11-23T12:55:12Z,upkeep,upkeep,,,no
 research-age-of-oil-survey-2026-11-23-001,age-of-oil-survey-2026-11-23,research-queue,partial,2026-11-23T12:58:45Z,baseline Age of Oil research tree,read-measure,measure,c,no
+scout-midday-growth-snapshot-2026-11-23-008,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T13:02:34Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-009,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T13:17:51Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-010,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T13:21:51Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-016,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T13:25:39Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+research-age-of-oil-survey-2026-11-23-002,age-of-oil-survey-2026-11-23,research-queue,partial,2026-11-23T13:28:44Z,baseline Age of Oil research tree,read-measure,measure,c,no
+harvest-2026-11-23-0203,,resource-collection,done,2026-11-23T13:32:31Z,upkeep,upkeep,,,no
+radar-2026-11-23-0203,,radar-tasks,done,2026-11-23T13:37:20Z,upkeep,upkeep,,,no
+survivors-2026-11-23-0203,,survivor-intake,partial,2026-11-23T13:40:19Z,upkeep,upkeep,,c,no
+research-2026-11-23-0203,,research-queue,done,2026-11-23T13:42:52Z,fill idle slot (labs),growth-action,P8,,no
+training-2026-11-23-0203,,troop-training,done,2026-11-23T13:47:27Z,fill idle slot (training queues),growth-action,P8,,no
+mail-2026-11-23-0230,,mail-rewards,partial,2026-11-23T13:52:37Z,upkeep,upkeep,,a,no
+research-speedup-coin-v-2026-11-23-001,speedup-coin-v-2026-11-23,research-queue,done,2026-11-23T14:04:29Z,PL-04,other,pl-04,,no
+trucks-plunder-2026-11-23-001,plunder-2026-11-23,truck-plunder,partial,2026-11-23T14:30:58Z,PL-18,other,pl-18,c,no
+donations-playbook-t2-2026-11-23-001,playbook-t2-2026-11-23,alliance-donations,partial,2026-11-23T14:34:39Z,playbook card test T2 for OD-20261123-15,system-test,OD-15,c,no
+donations-2026-11-23-0603,,alliance-donations,done,2026-11-23T14:43:32Z,upkeep,upkeep,,,no
+harvest-2026-11-23-0603,,resource-collection,done,2026-11-23T14:48:02Z,upkeep,upkeep,,,no
+passes-2026-11-23-0257,,shop-claims,partial,2026-11-23T14:58:18Z,upkeep,upkeep,,f missing precondition (Hot Sale Packs tab and free pack not present),no
+trucks-plunder-scan-2026-11-23-001,plunder-scan-2026-11-23,truck-plunder,done,2026-11-23T15:08:45Z,PL-18,other,pl-18,,no
+trucks-plunder-scan-2026-11-23-002,plunder-scan-2026-11-23,truck-plunder,done,2026-11-23T15:27:24Z,PL-18,other,pl-18,,no
+harvest-oil-well-2026-11-23-001,oil-well-2026-11-23,resource-collection,partial,2026-11-23T15:35:59Z,PL-17,other,pl-17,f missing precondition (the Oil Well building is not located; the panel shows no tag text),no
+trucks-settle-2026-11-23-001,settle-2026-11-23,truck-plunder,done,2026-11-23T15:40:45Z,upkeep,upkeep,,,no
+trucks-plunder-scan-2026-11-23-003,plunder-scan-2026-11-23,truck-plunder,done,2026-11-23T16:04:34Z,PL-18,other,pl-18,,no

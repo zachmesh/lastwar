@@ -1,4 +1,5 @@
 step,power_gain,builder_days,power_per_builder_day,coin_M,power_per_M_coin,evidence,rank_note
+Oil Well Lv.20 to 21,4200,0.39,10794,0,0,"M record 1553: +4,200 power, iron 8.5M only, 09:20:18 effective; Lv.22 to 24 9.7K to 6.5K, Lv.26 to 30 4.0K to 1.6K by the sheet (power G)","B1 chain, one builder only"
 Training Base Lv.26 to 27,10600,2.54,4173,11.9,891,"D guide times 0.85, preview unread","first choice if the preview matches (about 2.5 days, then the builder frees)"
 Builders Hut Lv.25 to 26,17500,7.3,2397,18.7,936,"M 11-09 panel for power, coin D","second: cheapest per coin, about 7 days"
 Barracks Lv.24 to 25,19500,7.73,2523,49.3,395,"M F2 1132: coin 49.3M, iron 119.0M, effective 7d 17:35:27, training cap +10",third: 2.5K a builder-day like the Hut but 2.6 times the coin per power

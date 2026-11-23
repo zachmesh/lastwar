@@ -1,0 +1,18 @@
+item,utc,value,note
+quest-bar line,2026-11-23T15:53:18.233Z,"Upgrade Builder's Hut to Lv.26 (0/1)","first frame of run 20261123T155317Z-884a03; no longer 'Build: Oil Well (0/1)' (12:11:30Z): the well exists; the quest-bar line was not tapped"
+camera restore,2026-11-23T15:53:25Z,WORLD then BASE,
+pan 1,2026-11-23T15:53:37.923Z,"drag (400,580) to (150,830)","from the restored frame: north and north-east: HQ, airfield, Ferris wheel, golden statues, Big Ben, Eiffel tower, grey tanks on the pipeline"
+pan 2,2026-11-23T15:53:53.990Z,"drag (660,470) to (390,620)","far north-east and the east edge: pipe railing, grey tanks, the base boundary"
+tap 1,2026-11-23T15:54:01.993Z,"pumpjack at about (572,740) on the pan-2 frame",tag Oil Well Lv.20
+position,2026-11-23T15:54:02Z,"about (1090,340) on the restored fresh frame (572+520, 740-400)","off-screen right of the window, at the north-east wall beside grey tanks and just left of the Alliance button on the pan-2 frame; derived from the two drag offsets, approximate"
+tag lines,2026-11-23T15:54:02Z,none,"no storage, output or capacity line on the tag or the selection"
+preview open,2026-11-23T15:54:09.116Z,"green round up-arrow only (571,809)","blue and orange buttons not pressed"
+preview title,2026-11-23T15:54:11Z,"OIL WELL Lv.20 to 21; Hero EXP 660.0K",
+Oil Output/hr,2026-11-23T15:54:11Z,"1,200 to 1,260",
+Power,2026-11-23T15:54:11Z,"23,200 to 27,400 (+4,200)",
+Max Production Time,2026-11-23T15:54:11Z,"10:40:00 to 10:48:00","storage: matches 8h08m at Lv.1 plus 8 minutes a level (19 levels = 2h32m)"
+cost,2026-11-23T15:54:11Z,"iron 1.0G held of 8.5M needed (green check)","no coin, food or oil line"
+prerequisites,2026-11-23T15:54:11Z,"Lv.30 Headquarters (green check); Lv.1 Unlock Oil Well (green check)",
+time,2026-11-23T15:54:11Z,"Original Time 19:50:38; Upgrade button clock 09:20:18","the shorter effective time"
+Finish Now,2026-11-23T15:54:11Z,"456 diamonds","read only; never pressed"
+close,2026-11-23T15:54:17.530Z,"preview X (609,217) then a bare spot (480,330)","base at the north-east edge, no panel, nothing selected"

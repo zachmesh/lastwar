@@ -1,0 +1,8 @@
+slot_type,slots,idle_from,idle_to,uncertainty_min,basis
+builders,3,2026-11-22T06:23Z,2026-11-23T03:55Z,0,"reads show 1 of 4 busy at 06:23Z to 21:56Z, carried forward over the 6 h gap"
+builders,4,2026-11-23T03:55Z,2026-11-23T06:25Z,94,"0 of 4 busy at 03:55Z to 06:01Z, 4 of 4 from 06:48Z; start at the midpoint"
+labs,1,2026-11-23T11:42:55Z,2026-11-23T12:31Z,20,"lab 1 finished Unlock Oil Well 11:42:55Z; the other device started Food Output V between 12:12Z and 12:51Z, midpoint 12:31Z"
+labs,1,2026-11-23T13:56:35Z,2026-11-23T14:00:54Z,0,"Coin Output V Complete 13:56:35Z, Iron Output V started 14:00:54Z by the operator"
+training,1,2026-11-22T18:05Z,,0,"Lv.24 barracks idle since its batch was collected, capacity-blocked (Drill Ground Full); open"
+training,1,2026-11-22T00:00Z,2026-11-22T17:58Z,0,Lv.30 idle until requeued 17:58Z on 11-22
+training,1,2026-11-22T00:00Z,2026-11-22T09:34Z,0,Lv.27 idle until requeued 09:34Z on 11-22

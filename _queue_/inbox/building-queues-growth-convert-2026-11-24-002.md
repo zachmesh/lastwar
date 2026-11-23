@@ -36,10 +36,11 @@ HAZARD: the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a 
 
 Run 1: hammer icon. Unit 001 completes the finished upgrades first; press Complete or Collect on any still uncollected. Skip any ground already upgrading. Read coin. Inventory, Resources tab: select the plain Resource Chest (20,862 owned; the field defaults to the FULL stock). Coin now is the coin after the first two starts. M = ceil((119.0M + 10M - coin now) / 6,000). Drag the handle (about 80 chests per pixel) until the field reads M or just above, read it in a frame, and before Use check 6K times the field is at least 119.0M + 10M - coin now. If M would exceed 20,862, STOP and record. Use once and choose ONLY the 6K Coins option; if it shows anything else or a cost, stop and record. If the drag cannot reach M, say so before Use. Never Resource Choice Chests.
 
-Run 2, the starts: the next idle builder, the Lv.28 ground (119.0M coin, 144.5M iron): read its tag and preview, press Upgrade once, read the timer. Fourth builder: the Strategist's ranking; default the Builders Hut Lv.25 to 26 if the coin and the remaining fixed chests allow (read its coin line first), else idle one pass.
+Run 2, the starts: the next idle builder, the Lv.28 ground (119.0M coin, 144.5M iron): read its tag and preview, press Upgrade once, read the timer. The fourth builder is the Oil Well (unit `building-queues-oil-well-2026-11-24-001` first): three are free for the grounds; if none is idle, stop. The Strategist's B2 to B4 pick governs.
 
 Tag text: write each building-panel number's tag text beside it (name and level above the building; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]; add a tag_text column.
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
+Quiet-window margin: this start (09:21Z trigger) is 56 min after the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).
