@@ -1,0 +1,12 @@
+#!/bin/sh
+# lint-gate pre-merge-commit hook: git merge skips pre-commit, so a merge commit gets the same staged check here.
+# Exit 1 blocks the merge commit (the merge stays pending: fix it or `git merge --abort`); exit 2 (the gate could not run)
+# allows it with a warning. Rollback: git config --unset core.hooksPath      Bypass once: git merge --no-verify
+top=$(git rev-parse --show-toplevel) || exit 0
+"${PYTHON:-python3}" "$top/_tools_/lint-gate/lint_gate.py" check --staged --root "$top"
+rc=$?
+if [ "$rc" -eq 2 ]; then
+  echo "lint-gate: could not run; merge commit allowed. Fix the cause above." >&2
+  exit 0
+fi
+exit "$rc"
