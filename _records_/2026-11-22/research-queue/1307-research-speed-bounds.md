@@ -1,9 +1,9 @@
 ---
 title: Research speed multiplier M - bounds from the queue timers - 2026-11-23 13:07Z
 created: 2026-11-23T05:07:00-08:00
-modified: 2026-11-23T05:14:00-08:00
+modified: 2026-11-23T05:16:00-08:00
 level: L3
-version: 0.1.0
+version: 0.2.0
 description: A first measured bound on the account's research speed from the Coin Output V and Food Output V timers, using Steer B's frame times and the guide sheet's base time
 status: done
 activity: research-queue
@@ -36,3 +36,8 @@ The two differ by about 0.3 to 0.4: a bonus that applies only at the start (Stee
 - The other device used no speed-up item on either node (unknown; the speed-up stock read will show it).
 - The guide base time is right for this account (a panel read of an idle node would confirm: a lab idles at 2026-11-24T14:59Z).
 - Coin fell about 4.6M at the Coin node's start against a guide cost of 6.2M: the account may carry a research cost reduction (unverified).
+
+## Convention and one precision note (Steer B, 13:12Z; appended, nothing above is edited)
+
+- M here is the DIVISOR (base time over effective time). The account's research speed is M minus 1: about +402 percent (Coin Output V, divisor 5.02) and +360 to +372 percent (Food Output V). The 879 base days take about 175 days at divisor 5.02; read as '+502 percent' the same number would give 146 days, a 17 percent error: every ETA names 'research speed +402 percent, divisor 5.02'.
+- The earliest possible start of Food Output V is 12:09:04Z (Defense Training VIII still ran then), not 12:11:30Z: its divisor lower bound is 4.591, not 4.598.
