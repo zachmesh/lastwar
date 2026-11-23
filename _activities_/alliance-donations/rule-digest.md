@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations Rule Digest
 created: 2026-11-23T05:55:44Z
-modified: 2026-11-23T09:39:12Z
+modified: 2026-11-23T09:44:05Z
 level: L1
-version: 0.5.0
+version: 0.6.0
 description: The standing rules an operator must follow when donating to alliance technology, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -37,4 +37,4 @@ Each rule: status, the date of its newest supporting record, up to two records.
 9. Re-ground entry from each screenshot; never carry a point across framings. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, `_records_/2026-11-10/alliance-donations/0011-queue-run.md`
 10. Nothing is claimed by hand for the daily reward. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`, `_records_/2026-11-10/alliance-donations/0011-queue-run.md`
 
-Unverified: a refill of one count per 20 minutes (records give 10 to 55); a closing standard for a transient 0/30; whether a tap from 1/30 lands; long-press donating; R3 checkpoint times; Alliance entry in the windowed 788x1083 state.
+Unverified: a refill of one count per 20 minutes (records give 10 to 55); a closing standard for a transient 0/30; whether a tap from 1/30 lands; long-press donating; R3 checkpoint times; Alliance entry in the windowed 788x1083 state; coin cost per tap is 100 x (node level + 1), 900 at 8/10 (`_records_/2026-11-07/alliance-donations/2018-queue-run.md`) and 1000 at 9/10 (`_records_/2026-11-22/alliance-donations/0114-queue-run.md`), test: read the cost at the next node level-up.
