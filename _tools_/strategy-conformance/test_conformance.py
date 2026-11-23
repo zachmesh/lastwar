@@ -30,9 +30,16 @@ class PoolCase(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.root, True)
         for folder in ("inbox", "claimed", "done"):
             (self.root / "_queue_" / folder).mkdir(parents=True)
+        self.ledger("PL-01", "PL-02", "PL-17")
         self.n = 0
 
-    def unit(self, folder, ago=10, status="done", serves="growth-lever", activity="mail-rewards", hours=0.25, stats=None,
+    def ledger(self, *ids):
+        """The newest forecast ledger beside the queue: the plan items a unit may serve (queue.py validate reads the same file)."""
+        folder = self.root / "_records_" / "2026-11-23" / "strategy"
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / "forecast-ledger.csv").write_text("forecast_id,plan_item,lever\n" + "".join(f"F-{n},{i},read\n" for n, i in enumerate(ids, 1)))
+
+    def unit(self, folder, ago=10, status="done", serves="PL-01", activity="mail-rewards", hours=0.25, stats=None,
              claimed=False, chain="", regular="mail", name=None):
         self.n += 1
         name = name or f"{regular}-2026-11-23-{self.n:04d}"
@@ -65,7 +72,7 @@ class PoolCase(unittest.TestCase):
     def healthy(self):
         """Ten executed units: six serve a ranked item, one partial; the last finished 10 minutes ago."""
         for i in range(6):
-            self.unit("done", ago=10 + i * 20, serves="growth-lever", status="partial" if i == 0 else "done")
+            self.unit("done", ago=10 + i * 20, serves="PL-01", status="partial" if i == 0 else "done")
         for i in range(4):
             self.unit("done", ago=30 + i * 20, serves="upkeep")
 
@@ -78,7 +85,8 @@ class Conforming(PoolCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("conforming", r.stdout)
         self.assertIn("executed in window 10", r.stdout)
-        self.assertIn("coverage serving a ranked item: units 60%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context): units 60%", r.stdout)
+        self.assertIn("coverage SINCE CUTOVER: not set", r.stdout)
         self.assertNotIn(SECRET, r.stdout + r.stderr)                     # no summary, target or unit text
         self.assertNotIn("mail-2026", r.stdout)                           # no unit ids either
 
@@ -91,7 +99,7 @@ class Conforming(PoolCase):
         self.run_tool()
         self.run_tool("--format", "json")
         self.assertEqual(digest(), before)
-        self.assertEqual(sorted(p.name for p in self.root.iterdir()), ["_queue_"])
+        self.assertEqual(sorted(p.name for p in self.root.iterdir()), ["_queue_", "_records_"])          # the queue and the ledger fixture, nothing new
 
 
 class NoExecution(PoolCase):
@@ -99,10 +107,10 @@ class NoExecution(PoolCase):
         self.healthy()
         for p in (self.root / "_queue_" / "done").glob("*.md"):
             p.unlink()
-        self.unit("done", ago=44, serves="growth-lever")
+        self.unit("done", ago=44, serves="PL-01")
         self.assertNotIn("no-execution", self.alarms()[1])
         (self.root / "_queue_" / "done").joinpath(next(p.name for p in (self.root / "_queue_" / "done").iterdir())).unlink()
-        self.unit("done", ago=46, serves="growth-lever")
+        self.unit("done", ago=46, serves="PL-01")
         r, alarms = self.alarms()
         self.assertIn("no-execution", alarms)
         self.assertEqual(r.returncode, 1)
@@ -241,10 +249,213 @@ class BlockedByCapacity(PoolCase):
         self.assertNotIn("slots_blocked_capacity", self.row())
 
 
+class RankedExactly(PoolCase):
+    """A serves is ranked only by queue.py validate's exact check: a plan item id with a ledger row. Wording around an exempt word is not."""
+
+    def kinds(self):
+        r = self.run_tool("--format", "json")
+        self.assertIn(r.returncode, (0, 1), r.stdout + r.stderr)
+        return json.loads(r.stdout)["counts"], r
+
+    def test_snapshot_with_a_note_is_not_ranked_and_is_counted_as_other_wording(self):
+        self.unit("done", ago=10, serves="snapshot (Story 868)")
+        self.unit("done", ago=11, serves="PL-01")
+        counts, r = self.kinds()
+        self.assertEqual(counts["serves_kinds"]["unrecognised"], 1)
+        self.assertEqual(counts["serves_kinds"]["ranked"], 1)
+        self.assertEqual(counts["coverage_units_percent"], 50)                      # the old rule counted 100
+        self.assertIn("other wording 1 (not ranked)", self.run_tool().stdout)
+
+    def test_an_id_without_a_ledger_row_is_not_ranked_and_is_counted_apart(self):
+        self.unit("done", ago=10, serves="PL-99")
+        self.unit("done", ago=11, serves="PL-17")
+        counts, _ = self.kinds()
+        self.assertEqual((counts["serves_kinds"]["no_row"], counts["serves_kinds"]["ranked"]), (1, 1))
+        self.assertEqual(counts["coverage_units_percent"], 50)
+        self.assertIn("id without a ledger row 1 (not ranked)", self.run_tool().stdout)
+
+    def test_exempt_words_and_fill_idle_slot_are_exempt_and_a_list_with_one_row_is_ranked(self):
+        for tag in ("upkeep", "Snapshot", "baseline", "fill idle slot with research"):
+            self.unit("done", ago=10, serves=tag)
+        self.unit("done", ago=10, serves="upkeep, PL-02")
+        self.unit("done", ago=10, serves="upkeep; unknown words")
+        counts, _ = self.kinds()
+        self.assertEqual(counts["serves_kinds"], {"ranked": 1, "exempt": 4, "no_row": 0, "unrecognised": 1, "no_serves_line": 0, "ranked_by_name": 0})
+
+    def test_an_id_in_the_wrong_case_is_other_wording_like_validate_says(self):
+        self.unit("done", ago=10, serves="pl-01")
+        counts, _ = self.kinds()
+        self.assertEqual(counts["serves_kinds"]["unrecognised"], 1)
+
+    def test_with_no_ledger_an_id_counts_by_its_shape_and_the_output_says_so(self):
+        (self.root / "_records_" / "2026-11-23" / "strategy" / "forecast-ledger.csv").unlink()
+        self.unit("done", ago=10, serves="PL-99")
+        counts, _ = self.kinds()
+        self.assertEqual(counts["serves_kinds"]["ranked"], 1)
+        self.assertIn("id shape only, ranked by wording only", counts["ranking_basis"])
+        self.assertIn("ranking basis: id shape only, ranked by wording only", self.run_tool().stdout)
+        self.assertEqual(self.kinds()[0]["ranking_basis"].startswith("id shape only"), True)
+
+    def test_with_a_ledger_the_basis_is_the_ledger_rows(self):
+        self.unit("done", ago=10, serves="PL-01")
+        self.assertEqual(self.kinds()[0]["ranking_basis"], "ledger rows")
+
+    def test_units_without_a_serves_line_keep_the_name_rule_and_are_counted(self):
+        self.unit("done", ago=10, serves=None, chain="growth-capacity-2026-11-23", regular="building-queues")
+        self.unit("done", ago=10, serves=None, regular="mail")
+        counts, _ = self.kinds()
+        self.assertEqual((counts["serves_kinds"]["no_serves_line"], counts["serves_kinds"]["ranked_by_name"]), (2, 1))
+
+    def test_it_is_the_check_queue_py_validate_uses(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("q", TOOL.parent.parent / "queue.py")
+        q = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(q)
+        spec = importlib.util.spec_from_file_location("sc", TOOL)
+        sc = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sc)
+        self.assertEqual(sc.NON_RANKED, set(q.FORECAST_EXEMPT))                                    # the fallback words are the exempt words
+        self.assertEqual(sc.PLAN_ITEM.pattern, q.PLAN_ITEM_ID.pattern)
+        self.assertEqual(sc.FILL_IDLE.pattern, q.FORECAST_FILL.pattern)
+        sc.RANKING.update(ids={"PL-01"}, queue=q)
+        for serves in ("upkeep", "PL-01", "PL-99", "snapshot (Story 868)", "upkeep, PL-01", "fill idle slot x", "pl-01", ""):
+            want = q.forecast_class(serves, {"PL-01"})
+            kind = sc.serves_kind(serves)
+            self.assertEqual({"ok": kind in ("ranked", "exempt"), "no-row": kind == "no-row", "unknown": kind == "unrecognised"}[want], True, (serves, want, kind))
+
+
+class Cutover(PoolCase):
+    """The coverage verdict counts the units executed since the roster remap landed; the rolling window is context."""
+
+    def old_and_new(self, old_unranked=8, new_ranked=4, new_unranked=0, old_ago=600, new_ago=20, old_hours=0.25, new_hours=0.25):
+        for i in range(old_unranked):
+            self.unit("done", ago=old_ago + i, serves="upkeep", hours=old_hours)
+        for i in range(new_ranked):
+            self.unit("done", ago=new_ago + i, serves="PL-17", hours=new_hours)
+        for i in range(new_unranked):
+            self.unit("done", ago=new_ago + 10 + i, serves="upkeep", hours=new_hours)
+
+    def data(self, *args):
+        r = self.run_tool("--format", "json", *args)
+        self.assertIn(r.returncode, (0, 1), r.stdout + r.stderr)
+        return r, json.loads(r.stdout)
+
+    def test_both_lines_are_printed_and_the_since_line_is_the_verdict(self):
+        self.old_and_new()
+        r = self.run_tool("--since", iso(180))
+        self.assertIn("coverage ROLLING 12 h (context, not the verdict): units 33%", r.stdout)
+        self.assertIn("coverage SINCE CUTOVER", r.stdout)
+        self.assertIn("(--since) - THE VERDICT: units 100%, unit-hours 100% of 4 units | serving nothing 0 units, 0 h of 1 h", r.stdout)
+        self.assertEqual(r.returncode, 0, r.stdout)                                  # the rolling 33 percent does not alarm any more
+
+    def test_the_json_carries_both_with_the_units_that_serve_nothing_and_their_hours(self):
+        self.old_and_new(old_unranked=8, new_ranked=3, new_unranked=1, old_hours=0.5, new_hours=0.25)
+        _r, d = self.data("--since", iso(180))
+        rolling, since = d["counts"]["rolling"], d["counts"]["since_cutover"]
+        self.assertEqual((rolling["executed"], rolling["ranked_units"], rolling["units_percent"]), (12, 3, 25))
+        self.assertEqual((rolling["serves_nothing_units"], rolling["serves_nothing_hours"], rolling["total_hours"]), (9, 4.25, 5.0))
+        self.assertEqual((since["executed"], since["units_percent"], since["unit_hours_percent"]), (4, 75, 75))
+        self.assertEqual((since["serves_nothing_units"], since["serves_nothing_hours"], since["total_hours"]), (1, 0.25, 1.0))
+        self.assertEqual((since["source"], d["counts"]["coverage_verdict_basis"]), ("--since", "since-cutover"))
+
+    def test_a_low_figure_since_the_cutover_alarms_whatever_the_rolling_window_says(self):
+        self.old_and_new(old_unranked=0, new_ranked=1, new_unranked=3, old_ago=700)
+        for i in range(6):
+            self.unit("done", ago=400 + i, serves="PL-01")                                 # rolling is full of ranked units
+        r, d = self.data("--since", iso(180))
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual((alarm["basis"], alarm["below"], alarm["units_percent"], alarm["executed"]), ("since-cutover", ["units", "unit-hours"], 25, 4))
+        self.assertTrue(alarm["since"].endswith("Z"))
+        self.assertGreater(d["counts"]["rolling"]["units_percent"], 60)
+
+    def test_unit_hours_can_alarm_since_the_cutover_on_their_own(self):
+        self.old_and_new(old_unranked=0, new_ranked=3, new_unranked=1, new_hours=0.25)
+        self.unit("done", ago=40, serves="upkeep", hours=3.0)
+        _r, d = self.data("--since", iso(180))
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual(alarm["basis"], "since-cutover")
+
+    def test_no_unit_since_the_cutover_is_not_applicable_and_not_an_alarm(self):
+        self.old_and_new(old_unranked=8, new_ranked=0)
+        r, d = self.data("--since", iso(5))
+        self.assertIn("coverage-since-cutover", d["not_applicable"])
+        self.assertNotIn("coverage", {a["alarm"] for a in d["alarms"]})
+        self.assertIn("no unit executed since yet (n/a)", self.run_tool("--since", iso(5)).stdout)
+
+    def test_without_a_cutover_the_rolling_figure_is_the_verdict_as_before(self):
+        self.old_and_new(old_unranked=8, new_ranked=1)
+        r, d = self.data()
+        self.assertEqual(d["counts"]["coverage_verdict_basis"], "rolling")
+        self.assertIsNone(d["counts"]["since_cutover"])
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual(alarm["basis"], "rolling")
+        self.assertIn("the rolling figure is the verdict", self.run_tool().stdout)
+
+    def test_the_state_file_is_read_and_the_flag_beats_it(self):
+        self.old_and_new()
+        state = self.root / "_tools_" / "state"
+        state.mkdir(parents=True)
+        (state / "strategy-cutover.json").write_text(json.dumps({"since": iso(180)}))
+        _r, d = self.data()
+        self.assertEqual(d["counts"]["since_cutover"]["source"], "state file _tools_/state/strategy-cutover.json")
+        self.assertEqual(d["counts"]["since_cutover"]["executed"], 4)
+        _r, d = self.data("--since", iso(1000))
+        self.assertEqual((d["counts"]["since_cutover"]["source"], d["counts"]["since_cutover"]["executed"]), ("--since", 12))
+
+    def test_a_broken_state_file_falls_through_to_not_set(self):
+        self.old_and_new()
+        state = self.root / "_tools_" / "state"
+        state.mkdir(parents=True)
+        (state / "strategy-cutover.json").write_text("{not json")
+        _r, d = self.data()
+        self.assertIsNone(d["counts"]["since_cutover"])
+
+    def test_git_gives_the_merge_that_introduced_the_roster_serves_ids(self):
+        import os
+        env = dict(os.environ, GIT_AUTHOR_NAME="t", GIT_AUTHOR_EMAIL="t@example.org", GIT_COMMITTER_NAME="t", GIT_COMMITTER_EMAIL="t@example.org")
+
+        def git(*args, when=None):
+            e = dict(env, GIT_COMMITTER_DATE=when, GIT_AUTHOR_DATE=when) if when else env
+            return subprocess.run(["git", "-C", str(self.root), *args], check=True, capture_output=True, text=True, env=e).stdout
+
+        git("init", "-q", "-b", "main")
+        tools = self.root / "_tools_"
+        tools.mkdir(exist_ok=True)
+        (tools / "regulars.json").write_text('{"regulars":[{"id":"radar","serves":"upkeep"}]}')
+        git("add", "_tools_/regulars.json")
+        git("commit", "-q", "-m", "roster", when="2026-11-23T08:00:00+00:00")
+        git("checkout", "-q", "-b", "work/roster-serves")
+        (tools / "regulars.json").write_text('{"regulars":[{"id":"radar","serves":"PL-17"}]}')
+        git("commit", "-q", "-am", "remap", when="2026-11-23T08:05:00+00:00")
+        git("checkout", "-q", "main")
+        (self.root / "other.txt").write_text("x")
+        git("add", "other.txt")
+        git("commit", "-q", "-m", "other work on main", when="2026-11-23T08:10:00+00:00")
+        git("merge", "-q", "--no-ff", "-m", "Merge the remap", "work/roster-serves", when="2026-11-23T08:30:00+00:00")
+        git("config", "user.email", "t@example.org")
+        self.old_and_new()
+        _r, d = self.data("--now", "2026-11-23T09:00:00Z")
+        since = d["counts"]["since_cutover"]
+        self.assertEqual(since["since"], "2026-11-23T08:30:00Z")                       # the merge, not the remap commit on the branch
+        self.assertEqual(since["source"], "git: the merge that introduced the roster serves ids")
+
+    def test_a_bad_since_is_a_usage_error(self):
+        self.old_and_new()
+        r = self.run_tool("--since", "yesterday-ish")
+        self.assertEqual(r.returncode, 2)
+        self.assertIn("--since is not an ISO 8601 time", r.stderr)
+
+    def test_a_unit_that_finished_exactly_at_the_cutover_counts_and_the_output_stays_counts_only(self):
+        self.unit("done", ago=60, serves="PL-17")
+        r = self.run_tool("--since", iso(60))
+        self.assertIn("of 1 units", r.stdout)
+        self.assertNotIn(SECRET, r.stdout + r.stderr)
+
+
 class Coverage(PoolCase):
     def fill(self, ranked, other, hours_ranked=0.25, hours_other=0.25):
         for i in range(ranked):
-            self.unit("done", ago=10 + i, serves="growth-lever", hours=hours_ranked)
+            self.unit("done", ago=10 + i, serves="PL-01", hours=hours_ranked)
         for i in range(other):
             self.unit("done", ago=10 + i, serves="snapshot", hours=hours_other)
 
@@ -286,18 +497,18 @@ class Coverage(PoolCase):
 class GrowthPartial(PoolCase):
     def test_thirty_three_percent_passes_and_fifty_is_an_alarm(self):
         for status in ("partial", "done", "done"):
-            self.unit("done", ago=10, serves="growth-lever", status=status)
+            self.unit("done", ago=10, serves="PL-01", status=status)
         r, alarms = self.alarms()
         self.assertNotIn("growth-partial", alarms)
         self.assertEqual(json.loads(r.stdout)["counts"]["growth_partial_percent"], 33)
         self.setUp()
         for status in ("partial", "partial", "done", "failed"):
-            self.unit("done", ago=10, serves="growth-lever", status=status)
+            self.unit("done", ago=10, serves="PL-01", status=status)
         self.assertIn("growth-partial", self.alarms()[1])
 
     def test_exactly_the_limit_is_not_over_it_and_upkeep_partials_do_not_count(self):
         for status in ["partial"] * 7 + ["done"] * 13:                               # 35 percent
-            self.unit("done", ago=10, serves="growth-lever", status=status)
+            self.unit("done", ago=10, serves="PL-01", status=status)
         for _ in range(5):
             self.unit("done", ago=10, serves="upkeep", status="partial")
         self.assertNotIn("growth-partial", self.alarms()[1])
@@ -361,7 +572,7 @@ class Cli(PoolCase):
         self.assertEqual(bad.returncode, 2)
 
     def test_thresholds_are_flags(self):
-        self.unit("done", ago=50, serves="growth-lever")
+        self.unit("done", ago=50, serves="PL-01")
         self.assertEqual(self.alarms("--stale-minutes", "60")[1] & {"no-execution"}, set())
         self.assertIn("no-execution", self.alarms("--stale-minutes", "40")[1])
 

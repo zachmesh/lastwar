@@ -13,17 +13,26 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     blocked ones) and the blocker text; N, at most the open slots, is subtracted from the idle count and printed
                     beside it, with the blocker text when the stats carry one.
   coverage          units, or unit-hours (result duration, else est_minutes), serving a RANKED item are under
-                    --coverage-percent (60) of what executed in the window
+                    --coverage-percent (60) of what executed. Two lines are printed: the ROLLING window (--hours, 12; context, it
+                    stays low while old units age out) and SINCE THE CUTOVER (units executed after the roster remap landed): the
+                    verdict, which the alarm and the Coach quote. The cutover is, in order: --since TIME; the state file
+                    `_tools_/state/strategy-cutover.json` ({"since": "ISO UTC"}); the first-parent commit in git that introduced a
+                    plan item id as a roster serves (`_tools_/regulars.json`), i.e. the merge of the remap. With none of them the
+                    rolling figure is the verdict and the output says so. Both lines also give the units that serve nothing
+                    (not ranked) with their hours of the total.
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
 
-A unit serves a RANKED item when its `serves` is anything but upkeep, snapshot or baseline; a unit with no serves line is
-told by its chain id, regular and file name (growth, convert, collect, promot, capacity, store, inventory, troop-read).
+A unit serves a RANKED item when its `serves` has a part that is a plan item id (PL-17) with a row in the newest forecast ledger -
+the same exact check as `queue.py validate`. An exempt word (upkeep, snapshot, baseline, fill idle slot), an id the ledger has no
+row for, and any other wording ("snapshot (Story 868)") are NOT ranked and are counted apart in the output; with no ledger to read
+an id counts by its shape and the output says so (ranked by wording only). A unit with no serves line is told by its chain id,
+regular and file name (growth, convert, collect, promot, capacity, store, inventory, troop-read).
 The plan file is a CSV `rank,item,trigger_at,serves` (trigger_at in UTC, ISO 8601), kept by the strategist; without one the
 plan-item check is skipped and says so. A kind with no sample (nothing executed, no growth unit) is n/a, never an alarm.
 
-  strategy_conformance.py [--root PATH] [--hours 12] [--now ISO] [--plan CSV] [--format text|json]
+  strategy_conformance.py [--root PATH] [--hours 12] [--since TIME] [--now ISO] [--plan CSV] [--format text|json]
 
 Exit 0 conforming, 1 at least one alarm, 2 the queue cannot be read. Standard library only.
 """
@@ -31,15 +40,109 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+# The exact check of queue.py validate: its constants and its ledger reader are used when it can be loaded; these copies are the fallback
+# (a test keeps them equal).
 NON_RANKED = {"upkeep", "snapshot", "baseline"}
+FILL_IDLE = re.compile(r"^fill[- ]idle[- ]slot\b", re.IGNORECASE)
+PLAN_ITEM = re.compile(r"^[A-Z]{2,4}-\d{1,3}$")
+RANKING = {"ids": None, "reason": "not configured", "queue": None}
+
+
+def load_queue_tool():
+    try:
+        spec = importlib.util.spec_from_file_location("queue_for_conformance", HERE.parent / "queue.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+    except Exception:                                  # any failure: the fallback copies above decide
+        return None
+
+
+def configure_ranking(root: Path) -> None:
+    """Read the newest forecast ledger beside the queue: the plan item ids a unit may serve. None, with a reason, when there is none."""
+    tool = load_queue_tool()
+    RANKING["queue"] = tool
+    if tool is None:
+        RANKING.update(ids=None, reason="queue.py could not be loaded")
+        return
+    try:
+        ids, reason = tool.load_forecast_ledger(str(root / "_queue_"))
+    except Exception as exc:
+        ids, reason = None, f"the ledger reader failed ({type(exc).__name__})"
+    RANKING.update(ids=ids, reason=reason or "")
+
+
+CUTOVER_STATE = "_tools_/state/strategy-cutover.json"
+
+
+def resolve_cutover(root: Path, since_flag: str):
+    """(instant, source) of the roster remap, or (None, why): --since, then the state file, then git (the first-parent commit that introduced a
+    plan item id as a roster serves, which is the merge of the remap). Never reads anything but the state file and git log."""
+    if since_flag:
+        at = stamp(since_flag)
+        return (at, "--since") if at else (None, "--since is not an ISO 8601 time")
+    state = root / CUTOVER_STATE
+    if state.is_file():
+        try:
+            at = stamp(json.loads(state.read_text(encoding="utf-8")).get("since"))
+        except (OSError, ValueError, AttributeError):
+            at = None
+        if at:
+            return at, f"state file {CUTOVER_STATE}"
+    try:
+        out = subprocess.run(["git", "-C", str(root), "log", "--first-parent", "--format=%cI", "--reverse", "-S", '"serves":"PL-', "--",
+                              "_tools_/regulars.json"], capture_output=True, text=True, timeout=60)
+        first = next((ln for ln in out.stdout.splitlines() if ln.strip()), "") if out.returncode == 0 else ""
+    except (OSError, subprocess.SubprocessError):
+        first = ""
+    at = stamp(first) if first else None
+    return (at, "git: the merge that introduced the roster serves ids") if at else (None, "no cutover: give --since TIME, write " + CUTOVER_STATE + ", or land the remap")
+
+
+def coverage_stats(units: list) -> dict:
+    """Units and unit-hours serving a ranked item, and the units that serve nothing (not ranked) with their hours of the total."""
+    ranked = [u for u in units if u.ranked]
+    total_hours = sum(u.hours for u in units)
+    ranked_hours = sum(u.hours for u in ranked)
+    unit_pct = percent(len(ranked), len(units))
+    hour_pct = percent(ranked_hours, total_hours)
+    return {"executed": len(units), "ranked_units": len(ranked),
+            "units_percent": None if unit_pct is None else round(unit_pct), "unit_hours_percent": None if hour_pct is None else round(hour_pct),
+            "total_hours": round(total_hours, 2), "ranked_hours": round(ranked_hours, 2),
+            "serves_nothing_units": len(units) - len(ranked), "serves_nothing_hours": round(total_hours - ranked_hours, 2)}
+
+
+def serves_kind(serves: str) -> str:
+    """ranked, exempt, no-row (an id the ledger lacks) or unrecognised; with no ledger an id counts as ranked by its shape (the basis says so)."""
+    tool, ids = RANKING["queue"], RANKING["ids"]
+    exempt = getattr(tool, "FORECAST_EXEMPT", NON_RANKED)
+    fill = getattr(tool, "FORECAST_FILL", FILL_IDLE)
+    plan_id = getattr(tool, "PLAN_ITEM_ID", PLAN_ITEM)
+    kinds = []
+    for part in re.split(r"[;,]", serves or ""):
+        part = " ".join(part.split())
+        if not part:
+            continue
+        if part.lower() in exempt or fill.match(part):
+            kinds.append("exempt")
+        elif plan_id.match(part):
+            kinds.append("ranked" if ids is None or part in ids else "no-row")
+        else:
+            kinds.append("unrecognised")
+    for kind in ("ranked", "no-row", "unrecognised", "exempt"):
+        if kind in kinds:
+            return kind
+    return "exempt"
 GROWTH_MARKERS = ("growth", "convert", "collect", "promot", "capacity", "store", "inventory", "troop-read")
 EXECUTED = ("done", "partial", "failed")
 SLOT_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
@@ -98,14 +201,19 @@ class Unit:
         self.finished = stamp(fields.get("result.finished_at"))
         self.claimed = stamp(fields.get("claimed_at"))
         self.serves = fields.get("serves", "").strip().lower()
+        self.serves_raw = fields.get("serves", "").strip()
         self.activity = fields.get("activity", "")
         hours = number(fields, "result.duration_seconds")
         self.hours = hours / 3600 if hours is not None else (number(fields, "est_minutes", 0) or 0) / 60
 
     @property
+    def serves_kind(self) -> str:
+        return serves_kind(self.serves_raw) if self.serves_raw else "by-name"
+
+    @property
     def ranked(self) -> bool:
-        if self.serves:
-            return self.serves not in NON_RANKED
+        if self.serves_raw:
+            return self.serves_kind == "ranked"
         return self.growth_by_name
 
     @property
@@ -145,6 +253,7 @@ def read_plan(path: Path | None):
 
 
 def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a) -> dict:
+    configure_ranking(root)
     inbox, claimed, done = load(root, "inbox"), load(root, "claimed"), load(root, "done")
     cut = now - timedelta(hours=hours)
     executed = [u for u in done if u.status in EXECUTED and u.finished and u.finished >= cut]
@@ -154,6 +263,10 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
               "by_status": {s: sum(1 for u in executed if u.status == s) for s in EXECUTED},
               "inbox_without_serves": sum(1 for u in inbox if not u.serves),
               "executed_without_serves": sum(1 for u in executed if not u.serves)}
+    kinds = {k: sum(1 for u in executed if u.serves_kind == k) for k in ("ranked", "exempt", "no-row", "unrecognised", "by-name")}
+    counts["serves_kinds"] = {"ranked": kinds["ranked"], "exempt": kinds["exempt"], "no_row": kinds["no-row"], "unrecognised": kinds["unrecognised"],
+                              "no_serves_line": kinds["by-name"], "ranked_by_name": sum(1 for u in executed if u.serves_kind == "by-name" and u.ranked)}
+    counts["ranking_basis"] = "ledger rows" if RANKING["ids"] is not None else f"id shape only, ranked by wording only ({RANKING['reason']})"
     # no execution
     last = max((u.finished for u in done if u.status in EXECUTED and u.finished), default=None)
     age = None if last is None else (now - last).total_seconds() / 60
@@ -189,19 +302,33 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
             alarms.append({"alarm": "idle-slot", "activity": activity, "idle_slots": alarmable, "minutes": round(minutes),
                            "limit": a.idle_minutes})
     counts["slot_reads"] = idle
-    # coverage
-    if executed:
-        unit_cov = percent(sum(1 for u in executed if u.ranked), len(executed))
-        total_hours = sum(u.hours for u in executed)
-        hour_cov = percent(sum(u.hours for u in executed if u.ranked), total_hours)
-        counts["coverage_units_percent"] = None if unit_cov is None else round(unit_cov)
-        counts["coverage_unit_hours_percent"] = None if hour_cov is None else round(hour_cov)
-        low = [name for name, v in (("units", unit_cov), ("unit-hours", hour_cov)) if v is not None and v < a.coverage_percent]
-        if low:
-            alarms.append({"alarm": "coverage", "below": low, "units_percent": counts["coverage_units_percent"],
-                           "unit_hours_percent": counts["coverage_unit_hours_percent"], "limit": a.coverage_percent})
+    # coverage: the rolling window is context; the verdict is the units executed since the cutover when one is known
+    cutover, cutover_source = resolve_cutover(root, a.since)
+    rolling = coverage_stats(executed)
+    counts["rolling"] = {"hours": hours, **rolling}
+    since_stats = None
+    if cutover is not None:
+        since_units = [u for u in done if u.status in EXECUTED and u.finished and cutover <= u.finished <= now]
+        since_stats = coverage_stats(since_units)
+        counts["since_cutover"] = {"since": cutover.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": cutover_source, **since_stats}
     else:
-        na.append("coverage")
+        counts["since_cutover"] = None
+        counts["cutover_note"] = cutover_source
+    counts["coverage_units_percent"] = rolling["units_percent"]
+    counts["coverage_unit_hours_percent"] = rolling["unit_hours_percent"]
+    verdict, basis = (since_stats, "since-cutover") if since_stats is not None else (rolling, "rolling")
+    counts["coverage_verdict_basis"] = basis
+    if verdict["executed"]:
+        low = [name for name, v in (("units", verdict["units_percent"]), ("unit-hours", verdict["unit_hours_percent"]))
+               if v is not None and v < a.coverage_percent]
+        if low:
+            alarm = {"alarm": "coverage", "basis": basis, "below": low, "units_percent": verdict["units_percent"],
+                     "unit_hours_percent": verdict["unit_hours_percent"], "limit": a.coverage_percent, "executed": verdict["executed"]}
+            if basis == "since-cutover":
+                alarm["since"] = counts["since_cutover"]["since"]
+            alarms.append(alarm)
+    else:
+        na.append("coverage" if basis == "rolling" else "coverage-since-cutover")
     # growth partial rate
     growth = [u for u in executed if u.ranked]
     counts["growth_executed"] = len(growth)
@@ -234,10 +361,25 @@ def render(result: dict) -> str:
              f"queue: inbox {c['inbox']}  claimed {c['claimed']} | executed in window {c['executed_in_window']} {c['by_status']} | "
              f"expired {c['expired_in_window']}",
              f"serves: inbox units without {c['inbox_without_serves']}, executed without {c['executed_without_serves']}"]
+    k = c["serves_kinds"]
+    lines.append(f"executed serves: ranked {k['ranked']}, exempt {k['exempt']}, id without a ledger row {k['no_row']} (not ranked), other wording {k['unrecognised']} "
+                 f"(not ranked), no serves line {k['no_serves_line']} ({k['ranked_by_name']} ranked by name) | ranking basis: {c['ranking_basis']}")
     last = c["minutes_since_last_execution"]
     lines.append("last execution: " + ("none on record" if last is None else f"{last} min ago"))
-    if "coverage_units_percent" in c:
-        lines.append(f"coverage serving a ranked item: units {c['coverage_units_percent']}%, unit-hours {c['coverage_unit_hours_percent']}%")
+    r = c["rolling"]
+    if r["executed"]:
+        lines.append(f"coverage ROLLING {r['hours']:g} h (context{', not the verdict' if c['coverage_verdict_basis'] == 'since-cutover' else ''}): "
+                     f"units {r['units_percent']}%, unit-hours {r['unit_hours_percent']}% of {r['executed']} units | serving nothing "
+                     f"{r['serves_nothing_units']} units, {r['serves_nothing_hours']:g} h of {r['total_hours']:g} h")
+    sc = c["since_cutover"]
+    if sc is None:
+        lines.append(f"coverage SINCE CUTOVER: not set ({c['cutover_note']}); the rolling figure is the verdict")
+    elif sc["executed"]:
+        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}) - THE VERDICT: units {sc['units_percent']}%, unit-hours "
+                     f"{sc['unit_hours_percent']}% of {sc['executed']} units | serving nothing {sc['serves_nothing_units']} units, "
+                     f"{sc['serves_nothing_hours']:g} h of {sc['total_hours']:g} h")
+    else:
+        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}): no unit executed since yet (n/a)")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
         note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")
@@ -259,6 +401,8 @@ def main(argv=None) -> int:
     p.add_argument("--root", default=str(HERE.parent.parent), help="the repository (default: the one holding this tool)")
     p.add_argument("--hours", type=float, default=12, help="the window of executed units")
     p.add_argument("--now", default="", help="the instant to judge at, ISO 8601 UTC (default: now)")
+    p.add_argument("--since", default="", help="the roster remap's cutover, ISO 8601 UTC: the coverage verdict counts units executed after it "
+                                               "(default: the state file, else git)")
     p.add_argument("--plan", default="", help="plan-of-record CSV: rank,item,trigger_at,serves")
     p.add_argument("--top", type=int, default=3, help="plan items up to this rank are checked")
     p.add_argument("--stale-minutes", type=float, default=45)
@@ -272,6 +416,9 @@ def main(argv=None) -> int:
     now = stamp(a.now) if a.now else datetime.now(timezone.utc)
     if now is None:
         print("strategy_conformance: --now is not an ISO 8601 time", file=sys.stderr)
+        return 2
+    if a.since and stamp(a.since) is None:
+        print("strategy_conformance: --since is not an ISO 8601 time", file=sys.stderr)
         return 2
     plan = Path(a.plan) if a.plan else None
     try:
