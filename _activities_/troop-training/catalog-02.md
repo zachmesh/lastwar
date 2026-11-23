@@ -1,8 +1,8 @@
 ---
 title: Catalog 02
 created: 2026-11-23T06:45:27Z
-modified: 2026-11-23T06:45:27Z
-version: 1.0.0
+modified: 2026-11-23T09:46:55Z
+version: 1.1.0
 description: Catalog 02 of the split Troop Training
 ---
 
@@ -10,12 +10,12 @@ description: Catalog 02 of the split Troop Training
 
 29 entries of Troop Training, from run-20261102-1146 to run-20261104-1147. Back to the [index](INDEX.md).
 
-- [What the 2026-11-02 1146 unit added part 1](run-20261102-1146-p1.md) - run-20261102-1146 - Unit training-2026-11-02-1003 by ticker-1134, session 11:36
+- [What the 2026-11-02 1146 unit added part 1](../../_run_notes_/troop-training/run-20261102-1146-p1.md) - run-20261102-1146 - Unit training-2026-11-02-1003 by ticker-1134, session 11:36
 - [What the 2026-11-02 1146 unit added part 2](run-20261102-1146-p2.md) - run-20261102-1146 - Drill Ground Full, ninth consecutive unit
-- [What the 2026-11-02 1723 unit added](run-20261102-1723.md) - run-20261102-1723 - Unit training-2026-11-02-1403 by ticker-1703, session about
-- [What the 2026-11-02 1949 unit added](run-20261102-1949.md) - run-20261102-1949 - Unit training-2026-11-02-1803 by ticker-1934, session about
-- [What the 2026-11-02 2255 unit added](run-20261102-2255.md) - run-20261102-2255 - Unit training-2026-11-02-2203 by ticker-2234, session about
-- [What the 2026-11-03 0252 unit added - road](run-20261103-0252.md) - run-20261103-0252 - Unit training-2026-11-03-0203 by ticker-0234, about 02:52
+- [What the 2026-11-02 1723 unit added](../../_run_notes_/troop-training/run-20261102-1723.md) - run-20261102-1723 - Unit training-2026-11-02-1403 by ticker-1703, session about
+- [What the 2026-11-02 1949 unit added](../../_run_notes_/troop-training/run-20261102-1949.md) - run-20261102-1949 - Unit training-2026-11-02-1803 by ticker-1934, session about
+- [What the 2026-11-02 2255 unit added](../../_run_notes_/troop-training/run-20261102-2255.md) - run-20261102-2255 - Unit training-2026-11-02-2203 by ticker-2234, session about
+- [What the 2026-11-03 0252 unit added - road](../../_run_notes_/troop-training/run-20261103-0252.md) - run-20261103-0252 - Unit training-2026-11-03-0203 by ticker-0234, about 02:52
 - [What the 2026-11-03 0647 unit added - four](run-20261103-0647.md) - run-20261103-0647 - Ticker-0634, unit training-2026-11-03-0603, about 06:47 local,
 - [Open questions](open-questions.md) - open-questions - The fourth barracks level, and whether
 - [Changelog part 1](changelog-section-p1.md) - changelog-section - 1.48.0 (2026-11-22): 2124, 0134 and 0958
@@ -33,9 +33,9 @@ description: Catalog 02 of the split Troop Training
 - [Changelog part 13](changelog-section-p13.md) - changelog-section - 1.30.0 (2026-11-09): 0039 training unit folded
 - [What the 2026-11-03 1051 unit added - three](run-20261103-1051.md) - run-20261103-1051 - Ticker-1034, unit training-2026-11-03-1003, about 10:50 to
 - [What the 2026-11-03 1552 unit added - tent](run-20261103-1552.md) - run-20261103-1552 - Ticker-1534, unit training-2026-11-03-1403, about 15:43 to
-- [What the 2026-11-03 2144 unit added - production](run-20261103-2144.md) - run-20261103-2144 - Ticker-2134, unit training-2026-11-03-1803, about 21:34 to
-- [What the 2026-11-04 0143 unit added - factories](run-20261104-0143.md) - run-20261104-0143 - Unit training-2026-11-03-2203 by ticker-0134, about 01:43
-- [What the 2026-11-04 0440 unit added - tent](run-20261104-0440.md) - run-20261104-0440 - Unit training-2026-11-04-0203 by ticker-0434, about 04:40
-- [What the 2026-11-04 0814 unit added - 0440](run-20261104-0814-p1.md) - run-20261104-0814 - Unit training-2026-11-04-0603 by ticker-0804, about 08:14
-- [What the 2026-11-04 0814 unit added - 0440](run-20261104-0814-p2.md) - run-20261104-0814 - HUD resources at end, unchanged by
-- [What the 2026-11-04 1147 unit added - fullscreen](run-20261104-1147.md) - run-20261104-1147 - Unit training-2026-11-04-1003 by ticker-1134, about 11:47
+- [What the 2026-11-03 2144 unit added - production](../../_run_notes_/troop-training/run-20261103-2144.md) - run-20261103-2144 - Ticker-2134, unit training-2026-11-03-1803, about 21:34 to
+- [What the 2026-11-04 0143 unit added - factories](../../_run_notes_/troop-training/run-20261104-0143.md) - run-20261104-0143 - Unit training-2026-11-03-2203 by ticker-0134, about 01:43
+- [What the 2026-11-04 0440 unit added - tent](../../_run_notes_/troop-training/run-20261104-0440.md) - run-20261104-0440 - Unit training-2026-11-04-0203 by ticker-0434, about 04:40
+- [What the 2026-11-04 0814 unit added - 0440](../../_run_notes_/troop-training/run-20261104-0814-p1.md) - run-20261104-0814 - Unit training-2026-11-04-0603 by ticker-0804, about 08:14
+- [What the 2026-11-04 0814 unit added - 0440](../../_run_notes_/troop-training/run-20261104-0814-p2.md) - run-20261104-0814 - HUD resources at end, unchanged by
+- [What the 2026-11-04 1147 unit added - fullscreen](../../_run_notes_/troop-training/run-20261104-1147.md) - run-20261104-1147 - Unit training-2026-11-04-1003 by ticker-1134, about 11:47

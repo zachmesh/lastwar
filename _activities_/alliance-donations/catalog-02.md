@@ -1,8 +1,8 @@
 ---
 title: Catalog 02
 created: 2026-11-23T06:11:49Z
-modified: 2026-11-23T06:11:49Z
-version: 1.0.0
+modified: 2026-11-23T09:46:55Z
+version: 1.1.0
 description: Catalog 02 of the split Alliance Donations
 ---
 
@@ -10,19 +10,19 @@ description: Catalog 02 of the split Alliance Donations
 
 27 entries of Alliance Donations, from run-20261102-0621 to open-questions. Back to the [index](INDEX.md).
 
-- [What the 2026-11-02 0621 unit added part 1](run-20261102-0621-p1.md) - run-20261102-0621 - Unit donations-2026-11-02-0603 by ticker-0604, session about
+- [What the 2026-11-02 0621 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-0621-p1.md) - run-20261102-0621 - Unit donations-2026-11-02-0603 by ticker-0604, session about
 - [What the 2026-11-02 0621 unit added part 2](run-20261102-0621-p2.md) - run-20261102-0621 - Prior state carried, not re-verified: the
-- [What the 2026-11-02 0719 unit added part 1](run-20261102-0719-p1.md) - run-20261102-0719 - Unit donations-2026-11-02-1055 by ticker-0704, session about
-- [What the 2026-11-02 0719 unit added part 2](run-20261102-0719-p2.md) - run-20261102-0719 - Donate failure, three methods, rule R2:
-- [What the 2026-11-02 1020 unit added](run-20261102-1020.md) - run-20261102-1020 - Unit donations-2026-11-02-1003 by ticker-1004, status partial:
-- [What the 2026-11-02 1427 unit added part 1](run-20261102-1427-p1.md) - run-20261102-1427 - Unit donations-2026-11-02-1403 by ticker-1412, status partial:
+- [What the 2026-11-02 0719 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-0719-p1.md) - run-20261102-0719 - Unit donations-2026-11-02-1055 by ticker-0704, session about
+- [What the 2026-11-02 0719 unit added part 2](../../_run_notes_/alliance-donations/run-20261102-0719-p2.md) - run-20261102-0719 - Donate failure, three methods, rule R2:
+- [What the 2026-11-02 1020 unit added](../../_run_notes_/alliance-donations/run-20261102-1020.md) - run-20261102-1020 - Unit donations-2026-11-02-1003 by ticker-1004, status partial:
+- [What the 2026-11-02 1427 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-1427-p1.md) - run-20261102-1427 - Unit donations-2026-11-02-1403 by ticker-1412, status partial:
 - [What the 2026-11-02 1427 unit added part 2](run-20261102-1427-p2.md) - run-20261102-1427 - Carryover, repeated: this unit's camera pan
-- [What the 2026-11-02 1810 unit added part 1](run-20261102-1810-p1.md) - run-20261102-1810 - Unit donations-2026-11-02-1344 by ticker-1755, session about
-- [What the 2026-11-02 1810 unit added part 2](run-20261102-1810-p2.md) - run-20261102-1810 - Direction to the next donations unit,
-- [What the 2026-11-02 1923 unit added - stranded](run-20261102-1923.md) - run-20261102-1923 - Unit donations-2026-11-02-1803 by ticker-1904, session closing
-- [What the 2026-11-03 0441 unit added part 1](run-20261103-0441-p1.md) - run-20261103-0441 - Ticker-0434, unit donations-2026-11-03-0910, about 04:41 local,
+- [What the 2026-11-02 1810 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-1810-p1.md) - run-20261102-1810 - Unit donations-2026-11-02-1344 by ticker-1755, session about
+- [What the 2026-11-02 1810 unit added part 2](../../_run_notes_/alliance-donations/run-20261102-1810-p2.md) - run-20261102-1810 - Direction to the next donations unit,
+- [What the 2026-11-02 1923 unit added - stranded](../../_run_notes_/alliance-donations/run-20261102-1923.md) - run-20261102-1923 - Unit donations-2026-11-02-1803 by ticker-1904, session closing
+- [What the 2026-11-03 0441 unit added part 1](../../_run_notes_/alliance-donations/run-20261103-0441-p1.md) - run-20261103-0441 - Ticker-0434, unit donations-2026-11-03-0910, about 04:41 local,
 - [What the 2026-11-03 0441 unit added part 2](run-20261103-0441-p2.md) - run-20261103-0441 - Closing state, unverified by the hard
-- [What the 2026-11-03 0521 and 0621 units added](run-20261103-0521-p1.md) - run-20261103-0521 - Ticker-0504, unit donations-2026-11-03-1241, about 05:21 local,
+- [What the 2026-11-03 0521 and 0621 units added](../../_run_notes_/alliance-donations/run-20261103-0521-p1.md) - run-20261103-0521 - Ticker-0504, unit donations-2026-11-03-1241, about 05:21 local,
 - [What the 2026-11-03 0521 and 0621 units added](run-20261103-0521-p2.md) - run-20261103-0521 - 0621 entry: the game was left
 - [What the 2026-11-03 0521 and 0621 units added](run-20261103-0521-p3.md) - run-20261103-0521 - 0621 method retirement: no fourth tap
 - [Open questions part 1](open-questions-p1.md) - open-questions - Donation Count replenishment mechanism - rate,
