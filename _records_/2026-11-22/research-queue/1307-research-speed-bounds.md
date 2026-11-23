@@ -1,10 +1,10 @@
 ---
 title: Research speed of the account - bounds from the queue timers - 2026-11-23 13:16Z
 created: 2026-11-23T05:07:00-08:00
-modified: 2026-11-23T05:20:00-08:00
+modified: 2026-11-23T06:09:00-08:00
 level: L3
-version: 0.4.0
-description: The account's research speed from the Coin Output V and Food Output V timers, first without and then with the speed-up items the other device used; the current bound is a divisor of about 2.2 (plus 121 percent)
+version: 0.5.0
+description: The account's research speed - first estimates from the queue timers, superseded by the clean read at the start of Iron Output V - divisor 3.678 (plus 268 percent)
 status: done
 activity: research-queue
 run_id: research-queue-2026-11-23-1307-speed-bounds
@@ -23,10 +23,10 @@ verified: base time 485,100 s from /tmp/oilres/aoo-sheet.csv (a guide sheet, [G]
 - Slot 1, Food Output V: 28h33m08s left at 12:56:50Z, start after 12:09:04Z: effective 28h33m to 29h18m.
 - Backpack, 13:11Z against 11:26Z: the tech speed-up items (blue disc, 8h and 1h) fell by 3,960 minutes; general and construction items were not used.
 
-## Current bound [D]
+## Current bound [M] (measured at 14:00:54Z)
 
-The first reading (divisors 5.02 and 4.6 to 4.7, speed +402 percent) assumed no speed-up was used and is SUPERSEDED (sidecar steps 1 and 2). With 66 hours of speed-ups split between two nodes that share one base time and one multiplier, the only consistent solution is a natural duration of 60.7 to 61.1 hours each (about 34 h of speed-up on Coin, 32 h on Food): divisor M = 2.21 to 2.22, research speed about +121 percent. The 879 base days on two labs take about 398 natural days. Convention: M is the divisor (base over effective); research speed is M minus 1; every ETA names both.
+The first readings (divisors 5.0, then 2.2) were estimates and are SUPERSEDED (sidecar steps 1 to 4). The clean read: Iron Output V started with no speed-up and a timer of 131,879 s (equal to the Finish Now clock), against the guide base 485,100 s: DIVISOR 3.678, research speed about +268 percent. The blue Research button of the same panel read 147,000 s (divisor 3.30) and is not the effective time: read the Finish Now clock. The progress-bar estimate (3.5 to 3.7) was right; the 66 hours of tech speed-ups seen gone from the Backpack were mostly NOT on these two nodes (about 20 h were). The 879 base days on two labs take about 239 natural days. Convention: M is the divisor; research speed is M minus 1; every ETA names both.
 
 ## Stock and assumptions
 
-Remaining: tech 11,400 min (7.9 days), general 351,687 min (244 days), construction 167,895 min. Assumed: all 3,960 minutes went to these two nodes, the guide base holds, no start-only bonus. A clean read (an idle node panel, 2026-11-24T14:59Z) settles it.
+Remaining after today's 1,505 tech minutes on Coin Output V: tech 9,895 min (6.9 days), general 351,687 min (244 days), construction 167,895 min. The guide base time of Output V level 1 held (485,100 s). Speed-up stock (251 days) exceeds the natural path (239 days), so oil, not the labs, limits the date if the stock is spent.
