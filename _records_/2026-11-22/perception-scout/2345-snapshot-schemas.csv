@@ -13,3 +13,6 @@ h_stocks,snap-h1-stocks.csv,about 20,kind (hero_shard or universal_shard or meda
 h_weapons,snap-h2-weapons.csv,about 6,hero;stars;weapon_state (none or locked or unlocked);weapon_level;named_shards;needed_next;universal_shards;note
 i_coin,snap-i1-coin.csv,about 8,sink;from_level;to_level;coin;other_cost;power_gain;time;note - coin per power is derived at ranking time
 j_promote,snap-j1-promote.csv,about 6,control;state;from_tier;to_tier;cap;cost_food;cost_iron;cost_coin;time_per_troop;power_per_troop;requirement;toast_text;note
+k_market,snap-k1-market.csv,about 14,"surface (market or challenge or bingo or pool);row;item_or_source;qty;currency;price;availability_or_cap;timer;note - first row is the cash balance, currency as the icon shows"
+l_clock,snap-l1-clock.csv,about 10,"item;exact_text;days_left;read_utc;end_utc_computed;source_screen;note - season icon, Age of Oil, Black Market, Obelisk, server clock"
+m_store,snap-m1-stores.csv,about 60,kind (balance or item);store;tab;item;currency;price;limit_over_stock;refresh;balance;note - balance rows name the screen that shows the currency

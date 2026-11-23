@@ -1,0 +1,8 @@
+id,plan_item,trigger_event,trigger_utc,due_by_utc_plus_2h,started_utc,status_at_08_36Z,note
+T1,P1,"read capacity and the hospital (scout, now)",2026-11-23T08:23Z (plan landed),2026-11-23T10:23Z,2026-11-23T08:00Z (hospital read by the operator),partly done,"hospital, tier census and Drill Ground Lv.28 read; Expansion and Extra Drill Ground nodes and the promote panel unread"
+T2,measure,"fixed-state slot A, 02:00Z to 04:00Z",2026-11-23T02:00Z,2026-11-23T06:00Z,2026-11-23T03:55Z,"read on time, unfixed",taken before collecting; collect-first not recorded
+T3,measure,"fixed-state slot B, 13:00Z to 15:00Z",2026-11-23T13:00Z,2026-11-23T17:00Z,,not yet due,
+T4,P2,"first free lab, about 11:43Z, to the cheapest capacity source",2026-11-23T11:43Z,2026-11-23T13:43Z,,not yet due,lab time from the 07:48Z read of 03:55:06 left
+T5,P3,"Lv.27 T9 x726 finishes, collect the same day",2026-11-23T19:56Z,2026-11-23T21:56Z,,not yet due,collect needs Drill Ground room; refused 7 times so far
+T6,P2,"first free builder, 2026-11-24T09:20Z, Drill Ground lowest first",2026-11-24T09:20Z,2026-11-24T11:20Z,,not yet due,
+T7,P3,"Lv.30 T10 x793 finishes, collect the same day",2026-11-24T11:18Z,2026-11-24T13:18Z,,not yet due,

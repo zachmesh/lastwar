@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T08:20:00Z
+modified: 2026-11-23T10:08:00Z
 level: L2
-version: 0.7.0
+version: 0.9.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -13,33 +13,29 @@ grounded_in:
 
 # Handover - coordinator
 
-Updated 2026-11-23 08:20Z (Mac UTC; the owner gateway's time labels ran ahead of the Mac clock, so quote `date -u`). Earlier versions are in git history.
+Updated 2026-11-23 09:25Z (Mac UTC; quote `date -u`, the gateways' labels have run ahead). Earlier versions are in git history.
 
 ## Holder, clock, roster
 
-- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s); the 4-hour Secrets claim reminder `schedule-7565d79f-3d26-4c36-a3f9-54375f517d85` (08:51Z; a backup unit is staged).
-- TEAM.yaml 0.7.0: 10 roster rows (coordinator plus operator `session-7f6dd658-ebba-4854-9a29-e2f173975825`, scout, researcher, planner, coach, toolsmith, scribe, integrator `session-bc838015-7852-464e-8cab-cf2fcc70a335`, strategist `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`). Steer A (`session-eb024f72-e661-4a77-9303-66af95dbcfd1`) is the owner gateway, steer and watchdog, not a seat. Respawn an operator past 88 percent context. Check the target id before every send.
+- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s); daily `schedule-e1887d97` (12:00Z word-budget `watch`); weekly `schedule-fee71877` (Sundays 17:00 PT strategy review).
+- TEAM.yaml 0.7.2: 10 roster rows; operator is now `session-c08193d1-e6c0-489e-aa09-f812877c65ec` (09:07Z). Steer A (`session-eb024f72-e661-4a77-9303-66af95dbcfd1`) and Steer B (`session-e127662e-07ba-4385-b905-3d0e90fd1eeb`) both relay the owner; if two orders collide, tell Steer A.
+
+## Respawn checklist (owner order: Sonnet 5.5 xhigh for every seat)
+
+Respawn an operator past 85 percent context (read its handover file first). Spawn ONLY with `_tools_/spawn_seat.py` (when landed) or, until then, `session-relay spawn` with `--model claude-sonnet-5-5 --effort xhigh`; READ BACK with `inspect`; never leave the host default (opus). Run `_tools_/model_guard.py --apply` in each tick once it lands.
 
 ## How a tick runs
 
-`queue.py next`, check, dispatch in one turn; one unit, one reply; chain on each verified reply; no-op while the operator plays. Sonnet, 8 steps, one action per turn. Pre-start `killall -9 UserNotificationCenter NotificationCenter`. Never stop the game; decide operational choices and tell Steer A afterwards. Fixed: no purchase, diamond spend, speed-up, PvP, diplomacy or ally exchange. The stale-tool guard (issue 694) refuses `next` and `enqueue` when `queue.py` differs from origin's; a bounded disclosed bypass `LASTWAR_QUEUE_ALLOW_STALE_TOOL=1` is allowed until PR 876 merges or 09:15Z.
+`queue.py next`, dispatch in one turn, chain on each verified reply, no-op while the operator plays. Game never stops. Fixed lines: no purchase, diamond spend, Finish Now, PvP or diplomacy; bounded speed-ups and store spending only under decisions 2410 and 2425. Never name the owner's in-game name.
 
-## Growth Epic (867) and its rules
+## Growth and the owner's rules
 
-Strategy v2.0 (capacity first; the strategist owns it) is unverified. Measured: Total Power 150,211,809 (Hero 44.1, Unit 42.3, Building 6.5, Drone 3.9, Tech 3.2 percent); 5,306 healed troops sit in the hospital because the Drill Ground is full (about 8.7M power); coin is bursty (35.3M at 04:03Z, 9.6M at 07:48Z; 16M to 26M a day between bursts). Decision records 2350 and 2401: resource-only starts under the 3x rule above the floors (food 100M, iron 150M, coin 10M), read first, collect first, press Complete, never cancel a running item. HOLD: no coin-costly start until the owner answers the coin split; conversion of resource chests to coin is just in time.
+Strategy v2.0 (the Strategist owns it, forecast ledger exists). Coin is not the gate (406M read); slots are; hospital Collect is all-or-nothing. Box sample: up to 22 Mystery Supply Boxes, quantity read as exactly 1 before every Use. Slots: lab about 11:43Z, builders 2026-11-24T09:20Z.
 
-## In flight
+## Landings (Integrator; branch names, never push local main)
 
-PR 876 (tool landing, Integrator); then rebuild the records branch on the new origin tip (local main holds all 26 scribe branches); scribe lands strategy v2.0; operator on the inventory read; capacity reads T2, F1, P2; Black Market and season-clock reads pending in the scout's table; lab frees about 11:43Z, builders 2026-11-24T09:20Z; a collect unit for the Lv.27 batch at 19:55Z.
-
-## Privacy
-
-Only the owner's own in-game name is forbidden (convention 2.0.0); the tree is redacted; counts and paths only in messages.
+Merged: 873, 875 to 878, 880. Queue: serves-enforce (879), next-skips-expired, doc-budget-on-origin, integrator-wrapper, strategy-conformance, strategist-health. The tick runs `_tools_/tool-sync/tool_sync.py` first (silent when equal): the stale-tool guard refuses `next` when queue.py is behind origin's. Origin cannot be merged into local main (246 conflicts): records land as snapshots after the scribe's branches, excluding `_activities_`.
 
 ## Open owner decisions
 
-The coin split; any Black Market purchase (currency first).
-
-## Lessons
-
-Verify others' figures before building on them; deliver untracked records before a landing; take `next` without re-reading history.
+None (register OD-20261123-06 to -16 decided).

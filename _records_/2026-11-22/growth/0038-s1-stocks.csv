@@ -1,0 +1,16 @@
+kind,name,count,tab,note
+medal,Skill Medal,9521,Heroes,For hero skill upgrades. Read by description at 08:00Z and 08:38Z
+universal_shard,UR Hero Universal Shard,not visible,Heroes,"Use this item to promote hero tier of the same rarity. Row 4 tile 3, count cut off by the fold; a drag jumps several rows past it"
+universal_shard,SSR Hero Universal Shard,not visible,Heroes,"same description. Row 4 tile 4, count cut off"
+other,Hero Recruitment Ticket,126,Heroes,"Use it for Hero Recruitment, with a chance to recruit UR Hero. Gold bars icon, row 3"
+other,Survivor Recruitment Ticket,not visible,Heroes,"Use it for Survivor Recruitment, with a chance to recruit UR Survivors! Row 4 tile 2"
+other,New Era Recruitment Ticket,not visible,Heroes,"name read at 08:18Z, description cut off. Row 4 tile 1"
+hero_shard,"purple hero-portrait puzzle pieces, five tiles","14, 7, 13, 12, 9",Heroes,"heroes not named, tiles not tapped; seen after two drags"
+hero_shard,"blue hero-portrait puzzle pieces, four tiles","91, 2, 95, 23",Heroes,heroes not named
+hero_shard,"orange round hero-portrait medallions, seven tiles","20, 1, 1, 1, 2, 2, 2",Heroes,"meaning not read (shard or medal), heroes not named"
+hero_shard,orange and purple portrait puzzle rows seen after the first drag,"orange 46, 23, 1, 2, 21, 21, 16, 3, 76, 8, 2, 4, 8; purple 3, 51, 1",Heroes,"model recollection of an unsaved frame, unverified"
+medal,blue medal,3000,Heroes,"tile between the two EXP book stacks, name not read"
+other,EXP book stacks,3 and 100,Heroes,names not read
+weapon_shard,Universal Exclusive Weapon Shard,not located,Heroes or Gear,"earlier figure 417 (zombie store 2026-11-10); Gear tab shows exclusive weapons Lv.40 x2, Lv.30, Lv.20 x3 by portrait, no shard tile named"
+ore,Upgrade Ore and other upgrade materials,not named,Gear,"tiles seen: Drone Parts 183 (named), blue drone tile 2.8M, gold lightning book 6,276, blue ingot 2,600, crystal blocks 36.0K, silver bolt 50.2K, blue triangle crystal 9,429, red blueprint 12, cream blueprint 17, golden honeycomb 3"
+other,Mystery Supply Box,299,Special,"Completing Secret Tasks grants Mystery Supply Boxes, said to contain Universal UR Shards and 5,000 Diamonds. Not opened"

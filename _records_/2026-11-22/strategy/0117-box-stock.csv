@@ -1,0 +1,16 @@
+item,count,unit_value,unit,total_M,kind,use_order,reserve,evidence
+Coin Chest UR,87,2.43,M coin,211.4,fixed coin,1 bulk coin,part of 50M emergency not needed here,read 0009
+Coin Chest SSR,71,0.81216,M coin,57.7,fixed coin,"2 bulk coin, keep as emergency",reserve R5 with SR,read 0009
+Coin Chest SR,122,0.10152,M coin,12.4,fixed coin,3 top-ups under 5M,reserve R5 with SSR,"read 0009, one opened 09:04Z"
+Resource Chest plain,20753,0.006,M coin or 0.010 M food or iron,124.5,plain choice,4 small top-ups in bulk,none,read 0009; bulk quantity untested
+Coin items 6.0K and 600,5887,0.0008,M coin,4.5,fixed coin,4 with plain chests,none,labels only
+Resource Choice Chest SR,1523,0.10152,M coin or iron or food,154.6,choice,5 coin only if needed,release by decision,SR two-step measured 08:59Z
+Resource Choice Chest SSR,587,0.81216,M coin or iron or food,476.7,choice,6,keep with UR at least 1.0G,amounts by analogy
+Resource Choice Chest UR,552,2.43,M coin or 4.06M iron or food,1341.4,choice,7 last,keep with SSR at least 1.0G,amounts by analogy
+Food Chest UR,169,4.06,M food,686.1,typed food,food shortfall only,none,read 0009
+Food Chest SSR SR R,9448,unread,M food,unread,typed food,after the read,none,counts unverified
+Iron Chest UR SSR SR R,9701,4.06 1.35 0.169 0.017,M iron,4394,typed iron,iron shortfall only,none,read 0009
+Violet Loot,139,unread,random resources or materials,unread,random,sample up to 22 then top-ups,none,text only
+Mystery Supply Box,365,unknown,"chest, rare pool unknown",unknown,random,PL-13 sample up to 22,none,n = 1
+Skill Medal and hero chests,9521,unread,hero levers,unread,hero,Thursday window only,not coin,read 0009
+Diamond items,277990,n/a,diamonds,n/a,diamond,never,never,labels only

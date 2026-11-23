@@ -1,0 +1,10 @@
+control,state,from_tier,to_tier,cap,cost_food,cost_iron,cost_coin,time_per_troop,power_per_troop,requirement,toast_text,note
+"green up arrow on the Lv.7 card, top-left corner","enabled, green, no red dot",Lv.7,not shown,count on card 1116,not shown,not shown,not shown,not shown,not shown,none shown,none,not tapped: lower-tier count is not zero (brief rule)
+green up arrow on the Lv.8 card,"enabled, green, no red dot",Lv.8,not shown,count on card 2141,not shown,not shown,not shown,not shown,not shown,none shown,none,not tapped
+green up arrow on the Lv.9 card,"enabled, green, no red dot",Lv.9,not shown,count on card 1878,not shown,not shown,not shown,not shown,not shown,none shown,none,"tapped twice at 08:02Z in run 20261123T080205Z-eb780c: only selected the card and switched the six stats to Lv.9 (Power 1352 Morale 625.0 Load 2000 HP 4167.45 Attack 33.87 Defense 6.96); no popup, no toast"
+Lv.6 card,cut off at the left edge,Lv.6,n/a,count not visible,n/a,n/a,n/a,n/a,n/a,n/a,none,arrow state unknown
+(i) help icon,absent in the TRAIN UNITS panel,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,none,searched at 08:23Z on Barracks Lv.30
+Speed Up button (bottom centre),"enabled, blue",n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,none,not tapped; only button besides the panel X; the busy barracks shows Training in progress 1d 02:55:29 and Lv.10 x793
+panel Power stat,read,Lv.10 selected on Lv.30,n/a,n/a,n/a,n/a,n/a,n/a,1647 (Lv.10); 1352 (Lv.9 on the Lv.27 barracks),matches the guide claim 1647 and 1352 power per troop (unverified source),none,Lv.8 and Lv.7 per-troop power unread; guide says Lv.8 1063
+pistol on idle Barracks Lv.24,"toast, no panel",n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,Drill Ground Full named,Drill Ground Full: Unable to add more units.,"read 07:49Z in run 20261123T074925Z-33ab37, not repeated"
+building tagged Hospital Lv.20 (upper right of the group),"menu opened: blue people icon, orange tent icon, green up arrow; no pistol",n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,none,"orange tent icon not tapped; earlier run 20261123T075737Z-10f416 read this building as Barracks Lv.20, unresolved"

@@ -1,0 +1,24 @@
+rank,activity,executed_14d,done_or_by_design_rate,done_rate,rule_failed_per_100,rule_failed_source,oldest_unverified_rule_age_days,rank_done_or_by_design,rank_rule_failed,rank_staleness,rank_sum
+1,daily-missions,7,0.43,0.29,57.1,"proxy (blocker c,d,e,f)",15,5,4,8,17
+2,vip-rewards,6,0.50,0.50,50.0,"proxy (blocker c,d,e,f)",21,7,6,5,18
+3,troop-training,21,0.10,0.00,76.2,"proxy (blocker c,d,e,f)",1,1,1,19,21
+4,alliance-help,18,0.61,0.61,38.9,"proxy (blocker c,d,e,f)",22,11,9,3,23
+5,resource-collection,44,0.34,0.02,63.6,"proxy (blocker c,d,e,f)",-1,3,2,22,27
+6,alliance-train,10,0.70,0.20,20.0,"proxy (blocker c,d,e,f)",29,13,13,1,27
+7,survivor-intake,27,0.22,0.15,63.0,"proxy (blocker c,d,e,f)",-1,2,3,23,28
+8,alliance-donations,44,0.50,0.00,47.7,"proxy (blocker c,d,e,f)",1,6,7,16,29
+9,radar-tasks,40,0.40,0.28,52.5,"proxy (blocker c,d,e,f)",-1,4,5,21,30
+10,zombie-invasion,36,0.50,0.00,41.7,"proxy (blocker c,d,e,f)",9,8,8,15,31
+11,shop-claims,26,0.58,0.50,34.6,"proxy (blocker c,d,e,f)",15,9,10,12,31
+12,perception-scout,51,0.61,0.12,33.3,"proxy (blocker c,d,e,f)",15,10,11,11,32
+13,mail-rewards,17,0.71,0.59,17.6,"proxy (blocker c,d,e,f)",20,14,14,7,35
+14,arms-race,16,0.62,0.25,25.0,"proxy (blocker c,d,e,f)",14,12,12,13,37
+15,truck-plunder,8,0.88,0.00,12.5,"proxy (blocker c,d,e,f)",28,18,18,2,38
+16,alliance-gifts,14,0.86,0.86,14.3,"proxy (blocker c,d,e,f)",20,17,16,6,39
+17,daily-activities,6,0.83,0.00,16.7,"proxy (blocker c,d,e,f)",14,16,15,14,45
+18,event-claims,9,0.89,0.44,11.1,"proxy (blocker c,d,e,f)",15,19,19,9,47
+19,secret-missions,16,0.94,0.88,0.0,"proxy (blocker c,d,e,f)",21,20,23,4,47
+20,building-queues,7,0.71,0.71,14.3,"proxy (blocker c,d,e,f)",-1,15,17,20,52
+21,hidden-treasures,11,1.00,1.00,0.0,"proxy (blocker c,d,e,f)",15,22,21,10,53
+22,alliance-duel,20,0.95,0.90,0.0,"proxy (blocker c,d,e,f)",1,21,20,17,58
+23,research-queue,7,1.00,1.00,0.0,"proxy (blocker c,d,e,f)",1,23,22,18,63

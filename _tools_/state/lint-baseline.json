@@ -1,0 +1,302 @@
+{
+ "version": 1,
+ "tool_version": "1.7.0",
+ "generated_at": "2026-11-23T08:27:26Z",
+ "git_head": "24e619185b8d4f827da7146676e7d886659ba12d",
+ "anchor": "24e619185b8d4f827da7146676e7d886659ba12d",
+ "documents": 10356,
+ "over_300": 5641,
+ "over_500": 3420,
+ "legacy": 3419,
+ "new": 1,
+ "gate_errors": {
+  "document-concision": 1,
+  "entry-points": 433,
+  "type-instance-trees": 29
+ },
+ "new_errors": {
+  "document-concision": 1,
+  "entry-points": 2,
+  "type-instance-trees": 0
+ },
+ "new_errors_total": 3,
+ "exempt_documents": 0,
+ "legacy_structural": 460,
+ "by_top_folder": {
+  "(root)": {
+   "documents": 2,
+   "over_300": 1,
+   "over_500": 1,
+   "legacy": 1,
+   "new": 0,
+   "words": 616
+  },
+  "_activities_": {
+   "documents": 2461,
+   "over_300": 1444,
+   "over_500": 0,
+   "legacy": 0,
+   "new": 0,
+   "words": 730314
+  },
+  "_conventions_": {
+   "documents": 49,
+   "over_300": 17,
+   "over_500": 11,
+   "legacy": 11,
+   "new": 0,
+   "words": 43599
+  },
+  "_knowledge_": {
+   "documents": 54,
+   "over_300": 12,
+   "over_500": 1,
+   "legacy": 1,
+   "new": 0,
+   "words": 9461
+  },
+  "_logs_": {
+   "documents": 3,
+   "over_300": 0,
+   "over_500": 0,
+   "legacy": 0,
+   "new": 0,
+   "words": 151
+  },
+  "_queue_": {
+   "documents": 2754,
+   "over_300": 21,
+   "over_500": 0,
+   "legacy": 0,
+   "new": 0,
+   "words": 60438
+  },
+  "_records_": {
+   "documents": 4966,
+   "over_300": 4130,
+   "over_500": 3407,
+   "legacy": 3406,
+   "new": 1,
+   "words": 5095533
+  },
+  "_seats_": {
+   "documents": 42,
+   "over_300": 4,
+   "over_500": 0,
+   "legacy": 0,
+   "new": 0,
+   "words": 6911
+  },
+  "_tools_": {
+   "documents": 25,
+   "over_300": 12,
+   "over_500": 0,
+   "legacy": 0,
+   "new": 0,
+   "words": 6557
+  }
+ },
+ "top": [
+  {
+   "path": "_records_/2026-11-08/INDEX.md",
+   "words": 37502
+  },
+  {
+   "path": "_records_/2026-11-21/INDEX.md",
+   "words": 34728
+  },
+  {
+   "path": "_records_/2026-11-19/INDEX.md",
+   "words": 34017
+  },
+  {
+   "path": "_records_/2026-11-03/INDEX.md",
+   "words": 33917
+  },
+  {
+   "path": "_records_/2026-11-10/INDEX.md",
+   "words": 33823
+  },
+  {
+   "path": "_records_/2026-11-18/INDEX.md",
+   "words": 33770
+  },
+  {
+   "path": "_records_/2026-11-06/INDEX.md",
+   "words": 32646
+  },
+  {
+   "path": "_records_/2026-11-05/INDEX.md",
+   "words": 32414
+  },
+  {
+   "path": "_records_/2026-11-07/INDEX.md",
+   "words": 32017
+  },
+  {
+   "path": "_records_/2026-11-09/INDEX.md",
+   "words": 31989
+  },
+  {
+   "path": "_records_/2026-11-11/INDEX.md",
+   "words": 30332
+  },
+  {
+   "path": "_records_/2026-11-16/INDEX.md",
+   "words": 30036
+  },
+  {
+   "path": "_records_/2026-11-22/INDEX.md",
+   "words": 27073
+  },
+  {
+   "path": "_records_/2026-11-02/INDEX.md",
+   "words": 26912
+  },
+  {
+   "path": "_records_/2026-11-04/INDEX.md",
+   "words": 25043
+  },
+  {
+   "path": "_records_/2026-11-12/INDEX.md",
+   "words": 24619
+  },
+  {
+   "path": "_records_/2026-11-20/INDEX.md",
+   "words": 22654
+  },
+  {
+   "path": "_records_/2026-11-01/INDEX.md",
+   "words": 21914
+  },
+  {
+   "path": "_records_/2026-11-17/INDEX.md",
+   "words": 17992
+  },
+  {
+   "path": "_records_/2026-11-15/INDEX.md",
+   "words": 13834
+  },
+  {
+   "path": "_records_/2026-10-31/INDEX.md",
+   "words": 12453
+  },
+  {
+   "path": "_conventions_/local-conventions/task-unit-queue-design.md",
+   "words": 12378
+  },
+  {
+   "path": "_records_/2026-11-21/perception-scout/observation.md",
+   "words": 11835
+  },
+  {
+   "path": "_records_/2026-11-08/perception-scout/observation.md",
+   "words": 11254
+  },
+  {
+   "path": "_records_/retro/2026-11-21.md",
+   "words": 11213
+  },
+  {
+   "path": "_records_/retro/2026-11-14.md",
+   "words": 10996
+  },
+  {
+   "path": "_records_/retro/2026-11-10.md",
+   "words": 10761
+  },
+  {
+   "path": "_records_/retro/2026-11-07.md",
+   "words": 10561
+  },
+  {
+   "path": "_records_/retro/2026-11-12.md",
+   "words": 10082
+  },
+  {
+   "path": "_records_/2026-10-28/INDEX.md",
+   "words": 10014
+  },
+  {
+   "path": "_records_/2026-10-30/INDEX.md",
+   "words": 10004
+  },
+  {
+   "path": "_records_/retro/2026-11-11.md",
+   "words": 9963
+  },
+  {
+   "path": "_records_/retro/2026-11-06.md",
+   "words": 9331
+  },
+  {
+   "path": "_records_/retro/2026-11-13.md",
+   "words": 9290
+  },
+  {
+   "path": "_records_/2026-11-14/INDEX.md",
+   "words": 8568
+  },
+  {
+   "path": "_records_/retro/2026-11-09.md",
+   "words": 8526
+  },
+  {
+   "path": "_records_/retro/2026-11-05.md",
+   "words": 8498
+  },
+  {
+   "path": "_records_/2026-10-29/INDEX.md",
+   "words": 8444
+  },
+  {
+   "path": "_records_/retro/2026-11-08.md",
+   "words": 8292
+  },
+  {
+   "path": "_records_/retro/2026-11-03.md",
+   "words": 8264
+  },
+  {
+   "path": "_records_/2026-10-26/INDEX.md",
+   "words": 8222
+  },
+  {
+   "path": "_records_/retro/rolling-7d.md",
+   "words": 8179
+  },
+  {
+   "path": "_records_/2026-11-13/INDEX.md",
+   "words": 7751
+  },
+  {
+   "path": "_records_/retro/2026-11-04.md",
+   "words": 6958
+  },
+  {
+   "path": "_records_/retro/2026-11-02.md",
+   "words": 6849
+  },
+  {
+   "path": "_records_/retro/2026-11-01.md",
+   "words": 6308
+  },
+  {
+   "path": "_conventions_/local-conventions/perception-driven-queue.md",
+   "words": 6135
+  },
+  {
+   "path": "_records_/retro/2026-11-15.md",
+   "words": 5884
+  },
+  {
+   "path": "_records_/2026-11-03/perception-scout/observation.md",
+   "words": 5739
+  },
+  {
+   "path": "_conventions_/local-conventions/miss-audit-2026-10-31.md",
+   "words": 5142
+  }
+ ],
+ "growth": []
+}

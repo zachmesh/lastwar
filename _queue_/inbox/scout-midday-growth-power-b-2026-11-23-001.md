@@ -1,0 +1,43 @@
+---
+unit: scout-midday-growth-power-b-2026-11-23-001
+regular: scout-midday
+activity: perception-scout
+segment: 2
+priority: 2
+created_at: 2026-11-23T07:53:16Z
+expires_at: 2026-11-23T15:00:00Z
+planned_for:
+not_before: 2026-11-23T13:00:00Z
+window: fixed state power baseline slot B read only
+est_minutes: 10
+serves: baseline (fixed-state Total Power)
+chain_id: growth-power-b-2026-11-23
+chain_seq: 1
+attempts: 0
+max_attempts: 3
+claimed_by:
+claimed_at:
+lease_until:
+---
+
+# scout-midday
+
+Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
+
+## Brief (planner, fixed-state power baseline slot B, strategy v1.4)
+
+serves: baseline (fixed-state Total Power)
+
+Read-only unit for the coach, window 13:00Z to 15:00Z. Rules and red lines: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md` and stop rules R1 to R7 in `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md`; never press Power Up, Train, requeue, Claim or Complete.
+
+COLLECT FIRST, because troops count only when collected. Read Total Power on the HUD with its decimals. Collect every finished barracks batch (tap its bubble or tent); read Total Power after each. Then press the Hospital Collect exactly ONCE, the one read per day: it is all-or-nothing and needs at least 5,306 free slots at once. On 2026-11-23 at 08:00Z it failed with 'Drill Ground Full: Unable to add 5306 units'; if the toast appears, write it verbatim with the number and the time and stop. Never retry it. The green arrow on a barracks is the building Upgrade: never press it. Collecting is the only exception to R1.
+
+Then open Power Details: tap the HUD figure once, expand every chevron, swipe up with a screenshot after each scroll, close with X. Record Total Power and EVERY category and sub-row including tech and troop, the UTC time to the second, and whether troops are marching or wounded.
+
+Run `python3 _tools_/resource_map.py snap total_power=<n> power_hero=<n> power_drone=<n> power_building=<n> power_tech=<n> power_troop=<n> food=<n> iron=<n> coin=<n> --note <this unit id>`, adding a pair for any other category. K or M numbers only: write 1.1G as 1100M. The power_* keys print an unknown-resource warning but are saved.
+
+Slot B, 2026-11-23: no batch is due yet (Lv.27 T9 x726 about 19:53Z, Lv.30 T10 x793 about 11:13Z on 2026-11-24), so expect only the one Hospital attempt; log the exact power before and after it.
+
+At most 8 steps and 10 minutes. Do not enqueue a chain successor.
+
+Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

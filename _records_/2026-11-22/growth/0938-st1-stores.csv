@@ -1,0 +1,35 @@
+kind,store,tab,item,currency,price,limit_over_stock,refresh,balance,note
+balance,store,Honor,Honor medal balance,honor medal,,,,130.1K,read 09:39Z and 09:40Z; earlier read 101.1K
+item,store,Honor,Gear Blueprint (MR) (Featured),honor medal,30000,2/2,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Gear Blueprint (UR),honor medal,10000,50/50,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Skill Chip Chest (UR),honor medal,50000,1/1,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Decoration Chest,honor medal,50000,1/1,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Universal Decor Component,honor medal,200,150/150,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,UR Hero Universal Shard,honor medal,3000,10/10,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,"10 per month; 30,000 for the whole stock"
+item,store,Honor,Drone Parts,honor medal,800,100/100,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Universal Exclusive Weapon Shard,honor medal,2500,25/25,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,"25 per month; 62,500 for the whole stock"
+item,store,Honor,Dielectric Ceramic,honor medal,800,100/100,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,Resource Choice Chest (UR),honor medal,4000,100/100,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,"UR choice chest, 2.43M per chest per the 0054 chain"
+item,store,Honor,Hero Recruitment Ticket,honor medal,2000,100/100,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,
+item,store,Honor,50 Stamina,honor medal,1000,50/50,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,"stamina item, not to be bought or burned by rule"
+item,store,Honor,Emote: Victory Fest,honor medal,cut off,not seen,00:00 on the 1st of every month (server time); 7d 16:19:34 at about 09:40:50Z,130.1K,bottom edge cut off; more rows may lie below
+balance,store,Alliance,alliance currency balance,alliance coin icon,,,,"81,010","read 09:39:24Z; the brief's earlier 301.3K and 347.9K were Alliance Contribution, a different figure or stale"
+item,store,Alliance,UR Hero Universal Shard,alliance coin icon,,SOLD,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",
+item,store,Alliance,Survivor Recruitment Ticket,alliance coin icon,,SOLD,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",
+item,store,Alliance,Violet Shard,alliance coin icon,,SOLD,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",
+item,store,Alliance,Mason Shard,alliance coin icon,1000,30/30,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010","not sold out, not red"
+item,store,Alliance,Drone Parts,alliance coin icon,,SOLD,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",
+item,store,Alliance,Lv.1 Drone Component Chest,alliance coin icon,,SOLD,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",
+item,store,Alliance,Skill Chip Chest (SR),alliance coin icon,not shown,not shown,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",price and stock cut off in the frame
+item,store,Alliance,Drone Combat Boost EXP Card,alliance coin icon,not shown,not shown,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",price and stock cut off in the frame
+item,store,Alliance,8-Hour Shield,alliance coin icon,not shown,7/7,00:00 every Monday (server time); 6d 16:20:37 at 09:39:24Z,"81,010",price cut off in the frame
+balance,store,VIP,red gem balance,red gems,,,,"11,136","seen on opening, not requested; every price is in red gems, never tapped"
+item,store,VIP,Food Chest (SR),red gems,40,100/100,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Iron Chest (SR),red gems,40,100/100,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Coin Chest (SR),red gems,40,100/100,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Universal Decor Component,red gems,100,50/50,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,50 Stamina,red gems,60,5/5,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Superalloy,red gems,6,100/100,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Advanced Teleporter,red gems,cut off,3/3,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Drone Parts,red gems,cut off,50/50,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+item,store,VIP,Skill Medal,red gems,cut off,2000/2000,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"

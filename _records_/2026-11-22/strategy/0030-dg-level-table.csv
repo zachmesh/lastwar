@@ -1,0 +1,6 @@
+drill_ground,to_level,slots_gained,building_power,power_if_slots_filled_T10,coin_M,food_M,iron_M,builder_days,speed_up_minutes_to_finish,power_per_M_coin,power_per_builder_day,evidence
+"lowest ground (read Lv.26 after 11-22 17:30 PT, unread)",27,200,21600,351000,59.5,221.0,74.8,10.12,14569,5899,34692,"guide x0.85, speed factor 0.4706; unread on this account"
+lowest then next (guide row),28,200,25600,355000,83.3,314.5,102.0,14.16,20397,4262,25063,"guide x0.85, speed factor 0.4706; unread on this account"
+the Lv.28 ground (F1 read 0035),29,200,30400,359800,119.0,442.0,144.5,18.39,26481,3024,19565,"MEASURED panel 0035 (coin, iron, time, power, +200); food line not recorded"
+second ground then lowest (guide row),30,200,35800,365200,161.5,612.0,204.0,23.91,34424,2261,15277,"guide x0.85, speed factor 0.4706; unread on this account"
+Lv.30 ground,31,0,0,0,,,,,,,,"needs a Lv.31 HQ (prerequisite Base Expansion research unmet, 0035); not available"

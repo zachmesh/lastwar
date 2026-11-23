@@ -1,0 +1,22 @@
+report,at_utc,kpi,window,numerator,denominator,value,note
+conf-1,2026-11-23T08:36Z,a1 executed units with any serves tag,6h,3,32,9.4%,"3 snapshot units, all body line; 29 regulars minted before the field"
+conf-1,2026-11-23T08:36Z,a1 executed units with any serves tag,24h,3,63,4.8%,
+conf-1,2026-11-23T08:36Z,a2 executed units serving a growth action,24h,0,63,0.0%,"no unit tagged to P2, P3, P5 to P8 has executed; state-changing growth actions 0"
+conf-1,2026-11-23T08:36Z,a3 queued units by tag class,now,21,79,26.6% growth action,"P8 16, P2 4, P3 1; read or measure 20 (25.3%); upkeep 38 (48.1%)"
+conf-1,2026-11-23T08:36Z,a4 busy slot-minutes started by a plan item,24h,0,6818,0.0%,"builders 1,680 + labs 2,880 + training 2,258 busy; all started by hand or by pre-plan regulars"
+conf-1,2026-11-23T08:36Z,b1 idle builder slot-minutes,24h,4080,5760,70.8%,carried forward over a 6 h unobserved gap
+conf-1,2026-11-23T08:36Z,b1 idle builder slot-minutes,6h,840,1440,58.3%,
+conf-1,2026-11-23T08:36Z,b2 idle lab slot-minutes observed,24h,0,2880,0.0%,16 h gap unobserved; lab reads contradict each other
+conf-1,2026-11-23T08:36Z,b3 idle training barracks minutes,24h,2062,4320,47.7%,3 of 4 barracks read; Lv.24 idle is capacity-blocked
+conf-1,2026-11-23T08:36Z,b3 idle training barracks minutes,6h,360,1080,33.3%,
+conf-1,2026-11-23T08:36Z,c plan triggers started within trigger plus 2h,now,0,0,n/a,"7 triggers listed, none past its +2h limit; first measurable at 13:43Z"
+conf-1,2026-11-23T08:36Z,d1 partial rate of executed units,6h,14,32,43.8%,partial plus failed 50.0%; matches Steer A
+conf-1,2026-11-23T08:36Z,d1 partial rate of executed units,24h,36,63,57.1%,partial plus failed 60.3%; matches Steer A
+conf-1,2026-11-23T08:36Z,d2 partial rate of executed growth-chain units,24h,2,3,66.7%,"3 snapshot units: 1 done, 2 partial (blockers f and c)"
+conf-1,2026-11-23T08:36Z,d3 blocker letters of partial or failed units,24h,"h 20, e 5, f 5, b 2, c 2",38,top two h and e/f,"a window closure 1, d 1, g 1, none 1; h is by-design partial"
+conf-1,2026-11-23T08:36Z,d4 Drill Ground Full refusals,04:17Z to 08:33Z,7,,7 in 4.3 h,"6 records; Hospital Collect has no quantity selector, all-or-nothing"
+conf-1,2026-11-23T08:36Z,"e1 power gain per day, hero",2026-11-08 to 11-22,65799,,per day,plan target not set; charter review 2026-11-30
+conf-1,2026-11-23T08:36Z,"e1 power gain per day, drone",2026-11-08 to 11-22,2291,,per day,
+conf-1,2026-11-23T08:36Z,"e1 power gain per day, building",2026-11-08 to 11-22,-37271,,per day,"includes the 641,100 step of 11-08"
+conf-1,2026-11-23T08:36Z,"e1 power gain per day, unit plus tech",2026-11-08 to 11-22,-6020,,per day,
+conf-1,2026-11-23T08:36Z,e2 collect-first fixed-state reads,since restart,0,1,0 of 1,slot A 03:55Z unfixed; slot B pending

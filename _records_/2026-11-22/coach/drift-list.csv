@@ -1,0 +1,10 @@
+id,drift,evidence,suggested_owner,severity
+D1,RETIRED: the serves field survives claim and complete in the frontmatter when it is present at claim time,"done copy of scout-midday-growth-snapshot-2026-11-23-003, claimed 08:35:30Z after the 08:29Z backfill and completed by 08:37:37Z, holds serves: snapshot (Story 868) in the frontmatter (read at 08:37:37Z); the three units I read first were claimed before the backfill, so my first finding was a pre-backfill artifact; 1 of the next 3 units claimed after the backfill is done, the other two pending as extra confirmation",none; no toolsmith fix needed,retired
+D2,executed units are almost all untagged,29 of 32 in 6 h and 60 of 63 in 24 h have no tag; they pre-date the field,planner,"low, shrinks as new units run"
+D3,"tags are free text, not plan item ids","9 distinct strings, none names P1 to P9; coverage needs a mapping the coach keeps",strategist and planner,medium
+D4,upkeep crowds the queue,38 of 79 queued units (48.1%) are upkeep against 21 growth actions; 2 blocker-b misses in 24 h,planner,medium
+D5,no state-changing growth action since the plan landed,"0 executed; all 21 queued growth actions wait on a trigger (11:43Z, 2026-11-24T09:20Z) or on Drill Ground room",coordinator,high
+D6,fixed-state read taken before collecting,"03:55Z read of 150,080,120 is unfixed; slot B due 13:00Z to 15:00Z",operator,medium
+D7,lab state reads contradict each other,10:10 and 13:10 PT reads versus 20:22 PT in research-queue/2022-queue-run.md:46-52; 16 h unobserved,operator,medium
+D8,the same refusal is re-probed,7 Drill Ground Full refusals in 4.3 h on Lv.24 and the hospital; the answer has not changed,planner,medium
+D9,growth runs outside the queue are not counted,"operator continuations 2344, 2357 and 0030 (9 runs) are records, not units, so unit KPIs understate growth effort",coordinator,low

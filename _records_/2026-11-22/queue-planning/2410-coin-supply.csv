@@ -1,0 +1,11 @@
+source,amount,basis,convertible_to_coin,rule,evidence
+PLANNING FIGURE,"405,976,800 coin READ (coin chests 281,458,800 plus Resource Chest 124,518,000)",read,yes,"plan only on this; the 1.97B inferred stays unverified until ONE Resource Choice Chest is opened (owner decision, record 2425)",_records_/2026-11-22/growth/0009-inventory-read.md
+HUD coin,9.6M at 2026-11-23T07:48Z,read,already coin,"coin in the base can be plundered, hold none above the next spend",_tools_/state/resources.jsonl row 2026-11-22T23:49:06
+"Coin Chests UR 87, SSR 71, SR 122","281,458,800 (2.43M, 812.16K, 101.52K each)",READ by description,"yes, open directly",first source for any conversion; fewest chests that cover the cost,_records_/2026-11-22/growth/0009-inventory-read.md
+"Resource Chest x20,753","124,518,000 (6K coin each)",READ by description,"yes, one chest at a time","last resort, too many taps",same record
+"Coin items 6.0K x174 and 600 x5,713","4,471,800",label only,yes,not used,same record
+"Resource Choice Chests UR 552, SSR 587, SR 1,523 (2,662)","1,972,712,880 (2.43M, 812.16K, 101.52K each)",INFERRED from the matching Coin Chest; the choice popup was never opened and a two-step conversion is assumed,"yes, after reading the popup","only if the read Coin Chests run out, and only after the popup read verifies the yield",same record
+Total coin obtainable,"2,383,161,480 (405,976,800 read, 1,972,712,880 inferred, 4,471,800 label only)",mixed,,coin is not the binding constraint; slots are,same record
+"Hero levers: Mystery Supply Box x299, Skill Medals x9,521, hero chests, blueprints, exclusive weapons, universal shards, Bond Badges, Guidebooks, Training Certificates",not converted,left alone,NEVER,"the 299 Mystery Supply Boxes hold 5,000 diamonds each and wait for the owner",same record; coordinator
+"Red lines: speed-ups about 352,000 minutes, stamina items, diamond items about 277,990 diamonds",not touched,left alone,NEVER,"never used, never converted",same record
+Campaign accumulation,about 16M to 26M a day between bursts (derived),derived,already coin,now secondary to the 2.38G store,2400-coin-history.csv

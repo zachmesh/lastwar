@@ -1,0 +1,17 @@
+surface,row,item_or_source,qty,currency,price,availability_or_cap,timer,note
+market,0,cash balance,10350,"cash (green banknote stack icon, blue plus button)",,,20d 16:30:28,"read 09:29:30Z; end near 2026-12-14T02:00Z; was 10,030 at 05:41Z"
+market,1,"top row left, Free ribbon: gray stacked item",1,free (ribbon),not shown,0 (Sold Out),,"unnamed, sold out"
+market,2,"top row middle, Featured ribbon: gray IV item with question mark",1,not shown (sold out),not shown,0 (Sold Out),,"unnamed, sold out"
+market,3,"top row right, Fantastic ribbon: 5m speed-up",12,not shown (sold out),not shown,0 (Sold Out),,sold out
+market,4,bottom row left: orange IV item with question mark,5,cash (green banknote icon),500,1,,"unnamed, not tapped"
+market,5,bottom row middle: purple chest,1,cash (green banknote icon),500,1,,"unnamed, not tapped"
+market,6,bottom row right: blue-silver chest with yellow chevrons,6,cash (green banknote icon),500,1,,"same icon as the blue-frame SR Resource Choice Chest; unnamed, not tapped"
+market,refresh,Refresh button,,free (button says Free),0,Refreshes (today) 62/62,,not pressed
+market,quick-buy,Quick Buy tick box,,,,empty (unticked),,not touched
+market,pack,"Pack button (gift icon, small red mark, top right)",,,,,,not opened; info icon top right not opened
+challenge,earned,Earned today,,cash,,550/600,6d 16:30:20 (event timer),was 470/600 at 05:41Z; Current Drop is the cash icon
+challenge,1,Radar Task (Double Rewards ribbon): Complete Radar Tasks to earn BM Cash,,cash,,counts toward the cap,,Go To not pressed
+challenge,2,Secret Mobile Squad (Special ribbon): This method doesn't count towards the BM Cash limit.,,cash,,outside the cap,,Go To not pressed
+challenge,3,Doom Elite: Earned today Black Market Cash 5,5,cash,,,,Go To not pressed
+challenge,4,Zombie: Earned today Black Market Cash 0,0,cash,,,,Go To not pressed
+bingo,final,Bingo Task final reward,,,,not visible on either tab,,no Bingo tab or section on the Challenge page; the 1.5K final reward stays unverified

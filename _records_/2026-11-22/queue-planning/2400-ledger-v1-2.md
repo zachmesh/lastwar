@@ -35,7 +35,7 @@ Guide data, unverified. Drill Ground L21 to L24: at least 14K to 30K (capacity c
 ## 4. Corrections and disclosures
 
 - The 11-09 fall is derived (149,217,331 to 146,730,949 is 2,486,382), cause unverified, probably a collection-state artifact. Wording from now: about 2.47M, cause unverified.
-- Edited by hand, all unclaimed: 13 fill briefs (v1.4 Complete rule, builder and lab priority, collect first); the two power units (collect first); time fields of P1, F1 and T1; `serves` lines on 16 units; one line in `_queue_/unit-template.md`. Season Photo is not re-minted until a new season icon, about 2026-12-13.
+- Edited by hand, all unclaimed: 13 fill briefs (v1.4 Complete rule, builder and lab priority, collect first); the two power units (collect first); time fields of P1, F1 and T1; `serves` lines on 16 units; one line in `_queue_/unit-template.md`. Season Photo is not re-minted until a season icon shows in game; the Season 3 date is unknown, verify in game.
 
 ## 5. Blocker: seven units not staged
 
