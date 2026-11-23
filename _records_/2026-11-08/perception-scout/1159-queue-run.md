@@ -56,7 +56,7 @@ grounded_in:
 - Damage Ranking: 1 [AP3x]Nuna Knuckles 7.5G, 2
   [B3WB]칼리아 Kalia 4.5G, 3 [AP3x]Awesome v2 4.3G, 4
   [W77]귀여운 내 친구 4.2G, 5 [AP3x]KaBoom420 3.7G, 6
-  [CTR1]초리vv 3.7G; self [[AP3x] ]Bears Lair Unlisted,
+  [CTR1]초리vv 3.7G; self [[AP3x] ]owner account Unlisted,
   Total Damage 0.
 - Ranking Reward tiers: No.1 x50, No.2 x45, No.3 to 5
   x40, No.6 to 10 x35, No.11 to 50 x30, No.51 to 200 x25

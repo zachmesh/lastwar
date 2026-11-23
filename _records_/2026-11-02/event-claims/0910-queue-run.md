@@ -24,7 +24,7 @@ $4.99 buttons were visible on that panel and were left alone. No
   6,250 chest produced no change, consistent with the phase score
   still at 0 as recorded by the 0608 arms-race unit. The bottom
   ranking row still shows the finished Hero Advancement result
-  (#2110 [AP3x]Bears Lair, 40,500), whose ranking chest was already
+  (#2110 [AP3x]owner account, 40,500), whose ranking chest was already
   inspected in the 0608 unit (contents preview only, no Claim
   button). No bouncing chest, no reward red dot on this page.
 - Desert Battlefield (Desert Storm Battlefield): registration ends

@@ -46,7 +46,7 @@ re-produces this regular.
   bouncing chest and no reward red dot. The cumulative
   counter chest at top left reads 0/2, static, no bounce,
   and was not tapped. The ranking row reads #2110
-  [AP3x]Bears Lair with score 0, matching the phase score
+  [AP3x]owner account with score 0, matching the phase score
   on this read; its chest is preview-only per precedent
   and was not tapped. Nothing was claimed. The game was
   left on the Arms Race page.

@@ -26,7 +26,7 @@ Status: done. Help All pressed; no ally request was waiting.
 - Help page header read live: Today's points gained from Alliance
   Help 400 of 1,000, unchanged before and after Help All.
 - The visible list held only this account's own four requests
-  (Bears Lair: Lv.28 Drill Ground building, Lv.30 Aircraft
+  (owner account: Lv.28 Drill Ground building, Lv.30 Aircraft
   Center building, Morale research, Precision Targeting II
   research), all at 30/30 on entry. A drag scroll of the list
   surfaced no further rows, so no ally request was waiting.

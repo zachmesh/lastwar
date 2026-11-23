@@ -18,7 +18,7 @@ done - inspected, nothing claimable.
 - Events hub opened from the base right rail at norm
   927,137. No bouncing chest was seen on the hub.
 - Arms Race, Unit Progression stage, read live: account
-  score 0, rank #2110 [AP3x]Bears Lair, stage countdown
+  score 0, rank #2110 [AP3x]owner account, stage countdown
   about 01:11. Point chests at 15,000, 30,000 and
   75,000 are all unearned at 0 points, and the top
   chest reads 0/2, so no Arms Race chest was claimable.

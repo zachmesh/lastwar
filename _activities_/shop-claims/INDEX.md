@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T00:45:00Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.59.0
+version: 1.60.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -932,7 +932,7 @@ the free and already paid for parts, never the paid unlocks.
 ## What the 2026-11-07 1853 unit added - first live shop read since 2026-11-04, 3 claims, Free Supply auto-claim and monthly gift re-confirmed
 
 - Unit passes-2026-11-07-1457 by ticker-1834, about 18:41 to 18:53 local, status done, 3 claims. Evidence in `_records_/2026-11-07/shop-claims/1853-queue-run.md` (commit ea01f4aef on records/2026-11-07). Computer session cc-34. Mac mini online and the game screen readable on the first capture - the first live shop read since the 0841 checked-only unit of 2026-11-04. Last War window 372131, 788x1083 at (114,236), pid 98156, on-screen this time (contrast the 1452 unit's off-Space window 160366 at (0,-360), Issue 282). No "active on a different device" dialog appeared, so no takeover was needed or made.
-- Capture recovery, second independent live read: this pass read the shop live on first capture, after the ticker-1904 radar unit (1912) read live at 19:07. The pid changed (59735 in the 1020-1608 passes to 98156 here), so the app relaunched at some point after the Mac came back online about 10:20 PT - the relaunch itself is inferred from the pid change, not observed. The recovery is commented on Issue #282 by the 1912 pass; this unit's read corroborates it. The game was on the MY PROFILE panel at entry (leftover state, Lv.30 [AP3x]Bears Lair, 149.8M power, VIP13, #2110). Closed with the X at [838,43]; base screen read Total Power 149,850,353.
+- Capture recovery, second independent live read: this pass read the shop live on first capture, after the ticker-1904 radar unit (1912) read live at 19:07. The pid changed (59735 in the 1020-1608 passes to 98156 here), so the app relaunched at some point after the Mac came back online about 10:20 PT - the relaunch itself is inferred from the pid change, not observed. The recovery is commented on Issue #282 by the 1912 pass; this unit's read corroborates it. The game was on the MY PROFILE panel at entry (leftover state, Lv.30 [AP3x]owner account, 149.8M power, VIP13, #2110). Closed with the X at [838,43]; base screen read Total Power 149,850,353.
 - Hot Deals: GEAR MASTER PACK on display, Availability 1, timer 23:17:59. Free Claim tapped once at [500,754]: CONGRATULATIONS paid Upgrade Ore Lucky Chest x1 and Upgrade Ore 1.5K. Page then read "Packs sold out". The same payout as the 2026-10-25 Gear Master Pack claim.
 - Free Supply auto-claim, re-confirmed: a second panel followed at once - "Free rewards have been automatically claimed": supply chest x1 and ruby x10 (the new-cycle Free Supply auto-claim, firing on shop open after the 18:00 reset). This matches the 2026-10-25 auto-claim pattern (ruby x10) and the Cadence rule above.
 - Weekly Pass page, read live and scrolled to the list end: the page line reads "Weekly Pass rewards reset at 18:00:00" (re-confirmed, third live confirmation after 0114 and 1812). Free Supply already auto-claimed. The Legendary row reads Take All $19.99 - not tapped, per the red lines. S2 Drone Components Weekly Pass, S1 Drone Parts Weekly Pass and Coin Weekly Pass each show only Get Now $4.99 - all three are unowned offers, none tapped. The list ends at the Coin card (three cards total today; no EXP or Iron card in the list). No owned weekly pass has a claimable pickup this cycle.
@@ -1213,7 +1213,7 @@ the free and already paid for parts, never the paid unlocks.
   Leaderboard, Grouping, Rules, Goals, Profession and Rewards buttons
   and a Season Contributions button. Season Contributions opens the
   Alliance Contribution Ranking (Mutual Assistance tab, Season Total
-  Ranking; [AP3x] Bears Lair rank 69 with 4,110,000 points; reward
+  Ranking; [AP3x] owner account rank 69 with 4,110,000 points; reward
   chest x0) - a ranking screen, not a pass claim. No Season Battle
   Pass free tiers and no Season Weekly Pass Daily Freebie or Daily
   Pickup were found on the hub, the Calculating screen or the

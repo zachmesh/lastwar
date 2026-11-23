@@ -46,7 +46,7 @@ ticker-0504 precedent for stale scout units.
 - Arms Race page, read live: current phase Hero
   Advancement, Contest Segment Lv.29-30, timer 00:22:12
   remaining, personal score 40,500, rank #2110
-  [AP3x]Bears Lair, chest thresholds 2,000 / 4,000 /
+  [AP3x]owner account, chest thresholds 2,000 / 4,000 /
   12,000 shown. Score and rank are unchanged from the
   0441 read at 04:41 the same morning; the timer is
   consistent with that read (01:20:18 then, about 58

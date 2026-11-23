@@ -83,7 +83,7 @@ enqueued for the two timer identities.
   Record icon at (156,914) produced no visible
   change, as in seq 12; a re-grounded tap on the
   icon centre (214,933) opened it. MY PROFILE
-  re-read unchanged: Lv.30 [AP3x]Bears Lair,
+  re-read unchanged: Lv.30 [AP3x]owner account,
   149.4M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex,
   VIP13 (red dot - the Daily Freebie, belongs to
   the VIP regular), #2110; flower 12, gift box

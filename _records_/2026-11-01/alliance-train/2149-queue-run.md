@@ -40,7 +40,7 @@ action was needed or taken.
   other carriages carry a plus button, carriage 2 carries a
   framed scenic picture, and tapping the small round avatar
   badge at that picture's lower right opened MY PROFILE for
-  Lv.30 [AP3x]Bears Lair (149.2M power, VIP 13, [AP3x]The
+  Lv.30 [AP3x]owner account (149.2M power, VIP 13, [AP3x]The
   Apex). Per the activity metadata, the carriage plus being
   replaced by the own avatar is the boarded state, so the
   account is already aboard carriage 2 for this train, as

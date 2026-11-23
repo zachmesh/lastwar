@@ -31,7 +31,7 @@ different-device dialog.
 - Platform verified, top to bottom: conductor
   Missile Apex, Train Rating 59,350, countdown
   00:57:56. Carriage 1 at 3/7 with a plus, carriage 2
-  at 7/7 holding a portrait with a "Bears Lair -
+  at 7/7 holding a portrait with a "owner account -
   Oops, you stepped on me!" tooltip, carriage 3 at
   4/7 with a plus, carriage 4 at 10/7 with a plus.
   The account already holds its seat in carriage 2,

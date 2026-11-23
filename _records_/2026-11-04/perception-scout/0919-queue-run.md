@@ -48,18 +48,18 @@ may expire the chain.
 ## Strength Ranking, walked live (Kills and Donation tabs)
 
 - Power tab, seen on entry: own row pinned at the
-  foot, 31 Bears Lair (R3) 150,028,269, matching the
+  foot, 31 owner account (R3) 150,028,269, matching the
   HUD power.
 - Kills tab: 1 Teemo (R4) 71,222,940; 2 TTS Rage
   Apex (R4) 37,105,456; 3 Missile Apex (R3)
   29,909,611; 4 Abŷss Apex (R5) 24,756,940; 5
   ItStartsWithaDream (R4) 21,390,596; 6 Bamie (R3)
-  20,018,107. Own row pinned at the foot: 92 Bears
-  Lair (R3) 48,638 kills.
+  20,018,107. Own row pinned at the foot: 92 owner
+  account (R3) 48,638 kills.
 - Donation tab, Daily sub-tab: 1 KaBoom420 (R2)
   23,150; 2 DCna8ive (R3) 13,250; 3 Texan Apex (R4)
   10,300; 4 MrCallejon (R3) 8,750; 5 Kkkayyyyy (R3)
-  8,550. Own row pinned at the foot: 32 Bears Lair
+  8,550. Own row pinned at the foot: 32 owner account
   (R3) 5,300 donation points. Donate and Rewards
   buttons observed only, never tapped.
 - Tap notes: the Donation tab first tap at norm

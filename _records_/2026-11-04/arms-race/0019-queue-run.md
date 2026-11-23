@@ -38,7 +38,7 @@ two taps before it returned to the base.
 - Cumulative counter chest at the top left read 3/8, partial,
   not claimable.
 - Ranking row read: segment rank 10, combined #2110
-  [AP3x]Bears Lair, row figure 10,000. The row figure is NOT
+  [AP3x]owner account, row figure 10,000. The row figure is NOT
   used as the score: all three point chests showed locked and
   one tap on the tier 1 chest produced no change, consistent
   with a live score of 0. The row figure's meaning is

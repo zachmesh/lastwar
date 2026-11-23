@@ -56,7 +56,7 @@ Activity: alliance-train. Computer session cc-536.
 
 - Carriage 3's passenger list was opened (6/7): [AP3x]
   Dogo, [AP3x]AshenRise, [AP3x]LAMP 1, [AP3x]Janet A,
-  [AP3x]sebfin13, [AP3x]Raze Cromwell. [AP3x]Bears Lair
+  [AP3x]sebfin13, [AP3x]Raze Cromwell. [AP3x]owner account
   is not among them. The account is not aboard this
   train. The train departs in about 4 minutes (timer
   00:03:37 at close) without this account.

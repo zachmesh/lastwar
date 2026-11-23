@@ -67,8 +67,8 @@ Status: done, quotas already full at entry, no action needed.
   slots, with the banner "No more dispatches available."
   The right-hand truck's card was opened (a tap on the
   left truck's body produced no change, as in the
-  2026-11-03 18:46 unit): own SR truck, [AP3x] Bears
-  Lair Lv.30, guard 25.1M, arrives in 01:52:13, cargo
+  2026-11-03 18:46 unit): own SR truck, [AP3x] owner
+  account Lv.30, guard 25.1M, arrives in 01:52:13, cargo
   including badge stacks, iron 2.5M, food 2.5M, coin
   1.6M. It is outbound, not returned, so nothing was
   settled. No chest icon stands above either road truck.

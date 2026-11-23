@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-17T10:44:38Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.54.0
+version: 1.55.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -1246,16 +1246,16 @@ one file per execution.
 ## What the 2026-11-07 2153 scout read added - LOOT panel turned over, one unclaimed Lv.1 Doom Elite row for this regular
 
 - Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2134, session cc-54 about 21:48 to 21:53 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2153-queue-run.md` (commit fe5a1e7fd3 on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
-- LOOT panel, read live about 21:51 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 3/4 (three squads out - not dispatched by this unit; owner or an earlier regular's marches, not resolved here).
-- Three rows: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is UNCLAIMED - no "Claimed" label.
+- LOOT panel, read live about 21:51 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]owner account; March Queues 3/4 (three squads out - not dispatched by this unit; owner or an earlier regular's marches, not resolved here).
+- Three rows: Row 1 owner account, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 owner account, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is UNCLAIMED - no "Claimed" label.
 - The three Lv.60 Doom Elite rows the 1345 unit read on 2026-11-03 are gone from the panel; the panel turns over as loot arrives and is claimed. The unclaimed Lv.1 Doom Elite row is unclaimed work for this regular (gifts per the 1345 follow-up), not scout work. The gift badge 3 maps to the three rows (two claimed, one unclaimed).
 - Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed row if it is still present; the row's contents (gold chest x2, red gem 20) are small but the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
 
 ## What the 2026-11-07 2311 scout read added - LOOT Lv.1 Doom Elite row still unclaimed after 80+ minutes
 
 - Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2304, sessions cc-59 about 23:05 to 23:10 and cc-60 about 23:11 to 23:15 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2311-queue-run.md` (commit 03dc69e0c on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
-- LOOT panel, read live about 23:13 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 0/4.
-- Three rows, the same three unit 2153 read at 21:51: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is STILL UNCLAIMED - no "Claimed" label, now unclaimed for 80+ minutes. The gift badge 3 maps to the three rows (two claimed, one unclaimed), confirmed again.
+- LOOT panel, read live about 23:13 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]owner account; March Queues 0/4.
+- Three rows, the same three unit 2153 read at 21:51: Row 1 owner account, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 owner account, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is STILL UNCLAIMED - no "Claimed" label, now unclaimed for 80+ minutes. The gift badge 3 maps to the three rows (two claimed, one unclaimed), confirmed again.
 - Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed Lv.1 Doom Elite row if it is still present; the row has now sat unclaimed across two scout passes (2153 and 2311) and the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
 
 ## What the 2026-11-08 0048 scout read added - Gifts Regular tab, Level 28 progress 193,012,970, Claim All 82 waiting

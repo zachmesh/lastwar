@@ -25,7 +25,7 @@ Computer session cc-222 on the owner Mac mini.
 - Personal daily total read live on the theme panel:
   2,005,000 (gold medal figure under the theme title).
 - Cross-check on the Ranking tab (Daily Rank, Mon.):
-  Bears Lair [AP3x] The Apex, rank 144, 2,005,000,
+  owner account [AP3x] The Apex, rank 144, 2,005,000,
   highlighted as the own row. The panel figure and the
   ranking figure agree exactly. Top of the board: kaka
   wu [TFox] Fox 65,184,546; 안 Mihye [TFox] Fox

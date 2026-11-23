@@ -29,15 +29,15 @@ grounded_in:
   measured centre (931,689) opened the Alliance menu first
   try; Help tile at (685,515) opened the HELP panel.
 - HELP panel at entry, read live: header "Today's points gained
-  from Alliance Help: 1,040/1,000". Four rows: Bears Lair
+  from Alliance Help: 1,040/1,000". Four rows: owner account
   (own) Missile Mastery II research, Time reduced 15:00:22;
-  Bears Lair (own) building Lv.30 Aircraft Center, Time
+  owner account (own) building Lv.30 Aircraft Center, Time
   reduced 3d 23:58:04; Commander 3423d2110 (ally) building
   Lv.22 Oil Well; specialist Donut (ally) building Lv.28
   Oil Well.
 - Help All pressed at (495,770). Toast: allies are very
   grateful for the assistance. Both ally rows gone on the
-  re-read; only the two own Bears Lair rows remain, each
+  re-read; only the two own owner account rows remain, each
   30/30.
 - Header re-read after a close/reopen: still 1,040/1,000 -
   the counter did not move in-session for these two helps

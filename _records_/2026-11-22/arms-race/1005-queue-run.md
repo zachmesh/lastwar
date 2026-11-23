@@ -24,7 +24,7 @@ grounded_in:
 - Phase: Unit Progression, Contest Segment Lv.29-30, timer 03:53:20 at
   first read (phase ends about 14:03 local). This unit's slot expired
   10:03 PT; the phase it reads is the new phase that began about then.
-- Live score (star bar): 24,583. Ranking row: #2110 [AP3x]Bears Lair,
+- Live score (star bar): 24,583. Ranking row: #2110 [AP3x]owner account,
   rank 8, 27,583 - the lagging/accumulating row, not this phase's score.
 - Point chests: 15,000 / 30,000 / 75,000 (ruby tags 2,360 / 4,800 /
   11,800). Cumulative counter chest top-left: 1/2, not full, not

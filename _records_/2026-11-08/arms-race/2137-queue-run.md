@@ -19,7 +19,7 @@ Activity: arms-race. Phase: Base Building, Contest Segment Lv.29-30.
 - Phase page (first read about 21:26 PT): Base Building, points 0,
   timer 00:38:33, chest thresholds 6,250 / 12,500 / 30,000 (top
   chest 30,000), cumulative counter chest 0/2, rank #2110
-  [AP3x]Bears Lair, segment rank 9, 0 points.
+  [AP3x]owner account, segment rank 9, 0 points.
 - Closing read about 21:37 PT: points still 0, timer 00:34:15,
   rank unchanged. No chest earned, none claimed.
 - Scoring paths as displayed: Increase Building Power by 1pt

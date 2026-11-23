@@ -17,7 +17,7 @@ grounded_in:
 ## Live read
 
 - Phase: Base Building, Contest Segment Lv.29-30, timer 00:51:45 at first read (00:48:50 at close).
-- Score: 21,600, segment rank 12, combined rank #2110 [AP3x]Bears Lair.
+- Score: 21,600, segment rank 12, combined rank #2110 [AP3x]owner account.
 - Thresholds: 6,250 / 12,500 / 30,000. Gap to tier 3: 8,400.
 - Scoring paths as displayed: Increase Building Power by 1pt +1, Use 1-min Construction Speed-up +10, Buy Packs containing Diamonds +30 per diamond.
 

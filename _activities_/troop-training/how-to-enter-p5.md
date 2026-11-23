@@ -1,0 +1,11 @@
+---
+title: How to enter part 5
+created: 2026-11-23T06:45:27Z
+modified: 2026-11-23T06:45:27Z
+version: 0.1.0
+sequence: 7
+description: Entry, 2026-11-21 1340 - fresh building-by-building identification from a fresh base screenshot plus a 2x crop
+---
+- Entry, 2026-11-21 1340: fresh building-by-building identification from a fresh base screenshot plus a 2x crop of the lower-left quadrant (the route the 2026-11-11 blocker update demands): the lower-left quadrant holds two small tents with green crosses and soldier-portrait bubbles, a gold-trophy building, a globe, a gold statue and planes. The portrait tent was grounded twice (bbox (97, 606)-(208, 736) in image coordinates, centre window (152, 671)). One tap on the portrait tent's measured centre opened no button row (no pistol, paw or upgrade arrow) and changed nothing. The tent does not respond to taps - it is most likely a hospital tent (green cross), not a barracks, or building taps need a different interaction. Do NOT re-tap this tent as a barracks. A second tap at the same point was not attempted (queue rule R2). The Drill Ground building is not identifiable in the current framing, and the view cannot be panned through this control channel (drag x2, scroll and zoom-button click all no-effect, established in the donations unit this same pass), so the lower part of the base where the Drill Ground cluster sits stays unreachable. The Drill Ground screen and its controls (deploy, dispatch, dismiss, collect) remain unread, as since 2026-11-02. The queue should not keep paying a unit to re-prove the same unlocated building without a new route: web research for the Drill Ground's map position, or the owner tapping it once on screen. Canvas taps elsewhere this pass DID land, so this is a location/entry failure, not a dead canvas. The #648 fullscreen precondition is clear this pass (windowed 788x1083, input works).
+- Button-row tap precision, 2026-11-22 0134: tapping a tent selects it and shows the paw / pistol / green-arrow row below it; the buttons are small and the tap point must be precise — one tap opened Building Details when TRAIN UNITS was intended, and one stray tap opened the world map instead. Re-ground the row fresh in the unit's own view and tap the intended button's measured centre; do not tap the green up arrow (upgrade shortcut).
+

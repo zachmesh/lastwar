@@ -81,8 +81,8 @@ window. Game in window mode (763x1050).
 
 ## Passes - MY PROFILE route tried, no entry
 
-- Portrait tap opened MY PROFILE: Lv.30 [AP3x]Bears
-  Lair, power 149.4M, 48.6K (crossed-swords icon), Lv.63,
+- Portrait tap opened MY PROFILE: Lv.30 [AP3x]owner
+  account, power 149.4M, 48.6K (crossed-swords icon), Lv.63,
   Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110. Gift
   counts: flower 12, gift box 88, trophy 11, one empty
   slot. Moments: "No posts found." Bottom buttons:
@@ -120,7 +120,7 @@ window. Game in window mode (763x1050).
 ## World map
 
 - WORLD tap opened the map centred on the home base
-  ([AP3x]Bears Lair, Lv.30). March Queues 0/3 with an
+  ([AP3x]owner account, Lv.30). March Queues 0/3 with an
   Add Queue button (NOT tapped - likely paid). The gift
   icon at the right end of the March Queues bar carries
   a red badge 2 (see base re-reads).

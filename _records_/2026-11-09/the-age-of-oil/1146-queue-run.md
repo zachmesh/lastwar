@@ -45,7 +45,7 @@ Chain: scout-discovery-2026-11-09, seq 14.
   Tech Research counts for this event window. Rank 1 [AP3x]
   Teemo 31, rank 2 [AP3x] Bamie 29, rank 3 [W77] 25, rank 4
   [B3WB] etre 22, rank 5 [CTR1] Lt grills 21, rank 6 [aP3x]
-  jbG 16, rank 7 [W77] 16. The owner, [AP3x] Bears Lair, is
+  jbG 16, rank 7 [W77] 16. The owner, [AP3x] owner account, is
   Unlisted at 0 - no Tech Research counted in this window.
   The warzone total 2607 on card 1 is the whole warzone's
   count; the ranking counts each commander separately.

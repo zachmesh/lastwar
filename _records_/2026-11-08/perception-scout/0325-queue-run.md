@@ -41,7 +41,7 @@ grounded_in:
 
 - Phase is now Tech Research (was Hero Advancement at 00:06
   in unit 002): Contest Segment Lv.29-30, timer 02:52:53,
-  score 0, rank #2110 [AP3x]Bears Lair, chest 0/2.
+  score 0, rank #2110 [AP3x]owner account, chest 0/2.
 - Tiers 6,250 / 12,500 / 30,000 points; chests 2,360 / 4,800 /
   11,800 red gems.
 - Paths: Increase Tech Power by 1pt +1; Use 1-min Research

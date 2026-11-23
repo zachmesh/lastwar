@@ -25,7 +25,7 @@ help-2026-10-31-2230, executor ticker-0134. Status: done.
   where the Help tile carried a red dot.
 - Help page opened from the Alliance menu. Header read live:
   Today's points gained from Alliance Help 80/1,000. The visible
-  requests were all the account's own (Bears Lair, each 30/30),
+  requests were all the account's own (owner account, each 30/30),
   which cannot be helped by the account itself.
 - Help All pressed once. The game answered "Allies are very
   grateful for your assistance." A second observation still read

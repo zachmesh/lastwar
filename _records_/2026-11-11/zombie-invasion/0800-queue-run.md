@@ -23,7 +23,7 @@
 - Squad 1 → **X:484 Y:329** (Lv.10, Suggested Power 670,000); stamina 41 → 31; march 00:02:06; deploy panel Squad 1, 25.20M vs 670.00K, Easy Win, Unit Count 2,231/2,231
 - Squad 2 → **X:540 Y:350** (Lv.10); stamina 31 → 22 (one +1 regen tick observed between reads); march 00:01:25 on the deploy panel; deploy panel auto-selected Squad 2 (2,175/2,175, Easy Win), no squad-tab tap needed
 - Both squads were marching at once (March Queues 2/4 verified on screen) — parallel dispatch achieved; the third dispatch came after both had returned, so the unit's maximum simultaneous squads is 2
-- Squad 1 (third dispatch) → **X:486 Y:427** (Lv.10, home-cluster target beside [AP3x]Bears Lair); stamina 22 → 13 (one more +1 regen tick observed); short march, Victory banner seen on screen
+- Squad 1 (third dispatch) → **X:486 Y:427** (Lv.10, home-cluster target beside [AP3x]owner account); stamina 22 → 13 (one more +1 regen tick observed); short march, Victory banner seen on screen
 - Dispatch method: Events → title verified (Zombie Invasion - Glacieradon) → Search → screen read → crossed-swords at 496,753 → March at 499,755. The Events tab bar stayed on the Zombie Invasion tab on every re-open. Search at 370,941 held this unit.
 - First March tap failed with a channel `stale_observation` ("target app exited or restarted") — no input was sent, the deploy panel stayed open, and the retry at the same point dispatched at once. The app never actually left the panel; same class as unit 001's restart report.
 - Stamina at unit end: **13** (30 spent on three marches, +2 regen ticks observed)

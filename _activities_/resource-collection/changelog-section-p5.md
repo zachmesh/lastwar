@@ -1,0 +1,10 @@
+---
+title: Changelog part 5
+created: 2026-11-23T06:19:33Z
+modified: 2026-11-23T06:19:33Z
+version: 0.1.0
+sequence: 42
+description: 1.62.0 (2026-11-11) - 1803 harvest unit folded (partial, food +2.2M one exact-pointer tap, coin +4.0M one
+---
+- 1.62.0 (2026-11-11): 1803 harvest unit folded (partial, food +2.2M one exact-pointer tap, coin +4.0M one exact-pointer tap - the tap receipt said no_change_observed while the HUD moved, so receipts can miss a collection and the HUD before/after is the deciding read; visual_grounding count call on the full base screen timed out after 180 seconds and returned nothing - do not spend a grounding call on the full base screen again, read the screenshot and tap by eye; iron bubbles remain, about 8 by the 1740 count, not re-counted; Armed Truck TWELFTH deferral in the lineage, Issue #566; 2026-11-11 retro action A-2026-11-11-05 - the follow-up unit must locate the Armed Truck or record it unlocatable with the surfaces checked, a further deferral without a location attempt is a process failure under R2; 2326 next-test still owed, Issue #502).
+- 1.61.0 (2026-11-11): 1740 harvest unit folded (partial, exact-pointer tap method measured - normalized 0-1000 coordinates, fresh observation_id per tap, snap_to_control=false collects, snapped taps pull onto the nearest building control; BASE/WORLD toggle recentres the zoomed-in base, scroll does not zoom and drag does not pan; eleventh food one-tap confirmation, food 689.4M to 693.3M (+3.9M HUD-verified), all farmland bubbles cleared at once; coin tap at 312,526 missed into the Farmland mini-panel, bubble over the farmland lower edge needs tighter grounding, re-ground each bubble centre on a fresh cropped zoom; about 8 iron and 4-5 coin bubbles remain standing; Barracks Details X worked first try, Farmland mini-panel closed by a dimmed-area tap at 125,315; Armed Truck ELEVENTH deferral in the lineage, Issue #566; 2326 next-test still owed, Issue #502; tap method filed as knowledge Issue #660 and hardened here).

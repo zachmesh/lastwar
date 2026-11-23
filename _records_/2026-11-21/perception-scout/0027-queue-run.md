@@ -90,7 +90,7 @@ the remaining window.
 ## MY PROFILE and VIP - no passes entry
 
 - MY PROFILE (portrait tap, normalized about 72,71):
-  Lv.30 [AP3x]Bears Lair, 149.4M, 48.6K, Lv.63,
+  Lv.30 [AP3x]owner account, 149.4M, 48.6K, Lv.63,
   Lv.2, [AP3x]The Apex, VIP13 (red dot), #2110;
   gifts flower 12, gift box 88, trophy 11; Moments
   "No posts found."; Record (red dot), Account,

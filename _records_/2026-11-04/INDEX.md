@@ -365,7 +365,7 @@ of 2026-10-28.
   help bubble tap answered "Allies are very grateful for
   your assistance" and the tile cleared; Alliance Help
   page read live 520/1,000, only this account's own
-  Bears Lair rows listed, and a Help All tap answered
+  owner account rows listed, and a Help All tap answered
   "No help requests yet". Grounding correction: the
   Alliance button centre is (931,709), not (880,720).
   Full detail in alliance-help/0208-queue-run.md.

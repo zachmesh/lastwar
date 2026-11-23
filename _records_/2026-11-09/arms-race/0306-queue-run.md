@@ -19,7 +19,7 @@ Activity: arms-race. Phase: Hero Advancement, Contest Segment Lv.29-30.
 - Phase page (read about 03:10 PT): Hero Advancement, points 0 at
   entry, timer 02:52:09, chest thresholds 2,000 / 4,000 / 12,000
   (top chest 12,000), cumulative counter chest 0/2, rank #2110
-  [AP3x]Bears Lair, segment rank 11, 0 points.
+  [AP3x]owner account, segment rank 11, 0 points.
 - Scoring paths as displayed: 1 Hero Recruitment pays +400; Use
   at least 2,000 Hero EXP at a time pays +1; Buy Packs containing
   Diamonds (1 Diamond) pays +30 (red line, never used).

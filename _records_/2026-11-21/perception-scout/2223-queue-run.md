@@ -95,7 +95,7 @@ exists beside it; 105986 remains the working window. No
 
 ## MY PROFILE (read live about 22:19)
 
-- Lv.30 [AP3x]Bears Lair, US flag. Power 149.6M,
+- Lv.30 [AP3x]owner account, US flag. Power 149.6M,
   48.6K (crossed-swords icon), Lv.63, Lv.2,
   [AP3x]The Apex, VIP13 (red dot), #2110, 1,838 likes.
 - Gift row: flower 12, gift box 88, trophy 11, one

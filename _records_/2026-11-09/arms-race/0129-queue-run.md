@@ -19,7 +19,7 @@ Activity: arms-race. Phase: Unit Progression, Contest Segment Lv.29-30.
 - Phase page (read about 01:16 PT): Unit Progression, points 0,
   timer 00:44:05, chest thresholds 15,000 / 30,000 / 75,000 (top
   chest 75,000), cumulative counter chest 0/2, rank #2110
-  [AP3x]Bears Lair, 0 points. No scoring action was taken after
+  [AP3x]owner account, 0 points. No scoring action was taken after
   this read, so 0 is this unit's verified closing score.
 - Scoring paths as displayed: Train a Lv.10 unit pays +31; Use
   1-min Training Speed-up pays +10; Buy Packs containing Diamonds

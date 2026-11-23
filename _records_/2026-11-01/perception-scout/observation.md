@@ -45,7 +45,7 @@ left there by an earlier unit, not on the base screen.
 
 ### Base screen and HUD, read live 2026-11-01 about 02:15 local
 
-- Account: [AP3x]Bears Lair, level 30. Power shown
+- Account: [AP3x]owner account, level 30. Power shown
   148,957,193.
 - HUD totals as displayed, top row: 289.2M, 477.2M, 10.6M,
   and 2,366 beside the top right cart icon. Second row:

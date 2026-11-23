@@ -30,8 +30,8 @@ first tap; no foreground repair was needed.
   claimed both tabs - new gifts are already arriving; that red
   dot belongs to the next gifts unit, not this one.
 - Help dialog at entry: Today's points gained from Alliance
-  Help 1,040/1,000. Rows: Bears Lair (own) Missile Mastery II
-  research, Time reduced 18:00:22; Bears Lair (own) Lv.30
+  Help 1,040/1,000. Rows: owner account (own) Missile Mastery II
+  research, Time reduced 18:00:22; owner account (own) Lv.30
   Aircraft Center, Time reduced 3d 23:58:04; GoldenSonya,
   Need help with Food Output V research (the only ally
   request waiting).

@@ -61,7 +61,7 @@ tracker). The trade day ends at 19:00 local.
   at 915,150 closed it.
 - World map route tried next, per the 0114
   successor instruction: WORLD opened the map
-  centred on the own base [AP3x]Bears Lair, showing
+  centred on the own base [AP3x]owner account, showing
   alliance bases only and no trade entry on that
   view. BASE returned to the base screen.
 - White pickup at 53,639 opened the Secret Command

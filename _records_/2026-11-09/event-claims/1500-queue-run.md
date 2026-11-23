@@ -20,7 +20,7 @@ description: Events unit events-2026-11-09-1057, ticker-1434
 - Arms Race page (Hero Advancement, Contest Segment Lv.29-30):
   phase just started, timer 03:04:14 left, score 0, point chests
   at 2,000 / 4,000 / 12,000 all locked, cumulative chest 7/8
-  (not full, not claimable). Ranking #2110 [AP3x]Bears Lair,
+  (not full, not claimable). Ranking #2110 [AP3x]owner account,
   90,500 shown. No claimable reward here; the phase is the
   arms-race unit's job (arms-race-2026-11-09-1403 in inbox).
 - Desert Storm Battlefield (red "!" badge on its tab): Registration

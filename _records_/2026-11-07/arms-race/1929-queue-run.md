@@ -25,7 +25,7 @@ America/Los_Angeles. First unit inside this phase (rule R4).
 - Arms Race phase read live: **Drone Boost**, Contest
   Segment Lv.29-30, score 0, timer 02:35:14 left (phase
   ends about 22:02 local), cumulative counter chest 0/2,
-  account rank #2110 [AP3x]Bears Lair, segment rank 5.
+  account rank #2110 [AP3x]owner account, segment rank 5.
 - Chest thresholds: 1,500 (2,360 rubies) / 10,000 (4,800
   rubies) / 30,000 (11,800 rubies).
 - Scoring paths, all read live:

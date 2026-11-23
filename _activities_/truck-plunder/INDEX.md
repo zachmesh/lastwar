@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T00:44:42Z
+modified: 2026-11-23T07:23:28Z
 level: L1
-version: 1.43.0
+version: 1.44.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -1075,7 +1075,7 @@ settlement and dispatch execution record).
   to this set: 52,553 here opens the season panel.
 - World map route tried next, per the 0114 successor
   instruction: WORLD opened the map centred on the own
-  base [AP3x]Bears Lair, showing alliance bases only and
+  base [AP3x]owner account, showing alliance bases only and
   no trade entry on that view. BASE returned to the base
   screen.
 - White pickup at 53,639 opened the Secret Command Post
@@ -1552,7 +1552,7 @@ settlement and dispatch execution record).
 - Entry that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this route first when the left-column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result.
 - Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both pairs are live screen reads, not tallies.
 - Attribution gap, recorded not smoothed over: the previous local trucks record (2026-11-03 1846 unit) closed at Trade 3/5, Plunder 2/4, so the quotas were filled between then and this entry by passes whose records are not in this working tree. This record does not attribute the fill to any specific pass.
-- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." The right-hand truck's card was opened (a tap on the left truck's body produced no change, as in the 1846 unit): own SR truck, [AP3x] Bears Lair Lv.30, guard 25.1M, arrives in 01:52:13, cargo including badge stacks, iron 2.5M, food 2.5M, coin 1.6M. It is outbound, not returned, so nothing was settled. No chest icon stands above either road truck. The Recover button carries no red dot, and one tap on it produced no panel, so no Reward Recovery record is waiting to be claimed.
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." The right-hand truck's card was opened (a tap on the left truck's body produced no change, as in the 1846 unit): own SR truck, [AP3x] owner account Lv.30, guard 25.1M, arrives in 01:52:13, cargo including badge stacks, iron 2.5M, food 2.5M, coin 1.6M. It is outbound, not returned, so nothing was settled. No chest icon stands above either road truck. The Recover button carries no red dot, and one tap on it produced no panel, so no Reward Recovery record is waiting to be claimed.
 - Outcome: done. Trade quota 5/5 and plunder quota 4/4 both full for this trade day. No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Costs: about 4 minutes of unit time.
 ## Open questions
 
@@ -1707,7 +1707,7 @@ settlement and dispatch execution record).
 - Duel posture applied: tools/duel.py at entry reports duel day 1, theme Radar Training, day ends 2026-11-09 18:00 local, radar posture release. Truck dispatches do not score today, so the non-UR day rule governed (dispatch SR or above only, plunder UR or SSR trucks carrying UR shards with guard below Squad 1 at 24.96M). No Mega Mode dispatch was used or attempted.
 - Entry - blocked, two methods failed. Base screen about 05:42: food 540.1M, iron 864.9M, coin 42.9M, gold 13.22K, diamonds 6,077, power 149,217,331, VS timer 12:18:35. Left column, re-grounded fresh on the live screenshot, top to bottom: hammer 1/4, flasks 1/2, light-blue train/bus front icon, white pickup, walkie-talkie with red badge 1, hammer, chest. The train-front icon carries NO red badge in this set.
 - Method 1: title-bar tap at norm (180,15), then a tap on the freshly grounded train-front centre norm (55,594). The tap only panned the base map to the station area (golden train, Abŷss Apex, 00:27:31) - the trade screen did not open. This matches the 0242 no-badge pattern and re-confirms the standing rule a third time: a badgeless vehicle-front icon does not open trade.
-- Method 2 (changed variant): a tap at norm (913,940) on the bottom-right WORLD corner, the 0242 WORLD-corner route. It opened the world map (alliance territory, [AP3x]Bears Lair base centre, March Queues 1/4), not Intercity Trade - the 0242 route did not reproduce in this framing. This re-confirms the 0538 correction a second time: 913,940 is a World-map opener, not a direct trade entry. Returned to base with the BASE button. Per queue rule R2, both methods end inside this unit; the next trucks unit must arrive with a changed method (a foreground click variant on the icon, or the station-area route) rather than repeating either point.
+- Method 2 (changed variant): a tap at norm (913,940) on the bottom-right WORLD corner, the 0242 WORLD-corner route. It opened the world map (alliance territory, [AP3x]owner account base centre, March Queues 1/4), not Intercity Trade - the 0242 route did not reproduce in this framing. This re-confirms the 0538 correction a second time: 913,940 is a World-map opener, not a direct trade entry. Returned to base with the BASE button. Per queue rule R2, both methods end inside this unit; the next trucks unit must arrive with a changed method (a foreground click variant on the icon, or the station-area route) rather than repeating either point.
 - CORRECTION, standing section: the Working entry route section above still told units to try the WORLD-corner route first when the column icon carries no badge. That instruction is superseded - the 0538 unit corrected it and this unit re-confirmed the correction, and this unit followed the stale instruction before its own read. The section now carries the dated correction; later units must not cite 913,940 as a trade entry.
 - Counters - not re-read live. Today's Trade Count and Your Plunder Count Today were NOT read live in this unit: the trade screen never opened. The standing shortfall is carried from the 0250 unit's close (02:50 PT, read live then): Trade Count 4/5, Plunder Count 1/4. No counter is overwritten here, and no tally is derived - the next trucks unit re-reads both counters live on the trade screen first.
 - Dispatch shortfall 1: all four slots were occupied at the 0250 close (dispatched about 02:40-02:50, arrivals about 06:30-07:00), so the 5th dispatch awaits a return or a Mega Mode dispatch, still an open question - not attempted in this unit. Plunder shortfall 3: no plunder fought in this unit. Reward Recovery was not checked: the Recover button sits on the trade screen, which never opened. R3 quota checkpoint: the trade day ends 18:00 PT; the 6-hour checkpoint falls at 12:00 PT and the 2-hour checkpoint at 16:00 PT, so no checkpoint is due in this unit and no priority escalation is raised now.

@@ -1,9 +1,9 @@
 ---
 title: Last War team seats
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:11:00-08:00
+modified: 2026-11-23T07:26:00Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The seats of the Last War continuous-play team
 status: unverified
 grounded_in:
@@ -24,4 +24,5 @@ Read [`SEAT-PROTOCOL.md`](SEAT-PROTOCOL.md) before any seat page.
 - [`planner/`](planner/INDEX.md) - queue hygiene and staging.
 - [`coach/`](coach/INDEX.md) - measurement, retro and the backlog.
 - [`toolsmith/`](toolsmith/INDEX.md) - tools and automation.
-- [`scribe/`](scribe/INDEX.md) - knowledge folding and PR integration.
+- [`scribe/`](scribe/INDEX.md) - knowledge folding and the conventions.
+- [`integrator/`](integrator/INDEX.md) - lands branches on the protected main (dedicated seat).

@@ -41,7 +41,7 @@ status: partial
 
 ### VIP panel (avatar -> MY PROFILE -> VIP13 tile)
 
-- Profile: Lv.30 [AP3x]Bears Lair, US flag, 149.8M,
+- Profile: Lv.30 [AP3x]owner account, US flag, 149.8M,
   48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13, #2110,
   likes 1,810, showcase flower 12 / gift 88 / trophy 11,
   Moments "No posts found.", bottom bar Record (red dot),

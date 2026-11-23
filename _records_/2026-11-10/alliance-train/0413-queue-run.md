@@ -52,7 +52,7 @@ cc-396 started, LastWar re-selected, no game state lost).
   carriage 2's "+" (the platform centre), which is the
   standing-rule carriage, and the "+" tap itself takes the
   seat. Confirmed by tapping the carriage 2 avatar, which
-  opened MY PROFILE (Lv.30 [AP3x]Bears Lair) - the seat is
+  opened MY PROFILE (Lv.30 [AP3x]owner account) - the seat is
   held. A "You're very popular!" overlay (1,815 +4 likes)
   was dismissed with Awesome! on the way back.
 - Final station read on leaving: countdown 02:26:53, so

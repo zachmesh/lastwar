@@ -25,7 +25,7 @@ status: partial
   Phase window ends about 02:01 PST.
 - Score: 0, read from the star bar at the top left of the
   phase page at entry and again at the sweep. The ranking
-  row figure 9,300 for [AP3x]Bears Lair is the lagging
+  row figure 9,300 for [AP3x]owner account is the lagging
   previous-phase row (same pattern as the 2026-11-02 1508
   record) and was NOT used as this phase score.
 - Chest thresholds: 6,250 / 12,500 / 30,000 (ruby tags

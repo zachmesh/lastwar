@@ -24,7 +24,7 @@ arms-race, activity arms-race, duel day 7).
 - Live phase, read at entry and again at close: Unit
   Progression, Contest Segment Lv.29-30, 02:36:20 left at
   entry, 02:32:38 left at close. Score 6,000 both reads,
-  segment rank 2110, account [AP3x]Bears Lair.
+  segment rank 2110, account [AP3x]owner account.
 - Chest thresholds: 15,000, 30,000, 75,000. Tier-3 gap:
   75,000 minus 6,000 equals 69,000 points.
 - Scoring table, read live: Train a Lv.10 unit plus 31,

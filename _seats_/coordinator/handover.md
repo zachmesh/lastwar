@@ -1,51 +1,45 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T06:09:00Z
+modified: 2026-11-23T07:27:00Z
 level: L2
-version: 0.4.7
-description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
+version: 0.6.0
+description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work, the privacy finding and open owner decisions
 status: unverified
 grounded_in:
-  - source: coordinator ticks _records_/2026-11-22/team-operations/2011-tick.md to 2043-tick.md
-  - source: lint audit _records_/2026-11-22/team-operations/2036-lint-audit.md
+  - source: coordinator ticks _records_/2026-11-22/team-operations/2011-tick.md to 2228-clean-branch.md
+  - source: privacy finding _records_/2026-11-22/team-operations/2222-privacy-finding.md
 ---
 
 # Handover - coordinator
 
-Updated 2026-11-23 04:48Z. Earlier versions are in git history.
+Updated 2026-11-23 06:31Z. Earlier versions are in git history.
 
-## Holder
+## Holder and clock
 
-- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`, since 2026-11-23T04:04Z.
-- Only clock: `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0`, every 900 s.
-- Owner gateway: the Steward `session-eb024f72-e661-4a77-9303-66af95dbcfd1`, outside the roster. It held this seat before and no longer dispatches.
-- All eight seats are top-level sessions. The operator is `session-b718c7de-6aab-4159-b87e-41aa424237e9`; the old child `238b9ce7-...` is stood down. The relay cannot address child sessions.
+- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`, since 2026-11-23T04:04Z. Only loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s). One-shot Secret Missions claim reminders remain at 06:51Z (`schedule-2227f411-6d4c-4eb9-b260-3df69eca2e79`) and 08:51Z (`schedule-7565d79f-3d26-4c36-a3f9-54375f517d85`).
+- Owner gateway: Steer A (formerly the Steward) `session-eb024f72-e661-4a77-9303-66af95dbcfd1`, outside the roster (owner-gateway, steer, watchdog); it feeds the board and relays owner decisions and is NOT the integrator. Landing on the protected main: hand a LOCAL BRANCH NAME to the integrator seat `session-bc838015-7852-464e-8cab-cf2fcc70a335` (9 roster rows). Operator `session-7f6dd658-ebba-4854-9a29-e2f173975825` (respawned 07:03Z at 90 percent context; respawn when an operator passes 88 percent). The relay cannot reach child sessions. Check the target id against the draft before every send.
 
-## How a tick runs (owner speed rules, duties.md 0.2.0)
+## How a tick runs
 
-`queue.py next`, eligibility check and dispatch in one turn, under 60 s. One unit, one run, one reply. Chain: each operator reply is verified, then the next `next` unit is sent at once. The 900 s clock is only the backstop; if the operator is busy, record a no-op. Routine runs use `claude-gateway/claude-sonnet-5-5` and `--max-steps 8`. Every unit starts with `killall -9 UserNotificationCenter NotificationCenter` and `lsappinfo front` naming LastWar. The owner's Screen Sharing must be View Only; a run paused by local input is closed partial within 2 minutes. At most two seats run model turns at once.
+`queue.py next`, check, dispatch in one turn; one unit, one run, one reply; chain on each verified reply; no-op while the operator plays. Sonnet, 8-step cap (7 execute: budget must-execute actions by step 7), never zoom, one action per turn. Pre-start: `killall -9 UserNotificationCenter NotificationCenter`, `lsappinfo front` names LastWar. First-frame rule: a "Boarding closes in" banner with 70 s or more left means board first (standing owner order). OWNER RULES (2026-11-23): never stop the game, no play holds (06:42Z); decide operational choices yourselves and tell the Steward in one line afterwards, never ask the owner (06:47Z). Account-elsewhere dialog: Confirm is approved as a standing rule (OD-20261123-05, answered), but if it returns within 30 minutes of a Confirm do NOT Confirm again, pause desktop play 30 minutes, retry without asking. Still fixed: no purchase or diamond spend, no PvP/attack/rally/march/Arena/General's Trial, no diplomacy, no ally-exchange trade, no identifier values.
+
+## Size and gate
+
+The commit gate is installed (`core.hooksPath`; rollback `git config --unset core.hooksPath`) and blocks any real edit to a document of 500 body words or more. Registers are split (`owner-decisions-log`, `improvements-log`; the coach writes dated notes to the daily retro). The scribe redacts then splits each profile with a rule digest; 20 remain (blocks of three).
+
+## Privacy (OD-20261123-04)
+
+The public repo holds the owner account name and alliance tag from before the team. Never write them, nor alliance or allies' names; counts and paths only in messages. The local denylist is `.git/privacy-denylist.txt` (17 regexes, untracked). Owner decided 2026-11-23: only the owner's own name is redacted, tree-wide, by exception to C1; history is not rewritten; the repo stays public. Never push local `main` (it is a different, shallow-clone line): the integrator lands snapshot branches built on the tip of `origin/main`.
 
 ## In flight
 
-- The play hold ended at 05:28Z. A GitHub login in a visible browser is postponed; the Steward asks for another hold in advance with a fixed end time. A visible browser steals focus, so no desktop run during it.
-
-- Lint gate is INSTALLED (2026-11-23T05:33Z, `core.hooksPath` = `_tools_/lint-gate/hooks`; rollback `git config --unset core.hooksPath`). It blocks a new or changed document at 500 body words or more and a new folder without an INDEX.md. After the first record in a new records folder, run `python3 _tools_/lint-gate/lint_gate.py stub-index --apply`. `board-check` is merged; the Steward runs it with a token in its own environment.
-- Operator: a one-pass trim of its over-limit records (measured rows to sidecars, narrative untouched), then back to play. Next unit: `secrets-2026-11-22-1857`.
-- Not yet assigned: planner stages a duel-score read before the 02:00Z rollover on 11-24; scribe pilot split of alliance-donations; planner and scribe on IMP-20261123-04.
-
-- One-shot claim reminders for the Secret Missions deploy of about 04:50Z: 05:21Z, 05:51Z, 06:51Z and 08:51Z (ids in `2049-tick.md`). Each sends the operator a claim-only assignment; unclaimed finished tasks get plundered.
-
-- Oversized files: `split-doc` (key-named, `--keep-entry`) is merged (`1a0f6f5d`). The two registers are SPLIT (`99dc1119`): `owner-decisions.md` and `improvements.md` are entry pages, entries are articles in `owner-decisions-log/` and `improvements-log/`; the coach writes dated notes to the daily retro (`c3f9c61e`). Still to do: scribe re-splits `alliance-donations` and remaps its digest (on its branch `work/split-alliance-donations`), then six profiles; gate stays on.
+Toolsmith privacy check (06:55Z); scribe radar-tasks and survivor-intake (07:35Z); sweep pair for 11-24 staged; Zombie Siege watch for 01:10Z to 02:00Z on 11-24 (server time is UTC-2, so the siege is 01:15Z); Alliance Exercise watch 22:55Z on 11-23; Winter Battlefield held for OD-20261123-03.
 
 ## Open owner decisions
 
-OD-20261109-02 (what the 4 idle builders build, Issue 517); OD-20261123-01 (the mid-base trophy bubble, possibly the Arena, never tapped); OD-20261122-01 (live pool recovery); INDEX.md for 450 records folders; hourly day-index files.
-
-## State
-
-Queue inbox 22, claimed 0, done 2,627. Open improvements IMP-20261123-01 to 04. My commits are local and unpushed; the Steward owns the push route.
+None: all were decided by the owner on 2026-11-23 (see the articles' decision lines). Fixed lines remain: no PvP, ally exchange, diplomacy, purchase or diamond spend.
 
 ## Lessons
 
-Never dispatch by an id the relay cannot reach; verify with `session-relay list`. Take `next`'s unit without re-reading history. Play records are immutable; only measured rows may move to sidecars.
+Take `next` without re-reading history. Play records are immutable. A scan covers every identifier class, with regex semantics.

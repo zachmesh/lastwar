@@ -1,0 +1,14 @@
+---
+title: Changelog part 8
+created: 2026-11-23T06:19:33Z
+modified: 2026-11-23T06:19:33Z
+version: 0.1.0
+sequence: 45
+description: 1.56.0 (2026-11-10) - 1531 harvest unit folded (partial, all three panel pools collected exact - coin
+---
+- 1.56.0 (2026-11-10): 1531 harvest unit folded (partial, all three panel pools collected exact - coin +5,236,147 (Owned 92,648,531 to 97,884,678, Available 5,236,149 to 0), food +2,052,949 (Available to 0, Owned 631,359,373), iron +1,922,772 (Available to 0, Owned 954,108,872); coin panel verified, closing the 1210 follow-up - all three panels now exact, Issue #585; Armed Truck fifth deferral, but two candidates eliminated live - 389,260 is the gold "!" bubble over the 21:20 timer building, the left-column truck icon opens the Secret Command Post - next method is the trade screen, Issue #566; 2326 next-test still not run, Issue #502; VS timer conflict resolved (02:52:20 stands, 01:51:18 was a misread of 02:51:18); skull badge 1 to 2 to 3 across the pass, Issue #498).
+
+- 1.55.0 (2026-11-10): 1210 harvest unit folded (partial, panel Collect route found - first unit to use it: iron panel Owned 939,366,406, Available 2,459,903, Collect took +2,466,821 exact, Available 0; food panel Available 88,117 taken after farmland bubbles +6.3M; the panel route is now in How it is done, Issue #585; bubble-tap hazards recorded - a tap can fall through to the building panel and can be intercepted by the roaming red-panda pet; map bubbles carry small face values (iron 596 each) while the panel pool held millions; coin panel not opened, next unit opens it first; Armed Truck check deferred a fifth consecutive unit, new unverified candidate white speech bubble with truck icon at about 389,260, Issue #566; 2326 next-test still owed, Issue #502).
+
+- 1.54.0 (2026-11-10): 0826 harvest unit folded (partial, verified yes for the iron gain, no for the sweep): one tap on a bubble grounded as food at norm (167,324) collected iron plus 3.4M HUD-verified (935.9M to 939.3M), food and coin unchanged - the R2 bubble-type identification failure again, so the HUD delta is the only type evidence and grounding labels cannot be trusted for the type on downscaled screenshots; the 11-to-9 green-bubble count after the tap is detection variance, not a verified clear, and no bubble-clear count is claimed beyond the iron gain; blue triangles unchanged at 4, they did not clear (Issue #508); iron one-tap test (Issue #502) inconclusive again, no pre-tap iron bubble inventory, the 2326 next-test still owed; sweep incomplete at the token expiry, edges and Armed Truck unchecked - fourth consecutive Armed Truck deferral, Issue #566; base HUD at entry food 612.5M, iron 935.9M, coin 84.1M, diamonds 6,207, power 148,058,020, confirming the corrected 0732 figures (coin 84.1M, food 612.5M).
+

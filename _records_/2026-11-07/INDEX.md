@@ -4241,7 +4241,7 @@ of 2026-10-28.
 - Scout unit scout-midday-scout-mid-2026-11-02-006, partial:
   alliance remainder re-check — station panel again has no
   train preparing (no train icon, no banner; third confirmation
-  this pass), and the LOOT box holds two Claimed Bears Lair
+  this pass), and the LOOT box holds two Claimed owner account
   rows plus one UNCLAIMED Lv.1 Doom Elite row (gold chest x2,
   red gem 20, iron 3.0K, food 3.0K, coin 1.0K), left unclaimed
   for the owning regular; Claim All observed only. March

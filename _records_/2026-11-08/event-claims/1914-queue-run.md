@@ -33,7 +33,7 @@ grounded_in:
 - Arms Race checked - Base Building phase, Contest Segment Lv.29-30,
   score 0, point chests 6,250 / 12,500 / 30,000 all unreached,
   cumulative chest 0/2, phase timer 02:45:50, warzone rank 9
-  (#2110 [AP3x]Bears Lair, 0 points). Nothing claimable. Scoring
+  (#2110 [AP3x]owner account, 0 points). Nothing claimable. Scoring
   paths are building power +1, 1-min construction speedup +10
   (burning items, not done) and diamond packs +30 (paid, not done).
   Arms Race grinding is the arms-race unit's job, not this claim

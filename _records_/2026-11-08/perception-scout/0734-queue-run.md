@@ -75,7 +75,7 @@ grounded_in:
 
 ## Achievement Wall and Achievements list
 
-- Wall: [AP3x] Bears Lair Lv.30; Unyielding Stand Medal
+- Wall: [AP3x] owner account Lv.30; Unyielding Stand Medal
   x3, Battlefield Medic Medal x1, Stand Ready Medal x5,
   Assault Medal x2, Rescue Medal x3, Defense Medal x9.
 - All 17 medals in the Achievements list read:

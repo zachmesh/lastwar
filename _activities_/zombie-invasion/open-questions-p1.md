@@ -1,0 +1,15 @@
+---
+title: Open questions part 1
+created: 2026-11-23T06:53:20Z
+modified: 2026-11-23T06:53:20Z
+version: 0.1.0
+sequence: 26
+description: What the collection icon pays per kill - partly answered (2026-11-11 1619 update - four more
+---
+## Open questions
+
+- What the collection icon pays per kill - partly answered (2026-11-11 1619 update: four more row-read confirmations - the 1619 unit read four LOOT rows before Claim All (two handover rows from unit 016, X:454 Y:281 and X:586 Y:340, and two own rows, X:436 Y:435 and X:500 Y:417), each medal x10, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K; 1,072,000 coins claimed in one unit, coin HUD 135.6M to 136.2M to 136.7M. A later-wave Lv.10 row pays exactly 268,000 coins in this variant. Potential rewards vary per row: green crate x4 on one handover row, x1 on the other; gold ticket x1 on one own row, green crate x1 on the other.)
+  2026-10-28 - two consecutive later-wave Lv.10 rows paid
+  exactly 268,000 each while the 5 round 1 rows averaged
+  214,400; what sets a row's coin line (wave, distance,
+  target) is still open. (2026-11-10 2219 update: VERIFIED for this variant - the 2219 LOOT row was read before Claim All: medal x10, green crate x1, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K, and the HUD moved +0.3M on each resource. A later-wave Lv.10 row pays exactly 268,000 coins, third confirmation (units 006/007, 2008 HUD-inferred, 2219 row-read). What sets a row's coin line is still open; the Lv.28 Ironhead LOOT coin line is unmeasured.) (2026-11-10 2340 update: fourth confirmation - the 2340 LOOT row was read before Claim All: Lv.10 X:471 Y:355, medal x10, green box x4, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K, HUD coin 109.9M to 110.2M. A later-wave Lv.10 row pays exactly 268,000 coins.) (2026-11-11 0030 update: fifth and sixth confirmations - the 0030 unit read two LOOT rows before Claim All (Lv.10 X:525 Y:356 and X:534 Y:376, each medal x10, green box x4, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K) and claimed 536,000 coins in one Claim All; HUD coin 110.2M to 110.7M, food +0.5M, iron +0.6M, each displayed move consistent with 2 x 268,000.) (2026-11-11 0238/0324/0341/0412 update: eight more row-read confirmations - the 0238 unit three rows (804,000 coins), the 0324 unit one row (268,000), the 0341 unit two rows (536,000), the 0412 unit two rows (536,000); a later-wave Lv.10 row pays exactly 268,000 coins in this variant.) (2026-11-11 0622 update: two more row-read confirmations - the 0622 unit two rows (536,000 coins), with an exact coin-panel reconciliation 120,927,972 to 121,463,972; a later-wave Lv.10 row pays exactly 268,000 coins in this variant.) (2026-11-11 0724/0800 update: six more row-read confirmations - the 0724 unit three rows (804,000 coins) and the 0800 unit three rows (804,000 coins), each row read before Claim All; a later-wave Lv.10 row pays exactly 268,000 coins in this variant.

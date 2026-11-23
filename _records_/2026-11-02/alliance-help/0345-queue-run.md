@@ -22,7 +22,7 @@ Status: done. Help All pressed; no ally request was waiting.
 - Help page header read live: Today's points gained from Alliance
   Help 240 of 1,000, unchanged before and after Help All.
 - The visible list held only this account's own four requests
-  (Bears Lair: Precision Targeting II research, Morale research,
+  (owner account: Precision Targeting II research, Morale research,
   Lv.28 Drill Ground building, Lv.30 Aircraft Center building),
   all already showing Time reduced. A scroll of the list surfaced
   no further rows, so no ally request was waiting to be helped.

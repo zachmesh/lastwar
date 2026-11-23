@@ -1,10 +1,10 @@
 ---
 title: Scribe seat
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:11:00-08:00
+modified: 2026-11-23T07:26:00Z
 level: L2
-version: 0.1.0
-description: Knowledge and activity folding, and PR integration
+version: 0.2.0
+description: Knowledge and activity folding, and keeping the conventions current
 status: unverified
 grounded_in:
   - source: TEAM.yaml 0.1.0 and continuous-play-team.md 0.1.0

@@ -1,0 +1,14 @@
+---
+title: Changelog part 18
+created: 2026-11-23T06:25:33Z
+modified: 2026-11-23T06:49:00Z
+version: 0.2.0
+sequence: 79
+description: 1.68.0, 2026-11-10 - 0727 unit folded (partial, stack day) - Claim All-only bar with 9 rewards
+---
+- 1.68.0, 2026-11-10 - 0727 unit folded (partial, stack day): Claim All-only bar with 9 rewards pending and no Quick Execute offer - the offer flipped since the 2351 unit ran Quick Execute 5 tasks with the same 9 pending, so the selecting rule stays open; dish re-grounded fresh at norm (47,717), first-tap open with move-wait-click (retro A-02 verification), the grounding tool mislabelled the yellow radio device at (50,861) as the dish; entry Lv.13, points 348, stored 13/40, stamina 120, restore "Fully restore at 11-10 23:39:11 local time"; 6 pins inventoried untapped (4 skull: blue top centre, orange top centre-right, teal right, green bottom left; orange shoe left; blue handshake top left over [tag]TrapQueen37), alliance portrait pins are not task pins; NEW! badge on the chest icon at the top of the radar screen, eighth sighting of the gold NEW! icon, still untapped and unidentified - the next unit identifies it before any claim decision; base-screen reads food 612.5M, iron 935.9M, coin 84.1M, diamonds 13.22K, Total Power 148,058,020 (display only); "Violet's Gift received!" toast seen, nothing tapped for it; nothing executed or claimed, 9 pending rewards stay stacked for the duel day 3 release unit.
+
+- 1.67.0, 2026-11-10 - 0318 unit folded (partial, entry blocked): two dish attempts both delivered as map drags - freshly grounded point 34,324 was a map element, inherited 52,694 centre panned the camera to the 1st Squad area; dish not located, left edge strip shows map content only, no UI shortcut column in frame; CORRECTION to the 0852 'merely panned camera does not block' line - it holds only while the dish stays in frame; next unit uses a changed method (long-press variant, or re-centre first and re-ground fresh); nothing executed or claimed, 9 pending rewards stay stacked for the duel day 3 release; last-known state from the 2334 close (stored 1/40, pending 9, stamina 70, points 348, restore 12 tasks in 05:54:47), explicitly not a live read; gate toast '...ies are fully loaded, ...e claim them' seen again, same notice as the 0257 harvest record. (1.66.0 carries the 2351 section without a changelog line; the numbering is preserved, not rewritten.)
+
+- 1.65.0, 2026-11-09 - retro action A-2026-11-09-02 applied (Issue #484, closed by the retro): the (50,740) first-tap preference is retired - no point is preferred, fresh-ground the dish from the current base screenshot every unit; the (50,740) point stays a verified historical first-tap point (1355 unit, 2026-11-08 13:53), the (54,583) and (54,780) points are still never to be reused. No new radar unit ran this hour. (1.63.0 and 1.64.0 carry the 1754 and 1945 sections without changelog lines; the numbering is preserved, not rewritten.)
+

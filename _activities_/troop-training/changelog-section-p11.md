@@ -1,0 +1,12 @@
+---
+title: Changelog part 11
+created: 2026-11-23T06:45:27Z
+modified: 2026-11-23T06:45:27Z
+version: 0.1.0
+sequence: 47
+description: 1.38.0 (2026-11-10) - 1229 training unit folded (partial, Lv.24 requeued T8 x666 and verified running -
+---
+- 1.38.0 (2026-11-10): 1229 training unit folded (partial, Lv.24 requeued T8 x666 and verified running - BREAKS the five-consecutive-partial R2 process-failure run (0039, 1330, 0034, 0337, 0850); finished T8 batch of 666 collected on the tent tap, +707,958 power (666 x 1,063), no Drill Ground visit needed; Drill Ground Full (39,460 of 39,460, last read live 2026-10-31) did NOT block this collection or requeue - the 'blocks requeue' claim is qualified, commented on Issue #150; cost 2.9M food + 2.9M iron, duration 1d 04:20:26, 'Training in progress 1d 04:19:43' on reopen; T8 stats corrected live (Morale 531.25, Attack 28.69, Defense 5.84, superseding 520.63/28.37/5.72) and T10 stats corrected (Morale 750.0, Attack 38.45, Defense 7.79, superseding the 2026-10-25 baseline 720.01/38.03/7.55); Lv.8 owned 1,998 cross-checks the 1224 read of 1,332 + 666 collected; Lv.30 busy/idle still unverified - the 1d 17:14:37 on its buttons is the prospective batch duration, not a remaining timer, next unit reads the 'Training in progress' line; two further barracks unchecked; blocker_category h).
+
+- 1.37.0 (2026-11-10): 0850 training unit folded (partial, fifth consecutive training partial with the same blocker, R2 process failure stands - this unit added its evidence comment to Issue #150 as well; game found on the TECH screen by unexplained navigation after a session restart, no game input sent between the 08:46 base screenshot and the 08:49 TECH screenshot except the restart and window activate, navigation flagged not attributed; slot-1 timer discrepancy - research unit read 1d 01:35:27 at 08:46, TECH screen read 1d 01:51:59 at about 08:49, one read is misread, neither claimed as true without a re-read; back arrow at 129,928 returned to base; no barracks tent tapped, token lease expired 08:51:29 inside the pass budget; next unit must use a new grounding route - full-observe accessibility tree with click_element, or fullscreen reframe via the green zoom button, never Ctrl-Cmd-F or Escape - and must not re-tap the retired right-edge tent points (0337) or formation-yard points (0034); Drill Ground screen NOT re-read live, Drill Ground Full (39,460 of 39,460, last read live 2026-10-31) carried unverified; Quick Dispatch stays untapped, owner decision; blocker category e).
+

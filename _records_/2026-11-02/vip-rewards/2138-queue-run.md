@@ -21,7 +21,7 @@ login chest had anything left to claim.
 ## Entry
 
 - Commander avatar at norm (60,85) opened MY PROFILE
-  (Lv.30 [AP3x]Bears Lair, likes 1,800, up from 1,797
+  (Lv.30 [AP3x]owner account, likes 1,800, up from 1,797
   in the 0438 run).
 - Gold VIP13 badge, grounded on the fresh screenshot
   at (575,328), opened the VIP screen.

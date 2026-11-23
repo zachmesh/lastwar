@@ -27,7 +27,7 @@ no chest claimed, no scoring action executed.
 - Scoring rows read live: Increase Tech Power by 1pt +1; Use 1-min
   Research Speed-up +10; Buy Packs containing Diamonds +30 per
   diamond. The speedup and pack paths are red lines and were not used.
-- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging
+- Ranking row figure 10,000 for #2110 [AP3x]owner account is the lagging
   previous-phase row (same figure as the 0019 Hero Advancement record)
   and was NOT used as this phase score.
 

@@ -70,8 +70,8 @@ grounded_in:
   02:09, 30,342 vs 22,468, Lv.22, 2 medals; Defeat
   2026-3-21 02:01, 24,880 vs 30,090, Lv.22, 1 medal;
   Defeat 2026-3-14 03:10, 17,736 vs 30,124,
-  [Z76]Bears Lair Lv.22; Defeat 2026-3-7 03:41, 22,402
-  vs 31,698, [Z76]Bears Lair Lv.21. The two March rows
+  [Z76]owner account Lv.22; Defeat 2026-3-7 03:41, 22,402
+  vs 31,698, [Z76]owner account Lv.21. The two March rows
   carry the [Z76] tag, not [AP3x] - the account was in
   a different alliance in March 2026.
 - Red dots: 4 seen, 4 explained, 0 unexplained

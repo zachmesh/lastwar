@@ -28,7 +28,7 @@ device" dialog appeared. No paid button was touched.
   left reads 6/8, not full, nothing to claim. Score reads 0;
   the three point chests (thresholds 1,500 / 10,000 / 30,000)
   show no claim state. The bottom ranking row still shows the
-  finished Hero Advancement result (#2110 [AP3x]Bears Lair,
+  finished Hero Advancement result (#2110 [AP3x]owner account,
   40,500), whose ranking chest was already inspected in
   earlier units (contents preview only, no Claim button).
   No bouncing chest, no reward red dot on this page. Phase

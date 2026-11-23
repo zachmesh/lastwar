@@ -38,7 +38,7 @@ button were observed only.
   the Help entry that did not respond to background taps
   in the 0136 unit opened on the first grounded tap here.
   Today's points gained from Alliance Help: 1,240/1,000.
-  Four Bears Lair requests, all 30/30: building Lv.27
+  Four owner account requests, all 30/30: building Lv.27
   Drill Ground, building Lv.30 Aircraft Center, Morale
   research, Precision Targeting II research (fourth row
   partly cut off). Help All button present, observed

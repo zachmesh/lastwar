@@ -26,8 +26,8 @@ Mac mini.
 - Alliance panel: Help button carried a red dot; Alliance
   Gifts no longer did (gifts claimed earlier this pass).
 - Help dialog at entry: Today's points gained from Alliance
-  Help 420/1,000. Rows: Bears Lair (own) Missile Mastery II
-  research 30/30, Bears Lair (own) Lv.30 Aircraft Center
+  Help 420/1,000. Rows: owner account (own) Missile Mastery II
+  research 30/30, owner account (own) Lv.30 Aircraft Center
   30/30, Roronoa zo Lv.27 Oil Well, Dogo Oil Output I
   research.
 - Help All pressed. The two ally rows disappeared from the

@@ -32,7 +32,7 @@ Session window about 21:50 to 21:54 America/Los_Angeles.
   Today's winning Alliance will earn 2 Alliance Duel
   Score(s).
 - Opened Ranking, Daily Rank: the Tues. tab is selected and
-  the pinned own row reads Bears Lair [AP3x] The Apex,
+  the pinned own row reads owner account [AP3x] The Apex,
   Unlisted, 0 points.
 - Two independent live reads agree: today's personal duel
   total is 0.

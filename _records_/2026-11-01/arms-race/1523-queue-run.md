@@ -45,7 +45,7 @@ tracker is untouched and the next tick re-produces this regular.
   bouncing chest and no reward red dot. The cumulative counter
   chest at top left reads 1 of 2 with a partial bar and no
   bounce. The ranking row still shows the previous phase figure
-  (#2110 [AP3x]Bears Lair, 6,000); per precedent that row is
+  (#2110 [AP3x]owner account, 6,000); per precedent that row is
   not used as the phase score, and its chest is preview-only
   with no claim and was not tapped. Nothing was claimed.
 

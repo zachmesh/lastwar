@@ -28,7 +28,7 @@ of 2026-10-28.
   right rail, so no Star Ceremony is waiting. Duel League
   S38 read live: Gold Tier 38-7, AP3x rank 3, Match Record
   Week 2 AP3x vs [Sync] IMPERIUM 7-6, Weekly Ranking
-  Bears Lair rank 190 with 17,240,439 points (weekly
+  owner account rank 190 with 17,240,439 points (weekly
   cumulative, not a daily total). The personal daily total
   against the 3,600,000 target is unverified for this unit:
   no themed duel-day panel was present in the calculating
@@ -96,7 +96,7 @@ of 2026-10-28.
   (single dig UR 10.0 percent, SSR 30.0 percent,
   SR 60.0 percent). Back arrow re-grounded at norm
   112,946 after two dead taps near 83,938. Base screen
-  read live: [AP3x]Bears Lair level 30, power
+  read live: [AP3x]owner account level 30, power
   148,957,193; HUD 289.2M, 477.2M, 10.6M, 2,366.
   Red dots 7 seen, 4 explained, 3 unexplained
   (Alliance dot, building badge 5, NEW! chest badge 3).
@@ -1981,7 +1981,7 @@ of 2026-10-28.
 - Help unit help-2026-11-01-1430, done: Help All pressed, the
   game answered "Allies are very grateful for your assistance".
   Header read 1,040 of 1,000 for the day; visible requests were
-  all the account's own (Bears Lair), which cannot be helped.
+  all the account's own (owner account), which cannot be helped.
   Full detail in alliance-help/1722-queue-run.md.
 
 ## 17:23 to about 17:31 — Queue ticker pass, Mail Rewards (partial)
@@ -2080,7 +2080,7 @@ of 2026-10-28.
   checked only: no trophy icon beside the Alliance button, so
   no Star Ceremony is waiting. Duel panel read live: Roulette
   0 tokens, 0/10; League S38 calculating, AP3x rank 3; Weekly
-  Ranking Bears Lair rank 190 with 17,240,439 points
+  Ranking owner account rank 190 with 17,240,439 points
   (unchanged, weekly cumulative only). The personal daily
   total against 3,600,000 stays unverified in this inter-week
   calculating state, as in the 0108 unit.
@@ -2605,7 +2605,7 @@ of 2026-10-28.
 
 - Help unit help-2026-11-01-1830, done: Help All pressed.
   Header read 80 of 1,000 before and after; all visible
-  requests were the account's own (Bears Lair: Lv.30 Aircraft
+  requests were the account's own (owner account: Lv.30 Aircraft
   Center, Morale, Precision Targeting II, Lv.28 Drill Ground),
   reading 30/30 after the tap. No ally request was waiting.
   Full detail in alliance-help/2127-queue-run.md.
@@ -2704,7 +2704,7 @@ of 2026-10-28.
   that found none. Carriage 2 carries the account's own
   avatar in place of its plus button (verified by tapping
   its avatar badge, which opened MY PROFILE for Lv.30
-  [AP3x]Bears Lair), so the account is already aboard
+  [AP3x]owner account), so the account is already aboard
   carriage 2 as the standing rule requires. A THANK THE
   CONDUCTOR dialog opened on platform arrival was closed
   with its X unspent (stock 163 Trade Contracts untouched).

@@ -54,7 +54,7 @@ grounded_in:
   and 2026-11-02 Unit Progression reads. No chest earned
   at score 0. Cumulative counter chest at top left reads
   0/2, not full, no bounce, not tapped. Ranking row
-  #2110 [AP3x]Bears Lair with score 0, matching the
+  #2110 [AP3x]owner account with score 0, matching the
   phase score on this read; its chest is preview-only
   per precedent and was not tapped.
 - Scoring table, read live: Train a Lv.10 unit +31, Use

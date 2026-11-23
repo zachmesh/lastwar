@@ -32,7 +32,7 @@ owner Mac mini.
   "Alliance" fails - the game is a canvas, no such control
   exists.
 - Help dialog at entry: Today's points gained from Alliance
-  Help 500/1,000. Rows: Bears Lair (own) Lv.30 Aircraft
+  Help 500/1,000. Rows: owner account (own) Lv.30 Aircraft
   Center 30/30; KaBoom420, Need Healing Help; Comandante DT,
   Need help with Oil Output I research.
 - Help All pressed once. The game answered "Allies are very

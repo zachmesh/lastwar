@@ -31,7 +31,7 @@ status: done
   Claim All greyed, not tapped. Captures left 2/2, war
   declarations left 2/2. City Buff observed only.
 - Season Contributions: all four tabs read. Mutual
-  Assistance Season Total top 6 plus own #69 Bears Lair
+  Assistance Season Total top 6 plus own #69 owner account
   4,110,000; Weekly and Daily both "No new data", own
   Unlisted. Siege Season Total top 6 plus own #84
   52,500; Daily empty. Rare Soil War Season Total top 6

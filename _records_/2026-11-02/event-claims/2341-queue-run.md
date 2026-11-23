@@ -15,7 +15,7 @@ nothing claimable anywhere in the hub, nothing claimed.
   point chests 6,250 / 12,500 / 30,000 all locked. Nothing
   claimable here; pushing the phase is the arms-race unit's
   job, not this sweep. Bottom rank row reads #2110
-  [AP3x]Bears Lair with 9,300 (phase context only, not a
+  [AP3x]owner account with 9,300 (phase context only, not a
   claim).
 - Desert Storm Battlefield: Battle Day 2026-11-6,
   03:00-03:30, Participants 19/20 (including you), stamped
