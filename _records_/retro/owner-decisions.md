@@ -415,6 +415,19 @@ one mention in a summary.
   never fight), or must it stay untouched.
 - status: open. Until answered, units read the bubble and never tap it.
 
+### OD-20261123-02 - ally exchange for Hidden Treasure fragments
+
+- opened: 2026-11-23
+- item: the Hidden Treasure dig needs fragment M5; the stock is 0, so no dig
+  is possible. The only quick source is the ally exchange control, which
+  trades with other players.
+- context: read by the treasures unit,
+  `_records_/2026-11-22/hidden-treasures/2056-queue-run.md`.
+- decision needed: may a unit use the ally exchange to get M5, or must it
+  wait for fragments from the Secret Missions claims.
+- status: open. Until answered the exchange is never touched; the units wait
+  for fragments from the claim runs.
+
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
