@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T09:20:47Z
-version: 2.7.0
+modified: 2026-11-23T09:55:32Z
+version: 2.8.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -23,6 +23,7 @@ and staging runtime state.
 | [regulars.py](regulars.py) | recurring activities | [planning](tool-details/planning-and-scouting-tools.md) |
 | [duel.py](duel.py) | duel day and advice | [planning](tool-details/planning-and-scouting-tools.md) |
 | [resource_map.py](resource_map.py) | resource snapshots | [planning](tool-details/planning-and-scouting-tools.md) |
+| [tool-sync](tool-sync/INDEX.md) | live tools to origin main, silent when equal | [own index](tool-sync/INDEX.md) |
 | [spawn-seat](spawn-seat/INDEX.md) | the only way to spawn a roster seat: model fixed from TEAM.yaml, read back | [own index](spawn-seat/INDEX.md) |
 | [model-guard](model-guard/INDEX.md) | quiet check that every roster seat runs the approved model | [own index](model-guard/INDEX.md) |
 | [scout_diff.py](scout_diff.py) | observations to work | [planning](tool-details/planning-and-scouting-tools.md) |
