@@ -570,6 +570,138 @@ def cmd_check(args):
     return 0 if not problems else 1
 
 
+def _git_show(path, rev):
+    """(text, repo top, repo-relative path) of the file as `rev` holds it; text None when rev has no such file."""
+    import subprocess
+    here = os.path.dirname(os.path.abspath(path))
+    top = subprocess.run(["git", "-C", here, "rev-parse", "--show-toplevel"], capture_output=True, text=True)
+    if top.returncode != 0:
+        return None, None, None
+    top = top.stdout.strip()
+    rel = os.path.relpath(os.path.realpath(path), os.path.realpath(top))
+    shown = subprocess.run(["git", "-C", top, "show", "%s:%s" % (rev, rel)], capture_output=True)
+    return (shown.stdout.decode("utf-8") if shown.returncode == 0 else None), top, rel
+
+
+def migrate_uncommitted(path, rev="HEAD", apply=False, require_idle=True, _before_write=None):
+    """Move an UNCOMMITTED growth of a day observation file into its next part (one-off, for a file grown past the word budget
+    before the rollover existed). Returns (report, error, code).
+
+    The file as `rev` holds it must be a byte-exact prefix of the file now (the growth is appended sections and the counters,
+    never a rewrite of earlier text), and the growth must be whole `## ` sections. Then the sections go into the next part
+    (observation-pN.md, packed under HARD_MAX words each) with the file's CURRENT cumulative counters and a pointer back, the
+    folder INDEX lists the part, and the file itself is put back to what `rev` holds, byte for byte (what `git checkout` of
+    that file does). Nothing is lost and no committed text changes. A dry run (the default) only reports counts. With
+    --apply and require_idle the claimed queue folder must hold no unit (the writer is the operator, mid-unit), and the
+    file must be unchanged between the first read and the write. Output is counts only."""
+    base_text, top, rel = _git_show(path, rev)
+    if base_text is None:
+        return None, "%s is not in %s (or %s is not a git checkout)" % (path, rev, path), 2
+    try:
+        cur_text = _read(path)
+    except (OSError, UnicodeDecodeError) as exc:
+        return None, "cannot read %s: %s" % (path, exc), 2
+    b_counters, _bf, b_body, b_error = _split_frontmatter(base_text)
+    c_counters, c_front, c_body, c_error = _split_frontmatter(cur_text)
+    if b_error or c_error:
+        return None, "frontmatter: %s" % (b_error or c_error), 1
+    if cur_text == base_text:
+        return {"nothing_to_do": True, "file": path}, None, 0
+    if not c_body.startswith(b_body):
+        return None, "refused: the committed text of %s is not a byte-exact prefix of the file now - earlier text was rewritten, " \
+            "not appended; nothing was changed" % os.path.basename(path), 1
+    for field in CUMULATIVE_FIELDS:
+        if c_counters[field] < b_counters[field]:
+            return None, "refused: cumulative counter %s fell from %d to %d" % (field, b_counters[field], c_counters[field]), 1
+    tail = c_body[len(b_body):]
+    sections = _pass_sections(tail.lstrip("\n"))
+    if not sections or not tail.lstrip("\n").startswith("## "):
+        return None, "refused: what follows the committed text is not a run of whole ## sections", 1
+    known = [h for h, _b in _pass_sections(b_body)]
+    headings = [h for h, _b in sections]
+    if len(set(headings)) != len(headings) or set(headings) & set(known):
+        return None, "refused: a grown section repeats a committed heading", 1
+    parts = _day_parts(path)
+    number = max([_part_number(p) for p in parts] + [1]) + 1
+    first_front = _split_frontmatter(base_text)[1]
+    def intro(n):
+        return ("Part %d of the day observation file: it continues the sections of the earlier parts, which stay as written. The day "
+                "counters above are the cumulative totals at this part." % n)
+
+    def part_text(n, blocks):
+        return _rebuild(c_counters, _part_front(first_front, n), intro(n), blocks[:-1], blocks[-1])
+
+    packed, chunk = [], []
+    for heading, block in sections:
+        if chunk and _file_words(part_text(number + len(packed), [b for _h, b in chunk] + [block])) > HARD_MAX:
+            packed.append(chunk)
+            chunk = []
+        chunk.append((heading, block))
+        if _file_words(part_text(number + len(packed), [b for _h, b in chunk])) > HARD_MAX:
+            return None, "refused: the section is too long for a day file part (limit %d words) - split it first" % HARD_MAX, 1
+    packed.append(chunk)
+    report = {"file": path, "committed_words": _file_words(base_text), "current_words": _file_words(cur_text),
+              "sections_moved": len(sections), "parts_written": [], "counters": c_counters, "applied": False}
+    texts = []
+    for i, chunk in enumerate(packed):
+        n = number + i
+        text = part_text(n, [b for _h, b in chunk])
+        target = os.path.join(os.path.dirname(os.path.abspath(path)), "observation-p%d.md" % n)
+        if os.path.exists(target):
+            return None, "refused: %s already exists" % os.path.basename(target), 1
+        texts.append((target, text))
+        report["parts_written"].append({"name": os.path.basename(target), "words": _file_words(text), "sections": len(chunk)})
+    if not apply:
+        return report, None, 0
+    if require_idle:
+        claimed = os.path.join(top, "_queue_", "claimed")
+        if os.path.isdir(claimed) and any(f.endswith(".md") for f in os.listdir(claimed)):
+            return None, "refused: _queue_/claimed/ holds a unit; the operator writes this file at unit close - run again between units", 1
+    if _before_write:
+        _before_write()
+    if _read(path) != cur_text:
+        return None, "refused: the file changed while it was being read; nothing was written - run again", 1
+    for target, text in texts:
+        fd, tmp = tempfile.mkstemp(prefix=".observation-", dir=os.path.dirname(target))
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write(text)
+        os.replace(tmp, target)
+        _index_part(target, _file_words(text))
+    fd, tmp = tempfile.mkstemp(prefix=".observation-", dir=os.path.dirname(os.path.abspath(path)))
+    with os.fdopen(fd, "w", encoding="utf-8") as fh:
+        fh.write(base_text)
+    os.replace(tmp, path)
+    ok = _read(path) == base_text and all(_read(t) == x for t, x in texts)
+    problems, _w, _i, _u = check_observation(path)
+    report["applied"] = True
+    report["restored_to_%s" % rev.replace("/", "_")] = _read(path) == base_text
+    report["check_problems"] = len(problems)
+    if not ok or problems:
+        return report, "the written files do not read back as expected (%d problem(s))" % len(problems), 1
+    return report, None, 0
+
+
+def cmd_migrate(args):
+    report, error, code = migrate_uncommitted(args.file, args.base, args.apply, not args.allow_claimed)
+    if error is not None:
+        _emit({"command": "migrate", "error": error, "text": ["observation migrate REFUSED on %s: %s" % (args.file, error)]}, args.format)
+        return code
+    if report.get("nothing_to_do"):
+        _emit({"command": "migrate", "result": report, "text": ["observation migrate: nothing to do on %s (it equals %s)" % (args.file, args.base)]}, args.format)
+        return 0
+    text = ["observation migrate %s on %s: committed %d words, now %d words, %d section(s) %s"
+            % ("APPLIED" if report["applied"] else "(dry run, nothing written)", args.file, report["committed_words"],
+               report["current_words"], report["sections_moved"], "moved" if report["applied"] else "would move")]
+    for part in report["parts_written"]:
+        text.append("  %s: %d words, %d section(s)" % (part["name"], part["words"], part["sections"]))
+    text.append("  counters: %s" % ", ".join("%s=%d" % (f, report["counters"][f]) for f in COUNTER_FIELDS))
+    if report["applied"]:
+        text.append("  %s is back to what %s holds; the folder INDEX lists the part; check problems %d"
+                    % (os.path.basename(args.file), args.base, report["check_problems"]))
+    _emit({"command": "migrate", "result": report, "text": text}, args.format)
+    return 0
+
+
 def cmd_append(args):
     deltas = {"items_observed": args.add_items,
               "red_dots_seen": args.add_seen,
@@ -642,6 +774,17 @@ def main(argv=None):
     append.add_argument("--format", choices=("text", "json"),
                         default="text")
     append.set_defaults(func=cmd_append)
+
+    migrate = sub.add_parser("migrate",
+                             help="one-off: move an uncommitted growth of the day file into its next part and put the file back to its "
+                                  "committed text (dry run unless --apply)")
+    migrate.add_argument("--file", required=True)
+    migrate.add_argument("--base", default="HEAD", help="the revision holding the committed text (default HEAD)")
+    migrate.add_argument("--apply", action="store_true")
+    migrate.add_argument("--allow-claimed", action="store_true",
+                         help="skip the check that _queue_/claimed/ is empty (the operator writes this file at unit close)")
+    migrate.add_argument("--format", choices=("text", "json"), default="text")
+    migrate.set_defaults(func=cmd_migrate)
 
     args = parser.parse_args(argv)
     try:
