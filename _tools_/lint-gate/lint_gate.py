@@ -986,11 +986,28 @@ def cmd_redact(a) -> int:
 
 # --- check -------------------------------------------------------------------------------------------------
 
+def require_landing_ready(top: Path, a, rules: tuple) -> None:
+    """The landing form (--base with --landing) refuses to pass what it could not check: a base that does not resolve
+    reads as an empty tree, and a missing denylist skips the privacy rule with only a warning. Both are GateErrors here, so
+    the exit is 2 and a landing waits until the gate can run. The hooks never pass --landing and keep warn and allow."""
+    if a.staged or not a.base:
+        raise GateError("--landing is the base form: use --base REF, not --staged")
+    if not git(top, "rev-parse", "--verify", "--quiet", f"{a.base}^{{commit}}", check=False).strip():
+        raise GateError(f"landing: base {a.base} does not resolve to a commit, so there is nothing to compare against")
+    if PRIVACY_RULE not in rules:
+        raise GateError("landing: the privacy rule must run; --rules without it is refused")
+    patterns, _warnings, _expect, _ = load_denylist(top)
+    if not patterns:
+        raise GateError("landing: the privacy denylist is missing or empty, so the privacy rule cannot run")
+
+
 def cmd_check(a) -> int:
     started = time.time()
     root = Path(a.root).resolve()
     top = repo_top(root)
     rules = tuple(r for r in (a.rules or os.environ.get("LINT_GATE_RULES") or ",".join(GATE_RULES + (PRIVACY_RULE,))).split(",") if r)
+    if a.landing:
+        require_landing_ready(top, a, rules)
     privacy = None
     if PRIVACY_RULE in rules:
         privacy = privacy_scan_staged(top, a.staged)
@@ -1359,6 +1376,8 @@ def build_parser() -> argparse.ArgumentParser:
     c.add_argument("--staged", action="store_true", help="judge the staged commit (the hook; seconds)")
     c.add_argument("--base", metavar="REF", help="judge the tree against REF (a full lint, about a minute)")
     c.add_argument("--rules", help=f"comma list of rule tags that block (default {','.join(GATE_RULES)}; env LINT_GATE_RULES)")
+    c.add_argument("--landing", action="store_true", help="the Integrator's form with --base: exit 2 (never a pass) when the base "
+                   "does not resolve, the denylist is missing or empty, or a rule crashes")
     c.set_defaults(run=cmd_check)
     i = sub.add_parser("install", parents=[common], help="point core.hooksPath at the tracked pre-commit hook")
     i.add_argument("--dry-run", action="store_true")
@@ -1409,6 +1428,11 @@ def main(argv=None) -> int:
         return args.run(args)
     except GateError as exc:
         print(f"lint-gate: cannot run: {exc}", file=sys.stderr)
+        return 2
+    except Exception as exc:                      # a crashed rule: exit 1 would read as "blocked", and 0 never
+        if not getattr(args, "landing", False):
+            raise
+        print(f"lint-gate: cannot run: a rule crashed ({type(exc).__name__})", file=sys.stderr)
         return 2
 
 
