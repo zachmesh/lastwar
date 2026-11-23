@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T07:21:58Z
-version: 2.3.0
+modified: 2026-11-23T07:45:36Z
+version: 2.4.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -18,7 +18,7 @@ and staging runtime state.
 
 | Tool | Does | Article |
 |---|---|---|
-| [queue.py](queue.py) | work-unit queue | [queue](tool-details/queue-part-1.md) |
+| [queue.py](queue.py) | work-unit queue; a unit may carry a `serves` line (`enqueue --serves`, kept through claim and complete; `validate` warns when an upgrade-type unit has none) | [queue](tool-details/queue-part-1.md) |
 | [regulars.py](regulars.py) | recurring activities | [planning](tool-details/planning-and-scouting-tools.md) |
 | [duel.py](duel.py) | duel day and advice | [planning](tool-details/planning-and-scouting-tools.md) |
 | [resource_map.py](resource_map.py) | resource snapshots | [planning](tool-details/planning-and-scouting-tools.md) |
@@ -45,3 +45,4 @@ and staging runtime state.
 | [board-check](board-check/INDEX.md) | project board drift check | [own index](board-check/INDEX.md) |
 | [split-doc](split-doc/INDEX.md) | verbatim document splitter | [own index](split-doc/INDEX.md) |
 | [cu-bridge-tests](cu-bridge-tests/INDEX.md) | bridge daemon lifecycle tests | [own index](cu-bridge-tests/INDEX.md) |
+| [queue-tests](queue-tests/INDEX.md) | queue unit serves-key tests | [own index](queue-tests/INDEX.md) |
