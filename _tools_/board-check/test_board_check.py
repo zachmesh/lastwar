@@ -25,6 +25,8 @@ sys.modules["board_check"] = bc
 SPEC.loader.exec_module(bc)
 
 NEXUS_SEATS = "coordinator,reviewer,integrator"
+# the roster the recorded lastwar board was read with; TEAM.yaml moves on, a fixture does not
+LASTWAR_SEATS = "coordinator,operator,scout,researcher,planner,coach,toolsmith,scribe"
 SECRET = "SENTINEL-token-9f3a"
 
 
@@ -151,7 +153,7 @@ class FixtureRuns(unittest.TestCase):
     P = str(FIX / "lastwar-11")
 
     def test_lastwar_fixture_reports_structure_ok_and_only_triage_drift(self):
-        r = run_cli("--fixture", self.P)
+        r = run_cli("--fixture", self.P, "--seats", LASTWAR_SEATS)
         self.assertEqual(r.returncode, 1, r.stderr)
         d = json.loads(r.stdout)
         self.assertTrue(d["structural_ok"])
@@ -188,7 +190,7 @@ class FixtureRuns(unittest.TestCase):
         self.assertEqual(kinds([f for f in d["findings"] if f["area"] == "view"]), ["count", "missing"])
 
     def test_text_report(self):
-        r = run_cli("--fixture", self.P, "--text")
+        r = run_cli("--fixture", self.P, "--seats", LASTWAR_SEATS, "--text")
         self.assertIn("DRIFT, 4 finding(s)", r.stdout)
         self.assertIn("structure (fields, options, views): ok", r.stdout)
 
@@ -201,7 +203,7 @@ class FixtureRuns(unittest.TestCase):
 class Defaults(unittest.TestCase):
     def test_the_default_board_is_the_current_team_board(self):
         self.assertEqual((bc.DEFAULT_OWNER, bc.DEFAULT_PROJECT), ("zachmesh", 1))
-        r = run_cli("--fixture", str(FIX / "lastwar-11"))
+        r = run_cli("--fixture", str(FIX / "lastwar-11"), "--seats", LASTWAR_SEATS)
         self.assertEqual((json.loads(r.stdout)["owner"], json.loads(r.stdout)["project"]), ("zachmesh", 1))
         r = run_cli("--help")
         self.assertIn("default 1 of owner zachmesh", " ".join(r.stdout.split()))
@@ -281,8 +283,8 @@ class LivePath(unittest.TestCase):
 
     def test_live_path_matches_the_fixture_path_and_sends_the_token_only_as_a_header(self):
         url = self.serve("recorded")
-        live = run_cli("--api-url", url, env={"GH_TOKEN": SECRET})
-        recorded = run_cli("--fixture", str(FIX / "lastwar-11"))
+        live = run_cli("--api-url", url, "--seats", LASTWAR_SEATS, env={"GH_TOKEN": SECRET})
+        recorded = run_cli("--fixture", str(FIX / "lastwar-11"), "--seats", LASTWAR_SEATS)
         self.assertEqual(live.returncode, 1, live.stderr)
         self.assertNotIn(SECRET, live.stdout + live.stderr)
         self.assertEqual(set(Handler.seen_auth), {f"bearer {SECRET}"})
