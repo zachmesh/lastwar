@@ -1,0 +1,7 @@
+item,value,read_utc,note
+first frame,"base, no dialog",2026-11-23T16:37:15Z,
+header before,"Today's points gained from Alliance Help: 540/1,000",2026-11-23T16:37:30Z,
+rows before,"four rows, each 'Need help with building Lv.26 Training Base' 30/30; the avatar matches the owner account (own requests, not helpable); the fourth row cut off at the fold, not scrolled",2026-11-23T16:37:30Z,
+Help All,"green, pressed once; no toast seen; same four rows right after",2026-11-23T16:37:40Z,
+header after reopen,"620/1,000 (+80)",2026-11-23T16:37:50Z,"read after close and reopen (rule 6)"
+HUD,"energy 101, food 664.1M, iron 1.0G, coin 19.1M, diamonds 11,113, Total Power 150,416,946",2026-11-23T16:38:00Z,

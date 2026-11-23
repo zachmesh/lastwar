@@ -1,0 +1,9 @@
+item,value,read_utc,note
+first frame,"base, no dialog, no TIPS popup",2026-11-23T16:42:00Z,
+rail before,"gift icon on Event; red dots on Alliance, Regular and In-app Purchases; none on Battle Report, System, Favorite",2026-11-23T16:42:20Z,
+Event list,"six mails: several train mails, one Mega Express mail, 'Returned Items' (2h ago); only Returned Items carried a gift icon; no mail titled 'Train arrival reward' in view (not scrolled)",2026-11-23T16:42:35Z,
+Event Claim All,"pressed once: CONGRATULATIONS popup, 1m speed-up x2",2026-11-23T16:42:50Z,"gift icon and Claim All red dot gone after"
+System,"six President mails, all read, no gift icon",2026-11-23T16:43:00Z,Claim All not pressed
+Alliance,"three unread 'New Alliance Marker' mails with red dots, no gift icon",2026-11-23T16:43:05Z,Claim All not pressed
+rail after,"no gift icon anywhere; red dots remain on Alliance, Regular, In-app Purchases (unread, not claimable, rule 3)",2026-11-23T16:43:15Z,Regular and In-app Purchases never opened
+HUD before and after,"food 664.1M, iron 1.0G, coin 19.1M, diamonds 11,113, energy 102, Total Power 150,416,946",2026-11-23T16:43:20Z,speed-ups only: no HUD delta

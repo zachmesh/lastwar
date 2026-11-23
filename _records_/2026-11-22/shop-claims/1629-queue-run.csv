@@ -1,0 +1,7 @@
+tab,read_utc,what_seen,tapped,button_text,claimable
+shop title bar,2026-11-23T16:30:00Z,"HOT DEALS (red dot) and MALL; selected tab Official Event; no other app or sheet opened",cart icon (633 82),,
+tab row after one drag,2026-11-23T16:30:10Z,"Official Event | Weekly Deal | Super Monthly Pass | Weekly Pass | Diamond | Gold Brick Mall | Hot Sale Packs; no tag text on any tab","one sideways drag on the tab row (600 153 to 250 153)",,
+Official Event (first frame),2026-11-23T16:30:00Z,"banner 'Visit the Last War Store for more rewards!' with a blue Go button",nothing,Go,no (Go not tapped)
+Gold Brick Mall (the G tab),2026-11-23T16:30:15Z,"purchase page titled 'Gold Brick Mall - Extra 5% Bonus'; no timers; no Claim, Claimed or Already claimed text; cards: Initial Buy Reward x500 gold bricks + Free Gift x500 $4.99; Initial Buy Reward x1000 + Free Gift x1000 $9.99; x100000 + Free Gift x5000 $999.9; x50000 + Free Gift x2500 $499.9; two more partly visible (Free Gift x500 and x250)",tab only,price buttons only,no
+Hot Sale Packs,2026-11-23T16:30:20Z,"last tab of the row, nothing beyond it; shows only the message 'Packs sold out', no cards, timers or prices",tab only,none,no (sold out)
+base after,2026-11-23T16:30:25Z,"BASE, no panel; HUD food 664.1M, iron 1.0G, coin 19.1M, gems 11,113; Total Power 150,416,946 unchanged",shop back arrow once,,

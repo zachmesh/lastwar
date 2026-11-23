@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-23T21:15:00Z
 window: donation pass about 3.5 hours after the previous refill test
 est_minutes: 8
-serves: upkeep
+serves: PL-04
 chain_id: pass-2026-11-23
 chain_seq: 2
 attempts: 0
@@ -28,7 +28,7 @@ Serves: upkeep
 
 ## Brief (planner, donation pass, the refill test)
 
-serves: upkeep
+serves: PL-04
 
 Policy `_records_/2026-11-22/team-operations/2532-donations-tracker-policy.md`; activity `_activities_/alliance-donations/` (read its `rule-digest.md` first). Spend the live count and stop: DONE when it is spent or already spent at entry; PARTIAL when you stop early; FAILED when the panel is never reached; an entry at 1/30 closes flagged uncalibrated; coin only, never the diamond Donate; count only witnessed taps. Route: the Alliance shield (ground it fresh), Techs, War tab.
 

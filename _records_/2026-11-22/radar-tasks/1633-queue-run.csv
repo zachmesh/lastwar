@@ -1,0 +1,9 @@
+item,value,read_utc,note
+first frame dialog,TIPS 'active on a different device' NOT showing,2026-11-23T16:33:15Z,
+HUD before,"food 664.1M, iron 1.0G, coin 19.1M, oil 650.7K, energy 120, diamonds 11,113, Total Power 150,416,946",2026-11-23T16:33:15Z,
+radar screen,"map with pins (oil barrel, handshake, skull styles; none tapped); level 13 bar; counter 1/40; '12 Radar Task(s) will be restored in 04:04:50' (next restore about 20:38Z); gift box icon; back arrow and home icon",2026-11-23T16:33:40Z,no task list shown
+Quick Execute offer,"'You can complete 2 tasks, requires 20 Stamina'",2026-11-23T16:33:50Z,energy would stay at 100 (floor 40)
+Quick Execute press,once; energy 120 to 100; no dialog; no march or troop prompt; no reward popup; no oil figure,2026-11-23T16:33:55Z,
+bar after,"green Claim All, '11 task rewards can be claimed'",2026-11-23T16:34:00Z,Claim All NOT pressed (rule 5)
+gift box (Bingo),"toast 'Boost radar power to unlock it'; no Bingo screen, no lines, nothing claimed",2026-11-23T16:34:05Z,locked
+HUD after,"food 664.1M, iron 1.0G, coin 19.1M, oil 650.7K (unchanged), energy 100, diamonds 11,113, Total Power 150,416,946",2026-11-23T16:34:10Z,radar dish badge 11

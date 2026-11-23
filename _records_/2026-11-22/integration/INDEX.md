@@ -21,3 +21,4 @@ Integrator seat notes for 2026-11-22. Each GitHub action is one line in a note; 
 From PR 878 on, each landing has its own small file (one landing per file, 300 words or fewer, counts and SHAs only). Landings after local midnight are filed here too, by the Coordinator's instruction.
 
 - [Landing catalog 01](catalog-01.md) - one line per landing note from PR 878 on; new landings are added to the newest catalog, not here
+- [Landing catalog 02](catalog-02.md) - the next set of per-landing notes

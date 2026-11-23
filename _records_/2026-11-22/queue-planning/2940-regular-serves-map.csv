@@ -1,0 +1,26 @@
+regular,proposed_serves,ledger_row,what_it_feeds_or_why_upkeep,confirm
+secrets,PL-17,yes,oil line: the UR Capture the Oil Depot task pays 30K oil a day and the 4-hour tasks pay iron and food,Steer A (Strategist confirms)
+radar,PL-17,yes,"oil line: radar quests that pay oil, the Bingo lines, gold gathers","Steer A, Planner (Strategist confirms)"
+trucks,PL-18,yes,"materials engine: own trade trucks pay iron, food, coin and UR shards, and the plunder sessions share the truck line",Steer A (Strategist confirms)
+harvest,PL-16,yes,"iron and food line: the panel collect pays about 442K coin, 675K food and 623K iron an hour, which the Base Expansion path (616M each) and the Oil Well chain spend",Steer A; alternative PL-14 (Strategist confirms)
+donations,PL-04,yes,research line: alliance tech donations toward research speed,Steer A; alternative PL-16 (Strategist confirms)
+passes,PL-05,yes,drone feed: the weekly cards S2 Drone Components and S1 Drone Parts feed the Monday drone line,Planner: needs the Strategist (Strategist confirms)
+research,PL-04,yes,labs: the research reads and starts,Planner (Strategist confirms)
+building-queues,PL-08,yes,builders: the builder reads and starts,Planner (Strategist confirms)
+training,PL-09,yes,"troops: the barracks reads, collects and promotes",Planner (Strategist confirms)
+mail,upkeep,exempt word,feeds no lever: claims only; nothing it pays is a ranked lever,Strategist
+help,upkeep,exempt word,feeds no lever: alliance help for others; no lever shown,Strategist
+gifts,upkeep,exempt word,feeds no lever: alliance gift chests; random rewards,Strategist
+train,upkeep,exempt word,feeds no lever: the alliance train notice carries no claim,Strategist
+duel-score,upkeep,exempt word,feeds no lever: alliance duel score check; the theme-day link is the Strategist's to show,Strategist
+star-ceremony,upkeep,exempt word,feeds no lever: alliance duel; no lever shown,Strategist
+arms-race,upkeep,exempt word,feeds no lever: phase claims; the speed-up link is not measured,Strategist
+vip,upkeep,exempt word,feeds no lever: daily VIP claim,Strategist
+daily-missions,upkeep,exempt word,feeds no lever: daily mission claims,Strategist
+treasures,upkeep,exempt word,feeds no lever: hidden treasure maps,Strategist
+survivors,upkeep,exempt word,feeds no lever: survivor intake,Strategist
+events,upkeep,exempt word,feeds no lever: event claims,Strategist
+ghost-ops,upkeep,exempt word,feeds no lever: weekly Thursday,Strategist
+zero-sweep,upkeep,exempt word,"feeds no lever: pre-reset sweep, a checker",Strategist
+scout-midday,PL-07,yes,"measure: the midday state read and fixed-state reads inform the power and capacity baselines; a read unit serves the plan item it informs (a locate unit: the item whose reads it anchors), not 'snapshot', which the tool counts as unranked",Planner: needs the Strategist
+scout,PL-07,yes,"measure: the daily scout, as scout-midday",Planner: needs the Strategist

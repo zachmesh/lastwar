@@ -1,0 +1,6 @@
+item,value,read_utc,note
+labs counter,2/2 busy,2026-11-23T16:56:40Z,left column
+lab 1,"Food Output V, 1d 00:33:16 (ends about 2026-11-24T17:30Z)",2026-11-23T16:56:45Z,
+lab 2,"Iron Output V, 1d 09:42:17 (ends about 2026-11-25T02:39Z)",2026-11-23T16:56:45Z,
+idle labs,0,2026-11-23T16:56:45Z,slots_idle 0; no capacity blocker
+taps,"flask icon, the panel X",,nothing pressed inside the panel
