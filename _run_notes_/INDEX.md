@@ -1,8 +1,8 @@
 ---
 title: Run Notes
 created: 2026-11-23T09:46:55Z
-modified: 2026-11-23T09:57:13Z
-version: 1.26.0
+modified: 2026-11-23T09:58:36Z
+version: 1.28.0
 description: Run articles superseded by a dated record, one folder per activity
 ---
 
@@ -38,3 +38,5 @@ Run articles that duplicate a dated record: each is marked superseded, then move
 - [resource-collection](resource-collection/INDEX.md)
 - [survivor-intake](survivor-intake/INDEX.md)
 - [building-queues](building-queues/INDEX.md)
+- [season-ii-countdown-6d](season-ii-countdown-6d/INDEX.md)
+- [survey-center](survey-center/INDEX.md)
