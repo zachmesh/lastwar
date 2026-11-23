@@ -1,7 +1,7 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T14:47:41Z
+modified: 2026-11-23T14:55:37Z
 version: 1.6.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
@@ -27,5 +27,7 @@ of `plan`, `sweep` and `sync`, and `scout_diff.py`'s enqueue calls refuse a unit
 the refusal names it.
 
 `test_token_lease.py`: `token-acquire --lease-minutes N` (1 to 60, default 15, a renewal takes it again) and `--exclusive`, which makes `claim` refuse every other executor while the token is live (`claim --ignore-token` is the way past); an ordinary token never blocks a claim.
+
+`test_unit_brief.py`: every unit minted for a roster regular - `plan`, `sweep` and its fix-ups, `sync`, `enqueue` - carries the `## Brief` definition block (regular, roster line, activity folder and digest, map, route card, stop rule); a pointer to a missing file is left out; every roster regular has its digest and INDEX in the tracked tree.
 
 Run: `python3 -m unittest discover -s _tools_/queue-tests`.
