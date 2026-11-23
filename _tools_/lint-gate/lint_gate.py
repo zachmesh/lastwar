@@ -36,6 +36,7 @@ HARD_WORDS, SOFT_WORDS, RECORD_LIMIT = 500, 300, 480
 STAGED_TIMEOUT, FULL_TIMEOUT = 25, 600          # seconds; the staged cap keeps the hook under 30 s
 BASELINE_REL = "_tools_/state/lint-baseline.json"
 HOOKS_REL = "_tools_/lint-gate/hooks"
+HOOK_NAMES = ("pre-commit", "pre-merge-commit")
 EXEMPT_REL = "_tools_/lint-gate/exempt.txt"
 TOP_KEPT, GROWTH, MIN_GROWTH_WORDS, GROWTH_FILE_CAP = 50, 0.20, 20, 400
 TAG = re.compile(r"\[([a-z][a-z-]*)\]\s*$")
@@ -200,6 +201,27 @@ def short(finding: str) -> str:
     if tag == "document-concision":
         text = text.split(" Remove repetition", 1)[0].rstrip()
     return f"[{tag}] {text}"
+
+
+# --- exempt.txt only shrinks ---------------------------------------------------------------------------------
+
+def exempt_entries(text: str) -> list[str]:
+    return [ln.strip() for ln in text.splitlines() if ln.strip() and not ln.lstrip().startswith("#")]
+
+
+def exempt_additions(top: Path, base_ref: str, staged: bool) -> list[str]:
+    """Entries in the exempt list that the base does not have. The list may only shrink: a new exemption is a new way
+    round the word budget, so any entry added (or reworded, which is an add and a remove) blocks. A base without the file
+    is the file's introduction and is let through."""
+    base = git(top, "show", f"{base_ref}:{EXEMPT_REL}", check=False)
+    if not base.strip():
+        return []
+    try:
+        now = staged_git(top, "show", f":{EXEMPT_REL}") if staged else (top / EXEMPT_REL).read_bytes()
+    except (GateError, OSError):
+        return []                                   # not in the index or the tree: nothing was added
+    before = set(exempt_entries(base.decode("utf-8", errors="replace")))
+    return [e for e in exempt_entries(now.decode("utf-8", errors="replace")) if e not in before]
 
 
 # --- privacy -----------------------------------------------------------------------------------------------
@@ -942,6 +964,9 @@ def cmd_check(a) -> int:
             print(f"lint-gate: warning: {w}")
     hits = privacy["hits"] if privacy else []
     failures = privacy["failures"] if privacy else []
+    added = exempt_additions(top, "HEAD" if a.staged else (a.base or "HEAD"), a.staged)
+    for entry in added:
+        print(f"BLOCKED [exempt-list] {entry}: added to exempt.txt; the list may only shrink (remove entries, never add)")
     if failures:
         print(f"lint-gate: {EXPECT_MESSAGE}")
         for f in failures:
@@ -956,9 +981,9 @@ def cmd_check(a) -> int:
             report = run_linter(paths, top, ["--base", ref], FULL_TIMEOUT, staged=False)
             mode = f"base {ref}"
     except GateError:
-        if hits or failures:          # a privacy finding blocks even when the linter cannot run
+        if hits or failures or added:          # these block even when the linter cannot run
             print_privacy_hits(hits)
-            print(f"lint-gate: {len(hits) + len(failures)} privacy finding(s) block this commit; the linter could not run.")
+            print(f"lint-gate: {len(hits) + len(failures) + len(added)} finding(s) block this commit; the linter could not run.")
             return 1
         raise
     base = BaseTree(top, ref, staged=a.staged)
@@ -976,7 +1001,7 @@ def cmd_check(a) -> int:
             else "privacy not checked")
     note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt finding(s) ignored, "
             f"{other} error(s) of other rules ignored, {seen}")
-    total = len(blocking) + len(hits) + len(failures)
+    total = len(blocking) + len(hits) + len(failures) + len(added)
     if total:
         print(f"lint-gate: {total} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
         if blocking:
@@ -987,6 +1012,8 @@ def cmd_check(a) -> int:
                   "_conventions_/local-conventions/account-privacy.md); the denylist is local and never committed.")
         if failures:
             print("Privacy: fix the pattern or its `# expect-min` line in the local denylist; --no-verify stays the override.")
+        if added:
+            print("exempt.txt only shrinks: split or trim the document instead of exempting it.")
         return 1
     print(f"lint-gate: ok ({mode}, {seconds:.1f}s); {note}.")
     return 0
@@ -996,9 +1023,10 @@ def cmd_check(a) -> int:
 
 def cmd_install(a) -> int:
     top = repo_top(Path(a.root).resolve())
-    hook = top / HOOKS_REL / "pre-commit"
-    if not hook.is_file():
-        raise GateError(f"hook missing: {hook}")
+    hooks = [top / HOOKS_REL / name for name in HOOK_NAMES]
+    for hook in hooks:
+        if not hook.is_file():
+            raise GateError(f"hook missing: {hook}")
     current = git(top, "config", "--local", "--get", "core.hooksPath", check=False).decode().strip()
     if current and current != HOOKS_REL and not a.force:
         print(f"lint-gate: core.hooksPath is already {current!r}; refusing to replace it (use --force).")
@@ -1006,10 +1034,49 @@ def cmd_install(a) -> int:
     if a.dry_run:
         print(f"lint-gate: would set core.hooksPath to {HOOKS_REL} in {top}")
     else:
-        hook.chmod(hook.stat().st_mode | 0o111)
+        for hook in hooks:
+            hook.chmod(hook.stat().st_mode | 0o111)
         git(top, "config", "--local", "core.hooksPath", HOOKS_REL)
-        print(f"lint-gate: core.hooksPath set to {HOOKS_REL} in {top}")
+        print(f"lint-gate: core.hooksPath set to {HOOKS_REL} in {top} ({', '.join(HOOK_NAMES)})")
     print("Rollback: git config --unset core.hooksPath")
+    return 0
+
+
+# --- exempt-prune ------------------------------------------------------------------------------------------
+
+def cmd_exempt_prune(a) -> int:
+    """List, and with --apply remove, the exempt.txt entries that no longer exempt anything: no tracked file matching the
+    entry has HARD_WORDS or more body words. The list only shrinks, so this is the way entries leave it."""
+    top = repo_top(Path(a.root).resolve())
+    counter = load_counter(reflection_paths(a))
+    path = top / EXEMPT_REL
+    lines = path.read_text(encoding="utf-8").splitlines()
+    tracked = [n for n in git(top, "ls-files", "-z").decode("utf-8", errors="surrogateescape").split("\0") if n]
+    obsolete, kept = [], 0
+    for entry in exempt_entries("\n".join(lines)):
+        if entry.startswith("folder "):
+            kept += 1
+            continue
+        oversized = False
+        for name in (n for n in tracked if is_exempt(n, [entry])):
+            try:
+                words = counter.check_text((top / name).read_text(encoding="utf-8"), name)["body_words"]
+            except (OSError, UnicodeError):
+                continue
+            if words >= HARD_WORDS:
+                oversized = True
+                break
+        if oversized:
+            kept += 1
+        else:
+            obsolete.append(entry)
+    for entry in obsolete:
+        print(f"obsolete: {entry}")
+    print(f"exempt.txt: {len(obsolete)} obsolete entr{'y' if len(obsolete) == 1 else 'ies'}, {kept} still needed" +
+          ("" if a.apply else "; dry run, pass --apply to remove"))
+    if a.apply and obsolete:
+        path.write_text("\n".join(l for l in lines if l.strip() not in obsolete) + "\n", encoding="utf-8")
+        print(f"exempt.txt: removed {len(obsolete)}")
     return 0
 
 
@@ -1292,6 +1359,9 @@ def build_parser() -> argparse.ArgumentParser:
     d.add_argument("--allow-outside", action="store_true", help="accept an explicit absolute file path under /tmp (a saved original)")
     d.add_argument("--report-all", action="store_true", help="list every matching file, not the first 40")
     d.set_defaults(run=cmd_redact)
+    x = sub.add_parser("exempt-prune", parents=[common], help="remove exempt.txt entries that exempt nothing any more (dry run unless --apply)")
+    x.add_argument("--apply", action="store_true")
+    x.set_defaults(run=cmd_exempt_prune)
     r = sub.add_parser("record-check", parents=[common], help="body words of a play record; exit 1 at the limit")
     r.add_argument("paths", nargs="+", metavar="PATH")
     r.add_argument("--limit", type=int, default=RECORD_LIMIT)
