@@ -1,8 +1,8 @@
 ---
 title: Run Notes
 created: 2026-11-23T09:46:55Z
-modified: 2026-11-23T09:53:45Z
-version: 1.17.0
+modified: 2026-11-23T09:54:53Z
+version: 1.20.0
 description: Run articles superseded by a dated record, one folder per activity
 ---
 
@@ -29,3 +29,6 @@ Run articles that duplicate a dated record: each is marked superseded, then move
 - [alliance-duel](alliance-duel/INDEX.md)
 - [the-age-of-oil](the-age-of-oil/INDEX.md)
 - [crystal-shop](crystal-shop/INDEX.md)
+- [decoration-gallery-overview-ur](decoration-gallery-overview-ur/INDEX.md)
+- [zombie-invasion](zombie-invasion/INDEX.md)
+- [truck-plunder](truck-plunder/INDEX.md)
