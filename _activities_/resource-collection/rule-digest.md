@@ -1,9 +1,9 @@
 ---
 title: Resource Collection Rule Digest
 created: 2026-11-23T06:22:07Z
-modified: 2026-11-23T06:22:56Z
+modified: 2026-11-23T10:59:13Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: The standing rules an operator must follow when collecting building output and truck loot, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -23,7 +23,8 @@ grounded_in:
 8. Close a stray building panel with the left-edge swipe-back, not the X (how-it-is-p9).
 9. The Armed Truck loot check is the first action of each harvest unit (R7) (how-it-is-p12, how-it-is-p15).
 
-Unverified: Armed Truck loot state and panel entry (how-it-is-p14, how-it-is-p15); Profile-panel close, never-open_app and compact-view close-button rules, measured by ticker units, not the current bridge (how-it-is-p10); window and Space state (day-20261105).
+10. Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
+Unverified: [claims](unverified-claims.md).
 
 ## Errata
 
