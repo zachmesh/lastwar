@@ -54,6 +54,25 @@ improvement `IMP-20261123-01`.
 - Reconcile `TEAM.yaml` with the actual DSH sessions.
 - Ask the owner only for decisions that are genuinely owner-only.
 
+## The project board (owner, 2026-11-22)
+
+The team's GitHub Project is <https://github.com/users/dtadpole/projects/11>
+(see `team-organization.md` section 13). This seat owns it. It cannot be linked
+to the repository, so nothing feeds it automatically.
+
+- **Each daily pass:** add repository issues that are missing from the board
+  (`addProjectV2ItemById` is idempotent), set Status, and keep the Agent field's
+  options equal to the seats in `TEAM.yaml`. Use small batches (8 or fewer) and
+  confirm by reading the board back; a large batch can lose its responses.
+- **Triage until done:** parent every open issue to an Epic (#861 to #865,
+  `Maintenance` if none fits), set its Agent, and set Priority. Work in slices
+  of at most 20 issues per pass so the tick stays short; delegate slices to the
+  coach. Target: every open issue has an Epic and an Agent within three days.
+- **Move cards as work happens:** one `In progress` card per seat; a closed
+  issue is `Done`, or `Sunset` when closed as not planned.
+- **Run the board check** (`_tools_/board_check.py`, once the toolsmith lands
+  it) every pass and fix drift the same day.
+
 ## Record
 
 Write the run at `_records_/<date>/<activity>/<HHMM>-run.md` and append the
