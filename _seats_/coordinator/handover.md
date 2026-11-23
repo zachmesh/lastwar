@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T05:04:00Z
+modified: 2026-11-23T05:09:00Z
 level: L2
-version: 0.4.2
+version: 0.4.3
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -27,6 +27,8 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 `queue.py next`, eligibility check and dispatch in one turn, under 60 s. One unit, one run, one reply. Chain: each operator reply is verified, then the next `next` unit is sent at once. The 900 s clock is only the backstop; if the operator is busy, record a no-op. Routine runs use `claude-gateway/claude-sonnet-5-5` and `--max-steps 8`. Every unit starts with `killall -9 UserNotificationCenter NotificationCenter` and `lsappinfo front` naming LastWar. The owner's Screen Sharing must be View Only; a run paused by local input is closed partial within 2 minutes. At most two seats run model turns at once.
 
 ## In flight
+
+- HOLD (Steward, 05:06Z): after the current unit dispatch nothing until the Steward says the browser is closed; message it when the operator is idle.
 
 - Toolsmith `A-20261123-0501`: `stub-index` for records folders, then `_tools_/board-check/`, due 05:35Z. The lint gate is merged (`f9d3cd01`); run `install` only after that lands. The operator then runs `stub-index --apply` after its first record in a new folder.
 - Operator: a one-pass trim of its over-limit records (measured rows to sidecars, narrative untouched), then back to play. Next unit: `secrets-2026-11-22-1857`.
