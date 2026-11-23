@@ -1,43 +1,11 @@
 ---
-title: Alliance Duel the VS week
-created: 2026-11-23T06:18:59Z
-modified: 2026-11-23T06:18:59Z
+title: Alliance Duel the VS week part 2
+created: 2026-11-23T09:06:51Z
+modified: 2026-11-23T09:06:51Z
 version: 0.1.0
-sequence: 3
-description: Alliance Duel runs Monday to Saturday, one scoring theme per day, and items spent off-theme score
+sequence: 4
+description: The duel day boundary is 0200 UTC 1800 local in winter (PST), 1900 local in summer
 ---
-## Alliance Duel — the VS week
-
-Alliance Duel runs Monday to Saturday, one scoring theme per day, and
-items spent off-theme score zero (Packsify; Handbook alignment table
-agrees day by day) —
-
-| Day | Theme |
-|---|---|
-| Monday | Radar Training |
-| Tuesday | City Building |
-| Wednesday | Tech Research |
-| Thursday | Hero Training |
-| Friday | Total Mobilization (troop training and promotion) |
-| Saturday | Enemy Buster |
-
-Sunday is the off day. Save speedups, hero EXP, skill items and training
-for their theme day; the week, not the day, is the planning unit.
-
-Verified in game on 2026-10-25 (Weekly Schedule page) — the day order
-above is exact, with the in-game theme names and the win points each
-day contributes to the weekly victory —
-
-| Day | In-game theme | Win points |
-|---|---|---|
-| Day 1 (Mon) | Radar Training | 1 |
-| Day 2 (Tue) | Base Expansion | 2 |
-| Day 3 (Wed) | Age of Science | 2 |
-| Day 4 (Thu) | Train Heroes | 2 |
-| Day 5 (Fri) | Total Mobilization | 2 |
-| Day 6 (Sat) | Enemy Buster | 4 |
-| Day 7 (Sun) | off day | 0 |
-
 - The duel day boundary is 02:00 UTC — 18:00 local in winter (PST), 19:00 local in summer (PDT) (America/Los Angeles). Day 1 of the current week opened Sunday 2026-10-25
   19:00 local with 21h22m left when read at 21:37, and the week
   timer read 5d 21h. Server weekdays in the table above therefore
