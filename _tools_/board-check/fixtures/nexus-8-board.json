@@ -1,0 +1,493 @@
+{
+ "repositoryOwner": {
+  "projectV2": {
+   "id": "PVT_kwHOAkLII84BpzF0",
+   "title": "nexus",
+   "public": false,
+   "closed": false,
+   "fields": {
+    "nodes": [
+     {
+      "name": "Title",
+      "dataType": "TITLE"
+     },
+     {
+      "name": "Assignees",
+      "dataType": "ASSIGNEES"
+     },
+     {
+      "name": "Status",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "Draft"
+       },
+       {
+        "name": "Ready"
+       },
+       {
+        "name": "In progress"
+       },
+       {
+        "name": "Waiting"
+       },
+       {
+        "name": "In review"
+       },
+       {
+        "name": "Needs owner"
+       },
+       {
+        "name": "Done"
+       },
+       {
+        "name": "Sunset"
+       }
+      ]
+     },
+     {
+      "name": "Labels",
+      "dataType": "LABELS"
+     },
+     {
+      "name": "Linked pull requests",
+      "dataType": "LINKED_PULL_REQUESTS"
+     },
+     {
+      "name": "Milestone",
+      "dataType": "MILESTONE"
+     },
+     {
+      "name": "Repository",
+      "dataType": "REPOSITORY"
+     },
+     {
+      "name": "Reviewers",
+      "dataType": "REVIEWERS"
+     },
+     {
+      "name": "Parent issue",
+      "dataType": "PARENT_ISSUE"
+     },
+     {
+      "name": "Sub-issues progress",
+      "dataType": "SUB_ISSUES_PROGRESS"
+     },
+     {
+      "name": "Created",
+      "dataType": "CREATED"
+     },
+     {
+      "name": "Updated",
+      "dataType": "UPDATED"
+     },
+     {
+      "name": "Closed",
+      "dataType": "CLOSED"
+     },
+     {
+      "name": "Agent",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "owner (zhenc)"
+       },
+       {
+        "name": "nexus coordinator"
+       },
+       {
+        "name": "nexus reviewer"
+       },
+       {
+        "name": "nexus integrator"
+       }
+      ]
+     },
+     {
+      "name": "Session",
+      "dataType": "TEXT"
+     },
+     {
+      "name": "Kind",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "research"
+       },
+       {
+        "name": "tool"
+       },
+       {
+        "name": "ops"
+       },
+       {
+        "name": "knowledge"
+       }
+      ]
+     },
+     {
+      "name": "Priority",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "P0"
+       },
+       {
+        "name": "P1"
+       },
+       {
+        "name": "P2"
+       },
+       {
+        "name": "P3"
+       }
+      ]
+     },
+     {
+      "name": "Feedback state",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "new"
+       },
+       {
+        "name": "triaged"
+       },
+       {
+        "name": "accumulating"
+       },
+       {
+        "name": "accepted"
+       },
+       {
+        "name": "applied"
+       },
+       {
+        "name": "rejected"
+       },
+       {
+        "name": "duplicate"
+       },
+       {
+        "name": "wontfix"
+       },
+       {
+        "name": "superseded"
+       },
+       {
+        "name": "archived"
+       },
+       {
+        "name": "verified"
+       }
+      ]
+     },
+     {
+      "name": "Feedback kind",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "defect"
+       },
+       {
+        "name": "gap"
+       },
+       {
+        "name": "ambiguity"
+       },
+       {
+        "name": "outdated"
+       },
+       {
+        "name": "friction"
+       },
+       {
+        "name": "proposal"
+       },
+       {
+        "name": "works-well"
+       }
+      ]
+     },
+     {
+      "name": "Feedback severity",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+       {
+        "name": "high"
+       },
+       {
+        "name": "medium"
+       },
+       {
+        "name": "low"
+       }
+      ]
+     },
+     {
+      "name": "Feedback unit",
+      "dataType": "TEXT"
+     },
+     {
+      "name": "Feedback item",
+      "dataType": "TEXT"
+     },
+     {
+      "name": "Feedback by",
+      "dataType": "TEXT"
+     },
+     {
+      "name": "Work",
+      "dataType": "TEXT"
+     }
+    ]
+   },
+   "views": {
+    "nodes": [
+     {
+      "name": "Kanban",
+      "number": 2,
+      "layout": "BOARD_LAYOUT",
+      "filter": "no:feedback-state -label:epic",
+      "fields": {
+       "nodes": [
+        {
+         "name": "Title"
+        },
+        {
+         "name": "Assignees"
+        },
+        {
+         "name": "Status"
+        },
+        {
+         "name": "Linked pull requests"
+        },
+        {
+         "name": "Sub-issues progress"
+        },
+        {
+         "name": "Work"
+        }
+       ]
+      },
+      "groupByFields": {
+       "nodes": []
+      },
+      "verticalGroupByFields": {
+       "nodes": [
+        {
+         "name": "Status"
+        }
+       ]
+      }
+     },
+     {
+      "name": "By Agent",
+      "number": 5,
+      "layout": "BOARD_LAYOUT",
+      "filter": "-status:Done,Sunset",
+      "fields": {
+       "nodes": [
+        {
+         "name": "Title"
+        },
+        {
+         "name": "Assignees"
+        },
+        {
+         "name": "Status"
+        },
+        {
+         "name": "Linked pull requests"
+        },
+        {
+         "name": "Sub-issues progress"
+        },
+        {
+         "name": "Work"
+        }
+       ]
+      },
+      "groupByFields": {
+       "nodes": []
+      },
+      "verticalGroupByFields": {
+       "nodes": [
+        {
+         "name": "Agent"
+        }
+       ]
+      }
+     },
+     {
+      "name": "Recently Done",
+      "number": 6,
+      "layout": "BOARD_LAYOUT",
+      "filter": "status:Done,Sunset updated:>@today-14d",
+      "fields": {
+       "nodes": [
+        {
+         "name": "Title"
+        },
+        {
+         "name": "Assignees"
+        },
+        {
+         "name": "Status"
+        },
+        {
+         "name": "Linked pull requests"
+        },
+        {
+         "name": "Sub-issues progress"
+        }
+       ]
+      },
+      "groupByFields": {
+       "nodes": []
+      },
+      "verticalGroupByFields": {
+       "nodes": [
+        {
+         "name": "Agent"
+        }
+       ]
+      }
+     },
+     {
+      "name": "Feedback loop",
+      "number": 7,
+      "layout": "BOARD_LAYOUT",
+      "filter": "has:feedback-state updated:>@today-14d",
+      "fields": {
+       "nodes": [
+        {
+         "name": "Title"
+        },
+        {
+         "name": "Assignees"
+        },
+        {
+         "name": "Status"
+        },
+        {
+         "name": "Linked pull requests"
+        },
+        {
+         "name": "Sub-issues progress"
+        },
+        {
+         "name": "Agent"
+        },
+        {
+         "name": "Feedback kind"
+        },
+        {
+         "name": "Feedback severity"
+        },
+        {
+         "name": "Work"
+        }
+       ]
+      },
+      "groupByFields": {
+       "nodes": []
+      },
+      "verticalGroupByFields": {
+       "nodes": [
+        {
+         "name": "Status"
+        }
+       ]
+      }
+     },
+     {
+      "name": "Epics",
+      "number": 8,
+      "layout": "BOARD_LAYOUT",
+      "filter": "label:epic",
+      "fields": {
+       "nodes": [
+        {
+         "name": "Title"
+        },
+        {
+         "name": "Assignees"
+        },
+        {
+         "name": "Status"
+        },
+        {
+         "name": "Linked pull requests"
+        },
+        {
+         "name": "Sub-issues progress"
+        },
+        {
+         "name": "Agent"
+        },
+        {
+         "name": "Work"
+        }
+       ]
+      },
+      "groupByFields": {
+       "nodes": []
+      },
+      "verticalGroupByFields": {
+       "nodes": [
+        {
+         "name": "Status"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "items": {
+    "pageInfo": {
+     "hasNextPage": false,
+     "endCursor": "Y3Vyc29yOnYyOpKqMDAwMDAwMDAuMs4RcQ91"
+    },
+    "nodes": [
+     {
+      "content": {
+       "repository": {
+        "nameWithOwner": "dtadpole/nexus"
+       }
+      }
+     },
+     {
+      "content": {
+       "repository": {
+        "nameWithOwner": "dtadpole/nexus"
+       }
+      }
+     },
+     {
+      "content": {
+       "repository": {
+        "nameWithOwner": "dtadpole/nexus"
+       }
+      }
+     },
+     {
+      "content": {
+       "repository": {
+        "nameWithOwner": "dtadpole/nexus"
+       }
+      }
+     },
+     {
+      "content": {
+       "repository": {
+        "nameWithOwner": "dtadpole/nexus"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

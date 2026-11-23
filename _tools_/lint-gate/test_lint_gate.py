@@ -192,6 +192,74 @@ class CheckStaged(GateCase):
         self.assertIn("cannot run", r.stderr)
 
 
+class StubIndex(GateCase):
+    DAY = "_records_/2026-11-23"
+
+    def setUp(self):
+        super().setUp()
+        self.write(f"{self.DAY}/INDEX.md", "# day\n")
+        self.write(f"{self.DAY}/fresh-activity/0100-run.md", doc(50, "Fresh"))
+        self.write(f"{self.DAY}/another-activity/0100-run.md", doc(50, "Another"))
+        self.write(f"{self.DAY}/kept-activity/INDEX.md", "custom text\n")
+        self.write(f"{self.DAY}/kept-activity/0100-run.md", doc(50, "Kept"))
+        self.write(f"{self.DAY}/notes.md", doc(10, "Loose file"))
+        self.write(f"{self.DAY}/.hidden/0100-run.md", doc(10, "Hidden"))
+
+    def stub(self, *extra):
+        return self.gate("stub-index", "--today", "2026-11-23", *extra)
+
+    def test_dry_run_is_the_default_and_writes_nothing(self):
+        r = self.stub()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn(f"would create {self.DAY}/fresh-activity/INDEX.md", r.stdout)
+        self.assertIn("dry run", r.stdout)
+        self.assertFalse((self.repo / self.DAY / "fresh-activity/INDEX.md").exists())
+
+    def test_apply_writes_a_static_short_stub_only_where_missing(self):
+        r = self.stub("--apply")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        stub = (self.repo / self.DAY / "fresh-activity/INDEX.md").read_text()
+        self.assertTrue(stub.startswith("---\ntitle: Execution records for fresh-activity on 2026-11-23\n"))
+        self.assertIn("description: Execution records for fresh-activity on 2026-11-23, one file per run; the day index lists them.\n", stub)
+        self.assertIn("version: 1.0.0", stub)
+        body = stub.split("---\n", 2)[2]
+        self.assertLess(len(body.split()), 60)
+        for line in stub.split("---\n", 2)[1].splitlines():
+            if not line.startswith(("created:", "modified:")):
+                self.assertNotIn(":", line.split(": ", 1)[1], line)   # no value carries a colon
+        self.assertTrue((self.repo / self.DAY / "another-activity/INDEX.md").is_file())
+        self.assertEqual((self.repo / self.DAY / "kept-activity/INDEX.md").read_text(), "custom text\n")
+        self.assertFalse((self.repo / self.DAY / ".hidden/INDEX.md").exists())
+        self.assertFalse((self.repo / self.DAY / "notes.md/INDEX.md").exists())
+
+    def test_idempotent_and_never_touches_an_existing_file(self):
+        self.stub("--apply")
+        first = (self.repo / self.DAY / "fresh-activity/INDEX.md").read_bytes()
+        (self.repo / self.DAY / "fresh-activity/INDEX.md").write_text("edited by hand\n")
+        r = self.stub("--apply")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertNotIn("created ", r.stdout)
+        self.assertEqual((self.repo / self.DAY / "fresh-activity/INDEX.md").read_text(), "edited by hand\n")
+        self.assertNotEqual(first, b"edited by hand\n")
+
+    def test_older_days_are_never_touched(self):
+        self.stub("--apply")
+        self.assertFalse((self.repo / "_records_/2026-11-22/bare-activity/INDEX.md").exists())
+        r = self.gate("stub-index", "--today", "2026-11-24", "--apply")
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("nothing to do", r.stdout)
+
+    def test_gate_blocks_a_new_folder_without_stub_and_passes_it_with_one(self):
+        blocked = self.stage_check(self.DAY)
+        self.assertEqual(blocked.returncode, 1, blocked.stdout + blocked.stderr)
+        self.assertIn("[entry-points]", blocked.stdout)
+        self.run_git("reset", "-q")
+        self.stub("--apply")
+        r = self.stage_check(self.DAY)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("lint-gate: ok", r.stdout)
+
+
 class CheckBase(GateCase):
     def test_base_ref_blocks_what_the_ref_lacks(self):
         self.write("_records_/2026-11-22/legacy-activity/0200-big-run.md", doc(600, "Big"))
