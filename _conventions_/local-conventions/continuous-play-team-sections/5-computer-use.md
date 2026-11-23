@@ -1,8 +1,8 @@
 ---
 title: 5. Computer use
 created: 2026-11-23T07:20:36Z
-modified: 2026-11-23T21:25:06Z
-version: 0.3.0
+modified: 2026-11-23T21:34:23Z
+version: 0.4.0
 sequence: 10
 description: Play happens through dtadpole/computer-use on this Mac, using its MCP server.
 ---
@@ -25,14 +25,13 @@ Local rules:
   by the computer-use policy and are never proposed.
 - One desktop run at a time. A live run holds the Mac's desktop-run
   lock; a second start is refused, not queued.
-- Owner-idle wait, dated: restored 20:04Z on 2026-11-23 (OD-20261123-23,
-  `_records_/retro/owner-decisions-log/od-20261123-23.md`; code in PR 937), then TEMPORARILY 0 from
-  the bridge restart after 21:20Z (OD-20261123-27, `_records_/retro/owner-decisions-log/od-20261123-27.md`)
-  until CU-720 arrives with the tree move (CU-721). The code default is
-  300 s and `_tools_/cu_bridge.py` sets no default: only the environment variable
-  `CU_OWNER_IDLE_SECONDS=0` in the bridge daemon says 0. The older opt-out (commit fd83c35f,
-  2026-11-22) ended with OD-23. A refusal `owner_active` is the wait; the
-  quiet windows and the exclusive token lease (PR 911) are the other two cu-coordination rules.
+- Owner-idle wait, 2026-11-23: restored 20:04Z (OD-20261123-23, PR 937), then TEMPORARILY 0 from
+  the restart after 21:20Z (OD-20261123-27) until CU-720, the tree move. The code default is 300 s.
+  Until the launcher branch (d762ffce) merges, only the environment variable
+  `CU_OWNER_IDLE_SECONDS=0` says 0; from that branch, live after the Integrator merges it, the
+  launcher line in `_tools_/cu_bridge.py` says 0 (restore: set it to None). The opt-out of 2026-11-22
+  (fd83c35f) ended with OD-23. A refusal `owner_active` is the wait; quiet windows and the
+  token lease (PR 911) are the other two cu-coordination rules.
 - Consent is human-only. The bridge prints the control-link command
   for the owner; no seat can approve an app, a purchase, a send or a
   consequential step through the tool.
