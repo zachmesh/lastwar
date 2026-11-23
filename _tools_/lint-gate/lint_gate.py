@@ -99,11 +99,20 @@ def path_of(finding: str) -> str:
     return finding.split(": ", 1)[0]
 
 
-def exemptions(top: Path) -> list[str]:
+def exemptions(top: Path) -> tuple[list[str], list[str]]:
+    """(document globs, folder globs) from exempt.txt; a line `folder GLOB` exempts folders from [entry-points]."""
     f = top / EXEMPT_REL
-    if not f.is_file():
-        return []
-    return [ln.strip() for ln in f.read_text(encoding="utf-8").splitlines() if ln.strip() and not ln.lstrip().startswith("#")]
+    docs, folders = [], []
+    if f.is_file():
+        for ln in f.read_text(encoding="utf-8").splitlines():
+            ln = ln.strip()
+            if not ln or ln.startswith("#"):
+                continue
+            if ln.startswith("folder "):
+                folders.append(ln[len("folder "):].strip())
+            else:
+                docs.append(ln)
+    return docs, folders
 
 
 def is_exempt(path: str, patterns: list[str]) -> bool:
@@ -113,8 +122,9 @@ def is_exempt(path: str, patterns: list[str]) -> bool:
 class BaseTree:
     """The files and folders a ref holds; empty when the ref does not resolve (an unborn branch)."""
 
-    def __init__(self, root: Path, ref: str):
+    def __init__(self, root: Path, ref: str, staged: bool = False):
         self.root = root
+        self.staged = staged
         self.files: set[str] = set()
         self.dirs: set[str] = set()
         out = git(root, "ls-tree", "-r", "--name-only", "-z", ref, check=False)
@@ -125,6 +135,14 @@ class BaseTree:
             parts = name.split("/")
             for i in range(1, len(parts)):
                 self.dirs.add("/".join(parts[:i]))
+
+    def in_index(self, path: str) -> bool:
+        """True when the path is staged or tracked. The linter walks the working tree, so an untracked file it
+        flags is no part of a commit that does not stage it."""
+        env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_") or k == "GIT_INDEX_FILE"}
+        out = subprocess.run(["git", "-C", str(self.root), "ls-files", "--cached", "--", path], capture_output=True,
+                             env=env)
+        return bool(out.stdout.strip())
 
     def ignored(self, path: str) -> bool:
         """True when git ignores the path: it can never be committed, so it is no commit's defect."""
@@ -144,17 +162,21 @@ def is_new(finding: str, base: BaseTree) -> bool:
         m = NOT_NAME.search(finding)
         if m:
             offender = f"{folder}/{m.group(1)}"
-            return offender not in base.files and offender not in base.dirs and not base.ignored(offender)
+            if offender in base.files or offender in base.dirs or base.ignored(offender):
+                return False
+            return not base.staged or base.in_index(offender)
     return True
 
 
-def classify(errors: list[str], rules, base: BaseTree, patterns: list[str]):
+def classify(errors: list[str], rules, base: BaseTree, patterns: list[str], folders: list[str] = ()):
     blocking, legacy, exempt, other = [], [], [], 0
     for f in errors:
         tag = tag_of(f)
         if tag not in rules:
             other += 1
         elif tag == "document-concision" and is_exempt(path_of(f), patterns):
+            exempt.append(f)
+        elif tag == "entry-points" and "no entry point" in f and is_exempt(path_of(f), list(folders)):
             exempt.append(f)
         elif is_new(f, base):
             blocking.append(f)
@@ -186,12 +208,13 @@ def cmd_check(a) -> int:
         ref = a.base or "HEAD"
         report = run_linter(paths, top, ["--base", ref], FULL_TIMEOUT, staged=False)
         mode = f"base {ref}"
-    base = BaseTree(top, ref)
-    blocking, legacy, exempt, other = classify(report.get("errors", []), rules, base, exemptions(top))
+    base = BaseTree(top, ref, staged=a.staged)
+    docs, folders = exemptions(top)
+    blocking, legacy, exempt, other = classify(report.get("errors", []), rules, base, docs, folders)
     for f in blocking:
         print(f"BLOCKED {short(f)}")
     seconds = time.time() - started
-    note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt document(s) ignored, "
+    note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt finding(s) ignored, "
             f"{other} error(s) of other rules ignored")
     if blocking:
         print(f"lint-gate: {len(blocking)} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
@@ -319,11 +342,11 @@ def cmd_watch(a) -> int:
         "legacy": sum(bool(r["legacy"] and r["hard_violation"]) for r in rows),
         "new": sum(r["severity"] == "error" for r in rows),
     }
-    patterns = exemptions(top)
+    patterns, folder_patterns = exemptions(top)
     base = BaseTree(top, anchor or "HEAD")
     errors = report.get("errors", [])
     raw = {t: sum(tag_of(e) == t for e in errors) for t in GATE_RULES}
-    blocking, legacy_structural, exempt, _ = classify(errors, GATE_RULES, base, patterns)
+    blocking, legacy_structural, exempt, _ = classify(errors, GATE_RULES, base, patterns, folder_patterns)
     new_by_rule = {t: sum(tag_of(e) == t for e in blocking) for t in GATE_RULES}
     folders: dict[str, dict] = {}
     for r in rows:

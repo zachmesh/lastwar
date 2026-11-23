@@ -134,7 +134,44 @@ class CheckStaged(GateCase):
             f.write("- 21:00 PT tick line\n")
         r = self.stage_check("_records_/2026-11-22/INDEX.md")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertIn("1 exempt document", r.stdout)
+        self.assertIn("1 exempt finding", r.stdout)
+
+    def test_grandfathered_records_are_ten_exact_paths(self):
+        lines = [ln.strip() for ln in (HERE / "exempt.txt").read_text().splitlines() if ln.strip() and not ln.startswith("#")]
+        records = [ln for ln in lines if ln != "_records_/*/INDEX.md" and not ln.startswith("folder ")]
+        self.assertEqual(len(records), 10)
+        for ln in records:
+            self.assertRegex(ln, r"^_records_/2026-11-22/[a-z-]+/\d{4}-queue-run\.md$")
+            self.assertFalse(set(ln) & set("*?["), ln)
+
+    def test_grandfathered_record_passes_and_its_neighbour_blocks(self):
+        self.write("_records_/2026-11-22/alliance-gifts/INDEX.md", "# gifts\n")
+        self.write("_records_/2026-11-22/alliance-gifts/2030-queue-run.md", doc(650, "Gifts"))
+        r = self.stage_check("_records_/2026-11-22/alliance-gifts")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("1 exempt finding", r.stdout)
+        self.write("_records_/2026-11-22/alliance-gifts/2031-queue-run.md", doc(650, "Gifts next"))
+        r = self.stage_check("_records_/2026-11-22/alliance-gifts/2031-queue-run.md")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("2031-queue-run.md", r.stdout)
+
+    def test_untracked_offender_that_is_not_staged_does_not_block(self):
+        self.write("_tools_/loose.py", "z = 1\n")   # untracked, left out of the commit
+        self.write("_tools_/INDEX.md", TOOLS_INDEX + "\nOne more line.\n")
+        self.assertEqual(self.stage_check("_tools_/INDEX.md").returncode, 0)
+        r = self.stage_check("_tools_/loose.py")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("loose.py", r.stdout)
+
+    def test_folder_exemption_lever_is_off_until_a_folder_line_is_added(self):
+        self.write("_records_/2026-11-23/fresh-activity/0100-run.md", doc(50, "Fresh"))
+        self.write("_records_/2026-11-23/INDEX.md", "# day\n")
+        self.assertEqual(self.stage_check("_records_/2026-11-23").returncode, 1)
+        with open(self.repo / "_tools_/lint-gate/exempt.txt", "a") as f:
+            f.write("folder _records_/*/*\n")
+        r = self.stage_check("_records_/2026-11-23")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("1 exempt finding", r.stdout)
 
     def test_rules_option_limits_what_blocks(self):
         self.write("_records_/2026-11-22/legacy-activity/0200-big-run.md", doc(600, "Big"))
