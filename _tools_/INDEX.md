@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T16:17:54Z
-version: 2.9.0
+modified: 2026-11-23T16:24:41Z
+version: 2.10.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -23,5 +23,5 @@ One row per kind. Each article holds purpose, data and issue history; [tool deta
 | Tap and Mac | [tapcal.py](tapcal.py), [mac_capture_probe.py](mac_capture_probe.py), [mac_window_open.py](mac_window_open.py) | [tap-mac](tool-details/tap-and-mac-tools.md) |
 | Harvest and pool | [harvest_verify.py](harvest_verify.py), [pool_gap.py](pool_gap.py) | [harvest](tool-details/harvest-and-pool-tools.md) |
 | Batch and bridge | [records_batch.py](records_batch.py), [cu_bridge.py](cu_bridge.py), [cu-bridge-tests](cu-bridge-tests/INDEX.md) | [batch](tool-details/batch-and-bridge-tools.md) |
-| Gate and landing | [lint-gate](lint-gate/INDEX.md), [integrator](integrator/INDEX.md), [tool-sync](tool-sync/INDEX.md), [board-check](board-check/INDEX.md), [split-doc](split-doc/INDEX.md) | [gate](tool-details/lint-gate-summary.md) |
+| Gate and landing | [lint-gate](lint-gate/INDEX.md), [integrator](integrator/INDEX.md), [tool-sync](tool-sync/INDEX.md), [board-check](board-check/INDEX.md), [split-doc](split-doc/INDEX.md), [records-snapshot](records-snapshot/INDEX.md) | [gate](tool-details/lint-gate-summary.md) |
 | Team guards | [spawn-seat](spawn-seat/INDEX.md), [model-guard](model-guard/INDEX.md), [strategy-conformance](strategy-conformance/INDEX.md), [strategist-health](strategist-health/INDEX.md) | each own index |
