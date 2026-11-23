@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T14:36:00Z
+modified: 2026-11-23T15:29:00Z
 level: L2
-version: 0.14.0
+version: 0.15.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ Local main is origin plus my unlanded commits. Deliver: stage explicit paths, co
 ## Facts to carry
 
 - Research speed MEASURED: divisor 3.678 (plus 268 percent); read the Finish Now clock, not the Research button. Speed-up stock exceeds the natural path, so oil limits the date if the stock is spent.
+- Standing rule (Steer A, 2026-11-23): any test or action that could open another app, browser, store or payment surface needs Steer A's approval in advance with an exit plan; an unexpected foreground switch stops the run; consent requests are human-only; only the operator seat and the bridge touch the desktop (every other seat, `lsappinfo front` read-only at most: no osascript, no System Events).
 - Owner orders: Base Expansion first (OD-18, -19, -22); trade truck plunder re-enabled with a casualty guard (OD-20).
 
 ## Open owner decisions
