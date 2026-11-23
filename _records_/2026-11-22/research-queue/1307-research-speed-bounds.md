@@ -1,7 +1,7 @@
 ---
 title: Research speed multiplier M - bounds from the queue timers - 2026-11-23 13:07Z
 created: 2026-11-23T05:07:00-08:00
-modified: 2026-11-23T05:12:00-08:00
+modified: 2026-11-23T05:14:00-08:00
 level: L3
 version: 0.1.0
 description: A first measured bound on the account's research speed from the Coin Output V and Food Output V timers, using Steer B's frame times and the guide sheet's base time
@@ -27,7 +27,7 @@ verified: base time 485,100 s from /tmp/oilres/aoo-sheet.csv (the Last War Tutor
 | Node | Effective total | M = base / effective | Natural time of the 879 base days |
 |---|---|---|---|
 | Coin Output V L1 (slot 2) | 26h47m40s to 26h50m06s | 5.02 to 5.03 | about 175 days |
-| Food Output V L1 (slot 1) | 28h33m to 29h19m | 4.60 to 4.72 | about 186 to 191 days |
+| Food Output V L1 (slot 1) | 28h33m to 29h18m | 4.60 to 4.72 | about 186 to 191 days |
 
 The two differ by about 0.3 to 0.4: a bonus that applies only at the start (Steer A's analysts: Secretary of Science, VIP) is the likely cause; the plain multiplier is about 4.6 to 4.7.
 
