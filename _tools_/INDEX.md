@@ -1,7 +1,7 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T16:24:50Z
+modified: 2026-11-23T16:30:11Z
 version: 2.10.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
@@ -18,7 +18,7 @@ One row per kind. Each article holds purpose, data and issue history; [tool deta
 |---|---|---|
 | Queue | [queue.py](queue.py), [queue-tests](queue-tests/INDEX.md), [queue-guard-tests](queue-guard-tests/INDEX.md) | [queue](tool-details/queue-part-1.md) |
 | Planning | [regulars.py](regulars.py), [duel.py](duel.py), [resource_map.py](resource_map.py), [resource-map-tests](resource-map-tests/INDEX.md), [scout_diff.py](scout_diff.py) | [planning](tool-details/planning-and-scouting-tools.md) |
-| Records | [observation.py](observation.py), [observation-tests](observation-tests/INDEX.md), [retro_report.py](retro_report.py), [log_append.py](log_append.py), [log-append-tests](log-append-tests/INDEX.md), [live_checkout_check.py](live_checkout_check.py), [pass_worktree.py](pass_worktree.py) | [records](tool-details/records-and-worktree-tools.md) |
+| Records | [observation.py](observation.py), [observation-tests](observation-tests/INDEX.md), [retro_report.py](retro_report.py), [log_append.py](log_append.py), [log-append-tests](log-append-tests/INDEX.md), [live_checkout_check.py](live_checkout_check.py), [pass_worktree.py](pass_worktree.py), [run-notes-move](run-notes-move/INDEX.md) | [records](tool-details/records-and-worktree-tools.md) |
 | Delivery | [branch_guard.py](branch_guard.py), [tree_check.py](tree_check.py), [held_patches.py](held_patches.py), [slot_coverage.py](slot_coverage.py), [vip_missed.py](vip_missed.py) | [delivery](tool-details/delivery-and-coverage-tools.md) |
 | Tap and Mac | [tapcal.py](tapcal.py), [mac_capture_probe.py](mac_capture_probe.py), [mac_window_open.py](mac_window_open.py) | [tap-mac](tool-details/tap-and-mac-tools.md) |
 | Harvest and pool | [harvest_verify.py](harvest_verify.py), [pool_gap.py](pool_gap.py) | [harvest](tool-details/harvest-and-pool-tools.md) |
