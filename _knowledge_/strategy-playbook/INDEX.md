@@ -33,4 +33,4 @@ How this account is played day to day - the objective, duel week timing gates, r
 
 - 1.4.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 178-line, 1,354-word body into 7 key-named articles; `--check` EQUAL, sha256 aeb7d727aea0; the unsplit 1.3.0 file is commit 1f0610cb.
 - 1.5.0, 2026-11-23 - Dated note added under Standing boundaries (resource-only starts, decision record 2350); the old text is not rewritten.
-- 1.6.0, 2026-11-23 - Re-split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 d9e18fcdbbfc; the 1.5.0 split is in git history.
+- 1.6.0, 2026-11-23 - Re-split verbatim at a 300-word limit; --check EQUAL.
