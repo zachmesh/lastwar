@@ -49,6 +49,7 @@ and staging runtime state.
 | [records_batch.py](records_batch.py) | records batch cadence | [batch](tool-details/batch-and-bridge-tools.md) |
 | [cu_bridge.py](cu_bridge.py) | computer-use bridge | [batch](tool-details/batch-and-bridge-tools.md) |
 | [lint-gate](lint-gate/INDEX.md) | commit gate and size watch | [gate](tool-details/lint-gate-summary.md) |
+| [integrator](integrator/INDEX.md) | landing wrapper for the Integrator seat (status, check, push, open, merge, readback) | [own index](integrator/INDEX.md) |
 | [board-check](board-check/INDEX.md) | project board drift check | [own index](board-check/INDEX.md) |
 | [split-doc](split-doc/INDEX.md) | verbatim document splitter | [own index](split-doc/INDEX.md) |
 | [cu-bridge-tests](cu-bridge-tests/INDEX.md) | bridge daemon lifecycle tests | [own index](cu-bridge-tests/INDEX.md) |

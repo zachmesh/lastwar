@@ -210,11 +210,14 @@ def cmd_status(a, root):
     ahead, behind = (git(root, "rev-list", "--left-right", "--count", "main...origin/main", check=False).stdout.split() + ["?", "?"])[:2]
     shallow = git(root, "rev-parse", "--is-shallow-repository", check=False).stdout.strip() == "true"
     claimed = sorted(p.name for p in (root / "_queue_" / "claimed").glob("*.md")) if (root / "_queue_" / "claimed").is_dir() else []
+    local_only = git(root, "log", "--format=%h", "--max-count=30", "origin/main..main", check=False).stdout.split()
+    direct = git(root, "log", "--first-parent", "--no-merges", "--since=24.hours", "--format=%h", "origin/main", check=False).stdout.split()
     prs = open_prs(root)
     result = {"open_prs": [{"number": p["number"], "branch": p["headRefName"], "head": p["headRefOid"][:10],
                            "mergeable": p.get("mergeable")} for p in prs],
               "main_ahead_of_origin": ahead, "main_behind_origin": behind, "origin_fetched": fetched,
-              "shallow": shallow, "claimed_units": len(claimed)}
+              "shallow": shallow, "claimed_units": len(claimed), "local_only_commits": local_only,
+              "direct_pushes_to_main_24h": direct}
     if a.json:
         say(json.dumps(result, indent=1, sort_keys=True))
     else:
@@ -222,10 +225,15 @@ def cmd_status(a, root):
         for p in result["open_prs"]:
             say(f"  #{p['number']} {p['branch']} head {p['head']} mergeable {p['mergeable']}")
         say(f"local main against origin/main: ahead {ahead}, behind {behind}" + ("" if fetched else " (origin unreachable, not refreshed)"))
+        if local_only:
+            say(f"commits on local main not on origin/main (first {len(local_only)}): " + " ".join(local_only))
+        say(f"direct pushes to main in the last 24 h (first-parent commits that are not merges): {len(direct)}"
+            + (" - " + " ".join(direct[:10]) if direct else ""))
         if shallow:
             say("warning: this clone is shallow, so ahead and behind can be wrong (git fetch --unshallow)")
         say(f"claimed folder: {len(claimed)} unit file(s)" + (" - a live run holds the desktop" if claimed else ""))
-    log_action(root, "status", open_prs=len(prs), ahead=ahead, behind=behind, claimed=len(claimed), result="ok")
+    log_action(root, "status", open_prs=len(prs), ahead=ahead, behind=behind, claimed=len(claimed), local_only=len(local_only),
+               direct_pushes=len(direct), result="ok")
     return 0
 
 

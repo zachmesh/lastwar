@@ -21,6 +21,10 @@ FAKE_GH = HERE / "fake_gh.py"
 LINT_GATE = HERE.parent / "lint-gate" / "lint_gate.py"
 TOKEN = "ghp_" + "a1b2c3d4e5f6" * 3                      # made up, token-shaped
 NAME = "Zorvane Quill"                                    # made up
+TOOLS_INDEX = "# tools\n\n- [t-tests](t-tests/INDEX.md) - tests\n"
+STUB = "---\ntitle: T\ncreated: 2026-11-23T00:00:00Z\nmodified: 2026-11-23T00:00:00Z\nversion: 1.0.0\ndescription: t\n---\n\n# T\n"
+PASSING = "import unittest\nclass T(unittest.TestCase):\n    def test_a(self): pass\n"
+FAILING = "import unittest\nclass T(unittest.TestCase):\n    def test_a(self): self.fail('x')\n"
 TEAM = """seats:
   - key: toolsmith
     write_scopes:
@@ -54,7 +58,10 @@ class Case(unittest.TestCase):
         (seed / "TEAM.yaml").write_text(TEAM)
         (seed / "README.md").write_text("# fixture\n")
         (seed / "_tools_").mkdir()
-        (seed / "_tools_" / "INDEX.md").write_text("# tools\n")
+        (seed / "_tools_" / "INDEX.md").write_text(TOOLS_INDEX)
+        (seed / "_tools_" / "t-tests").mkdir()
+        (seed / "_tools_" / "t-tests" / "INDEX.md").write_text(STUB)
+        (seed / "_tools_" / "t-tests" / "test_x.py").write_text(PASSING)
         (seed / "_queue_" / "claimed").mkdir(parents=True)
         (seed / "_queue_" / "claimed" / ".gitkeep").write_text("")
         git(seed, "add", "-A")
@@ -89,7 +96,7 @@ class Case(unittest.TestCase):
                 path.write_bytes(text)
             else:
                 path.write_text(text)
-        git(self.work, "add", "-A")
+        git(self.work, "add", "--", *files)               # only these files: the integration log is untracked and stays so
         env = {"GIT_AUTHOR_NAME": author, "GIT_COMMITTER_NAME": author} if author else None
         git(self.work, "commit", "-q", "-m", message, env=env)
         sha = git(self.work, "rev-parse", "HEAD").stdout.strip()
@@ -116,7 +123,7 @@ class Case(unittest.TestCase):
 
     def land(self, name="work/clean", files=None):
         """check, push and open a clean branch; returns (sha, pr number)."""
-        sha = self.branch(name, files or {"_tools_/INDEX.md": "# tools\n\nok\n"})
+        sha = self.branch(name, files or {"_tools_/INDEX.md": TOOLS_INDEX + "ok\n"})
         self.assertEqual(self.check(name).returncode, 0)
         self.assertEqual(self.run_tool("push", name).returncode, 0)
         r = self.run_tool("open", name, "--title", "a clean change")
@@ -151,7 +158,7 @@ class Refusals(Case):
 
 class Check(Case):
     def test_a_clean_branch_passes_with_counts_only_and_one_log_line(self):
-        sha = self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nok\n"})
+        sha = self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "ok\n"})
         r = self.check("work/clean")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn(f"check work/clean head {sha[:10]} against origin/main: PASS", r.stdout)
@@ -166,7 +173,7 @@ class Check(Case):
     def test_a_name_in_a_file_a_file_name_a_message_or_an_author_fails_and_is_never_echoed(self):
         cases = {
             "content": ({"_tools_/a.md": f"The owner is {NAME} today.\n"}, "change", None),
-            "filename": ({"_tools_/zorvane-quill-notes.md": "clean\n"}, "change", None),
+            "filename": ({"_tools_/zorvane quill notes.md": "clean\n"}, "change", None),
             "message": ({"_tools_/b.md": "clean\n"}, f"about {NAME}", None),
             "author": ({"_tools_/c.md": "clean\n"}, "change", "Zorvane Quill"),
         }
@@ -204,7 +211,7 @@ class Check(Case):
 
     def test_no_denylist_means_no_pass(self):
         (self.work / ".git" / "privacy-denylist.txt").unlink()
-        self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         r = self.check("work/clean")
         self.assertEqual(r.returncode, 1, r.stdout)
         self.assertIn("no-denylist", r.stdout)
@@ -212,35 +219,33 @@ class Check(Case):
     def test_a_broken_scan_engine_is_a_failure_not_a_zero(self):
         broken = self.tmp / "broken_gate.py"
         broken.write_text("import sys\nsys.exit(0)\n")                     # prints no census: the positive control cannot pass
-        self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         r = self.run_tool("check", "work/clean", "--seat", "toolsmith", "--lint-gate", str(broken))
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
         self.assertIn("positive-control-failed", r.stdout)
 
     def test_named_tests_run_in_the_clean_worktree_and_a_failure_blocks(self):
-        stub = "---\ntitle: T\ncreated: 2026-11-23T00:00:00Z\nmodified: 2026-11-23T00:00:00Z\nversion: 1.0.0\ndescription: t\n---\n\n# T\n"
-        good = {"_tools_/t-tests/INDEX.md": stub, "_tools_/t-tests/test_ok.py": "import unittest\nclass T(unittest.TestCase):\n    def test_a(self): pass\n"}
-        bad = {"_tools_/t-tests/INDEX.md": stub, "_tools_/t-tests/test_bad.py": "import unittest\nclass T(unittest.TestCase):\n    def test_a(self): self.fail('x')\n"}
-        self.branch("work/good", good)
+        self.branch("work/good", {"_tools_/t-tests/test_x.py": PASSING + "# touched\n"})
         r = self.check("work/good", "toolsmith", "--test", "_tools_/t-tests")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("tests[_tools_/t-tests]: 1 ran, ok", r.stdout)
-        self.branch("work/bad", bad)
+        self.branch("work/bad", {"_tools_/t-tests/test_x.py": FAILING})
         r = self.check("work/bad", "toolsmith", "--test", "_tools_/t-tests")
         self.assertEqual(r.returncode, 1)
         self.assertIn("FAILED", r.stdout)
+        self.assertIn("tests", r.stdout.split("reasons:")[1])
 
     def test_overlap_with_another_open_pr_is_reported(self):
-        self.branch("work/first", {"_tools_/INDEX.md": "# tools\n\na = 1\n"})
+        self.branch("work/first", {"_tools_/INDEX.md": TOOLS_INDEX + "a = 1\n"})
         self.assertEqual(self.check("work/first").returncode, 0)
         self.run_tool("push", "work/first")
         self.run_tool("open", "work/first", "--title", "first")
-        self.branch("work/second", {"_tools_/INDEX.md": "# tools\n\na = 2\n"})
+        self.branch("work/second", {"_tools_/INDEX.md": TOOLS_INDEX + "a = 2\n"})
         r = self.check("work/second")
         self.assertIn("overlapping_prs: 1", r.stdout)
 
     def test_the_worktree_and_temp_files_are_cleaned_up(self):
-        self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         self.check("work/clean")
         self.assertEqual(git(self.work, "worktree", "list").stdout.strip().count("\n"), 0)
         self.assertEqual(list(Path("/tmp").glob("integrator-patterns-*")), [])
@@ -248,7 +253,7 @@ class Check(Case):
 
 class Landing(Case):
     def test_push_needs_a_passing_check_of_this_exact_head_and_is_never_forced(self):
-        sha = self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        sha = self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         r = self.run_tool("push", "work/clean")
         self.assertEqual(r.returncode, 3)
         self.assertIn("no passing check", r.stdout)
@@ -256,14 +261,14 @@ class Landing(Case):
         self.assertEqual(self.run_tool("push", "work/clean").returncode, 0)
         self.assertEqual(git(self.origin, "rev-parse", "refs/heads/work/clean").stdout.strip(), sha)
         git(self.work, "checkout", "-q", "work/clean")
-        (self.work / "_tools_" / "more.py").write_text("y = 2\n")
-        git(self.work, "add", "-A")
+        (self.work / "_tools_" / "INDEX.md").write_text(TOOLS_INDEX + "moved head\n")
+        git(self.work, "add", "_tools_/INDEX.md")
         git(self.work, "commit", "-q", "-m", "moved head")
         git(self.work, "checkout", "-q", "main")
         self.assertEqual(self.run_tool("push", "work/clean").returncode, 3)                # the head moved: check again first
 
     def test_a_non_fast_forward_push_fails_and_origin_keeps_its_branch(self):
-        sha = self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        sha = self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         self.check("work/clean")
         git(self.work, "push", "-q", "origin", "work/clean")
         other = self.tmp / "other"
@@ -276,8 +281,8 @@ class Landing(Case):
         theirs = git(self.origin, "rev-parse", "refs/heads/work/clean").stdout.strip()
         git(self.work, "checkout", "-q", "work/clean")
         git(self.work, "reset", "-q", "--hard", sha)
-        (self.work / "_tools_" / "mine.py").write_text("m = 1\n")
-        git(self.work, "add", "-A")
+        (self.work / "_tools_" / "INDEX.md").write_text(TOOLS_INDEX + "mine\n")
+        git(self.work, "add", "_tools_/INDEX.md")
         git(self.work, "commit", "-q", "-m", "mine")
         mine = git(self.work, "rev-parse", "HEAD").stdout.strip()
         git(self.work, "checkout", "-q", "main")
@@ -288,7 +293,7 @@ class Landing(Case):
         self.assertNotEqual(theirs, mine)
 
     def test_open_needs_the_branch_on_origin_at_the_same_head(self):
-        self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         r = self.run_tool("open", "work/clean", "--title", "t")
         self.assertEqual(r.returncode, 1)
         self.assertIn("push it first", r.stdout)
@@ -328,7 +333,7 @@ class Landing(Case):
         self.assertEqual(self.log_lines()[-1]["reason"], "head-moved")
 
     def test_nothing_unscanned_is_merged(self):
-        sha = self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        sha = self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         git(self.work, "push", "-q", "origin", "work/clean")                               # pushed around the wrapper
         opened = self.run_tool("open", "work/clean", "--title", "t")
         self.assertEqual(opened.returncode, 0, opened.stdout + opened.stderr)
@@ -348,7 +353,7 @@ class Landing(Case):
     def test_readback_flags_a_commit_that_is_not_the_merge_of_the_branch(self):
         sha, pr = self.land()
         self.run_tool("merge", str(pr), "--head-sha", sha)
-        other_sha = self.branch("work/other", {"_tools_/INDEX.md": "# tools\n\no = 1\n"})
+        other_sha = self.branch("work/other", {"_tools_/INDEX.md": TOOLS_INDEX + "o = 1\n"})
         git(self.work, "push", "-q", "origin", "work/other")
         r = self.run_tool("readback", "--branch", "work/clean", "--merge-sha", other_sha)
         self.assertEqual(r.returncode, 1)
@@ -369,9 +374,13 @@ class Status(Case):
         self.assertEqual(len(data["open_prs"]), 1)
         self.assertEqual((data["main_ahead_of_origin"], data["main_behind_origin"]), ("1", "0"))
         self.assertEqual(data["claimed_units"], 1)
+        self.assertEqual(len(data["local_only_commits"]), 1)                              # the commit made on local main above
+        self.assertEqual(len(data["direct_pushes_to_main_24h"]), 1)                       # the seed commit went straight to main
         text = self.run_tool("status").stdout
         self.assertIn("a live run holds the desktop", text)
         self.assertIn("ahead 1, behind 0", text)
+        self.assertIn("commits on local main not on origin/main (first 1)", text)
+        self.assertIn("direct pushes to main in the last 24 h", text)
 
     def test_a_shallow_clone_is_called_out(self):
         shallow = self.tmp / "shallow"
@@ -383,7 +392,7 @@ class Status(Case):
 
 class Secrets(Case):
     def test_a_token_in_the_environment_or_in_gh_output_never_reaches_an_output_or_the_log(self):
-        sha = self.branch("work/clean", {"_tools_/INDEX.md": "# tools\n\nx = 1\n"})
+        sha = self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "x = 1\n"})
         self.check("work/clean")
         self.run_tool("push", "work/clean")
         leaking = dict(self.env, FAKE_GH_LEAK="1")
