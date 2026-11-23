@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+208,play,"Daily activity chest claim path unverified: reached chests show open icons, ta",#861,lastwar operator,P3,daily-activities chest claim path
+205,knowledge,"Train entry point drifted: 2045 pan point no longer pans, grounding mislabels ",#861,lastwar scribe,P3,train entry; verify against today
+199,tooling,Expired units sit unreaped in inbox at the retro snapshot,#865,lastwar toolsmith,P3,ticker-era; verify and close if obsolete
+198,tooling,Planner records claim no duel-score regular while the live pool stages duel-sc,#865,lastwar planner,P3,historical
+196,play,Crystal Shop and Glittering Market still unlocated after their first executed ,#862,lastwar scout,P3,read only
+183,knowledge,Gift Level progress counter moves by more than the unit own claims,#861,lastwar scribe,P3,gift level counter
+174,knowledge,Donation Count replenishes after reaching 0; closing model needs the replenish,#861,lastwar scribe,P2,donation counter family: #813 #500 #450 #423 #417 #160; consolidate and close duplicates
+171,play,Green Claim buttons unresponsive to background input across two screens in one,#864,lastwar toolsmith,P3,previous executor; today Claim taps worked; verify and close
+168,play,"Survivor gate line not verifiable: 23rd consecutive partial, no question-mark ",#861,lastwar operator,P3,survivor gate line
+160,knowledge,Donation Count replenishes between units: 1 remaining rose to 11 with no donat,#861,lastwar scribe,P3,donation counter family; verify duplicate
+154,owner-decision,Season Photo rewards gated on alliance-facing actions - owner decision needed,#861,owner (zhenc),P2,needs owner: Season Photo rewards need alliance-facing actions; 200 red diamonds unclaimed
+150,play,"Training: barracks tent rows not located, Drill Ground never re-read",#861,lastwar operator,P2,training blocked by Drill Ground; links #678
+149,"tooling,play","Perception Nov 1: unexplained red dots, and the coverage tool reads zero",#862,lastwar scout,P3,historical
+148,play,Nov 1 quota close unresolved: trucks counter tension and donations timer,#865,lastwar coach,P3,historical
+147,"tooling,play","Zero-sweep fix-ups expire at the reset, so trade days close unclosed",#861,lastwar toolsmith,P2,zero-sweep fix-ups expire at the reset; sibling of #606
+133,tooling,"Zero throughput headroom: ticker throughput matches demand, so any outage conv",#865,lastwar coach,P3,ticker throughput; historical
+132,"play,owner-decision","Progression surfaces have folders but no units: building and research queues, ",#861,lastwar planner,P3,research and building units exist now; verify and close
+131,knowledge,_tasks_/task-list has been stale since 2026-10-25: retire it or regenerate it ,#865,lastwar scribe,P3,task list was retired by AGENTS.md; verify and close
+130,"tooling,records",Stats-key coverage is about 35 percent a day after the M1 mandate: add close-o,#863,lastwar toolsmith,P3,stats-key coverage; today units carry full stats; verify
+129,"tooling,records","Stall blind spot: when execution stops, the round summary goes silent instead ",#864,lastwar toolsmith,P2,silent stall alert for the coordinator loop
