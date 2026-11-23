@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T05:30:00Z
+modified: 2026-11-23T05:35:00Z
 level: L2
-version: 0.4.4
+version: 0.4.5
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -30,7 +30,7 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 
 - The play hold ended at 05:28Z. A GitHub login in a visible browser is postponed; the Steward asks for another hold in advance with a fixed end time. A visible browser steals focus, so no desktop run during it.
 
-- Toolsmith `A-20261123-0501`: `stub-index` for records folders, then `_tools_/board-check/`, due 05:35Z. The lint gate is merged (`f9d3cd01`); run `install` only after that lands. The operator then runs `stub-index --apply` after its first record in a new folder.
+- Lint gate is INSTALLED (2026-11-23T05:33Z, `core.hooksPath` = `_tools_/lint-gate/hooks`; rollback `git config --unset core.hooksPath`). It blocks a new or changed document at 500 body words or more and a new folder without an INDEX.md. After the first record in a new records folder, run `python3 _tools_/lint-gate/lint_gate.py stub-index --apply`. `board-check` is merged; the Steward runs it with a token in its own environment.
 - Operator: a one-pass trim of its over-limit records (measured rows to sidecars, narrative untouched), then back to play. Next unit: `secrets-2026-11-22-1857`.
 - Not yet assigned: planner stages a duel-score read before the 02:00Z rollover on 11-24; scribe pilot split of alliance-donations; planner and scribe on IMP-20261123-04.
 
