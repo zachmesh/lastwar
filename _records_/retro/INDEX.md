@@ -1,9 +1,9 @@
 ---
 title: Retro Records
 created: 2026-11-01T05:24:07Z
-modified: 2026-11-01T07:58:31Z
-version: 1.0.1
-description: The standing cross-day retro series - daily retro files, their machine generated metrics appendices, and the rolling 7 day metrics file
+modified: 2026-11-23T03:14:00Z
+version: 1.0.2
+description: The standing cross-day retro series - daily retro files, their machine generated metrics appendices, the rolling 7 day metrics file, and the continuous-play improvement dashboard
 grounded_in:
   - source: task unit queue design section 14 - the retro review mechanism
 ---
@@ -30,6 +30,11 @@ its judgement live.
   the same numbers as tables for the retro file to cite.
 - `rolling-7d.md` - the standing rolling metrics series the
   retro pass maintains across days.
+- `improvement-dashboard.md` - the continuous-play team's
+  standing L1, L2 and L3 baseline, its three seven-day target
+  movements and its named data gaps, first written 2026-11-22
+  by the coach seat. The daily retro refreshes it; it is not a
+  retro file and never restates one.
 
 ## Derived artifacts
 

@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-22T05:10:00Z
-version: 2.9.0
+modified: 2026-11-22T19:16:00-08:00
+version: 2.10.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -48,6 +48,14 @@ one mention in a summary.
   silently deleted.
 
 ## Open
+
+### OD-20261122-01 - recover the previous host's live queue pool or accept the genesis reset
+
+- opened: 2026-11-22
+- item: whether the team recovers the previous host's live queue pool or accepts a genesis reset on this Mac.
+- context: this checkout's `_queue_` is a stale snapshot - inbox 766, done 2,310 - while the 2026-11-22 day index records the live pool at about 14:40 PT as inbox 96, done 2,884, the 2026-11-21 retro read 2,800 done on the VPS at `/home/hatch/workspace/lastwar`, and `records/2026-11-22` holds yet another count. The coach's L1 baseline is internally reproducible but counts 215 executions over 2026-11-16..22 where the retro counted 634 on the overlapping days, so the 60.0 percent repository unverified rate is not comparable to the retro's 91.3 percent. SSH to `app.trirvia.com` is refused (`Permission denied (publickey)`), so the VPS pool cannot be copied from this Mac.
+- decision needed: (a) grant a read route to the VPS live `_queue_` and have the planner reconcile it, or (b) accept the genesis reset and record the missing done units as a data gap, and (c) say whether this is a C1 records-integrity question to file as an issue.
+- status: open
 
 ### OD-20261031-01 - arms race phases with no scoring path inside the red lines
 
