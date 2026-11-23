@@ -1,0 +1,12 @@
+item,value,read_utc,note
+run 1,"22:38:16Z to 22:38:59Z: the counts differed from the brief (orange 80, purple 71, blue 79 against 87, 71, 122); the run stopped without selecting a tile or pressing Use",2026-11-23T22:38:49Z,"coin 27.2M unchanged; UR and SR stacks fell since 11:21Z for a reason not recorded (use by another actor, unverified)"
+coin before,27.2M (the HUD rounds to 0.1M),2026-11-23T22:39:20Z,tag text [G]: HUD
+UR selected,"tile named 'Coin Chest (UR)', 'At the current Base Level, you can obtain 2.43M Coins', count 80",2026-11-23T22:40:00Z,"the 5,000 Diamonds tile was never used"
+UR before Use,"field 80, Total 194.91M, slider at the far right",2026-11-23T22:40:08.529Z,
+UR Use,"one press of Use at 22:40:16.367Z; popup CONGRATULATIONS 194.9M coins, dismissed by an empty tap at 22:40:25.919Z; no confirmation dialog",2026-11-23T22:40:16.367Z,UR stack now 0
+coin after UR,222.1M,2026-11-23T22:40:31Z,27.2M plus 194.9M
+SSR selected,"tile named 'Coin Chest (SSR)', 'you can obtain 812.16K Coins', count 71",2026-11-23T22:41:35.850Z,N = ceil((271.8M - 222.1M) / 0.81216M) = 62
+SSR before Use,"slider drag landed on 60 (Total 48.72M); two plus taps (22:41:49.7Z and 22:41:56.8Z) gave 61 then 62: field 62, Total 50.35M",2026-11-23T22:41:57Z,
+SSR Use,one press of Use at 22:42:03.796Z (the LAST Use tap); popup 50.3M coins dismissed at 22:42:20.327Z; SSR count 71 to 9,2026-11-23T22:42:03.796Z,no confirmation dialog
+coin after SSR,"272.5M, above the target T = 271.8M by 0.7M",2026-11-23T22:42:30Z,no shortfall; plain Resource Chests untouched
+HUD,"food 674.4M, iron 1.0G, coin 272.5M, Total Power 150,416,946 unchanged",2026-11-23T22:42:40Z,

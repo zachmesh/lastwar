@@ -29,3 +29,10 @@ Back to the [folder index](INDEX.md).
 - [PR 935](landing-pr-935.md) - run-notes-move-polish, the table and index written once per block
 - [PR 936](landing-pr-936.md) - observation-migrate, move an uncommitted growth into the next part
 - [PR 937](landing-pr-937.md) - owner-idle-restore, the 300 s owner-idle wait restored (D-066)
+- [PR 938](landing-pr-938.md) - thirteenth records snapshot, units of 18:20Z to 20:50Z, OD-23 to OD-26
+- [PR 939](landing-pr-939.md) - cu-owner-idle-restored, the owner-idle opt-out restored as a dated note
+- [PR 940](landing-pr-940.md) - phone-gap-closed, the 14:39Z count gap closed: the owner donated from the phone
+- [PR 941](landing-pr-941.md) - cu-owner-idle-temp-zero, the owner-idle wait temporarily 0 again (OD-27)
+- [PR 942](landing-pr-942.md) - refill-verified, the refill clock verified on two pre-registered passes
+- [PR 943](landing-pr-943.md) - owner-idle-launcher, the owner-idle value in the launch path (OD-27)
+- [PR 944](landing-pr-944.md) - cu-launcher-note, the owner-idle 0 moves to the launcher line

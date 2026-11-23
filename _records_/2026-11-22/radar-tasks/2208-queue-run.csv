@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 22:08:47Z (wait 0),2026-11-23T22:08:47Z,see growth/0054-waits.csv
+bar before,"'You can complete 8 tasks, requires 80 Stamina'; 12 Radar Tasks restored in 04:29:09",2026-11-23T22:09:10Z,
+Quick Execute,"pressed once: energy 120 to 40 (cost 80, at the floor of 40)",2026-11-23T22:09:20Z,energy floor 40 held
+bar after,"'11 task rewards can be claimed', green Claim All",2026-11-23T22:09:30Z,
+Claim All,"pressed once; popup lines: radar item 110; food crate 28; EXP book 17.3M; blue triangle item 408; blue and gold card item 800; iron 3.1M; bread food 3.1M; coin 2.5M; oil barrel 800; no chest, box or speed-up line",2026-11-23T22:09:40Z,Drop Limit Update 249/300 banner during the animation
+after,'1 task rewards can be claimed' with Claim All still shown; radar dish badge 1; not pressed again; fully restored 11-24 18:38:08 local; 0/40,2026-11-23T22:09:50Z,rule: Claim All once
+oil counter,663.3K to 664.1K (+800),2026-11-23T22:09:55Z,
+HUD,"food 671.2M to 674.4M, coin 24.7M to 27.2M, iron 1.0G, oil 664.1K, energy 120 to 40, diamonds 11,113, Total Power 150,416,946 unchanged",2026-11-23T22:09:55Z,

@@ -1,7 +1,7 @@
 ---
 title: Slot rules for the planner v1.5
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T20:10:00Z
+modified: 2026-11-23T22:30:00Z
 version: 1.5.0
 level: L3
 description: The allocation rules for the free labs and builders, the speed-up order, the slot-arrival protocol and the training rule once four Drill Grounds are known to exist
@@ -26,7 +26,7 @@ Rules, not units. Costs in [the level table](0030-dg-level-table.csv). Change si
 
 ## Builder rule (four builders at 23:20Z on 11-23, decisions 07 and 08)
 
-1. B1 the Oil Well from Lv.21 (it stands at Lv.20) without idling: one building, one builder, Lv.21 to 30 in 22 days naturally. B2, B3 and B4 the Lv.26, 27 and 28 ground levels, lowest first (34.7K, 25.1K and 19.6K a builder-day with T10, 23.2K for the first with T8); three need coin 262M, food 978M, iron 321M. Skip the Lv.30 ground, Hut, Gold Mine and Farmland steps (3.2K or less).
+1. B1 the Oil Well from Lv.21 (it stands at Lv.20) without idling: one building, one builder, 22 days; re-rank at each hand-off by [0650](0650-oil-well-handoff-rule.md). B2, B3 and B4 the Lv.26, 27 and 28 ground levels, lowest first (34.7K, 25.1K and 19.6K a builder-day with T10, 23.2K for the first with T8); three need coin 262M, food 978M, iron 321M. Skip the Lv.30 ground, Hut, Gold Mine and Farmland steps (3.2K or less).
 2. HQ 31 is the last builder job, after Base Expansion; never the owner's running queue; every resource stays above its floor.
 
 ## Speed-up pools

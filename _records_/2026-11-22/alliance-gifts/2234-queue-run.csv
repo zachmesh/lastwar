@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:34:06Z (wait 0),2026-11-23T22:34:06Z,see growth/0054-waits.csv
+gift level before,"Gift Level 29, progress 35,699,930 of 257,900,000; Regular badge 290",2026-11-23T22:34:25Z,
+Regular Claim All,290 Regular Alliance Gifts claimed,2026-11-23T22:34:40Z,"golden chest x21, 600 coin x1.3K, bread 1.0K x986, red gem 5 x36, iron 1.0K x1.3K, 5m build speed-up x34"
+Premium Claim All,3 Premium Alliance Gifts claimed,2026-11-23T22:34:55Z,"gold pass item x1, orange chest x3, blue crate x6"
+re-check,"both tabs all rows Claimed, no Claim All, no red dot",2026-11-23T22:35:10Z,
+gift level after,"Gift Level 29, progress 35,714,260 of 257,900,000",2026-11-23T22:35:10Z,alliance-wide (rule 4)
+HUD,unchanged; energy 45 to 46,2026-11-23T22:35:25Z,

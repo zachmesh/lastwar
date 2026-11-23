@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,"none: start at 21:34:39Z (wait 0, the lock owner-idle wait is 0 since 21:25:53Z)",2026-11-23T21:34:39Z,see growth/0054-waits.csv
+"trade icon (107,580)","absent on every look (three frames over about 12 seconds); the spot shows ground, a tent and a small marker at about (315,578)",2026-11-23T21:35:00Z,absent since 16:39Z
+left column,"avatar Lv.30 (111,100); energy 120 (112,147); builders hammer 4/4 (110,200); labs flask 2/2 (110,262); a small white-grey icon (107,292); white pickup (107,647) = Secret Command Post; radar dish (107,714); hammer (107,780); hero portraits with an 86 minute timer (173,782) and (232,780); quest line Upgrade Builder's Hut to Lv.26",2026-11-23T21:35:00Z,
+taps,none: waits only; no search of other routes (the unit text says so),,"no spend, no plunder (count 4/4)"
+HUD,"Total Power 150,416,946; diamonds 11,113",2026-11-23T21:35:10Z,

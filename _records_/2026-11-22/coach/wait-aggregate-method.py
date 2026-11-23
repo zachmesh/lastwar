@@ -19,9 +19,10 @@ def t(s):
         except ValueError: pass
     return None
 a=sys.argv[1:]; g=lambda k,d=None: a[a.index(k)+1] if k in a else d
+zero=t(g('--zero-since','2026-11-23T21:25:53Z'))
 day=g("--day",dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")); path=g("--waits",os.path.join(ROOT,"_records_/2026-11-22/growth/0054-waits.csv"))
 if not os.path.exists(path): print("no wait rows yet at",path); sys.exit(0)
-per=collections.OrderedDict(); cause=collections.Counter(); n=0; bad=0
+per=collections.OrderedDict(); cause=collections.Counter(); n=0; bad=0; flags=[]
 ov={}
 op=os.path.join(H,"wait-cause-overrides.csv")
 if os.path.exists(op):
@@ -38,6 +39,10 @@ for r in csv.DictReader(open(path)):
     elif pc is None: c="unclassified (under 300 s, previous click not logged)"
     else: c="self click" if abs(((req-dt.timedelta(seconds=idle))-pc).total_seconds())<=3 else "owner idle"
     cause[c]+=calc
+    if req>=zero and calc>1.0:
+        alert=" ALERT: refusal 'local input ... s ago' after the restart: the variable may be lost" if "local input" in (r.get("note","") or "") else " (read the note: another run on the desktop, a bridge restart, or the variable lost)"
+        flags.append(f"  FLAG after the zero-wait restart {zero:%H:%M:%SZ}: {u} waited {calc:.2f} min (over 1)."+alert)
 print(f"{day}: {n} wait rows, {sum(per.values()):.1f} minutes waited, {bad} rows whose stated minutes differ from granted minus requested (a not_before of the unit; read the note)")
 for u,m in per.items(): print(f"  {u}: {m:.2f} min")
 for c,m in cause.items(): print(f"  by cause, {c}: {m:.2f} min")
+print(f"  rows after the zero-wait restart ({zero:%H:%M:%SZ}): flagged if over 1 minute:",len(flags)); [print(x) for x in flags]

@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,none: start at 22:33:05Z (wait 0),2026-11-23T22:33:05Z,see growth/0054-waits.csv
+boarding banner,none in any frame (waits over about 40 seconds),2026-11-23T22:33:40Z,
+left column,"vehicle icon (107,648); radar dish (107,714) with a red 1 (the one claimable radar reward); hammer (107,780); hero avatar with 27min (175,797); a timer 00:47:17 to 00:46:48 at (90,498); no locomotive",2026-11-23T22:33:40Z,
+other signs,an Alliance Gifts received toast and a server announcement only; Warzone Duel countdown 03:26:54 to 03:26:25; energy 45,2026-11-23T22:33:45Z,
+HUD,"Total Power 150,416,946; diamonds 11,113",2026-11-23T22:33:50Z,
