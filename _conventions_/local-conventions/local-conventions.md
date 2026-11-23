@@ -1,7 +1,7 @@
 ---
 title: Local conventions
-created: 2026-11-23T08:38:25Z
-modified: 2026-11-23T08:38:25Z
+created: 2026-11-23T09:05:48Z
+modified: 2026-11-23T09:05:48Z
 version: 0.1.0
 sequence: 1
 description: Instance folder.
