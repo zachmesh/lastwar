@@ -1,0 +1,6 @@
+slot,name,level,time_left,read_utc,finish_utc_computed,state,note
+research slot 1,Unlock Oil Well,Lv.0,00:13:11 (then 00:13:04 seven seconds later),2026-11-23T11:29:44Z,2026-11-23T11:42:55Z,busy,frees about 11:42:55Z; belongs to research-growth-convert-2026-11-23-001
+research slot 2,Defense Training VIII,Lv.7,2d 19:49:18 (then 2d 19:49:11),2026-11-23T11:29:44Z,2026-11-26T07:19:02Z,busy,
+tech hub,trees with percent and badge,,not reached,,,not read,"the flask tap opened the RESEARCH QUEUE panel (two rows, an X, no back arrow); a tap on the first row's picture at (222,463) did nothing; the panel has no route to the TECH hub"
+tech hub (older read 2026-11-11),"Development 84%, Economy 98%, Hero 68% (badge 1), Units 77%, Squad 1 Max Level, Squad 2 11%, Squad 4 0%, Alliance Duel Max Level, Intercity Truck 95%",,stale,2026-11-11,,not re-read,"from _activities_/research-queue/how-it-is-p1.md, shown for reference only"
+valor badge balance,,,not read,,,,hub not reached

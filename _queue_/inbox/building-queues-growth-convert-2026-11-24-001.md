@@ -26,21 +26,19 @@ Produced by _tools_/queue.py. The executor reads the activity metadata and the s
 
 Serves: capacity source: Drill Ground lowest first (builders at 2026-11-24T09:20Z)
 
-## Brief (planner, conversion-and-spend for the builders, four grounds)
+## Brief (planner, builders at 09:20Z, funding (a) and steps 1 and 2 of 3, decision 2603)
 
-serves: capacity source: Drill Ground lowest first (builders free at 2026-11-24T09:20Z)
+serves: capacity source: Drill Grounds Lv.26 and Lv.27 first (builders free at 2026-11-24T09:20Z)
 
-Rules: `_records_/2026-11-22/queue-planning/2430-conversion-rules.md` (conversion, speed-up); `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md` (red lines, snap; write 1.1G as 1100M). Never touch the owner's running queue; never press Obtain, Finish Now or buy.
+Decision `_records_/2026-11-22/team-operations/2603-first-builder-decision.md` (the Strategist may veto until 20:00Z today; a veto note in this unit governs). The funding plan, tap points, previews and hazards are on `_records_/2026-11-22/queue-planning/2540-drill-ground-sheet.md`, the conversion procedure on `_records_/2026-11-22/queue-planning/2541-conversion-and-speedup-sheet.md`: follow both. Rules: `_records_/2026-11-22/queue-planning/2430-conversion-rules.md` and `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md` (write 1.1G as 1100M). The owner plays by hand: read the builders first, start only on IDLE builders, never touch his queue. Never press Obtain, Finish Now or buy.
 
-FOUR Drill Grounds (F1b record `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`), parade fields of red soldiers; tap a soldier in the middle: Lv.26 about (705,690), Lv.28 about (580,800), Lv.30 about (770,940), Lv.27 about (975,845) off-screen right (pan: drag (540,700) to (290,450); fresh = panned + (250,250), 60 px). The orange-roofed building is a Tavern. Lv.28 to 29 is measured: +200, 119.0M coin, 18d 09:21:34. The Lv.26 and Lv.27 previews come from F1c (pasted here when it lands).
+HAZARD: the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use. Tap the intended tile first, confirm its name in a frame, and never press Use with any other tile selected.
 
-1. Hammer icon: COMPLETE any finished upgrade, note idle builders; if none, read the earliest time left with the UTC time and stop.
-2. For each idle builder in turn take the lowest ground not upgrading (Lv.26, 27, 28, 30); read its tag and Upgrade preview.
-3. Convert exactly its coin, Coin Chests first (281M read; by quantity if offered, else at most 10 and stop). Guide estimates: Lv.26 about 59.5M, Lv.27 about 83.3M; Lv.30 about 178.5M exceeds the read chests and waits. Read coin before and after, press Upgrade once, read the timer. HAZARD: close menus with an empty-ground tap (200,610); never WORLD (660,940) with a menu open low.
-4. Speed-up, bounded: after the preview showed the gain, general speed-up items only, at most 10,000 minutes in total, never Finish Now, diamonds or money, none if the 35,000-minute weekly budget is spent. Log minutes and Total Power before and after.
-5. Idle builders left: barracks Lv.24 to 27, then Oil Well levels 1 to 9 (food and iron only).
+Run 1, first the finished upgrades: hammer icon; press the button each finished Training Base entry shows, Complete or Collect (verb unverified [G], record its text; never Speed Up or Finish Now); Total Power before and after, since power registers only on Complete; note idle builders, or if none read the earliest time left and stop. Then the conversion. Read coin. Inventory, Resources tab: select the Coin Chest UR (87 owned), set the number field to 59 (drag the handle or tap minus) until the field reads 59 AND the Total line reads about 143.75M, read both in a frame, then Use once. Read coin: it should rise by about 143.75M.
+
+Run 2, the starts: first idle builder, the Lv.26 ground (59.5M coin, 74.8M iron): read its tag and Upgrade preview, press Upgrade once, read the timer. Next idle builder, the Lv.27 ground (83.3M, 102.0M) the same way. Coin should then read about 15M. Speed-ups are unit 003's job.
 
 Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
 
-15 minutes, 10 steps. No hero-lever conversion. No chain successor.
+Two runs, 10 steps each. No hero-lever conversion. No chain successor.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

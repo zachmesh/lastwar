@@ -13,11 +13,43 @@ est_minutes: 10
 serves: fill idle slot
 chain_id: growth-fill-2026-11-23
 chain_seq: 6
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-23T11:06:57Z
+lease_until: 2026-11-23T11:26:57Z
+result:
+  status: done
+  started_at: 2026-11-23T11:06:57Z
+  finished_at: 2026-11-23T11:13:45Z
+  duration_seconds: 408
+  executor: operator
+  summary: Growth read runs 20261123T110751Z-3bb1c9 and 20261123T111130Z-ddc38b (claude-gateway/claude-sonnet-5-5, 12 + 8 steps; claimed 11:06:57Z inside the 11:35Z window): builders 4 of 4 busy (Training Base to Lv.25, 22:12:13 to 22:12:23 left, finish about 2026-11-24T09:20:13Z), labs 2 of 2 busy (Unlock Oil Well 00:34:46 left, frees about 11:42:54Z; Defense Training VIII 2d 20:10:53), no COMPLETE; barracks by tag text: Barracks Lv.24 and Barracks Lv.20 idle but blocked ('Drill Ground Full: Unable to add more units.', MISS at 11:08:22Z and 11:09:15Z), Barracks Lv.27 Lv.9 batch of 726 finishes about 19:56:30Z, Barracks Lv.30 Lv.10 batch of 793 finishes about 2026-11-24T11:18:24Z. Nothing started, nothing spent, Speed Up untouched.
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/building-queues/1107-queue-run.md and 1107-queue-run.csv; runs 20261123T110751Z-3bb1c9 and 20261123T111130Z-ddc38b
+  follow_up: first free lab about 11:42:54Z belongs to research-growth-convert-2026-11-23-001; Lv.27 batch about 19:56:30Z; Lv.30 batch 2026-11-24T11:18:24Z; first free builder 2026-11-24T09:20:13Z; Barracks Lv.24 and Lv.20 stay idle while the Drill Grounds are full
+  stats:
+    target: read builders, labs and training queues, fill only idle slots
+    achieved: builders, labs and all four barracks read with tag text; no fillable idle slot
+    resources_gained: none (observe-only)
+    points: 0
+    costs: model 0.297691 USD in two runs; nothing spent or started
+    verified: yes
+    slots_idle: 2
+    slots_filled: 0
+    run_id: 20261123T110751Z-3bb1c9
+    run_steps: 20
+    actions_done: 61
+    actions_refused: 0
+    model_s_per_step: 7.4
+    cost_usd: 0.297691
+    device_takeovers: 0
+    rules_used: R1,R4,R5,R7
+    rule_failed: none
+    rule_gap: No training-read rule: the pistol under the barracks tag opens TRAIN UNITS or the Drill Ground Full toast.
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # building-queues

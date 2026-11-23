@@ -36,7 +36,7 @@ COIN HOLD LIFTED for ranked sinks, but only conversion-and-spend units convert a
 
 PRESS COMPLETE the moment a research or a build finishes: a finished research neither banks its power nor frees the lab until then.
 
-When a builder is idle and released: Drill Ground lowest first, then barracks Lv.24 to 27 (Lv.30 only for tier unlocks), then Oil Well levels 1 to 9 (food and iron only; collect the oil twice a day). Age of Oil and HQ 31 stay off. Labs: one on Special Forces VIII or IX, the other on Drill Ground Expansion, then Extra Barracks (only if fewer than four), Coin Output V, Garage 1, the Alliance Duel tree; never cancel a running one.
+When a builder is idle and released: Drill Ground lowest first, then barracks Lv.24 to 27 (Lv.30 only for tier unlocks), then Oil Well levels 1 to 9 (food and iron only; collect the oil twice a day). Age of Oil and HQ 31 stay off. Labs: one on Special Forces VIII or IX, the other on the node the Strategist names (Drill Ground Expansion is [G], never seen on screen; Extra Barracks is MAX), then Coin Output V, Garage 1, the Alliance Duel tree; never cancel a running one.
 
 TRAIN: never retry the Hospital Collect; it is all-or-nothing, needs at least 5,306 free slots at once and only repeats the toast. When Drill Ground slots open, collect finished batches, then fill with new T10 from surplus food and iron. No fights that wound troops while full.
 

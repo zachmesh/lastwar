@@ -1,0 +1,13 @@
+building,tag_text,level,position_tapped,details,note
+"Headquarters (golden, middle)",Headquarters Lv.30,Lv.30,"565,405 (first tap, fresh frame)","Building Details titled Headquarters Lv.30; no power line; two hero entries only (Adventurer: daily acquisition limit +25, radar task chests +4, chest upgraded to Deluxe Adventurer Chest; Agent: hero attack +100, march size +1)","radial menu: Details at about (468,411), blue middle (527,459), orange broom (602,459), green up arrow (662,411); only Details pressed"
+Tech Center,not found,,,,not among the buildings tapped; position unknown
+Builders Hut,not found,,,,not among the buildings tapped; position unknown; no builder count or banked speed-up read
+"glass tower with a red sign, upper left",Emergency Center Lv.20,Lv.20,"245,268",not opened,candidate 1
+blue industrial building,Gear Factory Lv.20,Lv.20,"310,333",not opened,candidate 2
+red and white building under the orange bubble,"(no tag; a STORE panel opened: the Cosmetics, Coupon and Crystal store)",,"437,348",not opened,"candidate 3; closed with its back arrow (177,918), nothing priced touched"
+blue and orange container buildings,Food Warehouse Lv.24,Lv.24,"385,398",not opened,candidate 4
+far-left blue buildings,Component Factory Lv.20,Lv.20,"105,385 (camera shifted)",not opened,candidate 5
+"small buildings, upper left",Ginkgo Tree Lv.1,Lv.1,"115,188 (camera shifted)",not opened,a decoration
+"blue building, left",Component Factory Lv.20,Lv.20,"268,420 (camera shifted)",not opened,second Component Factory
+"blue building, far left",Training Base Lv.26,Lv.26,"100,412 (camera shifted)",not opened,"the Training Base queue shows four upgrades to Lv.25 in progress, so there are several Training Bases"
+new HUD item,116min bubble with a survivor icon beside the avatar at the lower left,,"233,790 (fresh frame end)",not read,"appeared during the run, unexplained"
