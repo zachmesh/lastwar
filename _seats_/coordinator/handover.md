@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T05:09:00Z
+modified: 2026-11-23T05:30:00Z
 level: L2
-version: 0.4.3
+version: 0.4.4
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -28,7 +28,7 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 
 ## In flight
 
-- HOLD (Steward, 05:06Z): after the current unit dispatch nothing until the Steward says the browser is closed; message it when the operator is idle.
+- The play hold ended at 05:28Z. A GitHub login in a visible browser is postponed; the Steward asks for another hold in advance with a fixed end time. A visible browser steals focus, so no desktop run during it.
 
 - Toolsmith `A-20261123-0501`: `stub-index` for records folders, then `_tools_/board-check/`, due 05:35Z. The lint gate is merged (`f9d3cd01`); run `install` only after that lands. The operator then runs `stub-index --apply` after its first record in a new folder.
 - Operator: a one-pass trim of its over-limit records (measured rows to sidecars, narrative untouched), then back to play. Next unit: `secrets-2026-11-22-1857`.
