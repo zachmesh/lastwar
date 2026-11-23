@@ -1,12 +1,13 @@
 ---
 title: Truck Plunder Rule Digest
 created: 2026-11-23T07:22:02Z
-modified: 2026-11-23T12:49:22Z
+modified: 2026-11-23T15:33:54Z
 level: L1
-version: 0.3.0
+version: 0.4.0
 description: The standing rules a seat must follow when working Intercity Trade trucks, each cited to the split article file that carries it
 status: unverified
 grounded_in:
+  - source: operator plunder fights _records_/2026-11-22/truck-plunder/1405-queue-run.md (fight 1) and _records_/2026-11-22/truck-plunder/1523-queue-run.md (fight 2, the left-half experiment), 2026-11-23
   - source: owner decision OD-20261123-20, trade truck plunder re-enabled with a casualty guard (_records_/retro/owner-decisions-log/od-20261123-20.md)
   - source: split articles what-this-activity, scope-and-availability, cadence-section, limits-section, how-it-is-p1 and p2, how-it-p1-2, how-rewards-are-p1 and p2, how-to-enter-p1 to p4, day-20261025-p1 and p2, day-20261030-p1 to p4, open-questions-p1 to p3, _records_/2026-11-11/truck-plunder/0701-queue-run.md and p2 and run-20261122-0252-p1 and p2 in this folder, plus the OD-20261123-03 and OD-20261123-05 log entries, read for the standing rules, every cited phrase matched against the text (44 of 44 matched)
   - source: assignment A-20261123-0648-scribe case (b)
@@ -22,7 +23,7 @@ grounded_in:
 6. Find the trade icon by glyph and badge each unit; verify the screen that opened (how-to-enter-p1, how-to-enter-p4).
 7. 2026-11-22: trade screen never opened; last live counters 2026-11-11, stale; change method (run-20261122-0252-p1).
 8. Armed Truck loot belongs to resource-collection (what-this-activity).
-9. Plunder only UR or SSR trucks carrying UR shard stacks, guard below Squad 1 (24.96M), shards preferably on the right; never an alliance mate; stop at the daily count (how-it-p1-2, limits-section, `_records_/2026-10-27/truck-plunder/1857-segment-3-run.md`, `_records_/2026-10-31/truck-plunder/0404-queue-run.md`).
-10. Casualty guard (OD-20261123-20): read the hospital before each session (7,999 capacity, 5,306 healed, 364 wounded, free room about 2,300, `_records_/2026-11-22/coach/2400-hospital-finding.md`); stop if free room falls under 1,000 or two fights in a row wound more than 100 troops; record troops wounded, coin and shards per fight.
+9. Plunder UR or SSR trucks with a UR 500-badge shard stack in EITHER half of the cargo (2026-11-23: right half paid shard x9, left half shard x3, one trial each, so the right-half preference is relaxed), guard under Squad 1 (25.61M), arrival over 30 minutes, Quick Plunder once and Battle once; never an alliance mate; stop at the daily count (how-it-p1-2, limits-section, `_records_/2026-11-22/truck-plunder/1405-queue-run.md`, `_records_/2026-11-22/truck-plunder/1523-queue-run.md`).
+10. Casualty guard (OD-20261123-20): read the hospital before each session (7,999 capacity, 5,306 healed, 364 wounded, free room about 2,300, `_records_/2026-11-22/coach/2400-hospital-finding.md`); stop if free room falls under 1,000 or two fights in a row wound more than 100 troops; record troops wounded, coin and shards per fight. Both fights of 2026-11-23 wounded 0.
 
 Unverified: [claims](unverified-claims.md). Errata: [errata](errata.md).

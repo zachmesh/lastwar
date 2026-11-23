@@ -1,12 +1,13 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T12:49:22Z
+modified: 2026-11-23T15:33:54Z
 level: L1
-version: 1.47.0
+version: 1.48.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
+  - source: operator plunder fights _records_/2026-11-22/truck-plunder/1405-queue-run.md (fight 1) and _records_/2026-11-22/truck-plunder/1523-queue-run.md (fight 2, the left-half experiment), 2026-11-23
   - source: owner decision OD-20261123-20, trade truck plunder re-enabled with a casualty guard (_records_/retro/owner-decisions-log/od-20261123-20.md)
   - source: coach numbers line _records_/2026-11-22/coach/playbook-numbers-lines.csv and hospital finding _records_/2026-11-22/coach/2400-hospital-finding.md
   - source: plunder fight records _records_/2026-10-27/truck-plunder/1857-segment-3-run.md and _records_/2026-10-31/truck-plunder/0404-queue-run.md, entry and dispatch records _records_/2026-11-22/truck-plunder/0958-queue-run.md and _records_/2026-11-22/truck-plunder/2058-queue-run.md
@@ -62,14 +63,15 @@ Goal: dispatch and plunder trade trucks within the casualty guard.
 2. Settle returned trucks; claim Reward Recovery (R5).
 3. Dispatch own trucks.
 4. Read the hospital before the first fight.
-5. Others' Trucks: pick a UR or SSR truck with UR shards, guard below Squad 1.
+5. Others' Trucks: pick a truck by R2.
 6. Fight; record troops wounded, coin and shards.
 7. Stop on the guard or at 4 of 4.
+8. After a camera shift: WORLD then BASE, or tap (310,660), never (400,640), a Barracks (2026-11-23).
 
 ## Rules
 
 - R1 Trade truck plunder is on (owner override OD-20261123-20); Arena, gold-trophy fights, rallies, General's Trial and base attacks stay forbidden. Status: tested. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
-- R2 Plunder UR or SSR trucks carrying UR shards, guard below Squad 1 (24.96M), shards best on the right. Status: verified. 2026-10-31. `_records_/2026-10-31/truck-plunder/0404-queue-run.md`
+- R2 Plunder UR or SSR trucks with a UR 500-badge stack in either half, guard under Squad 1 (25.61M), arrival over 30 minutes. Status: tested. 2026-11-23. `_records_/2026-11-22/truck-plunder/1523-queue-run.md`
 - R3 Casualty guard: read the hospital before each session; stop if free room falls under 1,000 or two fights in a row wound over 100 troops. Status: unverified. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
 - R4 Find the trade icon by glyph and badge each unit; verify the screen that opened. Status: tested. 2026-11-22. `_records_/2026-11-22/truck-plunder/0958-queue-run.md`
 - R5 Claim Reward Recovery at the red dot. Status: verified. 2026-11-22. `_records_/2026-11-22/truck-plunder/2058-queue-run.md`
@@ -78,11 +80,10 @@ Goal: dispatch and plunder trade trucks within the casualty guard.
 
 - Icon opens the train station - fix: re-find the icon; verify the screen. `_records_/2026-11-22/truck-plunder/0958-queue-run.md`
 - Step cap before any dispatch - fix: continue in a second run. `_records_/2026-11-22/truck-plunder/2058-queue-run.md`
-- Hospital full, so wounded have no room - fix: R3. `_records_/2026-11-22/coach/2400-hospital-finding.md`
 
 ## Open questions
 
-- What does a fight cost and pay? Test: log wounded, coin and shards per fight; run by operator.
+- Does slot position change the shards won? Test: log stack slots and shards per fight; run by operator.
 - Does free room fall by the wounded count? Test: read the hospital before and after a fight; run by researcher.
 
 ## Numbers
