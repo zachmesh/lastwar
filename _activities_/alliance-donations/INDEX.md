@@ -1,12 +1,13 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T15:06:16Z
+modified: 2026-11-23T17:53:50Z
 level: L1
-version: 1.111.0
+version: 1.112.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
+  - source: Researcher's note on the settled refill _records_/2026-11-22/research/donation-refill-settled.md and passes _records_/2026-11-22/alliance-donations/1745-queue-run.md and _records_/2026-11-22/alliance-donations/1441-queue-run.md, 2026-11-23
   - source: operator handover base map and close routes _records_/2026-11-22/growth/0054-operator-handover-detail.md, closing state _records_/2026-11-22/alliance-donations/2340-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/1308-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/0554-queue-run.md
@@ -167,7 +168,7 @@ Goal: donate every run to the recommended technology.
 - Window or device lost - fix: owner clicks the Dock icon. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
 
 ## Open questions
-- Is the grey timer a per-tap cooldown, a daily lock or the refill countdown, and what is the refill interval? Test: log the timer at the last tap and the next entry count with times; run by operator.
+- Why did the 14:39Z count read 8 against 14? Test: each pass compares its entry count with the formula; a shortfall with no hand tap by us means counts used elsewhere; run by coach.
 - Does the badge item witness every node? Test: read it before and after a counted tap at Quick Construction and at Rallied Attack; run by operator.
 
 ## Numbers
