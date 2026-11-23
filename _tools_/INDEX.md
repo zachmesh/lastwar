@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T05:46:29Z
-version: 2.2.0
+modified: 2026-11-23T07:08:14Z
+version: 2.3.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -43,3 +43,4 @@ and staging runtime state.
 | [lint-gate](lint-gate/INDEX.md) | commit gate and size watch | [gate](tool-details/lint-gate-summary.md) |
 | [board-check](board-check/INDEX.md) | project board drift check | [own index](board-check/INDEX.md) |
 | [split-doc](split-doc/INDEX.md) | verbatim document splitter | [own index](split-doc/INDEX.md) |
+| [cu-bridge-tests](cu-bridge-tests/INDEX.md) | bridge daemon lifecycle tests | [own index](cu-bridge-tests/INDEX.md) |

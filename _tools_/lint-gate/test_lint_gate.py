@@ -138,9 +138,7 @@ class CheckStaged(GateCase):
 
     def test_grandfathered_records_are_ten_exact_paths(self):
         lines = [ln.strip() for ln in (HERE / "exempt.txt").read_text().splitlines() if ln.strip() and not ln.startswith("#")]
-        registers = {"_records_/retro/owner-decisions.md", "_records_/retro/improvements.md"}
-        self.assertTrue(registers <= set(lines))
-        records = [ln for ln in lines if ln != "_records_/*/INDEX.md" and not ln.startswith("folder ") and ln not in registers]
+        records = [ln for ln in lines if ln != "_records_/*/INDEX.md" and not ln.startswith("folder ")]
         self.assertEqual(len(records), 10)
         for ln in records:
             self.assertRegex(ln, r"^_records_/2026-11-22/[a-z-]+/\d{4}-queue-run\.md$")
@@ -176,6 +174,9 @@ class CheckStaged(GateCase):
         self.assertIn("1 exempt finding", r.stdout)
 
     def register_exemption(self, remove=False):
+        # the real exempt.txt dropped the two register lines when their splits landed, so the fixture adds its own
+        lines = self.repo / "_tools_/lint-gate/exempt.txt"
+        lines.write_text(lines.read_text() + "_records_/retro/owner-decisions.md\n_records_/retro/improvements.md\n")
         self.write("_records_/retro/INDEX.md", "# retro\n")
         for name in ("owner-decisions", "improvements", "owner-decisions-2"):
             self.write(f"_records_/retro/{name}.md", doc(600, name))

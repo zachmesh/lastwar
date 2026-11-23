@@ -1,14 +1,14 @@
 ---
 title: Board Check
 created: 2026-11-23T05:05:46Z
-modified: 2026-11-23T05:05:46Z
-version: 1.0.0
+modified: 2026-11-23T07:01:29Z
+version: 1.1.0
 description: Read-only check of the GitHub Project board against the project-boards convention, reported as JSON
 ---
 
 # Board check
 
-Compares the team board (user dtadpole, project 11 by default) with reflection's project-boards convention. Target
+Compares the team board (owner zachmesh, project 1 by default, private, linked to the team repository) with reflection's project-boards convention. Target
 metric: board drift findings, reported by the tool itself in `drift_findings`.
 
 ```

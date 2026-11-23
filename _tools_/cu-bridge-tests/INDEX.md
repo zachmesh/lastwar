@@ -1,0 +1,18 @@
+---
+title: Bridge Tests
+created: 2026-11-23T07:10:00Z
+modified: 2026-11-23T07:10:00Z
+version: 1.0.0
+description: Tests for the computer-use bridge daemon lifecycle, run against a fake MCP server in a temporary copy
+---
+
+# Bridge tests
+
+Tests for IMP-20261123-07 (a restart left an orphan daemon and a stuck run). Each test copies `cu_bridge.py` into a
+temporary tree under /tmp and points it at a fake MCP server, so no real server, device or run is touched.
+
+They cover: a restart during a run ends the old daemon and its MCP child; a second `serve` refuses; `ensure` never starts
+a second daemon while one is busy; `status` lists every daemon and run; `control stop` reaches the owning daemon or ends
+an unreachable one; SIGTERM cleans up the child.
+
+Run: `python3 -m unittest discover -s _tools_/cu-bridge-tests`.

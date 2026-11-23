@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """lint-gate: stop new oversized or misshapen documents and show size growth cheaply.
 
-Subcommands: check, install, watch, record-check, stub-index. It runs the reflection convention linter
+Subcommands: check, install, watch, record-check, stub-index, redact. The privacy rule keeps identifiers listed in
+.git/privacy-denylist.txt out of staged lines and file names; it never prints a matched text. It runs the reflection convention linter
 (~/dtadpole/reflection, or LINT_GATE_REFLECTION / --reflection) with the right --root and --vocabulary and
 judges only what the commit adds or changes; legacy findings never block. Standard library only; the word counter
 is the linter's own, loaded from the reflection checkout. Exit 0 ok, 1 blocked or limit reached, 2 cannot run.
@@ -10,10 +11,12 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import hashlib
 import importlib.util
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -21,8 +24,14 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "1.1.0"
+VERSION = "1.7.0"
 GATE_RULES = ("document-concision", "entry-points", "type-instance-trees")
+PRIVACY_RULE, PRIVACY_FILE, PRIVACY_CACHE = "privacy", "privacy-denylist.txt", "lint-gate-privacy-cache.json"
+EXPECT = re.compile(r"^#\s*expect-min\s+(\d+)\s*$", re.IGNORECASE)
+MARKER = re.compile(r"^#\s*marker:\s*(.*\S)\s*$", re.IGNORECASE)
+EXPECT_MESSAGE = "denylist does not match as expected (regex versus fixed string?)"
+CENSUS_FILE, CENSUS_MIN = "privacy-census.json", 10
+HUNK = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
 HARD_WORDS, SOFT_WORDS, RECORD_LIMIT = 500, 300, 480
 STAGED_TIMEOUT, FULL_TIMEOUT = 25, 600          # seconds; the staged cap keeps the hook under 30 s
 BASELINE_REL = "_tools_/state/lint-baseline.json"
@@ -168,13 +177,13 @@ def is_new(finding: str, base: BaseTree) -> bool:
     return True
 
 
-def classify(errors: list[str], rules, base: BaseTree, patterns: list[str], folders: list[str] = ()):
+def classify(errors: list[str], rules, base: BaseTree, patterns: list[str], folders: list[str] = (), redacted=frozenset()):
     blocking, legacy, exempt, other = [], [], [], 0
     for f in errors:
         tag = tag_of(f)
         if tag not in rules:
             other += 1
-        elif tag == "document-concision" and is_exempt(path_of(f), patterns):
+        elif tag == "document-concision" and (is_exempt(path_of(f), patterns) or path_of(f) in redacted):
             exempt.append(f)
         elif tag == "entry-points" and "no entry point" in f and is_exempt(path_of(f), list(folders)):
             exempt.append(f)
@@ -193,33 +202,791 @@ def short(finding: str) -> str:
     return f"[{tag}] {text}"
 
 
+# --- privacy -----------------------------------------------------------------------------------------------
+# A local denylist (.git/privacy-denylist.txt, untracked, one regular expression per line, # comments, matched without
+# regard to case) names identifiers that must not enter this public repository. Nothing in this section ever prints,
+# logs or returns a matched text or a pattern: findings carry a path, a line number and the pattern's position.
+
+def denylist_path(top: Path) -> Path:
+    out = git(top, "rev-parse", "--git-common-dir", check=False).decode().strip()
+    base = Path(out) if out else Path(".git")
+    return (base if base.is_absolute() else top / base) / PRIVACY_FILE
+
+
+def load_denylist(top: Path):
+    """(numbered patterns, warnings, expectations, markers). Every entry is a regular expression, matched without regard
+    to case. Annotation lines right before a pattern belong to it: `# expect-min N` (it must match at least N tracked
+    files at HEAD) and `# marker: TEXT` (what `redact` replaces a match with). A missing or empty denylist is a warning,
+    never a block."""
+    path = denylist_path(top)
+    if not path.is_file():
+        return [], ["privacy denylist not found at .git/privacy-denylist.txt; the privacy rule is skipped"], {}, {}
+    patterns, warnings, expect, markers, n, pending = [], [], {}, {}, 0, {}
+    def dropped():
+        for kind, (_, lineno) in pending.items():
+            warnings.append(f"denylist line {lineno}: {kind} is not immediately followed by a pattern and is ignored")
+        pending.clear()
+    for lineno, raw in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+        line = raw.strip()
+        e, m = EXPECT.match(line), MARKER.match(line)
+        if e or m:
+            kind, value = ("expect-min", int(e.group(1))) if e else ("marker", m.group(1))
+            if kind in pending:
+                warnings.append(f"denylist line {pending[kind][1]}: {kind} is not immediately followed by a pattern and is ignored")
+            pending[kind] = (value, lineno)
+            continue
+        if not line or line.startswith("#"):
+            dropped()
+            continue
+        n += 1
+        try:
+            patterns.append((n, re.compile(line, re.IGNORECASE)))
+            if "expect-min" in pending:
+                expect[n] = pending["expect-min"][0]
+            if "marker" in pending:
+                markers[n] = pending["marker"][0]
+        except re.error:
+            warnings.append(f"denylist line {lineno} is not a valid regular expression and is ignored")
+        pending.clear()
+    dropped()
+    if not patterns:
+        warnings.append("privacy denylist holds no usable pattern; the privacy rule is skipped")
+    return patterns, warnings, expect, markers
+
+
+def safe_path(path: str, patterns) -> str:
+    """The path with any matched part replaced, so a file name that matches is not echoed."""
+    for _, pattern in patterns:
+        path = pattern.sub("[redacted]", path)
+    return path
+
+
+def staged_git(top: Path, *args: str) -> bytes:
+    """git against the staged index: GIT_INDEX_FILE (a hook's or commit -a's temporary index) is kept."""
+    env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_") or k == "GIT_INDEX_FILE"}
+    proc = subprocess.run(["git", "-C", str(top), "-c", "core.quotepath=off", *args], capture_output=True, env=env)
+    if proc.returncode:
+        raise GateError(f"git {args[0]} failed while reading the staged changes")
+    return proc.stdout
+
+
+def unquote(name: str) -> str:
+    if name.startswith('"') and name.endswith('"'):
+        return name[1:-1].encode("latin-1", "backslashreplace").decode("unicode_escape")
+    return name
+
+
+def added_lines(diff: str):
+    """(path, line number, text) of every line a unified -U0 diff adds. Hunk counts say where a hunk ends, so a removed
+    line that looks like a file header is never mistaken for one."""
+    path, old_left, new_left, lineno = None, 0, 0, 0
+    for line in diff.split("\n"):
+        if old_left or new_left:
+            if line.startswith("-"):
+                old_left -= 1
+            elif line.startswith("+"):
+                yield path, lineno, line[1:]
+                lineno += 1
+                new_left -= 1
+            continue
+        if line.startswith("+++ "):
+            name = line[4:].split("\t")[0]
+            path = None if name == "/dev/null" else unquote(name)[2:]
+        elif line.startswith("@@"):
+            m = HUNK.match(line)
+            if m:
+                old_left = int(m.group(2) if m.group(2) is not None else 1)
+                new_left = int(m.group(4) if m.group(4) is not None else 1)
+                lineno = int(m.group(3))
+
+
+def head_match_counts(top: Path, patterns) -> dict[int, int] | None:
+    """For each pattern, how many tracked files at HEAD it matches. Results are cached per blob in the git directory
+    (indices and blob ids only, no pattern text), keyed by the denylist's hash, so a commit only scans its new blobs."""
+    if not git(top, "rev-parse", "--verify", "--quiet", "HEAD^{commit}", check=False).strip():
+        return None
+    entries = []
+    for record in git(top, "ls-tree", "-r", "-z", "HEAD").decode("utf-8", errors="surrogateescape").split("\0"):
+        if record:
+            meta = record.split("\t", 1)[0].split()
+            if meta[1] == "blob" and meta[0] != "120000":
+                entries.append(meta[2])
+    key = hashlib.sha256(denylist_path(top).read_bytes()).hexdigest()
+    cache_file = denylist_path(top).parent / PRIVACY_CACHE
+    matched: dict = {}
+    try:
+        stored = json.loads(cache_file.read_text(encoding="utf-8"))
+        if stored.get("key") == key:
+            matched = stored.get("blobs", {})
+    except (OSError, ValueError):
+        pass
+    missing = sorted({sha for sha in entries if sha not in matched})
+    for i in range(0, len(missing), 1500):
+        chunk = missing[i:i + 1500]
+        data = blob_bytes(top, chunk)
+        for sha in chunk:
+            raw = data.get(sha, b"")
+            if b"\0" in raw[:8000]:
+                matched[sha] = []
+                continue
+            text = raw.decode("utf-8", errors="replace")
+            matched[sha] = [n for n, pattern in patterns if pattern.search(text)]
+    if missing:
+        try:
+            tmp = cache_file.with_suffix(".tmp")
+            tmp.write_text(json.dumps({"key": key, "blobs": {sha: matched[sha] for sha in set(entries)}}), encoding="utf-8")
+            os.replace(tmp, cache_file)
+        except OSError:
+            pass
+    counts = {n: 0 for n, _ in patterns}
+    for sha in entries:
+        for n in matched[sha]:
+            counts[n] += 1
+    return counts
+
+
+def pattern_hash(pattern) -> str:
+    """A short hash of a pattern's text: the census is keyed by it, so editing another line of the denylist, or moving a
+    pattern, keeps its record, and a changed pattern starts afresh. The text itself is never stored."""
+    return hashlib.sha256(pattern.pattern.encode("utf-8")).hexdigest()[:16]
+
+
+def census_path(top: Path) -> Path:
+    return denylist_path(top).parent / CENSUS_FILE
+
+
+def load_census(top: Path) -> dict[str, int]:
+    """Files each pattern matched at HEAD in the last `watch --privacy`, by pattern hash; {} when there is none."""
+    try:
+        data = json.loads(census_path(top).read_text(encoding="utf-8"))
+        return {h: int(v["files"]) for h, v in data.get("patterns", {}).items()}
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}
+
+
+def write_census(top: Path, patterns, files: dict[int, int], lines: dict[int, int], head: str) -> None:
+    record = {"version": 1, "head": head, "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "patterns": {pattern_hash(p): {"files": files.get(n, 0), "lines": lines.get(n, 0)} for n, p in patterns}}
+    path = census_path(top)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(record, indent=1), encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def guard_failures(patterns, expect: dict[int, int], counts: dict[int, int] | None, census: dict[str, int]) -> list[str]:
+    """Where the denylist stops matching what it should. With a census for a pattern, a decrease is fine (a redaction
+    lowers counts) and only a drop to zero from more than CENSUS_MIN files fails; without one (a fresh clone, or a pattern
+    just changed) `# expect-min N` applies, so a regex written as a fixed string that matches nothing fails loudly."""
+    if counts is None:
+        return []
+    out = []
+    for n, pattern in patterns:
+        have, seen = counts.get(n, 0), census.get(pattern_hash(pattern))
+        if seen is not None:
+            if have == 0 and seen > CENSUS_MIN:
+                out.append(f"pattern {n} matches 0 tracked file(s) at HEAD, but the last census saw {seen}; if a redaction "
+                           f"landed, record it with `watch --privacy --accept`")
+        elif n in expect and have < expect[n]:
+            out.append(f"pattern {n} matches {have} tracked file(s) at HEAD, expected at least {expect[n]} (no census yet)")
+    return out
+
+
+def added_runs(diff: str):
+    """(path, first line number, text) for each run of consecutive added lines, so a match wrapped over a line break
+    inside added text is found as one."""
+    path, first, last, buffer = None, 0, 0, []
+    for p, lineno, text in added_lines(diff):
+        if buffer and (p != path or lineno != last + 1):
+            yield path, first, "\n".join(buffer)
+            buffer = []
+        if not buffer:
+            path, first = p, lineno
+        buffer.append(text)
+        last = lineno
+    if buffer:
+        yield path, first, "\n".join(buffer)
+
+
+def privacy_scan_staged(top: Path, staged: bool = True) -> dict:
+    patterns, warnings, expect, _ = load_denylist(top)
+    result = {"hits": [], "warnings": warnings, "patterns": len(patterns), "lines": 0, "failures": []}
+    if not patterns:
+        return result
+    census = load_census(top)
+    if expect or census:
+        result["failures"] = guard_failures(patterns, expect, head_match_counts(top, patterns), census)
+    if not staged:
+        return result
+    names = staged_git(top, "diff", "--cached", "--name-only", "-z", "-M", "--diff-filter=ACMR").decode(
+        "utf-8", errors="surrogateescape").split("\0")
+    for name in filter(None, names):
+        for n, pattern in patterns:
+            if pattern.search(name):
+                result["hits"].append(("name", safe_path(name, patterns), 0, n))
+    diff = staged_git(top, "diff", "--cached", "-U0", "--no-color", "--no-ext-diff", "-M", "--diff-filter=ACMR").decode(
+        "utf-8", errors="replace")
+    for path, first, run in added_runs(diff):
+        result["lines"] += run.count("\n") + 1
+        for n, pattern in patterns:
+            seen = set()
+            for m in pattern.finditer(run):               # a name wrapped over added lines is one match
+                line = first + run.count("\n", 0, m.start())
+                if line not in seen:
+                    seen.add(line)
+                    result["hits"].append(("line", safe_path(path or "?", patterns), line, n))
+    return result
+
+
+def print_privacy_hits(hits: list, limit: int = 40) -> None:
+    for kind, path, lineno, n in hits[:limit]:
+        where = f"{path}:{lineno}" if kind == "line" else path
+        what = "an added line matches" if kind == "line" else "the file name matches"
+        print(f"BLOCKED [privacy] {where}: {what} denylist pattern {n}")
+    if len(hits) > limit:
+        print(f"BLOCKED [privacy] and {len(hits) - limit} more")
+
+
+def cmd_privacy_census(a) -> int:
+    """watch --privacy: files and lines per top folder for each pattern, counts and paths only."""
+    top = repo_top(Path(a.root).resolve())
+    patterns, warnings, expect, _ = load_denylist(top)
+    if not patterns:
+        raise GateError("; ".join(warnings))
+    if a.worktree:
+        names = [n for n in git(top, "ls-files", "-z", "--cached", "--others", "--exclude-standard").decode(
+            "utf-8", errors="surrogateescape").split("\0") if n and (top / n).is_file() and not (top / n).is_symlink()]
+        read = lambda n: (top / n).read_bytes()
+        source = "working tree"
+    else:
+        listing = git(top, "ls-tree", "-r", "-z", "HEAD").decode("utf-8", errors="surrogateescape").split("\0")
+        names = [r.split("\t", 1)[1] for r in listing if r and r.split()[1] == "blob" and not r.startswith("120000")]
+        blobs = blob_bytes(top, [f"HEAD:{n}" for n in names])
+        read = lambda n: blobs.get(f"HEAD:{n}", b"")
+        source = "HEAD " + git(top, "rev-parse", "--short", "HEAD").decode().strip()
+    stats = {n: {"files": {}, "lines": {}, "names": 0, "per_file": []} for n, _ in patterns}
+    any_files = set()
+    for name in names:
+        folder = name.split("/", 1)[0] if "/" in name else "(root)"
+        for n, pattern in patterns:
+            if pattern.search(name):
+                stats[n]["names"] += 1
+        data = read(name)
+        if b"\0" in data[:8000]:
+            continue
+        text = data.decode("utf-8", errors="replace")
+        for n, pattern in patterns:
+            if not pattern.search(text):
+                continue
+            count = touched_lines(text, pattern)
+            stats[n]["files"][folder] = stats[n]["files"].get(folder, 0) + 1
+            stats[n]["lines"][folder] = stats[n]["lines"].get(folder, 0) + count
+            stats[n]["per_file"].append((count, safe_path(name, patterns)))
+            any_files.add(name)
+    summary = {"source": source, "patterns": len(patterns), "files_matching_any": len(any_files), "per_pattern": {}}
+    for n, st in stats.items():
+        summary["per_pattern"][str(n)] = {
+            "files": sum(st["files"].values()), "lines": sum(st["lines"].values()), "file_names": st["names"],
+            "by_top_folder": {f: {"files": st["files"][f], "lines": st["lines"][f]} for f in sorted(st["files"], key=lambda f: -st["files"][f])},
+            "largest_files": [{"path": p, "lines": c} for c, p in sorted(st["per_file"], reverse=True)[:10]],
+        }
+    counts = {int(n): info["files"] for n, info in summary["per_pattern"].items()} if not a.worktree else head_match_counts(top, patterns)
+    failures = guard_failures(patterns, expect, counts, load_census(top))
+    accepted = list(failures) if a.accept else []
+    if a.accept:
+        failures = []
+    recorded = False
+    if not a.worktree and not failures:               # only a census taken at HEAD is recorded, and never over a failure
+        write_census(top, patterns, counts, {int(n): i["lines"] for n, i in summary["per_pattern"].items()},
+                     git(top, "rev-parse", "--short", "HEAD").decode().strip())
+        recorded = True
+    summary["expect_failures"] = failures
+    summary["census_recorded"] = recorded
+    if a.format == "json":
+        print(json.dumps(summary, indent=1))
+        return 1 if failures else 0
+    print(f"privacy census of {source}: {len(patterns)} pattern(s) from .git/privacy-denylist.txt; counts and paths only, "
+          f"no matched text; {len(any_files)} file(s) match any pattern")
+    for w in warnings:
+        print(f"warning: {w}")
+    for n, info in summary["per_pattern"].items():
+        print(f"pattern {n}: {info['files']} files, {info['lines']} lines, {info['file_names']} file name(s)")
+        for folder, c in info["by_top_folder"].items():
+            print(f"  {folder:<20}{c['files']:>6} files{c['lines']:>8} lines")
+        for f in info["largest_files"][:5]:
+            print(f"  largest: {f['path']} ({f['lines']} lines)")
+    if accepted:
+        print(f"lint-gate: accepted {len(accepted)} dropped pattern(s); the census now records their new counts")
+    if recorded:
+        print("census recorded in .git/privacy-census.json (counts and pattern hashes only)")
+    if failures:
+        print(f"lint-gate: {EXPECT_MESSAGE}")
+        for f in failures:
+            print(f"  {f}")
+        return 1
+    return 0
+
+
+def blob_bytes(top: Path, specs: list[str]) -> dict[str, bytes]:
+    """Contents of the named blobs in one git call."""
+    env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_")}
+    proc = subprocess.run(["git", "-C", str(top), "cat-file", "--batch"], capture_output=True, env=env,
+                          input="".join(f"{spec}\n" for spec in specs).encode("utf-8", errors="surrogateescape"))
+    data, pos, out = proc.stdout, 0, {}
+    for spec in specs:
+        end = data.find(b"\n", pos)
+        header = data[pos:end].split()
+        if len(header) == 3 and header[1] == b"blob":
+            size = int(header[2])
+            out[spec] = data[end + 1:end + 1 + size]
+            pos = end + 2 + size
+        else:
+            pos = end + 1
+    return out
+
+
+# --- redact ------------------------------------------------------------------------------------------------
+# Rewrites the files it is given so no denylist pattern matches: each match becomes the pattern's `# marker:` text, the
+# same text for every match, line by line, so line endings, the final newline and indentation stay as they were. Dry run
+# by default. Nothing here prints a matched string, a pattern or a marker.
+
+PROTECTED = (("_records_",), ("_queue_", "done"))
+SEPARATORS = re.compile(r"(\r\n|\n|\r)")
+VERSION_LINE = re.compile(r"^(version:\s*)(['\"]?)(\d+)\.(\d+)\.(\d+)(['\"]?)(\s*)$")
+MODIFIED_LINE = re.compile(r"^(modified:\s*)(['\"]?)(.*?)(['\"]?)(\s*)$")
+
+
+def is_binary(data: bytes) -> bool:
+    return b"\0" in data[:8000]
+
+
+def under(rel: tuple, prefix: tuple) -> bool:
+    return rel[:len(prefix)] == prefix
+
+
+def fit_marker(match: str, marker: str) -> str:
+    """The marker laid over the match's words. The whitespace between the match's words, line breaks and indentation
+    included, is kept exactly, so a wrapped match stays wrapped: the marker's words fill the match's word slots in order
+    (extra words join the last slot, missing ones leave an empty slot)."""
+    if not match:
+        return ""
+    pieces = re.split(r"(\s+)", match)
+    slots = [i for i in range(0, len(pieces), 2) if pieces[i]]
+    words = marker.split()
+    if not slots:
+        return marker
+    for k, i in enumerate(slots):
+        pieces[i] = (" ".join(words[k:]) if k == len(slots) - 1 else (words[k] if k < len(words) else ""))
+    return "".join(pieces)
+
+
+def redact_text(text: str, patterns, markers) -> tuple[str, dict[int, int]]:
+    """(new text, matches per pattern counted on the original text). A match may span line breaks (a pattern with \\s+):
+    its replacement keeps the whitespace between the words, so line count, wrapping and indentation do not change."""
+    counts = {n: sum(1 for _ in pattern.finditer(text)) for n, pattern in patterns}
+    for n, pattern in patterns:
+        if n in markers:
+            marker = markers[n]
+            text = pattern.sub(lambda m, k=marker: fit_marker(m.group(0), k), text)
+    return text, counts
+
+
+def still_matches(text: str, patterns) -> bool:
+    return any(pattern.search(text) for _, pattern in patterns)
+
+
+def touched_lines(text: str, pattern) -> int:
+    """How many lines carry a match, a wrapped match counting each line it covers."""
+    lines = set()
+    for m in pattern.finditer(text):
+        lines.update(range(text.count("\n", 0, m.start()), text.count("\n", 0, m.end()) + 1))
+    return len(lines)
+
+
+def bump_front(text: str, now: str) -> tuple[str, tuple[str, str] | None]:
+    """Minor version up and modified set in the frontmatter, touching nothing else; (text, (old, new)) or (text, None)."""
+    parts = SEPARATORS.split(text)
+    contents = parts[0::2]
+    if not contents or contents[0] != "---":
+        return text, None
+    end = next((i for i in range(1, len(contents)) if contents[i] in ("---", "...")), None)
+    if end is None:
+        return text, None
+    v = next((i for i in range(1, end) if VERSION_LINE.match(contents[i])), None)
+    m = next((i for i in range(1, end) if MODIFIED_LINE.match(contents[i])), None)
+    if v is None or m is None:
+        return text, None
+    a = VERSION_LINE.match(contents[v])
+    old, new = f"{a.group(3)}.{a.group(4)}.{a.group(5)}", f"{a.group(3)}.{int(a.group(4)) + 1}.0"
+    contents[v] = f"{a.group(1)}{a.group(2)}{new}{a.group(6)}{a.group(7)}"
+    b = MODIFIED_LINE.match(contents[m])
+    contents[m] = f"{b.group(1)}{b.group(2)}{now}{b.group(4)}{b.group(5)}"
+    parts[0::2] = contents
+    return "".join(parts), (old, new)
+
+
+def collect_files(top: Path, names: list[str], allow_records: bool, allow_outside: bool = False):
+    """(files, refusals, skipped). A named file under .git, outside the repository, in the records or done queue
+    (unless allowed) or binary is refused; a folder is walked and skips those, counting what it skipped. With allow_outside an
+    explicit file under /tmp is accepted although it is outside the repository."""
+    files, refusals, skipped = [], [], {"binary": 0, "records": 0, "other": 0}
+    def rel_of(p: Path):
+        try:
+            return p.resolve().relative_to(top).parts
+        except ValueError:
+            return None
+    def guarded(p: Path, explicit: bool) -> bool:
+        rel = rel_of(p)
+        if rel is None and allow_outside and explicit and p.is_file() and ".git" not in p.resolve().parts \
+                and (p.resolve().parts[:2] == ("/", "tmp") or p.resolve().parts[:3] == ("/", "private", "tmp")):
+            return True
+        if rel is None or ".git" in rel:
+            if explicit:
+                refusals.append(f"{p}: outside the repository or under .git/"
+                                + ("; --allow-outside takes only an explicit file under /tmp" if rel is None else ""))
+            else:
+                skipped["other"] += 1
+            return False
+        if not allow_records and any(under(rel, pre) for pre in PROTECTED):
+            if explicit:
+                refusals.append(f"{p}: immutable play records (C1); pass --allow-records to include them")
+            else:
+                skipped["records"] += 1
+            return False
+        return True
+    for name in names:
+        p = Path(name)
+        if p.is_symlink():
+            refusals.append(f"{p}: a symbolic link is not rewritten")
+        elif p.is_dir():
+            if not guarded(p, True):
+                continue
+            for cur, dirs, fnames in os.walk(p, followlinks=False):
+                dirs[:] = sorted(d for d in dirs if d != ".git" and not (Path(cur) / d).is_symlink())
+                for f in sorted(fnames):
+                    q = Path(cur) / f
+                    if q.is_symlink() or not q.is_file() or not guarded(q, False):      # sockets, pipes, links: never read
+                        skipped["other"] += 1 if not q.is_file() else 0
+                        continue
+                    try:
+                        binary = is_binary(q.read_bytes())
+                    except OSError:
+                        skipped["other"] += 1
+                        continue
+                    if binary:
+                        skipped["binary"] += 1
+                    else:
+                        files.append(q)
+        elif p.is_file():
+            if not guarded(p, True):
+                continue
+            if is_binary(p.read_bytes()):
+                refusals.append(f"{p}: a binary file is not rewritten")
+            else:
+                files.append(p)
+        else:
+            refusals.append(f"{p}: no such file or folder")
+    return files, refusals, skipped
+
+
+# --- redaction-only proof ----------------------------------------------------------------------------------
+# `redact --verify-diff` and the narrow exemption in `check --staged` rest on one test: the changed text must EQUAL the
+# deterministic substitution applied to the base text, apart from the frontmatter `version:` and `modified:` lines of a
+# versioned (non-record) file. Nothing here prints a matched value, only paths, counts and line numbers.
+
+FRONT_MOVES = re.compile(r"^(version|modified):")
+
+
+def front_range(contents: list[str]) -> tuple[int, int] | None:
+    if not contents or contents[0] != "---":
+        return None
+    end = next((i for i in range(1, len(contents)) if contents[i] in ("---", "...")), None)
+    return (1, end) if end is not None else None
+
+
+def neutral_front(text: str) -> str:
+    parts = SEPARATORS.split(text)
+    contents = parts[0::2]
+    span = front_range(contents)
+    if span:
+        for i in range(*span):
+            if FRONT_MOVES.match(contents[i]):
+                contents[i] = contents[i].split(":", 1)[0] + ": <moved>"
+    parts[0::2] = contents
+    return "".join(parts)
+
+
+def yaml_still_sane(base: str, new: str) -> bool:
+    """Frontmatter lines the substitution changed keep their shape: same kind of line, no new `: ` or ` #`, same quote parity.
+    (A sanity check, not a YAML parser: the tool is standard library only.)"""
+    b, n = SEPARATORS.split(base)[0::2], SEPARATORS.split(new)[0::2]
+    span = front_range(b)
+    if not span or len(b) != len(n):
+        return True if not span else False
+    for i in range(*span):
+        if b[i] == n[i]:
+            continue
+        kind = lambda line: re.match(r"^\s*(- |[\w.-]+:)", line) is not None
+        if kind(b[i]) != kind(n[i]) or n[i].count(": ") > b[i].count(": ") or n[i].count(" #") > b[i].count(" #") \
+                or n[i].count('"') % 2 != b[i].count('"') % 2 or n[i].count("'") % 2 != b[i].count("'") % 2:
+            return False
+    return True
+
+
+def redaction_problems(rel: str, base: bytes, new: bytes, patterns, markers) -> tuple[list[str], bool]:
+    """([problems], moved): empty problems prove the change is redaction-only; moved says version or modified moved."""
+    try:
+        base_text, new_text = base.decode("utf-8"), new.decode("utf-8")
+    except UnicodeDecodeError:
+        return ["not valid UTF-8 text"], False
+    parts = tuple(rel.split("/"))
+    versioned = not (under(parts, ("_records_",)) or under(parts, ("_queue_", "done")) or under(parts, ("_logs_",)))
+    expected, _ = redact_text(base_text, patterns, markers)
+    moved = False
+    if new_text != expected:
+        if versioned and neutral_front(new_text) == neutral_front(expected):
+            moved = True
+        else:
+            shown_exp, shown_new = (neutral_front(expected), neutral_front(new_text)) if versioned else (expected, new_text)
+            exp_lines, new_lines = shown_exp.split("\n"), shown_new.split("\n")
+            if len(exp_lines) != len(new_lines):
+                return [f"line count {len(new_lines)} instead of the expected {len(exp_lines)}"], False
+            differing = [i + 1 for i, (x, y) in enumerate(zip(exp_lines, new_lines)) if x != y]
+            return [f"differs from the deterministic substitution on {len(differing)} line(s), first at line {differing[0]}"
+                    + ("" if versioned else "; version and modified may not move in a record")], False
+    problems = []
+    if len(new_text.split("\n")) != len(base_text.split("\n")):
+        problems.append("line count changed")
+    suffix = rel.rsplit(".", 1)[-1].lower() if "." in rel.rsplit("/", 1)[-1] else ""
+    if suffix in ("json", "jsonl", "ndjson"):
+        def valid(text):
+            try:
+                if suffix == "json":
+                    json.loads(text)
+                else:
+                    for line in text.split("\n"):
+                        if line.strip():
+                            json.loads(line)
+                return True
+            except ValueError:
+                return False
+        if valid(base_text) and not valid(new_text):
+            problems.append("no longer valid " + ("JSON" if suffix == "json" else "JSON lines"))
+    if suffix == "md" and not yaml_still_sane(base_text, new_text):
+        problems.append("frontmatter no longer looks like valid YAML")
+    return problems, moved
+
+
+def staged_redaction_only(top: Path, paths: set[str]) -> set[str]:
+    """The staged paths proven redaction-only against HEAD; empty without a denylist that has markers."""
+    patterns, _, _, markers = load_denylist(top)
+    if not patterns or not markers:
+        return set()
+    proven = set()
+    for rel in sorted(paths):
+        try:
+            base = git(top, "show", f"HEAD:{rel}")
+            new = staged_git(top, "show", f":{rel}")
+        except (GateError, subprocess.CalledProcessError):
+            continue
+        problems, _ = redaction_problems(rel, base, new, patterns, markers)
+        if not problems and base != new:
+            proven.add(rel)
+    return proven
+
+
+def cmd_verify_diff(a, top: Path, patterns, markers) -> int:
+    """redact --verify-diff [--base REV]: every changed file must be the deterministic substitution of its base text."""
+    base_rev = a.base or "HEAD"
+    listing = git(top, "diff", "--name-status", "-z", "--no-renames", base_rev).decode("utf-8", errors="surrogateescape").split("\0")
+    changed = [(listing[i], listing[i + 1]) for i in range(0, len(listing) - 1, 2)]
+    wanted = [Path(p).resolve() for p in a.paths]
+    if wanted:
+        changed = [(st, rel) for st, rel in changed if any((top / rel).resolve() == w or w in (top / rel).resolve().parents for w in wanted)]
+    texts = blob_bytes(top, [f"{base_rev}:{rel}" for st, rel in changed if st == "M"])
+    ok = moved = 0
+    violations = []
+    for status, rel in changed:
+        if status != "M":
+            violations.append((rel, f"file {'added' if status == 'A' else 'deleted' if status == 'D' else 'changed'} ({status}), not a substitution"))
+            continue
+        path = top / rel
+        if not path.is_file():
+            violations.append((rel, "file missing"))
+            continue
+        problems, did_move = redaction_problems(rel, texts.get(f"{base_rev}:{rel}", b""), path.read_bytes(), patterns, markers)
+        if problems:
+            violations.append((rel, "; ".join(problems)))
+        else:
+            ok += 1
+            moved += did_move
+            if a.report_all:
+                print(f"redaction-only: {safe_path(rel, patterns)}" + (" (version or modified moved)" if did_move else ""))
+    for rel, why in violations:
+        print(f"violation: {safe_path(rel, patterns)}: {why}")
+    print(f"redact --verify-diff against {base_rev}: {len(changed)} changed file(s), {ok} redaction-only "
+          f"({moved} with version or modified moved), {len(violations)} violation(s)")
+    return 1 if violations else 0
+
+
+def cmd_redact(a) -> int:
+    top = repo_top(Path(a.root).resolve())
+    patterns, warnings, _, markers = load_denylist(top)
+    if not patterns:
+        raise GateError("; ".join(warnings))
+    for w in warnings:
+        print(f"lint-gate: warning: {w}")
+    if a.verify_diff:
+        return cmd_verify_diff(a, top, patterns, markers)
+    if not a.paths:
+        _die("redact needs at least one PATH (or --verify-diff)", 2)
+    files, refusals, skipped = collect_files(top, a.paths, a.allow_records, a.allow_outside)
+    if refusals:
+        for r in refusals:
+            print(f"redact: refused: {safe_path(r, patterns)}")
+        print("redact: nothing written.")
+        return 1
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    plan, totals, per_folder, bad, folder_files = [], {n: [0, 0] for n, _ in patterns}, {}, [], {}
+    for f in files:
+        try:
+            text = f.read_bytes().decode("utf-8")
+        except UnicodeDecodeError:
+            skipped["binary"] += 1
+            continue
+        new, counts = redact_text(text, patterns, markers)
+        hit = {n: c for n, c in counts.items() if c}
+        if not hit:
+            continue
+        try:
+            rel = f.resolve().relative_to(top).as_posix()
+            parts = rel.split("/")
+            folder = "/".join(parts[:2]) if len(parts) > 2 else parts[0]
+        except ValueError:                       # an explicit file under /tmp, allowed by --allow-outside
+            rel, folder = str(f.resolve()), "(outside, under /tmp)"
+        folder_files[folder] = folder_files.get(folder, 0) + 1
+        for n, c in hit.items():
+            totals[n][0] += 1
+            totals[n][1] += c
+            per_folder.setdefault(folder, {}).setdefault(n, [0, 0])
+            per_folder[folder][n][0] += 1
+            per_folder[folder][n][1] += c
+        unmarked = [n for n in hit if n not in markers]
+        bad += unmarked
+        remaining = [n for n, p in patterns if p.search(new)]
+        plan.append((f, rel, text, new, hit, remaining))
+    unmarked = sorted(set(bad))
+    left = sorted({n for *_, remaining in plan for n in remaining if n in markers})
+    if a.verify and not a.apply:
+        for f, rel, text, new, hit, _ in plan:
+            print(f"still matches: {safe_path(rel, patterns)}: " + ", ".join(f"pattern {n} x{c}" for n, c in sorted(hit.items())))
+        print(f"redact --verify: {len(plan)} file(s) still match, of {len(files)} scanned" +
+              (f" ({skipped['binary']} binary, {skipped['records']} records skipped)" if any(skipped.values()) else ""))
+        return 1 if plan else 0
+    mode = "apply" if a.apply else "dry run"
+    shown = plan if a.report_all else plan[:40]
+    for f, rel, text, new, hit, _ in shown:
+        print(f"{safe_path(rel, patterns)}: " + ", ".join(f"pattern {n} x{c}" for n, c in sorted(hit.items())))
+    if len(plan) > len(shown):
+        print(f"... and {len(plan) - len(shown)} more file(s); --report-all lists them all")
+    print(f"redact {mode}: {len(plan)} of {len(files)} file(s) match; per pattern (files/matches): " +
+          ", ".join(f"{n}: {t[0]}/{t[1]}" for n, t in totals.items() if t[0]))
+    for folder, by in sorted(per_folder.items()):
+        total = sum(c[1] for c in by.values())
+        print(f"  {folder:<34}{folder_files.get(folder, 0)} files, {total} matches: " +
+              ", ".join(f"p{n} {c[0]}f/{c[1]}m" for n, c in sorted(by.items())))
+    if any(skipped.values()):
+        print(f"  skipped: {skipped['binary']} binary, {skipped['records']} in records or done queue, {skipped['other']} other")
+    if unmarked:
+        print(f"redact: pattern(s) {', '.join(map(str, unmarked))} match but have no `# marker:` line in the local denylist"
+              f"{'; --apply refuses and writes nothing' if a.apply else ' (a dry run only reports)'}")
+    if not a.apply:
+        print("  dry run; pass --apply to rewrite" if not unmarked else "  dry run")
+        return 0
+    if unmarked:
+        print("redact: refused: add a marker line for each pattern above; nothing written.")
+        return 1
+    if left:
+        print(f"redact: refused: a marker would leave pattern(s) {', '.join(map(str, left))} matching; nothing written.")
+        return 1
+    bumped, plain_changed = [], []
+    for f, rel, text, new, hit, _ in plan:
+        rel_parts = tuple(rel.split("/"))
+        immutable = under(rel_parts, ("_records_",)) or under(rel_parts, ("_queue_", "done")) or under(rel_parts, ("_logs_",))
+        final, change = (new, None) if immutable else bump_front(new, now)      # records change only the name
+        tmp = f.with_name(f".{f.name}.redact-tmp")
+        tmp.write_bytes(final.encode("utf-8"))
+        shutil.copymode(f, tmp)
+        os.replace(tmp, f)
+        (bumped if change else plain_changed).append((safe_path(rel, patterns), change))
+    print(f"redact: rewrote {len(plan)} file(s); {len(bumped)} version(s) bumped, {len(plain_changed)} without version fields")
+    for rel, (old, new) in bumped:
+        print(f"  needs a changelog line: {rel} (version {old} -> {new})")
+    for rel, _ in plain_changed:
+        print(f"  no version fields to bump: {rel}")
+    rest = [rel for f, rel, *_ in plan if still_matches(f.read_text(encoding="utf-8"), patterns)]
+    print(f"redact verified: {len(rest)} file(s) still match")
+    return 1 if rest else 0
+
+
 # --- check -------------------------------------------------------------------------------------------------
 
 def cmd_check(a) -> int:
     started = time.time()
     root = Path(a.root).resolve()
     top = repo_top(root)
-    paths = reflection_paths(a)
-    rules = tuple(r for r in (a.rules or os.environ.get("LINT_GATE_RULES") or ",".join(GATE_RULES)).split(",") if r)
-    if a.staged:
-        report = run_linter(paths, top, ["--staged"], STAGED_TIMEOUT, staged=True)
-        ref, mode = "HEAD", "staged"
-    else:
-        ref = a.base or "HEAD"
-        report = run_linter(paths, top, ["--base", ref], FULL_TIMEOUT, staged=False)
-        mode = f"base {ref}"
+    rules = tuple(r for r in (a.rules or os.environ.get("LINT_GATE_RULES") or ",".join(GATE_RULES + (PRIVACY_RULE,))).split(",") if r)
+    privacy = None
+    if PRIVACY_RULE in rules:
+        privacy = privacy_scan_staged(top, a.staged)
+        for w in privacy["warnings"]:
+            print(f"lint-gate: warning: {w}")
+    hits = privacy["hits"] if privacy else []
+    failures = privacy["failures"] if privacy else []
+    if failures:
+        print(f"lint-gate: {EXPECT_MESSAGE}")
+        for f in failures:
+            print(f"BLOCKED [privacy] {f}")
+    try:
+        paths = reflection_paths(a)
+        if a.staged:
+            report = run_linter(paths, top, ["--staged"], STAGED_TIMEOUT, staged=True)
+            ref, mode = "HEAD", "staged"
+        else:
+            ref = a.base or "HEAD"
+            report = run_linter(paths, top, ["--base", ref], FULL_TIMEOUT, staged=False)
+            mode = f"base {ref}"
+    except GateError:
+        if hits or failures:          # a privacy finding blocks even when the linter cannot run
+            print_privacy_hits(hits)
+            print(f"lint-gate: {len(hits) + len(failures)} privacy finding(s) block this commit; the linter could not run.")
+            return 1
+        raise
     base = BaseTree(top, ref, staged=a.staged)
     docs, folders = exemptions(top)
-    blocking, legacy, exempt, other = classify(report.get("errors", []), rules, base, docs, folders)
+    redacted = set()
+    if a.staged and PRIVACY_RULE in rules:       # a staged file proven redaction-only is exempt from the size rule, per file
+        sized = {path_of(f) for f in report.get("errors", []) if tag_of(f) == "document-concision"}
+        redacted = staged_redaction_only(top, sized) if sized else set()
+    blocking, legacy, exempt, other = classify(report.get("errors", []), rules, base, docs, folders, redacted)
+    print_privacy_hits(hits)
     for f in blocking:
         print(f"BLOCKED {short(f)}")
     seconds = time.time() - started
+    seen = (f"privacy {privacy['patterns']} pattern(s) over {privacy['lines']} added line(s)" if privacy and privacy["patterns"]
+            else "privacy not checked")
     note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt finding(s) ignored, "
-            f"{other} error(s) of other rules ignored")
-    if blocking:
-        print(f"lint-gate: {len(blocking)} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
-        print("Trim the document under 500 words (300 is recommended) or move measured rows to a CSV beside it; "
-              "a folder needs its INDEX.md. See _conventions_/core-conventions/document-concision.md.")
+            f"{other} error(s) of other rules ignored, {seen}")
+    total = len(blocking) + len(hits) + len(failures)
+    if total:
+        print(f"lint-gate: {total} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
+        if blocking:
+            print("Trim the document under 500 words (300 is recommended) or move measured rows to a CSV beside it; "
+                  "a folder needs its INDEX.md. See _conventions_/core-conventions/document-concision.md.")
+        if hits:
+            print("Privacy: take the identifier out of the added line or file name (see "
+                  "_conventions_/local-conventions/account-privacy.md); the denylist is local and never committed.")
+        if failures:
+            print("Privacy: fix the pattern or its `# expect-min` line in the local denylist; --no-verify stays the override.")
         return 1
     print(f"lint-gate: ok ({mode}, {seconds:.1f}s); {note}.")
     return 0
@@ -372,6 +1139,8 @@ def growth_since(top: Path, prev_head: str, words_now: dict[str, int], counter, 
 
 
 def cmd_watch(a) -> int:
+    if a.privacy:
+        return cmd_privacy_census(a)
     root = Path(a.root).resolve()
     top = repo_top(root)
     paths = reflection_paths(a)
@@ -502,11 +1271,27 @@ def build_parser() -> argparse.ArgumentParser:
     w.add_argument("--min-growth-words", type=int, default=MIN_GROWTH_WORDS, help="ignore growth smaller than this")
     w.add_argument("--format", choices=("text", "json"), default="text")
     w.add_argument("--no-write", action="store_true")
+    w.add_argument("--privacy", action="store_true", help="count files and lines per top folder for each denylist pattern; "
+                   "counts and paths only, no matched text")
+    w.add_argument("--worktree", action="store_true", help="with --privacy, read the working tree instead of HEAD")
+    w.add_argument("--accept", action="store_true", help="with --privacy, record the census even where a pattern dropped to zero "
+                   "(a redaction landed)")
     w.set_defaults(run=cmd_watch)
     st = sub.add_parser("stub-index", parents=[common], help="static INDEX.md for today's records folders that lack one")
     st.add_argument("--apply", action="store_true", help="write the files (the default is a dry run)")
     st.add_argument("--today", metavar="YYYY-MM-DD", help="override the Pacific date (tests, replays)")
     st.set_defaults(run=cmd_stub_index)
+    d = sub.add_parser("redact", parents=[common], help="replace denylist matches with each pattern's marker text (dry run default)")
+    d.add_argument("paths", nargs="*", metavar="PATH", help="files or folders; only these are touched")
+    d.add_argument("--verify-diff", action="store_true", help="prove every changed file is the redaction-only substitution of "
+                   "its base text (frontmatter version and modified aside); exit 1 otherwise")
+    d.add_argument("--base", default="", help="with --verify-diff, the revision to compare against (default HEAD)")
+    d.add_argument("--apply", action="store_true", help="rewrite the files")
+    d.add_argument("--verify", action="store_true", help="re-scan the paths; exit 1 if any pattern still matches")
+    d.add_argument("--allow-records", action="store_true", help="include _records_/ and _queue_/done (immutable play records)")
+    d.add_argument("--allow-outside", action="store_true", help="accept an explicit absolute file path under /tmp (a saved original)")
+    d.add_argument("--report-all", action="store_true", help="list every matching file, not the first 40")
+    d.set_defaults(run=cmd_redact)
     r = sub.add_parser("record-check", parents=[common], help="body words of a play record; exit 1 at the limit")
     r.add_argument("paths", nargs="+", metavar="PATH")
     r.add_argument("--limit", type=int, default=RECORD_LIMIT)
