@@ -3959,6 +3959,14 @@ def _actionable(fields, stamp):
     return not (not_before and not_before > stamp)
 
 
+def _expired(fields, stamp):
+    """True when the unit's window has closed (expires_at at or before stamp, the test sync and the report use). pick_key
+    sorts by expiry FIRST, so an expired unit sorts ahead of every live one: on 2026-11-23 next named an expired
+    priority 1 growth fill first while 75 live units waited. A unit with no expiry never expires."""
+    expires = parse_iso(fields.get("expires_at", ""))
+    return expires is not None and expires <= stamp
+
+
 def _est_minutes(fields):
     try:
         return int(fields.get("est_minutes", DEFAULT_EST_MINUTES))
@@ -3999,9 +4007,14 @@ def cmd_next(args):
         return 1
     stamp = now_utc()
     defs_path = _default_regulars_path()
+    expired_skipped = sorted(f.get("unit", "") for f in list_units(root, "inbox") if _expired(f, stamp))
+    if expired_skipped:
+        print(f"note: skipping {len(expired_skipped)} expired unit(s) that sync has yet to expire: "
+              f"{', '.join(expired_skipped)}", file=sys.stderr)
     candidates = sorted(
         (f for f in list_units(root, "inbox")
          if _actionable(f, stamp)
+         and not _expired(f, stamp)
          and not _has_done_record(root, f.get("unit"))
          and not has_completion_marker(root, f.get("unit"))
          and not _scout_chain_day_ended(
@@ -4074,7 +4087,7 @@ def cmd_next(args):
             # blocks on the overlay again re-records it.
             continue
         fit = [f for f in sorted(
-            (f for f in clearing if _actionable(f, stamp)),
+            (f for f in clearing if _actionable(f, stamp) and not _expired(f, stamp)),
             key=lambda f: pick_key(f, stamp))
             if _est_minutes(f) <= args.budget_minutes]
         if fit:
@@ -4151,6 +4164,10 @@ def cmd_claim(args):
     if not _actionable(fields, now_utc()):
         print(f"cannot claim {args.unit}: not before "
               f"{fields.get('not_before')}")
+        return 1
+    if _expired(fields, now_utc()):
+        print(f"cannot claim {args.unit}: its window closed at {fields.get('expires_at')} - sync expires it; "
+              f"do not run an expired unit")
         return 1
     stamp = now_utc()
     try:
@@ -4302,6 +4319,7 @@ def cmd_deadline(args):
     for f in sorted(
             (f for f in list_units(root, "inbox")
              if _actionable(f, stamp)
+             and not _expired(f, stamp)
              and not _has_done_record(root, f.get("unit"))
              and not has_completion_marker(root, f.get("unit"))),
             key=lambda f: pick_key(f, stamp)):
