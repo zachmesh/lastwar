@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-11T15:32:17Z
+modified: 2026-11-23T00:43:25Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-1834 hidden-treasures execution record 2026-11-10 1855 queue run (done, checked only, fragment stock identical to the 13:51 read, M3 at 0, no dig possible, chest 11/15; record commit af56d36ec on records/2026-11-10)
   - source: ticker-0234 hidden-treasures execution record 2026-11-11 0307 queue run (done, checked only, fragment stock M1 12, M2 11, M3 0, M4 6, M5 1, M6 6, M7 10, chest 12/15, no dig possible, dig odds reward detail read; record commit 2abfb335c on records/2026-11-11)
   - source: ticker-0637 hidden-treasures execution record 2026-11-11 0654 queue run (done, checked only, fragment stock identical to 0307, M3 at zero so no dig, chest 12/15, no tab badge, Skip Animation ticked; record commit f8ee03b36 on records/2026-11-11)
+  - source: ticker-0234 hidden-treasures execution record 2026-11-22 0253 queue run (done, checked only, live stocks M1 x2 M2 x3 M3 x0 M4 x0 M5 x0 M6 x8 M7 x3, chest 5/15, no complete set, unattributed movement since 2026-11-11 - at least ~10 digs with no treasures record after 2026-11-11; record commit c5c9b88d6 on delivery branch ticker-0234-records-1122, not on main - provenance noted)
 ---
 
 # Hidden treasures
@@ -317,7 +318,7 @@ as Hidden Treasure.
   10 of 15 track, a new track, or a different counter - the change
   is recorded, the mechanism is not. The 1420 dig advanced it
   1 of 15 to 2 of 15, so it increments per dig; the reset
-  question itself is still open.
+  question itself is still open. (2026-11-22 0253 update: the chest track moved DOWN, 12/15 to 5/15, since the 2026-11-11 0654 read - which implies the track reset and a new track started, mechanism unconfirmed. The fragment consumption since 11-11 implies at least ~10 digs, yet no hidden-treasures record exists after 2026-11-11; the movement is recorded as unattributed, for the daily retro to follow up. No cause is asserted - in particular it is NOT asserted that the owner played on his phone.)
 - Whether particular secret missions drop particular fragment kinds -
   the morning claims dropped fragments number 7, 4 and 1, and the
   recovery record dropped five kinds, but no controlled mapping yet.
@@ -674,3 +675,13 @@ as Hidden Treasure.
 - Skip Animation is ticked. No fragment exchange was inspected or executed (exchanges need owner approval).
 - No diamonds or money spent. No exchange executed. No Dig button tapped (greyed out). No other task type was executed in this unit.
 - Result stats: target dig whenever a full set of seven fragments is on hand; achieved counts read live, no full set (M3 x0), 0 digs; resources_gained none; points none; costs about 2 minutes; verified yes - every figure above was read live on screen in this unit; blocker_category none - no blocker, the slot's work is complete.
+
+## What the 2026-11-22 0253 unit added - checked only, live stocks read, chest 5/15, unattributed movement since 2026-11-11, done
+
+- Unit treasures-2026-11-21-2257 by ticker-0234, about 02:51 to 02:53 local, status done (checked only - no complete set, no dig possible). Evidence in `_records_/2026-11-22/hidden-treasures/0253-queue-run.md` (commit c5c9b88d6 on delivery branch ticker-0234-records-1122 - NOT on main; provenance noted in the frontmatter source line). Session cc-85 on the owner Mac mini, Last War window 105986 (763x1050). 140 seconds, tool-measured (about 2 minutes).
+- Entry: base screen (power 149,417,850); Secret Command Post via the left-column white truck icon at (39,657), unsnapped, first try. Hidden Treasures tab tapped once at (334,133) - worked this time (fresh grounded point; the single-tap variant that failed in 1009/1352 worked here).
+- Live stocks read 2026-11-22 02:52 PT: M1 x2, M2 x3, M3 x0, M4 x0, M5 x0, M6 x8, M7 x3. Chest progress 5/15 (chest icon top-right of the map). Skip Animation ticked (green check). Both Dig buttons greyed (Dig 1 time / Dig 2 time(s)) - no complete set. No tab badge visible on the Hidden Treasures tab. Rewards (odds) panel not opened - odds already answered in the 0446 record; no new information needed.
+- Digs: 0. Binding fragments M3, M4 and M5 are all at zero, so no full set of seven is on hand. No fragment exchange was attempted (needs owner approval; not requested). Spend: none. No diamonds or money touched.
+- Movement since the last read - UNATTRIBUTED, for the retro: last read was 2026-11-11 0654 (M1 x12, M2 x11, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10, chest 12/15). Since then: M1 12 to 2 (-10), M2 11 to 3 (-8), M4 6 to 0 (-6), M5 1 to 0 (-1), M6 6 to 8 (+2), M7 10 to 3 (-7), M3 0 to 0. Chest track 12/15 to 5/15 - it moved DOWN, which implies the track reset and a new track started (mechanism unconfirmed). The fragment consumption implies at least ~10 digs since 11-11 (each dig consumes one of every fragment; M1's -10 bounds it from below), yet no hidden-treasures record exists after 2026-11-11 - verified by listing `_records_/2026-11-*/hidden-treasures/`: the last folder is 2026-11-11. So those digs are unattributed in the repo's records. The most likely actor is the owner playing directly on his phone, but that is NOT asserted - it is recorded here as unattributed movement, for the daily retro to follow up. This joins the 0307 unit's earlier unattributed +1 on the chest track: the track's reset behaviour is still not understood, and this unit does not resolve it. See the updated Open questions entry.
+- Exit: back arrow at (183,952) returned to the base screen (power 149,417,850, Build: Oil Well). Session cc-85 ended.
+- Result stats: target 1 dig if a full set of seven fragments is on hand, achieved 0 digs - no complete set (M3, M4, M5 all zero), resources_gained none, costs 140 seconds of session time (about 2 minutes, tool-measured), no diamonds, no money, verified yes - fragment stocks and chest progress read live from the map; no-record check after 2026-11-11 verified by listing the records folders.
