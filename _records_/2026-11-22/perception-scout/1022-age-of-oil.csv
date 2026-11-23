@@ -1,0 +1,13 @@
+stage,card,task,progress,timer_or_date,reward_shown,claim_state,note
+3,Unlock: Lv. 31-35 Zombies on World Map,kill 2000 zombies on the World Map in this Warzone,3420/2000 (3348/2000 at 09:36Z),"6d 15:37:39 at 10:22:21Z, ends 2026-11-30T02:00Z",none visible,"green check mark, no Claim button",
+3,Rapid Rescue,heal 25000 units in this Warzone,689681/25000 (674067 at 09:36Z),6d 15:37:39,none visible,"green check mark, no Claim button",
+3,Major Construction,complete 500 building upgrades in this Warzone,1636/500,6d 15:37:29 at 10:22:29Z,none visible,"green check mark, no Claim button","card was below the fold, one drag"
+4,Unlock: Lv.31-35 Doom Elite,kill 1000 Doom Elites in this Warzone,0/1000,2026-11-29 with a lock icon,"yellow chest icon, no quantity",locked,stage 4 view read only
+4,Unit Training,train 50000 units in this Warzone in total,0/50000,2026-11-29 with a lock icon,"yellow chest icon, no quantity",locked,
+page,Age of Oil main timer,,,"none shown (no countdown, no starts-in text)",,,
+tab,Black Market,,,20d 15:37:51 on the tab page (hub opened on this tab),,,cross-check of the 2026-12-14T02:00Z end
+tab,Desert Battlefield,,,no timer on the label,,,"red New tag seen at 09:36Z, not entered"
+tab,Winter Battlefield,,,no timer on the label,,,"PvP, not entered"
+tab,Wanted Boss,,,no timer on the label,,,not entered
+claim,none pressed,,,,,no Claim button anywhere,no reward paid; HUD unchanged
+hud,before and after,,,,,,"food 648.5M, iron 1.0G, coin 14.4M, diamonds 11,136, Total Power 150,211,809 both"

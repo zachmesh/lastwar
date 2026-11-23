@@ -17,3 +17,4 @@
 {"at": "2026-11-23T00:07:19", "note": "scout-midday-growth-snapshot-2026-11-23-004, HUD on the base after the barracks read", "values": {"food": 638000000, "iron": 1000000000, "coin": 9600000, "diamonds_red": 11136, "total_power": 150211809, "stamina": 195}}
 {"at": "2026-11-23T00:20:30", "note": "inventory read A-20261123-0810, Backpack top bar; oil 434.1K seen", "values": {"food": 638000000, "iron": 1000000000, "coin": 9600000, "diamonds_red": 11136, "total_power": 150211809, "stamina": 195}}
 {"at": "2026-11-23T01:08:44", "note": "building-queues-growth-fill-2026-11-23-002 HUD read", "values": {"food": 641300000, "iron": 1000000000, "coin": 9700000, "diamonds_red": 11136, "total_power": 150211809, "stamina": 195}}
+{"at": "2026-11-23T02:23:54", "note": "", "values": {"food": 648500000, "iron": 1000000000, "coin": 14400000, "diamonds_red": 11136, "total_power": 150211809, "stamina": 195}}

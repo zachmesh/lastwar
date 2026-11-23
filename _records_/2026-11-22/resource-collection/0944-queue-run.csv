@@ -1,0 +1,5 @@
+resource,owned_before,available_before,collect_utc,owned_after,available_after,owned_delta,note
+food,641338706,2116639,2026-11-23T09:45:04.838Z,643475084,0,2136378,panel Collect once; delta slightly above Available because output accrued during the run
+iron,1066239631,1659829,2026-11-23T09:45:16.565Z,1067900324,0,1660693,panel Collect once
+coin,9760629,1405869,2026-11-23T09:45:29.385Z,11178643,0,1418014,panel Collect once; coin stock now above the 10M reserve by 1.18M
+armed truck,,,2026-11-23T09:44:55Z,,,,"no loot bubble or full-load indicator, only a round marker; not fully loaded, nothing to claim; not tapped"

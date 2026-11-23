@@ -1,7 +1,7 @@
 ---
 title: Plan of record, strategist, version 0.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T09:39:00Z
+modified: 2026-11-23T09:47:00Z
 version: 0.3.2
 level: L3
 description: The plan items with ids, levers, next actions, triggers, deadlines, expected gains and the measurement that closes each, from which the planner mints units; centre moved from capacity first to training slots first
@@ -24,7 +24,7 @@ Mac UTC, daily. The planner mints units only from these ids; each unit carries `
 | PL-03 | Open one Mystery Supply Box, one Choice Chest | 09:30 | 12:00 | 0, decides shards, coin | popup text |
 | PL-04 | Lab 1: Complete, then Extra Drill Ground or its shortest prerequisite | lab free 11:43 | 12:15 | up to +3.29M, 2,000 slots as new T10 [D] | lab item, power |
 | PL-05 | Monday drone feed from the preview | D1 read | 11-24 01:30 | +15K to 60K a week [G] | drone line |
-| PL-06 | Earned currencies to shards by the Black Market policy | PL-02, PL-03 | 11-24 18:00 | +0.3M a milestone [S1] | purchases, power |
+| PL-06 | Earned currencies to shards by store ranking, after reads | PL-02, PL-03 | 11-24 18:00 | +0.3M a milestone [S1] | purchases, power |
 | PL-07 | Collect first, read twice; batch tests 19:56, 11-24 11:18 | 13:00, 02:00 | weekly | A: +0.98M and +1.31M free; B: none [M per unit] | toast, exact power change |
 | PL-08 | Builders: two ground levels or one kept for the new ground; speed-up 10,000 minutes at most | 11-24 09:20 | 11-24 10:00 | +0.35M a level via new T10 [D] | queue, Y up 200 |
 | PL-09 | Slot arrival: read X of Y; one hospital Collect tap (test); train new T10 into free slots; Promote | Y above X | event plus 30 min | +329,400 per 200 slots; promotion up to +2.75M [D] | X of Y, tiers, power |
@@ -41,5 +41,5 @@ Mac UTC, daily. The planner mints units only from these ids; each unit carries `
 
 ## Rules the table relies on
 
-- [Slot rules v1.2](0030-slot-rules.md); speed-up cap 35,000 minutes a week. Conversions: [box policy](0117-box-policy-v1.md); Black Market: [policy](0133-black-market-policy-v1.md).
+- [Slot rules v1.2](0030-slot-rules.md); speed-up cap 35,000 minutes a week. Policies: [box](0117-box-policy-v1.md), [Black Market](0133-black-market-policy-v1.md), [stores](0147-store-ranking-v1.md).
 - No forecast, no unit: see `forecast_ids` and [the ledger](forecast-ledger.csv).

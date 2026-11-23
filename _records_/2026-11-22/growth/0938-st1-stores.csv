@@ -33,3 +33,22 @@ item,store,VIP,Superalloy,red gems,6,100/100,00:00 every Monday (server time); 6
 item,store,VIP,Advanced Teleporter,red gems,cut off,3/3,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
 item,store,VIP,Drone Parts,red gems,cut off,50/50,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
 item,store,VIP,Skill Medal,red gems,cut off,2000/2000,00:00 every Monday (server time); 6d 16:20:50 at 09:39Z,"11,136","diamond priced, read only, left alone"
+balance,store,Campaign,campaign star balance,campaign star,,,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260","read 09:42Z; the brief's earlier 1,260 is unchanged"
+item,store,Campaign,Campaign Chest (UR),campaign star,200,10/10,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Lv.3 Drone Component Chest,campaign star,200,3/3,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,UR Hero Universal Shard,campaign star,200,10/10,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260","10 per week; 2,000 stars for the whole stock, 1,260 buys 6"
+item,store,Campaign,Battle Data 100K,campaign star,2000,25/25,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260","red price, above the balance"
+item,store,Campaign,Universal Decor Component,campaign star,200,30/30,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Basic Chip Material x400,campaign star,5000,1/1,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260","red price, above the balance"
+item,store,Campaign,Skill Chip Chest (SSR),campaign star,not read,1/1,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",price cut off in the frame
+item,store,Campaign,Universal Exclusive Weapon Shard,campaign star,not read,10/10,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",price cut off in the frame; still unread
+item,store,Campaign,Upgrade Ore x1.0K,campaign star,not read,10/10,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",price cut off in the frame
+item,store,Campaign,"name cropped at (R), green chest icon",campaign star,300,20/20,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",after one drag; may duplicate a row of the first view
+item,store,Campaign,Drone Parts,campaign star,300,30/30,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Ticket (name cropped),campaign star,300,30/30,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Hero EXP Chest,campaign star,300,100/100,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Dielectric Ceramic,campaign star,300,200/200,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Battle Data 10K,campaign star,1000,750/750,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,Resource Choice Chest (SSR),campaign star,500,200/200,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260",
+item,store,Campaign,1h Speed-up,campaign star,500,200/200,00:00 every Monday (server time); about 6d 16:17 at about 09:43Z,"1,260","speed-up item, not to be bought"
+note,store,strip,tab order,,,,,,"VIP, Alliance, Honor, Campaign, Season, Cosm(etics), then Coupon Store and Crystal Shop seen earlier at the far right; Season tab not read"

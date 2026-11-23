@@ -5,7 +5,7 @@ activity: perception-scout
 segment: 2
 priority: 2
 created_at: 2026-11-23T08:31:39Z
-expires_at: 2026-11-23T10:25:00Z
+expires_at: 2026-11-23T09:54:00Z
 planned_for:
 not_before: 2026-11-23T09:05:00Z
 window: growth snapshot ST1b read only nothing bought

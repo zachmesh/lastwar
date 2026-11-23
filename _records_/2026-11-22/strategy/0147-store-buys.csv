@@ -1,0 +1,14 @@
+store,item,qty,price,total,decision,deadline_utc,condition,reason
+Honor,Universal Exclusive Weapon Shard,25,2500,62500,BUY after reads,2026-11-26T02:00Z,weapon read shows a weapon that takes universal shards,rank 1; limit resets 2026-12-01T02:00Z
+Honor,UR Hero Universal Shard,10,3000,30000,BUY after reads,2026-11-26T02:00Z,star read shows a UR hero with stars to fill,rank 2; limit resets 2026-12-01T02:00Z
+Alliance,Mason Shard,30,1000,30000,HOLD read first,2026-11-30T02:00Z,Mason is a top-16 hero short of a star,weekly; hero state unread
+Honor,Gear Blueprint UR,50,10000,unread,HOLD read first,2026-11-30T02:00Z,blueprint use and power read,rank 4
+Honor,Skill Chip Chest UR,1,50000,50000,HOLD read first,2026-11-30T02:00Z,drone preview D1 shows chip headroom,the chip line has been static for 14 days
+Honor,Decoration Chest and Decor Components,1,50000 and 200 each,unread,HOLD read first,2026-11-30T02:00Z,a decoration reaches Lv.3,rank 3 if it does
+Honor,Drone Parts and Dielectric Ceramic,100,800,unread,HOLD read first,2026-11-30T02:00Z,drone preview shows a gain per part,component line static 14 days
+Honor,Resource Choice Chest UR,100,4000,unread,NEVER now,,,about 2.43M coin each; coin is not the gate
+Campaign stars,Resource Choice Chest SSR,200,500,unread,NEVER now,,,coin is not the gate
+Honor,Hero Recruitment Ticket,100,2000,unread,NEVER now,,,a gamble; 126 already held
+Honor,50 Stamina,50,1000,50000,NEVER,,,red line on stamina items
+Season tokens,Gear Blueprint MR,8,100,800,HOLD read first,2026-11-27T02:00Z,item text read and expiry line (H63),10 allowed; tokens may lapse at Season 3
+Season tokens,UR Hero Badge,1,50,50,HOLD read first,2026-11-27T02:00Z,item text read,unread use

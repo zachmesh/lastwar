@@ -1,0 +1,12 @@
+system,item,level,stock,next_cost,power_if_shown,note
+drone,Drone Center building (name tag),Lv.1,,,,"tag read Drone Center Lv.1, radial menu plane and info icons; the base building under the plane runway"
+drone,"Tactical Drone (drone screen, Attributes tab)",Lv.134,progress 0/1681200,not shown,5840675,"drone screen total power 5,840,675; 0/1,681,200 is the level bar"
+drone,Health,,+2671634,+2673501 next,,18.0%
+drone,Attack,,+60910,+60955 next,,19.0%
+drone,Defense,,+11182,+11191 next,,19.0%
+drone,skill,,1 skill icon with 5 stars,,,
+drone,resource line under the bar,,2.88M owned,93.40K shown as the figure after the slash,,"blue data-chip icon, label not read; likely Battle Data with the Data Training cost 93.40K (unverified)"
+drone,Data Training button,,,,,"green button with a red dot, not pressed; one tap may spend"
+drone,tabs,,,,,"Attributes (red dot), Component, Combat Boost, Skill Chip; Upgrade Preview and Skin icons; none opened"
+drone,"Drone Parts, Battle Data label, skill chip stock, Combat Boost tier",,not read,not read,,left for D1b
+wall,Wall of Honor,not found,,,,"no orange medal icon on the base; the trophy bubble in the middle of the base is off limits; a Wall (Lv.26) building tap opened a repair menu, not the Wall of Honor"
