@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T07:57:57Z
-version: 2.5.0
+modified: 2026-11-23T08:38:01Z
+version: 2.6.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -24,6 +24,7 @@ and staging runtime state.
 | [resource_map.py](resource_map.py) | resource snapshots | [planning](tool-details/planning-and-scouting-tools.md) |
 | [scout_diff.py](scout_diff.py) | observations to work | [planning](tool-details/planning-and-scouting-tools.md) |
 | [observation.py](observation.py) | observation file writer | [records](tool-details/records-and-worktree-tools.md) |
+| [observation-tests](observation-tests/INDEX.md) | observation.py rollover tests | [own index](observation-tests/INDEX.md) |
 | [retro_report.py](retro_report.py) | retro metrics | [records](tool-details/records-and-worktree-tools.md) |
 | [log_append.py](log_append.py) | JSONL log append | [records](tool-details/records-and-worktree-tools.md) |
 | [log-append-tests](log-append-tests/INDEX.md) | log_append.py gate tests | [own index](log-append-tests/INDEX.md) |

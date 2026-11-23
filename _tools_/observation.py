@@ -75,6 +75,18 @@ Two commands, standard library only:
            write and re-read after it. Exit 0 appended, 1
            refused, 2 usage or unreadable input.
 
+Rollover (word budget): a day file never grows past the budget. When appending a
+section would take the day file past ROLL_AT (400) body words, the section goes into
+the next key-named part, ``observation-p2.md``, ``observation-p3.md`` and so on, each
+under HARD_MAX (450) words. The earlier files are left untouched (records are
+immutable); the new part carries the cumulative day counters (the per-field maximum
+over every part and the reference, plus the delta), a pointer back to the day file,
+and a line in the folder's INDEX.md. ``--file`` names ``observation.md`` or any part;
+the writer finds the day's parts beside it. A section that cannot fit even alone in
+HARD_MAX words is refused (split it). ``check`` reads every part: a heading may not
+repeat across parts and a cumulative counter may not fall from one part to the next.
+A file with any other name is a single file and never rolls over.
+
 Usage:
   observation.py check --file PATH [--reference PATH]
                        [--format text|json]
@@ -91,7 +103,10 @@ import os
 import re
 import sys
 import tempfile
+from datetime import datetime, timezone
 
+ROLL_AT, HARD_MAX = 400, 450
+PART_NAME = re.compile(r"^observation(?:-p(\d+))?\.md$")
 COUNTER_FIELDS = ("items_observed", "red_dots_seen",
                   "red_dots_explained", "unexplained_red_dots")
 # Counters that only grow within a day. unexplained_red_dots is
@@ -169,6 +184,51 @@ def _read(path):
         return fh.read()
 
 
+_COUNTER = []
+
+
+def _file_words(text):
+    """Body words of a whole file as the word-budget checker counts them; a plain count of the words after the
+    frontmatter when that checker is not on this machine."""
+    if not _COUNTER:
+        _COUNTER.append(None)
+        loader = os.path.expanduser("~/dtadpole/reflection/_tools_/document-word-budget/word-budget.py")
+        try:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("observation_word_budget", loader)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            _COUNTER[0] = module.check_text
+        except Exception:
+            _COUNTER[0] = None
+    if _COUNTER[0] is not None:
+        try:
+            return int(_COUNTER[0](text, "observation.md")["body_words"])
+        except Exception:
+            pass
+    body = text.split("\n---\n", 1)[1] if text.startswith("---\n") and "\n---\n" in text else text
+    return len(body.split())
+
+
+def _day_parts(path):
+    """The day's part files in order, observation.md first, for a path named observation.md or observation-pN.md;
+    just [path] for any other name."""
+    directory = os.path.dirname(os.path.abspath(path))
+    if not PART_NAME.match(os.path.basename(path)):
+        return [os.path.abspath(path)]
+    found = []
+    for name in os.listdir(directory):
+        m = PART_NAME.match(name)
+        if m:
+            found.append((int(m.group(1) or 1), os.path.join(directory, name)))
+    return [p for _n, p in sorted(found)] or [os.path.abspath(path)]
+
+
+def _part_number(path):
+    m = PART_NAME.match(os.path.basename(path))
+    return int(m.group(1) or 1) if m else 1
+
+
 def _parse_file(path):
     """Read and parse a day observation file.
 
@@ -222,6 +282,27 @@ def check_observation(path, reference_path=None):
             % (counters["red_dots_seen"],
                counters["red_dots_explained"],
                counters["unexplained_red_dots"]))
+    parts = _day_parts(path)
+    if len(parts) > 1:
+        info["parts"] = [os.path.basename(p) for p in parts]
+        seen_by = {}
+        previous = None
+        for part in parts:
+            p_counters, _pf, _pb, p_sections, p_error = _parse_file(part)
+            if p_error is not None:
+                return [p_error], warnings, info, p_error.startswith("cannot read")
+            for heading, _block in p_sections:
+                if heading in seen_by and seen_by[heading] != part:
+                    problems.append("heading repeats across parts (a replace, not an append): %s in %s and %s" % (
+                        heading, os.path.basename(seen_by[heading]), os.path.basename(part)))
+                seen_by.setdefault(heading, part)
+            if previous is not None:
+                for field in CUMULATIVE_FIELDS:
+                    if p_counters[field] < previous[1][field]:
+                        problems.append("counter regression across parts: %s %d in %s below %d in %s" % (
+                            field, p_counters[field], os.path.basename(part), previous[1][field],
+                            os.path.basename(previous[0])))
+            previous = (part, p_counters)
     if reference_path is not None:
         ref_counters, _f, _b, ref_sections, error = \
             _parse_file(reference_path)
@@ -272,6 +353,52 @@ def _rebuild(counters, front_lines, body, restored_blocks, new_block):
     return text
 
 
+def _part_front(first_front, number):
+    """Frontmatter of a new part: the day file's lines with a part title, fresh dates and version 0.1.0; counter lines stay
+    in place (_rebuild rewrites them)."""
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out = []
+    for line in first_front:
+        key = re.match(r"^([A-Za-z_][A-Za-z0-9_]*):\s*(.*)$", line)
+        name = key.group(1) if key else ""
+        if name == "title":
+            title = re.sub(r"\s+part \d+$", "", key.group(2).strip())
+            out.append("title: %s part %d" % (title, number))
+        elif name in ("created", "modified"):
+            out.append("%s: %s" % (name, now))
+        elif name == "version":
+            out.append("version: 0.1.0")
+        else:
+            out.append(line)
+    return out
+
+
+def _index_part(part_path, words):
+    """List the new part in the folder's INDEX.md (created when there is none): one line, never listed twice."""
+    directory = os.path.dirname(part_path)
+    index = os.path.join(directory, "INDEX.md")
+    name = os.path.basename(part_path)
+    line = "- [%s](%s) - the day observation file continues here (%d words)" % (name, name, words)
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if os.path.exists(index):
+        text = _read(index)
+        if "](%s)" % name in text:
+            return
+        text = text.rstrip("\n") + "\n" + line + "\n"
+        text = re.sub(r"(?m)^modified:.*$", "modified: %s" % now, text, count=1)
+        m = re.search(r"(?m)^version: (\d+)\.(\d+)\.(\d+)\s*$", text)
+        if m:
+            text = text.replace(m.group(0), "version: %s.%d.0" % (m.group(1), int(m.group(2)) + 1), 1)
+    else:
+        text = ("---\ntitle: Perception scout records\ncreated: %s\nmodified: %s\nversion: 1.0.0\n"
+                "description: The day observation file and its parts\n---\n\n# Perception scout records\n\n"
+                "- [observation.md](observation.md) - the day observation file\n%s\n" % (now, now, line))
+    tmp = index + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(text)
+    os.replace(tmp, index)
+
+
 def append_section(path, section_path, reference_path, deltas):
     """Append one pass section; return (result, error, code).
 
@@ -299,7 +426,20 @@ def append_section(path, section_path, reference_path, deltas):
     if error is not None:
         code = 2 if error.startswith("cannot read") else 1
         return None, error, code
-    headings = [h for h, _b in sections]
+    parts = _day_parts(path)
+    parsed = {}
+    for part in parts:
+        if os.path.abspath(part) == os.path.abspath(path):
+            parsed[part] = (counters, front_lines, body, sections)
+        else:
+            p_counters, p_front, p_body, p_sections, p_error = _parse_file(part)
+            if p_error is not None:
+                return None, p_error, (2 if p_error.startswith("cannot read") else 1)
+            parsed[part] = (p_counters, p_front, p_body, p_sections)
+    if os.path.abspath(path) not in [os.path.abspath(p) for p in parts]:
+        parts.append(os.path.abspath(path))
+        parsed[os.path.abspath(path)] = (counters, front_lines, body, sections)
+    headings = [h for part in parts for h, _b in parsed[part][3]]
     if heading in headings:
         return None, "refused: heading already present - a continued " \
             "pass is a NEW section, never a replacement: %s" % heading, 1
@@ -310,7 +450,7 @@ def append_section(path, section_path, reference_path, deltas):
                     field, deltas[field]), 1
     restored = []
     restored_headings = []
-    base = dict(counters)
+    base = {f: max(parsed[part][0][f] for part in parts) for f in COUNTER_FIELDS}
     if reference_path is not None:
         ref_counters, _f, _b, ref_sections, error = \
             _parse_file(reference_path)
@@ -331,7 +471,28 @@ def append_section(path, section_path, reference_path, deltas):
             return None, "refused: %s delta %d would take the day " \
                 "total negative (base %d)" % (
                     field, deltas[field], base[field]), 1
-    text = _rebuild(new_counters, front_lines, body, restored, new_block)
+    latest = parts[-1]
+    l_counters, l_front, l_body, _l_sections = parsed[latest]
+    rolled = False
+    target = latest
+    day_file = PART_NAME.match(os.path.basename(path)) is not None
+    if day_file:
+        latest_words = _file_words(_read(latest))
+        added_words = _file_words("---\n---\n" + "\n\n".join(restored + [new_block]))
+        if latest_words + added_words > ROLL_AT:
+            rolled = True
+            number = _part_number(latest) + 1
+            target = os.path.join(os.path.dirname(os.path.abspath(path)), "observation-p%d.md" % number)
+            if os.path.exists(target):
+                return None, "refused: %s already exists" % os.path.basename(target), 1
+            first_front = parsed[parts[0]][1]
+            l_front = _part_front(first_front, number)
+            l_body = ("Part %d of the day observation file: it continues the sections of the earlier parts, which stay "
+                      "as written. The day counters above are the cumulative totals at this part." % number)
+    text = _rebuild(new_counters, l_front, l_body, restored, new_block)
+    if day_file and _file_words(text) > HARD_MAX:
+        return None, "refused: the section is too long for a day file part (%d words; the limit is %d) - split it into " \
+            "two pass sections" % (_file_words(text), HARD_MAX), 1
     # Verify the rebuilt text in memory before touching the disk.
     re_counters, _f, re_body, error = _split_frontmatter(text)
     if error is not None:
@@ -342,29 +503,34 @@ def append_section(path, section_path, reference_path, deltas):
     if re_counters != new_counters:
         return None, "rebuilt file counters mismatch: %r != %r" % (
             re_counters, new_counters), 1
-    directory = os.path.dirname(os.path.abspath(path))
+    directory = os.path.dirname(os.path.abspath(target))
     fd, tmp_path = tempfile.mkstemp(prefix=".observation-",
                                     dir=directory)
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
             fh.write(text)
-        os.replace(tmp_path, path)
+        os.replace(tmp_path, target)
     except OSError as exc:
         try:
             os.unlink(tmp_path)
         except OSError:
             pass
-        return None, "cannot write %s: %s" % (path, exc), 2
+        return None, "cannot write %s: %s" % (target, exc), 2
     # Re-read the file as written and confirm it is what we built.
     try:
-        written = _read(path)
+        written = _read(target)
     except (OSError, UnicodeDecodeError) as exc:
-        return None, "cannot re-read %s after write: %s" % (path, exc), 1
+        return None, "cannot re-read %s after write: %s" % (target, exc), 1
     if written != text:
-        return None, "re-read mismatch after write on %s" % path, 1
+        return None, "re-read mismatch after write on %s" % target, 1
+    if rolled:
+        _index_part(target, _file_words(text))
+    path = target
     return {"file": path,
             "appended_heading": heading,
             "restored_sections": restored_headings,
+            "rolled_over": rolled,
+            "words": _file_words(_read(path)),
             "counters_before": base,
             "counters": new_counters}, None, 0
 
@@ -419,7 +585,10 @@ def cmd_append(args):
         _emit(payload, args.format)
         return code
     text = ["observation append ok on %s: %s"
-            % (args.file, result["appended_heading"])]
+            % (result["file"], result["appended_heading"])]
+    if result["rolled_over"]:
+        text.append("  rolled over: the day file would pass %d words, so the section went into a new part "
+                    "(%d words); the earlier files are untouched" % (ROLL_AT, result["words"]))
     if result["restored_sections"]:
         text.append("  restored %d delivered section(s) missing from "
                     "the live file:" % len(result["restored_sections"]))
