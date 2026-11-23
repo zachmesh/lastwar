@@ -1,9 +1,9 @@
 ---
 title: Team Organization
 created: 2026-11-23T04:03:00Z
-modified: 2026-11-23T09:04:37Z
+modified: 2026-11-23T09:41:36Z
 level: L2
-version: 0.3.0
+version: 0.4.0
 description: How the eight top-level DSH seats of the Last War team are organized - roles, cadence, communication contract, failure playbooks, migration and acceptance
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ Add one small article file `team-organization-sections/<entry-id>.md`, named by 
 ## Changelog
 
 - 0.3.0, 2026-11-23 - Re-split verbatim into articles of 300 words or fewer (split_doc.py with a 300-word limit); --check EQUAL, sha256 ff6dec806fa1; the 0.2.0 split is in git history.
+- 0.4.0, 2026-11-23 - Model policy article extended with the persistence layers and a respawn checklist (OD-20261123-16).
 
 ## Articles
 
