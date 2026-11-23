@@ -1,0 +1,14 @@
+when,coin,source,kind
+2026-10-28T02:40 PT,33.9M,_tools_/state/resources.jsonl row 2026-10-28T02:40:10,HUD
+2026-11-03 about 17:40 PT,29.5M,_records_/2026-11-03/INDEX.md line 3879,HUD after a 12.1M reward claim
+2026-11-09 18:33 PT,56.3M,_records_/2026-11-09/mail-rewards/1838-queue-run.md,HUD
+2026-11-09 about 22:03 PT,79.2M,_records_/2026-11-09/INDEX.md line 2964,HUD
+2026-11-09 and 2026-11-10,44.2M and 80.6M,"coordinator, strategy v1.5; source not checked",as given
+2026-11-11,136.7M,_records_/2026-11-11/INDEX.md line 2837,HUD
+2026-11-12,143.4M then 145.7M,_records_/2026-11-12/INDEX.md lines 61 and 224,HUD
+2026-11-16,27.7M,_records_/2026-11-16/INDEX.md line 3549,HUD
+2026-11-21 about 06:11 PT,107.6M,_records_/2026-11-21/INDEX.md line 20,HUD
+2026-11-21 about 18:04 PT,90.3M,_records_/2026-11-21/INDEX.md line 659,HUD
+2026-11-22 about 11:23 PT (the scout cites 13:09 PT for a read of the same value),109.2M,_records_/2026-11-22/INDEX.md line 363,"HUD, unchanged at that unit"
+2026-11-23T04:03Z,35.3M,"coordinator, strategy v1.5, observation run 20261123T040311Z-e26691",HUD
+2026-11-23T07:48Z,9.6M,_tools_/state/resources.jsonl row 2026-11-22T23:49:06,HUD

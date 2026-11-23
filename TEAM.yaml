@@ -4,9 +4,9 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.6.0
+version: 0.7.0
 title: Last War continuous-play team
-updated_at: '2026-11-23T07:25:00Z'
+updated_at: '2026-11-23T08:20:00Z'
 state: active
 runtime: dsh
 project_path: .
@@ -111,7 +111,7 @@ coordination:
   stopping_policy_ref: _conventions_/local-conventions/continuous-play-team.md
 capacity:
   normal_max_sessions: 8
-  size_exception: 'integrator seat added 2026-11-23, giving 9 roster rows (the coordinator plus 8 seats): one disjoint role (landing on a protected main), no write conflicts with any other seat, reviewed daily by the coordinator'
+  size_exception: 'integrator seat added 2026-11-23 (one disjoint role: landing on a protected main) and strategist seat added 2026-11-23, giving 10 roster rows (the coordinator plus 9 seats); the strategist holds one distinct, previously orphaned duty (the growth strategy of record); neither seat has a write conflict with any other seat; both are reviewed weekly by the coordinator'
 self_improvement:
   responsible_seats:
     - coordinator
@@ -351,3 +351,28 @@ seats:
       - _tools_/
     resource_identity_ref: null
     handover_ref: _seats_/integrator/handover.md
+  - key: strategist
+    principal: zhenc
+    session_id: session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4
+    session_started: '2026-11-23T10:33:00Z'
+    title: '[Last War] Strategist'
+    assignment: assigned
+    roles:
+      - strategist
+    responsibilities:
+      - own the growth strategy of record - ranked levers with evidence tags, the hypothesis register, the resource policy, the 7-day and weekly plans
+      - write the decision records above one builder-day or 5 percent of a stock and draft the weekly owner digest
+      - red-team the plan: challenge every number before the team acts on it
+    seat_ref: _seats_/strategist/INDEX.md
+    task_ref: null
+    depends_on: null
+    write_scopes:
+      - _records_/*/strategy/
+    excluded_write_scopes:
+      - _queue_/
+      - _activities_/
+      - _knowledge_/
+      - _conventions_/
+      - _tools_/
+    resource_identity_ref: null
+    handover_ref: _seats_/strategist/handover.md

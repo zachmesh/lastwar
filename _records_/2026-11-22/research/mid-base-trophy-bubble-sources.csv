@@ -1,0 +1,14 @@
+id,kind,item,url_or_path,accessed,finding
+S1,source,Game8 Arena guide (Japanese wiki; page updated 2025-11-21; may predate current modes),https://game8.jp/lastwar-survival/598115,2026-11-23,Arena is PvP; daily rewards scale with 1/3/5 challenges; ranking and alliance rewards follow final ranking; unlock needs HQ 6 and stage 39
+S2,source,Higuma game guide on the Arena (Japanese),https://www.higuma-game.online/lastwar-arena/,2026-11-23,Daily routine = challenge count plus liking podium players for diamonds; likes are separate from battles
+S3,source,Last War Handbook arena master guide (English; 2026),https://lastwarhandbook.com/guides/arena-system-master-guide,2026-11-23,30 diamonds per like for top three; likes use no battle attempt; non-qualifiers may see leaderboard and buttons but check they are active
+S4,source,Last War Guide daily tasks (English),https://lastwarguide.net/en/tips/daily-tasks,2026-11-23,30 diamonds x3 via the Like button in Storm Arena and 3v3 Match (wording says player ranked number 1)
+S5,source,Lastwarblog honor points table (Japanese),https://lastwarblog.com/eiyop/,2026-11-23,Honor points come from Arena daily milestones (1/3/5 challenges) and ranking; confirms milestones need battles
+S6,source,Game8 Hall of Honor guide (Japanese wiki; updated 2025-11-21),https://game8.jp/lastwar-survival/612888,2026-11-23,Hero-stat building; unlock needs UR hero at rank 5 and matching faction building Lv.20; no claim surface
+S7,excluded,Last Asylum Plague Hall of Honor page,https://lastasylumplague.com/buildings/hall-of-honor/,2026-11-23,Different game (Sanctuary and Antitoxin); not used
+S8,note,Independence: S1-S6 are separate sites; shared authorship or data not checked,none,2026-11-23,Treat the like claim as supported by documents only until a local read confirms it
+R1,repo,Scout run resolving NEW-tag building as Arena Lv.1; radial menu VS + cup + info; NEW tag persisted,_records_/2026-11-21/perception-scout/0756-queue-run.md,2026-11-23,verified local observation 2026-11-21
+R2,repo,Read-only ARENA screen walk via Event Reminder; 3v3 Brawl tab red dot; podium like counts; footer top-200 Total Hero Power; own rank not shown,_records_/2026-11-21/perception-scout/observation.md line 579,2026-11-23,verified local observation 2026-11-21; Like button state not recorded
+R3,repo,"Mid-base trophy bubble alternating with NEW at about (568,217); never tapped",_records_/2026-11-22/alliance-duel/2037-queue-run.md,2026-11-23,verified observation of the bubble; identity open
+R4,repo,Owner ruling on opening the bubble screen and claiming only,_records_/retro/owner-decisions-log/od-20261123-01.md,2026-11-23,decision open when written; ruling taken from the assignment
+R5,count,Files under _activities_ _knowledge_ _records_ containing the term,grep -rIl,2026-11-23,Arena 48; Storm Arena 9; Arena Lv 9; trophy 174; Honor 49; Hall of Honor 0

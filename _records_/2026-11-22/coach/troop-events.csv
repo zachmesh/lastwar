@@ -1,0 +1,17 @@
+date_pt,time_pt,event,barracks_or_source,tier,units,power_delta,arithmetic_check,source
+2026-10-26,14:03,heal,hospital,T10 (by unit power),200,329400,"200 x 1,647 exact",_records_/2026-10-26/troop-training/1403-segment-1-run.md:41-43
+2026-10-31,03:04,collect,Lv.30,T10,793,1306071,"793 x 1,647 exact",_records_/2026-10-31/troop-training/0304-queue-run.md:31-35
+2026-10-31,03:04,collect,Lv.24,T8,666,776510,"666 x 1,063 = 707,958; gap 68,552 open",_records_/2026-10-31/troop-training/0304-queue-run.md:42-48
+2026-10-31,03:04,queue,Lv.30,T10,793,,"1d 17:14:37, due 2026-11-01 about 20:19",_records_/2026-10-31/troop-training/0304-queue-run.md:36-40
+2026-10-31,07:04,capacity,Drill Ground,all,39460,,panel Unit Count 39460/39460; finished batches cannot be collected until space is freed,_records_/2026-10-31/troop-training/0704-queue-run.md:42-48
+2026-11-07,17:08,queue,Lv.30,T10,793,,"1d 17:14:37, due 2026-11-09 about 10:22",_records_/2026-11-07/troop-training/1655-queue-run.md:28-35
+2026-11-07,17:08,queue,Lv.27,T9,726,,"1d 10:19:35, due 2026-11-09 about 03:28",_records_/2026-11-07/troop-training/1655-queue-run.md:19-27
+2026-11-09,13:30,blocked,Lv.27,T9,,,requeue blocked by Drill Ground Full,_records_/2026-11-09/troop-training/1330-queue-run.md:40-44
+2026-11-10,03:37,collect (inferred),Lv.30,T10,793,1306071,"793 x 1,647 exact; no tap recorded, batch due 11-09 10:22 so 17 hours late",_records_/2026-11-10/troop-training/0337-queue-run.md:53-57
+2026-11-10,12:29,collect,Lv.24,T8,666,707958,"666 x 1,063 exact",_records_/2026-11-10/troop-training/1229-queue-run.md:18-23
+2026-11-10,21:46,collect,Lv.27,T9,313,423176,"313 x 1,352 exact",_records_/2026-11-10/troop-training/2146-queue-run.md:40-47
+2026-11-21,00:49,unattributed step,unknown,T10 by arithmetic,143,235521,"143 x 1,647 exact; no collection named in the record",_records_/2026-11-21/resource-collection/0049-queue-run.md:26
+2026-11-22,01:34,queue,Lv.27,T9,726,,"1d 10:19:35, due 2026-11-23 about 11:53",_records_/2026-11-22/troop-training/0134-queue-run.md:18-20
+2026-11-22,09:58,queue,Lv.30,T10,793,,"1d 17:14:37, due 2026-11-24 about 03:13",_records_/2026-11-22/troop-training/0958-queue-run.md:43-57
+2026-11-22,10:05,collect,Lv.24,T8,143,152009,"143 x 1,063 exact",_records_/2026-11-22/arms-race/1005-queue-run.md:53-56
+2026-11-22,20:17,blocked,Lv.24,T8,,,requeue blocked by Drill Ground Full; 0 queued,_records_/2026-11-22/troop-training/2017-queue-run.md:20-21

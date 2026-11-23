@@ -1,16 +1,16 @@
 ---
 title: Building Queues
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T06:47:36Z
+modified: 2026-11-23T07:40:44Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Checking build queues and upgrade state, one activity folder for building knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: ticker-0736 scout-discovery execution record 2026-11-09 0744 queue run (done, building queue read live - Lv.29 Aircraft Center 2d 18:40:11 left, slots 2-4 idle, hammer entry (44,195), 2.5-day clock gap flagged; record commit 36992d92e on records/2026-11-09)
-  - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest measured read-only - Lv.25 to 26, Iron 170.0M, Food 56.9M, Original Time 15d 08:05:18, Upgrade button 7d 07:16:49, Finish Now 18,188 diamonds, owner-decision Issue #517; record commit ec55aa585 on records/2026-11-09)
+  - source: "ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest measured read-only - Lv.25 to 26, Iron 170.0M, Food 56.9M, Original Time 15d 08:05:18, Upgrade button 7d 07:16:49, Finish Now 18,188 diamonds, owner-decision Issue #517; record commit ec55aa585 on records/2026-11-09)"
   - source: ticker-1934 building-queues execution record 2026-11-09 2020 queue run (done, Aircraft Center 2d 06:07:55 left, slots 2-4 idle, hammer entry (44,195); record commit 69d8e38ec on records/2026-11-09)
   - source: ticker-0104 building-queues execution record 2026-11-10 0112 queue run (done, Aircraft Center 2d 01:14:21 left, slots 2-4 idle, banner quest now Build Oil Well; record commit e5272617a on records/2026-11-10)
   - source: ticker-0904 building-queues execution record 2026-11-10 0914 queue run (done, Aircraft Center 1d 17:13:16 left, slots 2-4 idle, clock coherent with the 0112 read, Total Power up about 1.31M; record commit 31892dde on records/2026-11-10)

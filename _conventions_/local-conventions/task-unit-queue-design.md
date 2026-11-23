@@ -1,18 +1,18 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-22T23:43:00Z
-version: 0.37.0
+modified: 2026-11-23T08:05:51Z
+version: 0.38.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
   - source: owner request 2026-10-28 to design a task unit pool with short bounded executions
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
-  - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
-  - source: PR #614 merged 2026-11-11 (Refs #606) - zero-sweep slots moved from [90, 30] to [120, 60]; section 12 synced to that roster by this change
-  - source: organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)
-  - source: Issue #689 (tooling) - outcome_unknown control lock after a session drop, implemented 2026-11-12 as the pool-level control-lock blocker and rule R9
+  - source: "PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)"
+  - source: "PR #614 merged 2026-11-11 (Refs #606) - zero-sweep slots moved from [90, 30] to [120, 60]; section 12 synced to that roster by this change"
+  - source: "organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)"
+  - source: "Issue #689 (tooling) - outcome_unknown control lock after a session drop, implemented 2026-11-12 as the pool-level control-lock blocker and rule R9"
 ---
 
 # Task unit queue design

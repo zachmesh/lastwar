@@ -1,0 +1,13 @@
+---
+title: How to enter part 4
+created: 2026-11-23T07:16:21Z
+modified: 2026-11-23T07:16:21Z
+version: 0.1.0
+sequence: 6
+description: Working entry route, 2026-11-09 (1748 zero-sweep read, 1740) - in the current icon set the blue
+---
+- Working entry route, 2026-11-09 (1748 zero-sweep read, 17:40): in the current icon set the blue truck-front icon at norm y about 573 opens Intercity Trade directly on the first tap; the jeep icon below it is the Secret Command Post, not trade. This resolves the entry block the 0541 unit hit in the same day's earlier column set (badgeless train-front icon only panned the map, WORLD-corner route opened only the World map). Find the trade icon by glyph and badge, not by a fixed point - the column set rotates; re-ground fresh in every unit.
+- Working entry route, 2026-11-09 (2250 trucks unit, about 22:31): the trade icon - blue circle, white truck glyph, red badge 4 - grounded fresh at norm (55,575) in the base left column, opened Intercity Trade on the Your Truck tab on the first tap. Third badged-icon entry datapoint in two days (1211 at 55,589, 1846 at 54,568); the point drifts with the column set, so re-ground fresh in every unit.
+- Working entry route, 2026-11-11 (0701 trucks unit, about 06:53): the trade slot is absent from the base left column in the current set (chat / white pickup / radar dish / magnifier), and tapping the top icon at norm (51,576) opened Intercity Trade directly on Others' Trucks - this is the route flip the metadata describes, verified live this unit. The white pickup at (51,641) is the Secret Command Post, not trade; the dish at (51,702) is radar. When the column carries no trade slot, do not hunt the column for a trade icon - tap the top icon first and verify the screen that opens.
+- Entry blocked, 2026-11-22 (0252 trucks unit, about 02:52, 763x1050 window): the left icon column in this window reads top to bottom - chat bubble with red badge 3, white pickup with red dot (Secret Command Post, verified twice this pass at (39,657)), satellite dish with red badge 8 (radar), hammer (build palette), and a yellow/red icon at the bottom. NO blue truck-front trade icon is in this column set. Tapping the bottom yellow/red icon at (40,819) panned the base map instead of opening trade. The 0701 top-icon route does NOT transfer to this window: the 2026-11-11 point (51,576) lands on the chat bubble here, so do not re-tap it. The station-tap [491,195] and the WORLD-corner route (913,940) stay disqualified (see the 0344 and 0541 corrections). Next trucks unit arrives with a changed method: a fresh visual grounding of the trade station building from the current base layout, or a foreground tap variant on the column - not a repeat of (40,819), (51,576), [491,195] or (913,940).
+

@@ -1,0 +1,12 @@
+---
+title: Open questions part 3
+created: 2026-11-23T07:18:16Z
+modified: 2026-11-23T07:18:16Z
+version: 0.1.0
+sequence: 11
+description: The one-tap-two-claims mechanism of the 1444 unit - unverified, not a rule to rely on until
+---
+- The one-tap-two-claims mechanism of the 1444 unit -
+  unverified, not a rule to rely on until a later unit
+  watches the same behaviour. (2026-11-04 0914 update: second observation - one tap on the Gather Food Claim button removed all three completed gather rows at once, activity 180 to 210, tab badge 3 to 1. Still inference from two observations, not a verified mechanism; the claim-each-task-individually rule stands.) (2026-11-08 1628 update: third observation - one tap on the Daily Login Claim button removed all four completed rows at once, activity 0 to 70, tab badge 4 to 1. Still inference from three observations, not a verified mechanism; the claim-each-task-individually rule stands.) (2026-11-08 1753 correction: the 1628 "removed" reading is superseded - the full-list re-check read the claimed rows sunk to the bottom of the list with green checkmarks (Daily Login 1/1, Donate to Alliance Tech 5/5 seen checked); the 1628 unit did not scroll to the bottom, so it could not see them there. The one-tap claim itself stands - activity rose 0 to 70 on the single tap - but claimed rows sink, they are not removed. The mechanism stays unverified.) (2026-11-09 1519 update: VERIFIED - the fourth observation, with before/after reads: one tap on the Daily Login Claim button claimed all four completed rows at once (badge 9 to 3, activity star 0 to 140, bar gold through 120) and the 40/80/120 chests by cascade. The claim-each-task-individually rule is superseded by the How-it-is-done update above; Issues #171 and #208 commented with this evidence by this run, closure belongs to the daily retro.) (2026-11-11 1638 update: sixth consistent observation - one tap on the Help Allies Claim button claimed both completed rows, activity 80 to 100; the mechanism stays unverified in this unit alone - possibly one tap claims every completed row, or the list refreshed on claim - and the 1519 verification stands.) (2026-11-22 1504 update: seventh consistent observation - one tap on the Daily Login Claim button claimed all six completed rows at once, activity 0 to 90, tab badge 6 to gone; the 1519 verification stands, this unit adds a consistent observation, not a new verification.)
+

@@ -1,16 +1,16 @@
 ---
 title: Knowledge Organization
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-04T04:47:00Z
+modified: 2026-11-23T07:40:44Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The knowledge organiser - folding what executions learn back into the activity profiles, resolving contradictions, and keeping the shared structures coherent
 status: active
 grounded_in:
   - source: owner direction of 2026-10-31 - a knowledge organiser alongside the tool developer, on an hourly feedback-fixing cadence
   - source: the learning and knowledge hardening protocol of the perception-driven queue design
   - source: ops execution records standard in the local conventions
-  - source: tool-development 2032 run (daily-reset UTC boundary fix, PR 249) and GitHub Issue #247 - organizer sweep trigger corrected to the 02:00 UTC boundary in this profile
+  - source: "tool-development 2032 run (daily-reset UTC boundary fix, PR 249) and GitHub Issue #247 - organizer sweep trigger corrected to the 02:00 UTC boundary in this profile"
 ---
 
 # Knowledge organization

@@ -1,0 +1,22 @@
+lever,n,action,unit_or_seat,check
+collect finished batches,1,Slot B fixed-state unit collects every finished batch first and logs Total Power before and after each,scout-midday-growth-power-b-2026-11-23-001 at 13:00Z,"a resources.jsonl row with the power each batch added, or the exact toast if blocked"
+collect finished batches,2,T2 and T1 barracks reads record uncollected finished batches per barracks and the Drill Ground fill,"growth units T2 and T1, 08:00Z",the records name finished batches per barracks and capacity used over cap
+collect finished batches,3,Slot A repeats the collect-then-read at 02:00Z on 11-24; the coach compares the two daily reads,scout-midday-growth-power-a-2026-11-24-001,"two reads a day for three days, each after collection"
+hero block,1,"S1 reads shard stock and exclusive weapon level for Squad 1, staged on landing right after the barracks reads","scout unit S1, pending","shard stock, weapon level and 5-star status per hero in the record"
+hero block,2,"H1 maps the hero detail sections; H2 and H3 read level, EXP, skills, weapon, gear and tier for the five Squad 1 heroes","growth units H1, H2, H3, 09:05Z onward",hero rows in the ledger filled with cost and power per step
+hero block,3,"Rank weapons first, then gear levels, skills, decorations to Lv.3 and the honor wall, by power per coin and per slot-day, only after S1 and H2 land",planner with the coordinator,ranked rows each carrying an evidence source
+drone,1,"D1 reads drone level and the next-level preview, staged on landing right after S1","scout unit D1, pending","level, preview power gain and Battle Data or parts cost in the record"
+drone,2,Fill the drone row with power per cost and give it a rank,planner,ledger row status changes from unread
+drone,3,"Read the Duel screen for the real theme-day order, since sources disagree on which day is drone",existing duel-score reads,the record names the day order shown in game
+coin campaign,1,Every unit that reads the HUD snaps coin so the coach can derive net coin per day between spend bursts,all growth and fill units,two or more coin points a day in resources.jsonl
+coin campaign,2,"Keep the coin-source units on cadence (own trucks, radar claims, VIP, help, donations) and record the coin each one gains",existing units,a per-unit coin delta in the done records for 24 hours
+coin campaign,3,"Put the coin history to the owner with the question of how to split coin: spend bursts of about 118M and about 81M, income of about 16M to 26M a day between them",coordinator and Steer A,an owner decision recorded; the hold stays until then
+Drill Ground levels,1,"T2 and F1 find each Drill Ground, read level, capacity used and the next level's cost, time and gain, and settle what the Training Base is",growth units T2 and F1,guide rows replaced by on-panel costs
+Drill Ground levels,2,Rank the lowest Drill Ground by power per million coin from the panel cost,planner,a ranked row; the guide says 14K to 30K per million at L21 to L24 and 5K to 9K at L25 to L27
+Drill Ground levels,3,"When coin is above the floor plus cost and the owner's split allows, the 2026-11-24 09:10Z fill series starts the lowest Drill Ground first",fill units 2026-11-24,the builder queue shows a Drill Ground upgrade running
+research in idle labs,1,"The 11:35Z to 12:20Z fill series presses Complete on Unlock Oil Well at about 11:43Z, then starts the next lab item by the v1.4 order",burst fill units,"the lab shows a new item, or a recorded miss"
+research in idle labs,2,"R1 reads both labs, the Special Forces percent and the node costs","growth unit R1, 09:05Z onward",cost and time per candidate node in the record
+research in idle labs,3,Press Complete when Defense Training VIII finishes and log Total Power before and after,fill units,a power delta recorded against the Complete press
+Oil Well and small buildings,1,"After Unlock Oil Well completes, the burst fills read the build list and the Oil Well level 1 preview",burst fill units,level 1 food and iron cost and power gain in the record
+Oil Well and small buildings,2,Start Oil Well levels 1 to 9 on an idle builder after the Drill Ground and barracks starts,fill units 2026-11-24 once builders free about 09:20Z,a builder shows an Oil Well level
+Oil Well and small buildings,3,Add a twice-daily oil collection unit once the well exists (12-hour storage cap),"planner, next pass",a unit id and two daily windows in the inbox

@@ -1,0 +1,15 @@
+part,file,rows,columns
+all,every file,-,"snap_id;read_utc;unit_id;screen;note - prefix of every row; digits only where the panel shows an exact figure, abbreviated figures (1.1G) copied as shown and flagged in note; empty cell means not shown, never zero"
+a_power,snap-a-power.csv,about 25,"category;label;value;parent_label;scroll_state - one row per labelled figure, total first, then Hero, Drone, Building, then every further category the panel shows"
+b_buildings,snap-b-buildings.csv,about 16,"kind (builder or building);name_or_slot;level;target_level;state;time_left;finish_utc;power_if_shown;note - four builder rows, then HQ, Tech Center, Builders Hut and each building read"
+c_research,snap-c-research.csv,about 14,"kind (slot or tree or node);tree;name;level;percent;state;time_left;finish_utc;note - two slot rows, one row per TECH hub tree"
+d_troops,snap-d-troops.csv,about 14,"kind (barracks or tier or drill);name;building_level;tier;count;cap;state;time_left;batch_size;cost_food;cost_iron;unit_power;unit_hp;unit_attack;unit_defense;load;note - Drill Ground row carries Unit Count and used over cap"
+e_heroes,snap-e-heroes.csv,35 to 40,"kind (hero or squad);hero;class;rarity;level;level_cap;stars;skill_levels;weapon_level;gear;tier_or_specialization;power;exp_stock;exp_cost;squad;note - list pass fills level, class, rarity, power, stars if on the card; detail pass fills the rest for the Squad 1 five"
+f_previews,snap-f-previews.csv,4 to 6,"target;from_level;to_level;power_from;power_to;iron;food;coin;other_cost;prereq_status;original_time;effective_time;extra_gain;reward;finish_now_diamonds - the last column is read only, never a spend"
+c_oil_gate,snap-c2-oil-gate.csv,about 8,"item;level_or_percent;state;food;iron;coin;valor;other_cost;time;power_gain;prereq;note - Special Forces row, node rows, banner row"
+g_drone_wall,snap-g1-drone-wall.csv,about 12,system (drone or wall);item;level;stock;next_cost;power_if_shown;note
+g_decor,snap-g2-decor.csv,about 15,item;rarity;level;owned_over_total;next_cost;bonus_text;power_if_shown;note
+h_stocks,snap-h1-stocks.csv,about 20,kind (hero_shard or universal_shard or medal or ore or weapon_shard);name;count;tab;note
+h_weapons,snap-h2-weapons.csv,about 6,hero;stars;weapon_state (none or locked or unlocked);weapon_level;named_shards;needed_next;universal_shards;note
+i_coin,snap-i1-coin.csv,about 8,sink;from_level;to_level;coin;other_cost;power_gain;time;note - coin per power is derived at ranking time
+j_promote,snap-j1-promote.csv,about 6,control;state;from_tier;to_tier;cap;cost_food;cost_iron;cost_coin;time_per_troop;power_per_troop;requirement;toast_text;note
