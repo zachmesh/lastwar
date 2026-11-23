@@ -263,5 +263,115 @@ class Running(SplitCase):
         self.assertIn("cannot run", r.stderr)
 
 
+class KeepEntry(SplitCase):
+    def make(self, count=6, words=200):
+        text = FRONT + "\n# Sample register\n\nIntro line.\n" + sections(count, words)
+        return self.doc("reg/register.md", text), text
+
+    def run_keep(self, path, *extra):
+        return self.run_tool(path, "--keep-entry", "register-log", "--entry-example", "od-20261123-04", *extra)
+
+    def test_dry_run_writes_nothing_and_reports_the_entry_page(self):
+        path, text = self.make()
+        before = sorted(p.name for p in self.tmp.rglob("*"))
+        r = self.run_keep(path, "--verify")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("entry page register.md", r.stdout)
+        self.assertIn("verify: PASS", r.stdout)
+        self.assertIn("keep working", r.stdout)
+        self.assertEqual(sorted(p.name for p in self.tmp.rglob("*")), before)
+        self.assertEqual(path.read_text(), text)
+
+    def test_apply_keeps_the_path_as_a_small_entry_page_and_moves_the_articles(self):
+        path, text = self.make()
+        original = self.doc("copy.md", text)
+        r = self.run_keep(path, "--apply")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertTrue(path.is_file())
+        self.assertFalse((self.tmp / "reg/register").exists())          # the type never exists in both forms
+        log = self.tmp / "reg/register-log"
+        self.assertTrue((log / "INDEX.md").is_file())
+        entry = path.read_text()
+        self.assertLessEqual(self.counter.file_words(entry), 300)
+        self.assertIn("version: 1.3.0\n", entry)                        # the entry page's own version bumps
+        self.assertIn("title: Sample register\n", entry)
+        self.assertNotIn("Section 2", entry.split("## Articles")[0])      # generated text, not original text
+        self.assertEqual([p.name for p in (self.tmp / "reg").iterdir() if p.name.startswith(".")], [])   # no staging left
+        self.assertEqual(self.run_tool("--check", log, original).returncode, 0)
+
+    def test_the_entry_page_links_every_article_directly_or_through_catalogs(self):
+        path, _ = self.make()
+        self.run_keep(path, "--apply")
+        log = self.tmp / "reg/register-log"
+        entry = path.read_text()
+        pages = {p.name: p.read_text() for p in log.glob("*.md")}
+        reachable = set(re.findall(r"\]\(register-log/([^)]+\.md)\)", entry))
+        for name in list(reachable):
+            if name.startswith("catalog"):
+                reachable |= set(re.findall(r"\]\(([^)]+\.md)\)", self.sd.split_frontmatter(pages[name])[1]))
+        for name in pages:
+            if re.match(r"^\d", name):
+                self.assertIn(name, reachable)
+
+    def test_big_register_uses_catalogs_that_link_back_to_the_entry_page(self):
+        path, _ = self.make(count=80, words=300)
+        self.run_keep(path, "--apply")
+        log = self.tmp / "reg/register-log"
+        catalogs = sorted(log.glob("catalog-*.md"))
+        self.assertTrue(catalogs)
+        self.assertIn("](../register.md)", catalogs[0].read_text())
+        self.assertLessEqual(self.counter.file_words(path.read_text()), 300)
+        for c in catalogs:
+            self.assertLessEqual(self.counter.file_words(c.read_text()), 450)
+
+    def test_there_is_headroom_for_entries_added_later_as_one_article_and_one_line(self):
+        path, text = self.make()
+        original = self.doc("copy.md", text)
+        self.run_keep(path, "--apply")
+        log = self.tmp / "reg/register-log"
+        before = self.counter.file_words(path.read_text())
+        self.assertLessEqual(before, 300 - self.sd.HEADROOM + 8)
+        for n in range(4):
+            (log / f"od-20261123-0{n}.md").write_text(
+                f"---\ntitle: OD-20261123-0{n}\ncreated: 2026-11-23T00:00:00Z\nmodified: 2026-11-23T00:00:00Z\n"
+                f"version: 1.0.0\ndescription: New entry\n---\n\n# OD-20261123-0{n}\n\nA new entry.\n")
+            with open(path, "a") as f:
+                f.write(f"- [OD-20261123-0{n} - new entry](register-log/od-20261123-0{n}.md) - A new entry\n")
+            self.assertRegex(f"od-20261123-0{n}", NAME)
+        self.assertLessEqual(self.counter.file_words(path.read_text()), 300)
+        self.assertEqual(self.run_tool("--check", log, original).returncode, 0)   # later entries are not original text
+
+    def test_check_detects_a_tampered_article_in_this_mode(self):
+        path, text = self.make()
+        original = self.doc("copy.md", text)
+        self.run_keep(path, "--apply")
+        victim = sorted((self.tmp / "reg/register-log").glob("0*.md"))[1]
+        victim.write_text(victim.read_text().rstrip("\n") + " EDITED\n")
+        r = self.run_tool("--check", self.tmp / "reg/register-log", original)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("DIFFER", r.stdout)
+
+    def test_refuses_bad_names_index_documents_existing_folders_and_several_files(self):
+        path, _ = self.make()
+        for bad in ("Log", "log", "a-b-c-d-e", "x/y", "register"):
+            r = self.run_tool(path, "--keep-entry", bad, "--apply")
+            self.assertEqual(r.returncode, 1, bad)
+            self.assertIn("refused", r.stderr)
+        self.assertTrue(path.read_text().startswith("---"))
+        (self.tmp / "reg/register-log").mkdir()
+        (self.tmp / "reg/register-log/keep.txt").write_text("x")
+        r = self.run_keep(path, "--apply")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("already exists", r.stderr)
+        self.assertEqual([p.name for p in (self.tmp / "reg/register-log").iterdir()], ["keep.txt"])
+        idx = self.doc("act/INDEX.md", FRONT + sections(6, 200))
+        r = self.run_tool(idx, "--keep-entry", "act-log", "--apply")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("not INDEX.md", r.stderr)
+        other = self.doc("other.md", FRONT + sections(3, 100))
+        r = self.run_tool(path, other, "--keep-entry", "register-log")
+        self.assertNotEqual(r.returncode, 0)
+
+
 if __name__ == "__main__":
     unittest.main()
