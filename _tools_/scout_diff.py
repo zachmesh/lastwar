@@ -1693,35 +1693,7 @@ def run(args):
     # against the explicitly given pool root.
     applied, apply_failures = [], []
     if args.apply:
-        queue_py = os.path.join(TOOLS_DIR, "queue.py")
-        for entry in plan:
-            if entry["action"] != "enqueue":
-                continue
-            cmd = [sys.executable, queue_py, "--root", args.root,
-                   "enqueue", "--regular", entry["regular"],
-                   "--activity", entry["activity"] or "",
-                   "--priority", str(entry["priority"]),
-                   "--est-minutes", str(entry["est_minutes"]),
-                   "--window", entry["window"]]
-            if entry["segment"] != "":
-                cmd += ["--segment", str(entry["segment"])]
-            if entry["expires_at"]:
-                cmd += ["--expires-at", entry["expires_at"]]
-            if entry["not_before"]:
-                cmd += ["--not-before", entry["not_before"]]
-            if entry["chain_id"]:
-                cmd += ["--chain-id", entry["chain_id"]]
-            out = subprocess.run(cmd, capture_output=True,
-                                 text=True)
-            text = (out.stdout or "").strip()
-            if out.returncode == 0 and text.startswith("queued"):
-                applied.append(text.split(" ", 1)[1])
-            elif "already queued" in text:
-                entry["action"] = "already-queued"
-            else:
-                apply_failures.append(
-                    {"entry": entry["regular"],
-                     "output": text or out.stderr.strip()})
+        applied, apply_failures = apply_enqueue_plan(plan, args.root)
 
     # Promotion proposals - read-only aggregation over the pool
     # units already loaded above; without --root the pool is
@@ -2405,6 +2377,40 @@ def run(args):
             print(f"apply failed for {failure['entry']} - "
                   f"{failure['output']}")
     return 1 if apply_failures else 0
+
+
+def apply_enqueue_plan(plan, root, queue_py=None):
+    """Feed the plan's enqueue entries to queue.py enqueue, one call per unit (so every unit passes the same validation as a manual enqueue,
+    including the forecast switch coordination.queue.require_forecast in TEAM.yaml: a refusal comes back in the failures with queue.py's own
+    text). Returns (applied unit ids, failures); an entry that was already queued is marked already-queued."""
+    queue_py = queue_py or os.path.join(TOOLS_DIR, "queue.py")
+    applied, apply_failures = [], []
+    for entry in plan:
+        if entry["action"] != "enqueue":
+            continue
+        cmd = [sys.executable, queue_py, "--root", root,
+               "enqueue", "--regular", entry["regular"],
+               "--activity", entry["activity"] or "",
+               "--priority", str(entry["priority"]),
+               "--est-minutes", str(entry["est_minutes"]),
+               "--window", entry["window"]]
+        if entry["segment"] != "":
+            cmd += ["--segment", str(entry["segment"])]
+        if entry["expires_at"]:
+            cmd += ["--expires-at", entry["expires_at"]]
+        if entry["not_before"]:
+            cmd += ["--not-before", entry["not_before"]]
+        if entry["chain_id"]:
+            cmd += ["--chain-id", entry["chain_id"]]
+        out = subprocess.run(cmd, capture_output=True, text=True)
+        text = (out.stdout or "").strip()
+        if out.returncode == 0 and text.startswith("queued"):
+            applied.append(text.split(" ", 1)[1])
+        elif "already queued" in text:
+            entry["action"] = "already-queued"
+        else:
+            apply_failures.append({"entry": entry["regular"], "output": text or out.stderr.strip()})
+    return applied, apply_failures
 
 
 def main(argv=None):

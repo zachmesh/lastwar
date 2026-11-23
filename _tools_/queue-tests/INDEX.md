@@ -1,29 +1,29 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T10:05:29Z
-version: 1.4.0
+modified: 2026-11-23T13:40:23Z
+version: 1.5.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
 
 # Queue tests
 
-Tests for the `serves` tag of a queue unit (planner finding, then the Steward's enforcement). `queue.py` used to write only the
-keys in `FM_ORDER`, so a `serves:` line added to a unit was dropped at the next claim.
+Tests for the `serves` tag of a queue unit and the forecast checks built on it. Each pool is a throwaway repository under /tmp with the
+tool's temp-dir and currency guards bypassed through `LASTWAR_QUEUE_ALLOW_*`, so nothing touches the live pool.
 
-They cover: `enqueue --serves` writes the key and a `Serves:` body line, folded to one line, empty refused; the key survives
-claim, release and complete; `enqueue` REFUSES a unit with no serves unless the roster gives one (a roster regular inherits its
-`regulars.json` serves, default `upkeep`; a custom roster file decides; an unreadable roster lets nothing through);
-`regulars.json` gives every entry `serves`, and `plan`, `sync` and `sweep` copy it into the units they mint, so a full sync
-mints only tagged units; `validate` and `validate --ref` report a live inbox unit without it as an ERROR, a claimed
-upgrade-type one as a warning, done units not at all; `sync` only warns, so an untagged unit never stops the tick. Upgrade-type:
-activity building-queues, research-queue or troop-training, or an activity, regular or unit id containing upgrade or growth-fill.
+`test_serves.py`: `enqueue --serves` writes the key and a `Serves:` body line, folded to one line, empty refused; the key survives claim,
+release and complete; `enqueue` refuses a unit with no serves unless its roster regular supplies one (default `upkeep`); `plan`, `sync` and
+`sweep` copy the roster's serves; `validate` reports a live inbox unit without one as an error, a claimed upgrade-type one as a warning;
+`sync` only warns.
 
-Each pool is a throwaway repository under /tmp with the tool's temp-dir and currency guards bypassed through the
-`LASTWAR_QUEUE_ALLOW_*` variables, so nothing touches the live pool.
+`test_next_expired.py`: `next` never names a unit whose window has closed, and `claim` refuses one by name.
 
-`test_next_expired.py`: `next` never names a unit whose window has closed (pick_key sorts by expiry first, so an expired unit used to lead the list), and `claim` refuses one by name.
+`test_forecast.py`: `validate` warns (never errors) for a live inbox unit whose serves names a plan item with no row in the newest
+`_records_/<date>/strategy/forecast-ledger.csv`, or is neither a ledger plan item nor an exempt word, and for a missing ledger when a unit
+needs it; counts and unit names only. `enqueue --require-forecast` refuses the same.
 
-`test_forecast.py`: `validate` warns (never errors) for a live inbox unit whose serves names a plan item with no row in the newest `_records_/<date>/strategy/forecast-ledger.csv`, or is neither a ledger plan item nor an exempt word, and for a missing ledger when a unit needs it; counts and unit names only. `enqueue --require-forecast` refuses the same; off by default.
+`test_require_forecast.py`: the switch `coordination.queue.require_forecast` in TEAM.yaml (off when absent) makes `enqueue`, the minting
+of `plan`, `sweep` and `sync`, and `scout_diff.py`'s enqueue calls refuse a unit with no ledger row; `--no-require-forecast` overrides and
+the refusal names it.
 
 Run: `python3 -m unittest discover -s _tools_/queue-tests`.

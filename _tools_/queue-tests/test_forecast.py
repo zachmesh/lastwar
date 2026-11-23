@@ -154,7 +154,8 @@ class Enqueue(ForecastCase):
     def test_a_plan_item_without_a_row_and_an_unknown_serves_are_refused_and_nothing_is_queued(self):
         r = self.refused("PL-99")
         self.assertEqual(r.returncode, 1)
-        self.assertIn("--require-forecast: its serves line names a plan item id that has no row in the forecast ledger", r.stdout)
+        self.assertIn("forecast check (--require-forecast): its serves line names a plan item id that has no row in the forecast ledger", r.stdout)
+        self.assertIn("--no-require-forecast", r.stdout)
         r = self.refused("grow the account somehow")
         self.assertEqual(r.returncode, 1)
         self.assertIn("neither a ledger plan item nor an exempt word", r.stdout)
@@ -171,4 +172,5 @@ class Enqueue(ForecastCase):
     def test_the_flag_is_in_the_help(self):
         out = self.queue("enqueue", "--help")
         self.assertIn("--require-forecast", out.stdout)
-        self.assertIn("Strategist", re.sub(r"\s+", " ", out.stdout))
+        self.assertIn("coordination.queue.require_forecast", re.sub(r"\s+", " ", out.stdout))
+        self.assertIn("--no-require-forecast", out.stdout)
