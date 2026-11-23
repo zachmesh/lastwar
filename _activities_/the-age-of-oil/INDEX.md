@@ -1,9 +1,9 @@
 ---
 title: The Age of Oil
 created: 2026-11-09T20:32:17Z
-modified: 2026-11-23T07:26:56Z
+modified: 2026-11-23T09:53:45Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Season II warzone collective-progression event in the Events hub - three warzone-wide counters with per-commander ranking rewards, ends about 2026-11-15 in the late afternoon PT, no recurring agent action
 status: unverified
 grounded_in:
@@ -28,10 +28,11 @@ Season II warzone collective-progression event in the Events hub - three warzone
 - [What is known from 2026-11-09 0829 and 1146](run-20261109-0829-p1.md) - run-20261109-0829 - Entry: Events hub, The Age of Oil tab (leftmost).
 - [What is known from 2026-11-09 0829 and 1146](run-20261109-0829-p2.md) - run-20261109-0829 - Rewards, Research Ranking read in full 2026-11-09 11:42 PT: No.1 - gold badge 25K...
 - [Open questions](open-questions.md) - open-questions - Hero Mobilization gold chest (at the right end of the card-3 progress bar) and...
-- [What the 2026-11-09 1146 scout-discovery unit added -](run-20261109-1146.md) - run-20261109-1146 - Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about 11:36 to 11:46 local, status done.
-- [What the 2026-11-11 1850 scout cross-read added -](run-20261111-1850.md) - run-20261111-1850 - Cross-read only, not an Age of Oil unit execution: the ticker-1843 perception-scout events-group unit...
-- [What the 2026-11-11 1946 scout cross-read added -](run-20261111-1946.md) - run-20261111-1946 - Cross-read only, not an Age of Oil unit execution: the ticker-1919 perception-scout events-group remainder...
+- [What the 2026-11-09 1146 scout-discovery unit added -](../../_run_notes_/the-age-of-oil/run-20261109-1146.md) - run-20261109-1146 - Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about 11:36 to 11:46 local, status done.
+- [What the 2026-11-11 1850 scout cross-read added -](../../_run_notes_/the-age-of-oil/run-20261111-1850.md) - run-20261111-1850 - Cross-read only, not an Age of Oil unit execution: the ticker-1843 perception-scout events-group unit...
+- [What the 2026-11-11 1946 scout cross-read added -](../../_run_notes_/the-age-of-oil/run-20261111-1946.md) - run-20261111-1946 - Cross-read only, not an Age of Oil unit execution: the ticker-1919 perception-scout events-group remainder...
 
 ## Changelog
 
 - 1.4.0, 2026-11-23 - Owner name already replaced on main by the tree-wide pass (commit 0467e3ef), then split verbatim by `split_doc.py` from the body into ? key-named articles and 0 catalog pages, and added `rule-digest.md`. `--check` EQUAL against that file, body sha256 354056a6509d; the unsplit 1.3.0 file is commit 0467e3ef.
+- 1.5.0, 2026-11-23 - Links to run notes that moved to _run_notes_/the-age-of-oil/ now point there.
