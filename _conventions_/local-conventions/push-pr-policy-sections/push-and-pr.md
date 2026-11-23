@@ -1,7 +1,7 @@
 ---
 title: Push and PR policy
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
 sequence: 1
 description: This is version 2.3.0 in draft.

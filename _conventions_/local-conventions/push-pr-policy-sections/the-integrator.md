@@ -1,9 +1,9 @@
 ---
 title: The integrator
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 9
+sequence: 12
 description: The standing PR integrator job (every 15 minutes) owns the merge point of main.
 ---
 ## The integrator

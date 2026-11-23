@@ -1,9 +1,9 @@
 ---
-title: Pull request ownership
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+title: Pull request ownership part 1
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 6
+sequence: 7
 description: Owner instruction, 2026-10-31 at 2300 PDT - every pull request has an owner, and no pull
 ---
 ## Pull request ownership
@@ -46,12 +46,4 @@ integrator reassigns it at first review, by the
 classification above, and states the reassignment in a
 comment on the PR. A PR with no owner on record is not
 mergeable until that reassignment is made.
-
-Owner-gated PRs (a loosened red line, a widened
-authorization, a cron definition change, or a change to
-this policy itself) are owned by the integrator in a
-shepherd role: it escalates the PR to the owner, tracks the
-decision, and records the outcome. Any fix the decision
-calls for is executed afterwards by the job of the change's
-own class, not by the integrator.
 

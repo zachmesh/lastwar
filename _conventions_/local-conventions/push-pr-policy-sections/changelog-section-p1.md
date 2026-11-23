@@ -1,9 +1,9 @@
 ---
 title: Changelog part 1
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 13
+sequence: 16
 description: 2.3.0, 2026-11-01 - records merge cadence, on the owner's decision of 2026-11-01 given in chat.
 ---
 ## Changelog

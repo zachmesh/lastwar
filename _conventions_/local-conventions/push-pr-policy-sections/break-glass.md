@@ -1,9 +1,9 @@
 ---
 title: Break-glass
-created: 2026-11-23T08:37:00Z
-modified: 2026-11-23T08:37:00Z
+created: 2026-11-23T09:02:35Z
+modified: 2026-11-23T09:02:35Z
 version: 0.1.0
-sequence: 10
+sequence: 13
 description: The only direct push to main this policy tolerates is one the owner orders explicitly, in
 ---
 ## Break-glass
