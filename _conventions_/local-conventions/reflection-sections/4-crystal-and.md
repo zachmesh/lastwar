@@ -1,9 +1,9 @@
 ---
 title: 4. Crystal and the zero sweeps, as queued
-created: 2026-11-23T08:36:59Z
-modified: 2026-11-23T08:36:59Z
+created: 2026-11-23T09:01:51Z
+modified: 2026-11-23T09:01:51Z
 version: 0.1.0
-sequence: 6
+sequence: 7
 description: Crystal is modelled as its own activity type in _activities_/crystal-shop/, registered in the activities index, and
 ---
 ## 4. Crystal and the zero sweeps, as queued

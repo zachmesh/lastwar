@@ -1,7 +1,7 @@
 ---
 title: 2. What was wrong, in my own terms
-created: 2026-11-23T08:36:59Z
-modified: 2026-11-23T08:36:59Z
+created: 2026-11-23T09:01:51Z
+modified: 2026-11-23T09:01:51Z
 version: 0.1.0
 sequence: 3
 description: I treated partial as an ending.
