@@ -42,6 +42,15 @@ class SplitCase(unittest.TestCase):
         spec.loader.exec_module(self.sd)
         self.counter = self.sd.Counter(self.sd.load_counter(None))
 
+    def articles(self, folder) -> list[Path]:
+        """The article files of a split folder in reading order (their sequence field), not INDEX.md or catalogs."""
+        found = []
+        for p in Path(folder).glob("*.md"):
+            seq = self.sd.field(self.sd.split_frontmatter(p.read_text())[0], "sequence")
+            if seq and seq.isdigit():
+                found.append((int(seq), p))
+        return [p for _, p in sorted(found)]
+
     def doc(self, name: str, text: str) -> Path:
         path = self.tmp / name
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -72,7 +81,7 @@ class Splitting(SplitCase):
         for name, t in plan.files:
             if name in plan.articles:
                 body = self.sd.split_frontmatter(t)[1]
-                self.assertTrue(body.lstrip().startswith("#") or "continued" in t.split("---")[1] or name.startswith("001"))
+                self.assertTrue(body.lstrip().startswith("#") or name == plan.articles[0])
 
     def test_a_document_within_the_limit_is_one_article(self):
         plan = self.plan(FRONT + "\n# Small\n\n" + para(200))
@@ -117,8 +126,7 @@ class Splitting(SplitCase):
         path = self.doc("crlf.md", text)
         self.assertEqual(self.run_tool(path, "--apply").returncode, 0)
         out = self.tmp / "crlf"
-        joined = b"".join(self.sd.split_frontmatter((out / n).read_bytes().decode())[1].encode()
-                          for n in sorted(os.listdir(out)) if self.sd.ARTICLE_FILE.match(n))
+        joined = b"".join(self.sd.split_frontmatter(p.read_bytes().decode())[1].encode() for p in self.articles(out))
         self.assertEqual(joined, self.sd.split_frontmatter(text)[1].encode())
 
     def test_frontmatter_of_the_index_is_kept_with_version_and_modified_bumped(self):
@@ -145,6 +153,117 @@ class Splitting(SplitCase):
         titles = [self.sd.field(self.sd.split_frontmatter(dict(plan.files)[n])[0], "title") for n in plan.articles]
         for t in titles:
             self.assertNotIn(":", t)
+
+
+class Keys(SplitCase):
+    REGISTER = (FRONT + "\n# Register\n\nIntro.\n\n## Open\n\n"
+                + "".join(f"\n### IMP-20261123-0{i} - entry number {i}\n\n{para(150, f'e{i}x')}" for i in range(1, 5))
+                + "\n## Closed\n\nNone yet.\n")
+    UNITS = (FRONT + "\n# Profile\n\nIntro.\n\n## What this activity is\n\nShort text.\n"
+             + "".join(f"\n## What the 2026-11-0{d} {hh}:{mm} unit added - result {d}\n\nEvidence at {hh}:{mm}:00. {para(300, f'u{d}x')}"
+                       for d, hh, mm in ((7, "18", "24"), (8, "01", "54"), (9, "00", "11"))))
+
+    def names(self, plan):
+        return plan.articles
+
+    def test_entry_ids_and_unit_keys_name_the_articles(self):
+        plan = self.plan(self.REGISTER)
+        self.assert_sound(plan)
+        for key in ("imp-20261123-01", "imp-20261123-04"):
+            self.assertIn(f"{key}.md", plan.articles)
+        plan = self.plan(self.UNITS)
+        for key in ("run-20261107-1824", "run-20261108-0154", "run-20261109-0011"):
+            self.assertIn(f"{key}.md", plan.articles)
+        self.assertEqual(plan.what_the, 0)
+
+    def test_every_section_starts_its_own_article_and_is_titled_by_its_heading(self):
+        plan = self.plan(self.REGISTER)
+        titles = {n: self.sd.field(self.sd.split_frontmatter(t)[0], "title") for n, t in plan.files if n in plan.articles}
+        for i in range(1, 5):
+            self.assertIn(f"IMP-20261123-0{i} - entry number {i}", titles[f"imp-20261123-0{i}.md"])
+        body = self.sd.split_frontmatter(dict(plan.files)["imp-20261123-02.md"])[1]
+        self.assertTrue(body.lstrip().startswith("### IMP-20261123-02"))
+        self.assertNotIn("IMP-20261123-03", body)
+
+    def test_titles_read_hhmm_never_colon_split_times(self):
+        plan = self.plan(self.UNITS)
+        titles = [self.sd.field(self.sd.split_frontmatter(t)[0], "title") for n, t in plan.files if n in plan.articles]
+        self.assertTrue(any("2026-11-09 0011 unit added" in t for t in titles))
+        for t in titles:
+            self.assertNotRegex(t, r"\b\d\d \d\d \d\d\b")
+            self.assertNotIn(":", t)
+        self.assertEqual(self.sd.title_text("at 00:11:00 and 18:24"), "at 0011 and 1824")
+
+    def test_findability_is_total_and_each_key_sits_beside_its_article_link(self):
+        for text in (self.REGISTER, self.UNITS, FRONT + "\n" + sections(80, 120)):
+            plan = self.plan(text)
+            found, total, missing = self.sd.findability(plan)
+            self.assertEqual((found, missing), (total, []))
+            self.assertEqual(self.sd.verify(plan, self.counter), [])
+        plan = self.plan(self.UNITS)
+        index = self.sd.split_frontmatter(dict(plan.files)["INDEX.md"])[1]
+        self.assertIn("(run-20261108-0154.md) - run-20261108-0154", index)
+
+    def test_an_oversize_section_is_cut_into_p1_p2_parts_that_keep_the_heading_with_text(self):
+        plan = self.plan(FRONT + "\n## Big one\n\n" + "\n".join(para(130, f"p{i}x") for i in range(10)))
+        self.assert_sound(plan)
+        self.assertEqual(plan.articles[:2], ["big-one-p1.md", "big-one-p2.md"])
+        first = self.sd.split_frontmatter(dict(plan.files)["big-one-p1.md"])[1]
+        self.assertGreater(self.counter.words(first), 100)               # never a part holding only the heading
+        titles = [self.sd.field(self.sd.split_frontmatter(t)[0], "title") for n, t in plan.files if n in plan.articles]
+        self.assertEqual(titles[:2], ["Big one part 1", "Big one part 2"])
+
+    def test_only_consecutive_tiny_sections_share_an_article(self):
+        tiny = "".join(f"\n## Tiny {i}\n\nA few words {i}.\n" for i in range(5))
+        plan = self.plan(FRONT + tiny + "\n## Large\n\n" + para(200) + "\n## Tail\n\nShort.\n")
+        self.assert_sound(plan)
+        self.assertLess(len(plan.articles), 5 + 3)
+        packed = dict(plan.files)["tiny-0.md"]
+        for i in range(5):
+            self.assertIn(f"## Tiny {i}", packed)
+        self.assertNotIn("## Large", packed)
+        index = self.sd.split_frontmatter(dict(plan.files)["INDEX.md"])[1]
+        self.assertIn("tiny-4", index)                                     # a packed section is found by its key
+        self.assertEqual(self.sd.what_the_style(self.sd.keyed_articles(self.sd.split_frontmatter(FRONT + tiny)[1], self.counter)[0]), 0)
+
+    def test_two_headings_of_one_day_get_distinct_keys_and_one_heading_listed_twice_keeps_its_key(self):
+        text = (FRONT + "\n## What is known from 2026-10-31\n\n" + para(200) + "\n## Hard rule (2026-10-31 fix)\n\n" + para(200)
+                + "\n### OD-20261109-01 - same\n\n" + para(150) + "\n### OD-20261109-01 - same\n\n" + para(150, "z"))
+        plan = self.plan(text)
+        self.assert_sound(plan)
+        self.assertIn("day-20261031-known.md", plan.articles)
+        self.assertIn("day-20261031-hard.md", plan.articles)
+        self.assertEqual(plan.what_the, 0)
+        self.assertEqual([a for a in plan.articles if a.startswith("od-20261109-01")], ["od-20261109-01.md", "od-20261109-01-2.md"])
+
+    def test_names_always_match_the_rule_even_for_parts_and_collisions(self):
+        text = FRONT + "".join(f"\n## Same heading\n\n{para(600, f's{i}x')}" for i in range(3))
+        plan = self.plan(text)
+        self.assert_sound(plan)
+        self.assertEqual(len(set(plan.articles)), len(plan.articles))
+
+    def test_sequence_orders_the_check_and_later_entries_are_ignored(self):
+        text = self.UNITS
+        path = self.doc("reg/profile.md", text)
+        original = self.doc("copy.md", text)
+        self.assertEqual(self.run_tool(path, "--apply").returncode, 0)
+        folder = self.tmp / "reg/profile"
+        self.assertEqual(self.run_tool("--check", folder, original).returncode, 0)
+        (folder / "run-20261110-0001.md").write_text("---\ntitle: late entry\n---\n\nnot original text\n")
+        self.assertEqual(self.run_tool("--check", folder, original).returncode, 0)
+
+    def test_keep_entry_works_with_key_names(self):
+        path = self.doc("reg/register.md", self.REGISTER)
+        original = self.doc("copy.md", self.REGISTER)
+        r = self.run_tool(path, "--keep-entry", "register-log", "--entry-example", "imp-20261123-09", "--apply")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        log = self.tmp / "reg/register-log"
+        self.assertTrue((log / "imp-20261123-02.md").is_file())
+        entry = path.read_text()
+        self.assertIn("(register-log/imp-20261123-02.md) - imp-20261123-02", entry + (log / "catalog-01.md").read_text()
+                      if (log / "catalog-01.md").exists() else entry)
+        self.assertEqual(self.run_tool("--check", log, original).returncode, 0)
+        self.assertIn("findability: ", self.run_tool(self.doc("again.md", self.REGISTER), "--keep-entry", "again-log").stdout)
 
 
 class Index(SplitCase):
@@ -194,7 +313,7 @@ class Running(SplitCase):
         self.assertFalse(path.exists())
         folder = self.tmp / "reg/register"
         self.assertTrue((folder / "INDEX.md").is_file())
-        self.assertGreater(len(list(folder.glob("0*.md"))), 2)
+        self.assertGreater(len(self.articles(folder)), 2)
         self.assertEqual([p.name for p in (self.tmp / "reg").iterdir()], ["register"])   # no staging folder left behind
         original = self.doc("original.md", text)
         self.assertEqual(self.run_tool("--check", folder, original).returncode, 0)
@@ -205,7 +324,7 @@ class Running(SplitCase):
         original = self.doc("copy.md", text)
         self.run_tool(path, "--apply")
         folder = self.tmp / "register"
-        victim = sorted(folder.glob("0*.md"))[1]
+        victim = self.articles(folder)[1]
         victim.write_text(victim.read_text().rstrip("\n") + " EDITED\n")
         r = self.run_tool("--check", folder, original)
         self.assertEqual(r.returncode, 1)
@@ -219,7 +338,7 @@ class Running(SplitCase):
         self.assertTrue(path.is_file())
         self.assertIn("split verbatim", path.read_text())
         self.assertEqual(other.read_text(), "keep me\n")
-        self.assertGreater(len(list((self.tmp / "activity").glob("0*.md"))), 2)
+        self.assertGreater(len(self.articles(self.tmp / "activity")), 2)
 
     def test_never_overwrites_an_existing_file_or_folder(self):
         path = self.doc("register.md", FRONT + sections(6, 200))
@@ -231,10 +350,10 @@ class Running(SplitCase):
         self.assertTrue(path.exists())
         self.assertEqual(sorted(p.name for p in (self.tmp / "register").iterdir()), ["keep.txt"])
         clash = self.doc("act/INDEX.md", FRONT + sections(6, 200))
-        self.doc("act/001-section-0.md", "precious\n")
+        self.doc("act/section-0.md", "precious\n")
         r = self.run_tool(clash, "--apply")
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
-        self.assertEqual((self.tmp / "act/001-section-0.md").read_text(), "precious\n")
+        self.assertEqual((self.tmp / "act/section-0.md").read_text(), "precious\n")
 
     def test_it_acts_only_on_the_files_it_is_given(self):
         a = self.doc("a.md", FRONT + sections(6, 200))
@@ -310,7 +429,7 @@ class KeepEntry(SplitCase):
             if name.startswith("catalog"):
                 reachable |= set(re.findall(r"\]\(([^)]+\.md)\)", self.sd.split_frontmatter(pages[name])[1]))
         for name in pages:
-            if re.match(r"^\d", name):
+            if self.sd.field(self.sd.split_frontmatter(pages[name])[0], "sequence"):
                 self.assertIn(name, reachable)
 
     def test_big_register_uses_catalogs_that_link_back_to_the_entry_page(self):
@@ -345,7 +464,7 @@ class KeepEntry(SplitCase):
         path, text = self.make()
         original = self.doc("copy.md", text)
         self.run_keep(path, "--apply")
-        victim = sorted((self.tmp / "reg/register-log").glob("0*.md"))[1]
+        victim = self.articles(self.tmp / "reg/register-log")[1]
         victim.write_text(victim.read_text().rstrip("\n") + " EDITED\n")
         r = self.run_tool("--check", self.tmp / "reg/register-log", original)
         self.assertEqual(r.returncode, 1)

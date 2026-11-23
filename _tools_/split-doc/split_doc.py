@@ -2,12 +2,13 @@
 """split_doc: a section-aware, verbatim splitter for a Markdown document.
 
 A document too long for the word budget becomes a folder: an INDEX.md of 300 words or fewer (what it is, how to find an
-entry, one line per article with its first sentence; catalog pages when the articles outnumber what an index holds) and
-articles of at most 450 body words, cut at headings first, then at paragraph, list-item, table-row, line, sentence and
-word boundaries. Article bodies are exact slices of the original body, so concatenated in order they equal it byte for
-byte. Dry run by default; --apply writes. It acts only on the files it is given. Standard library only; the word
-counter is the convention linter's own, loaded from the reflection checkout. Exit 0 ok, 1 refused or verify failed, 2
-cannot run.
+entry, one line per article with its keys and first sentence; catalog pages when the articles outnumber what an index
+holds) and articles of at most 450 body words. Each ## or ### section starts its own article, named from its key (an
+entry id, a unit key such as run-20261107-1824, a day, else a slug); only consecutive tiny sections share one, and an
+oversize section is cut at paragraph, list-item, table-row, line, sentence and word boundaries into -p1, -p2 parts.
+Article bodies are exact slices of the original body, so in sequence order they equal it byte for byte. Dry run by
+default; --apply writes. It acts only on the files it is given. Standard library only; the word counter is the
+convention linter's own, loaded from the reflection checkout. Exit 0 ok, 1 refused or verify failed, 2 cannot run.
 """
 from __future__ import annotations
 
@@ -23,14 +24,13 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 ARTICLE_LIMIT, INDEX_LIMIT, CATALOG_BUDGET, HEADROOM = 450, 300, 360, 60
 TARGETS = (440, 420, 380, 320, 250)        # packing targets, tried in turn until every real count is within the limit
 NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+){1,3}$")
 FENCE = re.compile(r"^ {0,3}(`{3,}|~{3,})")
 HEADING = re.compile(r"^(#{1,6})[ \t]+(\S.*?)[ \t]*$")
 ITEM = re.compile(r"^(?:[-*+]|\d{1,3}[.)])[ \t]|^\|")
-ARTICLE_FILE = re.compile(r"^\d+-[a-z0-9-]+\.md$")
 PAGE_PREFIXES = ("catalog", "volume", "shelf")
 
 
@@ -173,20 +173,6 @@ def explode(text: str, limit: int, counter: Counter, tier: int = 0) -> list[str]
     return out
 
 
-def by_headings(lines: list[str], a: int, b: int, level: int, heads: dict, limit: int, counter: Counter) -> list[str]:
-    text = "".join(lines[a:b])
-    if counter.words(text) <= limit:
-        return [text]
-    for lv in range(level, 7):
-        cuts = [i for i in heads.get(lv, []) if a < i < b]
-        if cuts:
-            edges, out = [a] + cuts + [b], []
-            for s, e in zip(edges, edges[1:]):
-                out += by_headings(lines, s, e, lv + 1, heads, limit, counter)
-            return out
-    return explode(text, limit, counter)
-
-
 def pack(atoms: list[str], target: int, counter: Counter) -> list[str]:
     out, cur, total = [], [], 0
     for atom in atoms:
@@ -201,49 +187,197 @@ def pack(atoms: list[str], target: int, counter: Counter) -> list[str]:
     return out
 
 
-def article_slices(body: str, counter: Counter) -> tuple[list[str], int]:
+# --- keys, titles and names --------------------------------------------------------------------------------------
+ENTRY = re.compile(r"\b([A-Za-z]{2,6})-(\d{8})-(\d{1,3})\b")
+DATE = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
+TIME_AFTER_DATE = re.compile(r"\s+(\d{2}):?(\d{2})\b")
+CLOCK = re.compile(r"(?<![\d:])(\d{1,2}):(\d{2})(?::\d{2})?(?![\d:])")
+TINY = 120          # a section this small may share an article with the consecutive tiny sections around it
+SPLIT_LEVELS = (2, 3)
+
+
+def heading_key(text: str) -> str:
+    """The key of a heading: an entry id (od-20261123-03), a unit key (run-20261107-1824: date and HHMM), a day key
+    (day-20261105), else a 2 to 4 word slug of its first words. Always lower case, words of [a-z0-9]."""
+    m = ENTRY.search(text)
+    if m:
+        return f"{m.group(1).lower()}-{m.group(2)}-{int(m.group(3)):02d}"
+    d = DATE.search(text)
+    if d:
+        ymd = "".join(d.groups())
+        t = TIME_AFTER_DATE.match(text[d.end():])
+        return f"run-{ymd}-{t.group(1)}{t.group(2)}" if t else f"day-{ymd}"
+    words = re.findall(r"[a-z0-9]+", text.lower())[:3] or ["part"]
+    return "-".join(words if len(words) > 1 else words + ["section"])
+
+
+KEY_STOP = {"what", "is", "the", "this", "a", "an", "of", "and", "to", "how", "it", "in", "for", "from", "on", "as", "or",
+            "with", "are", "was", "unit", "units", "added", "notes"}
+
+
+def key_map(texts: list[str]) -> dict[str, str]:
+    """Heading text to key. Two different headings with the same key (two dated sections of one day) are told apart by
+    the first meaningful word of each; one heading listed twice keeps one key."""
+    raw = {t: heading_key(t) for t in texts}
+    groups: dict[str, list[str]] = {}
+    for t, k in raw.items():
+        groups.setdefault(k, []).append(t)
+    out = dict(raw)
+    for k, members in groups.items():
+        if len(members) > 1:
+            for t in members:
+                word = next((w for w in re.findall(r"[a-z][a-z0-9]*", t.lower()) if w not in KEY_STOP and w not in k), None)
+                if word and len(k.split("-")) <= 3:
+                    out[t] = f"{k}-{word}"
+    return out
+
+
+def title_text(text: str) -> str:
+    """A title: times read HHMM (00:11:00 is 0011), any other colon becomes a dash, markup is dropped."""
+    text = CLOCK.sub(lambda m: f"{int(m.group(1)):02d}{m.group(2)}", text)
+    return plain(text.replace(":", " -"), 16)
+
+
+def allocate(base_key: str, part: int | None, taken: set) -> str:
+    """A file name of 2 to 4 words from the key, with -pN for a part and -2, -3 when the name is taken."""
+    base, suffix, n = base_key.split("-"), ([f"p{part}"] if part else []), 1
+    while True:
+        extra = suffix + ([str(n)] if n > 1 else [])
+        name = "-".join(base[:max(1, 4 - len(extra))] + extra)
+        if name not in taken:
+            taken.add(name)
+            return name
+        n += 1
+
+
+class Article:
+    def __init__(self, text="", heading=None, words=0, part=None, parts=1, key=None):
+        self.text, self.words, self.part, self.parts = text, words, part, parts
+        self.headings = [heading] if heading else []     # the ## and ### headings this article holds
+        self.keys = [key] if heading else []
+        self.name, self.base = "", ""
+
+    def add(self, text: str, heading: str, words: int, key: str) -> None:
+        self.text += text
+        self.words += words
+        self.headings.append(heading)
+        self.keys.append(key)
+
+
+def make_articles(body: str, counter: Counter, target: int) -> list[Article]:
+    """One article per ## or ### section when it fits; consecutive tiny sections share one; an oversize section is cut
+    at paragraph or item boundaries into parts. The texts are exact slices of the body, in order."""
     lines = body.splitlines(keepends=True)
     heads = headings(lines)
-    slices, target = [], TARGETS[-1]
+    texts = {i: HEADING.match(lines[i].rstrip("\r\n")).group(2).rstrip("# ").strip() for v in heads.values() for i in v}
+    cuts = sorted({i for lv in SPLIT_LEVELS for i in heads.get(lv, [])})
+    kmap = key_map([texts[i] for i in cuts])
+    edges = sorted(set([0] + cuts + [len(lines)]))
+    arts, pending, carry = [], None, ""
+    def flush():
+        nonlocal pending
+        if pending:
+            arts.append(pending)
+            pending = None
+    for a, b in zip(edges, edges[1:]):
+        text, heading = carry + "".join(lines[a:b]), (texts[a] if a in cuts else None)
+        carry = ""
+        if not text.strip() and heading is None:
+            carry = text                       # leading blank lines ride along with the next section
+            continue
+        words = counter.words(text)
+        if heading is None:                    # the preamble: its own article, titled by the document heading
+            flush()
+            top = next((texts[i] for i in sorted(texts) if i < (cuts[0] if cuts else len(lines)) and i in heads.get(1, [])), None)
+            art = Article(text, None, words)
+            art.preamble = top or "Preamble"
+            arts.append(art)
+        elif words > target:
+            flush()
+            hl = text.splitlines(keepends=True)          # keep the heading line with the start of its first paragraph
+            k = 1
+            while k < len(hl) and not hl[k].strip():
+                k += 1
+            head, rest = "".join(hl[:k]), "".join(hl[k:])
+            atoms = explode(rest, target, counter)
+            room = target - counter.words(head) - 2
+            if atoms and counter.words(atoms[0]) > room:
+                atoms = explode(atoms[0], room, counter) + atoms[1:]
+            parts = pack([head] + atoms, target, counter)
+            for n, ptxt in enumerate(parts, 1):
+                arts.append(Article(ptxt, heading, counter.words(ptxt), n if len(parts) > 1 else None, len(parts), kmap[heading]))
+        elif words <= TINY and pending and pending.words + words <= target:
+            pending.add(text, heading, words, kmap[heading])
+        elif words <= TINY:
+            flush()
+            pending = Article(text, heading, words, key=kmap[heading])
+        else:
+            flush()
+            arts.append(Article(text, heading, words, key=kmap[heading]))
+    if carry and arts:
+        arts[-1].text += carry
+    flush()
+    return arts
+
+
+def keyed_articles(body: str, counter: Counter) -> tuple[list[Article], int]:
+    arts, target = [], TARGETS[-1]
     for target in TARGETS:
-        atoms = by_headings(lines, 0, len(lines), 1, heads, target, counter)
-        slices = pack(atoms, target, counter)
-        if "".join(slices) != body:
+        arts = make_articles(body, counter, target)
+        if "".join(a.text for a in arts) != body:
             raise Refused("internal error: the slices do not rebuild the body")
-        if all(counter.words(s) <= ARTICLE_LIMIT for s in slices):   # the real count of each concatenated slice
+        if all(counter.words(a.text) <= ARTICLE_LIMIT for a in arts):
             break
-    return slices, target
+    taken: set = set()
+    for a in arts:
+        first = a.headings[0] if a.headings else getattr(a, "preamble", "Preamble")
+        a.base = a.keys[0] if a.keys else heading_key(first)
+        a.name = allocate(a.base, a.part, taken) + ".md"
+    return arts, target
+
+
+def article_title(a: Article) -> str:
+    first = a.headings[0] if a.headings else getattr(a, "preamble", "Preamble")
+    title = title_text(first) or "Part"
+    if a.part:
+        title += f" part {a.part}"
+    elif len(a.headings) > 1:
+        title += f" and {len(a.headings) - 1} more"
+    return title
+
+
+def heading_keys(body: str) -> list[str]:
+    lines = body.splitlines(keepends=True)
+    heads = headings(lines)
+    cuts = sorted({i for lv in SPLIT_LEVELS for i in heads.get(lv, [])})
+    texts = [HEADING.match(lines[i].rstrip("\r\n")).group(2).rstrip("# ").strip() for i in cuts]
+    kmap = key_map(texts)
+    return [kmap[t] for t in texts]
+
+
+def findability(plan: "Plan", texts: dict | None = None, entry: str | None = None) -> tuple[int, int, list[str]]:
+    """How many ## and ### heading keys are an article title or a key on a catalog or index line, read from the files."""
+    keys = heading_keys(plan.body)
+    texts = dict(texts if texts is not None else plan.files)
+    titles = " ".join((field(split_frontmatter(t)[0], "title") or "").lower() for n, t in texts.items() if n in plan.articles)
+    pages = "\n".join(split_frontmatter(t)[1].lower() for n, t in texts.items() if n not in plan.articles)
+    if plan.entry:
+        pages += "\n" + split_frontmatter(entry if entry is not None else plan.entry[1])[1].lower()
+    missing = [k for k in keys if k not in titles and not re.search(rf"(?<![a-z0-9-]){re.escape(k)}(?![a-z0-9-])", pages)]
+    return len(keys) - len(missing), len(keys), missing
+
+
+def what_the_style(arts: list[Article]) -> int:
+    """Names built from a heading's first words rather than its key: a what-the prefix, or one base name shared by
+    sections whose headings differ (the same heading listed twice, as an entry under Open and Decided, is one key)."""
+    by_base = {}
+    for a in arts:
+        by_base.setdefault(a.base, set()).add(a.headings[0] if a.headings else "")
+    shared = sum(1 for a in arts if len(by_base[a.base]) > 1)
+    return shared + sum(1 for a in arts if a.name.startswith("what-the-"))
 
 
 # --- describing the articles -------------------------------------------------------------------------------------
-def heading_at(body: str, slices: list[str]) -> list[str]:
-    """A title per slice: its first heading when it opens with one, else the preceding heading, continued. Slices may
-    start mid-line (a sentence or word cut), so positions are character offsets."""
-    lines = body.splitlines(keepends=True)
-    starts, pos = [], 0
-    for line in lines:
-        starts.append(pos)
-        pos += len(line)
-    texts = {starts[i]: HEADING.match(lines[i].rstrip("\r\n")).group(2).rstrip("# ").strip()
-             for v in headings(lines).values() for i in v}
-    order = sorted(texts)
-    titles, start, last = [], 0, None
-    for s in slices:
-        end = start + len(s)
-        opening = start + len(s) - len(s.lstrip())
-        if s.strip() and opening in texts:
-            title = texts[opening]
-        elif last:
-            title = f"{last} continued"
-        else:
-            title = "Preamble"
-        inside = [texts[o] for o in order if start <= o < end]
-        last = inside[-1] if inside else last
-        titles.append(plain(title) or "Part")
-        start = end
-    return titles
-
-
 def first_sentence(text: str, cap: int) -> str:
     gathered, started = [], False
     for line in text.splitlines():
@@ -265,15 +399,16 @@ def first_sentence(text: str, cap: int) -> str:
     return " ".join(words[:cap]) + ("..." if len(words) > cap else "")
 
 
-def entry_line(file: str, title: str, sentence: str, cap: int) -> str:
+def entry_line(file: str, title: str, keys: list, sentence: str, cap: int) -> str:
     t = " ".join(title.split()[:8])
     s = " ".join(sentence.split()[:cap]) if cap else ""
-    return f"- [{t}]({file})" + (f" - {s}" if s else "") + "\n"
+    k = ", ".join(keys)                     # the keys are never shortened: they make each heading section findable
+    return f"- [{t}]({file})" + (f" - {k}" if k else "") + (f" - {s}" if s else "") + "\n"
 
 
 def fit_page(entries: list[tuple], budget: int, counter: Counter, caps=(14, 10, 6)) -> str | None:
     for cap in caps:   # an INDEX is never titles-only: it paginates instead; an entry page may be
-        text = "".join(entry_line(f, t, s, cap) for f, t, s in entries)
+        text = "".join(entry_line(f, t, k, s, cap) for f, t, k, s in entries)
         if counter.words(text) <= budget:
             return text
     return None
@@ -297,10 +432,11 @@ def layout(entries: list[tuple], budget: int, counter: Counter, now: str, doc_ti
         upper = []
         for n, g in enumerate(groups, 1):
             name, title = f"{prefix}-{n:02d}.md", f"{prefix.title()} {n:02d}"
-            body = (f"\n# {title}\n\n{len(g)} entries of {plain(doc_title)}, from {g[0][1]} to {g[-1][1]}. "
+            first, last = (g[0][2][0] if g[0][2] else g[0][1]), (g[-1][2][-1] if g[-1][2] else g[-1][1])
+            body = (f"\n# {title}\n\n{len(g)} entries of {plain(doc_title)}, from {first} to {last}. "
                     f"Back to the [{back[0]}]({back[1]}).\n\n" + fit_page(g, CATALOG_BUDGET, counter))
             pages[name] = front(title, f"{title} of the split {plain(doc_title)}", now, "1.0.0") + body
-            upper.append((name, title, f"{g[0][1]} to {g[-1][1]}"))
+            upper.append((name, title, [], f"{first} to {last}"))
         level = upper
         text = fit_page(level, budget, counter, top_caps)
         if text is not None:
@@ -308,9 +444,10 @@ def layout(entries: list[tuple], budget: int, counter: Counter, now: str, doc_ti
     raise Refused("the document has too many articles for three index levels")
 
 
-def front(title: str, description: str, now: str, version: str) -> str:
-    return (f"---\ntitle: {plain(title)}\ncreated: {now}\nmodified: {now}\nversion: {version}\n"
-            f"description: {plain(description, 30)}\n---\n")
+def front(title: str, description: str, now: str, version: str, sequence: int | None = None) -> str:
+    seq = f"sequence: {sequence}\n" if sequence else ""
+    return (f"---\ntitle: {title_text(title)}\ncreated: {now}\nmodified: {now}\nversion: {version}\n{seq}"
+            f"description: {title_text(description)}\n---\n")
 
 
 # --- the plan ----------------------------------------------------------------------------------------------------
@@ -321,6 +458,7 @@ class Plan:
         self.body = ""
         self.target = 0
         self.index_words = 0
+        self.what_the = 0
         self.entry: tuple[str, str] | None = None   # --keep-entry: (the original file name, the generated entry page)
 
 
@@ -329,16 +467,15 @@ def build(original: str, stem: str, counter: Counter, now: str, keep: str | None
     plan = Plan()
     frontmatter, body = split_frontmatter(original)
     plan.body = body
-    slices, plan.target = article_slices(body, counter)
-    titles = heading_at(body, slices)
-    width = max(3, len(str(len(slices))))
+    arts, plan.target = keyed_articles(body, counter)
+    plan.what_the = what_the_style(arts)
     entries = []
-    for n, (text, title) in enumerate(zip(slices, titles), 1):
-        name = f"{n:0{width}d}-{'-'.join(slug_words(title))}.md"
-        description = first_sentence(text, 25) or title
-        plan.files.append((name, front(title, description, now, "0.1.0") + text))
-        plan.articles.append(name)
-        entries.append((name, title, first_sentence(text, 14)))
+    for n, art in enumerate(arts, 1):
+        title = article_title(art)
+        description = first_sentence(art.text, 25) or title
+        plan.files.append((art.name, front(title, description, now, "0.1.0", n) + art.text))
+        plan.articles.append(art.name)
+        entries.append((art.name, title, art.keys, first_sentence(art.text, 14)))
     doc_title = field(frontmatter, "title") or next(
         (plain(HEADING.match(l.rstrip("\r\n")).group(2)) for l in body.splitlines() if HEADING.match(l)), stem)
     full = plain(field(frontmatter, "description") or "")
@@ -357,7 +494,7 @@ def build(original: str, stem: str, counter: Counter, now: str, keep: str | None
                  f"and description, then add one line for it at the end of this page: `- [Title]({keep}/{example}.md) one "
                  f"sentence`. Never edit an existing article.\n\n")
         intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This register stays at this path as an entry page; "
-                 f"its text was split verbatim into {len(slices)} articles in [{keep}]({keep}/INDEX.md), unchanged and in "
+                 f"its text was split verbatim into {len(arts)} articles in [{keep}]({keep}/INDEX.md), unchanged and in "
                  f"reading order.\n\n{howto}## Articles\n\n")
         budget = INDEX_LIMIT - counter.words(intro) - HEADROOM - 8     # headroom: room for the lines added later
         lines, pages = layout(entries, budget, counter, now, doc_title, back=("register page", f"../{doc_name}"),
@@ -373,10 +510,10 @@ def build(original: str, stem: str, counter: Counter, now: str, keep: str | None
                            f"original in reading order. The register page lists every article and says how to add one; "
                            f"later entries are single files named by entry id, for example `{example}.md`.\n"))
         return plan
-    intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This document was split verbatim into {len(slices)} "
-             f"articles in reading order, numbered from 001; nothing was rewritten, and `split_doc.py --check` "
-             f"rebuilds the original body from them. Find an entry by its heading; each line gives the heading and "
-             f"its first sentence.\n\n")
+    intro = (f"\n# {doc_title}\n\n{summary + ' ' if summary else ''}This document was split verbatim into {len(arts)} "
+             f"articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original "
+             f"body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) "
+             f"or heading; each line gives the title, the keys the article holds and its first sentence.\n\n")
     budget = INDEX_LIMIT - counter.words(intro) - 8
     lines, pages = layout(entries, budget, counter, now, doc_title)
     plan.files += list(pages.items())
@@ -394,6 +531,15 @@ def verify(plan: Plan, counter: Counter, written: dict[str, str] | None = None, 
         joined += split_frontmatter(texts[name])[1]
     if joined != plan.body:
         problems.append("the article bodies do not concatenate to the original body")
+    names = [n for n, _ in plan.files]
+    if len(set(names)) != len(names):
+        problems.append("two files share a name")
+    for i, name in enumerate(plan.articles, 1):
+        if field(split_frontmatter(texts[name])[0], "sequence") != str(i):
+            problems.append(f"{name}: sequence is not {i}")
+    found, total, missing = findability(plan, texts, written_entry)
+    if missing:
+        problems.append(f"{len(missing)} heading key(s) not findable, first {missing[:3]}")
     for name, text in texts.items():
         if name != "INDEX.md" and not NAME.match(name[:-3]):
             problems.append(f"{name}: name does not match the kebab-case rule")
@@ -465,6 +611,10 @@ def process(path: Path, args, counter: Counter) -> int:
     print(f"{path}: {original_words:,} body words -> {len(plan.articles)} articles (max {max(sizes)} words, packed to {plan.target}), "
           f"{label} {plan.index_words} words, {pages} catalog page(s); target folder {folder}")
     print(f"  verify: {verdict}")
+    found, total, _ = findability(plan)
+    print(f"  findability: {found}/{total} ## and ### heading keys are an article title or a catalog line key "
+          f"({100 * found / total if total else 100:.0f} percent); what-the-style names: {plan.what_the}; "
+          f"distinct names {len(set(plan.articles))}/{len(plan.articles)}")
     refs = inbound_references(repo_top(path), path)
     if keep:
         print(f"  --keep-entry: {path.name} stays as the entry page, so the {len(refs)} file(s) citing it keep working")
@@ -533,8 +683,14 @@ def apply(path: Path, folder: Path, is_index: bool, plan: Plan, counter: Counter
 def check_folder(folder: Path, against: Path, counter: Counter) -> int:
     if not folder.is_dir() or not against.is_file():
         raise SplitError("--check needs a split folder and the original file (for example from git show)")
-    joined = "".join(split_frontmatter((folder / n).read_bytes().decode("utf-8"))[1]
-                     for n in sorted(os.listdir(folder)) if ARTICLE_FILE.match(n))
+    parts = []
+    for n in os.listdir(folder):
+        if n.endswith(".md"):
+            front, body = split_frontmatter((folder / n).read_bytes().decode("utf-8"))
+            seq = field(front, "sequence")
+            if seq and seq.isdigit():          # later entries carry no sequence: they are not original text
+                parts.append((int(seq), body))
+    joined = "".join(body for _, body in sorted(parts))
     original = split_frontmatter(against.read_bytes().decode("utf-8"))[1]
     same = joined == original
     print(f"check {folder}: article bodies {'EQUAL' if same else 'DIFFER FROM'} the original body ({len(joined)} and {len(original)} characters)")
