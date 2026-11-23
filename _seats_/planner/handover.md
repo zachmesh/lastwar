@@ -30,9 +30,13 @@ Updated 2026-11-22 19:22 PT.
   0 covered, 38 recordless past-window slots, 10 future. `sweep-status`
   exits 1: today's zero-sweep pair is missing (0/2), geometry not ok.
 - Open defects found by the pass: `enqueue --not-before` without
-  `--expires-at` mints an unretirable unit; a scout successor for an ended
-  chain day still slips through (#818 class); the zero-sweep roster here is
-  120/60 while the previous host's pair was 1630/1730.
+  `--expires-at` mints an unretirable unit (issue #859); a scout successor
+  for an ended chain day still slips through (#818 class).
+- Zero-sweep geometry resolved 2026-11-22 19:38 PT: this checkout's
+  `regulars.json` `[120, 60]` is authoritative, so the pair is
+  **16:00/17:00**, not the 1630/1730 pair in the 1440 record. That record
+  was written from the stale live tree; treat its 1630/1730 pair as legacy,
+  not a target. The next plan pass stages only 1600/1700.
 - Two inbox units were edited to add `expires_at` before expiry:
   `donations-2026-11-22-1241` and `scout-scout-2026-11-20-019`. The edits
   are disclosed in the genesis record.
