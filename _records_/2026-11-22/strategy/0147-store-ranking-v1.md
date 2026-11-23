@@ -1,7 +1,7 @@
 ---
 title: Store ranking v1
 created: 2026-11-23T09:47:00Z
-modified: 2026-11-23T13:24:00Z
+modified: 2026-11-23T17:39:00Z
 version: 1.1.0
 level: L3
 description: The ranking of honor, alliance and Campaign store items by hero value per currency, the exact buys, the holds and reserves, with forecasts
@@ -37,3 +37,5 @@ For each of six weapons: unlocked, level, next-level shard cost, power gain; the
 ## Forecasts
 
 F-049 and F-050 (deterministic purchases), F-051 (the 417 still held, p 0.7), F-052 to F-054 (a level-up p 0.8; 10K to 45K power; a milestone p 0.2 for 0.3M), F-055 and F-056 (a star-up p 0.5; 25K to 90K each).
+
+Event stores (Thanksgiving Store, Lottery, Gift of Thanks) are ranked in [the event store ruling](0630-event-store-ruling.md): speed-ups first, shards last, a ten-draw lottery cap.

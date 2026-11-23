@@ -1,0 +1,8 @@
+item,value,read_utc,note
+first run,"tap at (626,584) selected the Hospital Lv.25 (the camera had shifted); nothing pressed; run 20261123T180930Z-44390f",2026-11-23T18:10:05Z,"route failed once; retried after WORLD then BASE"
+Barracks Lv.24,"tag 'Barracks Lv.24'; pistol raised 'Drill Ground Full: Unable to add more units.'; no panel",2026-11-23T18:11:20Z,"idle, blocked by capacity"
+Barracks Lv.20,"tag 'Barracks Lv.20'; same toast; no panel",2026-11-23T18:11:50Z,"idle, blocked by capacity"
+Barracks Lv.27,"tag 'Barracks Lv.27'; TRAIN UNITS: Lv.9 batch of 726, 'Training in progress' 01:44:32, Speed Up not pressed",2026-11-23T18:12:15Z,"ends about 19:56:50Z; stats Power 1352, Squad Load 2000"
+Barracks Lv.30,"tag 'Barracks Lv.30'; TRAIN UNITS: Lv.10 batch of 793, 'Training in progress' 17:05:50, Speed Up not pressed",2026-11-23T18:12:40Z,"ends about 2026-11-24T11:18:30Z; stats Power 1647, Squad Load 2200"
+slots_idle,2,2026-11-23T18:12:40Z,"Lv.24 and Lv.20: slots_blocked_by_capacity 2, capacity_blocker 'Drill Ground Full'"
+HUD,"food 666.3M, iron 1.0G, coin 21.4M, Total Power 150,416,946 unchanged",2026-11-23T18:12:55Z,

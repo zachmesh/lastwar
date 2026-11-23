@@ -1,0 +1,11 @@
+item,value,read_utc,note
+fragment M1,6,2026-11-23T17:55:35Z,
+fragment M2,6,2026-11-23T17:55:35Z,
+fragment M3,0,2026-11-23T17:55:35Z,"the scarcest: caps the digs at 0 (rule 1)"
+fragment M4,3,2026-11-23T17:55:35Z,
+fragment M5,1,2026-11-23T17:55:35Z,
+fragment M6,8,2026-11-23T17:55:35Z,
+fragment M7,5,2026-11-23T17:55:35Z,
+dig buttons,"'Dig 1 time' and 'Dig 2 time(s)', no price text; Skip Animation already ticked; no timer",2026-11-23T17:55:35Z,none pressed
+chest track,"6/15 before and after",2026-11-23T17:55:40Z,
+dig,none,2026-11-23T17:55:40Z,"no full set (M3 at 0)"

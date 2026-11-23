@@ -1,0 +1,15 @@
+item,value,read_utc,note
+first frame,"base, no dialog; food 665.8M, iron 1.0G, coin 21.2M, oil 655.4K, energy 118, diamonds 11,113",2026-11-23T18:03:45Z,
+bar before,"'You can complete 1 tasks, requires 10 Stamina' with Quick Execute",2026-11-23T18:04:10Z,
+Quick Execute,"pressed once: energy 118 to 108 (floor 40); no popup",2026-11-23T18:04:20Z,
+bar after,"'1 task rewards can be claimed' with a green Claim All",2026-11-23T18:04:30Z,
+Claim All,"pressed once; 'Drop Limit Update 243/300' banner then the popup",2026-11-23T18:04:40Z,"ruling 16:52Z, same terms"
+reward: purple radar item,10,2026-11-23T18:04:45Z,
+reward: supply bag,2,2026-11-23T18:04:45Z,not opened
+reward: EXP,2.3M,2026-11-23T18:04:45Z,
+reward: iron,475.2K,2026-11-23T18:04:45Z,iron shows 1.0G before and after
+reward: food,475.2K,2026-11-23T18:04:45Z,food 665.8M to 666.3M
+reward: coin,273.6K,2026-11-23T18:04:45Z,coin 21.2M to 21.4M
+oil,"no oil reward; counter 655.4K before and after",2026-11-23T18:04:45Z,
+after,"bar empty; '12 Radar Task(s) will be restored in 02:33:39' (about 20:38Z); energy 108; badge cleared",2026-11-23T18:04:55Z,
+HUD after,"food 666.3M, coin 21.4M, oil 655.4K, energy 108, diamonds 11,113, Total Power 150,416,946",2026-11-23T18:05:00Z,

@@ -1,7 +1,7 @@
 ---
 title: Serves map answer
 created: 2026-11-23T17:02:00Z
-modified: 2026-11-23T17:02:00Z
+modified: 2026-11-23T17:51:00Z
 version: 1.0.0
 level: L3
 description: The strategist's answer to the planner's regular serves map, with four changes, two tests and a cadence for the units that serve nothing
@@ -19,7 +19,7 @@ Row by row in [the sidecar](serves-map-answer.csv). Every plan item named has at
 
 - **trucks** (own dispatch) serve PL-14, where F-126 and F-127 sit; **plunder** serves PL-18.
 - **harvest** serves PL-14, the resource line (iron floor F-143, the food plan), not PL-16.
-- **donations** are upkeep: PL-04 is the lab line, and no alliance technology lever is shown yet.
+- **donations** are upkeep: PL-04 is the lab line. A donation costs 1,000 coin, refilled one per 20 minutes (72 a day, about 72K coin); the node donated is Quick Construction 9/10, a construction speed line, so no research lever is shown. If its level 10 gives a measurable construction gain it serves PL-08.
 - **research** units serve PL-16 for path node starts and PL-04 for reads and fills; the Oil Well chain units serve PL-17, ground levels PL-08.
 
 ## Confirmed

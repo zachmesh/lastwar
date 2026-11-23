@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 1
 created_at: 2026-11-23T16:00:26Z
-expires_at: 2026-11-26T10:41:18Z
+expires_at: 2026-11-26T00:41:00Z
 planned_for:
-not_before: 2026-11-24T18:41:18Z
+not_before: 2026-11-24T08:41:00Z
 window: oil well level 21 to 22 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17
@@ -38,5 +38,6 @@ serves: PL-17
 
 Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.21 upgrade finishes; the window opens at the earliest possible finish and the coordinator dispatches it by name at the real one. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`), never complete it. If finished: press Complete (never Speed Up or Finish Now); Total Power before and after. Then go to the well by the route in the sheet, read the tag ('Oil Well Lv.21'; stop and report if it differs), open the Upgrade preview ('Lv.21 to 22') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the finish time in UTC. If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at the nearest edge, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
 
-Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm. Iron only: no coin, food or oil, no speed-up, never Finish Now. Tag text beside every number; none means [G].
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm. Iron only: no coin, food or oil, no speed-up, never Finish Now.
+Quiet-window margin: this unit opens at 08:41Z, only 16 min after the daily 08:00-08:25Z window ends: never claim it earlier.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

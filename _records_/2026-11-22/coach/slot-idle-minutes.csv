@@ -1,5 +1,5 @@
 slot_type,window,total_slot_minutes,idle_minutes,idle_share,basis,unobserved_or_caveat
-builders (4),24h,5760,3291,57.1%,"reads: 1 busy to 03:55Z, 0 busy 03:55Z-06:01Z, 4 busy from 06:48Z to the Training Base finish at 2026-11-24T09:20Z",6 h gap 21:56Z-03:55Z carried forward; start of the four builds +-94 slot-min
+builders (4),24h,5760,3291,57.1%,"reads: 1 busy to 03:55Z, 0 busy 03:55Z-06:01Z, 4 busy from 06:48Z to the Training Base finish at 2026-11-23T23:20Z (corrected 18:13Z, was carried as 2026-11-24T09:20Z)",6 h gap 21:56Z-03:55Z carried forward; start of the four builds +-94 slot-min
 builders (4),6h,1440,0,0.0%,4 of 4 busy throughout,
 labs (2),24h,2880,75,2.6% observed,"lab 1 finished Unlock Oil Well 11:42:55Z, Complete pressed 11:53:00Z, no restart recorded by 12:58Z, so idle 75 min (may have restarted unrecorded); lab 2 busy",16 h read gap 11:59Z 11-22 to 03:55Z; lab reads contradicted each other on 11-22
 labs (2),6h,720,75,10.4% observed,same,

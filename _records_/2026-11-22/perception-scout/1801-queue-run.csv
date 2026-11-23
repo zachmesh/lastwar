@@ -1,0 +1,7 @@
+tap_point,tag_text,looks_like,read_utc,note
+"(575,300)","Arena Lv.1 (three round buttons)","glowing ring or dome structure, upper right, under the mid-base trophy bubble",2026-11-23T18:01:45Z,"this is the Arena: the trophy bubble sits over it (OD-20261123-01); not tapped further"
+"(330,300)","no tag appeared","blue building with a white tower, left middle",2026-11-23T18:01:55Z,"a chat banner only; the base had shifted"
+"(665,445)","Hospital Lv.25 (three round buttons)","tall blue building at the right edge",2026-11-23T18:02:05Z,
+"(400,205)","Drone Center Lv.1 (two round buttons)","building next to the grey jet airstrip",2026-11-23T18:02:15Z,
+"(250,200)","Eternal Pyramid Lv.3 (two round buttons)","golden pyramid, upper left",2026-11-23T18:02:25Z,
+result,"Tech Center not found","five taps, four tags read",2026-11-23T18:02:45Z,"the base view shifted a little as buildings were selected"

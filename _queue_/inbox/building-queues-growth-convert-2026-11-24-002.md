@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-23T08:27:07Z
-expires_at: 2026-11-24T10:20:00Z
+expires_at: 2026-11-24T00:20:00Z
 planned_for:
-not_before: 2026-11-24T09:22:00Z
+not_before: 2026-11-23T23:22:00Z
 window: convert coin, start the lowest Drill Ground and apply bounded speed-ups when the builders free
 est_minutes: 15
 serves: PL-08
@@ -24,9 +24,9 @@ lease_until:
 
 Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
 
-Serves: capacity source: Drill Ground lowest first (builders at 2026-11-24T09:20Z)
+Serves: PL-08
 
-## Brief (planner, builders at 09:20Z, funding (b), step 3 and the fourth builder, decision 2603)
+## Brief (planner, builders at 23:20Z, funding (b), step 3 and the fourth builder, decision 2603)
 
 serves: PL-08
 
@@ -42,5 +42,5 @@ Tag text: write each building-panel number's tag text beside it (name and level 
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
-Quiet-window margin: this start (09:21Z trigger) is 56 min after the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
+Quiet-window margin: this start (23:21Z trigger) is 8 h 39 min before the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

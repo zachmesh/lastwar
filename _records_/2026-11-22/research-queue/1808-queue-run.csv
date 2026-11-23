@@ -1,0 +1,6 @@
+item,value,read_utc,note
+labs counter,2/2 busy before and after,2026-11-23T18:08:30Z,
+lab 1,"Food Output V (Lv.0 upgrade), Time Left 23:21:14",2026-11-23T18:08:40.679Z,"earlier frame 23:21:18 at 18:08:36.507Z; ends about 2026-11-24T17:29:54.7Z"
+lab 2,"Iron Output V (Lv.0 upgrade), Time Left 1d 08:30:15",2026-11-23T18:08:40.679Z,"earlier frame 1d 08:30:19; ends about 2026-11-25T02:38:55.7Z"
+idle or Complete,none,2026-11-23T18:08:40Z,slots_idle 0; no capacity blocker
+speed-up,"each lab shows a blue Speed Up button; no Finish Now clock text visible",2026-11-23T18:08:40Z,"nothing pressed; the Finish Now clock needs a node panel, not opened"

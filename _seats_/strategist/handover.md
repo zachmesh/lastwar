@@ -1,7 +1,7 @@
 ---
 title: Strategist handover
 created: 2026-11-23T08:20:00Z
-modified: 2026-11-23T16:02:00Z
+modified: 2026-11-23T18:11:00Z
 level: L2
 version: 0.3.0
 description: The live state a replacement strategist starts from
@@ -22,7 +22,7 @@ Session `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`. Reports to the coordinat
 ## Strategy of record: v3.0 (`0446-strategy-v3.md`)
 
 - **Long line** (owner orders OD-20261123-18 to -20): Base Expansion, HQ 31's only unmet gate. Graph and per-stage days: `base-expansion-path.csv`; ETA with its evidence: `0510-base-expansion-eta.md`.
-- **Short line:** training slots. Builders at 11-24 09:20Z (decision 07): B1 the Oil Well (stands at Lv.20, chain Lv.21 to 30, 22 days) plus the Lv.26, 27 and 28 ground levels. Hero Tier 5 stars and weapon steps from held shards in the Thursday window; store buys on hold.
+- **Short line:** training slots. Builders at 11-23 23:20Z (decisions 07 and 08): B1 the Oil Well (stands at Lv.20, chain Lv.21 to 30, 22 days) plus the Lv.26, 27 and 28 ground levels. Hero Tier 5 stars and weapon steps from held shards in the Thursday window; store buys on hold.
 - Plunder is a food and coin supplement (decision 04); food plan `0515-food-plan.md`.
 
 ## Facts that drive the plan

@@ -1,10 +1,10 @@
 ---
 title: Conversion Procedure And Speed Up Use For The 09:20Z Builder Units 2541 2026-11-23
 created: 2026-11-23T03:36:00-08:00
-modified: 2026-11-23T03:36:00-08:00
+modified: 2026-11-23T10:30:00-08:00
 level: L0
-version: 1.0.0
-description: The Backpack conversion steps and the speed-up use rules for the builder units for 2026-11-24T09:20Z, from the RC1 chest limits read, split off the Drill Ground sheet 2540 to keep both small
+version: 1.1.0
+description: The Backpack conversion steps and the speed-up use rules for the builder units for 2026-11-23T23:20Z (corrected: the builders are free at 23:20Z today; 09:20 was the Oil Well upgrade's duration), from the RC1 chest limits read, split off the Drill Ground sheet 2540 to keep both small
 status: done
 activity: queue-planning
 run_id: queue-planning-2026-11-23-0336-conversion-sheet

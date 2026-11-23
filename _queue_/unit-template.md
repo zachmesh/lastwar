@@ -26,6 +26,10 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
+Units minted after the forecast refusal switches on (2026-11-24T00:05Z), chain follow-ups
+included, are refused unless serves is a plan item id with a row in the forecast ledger or an
+exempt word: write the ledger row before the unit.
+
 A brief that can reach a banner, a Go, a Buy, a link, a web, a share or an
 external-app button carries one line: 'may open another app: needs Steer A's
 approval first; if it opens, STOP' (standing rule, Steer A, 2026-11-23).

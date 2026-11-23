@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 1
 created_at: 2026-11-23T16:00:26Z
-expires_at: 2026-11-24T09:45:00Z
+expires_at: 2026-11-23T23:45:00Z
 planned_for:
-not_before: 2026-11-24T09:21:00Z
+not_before: 2026-11-23T23:21:00Z
 window: oil well level 20 to 21 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17
@@ -36,7 +36,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-17
 
-Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. TIME CHECK: the four Training Base builders finish at 09:20:13Z and this unit opens at 09:21:00Z; be ready before it. The quiet window ends 08:25Z, so none interferes. Run 1: 1. Hammer icon: press the button each finished Training Base entry shows, Complete or Collect (record its text; never Speed Up or Finish Now); Total Power before and after, since power registers only on Complete; skip if unit `building-queues-growth-convert-2026-11-24-001` already did it. 2. Go to the Oil Well by the route in the sheet; read the tag, which must read 'Oil Well Lv.20' (else stop and report). 3. Open the Upgrade preview ('Lv.20 to 21'): expect output 1,200 to 1,260 an hour, power +4,200, iron 8.5M only, effective time 09:20:18; write every row. 4. Press Upgrade ONCE on the first idle builder; read the timer to the second and write the finish time in UTC (about 18:41Z): the coordinator sets the trigger for unit 002. Never Speed Up or Finish Now.
+Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. TIME CHECK: the four Training Base builders finish at 23:20:13Z on 2026-11-23 (corrected from 09:20Z, which was the upgrade's duration, not a clock time) and this unit opens at 23:21:00Z; be ready before it. Today's quiet windows end at 18:50Z, so none interferes. Run 1: 1. Hammer icon: press the button each finished Training Base entry shows, Complete or Collect (record its text; never Speed Up or Finish Now); Total Power before and after, since power registers only on Complete; skip if unit `building-queues-growth-convert-2026-11-24-001` already did it. 2. Go to the Oil Well by the route in the sheet; read the tag, which must read 'Oil Well Lv.20' (else stop and report). 3. Open the Upgrade preview ('Lv.20 to 21'): expect output 1,200 to 1,260 an hour, power +4,200, iron 8.5M only, effective time 09:20:18; write every row. 4. Press Upgrade ONCE on the first idle builder; read the timer to the second and write the finish time in UTC (about 08:41Z on 2026-11-24): the coordinator sets the trigger for unit 002. Never Speed Up or Finish Now.
 
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm. Iron only: no coin, food or oil, no speed-up, never Finish Now. Tag text beside every number; none means [G].
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

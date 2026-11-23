@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T16:05:00Z
+modified: 2026-11-23T18:16:00Z
 level: L2
-version: 0.13.0
+version: 0.14.0
 description: The operator's live recipe - run recipe and hazards, research and plunder rules, stat names, gates, open items, links to the route card and the detail sidecar
 status: unverified
 grounded_in:
@@ -37,6 +37,6 @@ Only the operator holds the device token and sends game input. Reply to the coor
 
 ## Open
 
-Labs busy until 2026-11-24T17:30Z and 2026-11-25T02:39Z; builders free 2026-11-24T09:20Z; Lv.27 batch about 19:56Z; HQ 31 needs Base Expansion, 433.5M coin, 1.3G iron, food. Plunder count 3/4; shard payout varies. Refill test (35 minutes each, unverified): donations-pass-2026-11-23-001 at 17:44Z.
+Labs busy until 2026-11-24T17:30Z and 2026-11-25T02:39Z; builders free 2026-11-23T23:20:12Z (four Training Base upgrades, read 18:07Z); Lv.27 batch about 19:56Z; HQ 31 needs Base Expansion, 433.5M coin, 1.3G iron, food. Plunder count 4/4 today, shard payout varies. Donation refill: 20-minute grid (14:57:57.397Z plus k x 1,200 s; record alliance-donations 1745). Trade icon (107,580) absent since 16:39Z.
 
 Oil: collect via the OIL panel (231,115; Collect 553,501; X 612,209) every 8 hours, next about 23:30Z. Oil Well Lv.20 is at the north-east wall (pan route in the sidecar); Lv.20 to 21 costs iron 8.5M, 09:20:18; Details is not approved: never.
