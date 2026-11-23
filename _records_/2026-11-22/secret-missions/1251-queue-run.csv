@@ -1,0 +1,13 @@
+item,value,read_utc,note
+first frame dialog,TIPS 'active on a different device' NOT showing,2026-11-23T12:51:23Z,condition 1 of the resume held
+HUD at the first frame,"food 653.9M, iron 1.0G, coin 55.9K, oil 647.0K, gold chip 26.72K, diamonds 11,113, energy 82, Total Power 150,413,046",2026-11-23T12:51:23Z,"coin and Total Power equal the 12:36Z read; diamonds 11,136 at 12:12Z, 11,113 now (23 fewer, other device); bar 'Upgrade Builder's Hut to Lv.26 (0/1)'"
+Secret Command Post counters,"Assist Allies 5/5, Plunder Others 0/5",2026-11-23T12:51:37Z,assists already full: nothing to take
+card 1,UR Rescue Missing Agent,2026-11-23T12:51:37Z,"gold PERFECT stamp (claimed), no countdown, no Claim button"
+card 2,UR Capture the Oil Depot,2026-11-23T12:51:37Z,gold PERFECT stamp
+card 3,SSR Train Refugees,2026-11-23T12:51:37Z,gold PERFECT stamp
+card 4,SSR Train Refugees,2026-11-23T12:51:37Z,gold PERFECT stamp
+cards 5 to 8,"SR Retrieve Valuable Supplies, SR Retrieve Agent Profile, SR Retrieve Raw Materials, SR Retrieve Abandoned Gear",2026-11-23T12:53:50Z,gold PERFECT stamp each; a ninth card may sit between card 4 and card 5 (the list jumped)
+countdowns,"none running, earliest next finish not applicable",,no idle slot shown; Mega Refresh and Mega Deploy greyed (nothing to dispatch)
+claim,none pressed: no Claim button anywhere,,"the tasks were already claimed (PERFECT) before 12:51Z, most likely by the owner's session after 12:34Z; what they paid is unknown; no plunder or loss mark seen"
+Ally Tasks,"four SSR rows from two allies, each with an Assist button",2026-11-23T12:51:48Z,none tapped (counter full)
+Others' Tasks badge,"2, then 1",,"Plunder Others is PvP, never tapped"

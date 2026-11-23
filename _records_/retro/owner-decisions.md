@@ -30,4 +30,4 @@ None. On 2026-11-23 the owner closed the last open item (OD-20261123-09). Earlie
 
 - [Catalog 01](owner-decisions-log/catalog-01.md) - Owner decisions register to day-20261121
 - [Catalog 02](owner-decisions-log/catalog-02.md) - 13 entries, OD-20261123-04 to OD-20261123-16
-- [Catalog 03](owner-decisions-log/catalog-03.md) - 5 entries, OD-20261123-17 to OD-20261123-21 (21 is OPEN)
+- [Catalog 03](owner-decisions-log/catalog-03.md) - 6 entries, OD-20261123-17 to OD-20261123-22 (21 is OPEN)

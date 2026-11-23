@@ -39,3 +39,4 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 895](landing-pr-895.md) - donations T1 follow-up, closing standard, shop-claims rule 9 held
 - [PR 896](landing-pr-896.md) - model policy persistence, respawn rule
 - [PR 897](landing-pr-897.md) - tag-text rule in six digests, snapshot-protocol article
+- [PR 898](landing-pr-898.md) - fifth records snapshot, strategist policies, decisions, queue state

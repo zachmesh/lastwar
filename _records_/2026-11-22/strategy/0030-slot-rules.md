@@ -1,8 +1,8 @@
 ---
 title: Slot rules for the planner v1.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T11:11:00Z
-version: 1.3.0
+modified: 2026-11-23T12:45:00Z
+version: 1.4.0
 level: L3
 description: The allocation rules for the free labs and builders, the speed-up order, the slot-arrival protocol and the training rule once four Drill Grounds are known to exist
 status: unverified
@@ -19,12 +19,12 @@ Rules, not units. Costs in [the level table](0030-dg-level-table.csv). Change si
 ## Lab rule (lab 1 at 11:43Z, lab 2 on 11-26 at 07:19Z)
 
 1. Press Complete first; log Total Power before and after.
-2. Start the node with the most slots per lab-day from the R1 preview (Drill Ground Expansion if its text shows slots); else the best +15K node per lab-day that leaves 10M coin.
-3. Never an Age of Oil node. A lab idle over 30 minutes is a miss.
+2. Owner order 12:33Z: start the first available critical-path node of the Age of Oil tree in dependency order from the real preview (cost, time, power, oil); if none is startable (locked or oil short) report in one pass, start no other line.
+3. Tech speed-up items first (at least 15,360 minutes), then general items up to 15 percent of the general stock a week; never Finish Now; log minutes and the new finish time. A lab idle over 30 minutes is a miss.
 
 ## Builder rule (four builders at 09:20Z on 11-24)
 
-1. After F1c, take the next levels in order of power per builder-day: Lv.26 ground L27 (about 34.7K, 59.5M coin), Lv.27 ground L28 (25.1K, 83.3M), Lv.28 ground L29 (19.6K measured, 119.0M). Skip the Lv.30 ground. Start as many as coin, food and iron allow; three need coin 262M, food 978M, iron 321M.
+1. One builder on the Oil Well if the Construct list offers it. For the rest, after F1c, take the next levels in order of power per builder-day: Lv.26 ground L27 (about 34.7K, 59.5M coin), Lv.27 ground L28 (25.1K, 83.3M), Lv.28 ground L29 (19.6K measured, 119.0M). Skip the Lv.30 ground. Start as many as coin, food and iron allow; three need coin 262M, food 978M, iron 321M.
 2. The fourth builder: best power per builder-day with a preview. Never HQ or Lv.31 jobs, never the owner's running queue; every resource stays above its floor.
 3. Chests are converted 2 hours before, by the box policy.
 

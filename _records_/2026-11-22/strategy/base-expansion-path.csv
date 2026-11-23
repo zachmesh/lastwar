@@ -1,0 +1,15 @@
+stage,nodes,dependency,oil,time_and_cost,labs,tag
+1,Unlock Oil Well,none,0,"done 11:53Z, +3,900 [M]",lab 1,S1 sheet
+2,Food Output V; Iron Output V; Coin Output V (parallel),needs Unlock Oil Well,0,"Coin Output V base 485,100 s (5.6 days)",lab 1 Food then Iron; lab 2 Coin after 11-26 07:19Z,"S1 sheet, graph from a second source"
+3,"Oil Output I (10 levels, 60K oil each)",needs all three Output V,600K,148.2 base days (47.9 real at M 3.1),one lab,S1
+4,Fast Builder V; Research Enhancement V (parallel; +2.5 percent research speed a level),needs Oil Output I,0,read,both labs,S1
+5,3rd Tech Center,needs stage 4,180K,read,one lab,S1
+6,Focused Training V; Rapid Field Dressing V (parallel),needs the 3rd Tech Center,0,read,both,S1
+7,Oil Output II,needs stage 6,1.2M,228.3 base days (73.8 real),one lab,S1
+8,Infirmary Expansion V; Emergency Capacity I (parallel),needs Oil Output II,0,read,both,S1
+9,More Oil Wells,needs stage 8,120K,read,one lab,S1
+10,Training Cost I; Healing Cost II (parallel),needs More Oil Wells,0,read,both,S1
+11,Parts Workshop,needs stage 10,180K,read,one lab,S1
+12,Oil Output III,needs Parts Workshop,1.2M,332.2 base days (107.3 real),one lab,S1
+13,Base Expansion,needs Oil Output III,600K,55.5 base days (17.9 real),one lab,S1 and S2
+total,"19 nodes, 46 levels",critical path 879.1 base days with two labs (284 real days at M 3.095 before speed-ups),4.08M,"iron 616M, food 616M, coin 1.82G",,S1 sheet

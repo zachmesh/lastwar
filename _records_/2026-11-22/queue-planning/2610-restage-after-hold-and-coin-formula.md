@@ -29,4 +29,4 @@ Units read coin first. Builder unit 001: N = ceil((142.8M + 10M - coin now) / 2.
 
 ## 3. Note
 
-The lab unit brief is the longest at about 450 words after this edit; the others are 441 and 437. A change to the formula text is a change to these three units and to sheet 2541, which still names the fixed counts and needs the same edit if it is used on its own.
+Word counts after this edit: lab unit 438, builder units 437 and 441; the longest staged brief is 446. The sheet 2540 funding plan gave fixed counts (59 UR chests, 19,834 plain chests); it now says they are planning figures and the formula governs.
