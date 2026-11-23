@@ -37,3 +37,9 @@ The registers keep their paths as entry pages. Dry runs: `owner-decisions.md` 25
 ## Outcome
 
 Pending both replies.
+
+## PR route (appended 2026-11-23T05:54Z)
+
+The Steward read the seven conflicting PRs against origin/main: #711 (four profiles) and #828 (building-queues 1.6.0) are pure duplicates, 100 percent of added text already verbatim on main; #713, #753, #754, #755 and #827 (resource-collection, targeting 1.67.0 and 1.68.0 while main is at 1.70.0) have 72 to 86 percent of their lines already on main, and the 10 distinct lines are version-history entries that main's changelog replaces plus probe observations that live in the immutable records. All are mergeable=false.
+
+Decision: close all seven with a one-line comment, delete no branch so any line can be recovered; leave #838, #425 and #858 alone. The coordinator replied "close" at 05:54Z; the Steward does it and reads the states back. This removes every INDEX conflict before the splits.
