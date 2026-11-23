@@ -1,7 +1,7 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T07:08:14Z
+modified: 2026-11-23T07:21:58Z
 version: 2.3.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
@@ -26,6 +26,7 @@ and staging runtime state.
 | [observation.py](observation.py) | observation file writer | [records](tool-details/records-and-worktree-tools.md) |
 | [retro_report.py](retro_report.py) | retro metrics | [records](tool-details/records-and-worktree-tools.md) |
 | [log_append.py](log_append.py) | JSONL log append | [records](tool-details/records-and-worktree-tools.md) |
+| [log-append-tests](log-append-tests/INDEX.md) | log_append.py gate tests | [own index](log-append-tests/INDEX.md) |
 | [live_checkout_check.py](live_checkout_check.py) | live tool drift | [records](tool-details/records-and-worktree-tools.md) |
 | [pass_worktree.py](pass_worktree.py) | pass worktrees | [records](tool-details/records-and-worktree-tools.md) |
 | [branch_guard.py](branch_guard.py) | records branch guard | [delivery](tool-details/delivery-and-coverage-tools.md) |
