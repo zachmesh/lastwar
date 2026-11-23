@@ -1,14 +1,14 @@
 ---
 title: Alliance Donations Rule Digest
 created: 2026-11-23T05:55:44Z
-modified: 2026-11-23T09:44:05Z
+modified: 2026-11-23T10:03:12Z
 level: L1
-version: 0.6.0
+version: 0.7.0
 description: The standing rules an operator must follow when donating to alliance technology, each cited to the split article file that carries it
 status: unverified
 grounded_in:
-  - source: split articles how-to-enter, how-it-is, cadence-section, day-20261026, day-20261031-hard, day-20261111 and run-20261122-0114 in this folder, read in full, plus the changed-route passage of run-20261108-0920-p2, every cited phrase matched against the article text (43 of 43 matched)
-  - source: coordinator decision on the stale lines and the re-confirmations in run-20261104-0309-p1 and run-20261110-0011-p2 read for the errata
+  - source: split articles how-to-enter, how-it-is, cadence-section, day-20261026, day-20261031-hard, day-20261111 and run-20261122-0114-p1, run-20261122-0114-p2, run-20261122-0114-p3 in this folder, read in full, plus the changed-route passage of _records_/2026-11-08/alliance-donations/0920-queue-run.md, every cited phrase matched against the article text (43 of 43 matched)
+  - source: coordinator decision on the stale lines and the re-confirmations in _records_/2026-11-04/alliance-donations/0309-queue-run.md and _records_/2026-11-10/alliance-donations/0011-queue-run.md read for the errata
   - source: assignment A-20261123-0553-scribe and the pilot finding that the split INDEX no longer states the live rules
   - source: _records_/2026-11-22/alliance-donations/2340-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/1308-queue-run.md
