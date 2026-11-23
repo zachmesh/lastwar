@@ -1,9 +1,9 @@
 ---
 title: The Age of Oil Rule Digest
 created: 2026-11-23T07:17:24Z
-modified: 2026-11-23T07:17:24Z
+modified: 2026-11-23T09:53:41Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: The standing rules an operator must follow when reading the Age of Oil event page, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -20,8 +20,8 @@ grounded_in:
 5. Tap no chest or priced button without direction (how-it-is).
 6. The goals are warzone-wide, 500 Tech Research, 500 Building Upgrades, 10,000 Hero Recruitments; the per-commander ranking pays the top 20 (run-20261109-0829-p1, run-20261109-0829-p2).
 7. Milestones 1 and 2 were claimed and verified gone by 2026-11-09; the path cost nothing (run-20261109-0829-p2).
-8. The stage-1 badge 1 marks progress-track step 1; whether it is claimable is unmeasured (run-20261111-1946, run-20261111-1850).
-9. The window was derived to end about 2026-11-15 17:56 PT; no read since 2026-11-11 (run-20261109-0829-p1, run-20261111-1946).
+8. The stage-1 badge 1 marks progress-track step 1; whether it is claimable is unmeasured (_records_/2026-11-11/perception-scout/1946-queue-run.md, _records_/2026-11-11/perception-scout/1850-queue-run.md).
+9. The window was derived to end about 2026-11-15 17:56 PT; no read since 2026-11-11 (run-20261109-0829-p1, _records_/2026-11-11/perception-scout/1946-queue-run.md).
 
 Unverified: the Hero Mobilization chest contents and the play button (open-questions); the Building and Hero ranking tables; the end time, derived from a timer; drag and tap methods, from old ticker units, not the current bridge (how-it-is).
 
@@ -30,5 +30,5 @@ Unverified: the Hero Mobilization chest contents and the play button (open-quest
 Unverified until a live read settles each; articles stay verbatim, the newer governs.
 
 - open-questions "likely Desert Battlefield's badge": narrowed by its own 2026-11-11 1850 and 1946 updates, the tab badge is the stage-1 badge.
-- run-20261111-1850 "NOT proven to be a claimable reward": narrowed by run-20261111-1946 (2026-11-11, later), badge meaning settled, claimability still unmeasured.
+- _records_/2026-11-11/perception-scout/1850-queue-run.md "NOT proven to be a claimable reward": narrowed by _records_/2026-11-11/perception-scout/1946-queue-run.md (2026-11-11, later), badge meaning settled, claimability still unmeasured.
 - how-it-is "without the owner's direction": superseded 2026-11-23T06:47Z by the owner (OD-20261123-05, _records_/retro/owner-decisions-log/od-20261123-05.md); seats decide and record choices; red lines unchanged: no purchase, diamonds, attack, march, diplomacy, ally-exchange.

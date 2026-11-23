@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T06:45:27Z
-modified: 2026-11-23T06:45:27Z
-version: 1.0.0
+modified: 2026-11-23T09:46:55Z
+version: 1.1.0
 description: Catalog 01 of the split Troop Training
 ---
 
@@ -29,12 +29,12 @@ description: Catalog 01 of the split Troop Training
 - [Standing blocker recorded by the retro of 2026-10-31](day-20261031-p4.md) - day-20261031 - (2026-11-10 2146 QUALIFICATION: Drill Ground Full
 - [Standing blocker recorded by the retro of 2026-10-31](day-20261031-p5.md) - day-20261031 - the mail screens are not the
 - [Standing blocker recorded by the retro of 2026-10-31](day-20261031-p6.md) - day-20261031 - Update 2026-11-10 1521 (scout cross-read): the
-- [What the 2026-11-01 0045 unit added](run-20261101-0045.md) - run-20261101-0045 - Inherited points went stale after camera
-- [What the 2026-11-01 0917 unit added](run-20261101-0917.md) - run-20261101-0917 - Pinned-point failure escalated from a miss
-- [What the 2026-11-01 1216 unit added](run-20261101-1216.md) - run-20261101-1216 - Changed method per queue rule R2:
+- [What the 2026-11-01 0045 unit added](../../_run_notes_/troop-training/run-20261101-0045.md) - run-20261101-0045 - Inherited points went stale after camera
+- [What the 2026-11-01 0917 unit added](../../_run_notes_/troop-training/run-20261101-0917.md) - run-20261101-0917 - Pinned-point failure escalated from a miss
+- [What the 2026-11-01 1216 unit added](../../_run_notes_/troop-training/run-20261101-1216.md) - run-20261101-1216 - Changed method per queue rule R2:
 - [What the 2026-11-01 1651 unit added](run-20261101-1651.md) - run-20261101-1651 - Status partial: unit training-2026-11-01-1403 by ticker-1638,
-- [What the 2026-11-01 2120 unit added part 1](run-20261101-2120-p1.md) - run-20261101-2120 - Partial, barracks tents still not located:
+- [What the 2026-11-01 2120 unit added part 1](../../_run_notes_/troop-training/run-20261101-2120-p1.md) - run-20261101-2120 - Partial, barracks tents still not located:
 - [What the 2026-11-01 2120 unit added part 2](run-20261101-2120-p2.md) - run-20261101-2120 - Drill Ground Full status, fifth consecutive
-- [What the 2026-11-02 0017 unit added](run-20261102-0017.md) - run-20261102-0017 - Unit training-2026-11-01-2203 by ticker-0004, session about
-- [What the 2026-11-02 0322 unit added](run-20261102-0322.md) - run-20261102-0322 - Unit training-2026-11-02-0203 by ticker-0308, session about
+- [What the 2026-11-02 0017 unit added](../../_run_notes_/troop-training/run-20261102-0017.md) - run-20261102-0017 - Unit training-2026-11-01-2203 by ticker-0004, session about
+- [What the 2026-11-02 0322 unit added](../../_run_notes_/troop-training/run-20261102-0322.md) - run-20261102-0322 - Unit training-2026-11-02-0203 by ticker-0308, session about
 - [What the 2026-11-02 0811 unit added](run-20261102-0811.md) - run-20261102-0811 - Unit training-2026-11-02-0603 by ticker-0804, session 08:05

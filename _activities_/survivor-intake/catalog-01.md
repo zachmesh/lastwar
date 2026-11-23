@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T06:28:34Z
-modified: 2026-11-23T06:28:34Z
-version: 1.0.0
+modified: 2026-11-23T09:57:13Z
+version: 1.1.0
 description: Catalog 01 of the split Survivor Intake
 ---
 
@@ -28,13 +28,13 @@ description: Catalog 01 of the split Survivor Intake
 - [Standing blocker recorded by the retro of 2026-10-31](day-20261031-p4.md) - day-20261031 - Update 2026-11-16 2122: the gate was
 - [Standing blocker recorded by the retro of 2026-10-31](day-20261031-p5.md) - day-20261031 - Update 2026-11-22 0932: Quick Dispatch panel
 - [What the 2026-11-01 early unit added](day-20261101.md) - day-20261101 - The streak continues past the retro's
-- [What the 2026-11-01 0041 unit added](run-20261101-0041.md) - run-20261101-0041 - Duplicate re-run, not a new distinct
+- [What the 2026-11-01 0041 unit added](../../_run_notes_/survivor-intake/run-20261101-0041.md) - run-20261101-0041 - Duplicate re-run, not a new distinct
 - [What the 2026-11-01 0913 unit added](run-20261101-0913.md) - run-20261101-0913 - Distinct-unit streak reaches 24: this unit
-- [What the 2026-11-01 1017 diagnostic unit added part](run-20261101-1017-p1.md) - run-20261101-1017 - Diagnostic unit survivors-diagnostic-001 (ticker-1004, session about
-- [What the 2026-11-01 1017 diagnostic unit added part](run-20261101-1017-p2.md) - run-20261101-1017 - Session-drop recovery, same pattern as the
-- [What the 2026-11-01 1159 unit added](run-20261101-1159.md) - run-20261101-1159 - Regular-unit partial streak reaches 25: this
-- [What the 2026-11-01 1644 unit added](run-20261101-1644.md) - run-20261101-1644 - Regular-unit partial streak BROKEN at 25:
-- [What the 2026-11-01 2034 unit added](run-20261101-2034.md) - run-20261101-2034 - First regular-unit partial since the 1644
-- [What the 2026-11-02 0016 unit added](run-20261102-0016.md) - run-20261102-0016 - Second regular-unit partial since the 1644
+- [What the 2026-11-01 1017 diagnostic unit added part](../../_run_notes_/survivor-intake/run-20261101-1017-p1.md) - run-20261101-1017 - Diagnostic unit survivors-diagnostic-001 (ticker-1004, session about
+- [What the 2026-11-01 1017 diagnostic unit added part](../../_run_notes_/survivor-intake/run-20261101-1017-p2.md) - run-20261101-1017 - Session-drop recovery, same pattern as the
+- [What the 2026-11-01 1159 unit added](../../_run_notes_/survivor-intake/run-20261101-1159.md) - run-20261101-1159 - Regular-unit partial streak reaches 25: this
+- [What the 2026-11-01 1644 unit added](../../_run_notes_/survivor-intake/run-20261101-1644.md) - run-20261101-1644 - Regular-unit partial streak BROKEN at 25:
+- [What the 2026-11-01 2034 unit added](../../_run_notes_/survivor-intake/run-20261101-2034.md) - run-20261101-2034 - First regular-unit partial since the 1644
+- [What the 2026-11-02 0016 unit added](../../_run_notes_/survivor-intake/run-20261102-0016.md) - run-20261102-0016 - Second regular-unit partial since the 1644
 - [What the 2026-11-02 0320 unit added](run-20261102-0320.md) - run-20261102-0320 - Third regular-unit partial since the 1644
-- [What the 2026-11-02 0747 unit added](run-20261102-0747.md) - run-20261102-0747 - Fourth regular-unit partial since the 1644
+- [What the 2026-11-02 0747 unit added](../../_run_notes_/survivor-intake/run-20261102-0747.md) - run-20261102-0747 - Fourth regular-unit partial since the 1644

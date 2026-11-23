@@ -1,0 +1,11 @@
+---
+title: Moved Paths
+created: 2026-11-23T09:46:55Z
+modified: 2026-11-23T09:58:36Z
+version: 1.28.0
+description: The table that resolves the old paths of the moved run articles
+---
+
+# Moved paths
+
+[moved-paths.csv](moved-paths.csv) maps the old path of each run article that moved from `_activities_/<activity>/` to `_run_notes_/<activity>/` to its new path and to the dated record it duplicates: 1095 rows (old_path, new_path, record). Records and other pages that cite an old path are never edited; resolve the path here. Back to the [run notes](../INDEX.md).

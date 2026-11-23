@@ -1,12 +1,18 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T07:40:44Z
+modified: 2026-11-23T09:39:12Z
 level: L1
-version: 1.107.0
+version: 1.108.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
+  - source: _records_/2026-11-22/alliance-donations/1308-queue-run.md
+  - source: _records_/2026-11-22/alliance-donations/0554-queue-run.md
+  - source: _records_/2026-11-22/alliance-donations/2340-queue-run.md
+  - source: _records_/2026-11-22/alliance-donations/0114-queue-run.md
+  - source: _records_/2026-11-17/alliance-donations/1240-queue-run.md
+  - source: _records_/2026-11-22/coach/playbook-numbers-lines.csv
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner task request naming alliance tech, 2026-10-25
@@ -137,24 +143,42 @@ grounded_in:
   - source: "GitHub Issue #813 comments 2026-11-22T15:28:56Z (ticker-0704 unit donations-2026-11-22-1241: count 4/30 at entry, 4 donations to exhaustion, footer +550, single tap did nothing, 1-second long-press donated - record file _records_/2026-11-22/alliance-donations/0711-queue-run.md exists in NO ref in the repo, comment-sourced only) and 2026-11-22T17:50:18Z (ticker-0910 re-read: +7 in about 230 minutes, roughly 33 minutes per refill, slower than the 20-minute hypothesis; the 20-minute cycle needs re-testing against a live-read 0/30 close)"
 ---
 
-# Alliance Donations
+# Alliance donations playbook card
 
-Donating to alliance technology, one activity folder for donation knowledge. This document was split verbatim into 267 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
+Goal: donate every run to the recommended technology, closing each unit on a live count.
 
-- [Rule digest](rule-digest.md) - the standing rules an operator must follow, each cited to an article file name; read it first.
-- [Catalog 01](catalog-01.md) - Alliance donations to run-20261102-0547
-- [Catalog 02](catalog-02.md) - run-20261102-0621 to open-questions
-- [Catalog 03](catalog-03.md) - open-questions to run-20261103-1421
-- [Catalog 04](catalog-04.md) - run-20261103-1421 to run-20261105-2152
-- [Catalog 05](catalog-05.md) - run-20261106-0434 to run-20261107-2219
-- [Catalog 06](catalog-06.md) - run-20261107-2341 to run-20261108-0841
-- [Catalog 07](catalog-07.md) - run-20261108-0841 to run-20261109-1413
-- [Catalog 08](catalog-08.md) - run-20261109-1413 to run-20261110-0804
-- [Catalog 09](catalog-09.md) - run-20261110-0918 to run-20261111-0024
-- [Catalog 10](catalog-10.md) - run-20261111-0757 to run-20261111-0733
-- [Catalog 11](catalog-11.md) - run-20261111-1004 to run-20261122-0114
+## Route
+1. Restore the base framing if panned.
+2. Tap the Alliance shield, ground fresh, then the Techs tile.
+3. Find the red-panda recommended badge (drag the War tree up).
+4. Open that node; read count and coin cost.
+5. Tap coin Donate once; re-read the count.
+6. Stop at the live-read 1/30; never tap diamonds.
+7. Return to base.
+Shown in `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, step 1 in `_records_/2026-11-22/alliance-donations/0554-queue-run.md`.
 
-## Changelog
+## Rules
+- R1 Stop at the live-read 1/30; last one to a named re-read unit (by-design partial, blocker h). Status: tested. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
+- R2 Close only on a live count; a timer hiding it means close unverified, tracker untouched. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/0554-queue-run.md`
+- R3 Read recommended node and coin cost fresh each unit. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
+- R4 Re-read the count after every tap. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`
+- R5 Ground the Alliance shield fresh each screenshot. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
 
-- 1.105.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 4,221-line, 84,459-word body into 267 key-named articles and 11 catalog pages, and added `rule-digest.md`; no word rewritten, no claim superseded. `--verify` PASS and `--check` EQUAL, body sha256 7656c5649cd3; the unsplit 1.104.0 file is commit 90efe975.
-- 1.106.0, 2026-11-23 - Identifier text replaced with the denylist markers by `lint_gate.py redact` in 46 files (210 matches, counts only); the changed articles and catalog pages moved from 0.1.0 to 0.2.0 where versioned; `split_doc --check` against the redacted original EQUAL; no other change.
+## Failures
+- Count hidden by timer - fix: R1, else wait and re-read. `_records_/2026-11-22/alliance-donations/0114-queue-run.md`
+- Window or device lost - fix: owner clicks the LastWar Dock icon once. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
+- Alliance button ignores the tap - fix: restore framing, re-ground. `_records_/2026-11-22/alliance-donations/0554-queue-run.md`
+
+## Open questions
+- Does a tap from a live 1/30 land? Test: tap once, wait out the timer, re-read count; run by researcher.
+- What are the refill rate and closing standard? Test: live reads every 10 minutes after a live zero; run by researcher.
+- Why does Alliance ignore taps in the windowed 788x1083 state? Test: enter there, then in 642x951; run by operator.
+
+## Numbers
+Numbers, 7 days to 2026-11-23: 12 units; done 0%; done-or-by-design 42%; partial 9, failed 3; mean steps 7 (1 of 12 report it); top blocker h by-design partial (5 of 12 non-done).
+
+## Links
+- [Rule digest](rule-digest.md)
+- [All catalogs](article-catalogs.md)
+- [Newest record](../../_records_/2026-11-22/alliance-donations/2340-queue-run.md)
+- [Open questions](open-questions-p1.md)

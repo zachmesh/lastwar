@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T07:16:21Z
-modified: 2026-11-23T07:16:21Z
-version: 1.0.0
+modified: 2026-11-23T09:54:53Z
+version: 1.1.0
 description: Catalog 01 of the split Truck Plunder
 ---
 
@@ -31,10 +31,10 @@ description: Catalog 01 of the split Truck Plunder
 - [What is known from 2026-10-25 part 1](day-20261025-p1.md) - day-20261025 - Observed in game on this account,
 - [What is known from 2026-10-25 part 2](day-20261025-p2.md) - day-20261025 - Settlement - the four noon trucks
 - [Limits](limits-section.md) - limits-section - No diamond spending on refreshes, ever.
-- [What the 2026-11-01 1053 unit added part 1](run-20261101-1053-p1.md) - run-20261101-1053 - Unit trucks-2026-11-01-0657 by ticker-1034, session about
+- [What the 2026-11-01 1053 unit added part 1](../../_run_notes_/truck-plunder/run-20261101-1053-p1.md) - run-20261101-1053 - Unit trucks-2026-11-01-0657 by ticker-1034, session about
 - [What the 2026-11-01 1053 unit added part 2](run-20261101-1053-p2.md) - run-20261101-1053 - Plunder was not attempted: the unit
-- [What the 2026-11-01 1352 unit added part 1](run-20261101-1352-p1.md) - run-20261101-1352 - Unit trucks-2026-11-01-1057 by ticker-1334, session about
+- [What the 2026-11-01 1352 unit added part 1](../../_run_notes_/truck-plunder/run-20261101-1352-p1.md) - run-20261101-1352 - Unit trucks-2026-11-01-1057 by ticker-1334, session about
 - [What the 2026-11-01 1352 unit added part 2](run-20261101-1352-p2.md) - run-20261101-1352 - Outcome partial, counters at close read
 - [Unresolved counter tension - 2026-11-01 1813 incidental read](run-20261101-1813.md) - run-20261101-1813 - The 1813 train unit opened the
-- [What the 2026-11-01 2231 unit added part 1](run-20261101-2231-p1.md) - run-20261101-2231 - Unit trucks-2026-11-01-1857 by ticker-2212, session about
-- [What the 2026-11-01 2231 unit added part 2](run-20261101-2231-p2.md) - run-20261101-2231 - Plunder, one fight won: changed method
+- [What the 2026-11-01 2231 unit added part 1](../../_run_notes_/truck-plunder/run-20261101-2231-p1.md) - run-20261101-2231 - Unit trucks-2026-11-01-1857 by ticker-2212, session about
+- [What the 2026-11-01 2231 unit added part 2](../../_run_notes_/truck-plunder/run-20261101-2231-p2.md) - run-20261101-2231 - Plunder, one fight won: changed method

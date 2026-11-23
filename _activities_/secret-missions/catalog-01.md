@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T07:15:45Z
-modified: 2026-11-23T07:15:45Z
-version: 1.0.0
+modified: 2026-11-23T09:52:31Z
+version: 1.1.0
 description: Catalog 01 of the split Secret Missions
 ---
 
@@ -23,19 +23,19 @@ description: Catalog 01 of the split Secret Missions
 - [Task catalogue - observed tasks](task-catalogue-observed.md) - task-catalogue-observed - Per task play data, as the
 - [Cadence and 2 more](cadence-section.md) - cadence-section, scope-and-availability, day-20261025 - Own tasks run on timers from
 - [What is known from 2026-11-01](day-20261101.md) - day-20261101 - Measured in the 0145 unit (ticker-0136,
-- [What the 2026-11-01 1417 unit added part 1](run-20261101-1417-p1.md) - run-20261101-1417 - Unit secrets-2026-11-01-1057 by ticker-1404, status partial.
+- [What the 2026-11-01 1417 unit added part 1](../../_run_notes_/secret-missions/run-20261101-1417-p1.md) - run-20261101-1417 - Unit secrets-2026-11-01-1057 by ticker-1404, status partial.
 - [What the 2026-11-01 1417 unit added part 2](run-20261101-1417-p2.md) - run-20261101-1417 - Follow-up carried forward: continue assists to
 - [Limits](limits-section.md) - limits-section - Plunder Others is PvP.
 - [What the 2026-11-01 1757 sweep visit added](run-20261101-1757.md) - run-20261101-1757 - Panel visit, not a secrets unit:
-- [What the 2026-11-01 2243 unit added part 1](run-20261101-2243-p1.md) - run-20261101-2243 - Unit secrets-2026-11-01-1857 by ticker-2243, session about
+- [What the 2026-11-01 2243 unit added part 1](../../_run_notes_/secret-missions/run-20261101-2243-p1.md) - run-20261101-2243 - Unit secrets-2026-11-01-1857 by ticker-2243, session about
 - [What the 2026-11-01 2243 unit added part 2](run-20261101-2243-p2.md) - run-20261101-2243 - BLOCKER, first occurrence for this regular,
-- [What the 2026-11-02 0150 unit added - Go](run-20261102-0150-p1.md) - run-20261102-0150 - Unit secrets-2026-11-01-2257 by ticker-0134, session about
-- [What the 2026-11-02 0150 unit added - Go](run-20261102-0150-p2.md) - run-20261102-0150 - All 8 tasks dispatched in this
+- [What the 2026-11-02 0150 unit added - Go](../../_run_notes_/secret-missions/run-20261102-0150-p1.md) - run-20261102-0150 - Unit secrets-2026-11-01-2257 by ticker-0134, session about
+- [What the 2026-11-02 0150 unit added - Go](../../_run_notes_/secret-missions/run-20261102-0150-p2.md) - run-20261102-0150 - All 8 tasks dispatched in this
 - [What the 2026-11-02 0150 unit added - Go](run-20261102-0150-p3.md) - run-20261102-0150 - Result: 8 tasks dispatched, 0 claimed,
-- [What the 2026-11-02 0426 unit added - assists](run-20261102-0426-p1.md) - run-20261102-0426 - Unit secrets-2026-11-02-0257 by ticker-0404, session about
-- [What the 2026-11-02 0426 unit added - assists](run-20261102-0426-p2.md) - run-20261102-0426 - Claims, all finished tasks in one
+- [What the 2026-11-02 0426 unit added - assists](../../_run_notes_/secret-missions/run-20261102-0426-p1.md) - run-20261102-0426 - Unit secrets-2026-11-02-0257 by ticker-0404, session about
+- [What the 2026-11-02 0426 unit added - assists](../../_run_notes_/secret-missions/run-20261102-0426-p2.md) - run-20261102-0426 - Claims, all finished tasks in one
 - [What the 2026-11-02 0952 unit added](run-20261102-0952.md) - run-20261102-0952 - Unit secrets-2026-11-02-0657 by ticker-0934, session about
-- [What the 2026-11-02 1345 unit added part 1](run-20261102-1345-p1.md) - run-20261102-1345 - Unit secrets-2026-11-02-1057 by ticker-1336, session about
+- [What the 2026-11-02 1345 unit added part 1](../../_run_notes_/secret-missions/run-20261102-1345-p1.md) - run-20261102-1345 - Unit secrets-2026-11-02-1057 by ticker-1336, session about
 - [What the 2026-11-02 1345 unit added part 2](run-20261102-1345-p2.md) - run-20261102-1345 - Outcome: nothing claimed, nothing dispatched.
-- [What the 2026-11-02 2127 unit added - four](run-20261102-2127-p1.md) - run-20261102-2127 - Unit secrets-2026-11-02-1857 by ticker-2104, session about
+- [What the 2026-11-02 2127 unit added - four](../../_run_notes_/secret-missions/run-20261102-2127-p1.md) - run-20261102-2127 - Unit secrets-2026-11-02-1857 by ticker-2104, session about
 - [What the 2026-11-02 2127 unit added - four](run-20261102-2127-p2.md) - run-20261102-2127 - Counters at close, read live: Assist

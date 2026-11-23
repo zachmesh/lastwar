@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T06:11:49Z
-modified: 2026-11-23T06:11:49Z
-version: 1.0.0
+modified: 2026-11-23T09:46:55Z
+version: 1.1.0
 description: Catalog 01 of the split Alliance Donations
 ---
 
@@ -31,10 +31,10 @@ description: Catalog 01 of the split Alliance Donations
 - [Hard closing rule - live read or unverified](day-20261031-hard-p1.md) - day-20261031-hard - The owner named the incomplete donations
 - [Hard closing rule - live read or unverified](day-20261031-hard-p2.md) - day-20261031-hard - Scheduling - donation units run in
 - [Hard closing rule - live read or unverified](day-20261031-hard-p3.md) - day-20261031-hard - Re-examination note 2026-11-09 (GitHub Issue #500):
-- [What the 2026-11-01 2348 unit added part 1](run-20261101-2348-p1.md) - run-20261101-2348 - Unit donations-2026-11-01-2203 by ticker-2334, session about
-- [What the 2026-11-01 2348 unit added part 2](run-20261101-2348-p2.md) - run-20261101-2348 - Footer pair, observed only: Tech Donation
-- [What the 2026-11-02 0259 unit added](run-20261102-0259.md) - run-20261102-0259 - Unit donations-2026-11-02-0203 by ticker-0235, session about
-- [What the 2026-11-02 0545 unit added part 1](run-20261102-0545-p1.md) - run-20261102-0545 - Unit donations-2026-11-02-0354 by ticker-0534, session about
+- [What the 2026-11-01 2348 unit added part 1](../../_run_notes_/alliance-donations/run-20261101-2348-p1.md) - run-20261101-2348 - Unit donations-2026-11-01-2203 by ticker-2334, session about
+- [What the 2026-11-01 2348 unit added part 2](../../_run_notes_/alliance-donations/run-20261101-2348-p2.md) - run-20261101-2348 - Footer pair, observed only: Tech Donation
+- [What the 2026-11-02 0259 unit added](../../_run_notes_/alliance-donations/run-20261102-0259.md) - run-20261102-0259 - Unit donations-2026-11-02-0203 by ticker-0235, session about
+- [What the 2026-11-02 0545 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-0545-p1.md) - run-20261102-0545 - Unit donations-2026-11-02-0354 by ticker-0534, session about
 - [What the 2026-11-02 0545 unit added part 2](run-20261102-0545-p2.md) - run-20261102-0545 - Replenishment, second confirmation, GitHub Issues #160
-- [What the 2026-11-02 0547 unit added part 1](run-20261102-0547-p1.md) - run-20261102-0547 - Unit donations-2026-11-02-0748 by ticker-0534, session about
+- [What the 2026-11-02 0547 unit added part 1](../../_run_notes_/alliance-donations/run-20261102-0547-p1.md) - run-20261102-0547 - Unit donations-2026-11-02-0748 by ticker-0534, session about
 - [What the 2026-11-02 0547 unit added part 2](run-20261102-0547-p2.md) - run-20261102-0547 - Consequence: the re-read this unit was

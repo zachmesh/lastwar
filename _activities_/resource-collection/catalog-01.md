@@ -1,8 +1,8 @@
 ---
 title: Catalog 01
 created: 2026-11-23T06:19:33Z
-modified: 2026-11-23T06:19:33Z
-version: 1.0.0
+modified: 2026-11-23T09:57:13Z
+version: 1.1.0
 description: Catalog 01 of the split Resource Collection
 ---
 
@@ -29,11 +29,11 @@ description: Catalog 01 of the split Resource Collection
 - [How it is done part 15](how-it-is-p15.md) - how-it-is - no panel opened and no loot
 - [Standing instruction from the owner and 1 more](standing-instruction-from.md) - standing-instruction-from, day-20261025 - Set on 2026-10-25 (evening), with the
 - [What the 2026-10-31 late unit and the 2026-11-01](day-20261031.md) - day-20261031 - Not every round floating icon is
-- [What the 2026-11-01 1149 unit added](run-20261101-1149.md) - run-20261101-1149 - Bubble inventory at entry, located by
-- [What the 2026-11-01 1534 urgent full sweep added](run-20261101-1534-p1.md) - run-20261101-1534 - Unit harvest-2026-11-01-1403 by ticker-urgent-harvest, session about
-- [What the 2026-11-01 1534 urgent full sweep added](run-20261101-1534-p2.md) - run-20261101-1534 - buildings inside the walled compound at
+- [What the 2026-11-01 1149 unit added](../../_run_notes_/resource-collection/run-20261101-1149.md) - run-20261101-1149 - Bubble inventory at entry, located by
+- [What the 2026-11-01 1534 urgent full sweep added](../../_run_notes_/resource-collection/run-20261101-1534-p1.md) - run-20261101-1534 - Unit harvest-2026-11-01-1403 by ticker-urgent-harvest, session about
+- [What the 2026-11-01 1534 urgent full sweep added](../../_run_notes_/resource-collection/run-20261101-1534-p2.md) - run-20261101-1534 - buildings inside the walled compound at
 - [What the 2026-11-01 1534 urgent full sweep added](run-20261101-1534-p3.md) - run-20261101-1534 - Bubble-versus-icon distinction, refined: the Gear Factory
-- [What the 2026-11-01 2006 unit added](run-20261101-2006.md) - run-20261101-2006 - Unit harvest-2026-11-01-1803 by ticker-2006, status partial.
-- [What the 2026-11-01 2356 unit added](run-20261101-2356.md) - run-20261101-2356 - Unit harvest-2026-11-01-2203 by ticker-2334, status partial.
-- [What the 2026-11-02 0308 unit added](run-20261102-0308.md) - run-20261102-0308 - Unit harvest-2026-11-02-0203 by ticker-0308, session 03:08
-- [What the 2026-11-02 0741 unit added](run-20261102-0741.md) - run-20261102-0741 - Unit harvest-2026-11-02-0603 by ticker-0734, session 07:35
+- [What the 2026-11-01 2006 unit added](../../_run_notes_/resource-collection/run-20261101-2006.md) - run-20261101-2006 - Unit harvest-2026-11-01-1803 by ticker-2006, status partial.
+- [What the 2026-11-01 2356 unit added](../../_run_notes_/resource-collection/run-20261101-2356.md) - run-20261101-2356 - Unit harvest-2026-11-01-2203 by ticker-2334, status partial.
+- [What the 2026-11-02 0308 unit added](../../_run_notes_/resource-collection/run-20261102-0308.md) - run-20261102-0308 - Unit harvest-2026-11-02-0203 by ticker-0308, session 03:08
+- [What the 2026-11-02 0741 unit added](../../_run_notes_/resource-collection/run-20261102-0741.md) - run-20261102-0741 - Unit harvest-2026-11-02-0603 by ticker-0734, session 07:35

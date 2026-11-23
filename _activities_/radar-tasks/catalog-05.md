@@ -1,8 +1,8 @@
 ---
 title: Catalog 05
 created: 2026-11-23T06:25:33Z
-modified: 2026-11-23T06:25:33Z
-version: 1.0.0
+modified: 2026-11-23T09:56:04Z
+version: 1.1.0
 description: Catalog 05 of the split Radar Tasks
 ---
 
@@ -10,7 +10,7 @@ description: Catalog 05 of the split Radar Tasks
 
 25 entries of Radar Tasks, from run-20261105-1504 to run-20261107-0304. Back to the [index](INDEX.md).
 
-- [What the 2026-11-05 1504 unit added - Mac](run-20261105-1504-p1.md) - run-20261105-1504 - Unit radar-2026-11-05-1403 by ticker-1504, about 15:04
+- [What the 2026-11-05 1504 unit added - Mac](../../_run_notes_/radar-tasks/run-20261105-1504-p1.md) - run-20261105-1504 - Unit radar-2026-11-05-1403 by ticker-1504, about 15:04
 - [What the 2026-11-05 1504 unit added - Mac](run-20261105-1504-p2.md) - run-20261105-1504 - Tracker untouched for failed, per the
 - [What the 2026-11-05 1933 unit added - Mac](run-20261105-1933-p1.md) - run-20261105-1933 - Unit radar-2026-11-05-1803 by ticker-1933, about 19:34
 - [What the 2026-11-05 1933 unit added - Mac](run-20261105-1933-p2.md) - run-20261105-1933 - Reading warning: this failed unit gives
@@ -30,8 +30,8 @@ description: Catalog 05 of the split Radar Tasks
 - [What the 2026-11-06 1934 unit added - Mac](run-20261106-1934-p2.md) - run-20261106-1934 - New against the 1507 pass, which
 - [What the 2026-11-07 0011 unit added - Mac](run-20261107-0011-p1.md) - run-20261107-0011 - Unit radar-2026-11-06-2203 by ticker-0011, session window
 - [What the 2026-11-07 0011 unit added - Mac](run-20261107-0011-p2.md) - run-20261107-0011 - New against the 1934 pass, which
-- [What the 2026-11-07 0011 unit added - Mac](run-20261107-0011-p3.md) - run-20261107-0011 - Pass context: before any game work,
+- [What the 2026-11-07 0011 unit added - Mac](../../_run_notes_/radar-tasks/run-20261107-0011-p3.md) - run-20261107-0011 - Pass context: before any game work,
 - [What the 2026-11-07 0132 unit added - Mac](run-20261107-0132-p1.md) - run-20261107-0132 - Unit radar-2026-11-06-2203 by ticker-0127, session window
-- [What the 2026-11-07 0132 unit added - Mac](run-20261107-0132-p2.md) - run-20261107-0132 - New against the 0011 pass, which
+- [What the 2026-11-07 0132 unit added - Mac](../../_run_notes_/radar-tasks/run-20261107-0132-p2.md) - run-20261107-0132 - New against the 0011 pass, which
 - [What the 2026-11-07 0304 unit added - Mac](run-20261107-0304-p1.md) - run-20261107-0304 - Unit radar-2026-11-07-0203 by ticker-0304, session window
-- [What the 2026-11-07 0304 unit added - Mac](run-20261107-0304-p2.md) - run-20261107-0304 - Reading warning: this failed unit gives
+- [What the 2026-11-07 0304 unit added - Mac](../../_run_notes_/radar-tasks/run-20261107-0304-p2.md) - run-20261107-0304 - Reading warning: this failed unit gives

@@ -1,9 +1,9 @@
 ---
 title: Alliance Duel Rule Digest
 created: 2026-11-23T07:04:59Z
-modified: 2026-11-23T07:25:51Z
+modified: 2026-11-23T09:53:41Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: The standing rules an operator must follow for the Alliance Duel and its Star Ceremony, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -23,7 +23,7 @@ grounded_in:
 8. An unreadable total is "total unread", never estimated; settlement day shows none (day-20261101-duel-p2, run-20261122-1400-p1).
 9. A tracking unit never buys to chase the target (day-20261101-duel-p2, scope-and-availability).
 
-Unverified: what the chest counter and Go button do (the-star-ceremony, run-20261108-0150-p1); why the icon vanished unfinished (run-20261108-2218-p1); Event 42 finale claim (run-20261122-1400-p1); normalized-coordinate taps, old ticker units, not the current bridge (run-20261108-0150-p1).
+Unverified: what the chest counter and Go button do (the-star-ceremony, _records_/2026-11-08/perception-scout/0150-queue-run.md); why the icon vanished unfinished (_records_/2026-11-08/alliance-duel/2218-queue-run.md); Event 42 finale claim (run-20261122-1400-p1); normalized-coordinate taps, old ticker units, not the current bridge (_records_/2026-11-08/perception-scout/0150-queue-run.md).
 
 ## Errata
 

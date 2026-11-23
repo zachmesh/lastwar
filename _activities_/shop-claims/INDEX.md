@@ -1,12 +1,19 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T07:43:28Z
+modified: 2026-11-23T09:39:11Z
 level: L1
-version: 1.63.0
+version: 1.64.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
+  - source: _records_/2026-11-22/shop-claims/2044-queue-run.md
+  - source: _records_/2026-11-22/shop-claims/1059-queue-run.md
+  - source: _records_/2026-11-22/shop-claims/2354-queue-run.md
+  - source: _records_/2026-11-19/shop-claims/1434-queue-run.md
+  - source: _records_/2026-11-11/shop-claims/0656-queue-run.md
+  - source: _records_/2026-11-10/shop-claims/1836-queue-run.md
+  - source: _records_/2026-11-22/coach/playbook-numbers-lines.csv
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1039 passes unit)
@@ -65,18 +72,43 @@ grounded_in:
   - source: "ticker-1050 shop-claims execution record 2026-11-22 1059 queue run (done, checked only, nothing claimable - Free Supply already Claimed, no weekly or monthly pass owned, FREE GIFT card opens the web store not an in-game claim, late finish past 10:57 expiry; record commit 8fad985c1, landed via merged records PR #821)"
 ---
 
-# Shop Claims
+# Shop claims playbook card
 
-Read rule-digest.md first.
+Goal: claim every free shop item due and spend nothing.
 
-Free shop packs and pass daily gifts, one activity folder for shop claim knowledge. This document was split verbatim into 99 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
+## Route
+1. Check LastWar has a window and is frontmost.
+2. Open the shop from the base cart icon.
+3. Hot Deals: tap Free Claim on a pack with no price.
+4. Weekly Pass tab: Free Supply should read Claimed.
+5. Read each pass card; only an owned pass shows Claim.
+6. Super Monthly Pass tab: Claim Reward once if owned.
+7. Leave Take All and the check-in Go alone.
+8. Back to base; record results.
 
-- [Catalog 01](catalog-01.md) - Shop claims to run-20261103-2234
-- [Catalog 02](catalog-02.md) - run-20261104-0237 to run-20261108-0512
-- [Catalog 03](catalog-03.md) - run-20261108-0512 to run-20261110-1029
-- [Catalog 04](catalog-04.md) - run-20261110-1029 to run-20261122-0234
+## Rules
+- R1 Check window and device before claiming; if lost, stop the pass. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R2 Never tap a price button, Renew, Extension or Take All. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R3 Get Now and Buy x1 cards are offers; only owned passes pay. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R4 Reset is 18:00:00 (02:00 UTC), not 19:00. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R5 Free Supply usually auto-claims on open; if unclaimed, tap it. Status: verified. 2026-11-11. `_records_/2026-11-11/shop-claims/0656-queue-run.md`
 
-## Changelog
+## Failures
+- Window lost or device offline - fix: probe before claiming, stop after one failure. `_records_/2026-11-19/shop-claims/1434-queue-run.md`
+- Check-in Go taps do nothing - fix: skip it, it opens the web store. `_records_/2026-11-22/shop-claims/1059-queue-run.md`
+- Pass list will not scroll - fix: press-drag 500,750 to 500,300. `_records_/2026-11-10/shop-claims/1836-queue-run.md`
 
-- 1.61.0, 2026-11-23 - Owner name already replaced on main by the tree-wide pass (commit 0467e3ef), then split verbatim by `split_doc.py` from a 1599-line, 28147-word body into 99 key-named articles and 4 catalog pages, and added `rule-digest.md`. `--check` EQUAL against that file, body sha256 d8f8f3269c28; the unsplit 1.60.0 file is commit 0467e3ef.
-- 1.63.0, 2026-11-23 - A platform account label (a 'Signed in as' banner) replaced with 'owner account' in 1 line of 1 file; no other change.
+## Open questions
+- Does check-in FREE GIFT pay in game? test: foreground-click Go once settled; run by operator.
+- Are the Iron and Coin cards below the fold owned? test: press-drag, read both; run by operator.
+- Does a Season hub return (Season Photo, OD-20261101-03)? test: look for the base Season icon; run by operator.
+
+## Numbers
+Numbers, 7 days to 2026-11-23: 12 units; done 25%; done-or-by-design 25%; partial 2, failed 7; mean steps 6 (2 of 12 report it); top blocker f missing precondition (6 of 9 non-done).
+
+## Links
+- [Rule digest](rule-digest.md)
+- [All catalogs](article-catalogs.md)
+- [Newest record](../../_records_/2026-11-22/shop-claims/2044-queue-run.md)
+- [Season Photo record](../../_records_/2026-11-22/shop-claims/2354-queue-run.md)
+- [How to enter](how-to-enter.md)
