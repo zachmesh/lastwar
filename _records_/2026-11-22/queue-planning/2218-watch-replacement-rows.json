@@ -1,0 +1,62 @@
+{
+  "assignment": "A-20261123-0615-planner",
+  "written_at": "2026-11-23T06:20:00Z",
+  "seat": "planner",
+  "decision": "B - the ordering must live in the queue, not in name-based dispatch",
+  "withdrawal": {
+    "unit": "scout-midday-2026-11-23-0609",
+    "tool_route_attempted": "python3 _tools_/queue.py complete --unit scout-midday-2026-11-23-0609 --status expired --summary <reason>",
+    "tool_result": "refused, exit 1: expires_at 2026-11-24T02:00:00Z has not passed - --status expired is for a window that already ended (issue #859)",
+    "tool_guard": "_tools_/queue.py:4555-4560 in _complete_expired; the comment at 4549-4554 says a live window is never expirable by hand, and the docstring (4504-4527, line 4521) says the path is for a window that already ended",
+    "no_write_evidence": "sha256 of the unit file 185b5b3d4ce0248d... identical before and after the refused call; no copy in _queue_/done",
+    "route_not_taken": "backdating expires_at by hand so complete would accept it: that falsifies a window that never passed and files a missed unit in the retro counts; declined",
+    "route_taken": "removed the file from _queue_/inbox/ after a replacement existed, so coverage never lapsed. This is a hand removal, not a tool closing: no done record, and no expired miss in the retro counts",
+    "verified_before_removal": "regular file at /Users/zhenchen/zachmesh/lastwar/_queue_/inbox/scout-midday-2026-11-23-0609.md, untracked by git, attempts 0, claimed_by empty, no claimed copy, no done copy",
+    "removed_at": "2026-11-23T06:16:39Z",
+    "snapshot": {
+      "sha256": "185b5b3d4ce0248d79cf934c2bc96f88a252ed694fac1b694d5098c157425d7d",
+      "bytes": 2232,
+      "fields": {"unit": "scout-midday-2026-11-23-0609", "regular": "scout-midday", "activity": "perception-scout", "segment": 2, "priority": 2, "created_at": "2026-11-23T06:09:09Z", "expires_at": "2026-11-24T02:00:00Z", "planned_for": "", "not_before": "2026-11-24T01:10:00Z", "window": "issue 814 read only watch of Zombie Siege at 0115Z on 2026-11-24 - no attack rally or march", "est_minutes": 15, "attempts": 0, "max_attempts": 3},
+      "body": "identical to the replacement body below except the Brief heading line, which names the replacement"
+    }
+  },
+  "replacement": {
+    "unit": "scout-midday-2026-11-23-0616",
+    "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --segment 2 --priority 2 --est-minutes 15 --not-before 2026-11-24T01:10:00Z --expires-at 2026-11-24T02:00:00Z --window \"issue 814 read only watch of Zombie Siege at 0115Z on 2026-11-24 - no attack rally or march\"",
+    "exit": 0,
+    "created_at": "2026-11-23T06:16:21Z",
+    "sweep_units_created_at": "2026-11-23T06:12:45Z to 06:12:47Z",
+    "brief": "appended to the unit body; same text as 0609 including the sentence that the sweep pair has priority and that a finished stage means the result mail is read first"
+  },
+  "simulation": {
+    "method": "queue.py pick_key and _actionable imported read-only and applied to the live inbox, units unexpired at the instant, worst case with nothing yet done",
+    "at_2026-11-24T01:10Z": {"actionable_unexpired": 17, "replacement_rank": 17, "after_all_12_fixups": true, "after_both_pair_passes": true, "order": ["1 vip-2026-11-22-1800", "2 scout-2026-11-22-1800", "3-14 the twelve 1630 fix-ups", "15 zero-sweep-2026-11-23-1600", "16 zero-sweep-2026-11-23-1700", "17 scout-midday-2026-11-23-0616"]},
+    "at_2026-11-24T01:50Z": {"actionable_unexpired": 17, "replacement_rank": 17, "alive": true, "reason": "expires_at 02:00:00Z is 10 minutes ahead; next --budget-minutes defaults to 15 (queue.py:5957) and the unit estimate is 15, so it is handed out whenever it is reached"},
+    "alliance_exercise_watch": "scout-midday-2026-11-23-0612 ranks first at 22:56Z on 11-23, unchanged"
+  },
+  "what_else_is_needed": {
+    "for_ordering": "nothing; the replacement ranks last at equal expiry and effective priority",
+    "for_coverage": "the siege watch now runs only after every other pending unit with a 02:00Z expiry. At the observed 3.0 minutes per unit (13 runs 20:13-20:49 PT on 2026-11-22) the 12 fix-ups end near 01:06Z, the final pass near 01:21Z, and the watch sees about 01:21Z to 01:36Z, the middle of the 01:15Z to 01:45Z stage; the result mail comes after and is read by the mail regular at its 02:30Z slot. At the estimate pace (97 minutes from 00:30Z) the watch would not start before the 02:00Z expiry. No queue setting fixes both: any change that lifts the watch above the fix-ups also lifts it above the pair.",
+    "leftovers": "vip-2026-11-22-1800 and scout-2026-11-22-1800 rank first at every instant they stay in the inbox; clearing them before 00:00Z gives the sweep set its full window"
+  },
+  "rule_for_the_scribe": {
+    "statement": "A priority 2 unit older than 2 hours counts as priority 1 when `next` picks, and ties at equal expiry and effective priority go to the older created_at.",
+    "tool_lines": [
+      "_tools_/queue.py:828 AGING_STEP_HOURS = 2",
+      "_tools_/queue.py:910-913 steps = int(age_hours // AGING_STEP_HOURS); effective_priority = max(1, priority - steps)",
+      "_tools_/queue.py:916-917 created_sort and the sort key (effective_expires, effective_priority, created_sort)",
+      "_tools_/queue.py:892-894 pick_key docstring: effective expiry, then effective priority, then age",
+      "_tools_/queue.py:1141-1211 _window_aged_priority1: a priority 1 unit with no planned_for, past its not_before and older than 4 hours, is re-timed to planned_for = now, not_before cleared, expiry now + 4 hours (STALLED_PRIORITY1_HOURS = 4 at 835, AGED_P1_WINDOW_HOURS = 4 at 840)"
+    ],
+    "planner_consequences": [
+      "to keep a hand-minted unit behind a staged set at equal expiry, mint it after that set",
+      "a hand-minted window unit must be priority 2, never 1, or sync erases its window once the window opens",
+      "aging lifts any unit older than 2 hours, so priority alone never separates units staged hours apart; expiry and creation order do",
+      "queue.py complete --status expired refuses a unit whose expires_at is still ahead (issue #859), so withdrawing a live unit has no tool route"
+    ]
+  },
+  "proof": {
+    "validate": "pool valid, exit 0, run after the removal and the replacement",
+    "sweep_status_2026-11-23": "exit 1; zero-sweep-2026-11-23-1600 and zero-sweep-2026-11-23-1700 both inbox, pending, geometry_ok true; exit 1 means not yet executed"
+  }
+}

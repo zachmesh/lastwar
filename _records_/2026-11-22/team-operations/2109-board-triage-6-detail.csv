@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+549,records,Account power fell about 2.48M on 2026-11-09 with no intervening fight,#862,lastwar scout,P3,unexplained power drop; read only
+541,tooling,"records/2026-11-09 force-rewritten as orphan branch: _tools_, _logs_, _queue_,",#865,lastwar toolsmith,P3,previous host branch scheme; verify and close if obsolete
+537,tooling,scout_diff --root given the repo root reads an empty pool and writes to a stra,#862,lastwar toolsmith,P3,
+536,tooling,"scout_diff files exploration candidates for ""none"" unmatched-label lines",#862,lastwar toolsmith,P3,may duplicate #527; verify
+533,"idea,tooling",scout_diff re-enqueues a reward the ticker already claimed: the diff takes no ,#862,lastwar toolsmith,P3,
+528,records,Day INDEX on records/2026-11-09 is missing ticker-pass sections present in the,#865,lastwar planner,P3,historical
+527,tooling,"scout_diff treats ""none (...)"" unmatched-label lines as real labels, producing",#862,lastwar toolsmith,P3,may duplicate #536; verify
+517,owner-decision,"Owner decision: start Builders Hut Lv.25 to Lv.26 upgrade (15d build, measured",#861,owner (zhenc),P2,"needs owner: OD-20261109-02, all 4 builders idle"
+514,owner-decision,Owner decision: Transfer Surge warzone transfer - apply during Application Day,#861,owner (zhenc),P3,Application Day has ended; verify and close if obsolete
+513,tooling,No owning regular for research-queue / building-queues: finished Defense Train,#861,lastwar planner,P2,research and building regulars exist now; verify and close
+508,knowledge,Unidentified blue-triangle 596 bubbles over furnace buildings - one tap clears,#861,lastwar scribe,P3,harvest profile covers it; verify and close
+506,"idea,knowledge,play","New Events hub tab: Survey Center - never opened, contents unknown",#862,lastwar scout,P3,survey-center profile exists; verify
+505,tooling,"scout_diff.py writes planned_for in local time labeled as UTC, duplicating pla",#862,lastwar toolsmith,P2,planned_for local time labelled as UTC
+502,knowledge,"Harvest: one tap clears all bubbles of a resource type, contradicting the 1935",#861,lastwar scribe,P3,folded 2026-11-22; verify and close
+500,knowledge,"Donation Count appears to refill over time, not a strict daily 30",#861,lastwar scribe,P2,same finding as #813; verify duplicate
+498,knowledge,Skull timer signal on the base right edge: badge count and countdown change be,#862,lastwar scribe,P3,
+490,records,Harvest HUD totals rise with no intervening harvest record (second occurrence),#865,lastwar coach,P3,
+488,records,"Star Ceremony EVENT 40 ending unrecorded: left at step 10/13, trophy gone by 2",#861,lastwar coach,P3,same pattern as IMP-20261123-04
+485,"tooling,records",records/2026-11-08 branch tip pushed as a root commit; history severed between,#865,lastwar toolsmith,P3,previous host branch; verify and close if obsolete
+482,records,"Account power step-down 641,100 on 2026-11-08 with no intervening fight, dispa",#862,lastwar scout,P3,unexplained power step-down; read only

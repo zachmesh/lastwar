@@ -1,0 +1,14 @@
+---
+title: Changelog part 7
+created: 2026-11-23T06:28:34Z
+modified: 2026-11-23T06:28:34Z
+version: 0.1.0
+sequence: 48
+description: 1.49.0 (2026-11-10) - 1224 survivors unit folded (partial, verified no - gate line not verified in
+---
+- 1.49.0 (2026-11-10): 1224 survivors unit folded (partial, verified no - gate line not verified in the two views searched (base plus right/down pan: Big Ben, pink car, radar dish, purple crystal), no Zombies-signed walled entrance seen; tent face bubbles are posted survivors/tent markers, not the waiting line (white bubble tap at 226,612 opened the TRAIN UNITS panel, not a survivor card) - re-confirms the 1655 reading; FRAMING CORRECTION - the record's 'same blocker as the 22 partials of 2026-10-28 to 2026-10-31' is stale framing, that run is closed history (broken 2055, Quick Dispatch ran 2358), this is a fresh unverified partial; next search pans to the bottom-right corner (red-roofed structure about 920,870) for the Zombies-signed gate; T10 panel read via the bubble tap (Power 1647, Morale 750.0, Attack 38.45, Defense 7.79, slider 793, 1d 17:14:37 prospective duration); Quick Dispatch still owed for the 0321 + 0844 recruits; blocker_category e).
+
+- 1.48.0 (2026-11-10): 0844 survivors unit folded (partial, last gate survivor taken in - the remaining second survivor of the 0321 line, "?" bubble norm 109,654, figure norm 109,696 grounded fresh from a 2x enlarged crop, move-wait-click, 30 percent visual change in the gate region, no "?" bubble at the gate on the post-tap screenshot and on a second re-read, gate line clear; no Recruit card, no name or role, intake verified by the "?"-cleared sequence on two screenshots, processed count recorded as 1; Quick Dispatch NOT run, owed again per rule R7 for this recruit and the 0321 recruit, in the Iron Mine Lv.27 panel after re-locating the mine; CORRECTION - the brown building at norm 354,210 is Smelter Lv.26, not the Iron Mine (tap selected Smelter Lv.26, deselected with an empty-road tap at 450,600); the 2358 pointer (545,452) not re-tested, camera framing had shifted, stays qualified; truck prompt toasts cycling from the truck driver figure at the gate left alone; HUD food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K, power 148,058,020).
+
+- 1.47.0 (2026-11-10): 0321 survivors unit folded (partial, gate line verified live with 2 "?" survivors; first taken in by move-wait-click, smiley-then-gone, no name/role card shown; second tap delivered as a map drag, camera panned to Wall Lv.26, survivor unrelocated behind two floating action buttons (blue house, green up-arrow) of unknown function; Quick Dispatch NOT run, owed again per rule R7 in the Iron Mine Lv.27 panel after re-locating the gate line; HUD food 610.2M, iron 933.6M, coin 82.7M unchanged). (1.46.0 carries the 2358 section without a changelog line; the numbering is preserved, not rewritten.)
+

@@ -1,0 +1,17 @@
+# Documents the commit gate does not block for size. One path or glob per line, matched against the repository path.
+# Day indexes are append-only evidence that already exceed the limit; remove the line when they are split.
+_records_/*/INDEX.md
+# Play records written before the gate, immutable (C1), over the limit because of narrative. Exact paths, no globs.
+_records_/2026-11-22/alliance-duel/2037-queue-run.md
+_records_/2026-11-22/alliance-gifts/2030-queue-run.md
+_records_/2026-11-22/alliance-train/2034-queue-run.md
+_records_/2026-11-22/alliance-help/2025-queue-run.md
+_records_/2026-11-22/building-queues/2024-queue-run.md
+_records_/2026-11-22/research-queue/2022-queue-run.md
+_records_/2026-11-22/mail-rewards/2028-queue-run.md
+_records_/2026-11-22/troop-training/2017-queue-run.md
+_records_/2026-11-22/alliance-donations/2013-queue-run.md
+_records_/2026-11-22/survivor-intake/2003-queue-run.md
+# Optional lever, off by default: exempt folders from the missing-INDEX.md check, one `folder GLOB` per line, for example
+# the records activity folders that carry no INDEX.md (an owner decision). A new folder then no longer blocks a commit.
+# folder _records_/*/*

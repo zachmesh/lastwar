@@ -1,0 +1,56 @@
+{
+  "assignment": "A-20261123-0607-planner",
+  "written_at": "2026-11-23T06:15:00Z",
+  "seat": "planner",
+  "minted": {
+    "unit": "scout-midday-2026-11-23-0609",
+    "path": "_queue_/inbox/scout-midday-2026-11-23-0609.md",
+    "regular": "scout-midday",
+    "activity": "perception-scout",
+    "segment": 2,
+    "priority": 2,
+    "est_minutes": 15,
+    "created_at": "2026-11-23T06:09:09Z",
+    "not_before": "2026-11-24T01:10:00Z",
+    "expires_at": "2026-11-24T02:00:00Z",
+    "planned_for": "",
+    "event": "Zombie Siege 23:15 server on 2026-11-23 = 2026-11-24T01:15Z = 17:15 PT on 11-23",
+    "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --segment 2 --priority 2 --est-minutes 15 --not-before 2026-11-24T01:10:00Z --expires-at 2026-11-24T02:00:00Z --window \"issue 814 read only watch of Zombie Siege at 0115Z on 2026-11-24 - no attack rally or march\"",
+    "result": "queued scout-midday-2026-11-23-0609, exit 0",
+    "body_edit": "brief appended under a Brief heading in the unit body after minting; frontmatter untouched; enqueue itself writes only boilerplate",
+    "why_priority_2": "_window_aged_priority1 (queue.py:1141-1211) re-times a priority 1 unit with no planned_for once its not_before has passed and it is older than 4 hours: planned_for = now, not_before cleared, expiry = now + 4h. That would erase this window at 01:10Z. Priority 2 is never touched."
+  },
+  "rows": [
+    {"id": 1, "topic": "event times, server to UTC", "verdict": "verified", "source": "_records_/2026-11-22/perception-scout/2205-queue-run.md:32-43", "reading": "Server Time 04:05:26 at 06:05:26.78Z, so UTC-2. To-do List for server date 2026-11-23: Alliance Train 04:08 (06:08Z), Winter Battlefield 09:00 (11:00Z), Alliance Exercise 21:00 (23:00Z), Zombie Siege 23:15 (2026-11-24T01:15Z). Rows below Zombie Siege unread, the list would not drag."},
+    {"id": 2, "topic": "coverage, Alliance Exercise 23:00Z", "verdict": "not covered", "source": "_tools_/regulars.json (25 regulars, none named Alliance Exercise, Winter Battlefield or Zombie Siege); _queue_/inbox and _queue_/claimed text search; _activities_ folder list (no folder for either)", "reading": "no regular, no activity folder, no inbox or claimed unit. The reward mail is covered indirectly: regular mail is every-run, and its next slot after 23:00Z is 02:30Z on 11-24 (expected id mail-2026-11-23-1830, not staged yet); the staged mail-2026-11-23-0230 slot is 10:30Z to 14:30Z."},
+    {"id": 3, "topic": "coverage, Winter Battlefield 11:00Z", "verdict": "not covered as play; claims only by the events regular", "source": "_activities_/event-claims/INDEX.md:1054-1057 (the events regular owns the Winter Battlefield Rewards chest), _queue_/inbox listing", "reading": "no events unit is in the inbox for the current reset day; events is every-run, last slot 1857 PT (done), next staged by the next plan pass. Match is 5v5 PvP matchmaking (event-claims INDEX:887, :902), gated by OD-20261123-03 (may any PvP surface be acted on), which is open."},
+    {"id": 4, "topic": "Winter Battlefield window", "verdict": "unverified for today", "source": "_activities_/event-claims/INDEX.md:887 and :902", "reading": "the 2026-11-08 read listed Local Time matching windows 20:00-22:00, 03:00-05:00 and 13:00-15:00 PT. 03:00 PT is 11:00Z, matching today's 09:00 server, so the window is probably 11:00Z to 13:00Z. Only the 11-08 and 11-09 dates were read."},
+    {"id": 5, "topic": "Alliance Exercise window", "verdict": "text verified, today unverified", "source": "_records_/2026-11-02/perception-scout/observation.md:404-410", "reading": "30-minute Battle Stage, so 23:00Z to 23:30Z if 21:00 server is the start. On 2026-11-09 the [Alliance Exercise] Alliance Reward mail arrived about 30 minutes after the 15:00 PT start (_activities_/mail-rewards/INDEX.md:922)."},
+    {"id": 6, "topic": "collision with the zero-sweep pair", "verdict": "verified from sweep-status", "source": "queue.py sweep-status --date 2026-11-23, exit 1", "reading": "the current reset day's pair is not staged: zero-sweep-2026-11-23-1600 slot 2026-11-24T00:00Z, zero-sweep-2026-11-23-1700 slot 2026-11-24T01:00Z, both absent, reset 2026-11-24T02:00Z. The final pass opens 10 minutes before the siege watch and may run up to 15 minutes, so one operator cannot do both in full. The watch window is 01:10Z to 02:00Z, the sweep final pass 01:00Z to 02:00Z."},
+    {"id": 7, "topic": "one unit cannot cover the whole siege", "verdict": "derived", "source": "queue.py:345 UNIT_CAP_MINUTES = 15; row 5", "reading": "stage 01:15Z to 01:45Z plus the result mail about 15 to 30 minutes later is about 60 minutes; a 15-minute unit sees one slice. The brief tells the dispatcher to choose the slice."}
+  ],
+  "proposals_not_minted": [
+    {
+      "event": "Alliance Exercise 2026-11-23T23:00Z (15:00 PT)",
+      "recommendation": "mint one watch unit; first live observation of the stage; reward mail is already read by the 02:30Z mail slot",
+      "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --segment 2 --priority 2 --est-minutes 15 --not-before 2026-11-23T22:55:00Z --expires-at 2026-11-23T23:35:00Z --window \"read only watch of Alliance Exercise at 2300Z - no rally join or attack\"",
+      "red_lines": "no join, rally, attack, march or troop dispatch; Offline Participation is not toggled; any such surface stops as needs-owner"
+    },
+    {
+      "event": "Winter Battlefield 2026-11-23T11:00Z (03:00 PT)",
+      "recommendation": "hold until OD-20261123-03 is answered; the events regular already claims the Rewards chest afterwards; mint only if the coordinator wants the Match button state at opening",
+      "command": "python3 _tools_/queue.py enqueue --regular scout-midday --activity perception-scout --segment 2 --priority 2 --est-minutes 8 --not-before 2026-11-23T10:55:00Z --expires-at 2026-11-23T11:30:00Z --window \"read only watch of Winter Battlefield opening at 1100Z - no Match tap\"",
+      "red_lines": "no Match tap, no matchmaking, no troop entry; PvP stops as needs-owner"
+    }
+  ],
+  "proof": {
+    "before": {"at": "2026-11-23T06:07:26Z", "inbox": 17, "claimed": 0, "done": 2632},
+    "after": {"at": "2026-11-23T06:09:21Z", "inbox": 17, "claimed": 2, "done": 2632, "note": "the operator moved units during the pass; at mint time the inbox held 16 and the mint made it 17"},
+    "validate": "pool valid, exit 0, run after the body edit",
+    "sweep_status_2026-11-22": "exit 1, pair 0 of 2, both absent; that reset day ended at 2026-11-23T02:00Z and is recorded as missed, not backfilled",
+    "sweep_status_2026-11-23": "exit 1, pair 0 of 2, both absent, not staged yet, slots 2026-11-24T00:00Z and 01:00Z",
+    "slot_coverage_2026-11-22": "exit 1, 0 covered, 44 recordless past-window slots, 4 future; historical, not caused by this pass",
+    "next": "vip-2026-11-22-1800; the watch unit is not handed out before 01:10Z",
+    "not_run": "reap and sync, which move expired units into done and stage new units, are outside this assignment's inbox-only write scope"
+  }
+}

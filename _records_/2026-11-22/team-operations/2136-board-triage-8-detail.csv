@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+383,tooling,Device token does not exclude overlapping passes when each pass uses its own w,#864,lastwar toolsmith,P3,ticker-era; one device token now; verify and close if obsolete
+342,records,Ticker pass 0634 (2026-11-05) has no execution record anywhere,#865,lastwar planner,P3,historical
+335,"tooling,records,owner-decision",Checker due is clock-only: a second pass inside a batch window also reports du,#865,lastwar toolsmith,P3,ticker-era; carries an owner-decision label; verify and close if obsolete
+332,tooling,Follow-up to #303: split compound badge names in scout narrative accounting so,#862,lastwar toolsmith,P3,
+300,"idea,tooling",Radar closings that wrote the radar-screen total into stats.points with no ach,#861,lastwar toolsmith,P3,stats.points data quality
+296,"tooling,records",Executor still writes stats.points copied from achieved: 2 new radar units on ,#861,lastwar toolsmith,P3,stats.points data quality; same family as #300
+284,tooling,Mac screen capture failure blocks ticker passes (third consecutive pass),#864,lastwar toolsmith,P3,previous executor; verify and close if obsolete
+282,knowledge,"Screen-capture channel failure recurring across ticker passes (help 1235, mail",#864,lastwar scribe,P3,previous executor; verify and close if obsolete
+278,"idea,tooling","IMP-20261031-03 - retro report extensions: p90, attempts, system_metrics",#863,lastwar toolsmith,P3,retro report extensions
+272,"idea,play",General's Trial challenge fights have no owning regular,#862,lastwar planner,P2,General Trial has no regular; stage coverage if PvE
+268,play,Radar: Doom Elite rally button inert in 2026-11-04 radar unit,#861,lastwar operator,P3,a rally is a red line; read only
+251,"tooling,records",Retro snapshot pool lags live execution by most of a day: records branch 670 v,#865,lastwar toolsmith,P3,previous host; verify and close if obsolete
+250,tooling,Harvest bubble grounding returns factory-top icons as bubbles,#861,lastwar toolsmith,P3,
+242,knowledge,"Duel day and Weekly Pass reset at 18:00 local, not 19:00",#861,lastwar scribe,P2,duel day resets at 18:00 PT (02:00Z); fold into the profile
+235,tooling,duel.py radar scoring contradicts live game dialog on 2026-11-03,#861,lastwar toolsmith,P3,
+230,"knowledge,play",Mail entry failed: taps at the measured envelope position open the Alliance pa,#861,lastwar scribe,P3,mail route worked 2026-11-22 2028; verify and close
+220,"knowledge,play","Donations entry coordinate stale: recorded (903,787) opens Mail, Alliance shie",#861,lastwar scribe,P3,
+218,"knowledge,play","Trucks entry failed again: station tap 491,195 no-change, grounded station poi",#861,lastwar scribe,P3,truck entry worked 2026-11-22 2058; verify and close
+213,tooling,Working-tree queue pool re-presents delivered units as due,#865,lastwar toolsmith,P3,ticker-era; verify and close if obsolete
+212,play,Alliance Wars red dot has no owning regular,#862,lastwar scout,P3,Alliance Wars is PvP; read the red dot only

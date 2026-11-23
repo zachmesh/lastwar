@@ -1,0 +1,11 @@
+issue,labels,title,epic,agent,priority,note
+128,"tooling,play",Owner-named priority-1 units are never claimed: crystal-shop and glittering-ma,#861,lastwar planner,P2,"owner-named priority-1 units; shops are owner-only for purchases, read only"
+126,"idea,tooling,compliance",IMP-20261101-09 - records batch-cadence compliance - checker tool plus retro a,#865,lastwar toolsmith,P3,previous host batch cadence; the lint gate replaces it; verify and close if obsolete
+125,"idea,tooling",IMP-20261101-07 - scout_diff round-summary section,#862,lastwar toolsmith,P3,
+124,"idea,knowledge",IMP-20261031-10 - ops execution records standard landed,#865,lastwar scribe,P3,records standard landed; verify and close
+123,"idea,tooling",IMP-20261101-08 - screenshot-grounded tap calibration and verification tooling,#861,lastwar toolsmith,P3,sibling of #688
+122,"idea,knowledge",IMP-20261101-05 - reconcile the remaining guide-claim checks,#862,lastwar researcher,P3,
+121,"idea,knowledge",IMP-20261101-04 - reconcile HUD labels and resource definitions,#861,lastwar scribe,P3,HUD labels and resource definitions
+120,"idea,knowledge",IMP-20261101-03 - verify device-switch behavior on both devices,#864,lastwar researcher,P3,one device now; verify and close if obsolete
+119,"idea,knowledge",IMP-20261101-02 - document the account's three squads,#862,lastwar scribe,P3,account data stays out of public content (privacy convention)
+118,"idea,knowledge",IMP-20261101-01 - reconcile activity verification and metadata coverage,#863,lastwar coach,P2,profile verification; same goal as IMP-20261123-02

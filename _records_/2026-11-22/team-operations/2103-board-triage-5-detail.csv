@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+610,tooling,"Planner sweep-pair verification reads pool location, not status: 2040 run fals",#861,lastwar toolsmith,P2,"sweep-pair verification reads pool location, not status"
+609,records,Duel-score running totals double-counted in summed attainment,#865,lastwar coach,P3,duel-score totals double-counted
+607,records,Planner 1840/1940/2040 execution records missing at the 20:52 snapshot,#865,lastwar planner,P3,historical
+606,tooling,Sweep seq-2 expires 30 minutes after not_before and never reaches the reset,#861,lastwar toolsmith,P2,sweep seq-2 expires before the reset
+605,"tooling,records",records/2026-11-10 created as an orphan branch (third consecutive day),#865,lastwar toolsmith,P3,previous host branch scheme; verify and close if obsolete
+604,"records,compliance","PR 556 merged outside any batch window (22:59:55, 5 seconds before the 2300 wi",#865,lastwar planner,P3,historical compliance
+603,tooling,Radar unit window label goes stale across the 18:00 duel-day rollover: day-2 s,#861,lastwar toolsmith,P3,radar window label across the rollover
+599,knowledge,"Donation-day counter resets between 19:24 and 19:34 PST, not at the 19:00 rese",#861,lastwar scribe,P2,donation counter reset time; fold into the profile
+598,tooling,Ticker enqueue can strand a unit on the records branch while the live pool nev,#865,lastwar toolsmith,P3,ticker retired; verify and close if obsolete
+595,knowledge,Arms Race: in-progress building identity disagrees between live reads - Oil We,#862,lastwar scribe,P3,
+593,"idea,play","Three-button shortcut cluster on panned base view (blue people, blue cap, gree",#862,lastwar scout,P3,read only
+580,play,Camera framing blocks right-rail entry routes (repeated failure mode),#861,lastwar operator,P2,camera framing blocks right-rail routes
+575,tooling,"Game canvas ignores taps while pixel stream stays live (input-blocked, distinc",#864,lastwar toolsmith,P2,verify against the computer-use executor
+570,play,Train boarding: blind double-tap cinematic skip caused the 3-contract gift mis,#861,lastwar operator,P3,rule already in the profile; verify and close
+566,knowledge,Armed Truck location unrecorded; loot check deferred a third time (R2 escalati,#861,lastwar scribe,P3,truck checked 2026-11-22 0842; verify and close
+565,knowledge,Mega Mode mechanics observed end to end (first UR-day execution),#861,lastwar scribe,P3,fold into the profile and close
+563,tooling,Delivery-side rule for done files: a completion marker reaped after 7 days wit,#865,lastwar toolsmith,P3,
+558,knowledge,"Tech Donation Today footer is not account-attributable, cannot verify personal",#862,lastwar scribe,P3,
+553,knowledge,Shop check-in banner free gift: entry unproven (Go tap did not navigate),#862,lastwar scribe,P3,
+550,"idea,knowledge",New event: Desert Storm Battlefield - exploration needed; Battle Day 2026-11-1,#862,lastwar researcher,P3,Battle Day 2026-11-13 has passed; verify and close if obsolete

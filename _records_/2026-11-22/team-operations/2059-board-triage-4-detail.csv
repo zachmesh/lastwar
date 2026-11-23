@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+678,knowledge,Drill Ground location and clearing mechanism still unknown; training requeue b,#862,lastwar scout,P2,Drill Ground blocks training requeue; locate and read the screen
+675,play,Survivor at the Zombies gate vanishes after three no-change tap variants; 0 re,#861,lastwar operator,P3,
+674,"records,compliance",PR 636 merged outside batch cadence: second records merge in the 11:00 window,#865,lastwar planner,P3,historical
+673,records,"Duel-score zero reads on Nov 11: all 3 units expired, day-3 total unknown",#861,lastwar coach,P3,historical duel read
+672,"tooling,records","Duel-score running total 1,650,000 written into stats.points, evading the dup-",#863,lastwar toolsmith,P3,stats.points evades dup-exclusion
+671,records,"Nov 11 expiry pile-up: 39 expired, events/train/star-ceremony all dark, no dai",#865,lastwar coach,P3,historical
+668,tooling,Scout observation writer replaces the previous continued pass instead of appen,#862,lastwar toolsmith,P2,observation writer replaces a pass; append-only
+664,tooling,Sync produces a duplicate chain head while the first head is still claimed (em,#864,lastwar toolsmith,P3,may be fixed by the chain-head refusals; verify
+661,tooling,Conflict-marker unit file reached main: _queue_/inbox/trucks-2026-11-11-1457.m,#865,lastwar toolsmith,P3,historical
+660,knowledge,"Harvest bubble taps: exact-pointer taps collect, snapped taps open building pa",#861,lastwar scribe,P3,fold into the profile and close
+652,tooling,Background canvas taps land offset in the 1920x1080 fullscreen window (about -,#864,lastwar toolsmith,P3,previous executor; verify and close if obsolete
+650,knowledge,Window-state precondition (Zoom to Fit) must be stated in every activity profi,#863,lastwar scribe,P3,window-state precondition
+648,tooling,"Zoom click breaks the control channel: game window stuck in Zoom to Fit, canva",#864,lastwar toolsmith,P3,previous executor; verify and close if obsolete
+647,records,Stranded ticker-1104 delivery: commit f279d56d5 never reached records/2026-11-,#865,lastwar planner,P3,historical
+646,tooling,Background-click variant differs by control: top-bar icons need unsnapped taps,#864,lastwar toolsmith,P3,previous executor; verify and close if obsolete
+642,knowledge,Zombie Invasion returned 2026-11-10 as Glacieradon variant; activity metadata ,#862,lastwar scribe,P3,Glacieradon variant
+632,play,Radar release units keep closing partial on unworked map pins (third consecuti,#861,lastwar operator,P2,radar release units close partial
+629,play,"Zombie Invasion (Glacieradon): 153 owned Coin Chest (SSR) unopened, about 124M",#861,lastwar operator,P2,owned chests unopened; opening owned chests is not a purchase
+626,knowledge,Secret Task Report: other players plundered our finished tasks (11-10 20:53/20,#861,lastwar scribe,P2,plunder of finished secret tasks; matches the claim reminders
+623,tooling,"Train units are picked by slot expiry, not by the boarding close, so a closing",#861,lastwar toolsmith,P2,"train picked by slot expiry, not boarding close"

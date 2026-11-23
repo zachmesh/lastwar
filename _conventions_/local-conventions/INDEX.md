@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-22T10:37:38Z
-version: 1.10.0
+modified: 2026-11-23T04:03:00Z
+version: 1.12.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -37,6 +37,10 @@ in this repository.
 - [Loop review 2026-10-31](loop-review-2026-10-31.md) — the review of
   whether the feedback and improvement loop is closed, with the four
   open links filed for the first retro.
+- [Team organization](team-organization.md) — the roster, cadence, communication contract, failure playbooks and migration plan for the eight top-level DSH seats.
+- [Continuous play team](continuous-play-team.md) — the operating model
+  for the durable DSH team that plays continuously and measures its
+  execution, its discovery and its own learning rate.
 - [Evaluation metrics](evaluation-metrics.md) — the specification for
   measuring the play system itself: execution efficiency per task
   type, perception completeness and discovery generalisation, retro
