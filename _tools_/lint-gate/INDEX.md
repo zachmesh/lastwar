@@ -1,8 +1,8 @@
 ---
 title: Lint Gate
 created: 2026-11-23T04:50:00Z
-modified: 2026-11-23T05:02:46Z
-version: 1.2.0
+modified: 2026-11-23T05:41:07Z
+version: 1.3.0
 description: Commit gate and size trigger over the reflection convention linter, with a record-length check
 ---
 
@@ -25,7 +25,7 @@ the python3 that runs the linter; the linter is read from `~/dtadpole/reflection
 ## Rules
 
 - Legacy findings never block: a document already at 500 words, a folder already lacking `INDEX.md` and a file already in a type folder are judged against the base commit.
-- `exempt.txt` lists paths and globs the size check skips: day indexes and ten pre-gate play records (immutable, C1).
+- `exempt.txt` lists paths and globs the size check skips: day indexes, ten pre-gate play records (immutable, C1) and, until split, two append-only registers.
 - `watch` keeps its anchor (the commit whose oversized documents count as legacy) in the baseline; `--anchor REF` resets it. A new error above 0 assigns the owning seat a fix.
 - An environment failure exits 2; the hook then warns and allows the commit.
 - Rollback: `git config --unset core.hooksPath`. Tests: `python3 -m unittest discover -s _tools_/lint-gate`.

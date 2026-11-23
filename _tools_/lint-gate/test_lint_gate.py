@@ -138,7 +138,9 @@ class CheckStaged(GateCase):
 
     def test_grandfathered_records_are_ten_exact_paths(self):
         lines = [ln.strip() for ln in (HERE / "exempt.txt").read_text().splitlines() if ln.strip() and not ln.startswith("#")]
-        records = [ln for ln in lines if ln != "_records_/*/INDEX.md" and not ln.startswith("folder ")]
+        registers = {"_records_/retro/owner-decisions.md", "_records_/retro/improvements.md"}
+        self.assertTrue(registers <= set(lines))
+        records = [ln for ln in lines if ln != "_records_/*/INDEX.md" and not ln.startswith("folder ") and ln not in registers]
         self.assertEqual(len(records), 10)
         for ln in records:
             self.assertRegex(ln, r"^_records_/2026-11-22/[a-z-]+/\d{4}-queue-run\.md$")
@@ -172,6 +174,39 @@ class CheckStaged(GateCase):
         r = self.stage_check("_records_/2026-11-23")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("1 exempt finding", r.stdout)
+
+    def register_exemption(self, remove=False):
+        self.write("_records_/retro/INDEX.md", "# retro\n")
+        for name in ("owner-decisions", "improvements", "owner-decisions-2"):
+            self.write(f"_records_/retro/{name}.md", doc(600, name))
+        self.run_git("add", "-A")
+        self.run_git("commit", "-q", "--no-verify", "-m", "registers")
+        if remove:
+            f = self.repo / "_tools_/lint-gate/exempt.txt"
+            f.write_text("".join(ln + "\n" for ln in f.read_text().splitlines()
+                                 if ln.strip() not in ("_records_/retro/owner-decisions.md", "_records_/retro/improvements.md")))
+
+    def test_the_two_registers_are_exempt_by_exact_path_only(self):
+        self.register_exemption()
+        for name in ("owner-decisions", "improvements"):
+            with open(self.repo / f"_records_/retro/{name}.md", "a") as f:
+                f.write("- one more append-only line\n")
+        r = self.stage_check("_records_/retro/owner-decisions.md", "_records_/retro/improvements.md")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("2 exempt finding", r.stdout)
+        with open(self.repo / "_records_/retro/owner-decisions-2.md", "a") as f:   # a neighbour with a similar name
+            f.write("- one more line\n")
+        r = self.stage_check("_records_/retro/owner-decisions-2.md")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("owner-decisions-2.md", r.stdout)
+
+    def test_removing_a_register_line_blocks_that_register_again(self):
+        self.register_exemption(remove=True)
+        with open(self.repo / "_records_/retro/owner-decisions.md", "a") as f:
+            f.write("- one more append-only line\n")
+        r = self.stage_check("_records_/retro/owner-decisions.md")
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("[document-concision] _records_/retro/owner-decisions.md", r.stdout)
 
     def test_rules_option_limits_what_blocks(self):
         self.write("_records_/2026-11-22/legacy-activity/0200-big-run.md", doc(600, "Big"))
