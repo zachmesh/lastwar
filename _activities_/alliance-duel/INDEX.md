@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-12T05:32:17Z
-version: 1.43.0
+modified: 2026-11-23T00:45:00Z
+version: 1.44.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -50,6 +50,7 @@ grounded_in:
   - source: ticker-1314 alliance-duel execution records 2026-11-10 1327 queue run (star ceremony checked only, no trophy icon, duel total 1,650,000) and 1331 queue run (duel total 1,650,000 read live, gap 1,950,000; record commit d781dac9d on records/2026-11-10)
   - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-06 (Issue #609): schedule a duel-score unit after the last live read and before the duel rollover so the closing total is read, not inferred; Nov 10 last read 13:33, no closing read
   - source: ticker-0212 alliance-duel execution records 2026-11-11 0224 and 0225 queue runs (done, duel total 1,650,000 read live on day 3 Age of Science, gap 1,950,000, alliance trailing TFox, no ceremony waiting; record commit b0615980f on records/2026-11-11)
+  - source: ticker-1352 alliance-duel execution records 2026-11-22 1400 and 1415 queue runs (partial, settlement day 7 - no personal total on any duel panel, League S39 Starting Soon, AP3x rank 4; Star Ceremony Event 42 played to step 7 of 13, 3 hearts sent, finale unclaimed, 1400 "no trophy icon" line corrected by 1415; record commit 84e1e0ab0, landed via merged records PR #821)
 ---
 
 
@@ -102,7 +103,12 @@ Measured on Event 38, 2026-10-25, under the owner procedure.
 - Measured caution — forwarding too fast can skip an award detail
   card entirely (two cards were skipped in Event 38). When a winner
   card is up with the emote bar visible, send the emote first, then
-  forward.
+  forward. (2026-11-22 Event 42 update: a rapid batch right after a
+  card reveal can be swallowed while the card is still animating —
+  the first batch after step 6's card showed no change on its
+  observation receipt but had in fact advanced to step 7's intro on
+  the screenshot. Verify position by screenshot, never by the
+  receipt alone.)
 - The chest icon at top right shows emotes sent against the tier
   target (6 of 3 at the end of Event 38) and opens the Ceremony
   Rewards panel. Rewards unlock at 1, 2 and 3 emotes sent — gift
@@ -1091,3 +1097,13 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - 2026-11-11 retro action A-2026-11-11-01 (Issues #672, Refs #300, #609): duel-score points - never write a running total into stats.points; points holds live-read scored gains only, and a running-total read belongs in achieved as a string, never in points. The 1,650,000 figure in the duel-score-2026-11-10-2230 unit is the instance. Tracked on the new duel-points issue #672 (class tooling/records). Verification: the next retro's window points total contains no unit whose points is a running-total read. Recheck: 2026-11-12 retro. Folded into the duel-score points bullet above; the 0435 precedent already stated the rule, the 2230 unit is the repeat in a new shape.
 - Nov 11 day-3 zero reads (Issue #673, records class): all 3 duel-score units expired, no duel total read at all, day-3 total unknown - the second day without a closing read. The A-2026-11-10-06 closing-read verification FAILED for Nov 11: the last live read was the day-2 total 1,650,000 (Nov 10, read twice), and Nov 11's units never ran. Target: at least one live duel total read per duel day, including a closing read before the 19:00 reset.
 - No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
+
+## What the 2026-11-22 1400 and 1415 units added - settlement day 7, no personal total anywhere; Star Ceremony Event 42 played to step 7/13, 3 hearts sent, finale unclaimed; 1400 "no trophy icon" line CORRECTED
+
+- Units duel-score-2026-11-22-1030 and star-ceremony-2026-11-22-1030 by ticker-1352, session about 13:57 to 14:15 PT, both status partial. Evidence in `_records_/2026-11-22/alliance-duel/1400-queue-run.md` and `_records_/2026-11-22/alliance-duel/1415-queue-run.md` (both commit 84e1e0ab0, landed via merged records PR #821).
+- Settlement day 7 - no personal total anywhere (S39 instance; the S38 league-calculating failure mode in the 1828 section repeats for S39). Quote (1400): "Duel day 7 is the Off day (settlement, tools/duel.py: no scoring actions, radar posture stack), and the duel screens carry no personal total anywhere: League S39 reads 'Starting Soon' with the week in settlement ('Calculating the number of Alliances promoted and demoted...'), the Duel League panel shows only the alliance ranking (AP3x The Apex rank 4, Win in week 1) and a 20d 06:02 countdown, the Match Record shows only alliance-vs-alliance day scores (AP3x 13 vs 0), and the Infinite Roulette tab shows 0 spin tokens with wheel progress 1/10. No themed day is live, so there is no daily total to read today - the 3,600,000 target has no figure to compare against." The re-read before the reset is the already-staged duel-score-1630 unit; no separate re-read unit was enqueued. The "Tier Retained" celebration overlay (gold trophy, Gold Tier, "Tap anywhere to close") appeared on the Duel League panel and was dismissed with one tap. Back-arrow point re-grounded: (90,960) missed the button's left edge; (117,962) returned to base.
+- Star Ceremony Event 42 (1415): opened from the trophy icon and played to step 7 of 13, then the unit hit its 15-minute cap mid-ceremony. The finale chest and the Participation Prize are still unclaimed. The successor unit star-ceremony-2026-11-22-1430 is already in the inbox and continues the ceremony - whether it resumes at step 7 or restarts at step 1 is for that unit to record. Chest counter 0/1 throughout. Hearts sent: 3 (steps 1, 3, 4) - the owner minimum of 3 is met. Winners: Step 1 Alliance Champion - Teemo, "Secured No.1 in the Alliance Duel this week" (heart 66); Step 2 Storm Arena Victor - ItStartsWithaDream (no heart sent, see mechanics below); Step 3 Star of Desert Storm - Teemo, "Got 4,848,035 point(s) in the Desert Storm Battlefield this week" (heart 59); Step 4 Soldier Crusher - Teemo, "Defeated 2,109,139 enemy units this week" (heart 56); Step 6 Great Destroyer - Teemo, "Dealt 616,560 durability damage this week" (no heart, batched forwards); Step 5 Devil Trainer winner card passed unseen under a batched forward sequence; Step 7 Grind King intro reached when the cap arrived.
+- CORRECTION to the 1400 record, carried in the 1415 record (the 1400 record is left unrewritten, append-only): the 1400 line "No ceremony trophy icon sat beside the Alliance shield on the base screen at this pass's 13:52 entry read" is WRONG. Quote (1415): "The gold trophy icon in its tan bubble was present beside the Alliance shield in the 13:52 base screenshot - it was misread as absent, and the zoomed crop of the 14:02 base read proves it. The ceremony was waiting all along; this unit opened it from that same icon." This profile folds the correction, not the 1400 line: the trophy icon was present and the ceremony was waiting.
+- Ceremony mechanics, measured this unit (see also the "how it runs" cautions): the forward tap after the step-1 heart skipped the step-2 winner card - "the Event 38 caution - forwarding too fast skips a card" - so no heart was sent for step 2; send the emote before forwarding, never forward immediately after a heart. And: "a rapid batch right after a card reveal can be swallowed while the card is still animating - the first batch after step 6's card showed no change on its observation receipt but had in fact advanced to step 7's intro on the screenshot. Verify position by screenshot, never by the receipt alone."
+- No diamonds or money spent. No spin bought, no Start on any match.
+- Result stats: 1400 - target read the personal daily duel total live and compare against 3,600,000; achieved total unread (no personal total displayed on any duel panel during settlement); costs about 4 minutes; verified no (closing total unread; settlement screens read live). 1415 - target play the waiting ceremony to the finale, send hearts to at least 3 winners, claim the finale chest and Participation Prize; achieved ceremony opened, steps 1-7 of 13, 3 hearts sent, finale not reached, nothing claimed; costs about 14 minutes; verified yes; blocker_category h (by-design partial - unit cap reached mid-ceremony).
