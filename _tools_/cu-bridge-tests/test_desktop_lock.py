@@ -26,6 +26,7 @@ open(os.environ["FAKE_LOCK_CALLS"], "a").write(" ".join(sys.argv[1:]) + "\n")
 print(os.environ.get("FAKE_LOCK_STATUS", "{}"))
 '''
 REFUSING_SERVER = FAKE_SERVER.replace(
+    "runs = {}\n", "runs = {}\nopen(os.environ['FAKE_ARGV'], 'w').write(' '.join(sys.argv[1:]))\n", 1).replace(
     '            text(mid, {"run_id": rid, "state": runs[rid]})',
     '            open(os.environ["FAKE_START_CALLS"], "a").write("start\\n")\n'
     '            if os.environ.get("FAKE_REFUSE"):\n'
@@ -51,7 +52,9 @@ class LockCase(BridgeCase):
         self.lockdir = self.root / "lockdir"
         self.lockdir.mkdir()
         self.calls, self.starts = self.root / "lock-calls", self.root / "start-calls"
-        self.env.update(CU_RUN_LOCK_DIR=str(self.lockdir), FAKE_LOCK_CALLS=str(self.calls), FAKE_START_CALLS=str(self.starts))
+        self.argv_file = self.root / "server-argv"
+        self.env.update(CU_RUN_LOCK_DIR=str(self.lockdir), FAKE_LOCK_CALLS=str(self.calls), FAKE_START_CALLS=str(self.starts),
+                        FAKE_ARGV=str(self.argv_file))
         self.set_status()
 
     def set_status(self, run=None, hold=None, waiter=None, sentinel=False):
@@ -210,6 +213,28 @@ class Seat(LockCase):
         self.assertIn("cu-lastwar", r.stderr)
         self.no_daemon_started()
         self.assertEqual(self.n(self.calls), 0)
+
+    def test_the_default_seat_is_cu_lastwar_and_the_server_is_started_under_it(self):
+        probe = ("import importlib.util, sys; spec = importlib.util.spec_from_file_location('b', sys.argv[1]); m = importlib.util.module_from_spec(spec); "
+                 "spec.loader.exec_module(m); print(m.SEAT); print(bool(m.SEAT_PATTERN.match(m.SEAT)))")
+        env = {k: v for k, v in self.env.items() if k != "CU_SEAT"}
+        out = subprocess.run([sys.executable, "-c", probe, self.bridge], capture_output=True, text=True, env=env)
+        self.assertEqual(out.stdout.split(), ["cu-lastwar", "True"], out.stderr)
+        self.env.pop("CU_SEAT")
+        r = self.run_bridge("start", "--task", "demo")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("--seat cu-lastwar", self.argv_file.read_text())
+
+    def test_cu_seat_still_overrides_the_default_and_a_bad_one_exits_two(self):
+        self.env["CU_SEAT"] = "cu-other-seat"
+        r = self.run_bridge("start", "--task", "demo")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("--seat cu-other-seat", self.argv_file.read_text())
+        self.run_bridge("stop-daemon")
+        for bad in ("lastwar", "Cu-Upper", "cu_under", "cu-", "owner", "cu-a-b-c-d-e"):
+            self.env["CU_SEAT"] = bad
+            r = self.run_bridge("start", "--task", "demo")
+            self.assertEqual(r.returncode, 2, f"{bad!r}: {r.stdout}{r.stderr}")
 
     def test_cu_style_names_pass_including_the_default(self):
         for seat in ("cu-lastwar", "cu-owner", "cu-test-12345678"):

@@ -41,9 +41,14 @@ control link printed by `start`, in a real terminal:
 
 The desktop-run lock belongs to the computer-use project (`_environments_/macos-desktop/run-lock.mjs`, state under
 /tmp/cu-desktop-run): the server takes it for the life of each run under the `--seat` this bridge passes (CU_SEAT, default
-`cu-owner`) and frees it on finish, abort and exit; a run killed by a signal leaves an entry the next acquire reclaims once its
-pid is dead. The seat must be a [cu] key, `^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$` (`lastwar` alone is refused by the lock; `cu-lastwar`
-would pass): a bad CU_SEAT stops `start` with exit 2.
+`cu-lastwar`, as agreed with the cu team 2026-11-23: it fits their seat pattern and resets nothing persistent) and frees it on
+finish, abort and exit; a run killed by a signal leaves an entry the next acquire reclaims once its
+pid is dead. The seat must be a [cu] key, `^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$` (`lastwar` alone would read as no run to their guards):
+a bad CU_SEAT stops `start` with exit 2. CUT-OVER from cu-owner: only between runs, when no run or hold of this seat is live, and
+`cu_bridge.py restart` so the daemon reads the new default; a hold taken as cu-owner is released as cu-owner. An explicit hold
+outside a bridge run (a bridge run needs none) is `node <computer-use checkout>/_environments_/macos-desktop/run-lock.mjs hold
+--seat cu-lastwar --minutes N --reason "<run id>" [--wait-free SECONDS]` and `... release --seat cu-lastwar` in an EXIT trap (exit 0
+done, 1 refused, 2 usage, 3 held but busy: release if you give up); `status` reads it, and `lock` here wraps that.
 
 Exit codes: 0 ok, 1 refused or failed, 2 usage or environment error.
 """
@@ -89,7 +94,7 @@ SERVER = PROJECT / "_tools_/computer-use-mcp" / "server.mjs"
 KEY_FILE = Path(
     os.environ.get("CU_KEY_FILE", str(Path.home() / ".heddle/keys/conclave.api.key"))
 ).expanduser()
-SEAT = os.environ.get("CU_SEAT", "cu-owner")
+SEAT = os.environ.get("CU_SEAT", "cu-lastwar")      # was cu-owner until 2026-11-23: the cu team asked for a name that tells these runs from the owner's
 SEAT_PATTERN = re.compile(r"^cu-[a-z0-9]+(-[a-z0-9]+){0,3}$")      # the computer-use lock's own pattern (run-lock.mjs SEAT_PATTERN)
 RUN_LOCK_DIR = Path(os.environ.get("CU_RUN_LOCK_DIR", "/tmp/cu-desktop-run"))
 DEFAULT_APP = os.environ.get("CU_APP", "com.lastwar.ios")
