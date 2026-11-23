@@ -458,6 +458,21 @@ entries to implemented.
 - status: open - toolsmith assignment A-20261123-0437 dispatched; scribe pilot
   split of alliance-donations next.
 
+### IMP-20261123-04 - unfinished ceremony is not resumed
+
+- source: star-ceremony unit 2026-11-23,
+  `_records_/2026-11-22/alliance-duel/2037-queue-run.md`
+- class: process
+- leak: Event 42 stopped at step 7 of 13 at 14:15 PT and its two successor
+  units expired unexecuted, so the finale chest and Participation Prize are
+  most likely lost; Event 40 lost the same way (Issue 488).
+- target metric: ceremonies left unfinished past their window, 1 now
+  (Event 42), goal 0.
+- verification: when a unit ends mid-ceremony, the planner stages a
+  continuation inside the same window and it closes before expiry; the
+  alliance-duel profile states the resume rule (scribe, versioned).
+- status: open - planner and scribe to take it after the lint-gate work.
+
 ## Closed
 
 None yet. The first closures are expected at the 2026-11-01

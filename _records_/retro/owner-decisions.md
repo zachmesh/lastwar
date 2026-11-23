@@ -403,6 +403,18 @@ one mention in a summary.
   builds. An Oil Well build is likely gated by the Unlock Oil Well research
   (done about 11:43Z, inference). Until answered, building-queues units are
   reads. Cost of waiting: idle builder-hours accrue.
+### OD-20261123-01 - unidentified gold-trophy bubble over a mid-base building
+
+- opened: 2026-11-23
+- item: a second gold-trophy bubble at about (568,217) over a mid-base
+  building alternates with a NEW badge; it is unidentified and was not
+  tapped. It may be the Arena, which is PvP.
+- context: read by the star-ceremony unit,
+  `_records_/2026-11-22/alliance-duel/2037-queue-run.md`.
+- decision needed: may a unit tap it to identify it (open the screen only,
+  never fight), or must it stay untouched.
+- status: open. Until answered, units read the bubble and never tap it.
+
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
