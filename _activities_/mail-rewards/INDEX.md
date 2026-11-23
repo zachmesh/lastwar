@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-12T06:32:17Z
+modified: 2026-11-23T00:41:10Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -47,6 +47,7 @@ grounded_in:
   - source: ticker-1408 mail-rewards execution record 2026-11-11 1422 queue run (partial, Event Claim All paid medal 280, EXP 2.4M, Battle Data 1.5K, 10-stamina x2, coin 969.0K, food 769.0K, iron 769.0K, other categories unchecked, tap offset measured; record commit d00afba5a on records/2026-11-11)
   - source: ticker-1439 zombie-invasion execution record 2026-11-11 1456 queue run (partial, Glacieradon chain 016, mail already claimed by the 1422 mail unit, Claim All auto-advance to the next unread mail, mail-detail back arrow offset-miss with re-test owed; record commit 34be97f28 on records/2026-11-11)
   - source: ticker-2133 troop-training execution record 2026-11-11 2136 queue run (partial, training unit's mail detour - President Mail 2110 Honoring Our Veterans read live, three unread President Mail, Alliance and Event gift icons unclaimed, nothing claimed; record commit bca5a948c on records/2026-11-11)
+  - source: ticker-0604 mail-rewards execution record 2026-11-22 0619 queue run (done, full sweep, all categories Claim All answered "No rewards available", nothing claimed, Zombie Siege reports 2d old corroborate Issue #814, TIPS popup on Mail close dismissed with Cancel; record commit 717f9fd92 on main)
 ---
 
 
@@ -1045,3 +1046,13 @@ the next tick re-produces this regular as a fresh unit.
 - Cross-read only, not a mail unit execution: the ticker-2133 training unit (training-2026-11-11-1803, 21:36-21:46 local) tapped the massed-troops yard area at norm (841,799) looking for the Drill Ground and opened Alliance mail instead. Evidence in `_records_/2026-11-11/troop-training/2136-queue-run.md` (commit bca5a948c on records/2026-11-11). The mail screens are not the training unit's work; the next training unit must not re-enter them.
 - Read live: "(President Mail) 2110 Honoring Our Veterans" (2026-11-11 16:34:14, 94 likes) and the mail list - three unread President Mail items (Y Espanol and two Veteran's Day), Maintenance Completed, Patch Notes. The Alliance and Event rows show gift icons - rewards unclaimed, corroborating the 1730 zero-sweep read. Nothing claimed in this unit; Delete All NOT tapped; Claim All NOT tapped. Mail closed back to the base screen.
 - Result stats: no mail unit ran; nothing claimed, nothing spent; verified yes (mail list read live in-unit); blocker_category none.
+
+## What the 2026-11-22 0619 unit added - full sweep, nothing claimed, Zombie Siege corroboration, TIPS popup dismissed, done
+
+- Unit mail-2026-11-22-0230 by ticker-0604, about 06:14 to 06:19 local, status done. Evidence in `_records_/2026-11-22/mail-rewards/0619-queue-run.md` (commit 717f9fd92 on main). Session cc-108 on the owner Mac mini, window 123822 (window mode, 642x951, never brought to front).
+- Full sweep, nothing claimed: every category's Claim All answered "No rewards available" - Event (6 train mails, 4 unread, no attachment icon on any row), Alliance (Daily Donation Rankings, Alliance Exercise, Meteor guide, Zombie Siege Reports 2d ago), Battle Report (red dot is unread reports, not rewards), System (President Mail x4 languages, Server Update, Maintenance Extension), Regular (Doom Elite victories). In-app Purchases holds receipts only, as documented - "Pack purchased: Gear Master Pack" 2026-11-21 18:41:40 and "Pack purchased: Military Training Pack" 2026-11-21 14:37:19; its red dot is unread receipts, and no Claim All was tapped there. Nothing was deleted; Delete All never pressed. The base Mail red dot was not re-checked at close.
+- Zombie Siege corroboration (Issue #814): "The 2-day-old Zombie Siege reports corroborate that Zombie Siege runs regularly and tonight's 23:15 slot (Issue #814) is a recurring instance." The Alliance tab holds a Zombie Siege Report (Alliance) and a Zombie Siege Report (Individual) from 2d ago, both read, no attachments.
+- TIPS popup on Mail close: "Enable notifications and never miss important messages again." Cancel was tapped; Enable Now was NOT tapped, no setting changed. Same TIPS class as the radar 0901 "Friendly Visitor" popup (dismissed with Cancel) - dismiss with Cancel, never tap Enable Now.
+- Base re-read at entry: power 149,417,850 (unchanged); food 763.7M, iron 1.1G, coins 107.6M, diamonds 6,436 (unchanged); lightning counter 120 (back to full from 118-119 in the scout unit of this pass - regeneration confirmed); VS countdown 11:44:47; clock building 12:15 (server time); Build: Oil Well (0/1).
+- Result stats: target 1, achieved 1 (all categories swept), resources_gained none, costs about 5 minutes, verified yes, blocker_category none, claims_made 0.
+- No diamonds or money spent. No other task type was executed in this unit.
