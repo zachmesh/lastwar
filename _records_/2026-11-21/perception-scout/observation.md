@@ -1,9 +1,9 @@
 ---
 title: Observation 2026-11-21
 created: 2026-11-21T23:55:00Z
-modified: 2026-11-22T16:23:00Z
+modified: 2026-11-23T00:23:49Z
 level: L0
-version: 1.15.0
+version: 1.17.0
 description: Day observation file for the reset day started 2026-11-20 19:00 local, appended to by every scout unit of the day
 status: unverified
 ---
@@ -719,3 +719,30 @@ Correction to the ticker-0604 section (same pass, before delivery): the session 
 ## Coverage update (ticker-0812, about 08:23 local)
 
 - Surfaces walked this unit: base (re-read), Gold Bricks instructions panel, Chat (Private list), News Center. Items observed this reset day: 502 (489 + 13). Red dots seen this unit: 9, explained 9; unexplained red dots: 0 - the tenth zero-unexplained close of this chain. Unknown items: 1 still open (347.7K Techs-panel counter identity - narrowed to a panel-local counter, not the base slot); 3 resolved (second-row counter is Gold Bricks, 17,725 owned; bottom portrait icon is the News Center base entry - second entry point to seq 7's panel; green-clock timer closed as an expired event countdown); 1 narrowed (WORLD badge rose 91+ to 99+ while Chat was opened once - the seq-9 clearing model does not fit this read). Not walked yet: the 347.7K Techs-panel counter identification, the News Center NEW! bubble clearing check, the VS red dot fresh verification (successor seq 19). The chain continues (scout-2026-11-20, successor seq 19).
+
+## Pass scout-2026-11-20 executed, unit ticker-1021, Alliance Contribution identified, News Center NEW bubble cleared, VS dot verified absent
+
+- 347.7K Techs-panel counter RESOLVED: the slot is context-sensitive - on the base it shows Gold Bricks (17.72K at 10:28 and 10:42), inside Alliance Techs it shows Alliance Contribution (347.9K, up from 347.7K at seq 17). Tooltip read live: "Alliance Contribution: 1. Helping allies and donating to Alliance techs will get Alliance contributions. 2. Alliance contributions can be exchanged for items in the Alliance Store."
+- Alliance panel: [AP3x] The Apex, 5.0, Leader Abyss Apex, Power 14,543,248,824, Members 100/100, English. Help / Alliance Gifts / Alliance Store / Alliance Techs each carry a red dot. Alliance Star (Event 42), Time Left 07:24:25 at about 10:37.
+- Alliance Techs Development: Auto Rally Max Level, Quick Construction 9/10, Great Helper Max Level, next tech 2/10. Tech Donation Today 6900.
+- News Center NEW! bubble CLEARED: absent from the base portrait on the 10:28 entry read and the 10:42 close read, after seq 18 opened the News Center. A small blue/purple corner mark remains on the portrait frame, identity open.
+- VS dot fresh verification: VS carries NO red dot (10:28 and 10:42 reads). WORLD badge 99+ at entry and close (stable; seq 18's 91+ was an OCR misread).
+- Base timers open: two right-rail icons (Capitol-like and meteor) carry 07:35:20 at entry / 07:32:55 at close - NOT the Alliance Star countdown (07:24:25), identities open.
+- Base re-read: food 760.6M, iron 1.1G, coins 109.2M, diamonds 6,436, Gold Bricks 17.72K, power 147,972,269, Lv.30, stamina 120, Build Oil Well [0/1].
+- Surfaces walked this unit: base (re-read), Alliance panel, Alliance Techs panel. Items observed this reset day: 514 (502 + 12). Red dots seen this unit: 10, explained 10; unexplained red dots: 0 - the eleventh zero-unexplained close of this chain. Unknown items: 3 still open (two base-timer icon identities; passes entry; 3v3 Brawl / Champion Duel exploration, Issue #805); 3 resolved (347.7K counter, News Center NEW! clearing, VS dot); 1 narrowed (portrait corner mark identity). Not walked yet: passes entry, the two base-timer icons, 3v3 / Champion Duel (successor seq 20). The chain continues (scout-2026-11-20, successor seq 20).
+
+## Pass scout-2026-11-21 executed, unit ticker-1604, base re-read, timer icons unresolved, Events hub not opened
+
+- Session about 16:13 to about 16:23 local, computer session cc-170, window 127196 (window mode, never brought to front). Observe-only throughout. Token acquired about 16:10, unit claimed about 16:12, session closed about 16:23 with the token expiry (16:25) approaching and the pass budget ending.
+- Base re-reads (entry about 16:17, close about 16:25): power 147,972,269 (unchanged from seq 19); food 765.4M (up from 760.6M at seq 19); iron 1.1G; coins 109.2M; diamonds 6,456 (up from 6,436, plus 20, cause not established - no claim was made by this unit); Gold Bricks 17.72K; lightning counter 120; hammer 1/4 (red dot), flask 2/2; Events badge 1; Build: Oil Well [0/1]; two survivor "?" icons at the front door; radar dish badge 11; trucks red dot; WORLD badge 99+; chat ticker "Breaking News: Intense battle...", "ArchManningIsBunz:", "scrap yard: ty Tex".
+- Right-rail timers: the two icons (helmet-like upper, meteor-like lower) BOTH read 01:47:39 at about 16:17 and 01:46:29 at about 16:19 - identical to each other, decreasing about 1 per minute of wall time. Identity NOT resolved: a tap at the upper icon's measured point (595,175) did not open a panel - it panned the map slightly instead - and a tap at the Events point (595,140) selected the Drone Center instead of opening Events. R2 note: two taps at HUD-rail points landed on the map, so the background-input point mapping for the right rail needs re-grounding by the successor (fresh screenshot, re-measure the rail icons before tapping; do not re-tap the same points blindly). The timers are consistent with a reset-anchored countdown (reset 18:00 PT, about 1h43m at entry against 1h47m displayed - the display runs slightly slow, matching the background-throttling finding), but that is inference, not a read of the icons' identity.
+- NEW tag: a yellow NEW tag is visible on the glowing orange-topped building at the top-right of the base (about (540,225) in the about 16:19 view), identity open - not the Arena NEW tag (resolved seq 17). Carried open.
+- Drone Center Lv.1: the second tap selected the Drone Center, whose radial menu shows a plane icon and an info icon (neither tapped). The info panel was not opened; the building's function is not explored.
+- Base clock building: the blue cylindrical building's digital display read 22:14 at about 16:23 (server time, counting up slowly; about 9 minutes behind the wall-clock-implied about 22:23 - consistent with the throttled clock).
+- NOT done this unit: Events hub not opened (zombie tab not enumerated - the zombie chain stays unseeded); passes entry not located; 3v3 Brawl / Champion Duel not explored; portrait corner mark not re-checked.
+- Red dots seen this unit: 10 (hammer 1/4, Events badge 1, chat badge 3, radar dish badge 11, WORLD badge 99+, HEROES, Inventory, Mail, Alliance, trucks), explained 10, unexplained 0 - the twelfth zero-unexplained close of this chain. The VS red dot was not separately verified this unit (the VS icon was visible with its timer but no dot state was asserted); seq 19's "VS carries NO red dot" is carried, not re-asserted.
+- No diamonds or money spent. No claim, fight, dispatch, donation or purchase.
+
+## Coverage update (ticker-1604, about 16:23 local)
+
+- Surfaces walked this unit: base (re-read), Drone Center selection (radial menu seen). Items observed this reset day: 532 (514 + 18). Red dots seen this unit: 10, explained 10; unexplained red dots: 0 - the twelfth zero-unexplained close of this chain. Unknown items: 4 still open (two base-timer icon identities - tap method failed, R2 re-grounding owed; passes entry; 3v3 Brawl / Champion Duel exploration, Issue #805; portrait corner mark identity); 1 new (NEW tag on the glowing orange-topped building); 1 narrowed (the two timers read identically and track wall time about 1:1 over 2 minutes - a reset-anchored countdown is the leading hypothesis, identity still open). Not walked yet: Events hub tab enumeration (zombie tab), passes entry, 3v3 / Champion Duel, portrait corner mark, NEW-tag building identity (successor seq 2). The chain continues (scout-2026-11-21, successor seq 2).
