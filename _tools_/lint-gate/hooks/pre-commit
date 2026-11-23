@@ -1,0 +1,12 @@
+#!/bin/sh
+# lint-gate pre-commit hook: blocks a commit that adds or changes an oversized or misshapen document.
+# Exit 1 blocks; exit 2 (the gate could not run) allows the commit with a warning.
+# Rollback: git config --unset core.hooksPath      Bypass once: git commit --no-verify
+top=$(git rev-parse --show-toplevel) || exit 0
+"${PYTHON:-python3}" "$top/_tools_/lint-gate/lint_gate.py" check --staged --root "$top"
+rc=$?
+if [ "$rc" -eq 2 ]; then
+  echo "lint-gate: could not run; commit allowed. Fix the cause above." >&2
+  exit 0
+fi
+exit "$rc"
