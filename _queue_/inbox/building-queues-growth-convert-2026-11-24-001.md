@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-24T09:22:00Z
 window: convert coin, start the lowest Drill Ground and apply bounded speed-ups when the builders free
 est_minutes: 15
-serves: capacity source: Drill Ground lowest first (builders at 2026-11-24T09:20Z)
+serves: PL-08
 chain_id: growth-convert-2026-11-24
 chain_seq: 1
 attempts: 0
@@ -28,7 +28,7 @@ Serves: capacity source: Drill Ground lowest first (builders at 2026-11-24T09:20
 
 ## Brief (planner, builders at 09:20Z, funding (a) and steps 1 and 2 of 3, decision 2603)
 
-serves: capacity source: Drill Grounds Lv.26 and Lv.27 first (builders free at 2026-11-24T09:20Z)
+serves: PL-08
 
 Decision `_records_/2026-11-22/team-operations/2603-first-builder-decision.md` (Strategist veto until 20:00Z today; a veto note here governs). Plan, tap points, previews, hazards: `_records_/2026-11-22/queue-planning/2540-drill-ground-sheet.md`; conversion procedure: `_records_/2026-11-22/queue-planning/2541-conversion-and-speedup-sheet.md`; follow both. Rules: `_records_/2026-11-22/queue-planning/2430-conversion-rules.md`, `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. The owner plays by hand: start only on IDLE builders, never touch his queue; never press Obtain, Finish Now or buy.
 
@@ -41,4 +41,5 @@ Run 2, the starts: first idle builder, the Lv.26 ground (59.5M coin, 74.8M iron)
 Tag text: write each building-panel number's tag text beside it (name and level above the building; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]; add a tag_text column.
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

@@ -1,0 +1,12 @@
+step,item,tag_text,value,utc,note
+1 conversion,Coin Chest (UR) x7,"Coin Chest (UR) (number field 7, Total 17.05M read before Use)",one Use: popup CONGRATULATIONS 17.0M coin; coin 529.2K to 17.5M; UR chests 87 to 80,2026-11-23T13:53:10Z,run 20261123T135214Z-6e7e2b
+2 speed-up,Speed Up dialog for Coin Output V,"Speed Up (1d 01:03:46 left): Instant Speed-up, Finish Now, 8h Research Speed-up (own 8), 1h Research Speed-up (own 126), 5m Research Speed-up",Instant Speed-up and Finish Now never pressed,2026-11-23T13:55:30Z,no quantity selector
+2 speed-up,press 1 to 3,"8h Research Speed-up, quantity 1 each","17:03:26 (7 left), 09:03:18 (6 left), 01:03:09 (5 left)",2026-11-23T13:55:46Z,tech items only
+2 speed-up,press 4,"1h Research Speed-up, quantity 1",00:03:01 (125 left),2026-11-23T13:56:10Z,
+2 speed-up,press 5,"5m Research Speed-up, quantity 1","00:02:53, then TIPS 'would exceed 00:02:06, excess items returned by mail': Confirm pressed once by the run (no price, no diamond); the research completed",2026-11-23T13:56:25Z,the 5m count was never read
+3 complete,Complete on Coin Output V,Research on Coin Output V completed,"POWER +3,900; Total Power 150,413,046 to 150,416,946",2026-11-23T13:56:35Z,lab slot 1 idle from here
+3 preview,IRON OUTPUT V 0/10 (Age of Oil),"Boost Iron Output: Current 0, Next Level +2.50%","costs: iron 1.0G of 1.8M, coin 17.5M of 5.6M, food 654.7M of 1.8M, no oil; Lv.30 Any Tech Center and Lv.1 Unlock Oil Well met",2026-11-23T14:00:44Z,frame step-0006; no power figure shown
+3 preview,times,"Original Time 5d 14:45:00 = 485,100 s","Research button 1d 16:50:00 = 147,000 s (M 3.30); Finish Now clock 1d 12:38:00 = 131,880 s",2026-11-23T14:00:44Z,the started timer equals the Finish Now clock
+4 start,Research pressed once,IRON OUTPUT V,"timer 1d 12:37:59 = 131,879 s: M = 485,100 / 131,879 = 3.678; coin 17.5M to 11.9M, food 654.7M to 652.8M, iron minus 1.8M, oil 647.0K",2026-11-23T14:00:54Z,ends about 2026-11-25T02:38:54Z
+queue,Food Output V Lv.0 and Iron Output V Lv.0,Time Left 1d 03:28:28 and 1d 12:37:29,both labs busy,2026-11-23T14:01:35Z,Food ends about 2026-11-24T17:30:03Z
+hub,The Age of Oil tile,"fourth row of the TECH hub after one drag: Siege to Seize, Defense Fortifications, The Age of Oil, Squad 3, Squad 4, Tank Mastery, Missile Mastery, Aircraft Mastery","tree: gold MAX top node, Food Output V 0/10, Iron Output V 0/10, Coin Output V 1/10, grey 0/10 derrick node, grey Fast Builder V 0/10, grey Research Enhancement V 0/10",2026-11-23T14:00:37Z,"Oil Output I (base 679,140 s) not opened"

@@ -36,11 +36,12 @@ COIN HOLD LIFTED for ranked sinks. The builders freeing at 2026-11-24T09:20Z bel
 
 PRESS COMPLETE the moment a research or a build finishes: a finished research neither banks its power nor frees the lab until then.
 
-When a builder is idle and released: Drill Ground lowest first, then barracks Lv.24 to 27 (Lv.30 only for tier unlocks), then Oil Well levels 1 to 9 (food and iron only; collect the oil twice a day). Age of Oil and HQ 31 stay off. Labs: one on Special Forces VIII or IX, the other on the node the Strategist names (Drill Ground Expansion is [G], never seen on screen; Extra Barracks is MAX), then Coin Output V, Garage 1, the Alliance Duel tree; never cancel a running one.
+When a builder is idle and released: Drill Ground lowest first, then barracks Lv.24 to 27 (Lv.30 only for tier unlocks), then Oil Well levels (food and iron only; the well is collected every 8 hours by its own units). Base Expansion is the owner's priority (OD-18); a fill never takes a slot the plan owns. Labs: both run Age of Oil nodes; start nothing in a lab and never cancel a running one.
 
 TRAIN: never retry the Hospital Collect; it is all-or-nothing, needs at least 5,306 free slots at once and only repeats the toast. When Drill Ground slots open, collect finished batches, then fill with new T10 from surplus food and iron. No fights that wound troops while full.
 
 Run one growth unit at a time. Do not enqueue a chain successor.
 
 Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

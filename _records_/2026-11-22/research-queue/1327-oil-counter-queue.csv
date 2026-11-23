@@ -1,0 +1,11 @@
+item,tag_text,value,read_utc,finish_utc_computed,note
+oil counter HUD,oil counter beside the blue barrel icon (second row),647.0K,2026-11-23T13:26:47Z,,same as 12:51Z (647.0K) and in the Backpack header at 13:09Z; 434.1K at 11:18Z
+oil barrels in the Backpack,oil tiles 3.0K and 6.0K,"gone (13:09Z read, run 20261123T130851Z-d2a82d)",2026-11-23T13:09:20Z,,"210K barrels (6 x 3.0K, 32 x 6.0K) at 11:21Z: used by the other device; the counter includes them (+212.9K)"
+Oil Well panel,not read,the Oil Well is researched but not built; the bar line reads 'Upgrade Builder's Hut to Lv.26 (0/1)',,,no building to open
+research slot 1 read 1,Lv.0 Food Output V upgrade in progress,"Time Left 1d 04:02:56 (100,976 s)",2026-11-23T13:26:58Z,2026-11-24T17:29:54Z,bar about 28 percent filled (green to x 331 of 273 to 481)
+research slot 1 read 3,Lv.0 Food Output V upgrade in progress,"Time Left 1d 04:02:45 (100,965 s)",2026-11-23T13:27:09Z,2026-11-24T17:29:54Z,
+research slot 2 read 1,Lv.0 Coin Output V upgrade in progress,"Time Left 1d 01:32:07 (91,927 s)",2026-11-23T13:26:58Z,2026-11-24T14:59:05Z,bar about 30 percent filled (green to x 335)
+research slot 2 read 3,Lv.0 Coin Output V upgrade in progress,"Time Left 1d 01:31:57 (91,917 s)",2026-11-23T13:27:09Z,2026-11-24T14:59:06Z,finish agrees with the 12:56:50Z read (14:59:10Z) within 5 s
+research speed percent,not shown,no panel shows it,,,the queue rows carry only Speed Up buttons
+Coin Output V node panel,not reachable,"a running node shows only a timer and Speed Up; both labs are busy, no route to the trees",,,"base time, effective time and cost unread"
+speed multiplier M,not derivable,"the bar fractions give a total near 131,000 s (Coin) and 140,000 s (Food) so M near 3.7 and 3.5, but the 3,960 minutes of speed-ups used on the blue-disc items shift remaining time and the bar",,,"unverified, roughly plus or minus 5 percent from the bar edge alone"

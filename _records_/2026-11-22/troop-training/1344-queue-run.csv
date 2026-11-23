@@ -1,0 +1,6 @@
+barracks,tag_text,pistol_utc,result,batch_and_timer,finish_utc_computed,state
+"tent C (628,562)",Barracks Lv.24,2026-11-23T13:44:22Z,toast 'Drill Ground Full: Unable to add more units.' (no panel),none,,"idle, blocked by capacity"
+"tent D (668,535)",Barracks Lv.20,2026-11-23T13:45:04Z,toast 'Drill Ground Full: Unable to add more units.' (no panel),none,,"idle, blocked by capacity"
+"tent A (462,585)",Barracks Lv.27,2026-11-23T13:45:31Z,"TRAIN UNITS panel, no slider, no toast, Speed Up button not pressed","Lv.9 batch of 726, Training in progress 06:10:58 (Power 1352, Morale 625.0, Squad Load Capacity 2000, Unit HP 4167.45, Attack 33.87, Defense 7.04)",2026-11-23T19:56:30Z,running
+"tent B (530,637)",Barracks Lv.30,2026-11-23T13:46:13Z,"TRAIN UNITS panel, no slider, no toast, Speed Up button not pressed","Lv.10 batch of 793, Training in progress 21:32:08 (Power 1647, Morale 750.0, Squad Load Capacity 2200, Unit HP 4779.05, Attack 38.87, Defense 8.04)",2026-11-24T11:18:21Z,running
+HUD,"food 654.7M, iron 1.0G, coin 529.2K, Total Power 150,413,046",2026-11-23T13:44:07Z,unchanged at 13:46Z,,,

@@ -10,7 +10,7 @@ planned_for: <cadence window this unit serves, ISO 8601 UTC>
 not_before: <claim not allowed before this time, or empty>
 window: <phase or posture constraint or empty>
 est_minutes: <producer estimate, never above 15>
-serves: <what this unit serves, one line; upkeep for a regular unit, a plan item id for a growth unit, fill idle slot until the plan exists>
+serves: <exactly one of: upkeep, snapshot, baseline, fill idle slot, or a plan item id that has a row in the forecast ledger (PL-nn, comma separated if more than one); free text fails the validate check>
 chain_id: <continuation chain id or empty>
 chain_seq: <position inside the chain or empty>
 attempts: 0
@@ -25,6 +25,13 @@ lease_until: <empty until claimed>
 What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
+
+A brief that taps buildings or menus points at the route card,
+`_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`,
+writes a precondition first (what must be true; if not, stop), records the
+tag text beside every number taken from a building panel, and stops with
+one named reason: blocked by capacity, by the owner on another device, by
+cost, by prerequisite, by route or by window.
 
 On completion the executor runs `_tools_/queue.py complete`, which
 writes the result section into this file's frontmatter - status,

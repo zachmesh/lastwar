@@ -1,0 +1,8 @@
+item,value,read_utc,note
+first frame dialog,TIPS 'active on a different device' NOT showing,2026-11-23T13:48:39Z,
+"train shortcut icon (107,580)","red badge 2 (it read 1 at 13:38Z); it opens the TRADE TRUCK panel, not the station",2026-11-23T13:48:51Z,"'Today's Trade Count: 5/5', 'No more dispatches available.', three trucks and one locked slot, Mega Mode and History buttons, tabs Your Truck (badge 2) and Others' Trucks (4)"
+Mail screen,"red dots on Alliance, Event, Regular, In-app Purchases; none on Battle Report, System, Favorite",2026-11-23T13:49:09Z,
+Event list newest first,"1. an ally's 'train has arrived' mail 1h, unread; 2. a Mega Exp mail 2h, unread; 3. an ally's 'train has de...' mail 3h; 4. another train mail 5h; 5 and 6. Code 87 Individual Reward 7h, read",2026-11-23T13:49:14Z,no gift icon on any row; no row titled Train arrival reward
+arrival mail contents,"title 'train has arrived!', a conductor card (level 30), a passenger list of ally accounts (level 30), no attachments",2026-11-23T13:50:40Z,"buttons Details, back arrow, star, trash can: no Claim button; opened and left read, Details not opened, nothing deleted"
+claim,none pressed,,nothing to claim: the arrival notice carries no reward
+HUD,"food 654.7M, iron 1.0G, coin 529.2K, oil 647.0K, diamonds 11,113, Total Power 150,413,046",2026-11-23T13:51:00Z,unchanged
