@@ -1,7 +1,9 @@
 slot_type,window,total_slot_minutes,idle_minutes,idle_share,basis,unobserved_or_caveat
-builders (4),6h,1440,840,58.3%,"reads: 1 busy to 03:55Z, 0 busy 03:55Z-06:01Z, 4 busy from 06:48Z; start of the four builds taken at the 06:25Z midpoint","6 h gap 21:56Z-03:55Z unobserved, carried forward; start of the four builds +-0.4 h = +-94 slot-min"
-labs (2),6h,720,0,0.0% observed,2 of 2 busy at every read that showed labs,16 h gap 11:59Z-03:55Z unobserved; the 13:10 PT read gave slot 1 finishing 16:43 PT and the 20:22 PT read contradicts it
-"training barracks (3 read, Lv.20 unprobed)",6h,1080,360,33.3%,Lv.24 idle since its finished batch was collected 18:05Z 11-22; Lv.27 requeued 09:34Z and Lv.30 requeued 17:58Z on 11-22,"Lv.24 idle is capacity-blocked (toast verified 04:17Z, 07:49Z, 08:00Z); earlier Lv.27 and Lv.30 idle cause unverified; Lv.20 unknown"
-builders (4),24h,5760,4080,70.8%,"reads: 1 busy to 03:55Z, 0 busy 03:55Z-06:01Z, 4 busy from 06:48Z; start of the four builds taken at the 06:25Z midpoint","6 h gap 21:56Z-03:55Z unobserved, carried forward; start of the four builds +-0.4 h = +-94 slot-min"
-labs (2),24h,2880,0,0.0% observed,2 of 2 busy at every read that showed labs,16 h gap 11:59Z-03:55Z unobserved; the 13:10 PT read gave slot 1 finishing 16:43 PT and the 20:22 PT read contradicts it
-"training barracks (3 read, Lv.20 unprobed)",24h,4320,2062,47.7%,Lv.24 idle since its finished batch was collected 18:05Z 11-22; Lv.27 requeued 09:34Z and Lv.30 requeued 17:58Z on 11-22,"Lv.24 idle is capacity-blocked (toast verified 04:17Z, 07:49Z, 08:00Z); earlier Lv.27 and Lv.30 idle cause unverified; Lv.20 unknown"
+builders (4),24h,5760,3291,57.1%,"reads: 1 busy to 03:55Z, 0 busy 03:55Z-06:01Z, 4 busy from 06:48Z to the Training Base finish at 2026-11-24T09:20Z",6 h gap 21:56Z-03:55Z carried forward; start of the four builds +-94 slot-min
+builders (4),6h,1440,0,0.0%,4 of 4 busy throughout,
+labs (2),24h,2880,75,2.6% observed,"lab 1 finished Unlock Oil Well 11:42:55Z, Complete pressed 11:53:00Z, no restart recorded by 12:58Z, so idle 75 min (may have restarted unrecorded); lab 2 busy",16 h read gap 11:59Z 11-22 to 03:55Z; lab reads contradicted each other on 11-22
+labs (2),6h,720,75,10.4% observed,same,
+"training barracks (3 read, Lv.20 unprobed)",24h,4320,1740,40.3%,Lv.24 idle all window (capacity-blocked); Lv.30 idle to 17:58Z 11-22; Lv.27 busy,Lv.20 unknown
+"training barracks (3 read, Lv.20 unprobed)",6h,1080,360,33.3%,Lv.24 idle (capacity-blocked),
+ALL slots,24h,12960,5106,39.4%,,
+ALL slots,6h,3240,435,13.4%,,

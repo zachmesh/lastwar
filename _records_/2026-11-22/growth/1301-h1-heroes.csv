@@ -1,0 +1,12 @@
+group,item,value,note
+roster,heroes in the Hero List,31,"tabs All, Tank, Missile, Aircraft; no sort control, no count shown; cards show squad number, class icon, level, stars, no name, no power"
+roster,UR (orange),16,"15 at Lv.150 (stars 4 to 5, two 4.5), then Lv.145 4 stars, Lv.133 3 stars, Lv.125 3 stars (row 4: Lv.150 4 stars, Lv.145, Lv.133, Lv.125)"
+roster,SR (purple),12,"Lv.150 5 stars x2, Lv.120 x3 (3 to 3.5 stars), Lv.120 4 stars, Lv.100 x6 (3 to 3.5 stars); approximate stars"
+roster,R (blue),4,"Lv.59 4.5 stars, Lv.57 4 stars, Lv.55 x2 (4 to 4.5 stars)"
+list buttons,bottom of the list,"back arrow, Recruit Heroes, Recommend",none pressed
+detail hero,"first card, UR helicopter class (Scamp)","Lv.150, power 3,964,558","game hero, not a player name"
+detail: Attributes tab,"Attack 49.0K, HP 3.3M, Defense 13.7K, March Size 453","four gear slots Lv.20, Lv.40, Lv.40, Lv.40","'Maximum Level Reached', Upgrade greyed"
+detail: Skills tab,"four skills (three Lv.30 with 5 stars, one MAX)","Dual-string Rocket Lv.30/33, Auto Attack, 309.32% to 314.50% of Attack, counter 10721/26000",Upgrade button not pressed
+detail: Tier tab,"5 Stars, Hero HP 210776, Attack 2753, Defense 747","note 'added to the Wall of Honor', a Go button",Go not pressed; the Wall of Honor is reached from here (unverified)
+detail: Exclusive Weapons tab,"Weapon Lv.10: HP +231613 to +259687, Attack +1512 to +1695, Defense +1026 to +1150","resistance 3.00%, max skill level +33, four weapon skills (two unlocked), counters 441/45, 15/15, 15/60","two Upgrade buttons and Preview, not pressed"
+where things live,stars: Tier tab; skills: Skills tab; gear: Attributes tab; exclusive weapon: Exclusive Weapons tab,,the Tier tab note points to the Wall of Honor via a Go button

@@ -1,9 +1,9 @@
 ---
 title: Drill Ground Reference Sheet For The 09:20Z Builder Units 2540 2026-11-23
 created: 2026-11-23T03:04:00-08:00
-modified: 2026-11-23T04:24:00-08:00
+modified: 2026-11-23T05:18:00-08:00
 level: L0
-version: 1.4.0
+version: 1.5.0
 description: The reference the builder units for 2026-11-24T09:20Z point at - the four Drill Grounds with tap points and the pan, the measured upgrade previews with their tag texts, the funding plan and the hazards; the conversion procedure and speed-up use are on sheet 2541
 status: done
 activity: queue-planning
@@ -42,4 +42,4 @@ Keeps the coin in the base at the buffer and the 50M fixed-chest reserve. (a) Gr
 
 ## Hazards
 
-Never Upgrade on a builder running the owner's queue. Close a menu with an empty-ground tap such as (200,610); never tap WORLD at (660,940) with a menu open low, because the green Upgrade arrow can sit there. Never press Obtain.
+Never Upgrade on a builder running the owner's queue. Close a menu with an empty-ground tap such as (400,640), the safe point (the earlier point (200,610) is a Gold Mine Lv.28 that opens its menu); never tap WORLD at (660,940) with a menu open low, because the green Upgrade arrow can sit there. Never press Obtain.

@@ -5,7 +5,7 @@ activity: research-queue
 segment: 1
 priority: 2
 created_at: 2026-11-23T08:25:37Z
-expires_at: 2026-11-23T14:30:00Z
+expires_at: 2026-11-23T12:00:00Z
 planned_for:
 not_before: 2026-11-23T12:55:00Z
 window: convert coin for the Drill Ground Expansion node and start it when the lab frees

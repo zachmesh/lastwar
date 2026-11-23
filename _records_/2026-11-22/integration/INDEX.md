@@ -40,3 +40,5 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 896](landing-pr-896.md) - model policy persistence, respawn rule
 - [PR 897](landing-pr-897.md) - tag-text rule in six digests, snapshot-protocol article
 - [PR 898](landing-pr-898.md) - fifth records snapshot, strategist policies, decisions, queue state
+- [PR 899](landing-pr-899.md) - sixth records snapshot, owner decisions 17 to 22, strategist v3
+- [PR 900](landing-pr-900.md) - truck-plunder card and digest for the plunder order

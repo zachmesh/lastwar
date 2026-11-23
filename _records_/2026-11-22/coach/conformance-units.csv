@@ -1,13 +1,4 @@
 unit,chain_id,activity,status,finished_at,serves_tag,serves_class,plan_item,blocker,growth_chain
-donations-2026-11-21-2203,,alliance-donations,partial,2026-11-22T09:21:35Z,,untagged,,h,no
-training-2026-11-21-2203,,troop-training,partial,2026-11-22T09:41:05Z,,untagged,,,no
-scout-scout-2026-11-20-012,scout-2026-11-20,perception-scout,partial,2026-11-22T10:11:19Z,,untagged,,h,no
-donations-2026-11-22-0921,,alliance-donations,partial,2026-11-22T11:19:53Z,,untagged,,h,no
-scout-scout-2026-11-20-013,scout-2026-11-20,perception-scout,partial,2026-11-22T11:22:48Z,,untagged,,b,no
-scout-scout-2026-11-20-014,scout-2026-11-20,perception-scout,partial,2026-11-22T11:41:27Z,,untagged,,b,no
-donations-2026-11-22-1119,,alliance-donations,partial,2026-11-22T11:46:05Z,,untagged,,h,no
-scout-scout-2026-11-20-015,scout-2026-11-20,perception-scout,partial,2026-11-22T12:15:02Z,,untagged,,h,no
-donations-2026-11-22-1146,,alliance-donations,partial,2026-11-22T12:42:01Z,,untagged,,h,no
 harvest-2026-11-22-0203,,resource-collection,partial,2026-11-22T13:23:26Z,,untagged,,h,no
 radar-2026-11-22-0203,,radar-tasks,done,2026-11-22T13:26:25Z,,untagged,,,no
 survivors-2026-11-22-0203,,survivor-intake,partial,2026-11-22T13:49:40Z,,untagged,,e,no
@@ -62,3 +53,27 @@ passes-2026-11-23-0712,,shop-claims,partial,2026-11-23T07:56:11Z,,untagged,,f,no
 scout-midday-growth-snapshot-2026-11-23-004,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T08:07:54Z,snapshot (Story 868),read-measure,P1/S868,,yes
 scout-midday-growth-snapshot-2026-11-23-011,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T08:24:43Z,snapshot (Story 868),read-measure,P1/S868,f,yes
 scout-midday-growth-snapshot-2026-11-23-002,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T08:27:43Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+scout-midday-growth-snapshot-2026-11-23-003,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T08:37:10Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-012,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T08:42:10Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+secrets-2026-11-23-0742,,secret-missions,done,2026-11-23T08:52:55Z,upkeep,upkeep,,,no
+building-queues-growth-fill-2026-11-23-002,growth-fill-2026-11-23,building-queues,partial,2026-11-23T09:09:04Z,fill idle slot,growth-action,P8,f,yes
+scout-midday-growth-snapshot-2026-11-23-018,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T09:31:14Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-019,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T09:37:30Z,snapshot (Story 868),read-measure,P1/S868,,yes
+scout-midday-growth-snapshot-2026-11-23-020,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T09:43:42Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+harvest-2026-11-23-0709,,resource-collection,done,2026-11-23T09:46:51Z,upkeep,upkeep,,,no
+trucks-2026-11-23-0711,,truck-plunder,partial,2026-11-23T09:55:50Z,upkeep,upkeep,,h,no
+donations-2026-11-23-0711,,alliance-donations,partial,2026-11-23T10:04:56Z,upkeep,upkeep,,h,no
+scout-midday-growth-snapshot-2026-11-23-023,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T10:20:24Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+scout-midday-growth-snapshot-2026-11-23-022,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T10:24:26Z,baseline Age of Oil,read-measure,measure,,yes
+building-queues-growth-fill-2026-11-23-004,growth-fill-2026-11-23,building-queues,partial,2026-11-23T10:28:20Z,fill idle slot,growth-action,P8,c,yes
+scout-midday-growth-snapshot-2026-11-23-014,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T10:46:30Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+scout-midday-growth-snapshot-2026-11-23-024,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T10:53:19Z,baseline Drill Ground,read-measure,measure,,yes
+scout-midday-growth-snapshot-2026-11-23-005,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T11:05:59Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+building-queues-growth-fill-2026-11-23-006,growth-fill-2026-11-23,building-queues,done,2026-11-23T11:13:45Z,fill idle slot,growth-action,P8,,yes
+scout-midday-growth-snapshot-2026-11-23-026,growth-snapshot-2026-11-23,perception-scout,done,2026-11-23T11:23:24Z,baseline coin conversion,read-measure,measure,,yes
+mail-2026-11-23-1017,,mail-rewards,partial,2026-11-23T11:27:49Z,upkeep,upkeep,,a,no
+scout-midday-growth-snapshot-2026-11-23-006,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T11:31:25Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+scout-midday-growth-snapshot-2026-11-23-007,growth-snapshot-2026-11-23,perception-scout,partial,2026-11-23T11:36:56Z,snapshot (Story 868),read-measure,P1/S868,c,yes
+research-growth-convert-2026-11-23-001,growth-convert-2026-11-23,research-queue,partial,2026-11-23T12:02:13Z,capacity source: Drill Ground Expansion (lab at about 11:43Z),growth-action,P2,c,yes
+secrets-2026-11-23-0944,,secret-missions,done,2026-11-23T12:55:12Z,upkeep,upkeep,,,no
+research-age-of-oil-survey-2026-11-23-001,age-of-oil-survey-2026-11-23,research-queue,partial,2026-11-23T12:58:45Z,baseline Age of Oil research tree,read-measure,measure,c,no

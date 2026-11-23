@@ -37,7 +37,7 @@ frame, game window at about x 73-715, y 62-980.
 | Backpack quantity | minus 180,823; slider handle right end 456,825, left 200,825; plus 494,823; number field 573,823 (a tap does nothing) |
 | Backpack buttons | Use 400,920 (never by default); back arrow 112,914 |
 | Panel X | 609,217 (upgrade panels), 611,222 (tech node), 611,281 (TRAIN UNITS) |
-| Empty ground | 200,610 |
+| Empty ground | 400,640 (the old 200,610 is a Gold Mine Lv.28) |
 
 ## Inventory map (Resources tab)
 

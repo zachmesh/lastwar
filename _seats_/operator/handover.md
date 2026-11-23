@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T12:25:00Z
+modified: 2026-11-23T12:50:00Z
 level: L2
-version: 0.6.0
+version: 0.7.0
 description: The operator's live recipe - launch route, first-tap settling rule, guards, red lines, what to read instead of giant profiles, open claim times
 status: unverified
 grounded_in:
@@ -33,10 +33,10 @@ The Mystery Supply Box quantity defaults to its FULL count, and the Resources ta
 
 Read first (builders, labs, training), fill only idle slots under the 3x rule above the reserves, collect first before a power read, press Complete the moment a node finishes, never retry the hospital Collect (all-or-nothing), never cancel a running item. Every unit carries a `serves:` line.
 
-## Stand-down 2026-11-23 12:20Z
+## Stand-down 12:20Z, resume 12:49:40Z
 
-Coordinator order at 12:15Z: a second device is logged in (the TIPS dialog "Your account is currently active on a different device!", a vanished game process, a coin fall of 4.6M that is not the operator's), most likely the owner. Do not press Confirm (one was pressed about 12:11:50Z, next allowed after 12:41Z), do not tap the dialog's X, do not touch the game or claim a unit until the coordinator says resume. Token released. A desktop-gate refusal: save the `run-lock.mjs status` JSON in the record. A finished research waits for COMPLETE: press it first.
+Second device (the owner) took the account at 12:09Z; the narrative is in `_records_/2026-11-22/team-operations/2715-second-device.md` and `2738-owner-orders-and-takeover.md`. Rules now: if the TIPS dialog "Your account is currently active on a different device!" shows, STOP, press nothing (not Confirm, not X), release the token and report; spend no coin, energy or diamonds beyond the standing rules while coin is near zero (55.9K at 12:36Z); trade truck plunder only when a unit names it; save the `run-lock.mjs status` JSON at each gate refusal.
 
 ## Open
 
-Lab slot 2 idle since 11:42:55Z (unknown after 12:09Z); slot 1 Defense Training VIII ends about 2026-11-26T07:19Z; unit research-growth-convert-2026-11-23-002 unclaimed; survey in `_records_/2026-11-22/research-queue/1204-tech-survey.md`; Lv.27 batch about 19:56Z; builders free 2026-11-24T09:20Z; Tech Center and Builders Hut unlocated; the Train arrival reward mail not yet there.
+Both labs busy (Food Output V ends about 2026-11-24T17:30Z, Coin Output V about 14:59Z); flask opens only the queue list then, so the tech trees need an idle lab or the unlocated Tech Center; Lv.27 batch about 19:56Z; builders free 2026-11-24T09:20Z; the Train arrival reward mail not yet there.

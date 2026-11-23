@@ -1,0 +1,6 @@
+forecast_id,lever,kind,evidence_tag,p_success,predicted_low,predicted_point,predicted_high,actual,in_range,error_pct,brier,verdict
+F-001,materials,continuous,G (value source G),,1,5,20,0,0,-100.0,,miss
+F-005,research,continuous,S single source (value source S),,4000,8000,12000,3900,0,-51.2,,miss
+F-006,research,binary,G (p source G),0.55,,,,"no, the node does not exist as assumed",,,0.3025,false (optimistic)
+F-007,new ground,binary,G (p source G),0.35,,,,"no, no fifth ground can exist",,,0.1225,false (optimistic)
+F-048,events,binary,G (p source G),0.6,,,,no claim available,,,0.3600,false (optimistic)

@@ -18,6 +18,37 @@ max_attempts: 3
 claimed_by: operator
 claimed_at: 2026-11-23T12:56:32Z
 lease_until: 2026-11-23T13:16:32Z
+result:
+  status: partial
+  started_at: 2026-11-23T12:56:32Z
+  finished_at: 2026-11-23T12:58:45Z
+  duration_seconds: 133
+  executor: operator
+  summary: Age of Oil survey, run 20261123T125632Z-f6b90b (claude-gateway/claude-sonnet-5-5, 4 steps; claimed 12:56:32Z): no different-device dialog at the no-click first frame; both labs busy (slot 1 Food Output V Lv.0 1d 04:33:08, slot 2 Coin Output V Lv.0 1d 02:02:20 at about 12:56:50Z; Defense Training VIII no longer queued); the flask opens only the Research Queue list when both labs are busy, so no tech hub, tree or node panel and no research speed percent was reachable; nothing pressed.
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/research-queue/1257-age-of-oil-survey.md and 1257-age-of-oil-survey.csv; run 20261123T125632Z-f6b90b
+  follow_up: read the trees when a lab idles (first about 2026-11-24T14:59Z) or locate the Tech Center building and read the hub from its radial menu; the Age of Oil nodes Food Output V and Coin Output V are already running
+  stats:
+    target: read every node of the Age of Oil path and the research speed percent
+    achieved: queue state read; trees not reachable
+    resources_gained: none (observe-only)
+    points: 0
+    costs: model 0.096753 USD; nothing spent
+    verified: yes
+    blocker_category: c
+    run_id: 20261123T125632Z-f6b90b
+    run_steps: 4
+    actions_done: 3
+    actions_refused: 0
+    model_s_per_step: 7.0
+    cost_usd: 0.096753
+    device_takeovers: 0
+    rules_used: R1
+    rule_failed: none
+    rule_gap: No rule gives a route to the tech trees when both labs are busy; the Tech Center building is unlocated.
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # research
