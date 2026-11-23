@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-24T09:22:00Z
 window: bounded construction speed ups on the three drill ground upgrades inside the Tuesday window
 est_minutes: 15
-serves: capacity source: bounded speed-ups on the Drill Ground upgrades (construction items first)
+serves: PL-08
 chain_id: growth-convert-2026-11-24
 chain_seq: 3
 attempts: 0
@@ -28,7 +28,7 @@ Serves: capacity source: bounded speed-ups on the Drill Ground upgrades (constru
 
 ## Brief (planner, bounded speed-ups on the three Drill Ground upgrades, decision 2603 and Steer A's amendments)
 
-serves: capacity source: bounded speed-ups on the Drill Ground upgrades (construction items first)
+serves: PL-08
 
 Third unit, after units 001 and 002 have started the upgrades. Decision `_records_/2026-11-22/team-operations/2603-first-builder-decision.md`; procedure and the item list `_records_/2026-11-22/queue-planning/2541-conversion-and-speedup-sheet.md`; tap points `_records_/2026-11-22/queue-planning/2540-drill-ground-sheet.md`. Never touch the owner's queue; never Finish Now, diamonds or money; no Obtain.
 
@@ -39,4 +39,5 @@ Third unit, after units 001 and 002 have started the upgrades. Decision `_record
 
 Up to three runs, 10 steps each. Do not enqueue a chain successor.
 Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

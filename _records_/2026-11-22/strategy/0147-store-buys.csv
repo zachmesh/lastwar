@@ -1,6 +1,6 @@
 store,item,qty,price,total,decision,deadline_utc,condition,reason
-Honor,Universal Exclusive Weapon Shard,25,2500,62500,BUY after reads,2026-11-26T02:00Z,weapon read shows a weapon that takes universal shards,rank 1; limit resets 2026-12-01T02:00Z
-Honor,UR Hero Universal Shard,10,3000,30000,BUY after reads,2026-11-26T02:00Z,star read shows a UR hero with stars to fill,rank 2; limit resets 2026-12-01T02:00Z
+Honor,Universal Exclusive Weapon Shard,25,2500,62500,HOLD: stock covers the gaps,2026-11-26T02:00Z,the stock after the Thursday application is under 200 weapon or 300 hero universal shards,rank 1; limit resets 2026-12-01T02:00Z; 441 weapon and 680 hero universal shards held (Squad 1 reads); gaps are 125 and 120
+Honor,UR Hero Universal Shard,10,3000,30000,HOLD: stock covers the gaps,2026-11-26T02:00Z,the stock after the Thursday application is under 200 weapon or 300 hero universal shards,rank 2; limit resets 2026-12-01T02:00Z; 441 weapon and 680 hero universal shards held (Squad 1 reads); gaps are 125 and 120
 Alliance,Mason Shard,30,1000,30000,HOLD read first,2026-11-30T02:00Z,Mason is a top-16 hero short of a star,weekly; hero state unread
 Honor,Gear Blueprint UR,50,10000,unread,HOLD read first,2026-11-30T02:00Z,blueprint use and power read,rank 4
 Honor,Skill Chip Chest UR,1,50000,50000,HOLD read first,2026-11-30T02:00Z,drone preview D1 shows chip headroom,the chip line has been static for 14 days

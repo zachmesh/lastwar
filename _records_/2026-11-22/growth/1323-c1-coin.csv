@@ -1,0 +1,9 @@
+sink,tag_text,from_level,to_level,effect,coin,iron,food,other_cost,effective_time,power_gain,prerequisite,power_per_million_coin,note
+Gold Mine,Gold Mine Lv.28,28,29,"Coin Output/hr 20,160 to 20,880; Max Production Time 11:44:00 to 11:52:00","23.8M (stock 55,963, red, Obtain not pressed)",73.1M (met),none,Hero EXP 1.8M,effective 4d 14:20:24 (original 9d 18:28:20),"+14,800 (83,700 to 98,500)",Lv.29 Headquarters (met),622,"Finish Now 52,110 diamonds not pressed; the planner's older line (Lv.30 for 1.9M coin) is stale"
+Farmland,Farmland Lv.28,28,29,"Food Output/hr 31,680 to 33,120; Max Production Time 11:44:00 to 11:52:00","23.8M (stock 55,963, red)",110.5M (met),none,Hero EXP 1.8M,effective 4d 14:20:24 (original 9d 18:28:20),"+14,900 (84,000 to 98,900)",Lv.29 Headquarters (met),626,"Finish Now 52,110 diamonds not pressed"
+Barracks (copied from F2),Barracks Lv.24,24,25,Unit Training Cap 510 to 520,49.3M,119.0M,none,Hero EXP 45.0M,effective 7d 17:35:27,"+19,500",Lv.25 Headquarters (met),395,from 1132-f2-barracks
+Drill Ground (copied from F1b),Drill Ground Lv.26 (parade field),26,27,+Unit Count,59.5M,74.8M,none,,effective 10d 02:30:19,"+21,600",,363,from 1047-f1b-drill-ground
+Headquarters (copied from 1308),Headquarters Lv.30,30,31,Hero Level Cap 150 to 155,433.5M,1.3G,1.3G,oil 1.2M; Lv.1 Base Expansion research,effective 52d 14:17:16,"+63,700","Base Expansion Lv.1 (research, unmet)",147,from 1308-hq31-prereq-read
+research nodes,"Units, Hero, Economy next nodes",,,,,,,,,,,,not reachable: both labs busy (the flask opens only the queue list); Units nodes were read at 12:06Z (18.6M to 40.3M coin)
+gear step,not read,,,,,,,,,,,,the route is unnamed; not attempted
+HUD before and after,,,,,coin 55.9K and 55.9K,iron 1.0G and 1.0G,food 653.9M to 654.6M,,,"Total Power 150,413,046 both",,,food +0.7M from an unintended tap on the Farmland harvest bubbles at turn 6

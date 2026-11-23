@@ -1,0 +1,17 @@
+hero,field,value,note
+"Carlie (UR, Scamp, aircraft)",level,"150 (Maximum Level Reached, no EXP shown)","squad badge 1, first Squad 1 card"
+Carlie,power,"3,964,558",
+Carlie,"Attack, HP, Defense, March Size","49.0K, 3.3M, 13.7K, 453",
+Carlie,gear slots,"Lv.20, Lv.40, Lv.40, Lv.40",the Attributes tab shows no star row
+Carlie,skills,"three at Lv.30 with 5 stars, one MAX; Dual-string Rocket Lv.30/33",counter 10721/26000
+Carlie,tier tab,"5 Stars, Hero HP 210776, Attack 2753, Defense 747",note: on the Wall of Honor
+Carlie,exclusive weapon,"Lv.10: HP +231613 to +259687, Attack +1512 to +1695, Defense +1026 to +1150; resistance 3.00%, max skill level +33","two weapon skills unlocked, two locked; counters 441/45, 15/15, 15/60"
+"DVA (UR, Blade Striker, aircraft)",level,"150 (max, no EXP shown)","squad badge 1, second Squad 1 card"
+DVA,power,"3,682,929",
+DVA,"Attack, HP, Defense, March Size","70.5K, 2.2M, 12.5K, 453",
+DVA,gear slots,Lv.40 on all four,
+DVA,skills,"Vortex Missile II Lv.31/33 (5 stars), one MAX (5 stars), one Lv.22 (5 stars), one MAX",counter 10721/28000
+DVA,tier tab,"5 Stars, Hero HP 94680, Attack 4867, Defense 647",
+DVA,exclusive weapon,"Lv.10: HP +104040 to +116651, Attack +2673 to +2997, Defense +889 to +997; resistance 3.00%, max skill level +33","two weapon skills unlocked, two locked; counters 441/60, 0/0, 0/60"
+Squad 1,how identified,"badge '1' at the top right of each card: five cards (row 1 four, row 2 first)","the first two read, top-left first"
+HUD,start and end,"food 653.9M, iron 1.0G, coin 55.9K, oil 647.0K, diamonds 11,113, Total Power 150,413,046",unchanged

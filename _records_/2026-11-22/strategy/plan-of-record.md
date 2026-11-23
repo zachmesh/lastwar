@@ -1,7 +1,7 @@
 ---
 title: Plan of record, strategist, version 0.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T13:11:00Z
+modified: 2026-11-23T14:04:00Z
 version: 0.4.0
 level: L3
 description: The plan items with ids, levers, next actions, triggers, deadlines, expected gains and the measurement that closes each, from which the planner mints units; centre moved from capacity first to training slots first
@@ -22,7 +22,7 @@ Mac UTC, daily. The planner mints units only from these ids; each unit carries `
 | PL-01 | Read X of Y, Construct list | now | 11-23 13:00 | 0, decides rules | ground table |
 | PL-02 | Read the Age of Oil nodes: cost, oil, time, power | 11:43 | 13:00 | 0, decides labs | node rows |
 | PL-03 | Box and Choice Chest opened | done | done | 0 | popup text |
-| PL-04 | Labs full to 14:59Z; Iron Output V next; read M | idle now | 13:30 | +3.9K or more a node [M] | lab item, power |
+| PL-04 | Iron Output V running; 550 tech min to end with Food V | idle now | 13:30 | +3.9K or more a node [M] | lab item, power |
 | PL-05 | Monday drone feed from the preview | D1 read | 11-24 01:30 | +25K to 90K [G] | drone line |
 | PL-06 | Earned currencies to shards after reads | reads | 11-26 02:00 | +0.3M a milestone [S1] | purchases, power |
 | PL-07 | Collect first, read twice; batch tests 19:56, 11-24 11:18 | 13:00, 02:00 | weekly | A +0.98M and +1.31M free; B none [M] | toast, power |
@@ -34,11 +34,11 @@ Mac UTC, daily. The planner mints units only from these ids; each unit carries `
 | PL-13 | Box batch 2 as one slider Use of 11 in an idle gap, else stop at 10 | idle | 11-24 14:00 | 0 now [G] | popup tiles |
 | PL-14 | Convert chests just in time | start in 2 h | 11-24 07:20 | 0; no shortage | convert records |
 | PL-15 | Decoration gallery and Crystal Shop reads | idle | 11-24 04:00 | decor line +7.7K a day [M] | rows, prices |
-| PL-16 | Base Expansion line: both labs on the critical path | 12:45 | continuous | ETA 5 to 15 weeks [G] | node rows |
+| PL-16 | Base Expansion line: both labs on the critical path | 12:45 | continuous | ETA 2027-01-08 to 01-23 [G] | node rows |
 | PL-17 | Oil Well from 09:20Z, collect every 8 hours, depot secret daily | 11-24 09:20 | 12:00 | 60 oil an hour a level [S1] | well level, oil |
 | PL-18 | Truck plunder under the casualty guard | roster | 11-24 02:00 | coin 0.2M to 0.58M a fight [S1] | fight records |
 
 ## Rules the table relies on
 
 - [Slot rules v1.4](0030-slot-rules.md); [timing lessons](0208-timing-lessons.md). Policies: [box](0117-box-policy-v1.md), [Black Market](0133-black-market-policy-v1.md), [stores](0147-store-ranking-v1.md).
-- No forecast, no unit: see `forecast_ids` and [the ledger](forecast-ledger.csv).
+- No forecast, no unit: see `forecast_ids` and [the ledger](forecast-ledger.csv). A playbook test with no growth claim serves `upkeep`; store and Black Market buys serve PL-06.

@@ -14,3 +14,5 @@ HQ L30,builder,48.4,"1,235",0,"Hut measured 7.29 days and +17,500; others guide 
 Barracks L30,builder,36.3,"1,209",0,"Hut measured 7.29 days and +17,500; others guide days x the Hut factor, assumption",
 Drill Ground to L21 to L24,builder,unread,unread,unread,T2 and F1 read the panel time; the guide table starts at L25,unread
 "Drill Ground Expansion (research) [name S3 in three guide pages (Cpt Hedgehog Development calculator, LootBar, Vault); [G] on this account: effect, levels (five or ten) and cost unverified; see _records_/2026-11-22/research/drill-expansion-source.md]",lab,unread,unread,unread,read the node first,unread
+"Gold Mine Lv.28 to 29 (C1 [M], building power only)",builder,4.6,"3,219",,"C1 panel: 23.8M coin, +14,800 power, +720 coin an hour; pays back in about 33,000 hours","6,620"
+"Farmland Lv.28 to 29 (C1 [M], building power only)",builder,4.6,"3,241",,"C1 panel: 23.8M coin, +14,900 power, +1,440 food an hour","6,620"

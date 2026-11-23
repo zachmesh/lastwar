@@ -1,9 +1,9 @@
 ---
 title: Conversion Rules For Conversion And Spend Units 2430 2026-11-23
 created: 2026-11-23T00:25:00-08:00
-modified: 2026-11-23T00:25:00-08:00
+modified: 2026-11-23T05:20:00-08:00
 level: L0
-version: 1.0.0
+version: 1.1.0
 description: The shared operating rules a conversion-and-spend unit follows, from the coordinator's coin plan and the 0009 inventory read
 status: done
 activity: queue-planning
@@ -20,7 +20,7 @@ grounded_in:
 # Conversion rules
 
 1. Convert only what the next ranked spend needs: the exact coin cost of the item about to start. Leftover may be at most one UR Coin Chest (2.43M) and is spent within the hour. Coin in the base can be plundered; inventory cannot.
-2. Sources in order. First open Coin Chests, read by description: UR 87 at 2.43M, SSR 71 at 812.16K, SR 122 at 101.52K, using the fewest that cover the cost. Only if more is needed, Resource Choice Chests (UR 552, SSR 587, SR 1,523): their popup was never opened and the two-step conversion is assumed, so read the popup first, record the yield, choose Coin, then open. Resource Chests and coin items last.
+2. Sources in order. First open Coin Chests, read by description: UR 87 at 2.4364M (Total line read), SSR 71 at 812.16K, SR 40 at 101.52K (122 until the other device used 82 on 2026-11-23; fixed chests about 273.7M now), using the fewest that cover the cost. Only if more is needed, Resource Choice Chests (UR 552, SSR 587, SR 1,523): their popup was never opened and the two-step conversion is assumed, so read the popup first, record the yield, choose Coin, then open. Resource Chests and coin items last.
 3. Never convert hero levers: Mystery Supply Box (299, they wait for the owner), Skill Medals, hero chests, blueprints, exclusive weapons, universal shards, Bond Badges, Guidebooks, Training Certificates.
 4. Red lines: speed-ups, stamina items and diamond items are never used. A dialog showing a diamond price or a purchase ends the unit as needs-owner.
 5. Read the cost on the panel before converting; if it cannot be read, convert nothing. Read coin on the HUD before the conversion and after the spend, and run the snap command with K or M numbers only.

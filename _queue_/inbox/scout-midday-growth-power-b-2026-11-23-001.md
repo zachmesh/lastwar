@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-23T13:00:00Z
 window: fixed state power baseline slot B read only
 est_minutes: 10
-serves: baseline (fixed-state Total Power)
+serves: PL-07
 chain_id: growth-power-b-2026-11-23
 chain_seq: 1
 attempts: 0
@@ -26,7 +26,7 @@ Produced by _tools_/queue.py. The executor reads the activity metadata and the s
 
 ## Brief (planner, fixed-state power baseline slot B, strategy v1.4)
 
-serves: baseline (fixed-state Total Power)
+serves: PL-07
 
 Read-only unit for the coach, window 13:00Z to 15:00Z. Rules and red lines: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md` and stop rules R1 to R7 in `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md`; never press Power Up, Train, requeue, Claim or Complete.
 
@@ -43,4 +43,5 @@ At most 8 steps and 10 minutes. Do not enqueue a chain successor.
 Barracks taps (base map `_records_/2026-11-22/growth/1030-base-map.md`, fresh frame): Lv.27 (462,585), Lv.30 (530,637), Lv.24 (628,562), Lv.20 (668,535); the pistol is the middle button under the tag; a portrait bubble may be the Hospital. Close menus with an empty-ground tap (400,640); never tap WORLD (660,940) with a menu open low.
 
 Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

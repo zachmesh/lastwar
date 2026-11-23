@@ -1,0 +1,6 @@
+resource,panel_title,owned_before,available_before,collected,owned_after,per_hour,note
+coin,"COIN panel (top bar coin icon at 443,82)","55,963","465,123","about 473,284","529,247",441.9K/H,Collect pressed once; the panel also has Use rows for items and Open All rows (not pressed)
+food,"FOOD panel (top bar bread icon at 230,82)","654,676,950","80,618","about 82,490","654,759,440",674.9K/H,"owned already above the capacity bar 49,642,724; Collect still worked"
+iron,"IRON panel (top bar iron icon at 338,82)","1,066,095,808","725,582","about 736,066","1,066,831,874",622.7K/H,"owned above the capacity bar 59,840,549; Collect still worked"
+Total Power,HUD,"150,413,046",,,"150,413,046",,unchanged
+oil,HUD,647.0K,,,647.0K,,no oil panel opened

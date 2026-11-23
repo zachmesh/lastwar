@@ -1,8 +1,8 @@
 ---
 title: Store ranking v1
 created: 2026-11-23T09:47:00Z
-modified: 2026-11-23T10:02:00Z
-version: 1.0.0
+modified: 2026-11-23T13:24:00Z
+version: 1.1.0
 level: L3
 description: The ranking of honor, alliance and Campaign store items by hero value per currency, the exact buys, the holds and reserves, with forecasts
 status: unverified
@@ -17,12 +17,12 @@ Balances at 09:43Z: honor 130.1K, alliance 81,010, Campaign stars 1,260, cash 10
 
 ## First finding: the stock is not the constraint
 
-On 11-10 the account held 417 Universal Exclusive Weapon Shards, and the Exclusive Weapon line stayed 2,182,608 from 11-08 to 11-22 [M]. Shards, 9,521 Skill Medals and hero chests have waited at least 12 days, probably for the Thursday hero-item window (H60). Buying 25 more adds 6 percent to a stock that waits. Use decides, so read first.
+On 11-10 the account held 417 Universal Exclusive Weapon Shards (441 now) and 680 hero universal shards, and the Exclusive Weapon line stayed 2,182,608 from 11-08 to 11-22 [M]. Shards, 9,521 Skill Medals and hero chests have waited at least 12 days, probably for the Thursday hero-item window (H60). Buying 25 more adds 6 percent to a stock that waits. Use decides, so read first.
 
 ## Ranking, best first
 
 1. **Apply what is held** in the Thursday window (server 11-26 02:00Z to 11-27 02:00Z): the weapon with the best power per shard, concentrating on one weapon until a milestone step (Lv.30, Lv.40) is reached; the carry hero with the cheapest star-up.
-2. **Buy, after the weapon and star reads land and before 2026-11-26T02:00Z** (cash currencies only, exact quantities, balances read before and after): honor Universal Exclusive Weapon Shard x25 (62,500), honor UR Hero Universal Shard x10 (30,000), Campaign stars Universal Exclusive Weapon Shard x4 at 300 (1,200; hero shards x6 at 200 if no weapon takes them). Skip an item if the read shows nothing can take it (no weapon accepts universal shards, no UR hero has stars to fill). Honor left 37.6K.
+2. **Buys are on hold.** The Squad 1 reads show 441 weapon and 680 hero universal shards held; the steps need 125 (Carlie 45, DVA 60, Murphy 20) and 120 (Lucius 96, Schuyler 24) [D, pattern H107]. Buy honor Universal Exclusive Weapon Shard x25, honor UR Hero Universal Shard x10 and Campaign stars only when the stock after Thursday is under 200 and 300. Honor 130.1K stays.
 3. **Hold, read first:** Mason Shard x30 (30,000 alliance) unless Mason is a top-16 hero short of a star; Gear Blueprint UR, Skill Chip Chest UR, Decoration Chest and Decor Components, Drone Parts and Dielectric Ceramic (after the drone preview); Season tokens 800 (Gear Blueprint MR at 100, UR Hero Badge at 50; they may lapse at Season 3, H63).
 4. **Never now:** Resource Choice Chests (coin is not the gate), Hero Recruitment Ticket, 50 Stamina (red line).
 

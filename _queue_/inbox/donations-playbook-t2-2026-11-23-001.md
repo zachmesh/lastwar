@@ -37,4 +37,5 @@ Alliance shield, Techs, War tab. Level 5 is already read (Rapid Siege 5/10 at 60
 Spend: nothing. Never press Donate, never the diamond button; a stray Donate tap costs one donation, at most 1000 coin.
 
 Red lines and the snap command: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. No purchase, no diamond spend, nothing that is not in the brief. Do not enqueue a chain successor.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

@@ -1,9 +1,9 @@
 ---
 title: Oil Routine Sheet For The Base Expansion Path 2650 2026-11-23
 created: 2026-11-23T05:00:00-08:00
-modified: 2026-11-23T05:00:00-08:00
+modified: 2026-11-23T06:12:00-08:00
 level: L0
-version: 1.0.0
+version: 1.1.0
 description: The reference the oil units point at - Steer A's oil model, the Oil Well collection every eight hours, the Oil Depot secret once a day, and what each routine unit reads and records
 status: done
 activity: queue-planning
@@ -25,7 +25,7 @@ Lab time binds the Base Expansion path, not oil, but oil gates each research sta
 ## Routine units
 
 - **Well collection** (`harvest-oil-well-2026-11-23-001` to `-003`): read the Oil Well panel (tag text and level, Output per hour, storage, stored oil) and the oil counter, press Collect, read the counter again, write the minutes since the last collection. Windows are about eight hours apart (the first from 13:15Z); the next one is due eight hours after the real collection time, so a late first run moves the rest.
-- **Oil Depot secret** (`secrets-oil-depot-*`): the start right after the 02:00Z reset, the claim four hours later. Read whether it is available and whether today's 30K is already paid.
+- **Oil Depot secret** (`secrets-oil-depot-*`; it is the UR 'Capture the Oil Depot' task, claimed for 6.0K oil x5, 30K in all, at 08:51:08Z on 2026-11-23, so that day's payment was already taken and its units were retired; at 12:50Z all eight Secrets cards read PERFECT with no countdown, so no later claim exists that day): the start right after the 02:00Z reset, the claim four hours later. Read whether it is available and whether today's 30K is already paid.
 - **Radar and Bingo**: radar quests that pay oil and Bingo lines are taken when seen.
 - **Before every research start** read the oil counter and write it.
 

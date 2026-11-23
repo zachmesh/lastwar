@@ -5,12 +5,12 @@ activity: research-queue
 segment: 1
 priority: 1
 created_at: 2026-11-23T13:01:55Z
-expires_at: 2026-11-24T19:00:00Z
+expires_at: 2026-11-24T19:30:00Z
 planned_for:
 not_before: 2026-11-24T17:30:10Z
 window: lab 1 food output v completion about 1730z then iron output v
 est_minutes: 10
-serves: capacity source: lab 1 Food Output V completion and Iron Output V
+serves: PL-04
 chain_id: complete-2026-11-24
 chain_seq: 2
 attempts: 0
@@ -24,21 +24,17 @@ lease_until:
 
 Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
 
-Serves: capacity source: lab 1 Food Output V completion and Iron Output V
+Serves: capacity source: lab 1 Food Output V completion and Oil Output I level 1
 
-## Brief (planner, lab 1 completion and next Base Expansion node, trigger schedule-de14b612)
+## Brief (planner, 17:30Z research chain: Complete Food Output V, the second tech spend on Iron Output V, Oil Output I level 1)
 
-serves: capacity source: lab 1 Food Output V completion and Iron Output V
+serves: PL-04
 
-Food Output V finishes at about 2026-11-24T17:29:58Z; power registers only on Complete, so leaving it wastes the lab and the power. OD-19. A TIPS dialog about another device: STOP and report, never Confirm.
+Facts [M]: Food Output V (lab 1) ends about 2026-11-24T17:29:58Z; Iron Output V (lab 2), started 14:00:54Z for 131,879 s, ends about 2026-11-25T02:38:53Z, 549 minutes later. The research divisor is 3.678. Read the FINISH NOW clock, not the blue Research button (about 11 percent longer), as an Age of Oil node's effective time. A TIPS dialog about another device: STOP, report. Routes and stop reasons, with the Age of Oil tree route (the running node's icon at (456,925), never (603,925)): `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`.
 
-NODE: Iron Output V (follows Food Output V); Oil Output I level 1 comes only when all three Output V nodes are done and oil is at least 60K. The Strategist may change it by a note here.
-
-1. Flask icon: read BOTH labs by tag text with the time left. Press COMPLETE on the finished Food Output V (never Speed Up or Finish Now) and Total Power before and after.
-2. Read oil and coin. Open the NODE by tag text and READ its preview (coin, iron, food, oil, BASE and EFFECTIVE time, prerequisite, power). If the prerequisite is unmet or oil short, start nothing and say why.
-3. Convert only the coin it lacks: N = ceil((node coin + 10M floor - coin now) / 2.4364M) UR Coin Chests; skip if 0 or less; STOP above 40. HAZARD: the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use: tap the Coin Chest UR first, confirm the tile name, read the number field AND the Total line in a frame before Use.
-4. Press Research once; read the timer to the second and the oil.
-5. Speed-ups (OD-19): TECH items first if the panel shows a gain (stock at least 15,360 minutes); read the panel first, reduce a defaulted quantity, write minutes used, the new finish time and the oil. Up to 30 percent of the general stock a week (about 105,000 minutes) while the chain is time-bound; keep 100,000 general minutes in reserve until M is read; never Finish Now; stop on an oil-bound level.
-
-Up to two runs, 10 steps each. Tag text beside every number; none means [G]. Rules: `_records_/2026-11-22/queue-planning/2430-conversion-rules.md`.
+1. Read both labs (tag text, timers to the second). Press COMPLETE on Food Output V; Total Power before and after.
+2. Second tech spend, approved if the preview shows the finish time before confirming: on Iron Output V in lab 2, TECH items only (blue-disc), about 550 minutes (8h x1, 1h x1, 5m x2) so both labs finish together. Read item name and quantity before each press (reduce a default) and the new finish time in the preview before confirming; log inventory before and after (tech 9,895 minutes before). Skip it, saying why, if the preview shows no finish time or the spend exceeds 600 minutes. If Iron Output V then finishes, COMPLETE it.
+3. Oil Output I level 1 (needs Food, Iron and Coin Output V at level 1; base 679,140 s, about 51 hours): read oil (at least 60,000 needed) and the preview (iron 3.7M, food 3.7M, coin 11.2M). Coin: N = ceil((node coin + 10M floor - coin now) / 2.4364M) UR chests, STOP above 40; the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED: confirm the tile name, read the number field AND the Total line before Use. Press Research once in the free lab; read the timer and oil. If Iron Output V is not done, start nothing here; the fallback for an idle lab is a Special Forces +15K node, no speed-up.
+4. Never Finish Now.
+Up to three runs, 12 steps each. Tag text beside every number.
 Cost cap, stated: 0.90 USD per run (the harness stops near 0.36 of it).

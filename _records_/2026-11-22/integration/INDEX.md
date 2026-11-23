@@ -42,3 +42,11 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 898](landing-pr-898.md) - fifth records snapshot, strategist policies, decisions, queue state
 - [PR 899](landing-pr-899.md) - sixth records snapshot, owner decisions 17 to 22, strategist v3
 - [PR 900](landing-pr-900.md) - truck-plunder card and digest for the plunder order
+- [PR 901](landing-pr-901.md) - seventh records snapshot, coach calibration, research speed bounds
+- [PR 902](landing-pr-902.md) - strategy_conformance, read-only watchdog
+- [PR 903](landing-pr-903.md) - strategist_health, read-only check
+- [PR 904](landing-pr-904.md) - forecast-warn, queue.py validate warning and --require-forecast
+- [PR 905](landing-pr-905.md) - require-forecast, TEAM.yaml switch (off), queue.py and scout_diff.py
+- [PR 906](landing-pr-906.md) - strategy_conformance, idle alarm leaves out capacity-blocked slots
+- [PR 907](landing-pr-907.md) - forecast switch on the enqueue pages, blocked-slot stats in three digests
+- [PR 908](landing-pr-908.md) - gate-ignored, the gate skips git-ignored paths

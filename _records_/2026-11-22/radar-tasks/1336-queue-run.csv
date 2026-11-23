@@ -1,0 +1,9 @@
+item,value,read_utc,note
+first frame dialog,TIPS 'active on a different device' NOT showing,2026-11-23T13:35:48Z,
+HUD before,"food 654.7M, iron 1.0G, coin 529.2K, oil 647.0K, energy 91, diamonds 11,113, Total Power 150,413,046",2026-11-23T13:35:48Z,"energy 82 at 13:09Z, +9 in 27 minutes"
+"radar screen (dish icon at 107,715)","a radar scene with a rotating beam and no task list, no bottom bar (no Quick Execute, Claim All or Refresh), no Bingo entry, no pins",2026-11-23T13:36:00Z,"top bar: level label v.13, a bar 596, a gift box icon, a bar 100%, energy 91; second line a counter 0/40"
+task restore timer,'12 Radar Task(s) will be restored in 01:02:12',2026-11-23T13:36:00Z,"the next radar tasks arrive about 2026-11-24T14:38:12Z minus one day, that is 14:38:12Z today"
+Quick Execute,not available: nothing pressed,,energy cost per execute therefore unobserved
+Bingo,no entry on the screen,,the 240K oil Bingo lines were not seen; the gift box icon at the top left was not tapped
+oil counter,647.0K before and after,,no oil figure on any reward
+HUD after,"unchanged: oil 647.0K, energy 91, coin 529.2K, Total Power 150,413,046",2026-11-23T13:36:30Z,

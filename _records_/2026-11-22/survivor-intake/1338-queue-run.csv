@@ -1,0 +1,9 @@
+item,value,read_utc,note
+first frame dialog,TIPS 'active on a different device' NOT showing,2026-11-23T13:38:45Z,
+HUD,"food 654.7M, iron 1.0G, coin 529.2K, oil 647.0K, 26.72K chip, diamonds 11,113, Total Power 150,413,046, energy 91",2026-11-23T13:38:45Z,unchanged after the unit
+survivor bubble beside the avatar,"none visible (it read 9min at 12:51Z, 116min at 11:04Z)",2026-11-23T13:38:45Z,the countdown ended; survivors may have arrived and been taken by the other device
+gate,"a '?' bubble with a small figure at the left edge, tapped once at (143,687)",2026-11-23T13:38:51Z,"a white speech strip ending '...soon!' appeared beside the jeep icon, then the strip, the bubble and the figure vanished; no survivor card, no Recruit button"
+recruit,none verified,,"digest rule 4: a cleared '?' is processed state, not a verified recruit; recorded unverified"
+line state,no '?' bubble anywhere on the base afterwards,2026-11-23T13:39:00Z,not presumed clear (rule 5): a re-read unit is named
+left column,"the train shortcut icon at (107,580) now carries a red badge 1",2026-11-23T13:38:51Z,the train may have arrived: the Train arrival reward mail may be claimable
+red target icon,"at (670,640), untouched",2026-11-23T13:38:51Z,the red crosshair icon at the right of the base

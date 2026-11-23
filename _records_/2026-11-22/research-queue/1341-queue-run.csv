@@ -1,0 +1,6 @@
+item,tag_text,value,read_utc,finish_utc_computed,note
+first frame dialog,TIPS 'active on a different device',NOT showing,2026-11-23T13:41:38Z,,flask label 2/2
+research slot 1,Lv.0 Food Output V upgrade in progress,"Time Left 1d 03:48:08, then 1d 03:48:01",2026-11-23T13:41:45Z,2026-11-24T17:29:53Z,only a Speed Up button; no Complete
+research slot 2,Lv.0 Coin Output V upgrade in progress,"Time Left 1d 01:17:20, then 1d 01:17:12",2026-11-23T13:41:45Z,2026-11-24T14:59:05Z,only a Speed Up button; no Complete
+Complete,none pressed,"Total Power 150,413,046 before and after",,,nothing finished
+HUD,"food 654.7M, iron 1.0G, coin 529.2K, oil 647.0K, diamonds 11,113",unchanged,2026-11-23T13:42:01Z,,
