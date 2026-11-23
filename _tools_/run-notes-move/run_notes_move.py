@@ -655,19 +655,9 @@ def apply_activity(a, root: Path, rows, activity: str, now: datetime, reviewed: 
         write_safe(root, rel, touch_doc(new_text, now, "- {version}, {day} - Links to run notes that moved to " + f"{TYPE_DIR}/{activity}/" + " now point there."))
         out["rewritten_links"] += count
         out["rewritten_files"] += 1
-    # 5 the table
-    table = read_map(root)
-    for r in (r for r in rows if r["activity"] == activity and r["cls"] == "a" and r["path"] in moved_map):
-        entry = (new_path(r), r["record"])
-        if table.get(r["path"], entry) != entry:
-            raise SystemExit(f"run_notes_move: moved-paths.csv already maps {r['path']} differently")
-        table[r["path"]] = entry
-    write_map(root, table, now)
-    present = sorted(p.name for p in (root / TYPE_DIR).iterdir() if p.is_dir() and p.name != MAP_DIR)
-    idx_rel = f"{TYPE_DIR}/INDEX.md"
-    new_index = type_index(read(root, idx_rel) if (root / idx_rel).is_file() else None, present, now)
-    if not (root / idx_rel).is_file() or new_index != read(root, idx_rel):
-        write_safe(root, idx_rel, new_index)
+    # 5 the table rows of this activity; the block writes the table and the type index once
+    out["table_add"] = {r["path"]: (new_path(r), r["record"]) for r in rows
+                        if r["activity"] == activity and r["cls"] == "a" and r["path"] in moved_map}
     out["dangling_links_in_activities"] = dangling_links(root)
     return out
 
@@ -684,6 +674,19 @@ def cmd_apply(a, root: Path, rows):
     if len(acts) > a.block_limit:
         raise SystemExit(f"run_notes_move: {len(acts)} activities in one block; the limit is {a.block_limit} (--block-limit)")
     results = [apply_activity(a, root, rows, act, now, reviewed) for act in acts]
+    table = read_map(root)
+    for r in results:
+        for old, entry in r.pop("table_add", {}).items():
+            if table.get(old, entry) != entry:
+                raise SystemExit(f"run_notes_move: moved-paths.csv already maps {old} differently")
+            table[old] = entry
+    if any(r["moved"] or r["done"] for r in results):
+        write_map(root, table, now)
+        present = sorted(p.name for p in (root / TYPE_DIR).iterdir() if p.is_dir() and p.name != MAP_DIR)
+        idx_rel = f"{TYPE_DIR}/INDEX.md"
+        new_index = type_index(read(root, idx_rel) if (root / idx_rel).is_file() else None, present, now)
+        if not (root / idx_rel).is_file() or new_index != read(root, idx_rel):
+            write_safe(root, idx_rel, new_index)
     bad = 0
     for r in results:
         refused = sum(r["refused"].values())
