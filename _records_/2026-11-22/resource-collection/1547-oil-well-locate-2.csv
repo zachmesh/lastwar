@@ -1,0 +1,13 @@
+kind,utc,item,position_on_frame,tag_read,result
+grid,2026-11-23T15:47:25Z,restored frame (WORLD then BASE),centre,,"centred view of the whole base: HQ, airfield, tents, mines, farms"
+grid,2026-11-23T15:47:34Z,pan 1 toward the upper left (drag 290 450 to 540 700),upper left,,"upper-left fence with grey fuel tanks, a diagonal row of Material Workshops, smelter furnaces, the ICU tower, pyramid and airfield, statues and an orange pipe at the top, a fountain and the Component Factory at the left; mines and farms at the bottom"
+grid,2026-11-23T15:49:11Z,pan 2 further upper left (drag 185 185 to 435 435),top left,,"only snow, the railway, a station and the fence with its tanks: no new candidate"
+grid,2026-11-23T15:49:25Z,pan 3 up and to the right (drag 250 400 to 350 120),far-left corner,,"station and railway, an outpost, landing pads and helicopters, a fenced strip with barracks-type buildings and barrels"
+tap,2026-11-23T15:47:44Z,building on the pan 1 frame,"(415,437) then (405,335)",Material Workshop Lv.20,not the well
+tap,2026-11-23T15:48:01Z,building at the left,"(382,680) then (382,665)",Component Factory Lv.20,not the well
+tap,2026-11-23T15:48:16Z,tree,"(292,468) then (296,405)",Ginkgo Tree Lv.1,decoration; its recycle button not touched
+tap,2026-11-23T15:48:45Z,orange crates on the shifted frame,"(603,705) and (606,698)",Food Warehouse Lv.24,not the well; tapped twice
+tap,2026-11-23T15:49:38Z,yellow fuel barrels at the left edge,"(607,664)",none,no tag: decoration
+tap,2026-11-23T15:49:58Z,outpost on the pan 3 frame,"(130,775)",Secret Command Post Lv.1,not the well
+bare taps,2026-11-23T15:48:00Z,deselect taps on bare ground,"(200,260) five times",,"cleared the selections"
+not seen,,"north-east (top right), the east edge, the middle top and the right of the tents",,,"no pan went that way: runs 1 and 2 together covered the south-east and the north-west"

@@ -1,0 +1,12 @@
+forecast_id,lever,p_success,outcome,brier,g_flag,p_source,surprise
+F-006,research,0.55,0,0.3025,G,G,false at p above 0.5
+F-007,new ground,0.35,0,0.1225,G,G,
+F-048,events,0.6,0,0.3600,G,G,false at p above 0.5
+F-080,oil,0.7,1,0.0900,G,G,
+F-085,oil,0.5,1,0.2500,G,G,true at p 0.5 or lower
+F-088,plunder,0.4,1,0.3600,G,G,true at p 0.5 or lower
+F-090,plunder,0.5,1,0.2500,G,G,true at p 0.5 or lower
+F-103,research,0.8,1,0.0400,G,G,
+F-115,research,0.35,1,0.4225,G,G,true at p 0.5 or lower
+F-118,research,0.6,1,0.1600,G,G,
+MEAN,,0.535,0.70,0.2357,,,

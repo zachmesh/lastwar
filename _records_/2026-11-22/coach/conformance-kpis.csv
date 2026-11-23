@@ -35,3 +35,6 @@ conf-2,2026-11-23T12:58Z,d3 blocker letters of growth partials,24h,"c 10, f 2",1
 conf-2,2026-11-23T12:58Z,e1 power change since the 07:47Z breakdown,11-23,3900,,"tech, one event","Complete of Unlock Oil Well at 11:53:00Z, 150,211,809 to 150,215,709 [M]; fixed-state reads 0 of 1; slot B opens 13:00Z"
 conf-2,2026-11-23T12:58Z,g building-read rows carrying their tag text,16 growth CSVs,44,87,51%,from 39% (26 of 67); 7 CSVs carry none
 conf-2b,2026-11-23T14:30Z,a2 executed growth action: first guarded plunder fight,14:25:40Z,1,1,victory,"food +951.8K, iron +951.8K, coin +607.5K, 9 UR shards, troops wounded 0 (hospital 364 severely wounded, 5,306 completed, free room 2,329 before and after); plunder count 0 of 4 to 1 of 4; 4 scans in 20 min found one suitable card"
+conf-3,2026-11-23T15:05Z,"b1 idle slot-minutes, all slots (quiet windows subtracted)",24h,4395,12960,33.9%,"builders 50.5, labs 1.8, training 33.2; subtraction 0 so far, the first window is 16:10Z"
+conf-3,2026-11-23T15:05Z,"b1 idle slot-minutes, all slots (quiet windows subtracted)",6h,412,3240,12.7%,"labs 52 min, Lv.24 barracks 360"
+conf-3,2026-11-23T15:05Z,e1 power change since the 07:47Z breakdown,11-23,205137,,+0.14%,"attributed 7,800 (two Completes), unattributed 197,337 in the other-device window; fixed-state reads 0 of 2 (slot B missed)"

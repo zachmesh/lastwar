@@ -1,9 +1,9 @@
 ---
 title: Test T3 - does the shop check-in Go pay in game
 created: 2026-11-23T01:54:00-08:00
-modified: 2026-11-23T01:54:00-08:00
+modified: 2026-11-23T07:34:00-08:00
 level: L0
-version: 1.0.0
+version: 1.1.0
 description: One-unit falsification test for the shop-claims card top open question and digest rule 9 about the check-in FREE GIFT Go button
 status: unverified
 grounded_in:
@@ -12,6 +12,8 @@ grounded_in:
 ---
 
 # T3 - the check-in Go button
+
+**RETIRED 2026-11-23, do not stage.** Run without Steer A's approval at 15:11Z; Go opened the web store in Chrome (record 1511). Standing rule: never click Go on the check-in banner. Kept as written below for the record.
 
 **Rule tested:** digest 9 and card Failures, "the check-in Go has no in-game claim; it swipes the carousel or opens the web store", marked verified.
 

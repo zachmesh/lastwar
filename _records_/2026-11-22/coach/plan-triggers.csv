@@ -1,9 +1,13 @@
-id,plan_item,trigger_event,trigger_utc,due_by_utc_plus_2h,started_utc,status_at_08_36Z,note
-T1,P1,"read capacity and the hospital (scout, now)",2026-11-23T08:23Z (plan landed),2026-11-23T10:23Z,2026-11-23T08:00Z (hospital read by the operator),mostly done,"capacity, hospital, ground, store, chest and HQ reads landed 08:00Z to 11:32Z; four grounds exist, Extra Drill Ground retired"
-T2,measure,"fixed-state slot A, 02:00Z to 04:00Z",2026-11-23T02:00Z,2026-11-23T06:00Z,2026-11-23T03:55Z,"read on time, unfixed",taken before collecting; collect-first not recorded
-T3,measure,"fixed-state slot B, 13:00Z to 15:00Z",2026-11-23T13:00Z,2026-11-23T17:00Z,,opens 13:00Z,
-T4,P2 then PL-04,lab 1 finished Unlock Oil Well 11:42:55Z; Complete pressed,2026-11-23T11:42:55Z,2026-11-23T13:42Z,"2026-11-23T11:53:00Z (Complete, +10 min)",Complete on time; restart pending,plan item changed to PL-04 Food Output V by Steer A decision 12:53Z; restart not recorded by 12:58Z
-T5,P3,"Lv.27 T9 x726 finishes, collect the same day",2026-11-23T19:56Z,2026-11-23T21:56Z,,not yet due,collect needs Drill Ground room; refused 7 times so far
-T6,P2,"first free builder, 2026-11-24T09:20Z, Drill Ground lowest first",2026-11-24T09:20Z,2026-11-24T11:20Z,,not yet due,
-T7,P3,"Lv.30 T10 x793 finishes, collect the same day",2026-11-24T11:18Z,2026-11-24T13:18Z,,not yet due,
-T4b,PL-04,lab 1 restart: start Food Output V after the Complete,2026-11-23T11:53:00Z,2026-11-23T13:53Z,,"pending, due 13:53Z",lab idle since 11:42:55Z
+id,plan_item,trigger_event,trigger_utc,due_by_utc_plus_2h,started_utc,status,note,type,end_utc,who
+T1,P1,"read capacity and the hospital (scout, now)",2026-11-23T08:23Z (plan landed),2026-11-23T10:23Z,2026-11-23T08:00Z (hospital read by the operator),mostly done,"capacity, hospital, ground, store, chest and HQ reads landed 08:00Z to 11:32Z; four grounds exist, Extra Drill Ground retired",trigger,,
+T2,measure,"fixed-state slot A, 02:00Z to 04:00Z",2026-11-23T02:00Z,2026-11-23T06:00Z,2026-11-23T03:55Z,"read on time, unfixed",taken before collecting; collect-first not recorded,trigger,,
+T3,measure,"fixed-state slot B, 13:00Z to 15:00Z",2026-11-23T13:00Z,2026-11-23T17:00Z,,opens 13:00Z,,trigger,,
+T4,P2 then PL-04,lab 1 finished Unlock Oil Well 11:42:55Z; Complete pressed,2026-11-23T11:42:55Z,2026-11-23T13:42Z,"2026-11-23T11:53:00Z (Complete, +10 min)",Complete on time; restart pending,plan item changed to PL-04 Food Output V by Steer A decision 12:53Z; restart not recorded by 12:58Z,trigger,,
+T5,P3,"Lv.27 T9 x726 finishes, collect the same day",2026-11-23T19:56Z,2026-11-23T21:56Z,,not yet due,collect needs Drill Ground room; refused 7 times so far,trigger,,
+T6,P2,"first free builder, 2026-11-24T09:20Z, Drill Ground lowest first",2026-11-24T09:20Z,2026-11-24T11:20Z,,not yet due,,trigger,,
+T7,P3,"Lv.30 T10 x793 finishes, collect the same day",2026-11-24T11:18Z,2026-11-24T13:18Z,,not yet due,,trigger,,
+T4b,PL-04,lab 1 restart: start Food Output V after the Complete,2026-11-23T11:53:00Z,2026-11-23T13:53Z,,"pending, due 13:53Z",lab idle since 11:42:55Z,trigger,,
+QW1,all,cu quiet window: no game input,2026-11-23T16:10Z,,,provisional,"today; margin to the 17:44Z donations pass 19 min after QW2 ends, to the Lv.27 batch 19:56Z 66 min after QW3",quiet-window,2026-11-23T16:35Z,"cu coordinator windows, approved by Steer A, provisional until the owner answers the cu coordinator"
+QW2,all,cu quiet window: no game input,2026-11-23T17:10Z,,,provisional,today; the 17:44Z donations pass starts 19 min after it ends,quiet-window,2026-11-23T17:25Z,"cu coordinator windows, approved by Steer A, provisional until the owner answers the cu coordinator"
+QW3,all,cu quiet window: no game input,2026-11-23T18:35Z,,,provisional,"today; the first donations timer read is due within a minute of the last tap, 17:46Z to 17:58Z, before it",quiet-window,2026-11-23T18:50Z,"cu coordinator windows, approved by Steer A, provisional until the owner answers the cu coordinator"
+QW4,all,"cu quiet window: no game input, daily",2026-11-24T08:00Z,,,provisional,repeats daily from 2026-11-24; builders free 09:21Z is 56 min after it ends; Food Output V Complete 2026-11-24T17:30:30Z and Iron Output V Complete 2026-11-25T02:39Z are 9 h 05 min and 5 h 21 min from the nearest window,quiet-window,2026-11-24T08:25Z,"cu coordinator windows, approved by Steer A, provisional until the owner answers the cu coordinator"

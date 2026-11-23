@@ -1,7 +1,7 @@
 ---
 title: Base Expansion ETA for the owner
 created: 2026-11-23T13:09:00Z
-modified: 2026-11-23T14:32:00Z
+modified: 2026-11-23T16:02:00Z
 version: 6.0.0
 level: L3
 description: The estimated dates for Base Expansion and HQ 31 as a range with the measured research speed, its convention and its assumptions
@@ -34,4 +34,4 @@ Convention: divisor is base time over time; the clock is the Finish Now clock. C
 
 ## Assumptions
 
-The flat deduction holds at later starts and with speed-ups; the oil model holds (well, one 30K depot a day, More Oil Wells); no more speed-ups by the other device.
+The flat deduction holds at later starts and with speed-ups; the oil model holds (well Lv.20 now, 58.8K a day with the depot, 73K at Lv.30 by 12-16; path oil day 41 to 53, HQ 31's oil day 56 to 71); no more speed-ups by the other device.

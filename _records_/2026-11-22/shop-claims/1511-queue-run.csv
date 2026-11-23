@@ -1,0 +1,8 @@
+shot,utc,front_app,what_seen,note
+before,2026-11-23T15:11:00Z,LastWar,"base, no panel, no different-device dialog","lsappinfo front named LastWar; killall of the notification apps done; desktop lock free"
+shop,2026-11-23T15:11:09.6Z,LastWar,"Official Event tab = the check-in page (Visit the Last War Store; FREE GIFT banner; blue Go at the bottom)","cart click (633,82) at 15:11:06.6Z; no Hot Deals tab exists"
+click Go,2026-11-23T15:11:14.951Z,LastWar then Chrome,"ONE click on Go at (395,925); no second click","grounded from the screenshot at 15:11:09Z"
+at once,2026-11-23T15:11:15Z,"LastWar window shown; front log: Google Chrome from 15:11:15","banner moved to its second slide 'Claim points and redeem great rewards', POINTS 1000; Go shows its click animation","no reward popup, no Claimed state, no counter change (frame step-0002)"
+consent,2026-11-23T15:11:20.718Z,Google Chrome,"harness consent request class new_app for com.google.Chrome (frontmost)","not answered by the operator (human-only); run stopped 15:11:50.714Z, recorded as declined"
+front log,2026-11-23T15:16:06Z,Google Chrome,"Chrome still in front 4 min 51 s after the click","samples every 0.5 s to 15:14:17Z, then every 10 s; no return of LastWar"
+verdict,,,"digest rule 9 SUPPORTED: Go swipes the carousel and opens the web store; Go does not pay in game (one click)","the +3 s test shot was never taken; the Chrome page was not looked at or touched"

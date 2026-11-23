@@ -1,0 +1,20 @@
+item,utc,value,note
+hospital before,2026-11-23T15:20:32Z,"Severely Wounded Units 364/7999; Completed 5,306; free room 2,329","tag read Hospital Lv.20 in this run and Lv.25 in two others, same figures; guard met; Collect never pressed"
+card,2026-11-23T15:22:55Z,"SSR Lv.24; guard 8.2M; arrives in 04:33:31; Quick Plunder present (not an ally)","list reshuffled; the wanted 18.9M UR truck was never opened"
+cargo slot 1,2026-11-23T15:22:58Z,gold bar x1,left half
+cargo slot 2,2026-11-23T15:22:58Z,500-badge UR shard x3,left half
+cargo slot 3,2026-11-23T15:22:58Z,500-badge UR shard x3,left half
+cargo slot 4,2026-11-23T15:22:58Z,iron 1.4M,left half
+cargo slot 5,2026-11-23T15:22:58Z,food 1.4M,right half
+cargo slot 6,2026-11-23T15:22:58Z,coin 933.7K,right half
+cargo slots 7 and 8,2026-11-23T15:22:58Z,empty (crossed),right half
+preparation,2026-11-23T15:23:05.740Z,"Squad 1 25.61M against 8.29M; no cargo shown on the screen","Quick Plunder click; Battle had no price"
+battle,2026-11-23T15:23:13.362Z,Battle pressed once,"no second fight; no refresh"
+loot shard,2026-11-23T15:23:24Z,500-badge UR shard x3,"of 6 offered in slots 2 and 3; every shard stack was in the LEFT half"
+loot iron,2026-11-23T15:23:24Z,492.5K,"35 percent of the 1.4M cargo (rounded)"
+loot food,2026-11-23T15:23:24Z,492.5K,"35 percent of the 1.4M cargo (rounded)"
+loot coin,2026-11-23T15:23:24Z,311.2K,"33.3 percent of the 933.7K cargo"
+result,2026-11-23T15:23:24Z,Mission Completed,"damage taken per hero 20.2K, 9.7K, 2.0K, 0, 2.1K (read by the model, not checked)"
+count,2026-11-23T15:23:37Z,Plunder Count Today 2/4,"was 1/4"
+hospital after,2026-11-23T15:26:00Z,"Severely Wounded Units 364/7999; Completed 5,306; free room 2,329","unchanged: 0 troops wounded"
+fight 1 for comparison,2026-11-23T14:25:40Z,"UR gold Lv.30, guard 21.0M; UR stacks in slots 1, 5, 6, 7; loot UR shard x9, iron and food +951.8K each, coin +607.5K","record 1405-queue-run"

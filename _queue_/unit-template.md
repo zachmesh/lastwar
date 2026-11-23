@@ -26,6 +26,10 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
+A brief that can reach a banner, a Go, a Buy, a link, a web, a share or an
+external-app button carries one line: 'may open another app: needs Steer A's
+approval first; if it opens, STOP' (standing rule, Steer A, 2026-11-23).
+
 A brief that taps buildings or menus points at the route card,
 `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`,
 writes a precondition first (what must be true; if not, stop), records the

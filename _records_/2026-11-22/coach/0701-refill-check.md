@@ -1,8 +1,8 @@
 ---
 title: Independent check of the donation refill datum and the pre-registered test
 created: 2026-11-23T15:02:00Z
-modified: 2026-11-23T15:02:00Z
-version: 1.0.0
+modified: 2026-11-23T15:14:00Z
+version: 1.0.1
 description: Coach check of the researcher's refill derivation - arithmetic, the 89 recorded cooldown timers against a 35-minute and a 20-minute grid, and the predictions both hypotheses make for the 17:44Z donations pass, registered before the data
 status: done
 activity: coach
@@ -40,6 +40,10 @@ Count 5 with an end near 17:52:57 supports 35; count 9 near 17:57:57 supports 20
 ## The baseline is protected
 
 `donations-pass-2026-11-23-001` is not_before 17:44Z; the next pass is 21:15Z and the next donations unit 00:30Z on 11-24. No queued tap falls before 17:44Z; a hand tap would void the prediction, so none should be made. I count the pass under policy 2532 and log the entry count, tap times and timers.
+
+## Scoring rule, agreed with the researcher
+
+The decisive observation is the grid phase, not the count. The first timer end, read within a minute of the last tap, within 3 s of 17:52:57 means a 35-minute grid, within 3 s of 17:57:57 a 20-minute grid, neither no fixed grid; luck matches 0.5 percent. The count only measures accrual: under 20 minutes a count below 9 means counts used elsewhere (a phone donation shares the count) or partial accrual, not a refutation.
 
 ## Limits
 

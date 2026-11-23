@@ -1,7 +1,7 @@
 ---
 title: Strategist handover
 created: 2026-11-23T08:20:00Z
-modified: 2026-11-23T14:32:00Z
+modified: 2026-11-23T16:02:00Z
 level: L2
 version: 0.3.0
 description: The live state a replacement strategist starts from
@@ -22,7 +22,7 @@ Session `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`. Reports to the coordinat
 ## Strategy of record: v3.0 (`0446-strategy-v3.md`)
 
 - **Long line** (owner orders OD-20261123-18 to -20): Base Expansion, HQ 31's only unmet gate. Graph and per-stage days: `base-expansion-path.csv`; ETA with its evidence: `0510-base-expansion-eta.md`.
-- **Short line:** training slots. Builders at 11-24 09:20Z (decision 07): Oil Well plus the Lv.26, 27 and 28 ground levels. Hero Tier 5 stars and weapon steps from held shards in the Thursday window; store buys on hold.
+- **Short line:** training slots. Builders at 11-24 09:20Z (decision 07): B1 the Oil Well (stands at Lv.20, chain Lv.21 to 30, 22 days) plus the Lv.26, 27 and 28 ground levels. Hero Tier 5 stars and weapon steps from held shards in the Thursday window; store buys on hold.
 - Plunder is a food and coin supplement (decision 04); food plan `0515-food-plan.md`.
 
 ## Facts that drive the plan
@@ -40,4 +40,4 @@ Session `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`. Reports to the coordinat
 
 ## Ledger and rules
 
-Ledger 131 rows, register 113; scored misses F-001, F-005, F-006, F-007, F-048, F-092; rule H101 (G rows: low times 0.75, high times 1.5; a quantity that may be zero is two rows; no fixed shade on binaries until ten close). No game input, purchase, diamond spend or git checkout in the live repo. Word gate counts body words under 500; test staging in a `/tmp` worktree. Read the clock at each start.
+Ledger 135 rows, register 115 (38 open, 38 DEFERRED; rule `0600-register-rule.md`); scored misses F-001, F-005, F-006, F-007, F-048, F-092; rule H101 (G rows: low times 0.75, high times 1.5; a quantity that may be zero is two rows; no fixed shade on binaries until ten close). No game input, purchase, diamond spend or git checkout in the live repo. Word gate counts body words under 500; test staging in a `/tmp` worktree. Read the clock at each start. A test that could open another app, browser, store or payment page needs Steer A's approval in advance; never press Go on the check-in banner.

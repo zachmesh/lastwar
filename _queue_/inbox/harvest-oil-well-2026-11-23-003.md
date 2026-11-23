@@ -30,8 +30,8 @@ Serves: oil routine for the Base Expansion path
 
 serves: PL-17
 
-Oil model and routine: `_records_/2026-11-22/queue-planning/2650-oil-routine-sheet.md`. Open the Oil Well by tag text (name and level), read Output per hour, storage and the stored oil, and read the oil counter before. Press Collect once, read the oil counter after, and write the minutes since the last collection. 
+Oil model and routine: `_records_/2026-11-22/queue-planning/2650-oil-routine-sheet.md`. Collect by the OIL PANEL route measured on 2026-11-23 (the top-bar barrel icon; the Oil Well building is not located yet, so there is no tag to read): read Available, owned and the output per hour (1.2K at 15:34Z), press Collect ONCE, read them again and the oil counter, and write the minutes since the last collection (the third collection, due about 07:30Z). Do NOT press the panel's Details button: its effect is unrecorded and needs Steer A's approval first. 
 
-Limits: collect and claim only; no purchase, speed-up or diamonds. A TIPS dialog about another device: STOP and report, never Confirm. Close menus with an empty-ground tap such as (400,640); never tap WORLD (660,940) with a menu open low. Tag text beside every number, none means [G]. Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. No chain successor.
+Limits: collect and claim only; no purchase, speed-up or diamonds. A TIPS dialog about another device: STOP and report, never Confirm. Close menus with the bare spot (310,660) (not (400,640) after a camera shift); never tap WORLD (660,940) with a menu open low. Tag text beside every number, none means [G]. Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. No chain successor.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

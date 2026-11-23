@@ -42,4 +42,5 @@ Tag text: write each building-panel number's tag text beside it (name and level 
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
+Quiet-window margin: this start (09:21Z trigger) is 56 min after the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).
