@@ -1,12 +1,15 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T07:43:00Z
+modified: 2026-11-23T12:49:22Z
 level: L1
-version: 1.46.0
+version: 1.47.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
+  - source: owner decision OD-20261123-20, trade truck plunder re-enabled with a casualty guard (_records_/retro/owner-decisions-log/od-20261123-20.md)
+  - source: coach numbers line _records_/2026-11-22/coach/playbook-numbers-lines.csv and hospital finding _records_/2026-11-22/coach/2400-hospital-finding.md
+  - source: plunder fight records _records_/2026-10-27/truck-plunder/1857-segment-3-run.md and _records_/2026-10-31/truck-plunder/0404-queue-run.md, entry and dispatch records _records_/2026-11-22/truck-plunder/0958-queue-run.md and _records_/2026-11-22/truck-plunder/2058-queue-run.md
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner task request naming a plunder and truck task, 2026-10-25
   - source: web guides on Intercity Trade and trade trucks, read 2026-10-25
@@ -49,16 +52,45 @@ grounded_in:
   - source: "2026-11-10 daily retro, execution-knowledge action A-2026-11-10-01 (Issue #300): never write an expected or Handbook-rate score into stats.points; points holds live-read scored gains only"
 ---
 
-# Truck Plunder
+# Truck plunder playbook card
 
-Read rule-digest.md first.
+Goal: dispatch and plunder trade trucks within the casualty guard.
 
-Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge. This document was split verbatim into 78 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
+## Route
 
-- [Catalog 01](catalog-01.md) - Truck plunder - Intercity Trade to run-20261101-2231
-- [Catalog 02](catalog-02.md) - run-20261102-0114 to open-questions
-- [Catalog 03](catalog-03.md) - run-20261104-0538 to run-20261122-0252
+1. Open Intercity Trade by its icon (R4).
+2. Settle returned trucks; claim Reward Recovery (R5).
+3. Dispatch own trucks.
+4. Read the hospital before the first fight.
+5. Others' Trucks: pick a UR or SSR truck with UR shards, guard below Squad 1.
+6. Fight; record troops wounded, coin and shards.
+7. Stop on the guard or at 4 of 4.
 
-## Changelog
+## Rules
 
-- 1.45.0, 2026-11-23 - Owner name already replaced on main by the tree-wide pass (commit 0467e3ef), then split verbatim by `split_doc.py` from a 1814-line, 22279-word body into 78 key-named articles and 3 catalog pages, and added `rule-digest.md`. `--check` EQUAL against that file, body sha256 e04199b1d890; the unsplit 1.44.0 file is commit 0467e3ef.
+- R1 Trade truck plunder is on (owner override OD-20261123-20); Arena, gold-trophy fights, rallies, General's Trial and base attacks stay forbidden. Status: tested. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
+- R2 Plunder UR or SSR trucks carrying UR shards, guard below Squad 1 (24.96M), shards best on the right. Status: verified. 2026-10-31. `_records_/2026-10-31/truck-plunder/0404-queue-run.md`
+- R3 Casualty guard: read the hospital before each session; stop if free room falls under 1,000 or two fights in a row wound over 100 troops. Status: unverified. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
+- R4 Find the trade icon by glyph and badge each unit; verify the screen that opened. Status: tested. 2026-11-22. `_records_/2026-11-22/truck-plunder/0958-queue-run.md`
+- R5 Claim Reward Recovery at the red dot. Status: verified. 2026-11-22. `_records_/2026-11-22/truck-plunder/2058-queue-run.md`
+
+## Failures
+
+- Icon opens the train station - fix: re-find the icon; verify the screen. `_records_/2026-11-22/truck-plunder/0958-queue-run.md`
+- Step cap before any dispatch - fix: continue in a second run. `_records_/2026-11-22/truck-plunder/2058-queue-run.md`
+- Hospital full, so wounded have no room - fix: R3. `_records_/2026-11-22/coach/2400-hospital-finding.md`
+
+## Open questions
+
+- What does a fight cost and pay? Test: log wounded, coin and shards per fight; run by operator.
+- Does free room fall by the wounded count? Test: read the hospital before and after a fight; run by researcher.
+
+## Numbers
+
+Numbers, 7 days to 2026-11-23: 1 units; done 0%; done-or-by-design 100%; partial 1, failed 0; mean steps 8 (1 of 1 report it); top blocker h by-design partial (1 of 1 non-done).
+
+## Links
+
+- [Rule digest](rule-digest.md)
+- [All catalogs](article-catalogs.md)
+- [Hospital finding](../../_records_/2026-11-22/coach/2400-hospital-finding.md)
