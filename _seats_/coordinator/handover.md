@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T05:50:00Z
+modified: 2026-11-23T06:09:00Z
 level: L2
-version: 0.4.6
+version: 0.4.7
 description: The live state a replacement coordinator starts from - holder, clock, operating rules, in-flight work and open owner decisions
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ Updated 2026-11-23 04:48Z. Earlier versions are in git history.
 
 - One-shot claim reminders for the Secret Missions deploy of about 04:50Z: 05:21Z, 05:51Z, 06:51Z and 08:51Z (ids in `2049-tick.md`). Each sends the operator a claim-only assignment; unclaimed finished tasks get plundered.
 
-- Splitting oversized files (`2147-split-plan.md`): `split-doc` is merged. Scribe splits `alliance-donations` then six more profiles; toolsmith adds `--keep-entry` so the two registers keep their paths as entry pages; the exempt lines go when each register is split; the coach then writes dated retro notes to the daily retro, not the registers.
+- Oversized files: `split-doc` (key-named, `--keep-entry`) is merged (`1a0f6f5d`). The two registers are SPLIT (`99dc1119`): `owner-decisions.md` and `improvements.md` are entry pages, entries are articles in `owner-decisions-log/` and `improvements-log/`; the coach writes dated notes to the daily retro (`c3f9c61e`). Still to do: scribe re-splits `alliance-donations` and remaps its digest (on its branch `work/split-alliance-donations`), then six profiles; gate stays on.
 
 ## Open owner decisions
 
