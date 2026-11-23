@@ -51,3 +51,18 @@ Companion to [0054-operator-handover.md](0054-operator-handover.md). Pixel point
 
 - Ledger `_records_/2026-11-22/growth/ledger.csv`; records in `_records_/2026-11-22/`.
 - Records read before this: 0054-box-chest-read.md, 0009-inventory-read.md, 0030-capacity-read.md.
+
+## Base map (fresh frame, added 2026-11-23T10:40Z)
+
+Source: [1030-base-map.md](1030-base-map.md). Restore the camera with WORLD (660,940) then BASE (660,940); the
+fresh frame repeats. Tents: Barracks Lv.27 (462,585) with a clock bubble, Barracks Lv.30 (530,637) with a clock
+bubble, Barracks Lv.24 (628,562), Barracks Lv.20 (668,535), Hospital Lv.20 (678,510). Two Drill Grounds
+(Lv.30 orange, Lv.27 purple crystal) lie past the right edge, about (740,880) and (855,790); Farmland is Lv.28.
+Close a radial menu by tapping empty ground, never with WORLD while the green up arrow sits at (660,940).
+The train shortcut (left column, (107,580)) pans the camera to the station; WORLD then BASE restores it. The
+trade truck bubbles sit above the parked trucks in the station view (about 165,408; 120,438; 79,469).
+
+Correction 10:57Z ([1047-f1b-drill-ground.md](1047-f1b-drill-ground.md)): there are FOUR Drill Grounds, each a parade field of red
+soldiers: Lv.26 about (705,690), Lv.28 about (580,800) (visible in the fresh frame, the red parade at the bottom
+right), Lv.30 about (770,940), Lv.27 about (975,845) (fresh-frame points, plus or minus 60 px). The orange building
+is a Tavern Lv.20. The Lv.28 Drill Ground upgrade to 29 costs 119.0M coin and 144.5M iron, 18d 09:21:34, +200 Unit Count.

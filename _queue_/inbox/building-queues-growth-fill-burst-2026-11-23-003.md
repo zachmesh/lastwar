@@ -42,4 +42,5 @@ TRAIN: never retry the Hospital Collect; it is all-or-nothing, needs at least 5,
 
 Run one growth unit at a time. Do not enqueue a chain successor.
 
+Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

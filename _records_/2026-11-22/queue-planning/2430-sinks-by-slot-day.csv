@@ -1,5 +1,5 @@
 sink,slot,effective_days,power_per_slot_day,slots_per_slot_day,basis,minutes_if_fully_sped_up
-Drill Ground Lv.28 to 29 (MEASURED on the panel),builder,18.4,"19,565",10.9,"F1 panel: 26,481 minutes, +30,400 building power, +200 slots; the guide's L29 estimate was 19,315, so the 0.47 time factor holds on a second building","26,481"
+"Drill Ground Lv.28 to 29 (F1 panel, tap identity confirmed by F1b)",builder,18.4,"19,565",10.9,"F1 panel: 26,481 minutes, +30,400 building power, +200 slots; the guide's L29 estimate was 19,315, so the 0.47 time factor holds on a second building","26,481"
 Drill Ground to L25,builder,5.2,"65,907",38.2,"guide base days x measured factor; capacity case +329,400 plus building power; troops waiting to fill the slots","7,547"
 Drill Ground to L26,builder,7.3,"47,782",27.4,"guide base days x measured factor; capacity case +329,400 plus building power; troops waiting to fill the slots","10,497"
 Drill Ground to L27,builder,10.2,"34,266",19.5,"guide base days x measured factor; capacity case +329,400 plus building power; troops waiting to fill the slots","14,750"

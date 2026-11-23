@@ -1,0 +1,14 @@
+file,building_read_rows,with_name_and_level,without,share
+0009-inventory-read.csv,2,0,2,0%
+0022-p2-promote.csv,5,3,2,60%
+0030-capacity-read.csv,9,2,7,22%
+0038-s1-stocks.csv,1,0,1,0%
+0938-st1-stores.csv,8,0,8,0%
+0946-st1b-stores.csv,2,0,2,0%
+1017-d1-drone-wall.csv,6,0,6,0%
+1030-base-map.csv,11,8,3,73%
+1040-d1b-decor.csv,2,0,2,0%
+1047-f1b-drill-ground.csv,6,5,1,83%
+2344-fill-run.csv,8,2,6,25%
+2357-troop-read.csv,7,6,1,86%
+ALL,67,26,41,39%

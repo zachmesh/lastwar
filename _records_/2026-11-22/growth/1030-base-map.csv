@@ -1,0 +1,12 @@
+building,tag,level,clock_bubble,fresh_x,fresh_y,tap_result,note
+tent A,Barracks,Lv.27,"clock bubble at (460,530)",462,585,"tag + radial menu (paw, orange pistol, green arrow)","the Lv.27 batch, finishes about 19:56Z; run 20261123T103104Z-6efaca"
+tent B,Barracks,Lv.30,"clock bubble at (529,578)",530,637,tag + radial menu,training; same run
+tent C,Barracks,Lv.24,"none (a person bubble at (615,515) above it)",628,562,tag + radial menu,no clock bubble; same run
+tent D,Barracks,Lv.20,none,668,535,tag + radial menu,"run 20261123T103402Z-729e81, tapped on the fresh frame"
+tent E,Hospital,Lv.20,"none; red-helmet healing bubble at (677,422) above the group",678,510,"tag + radial menu (paw, orange tent button, green arrow)","the brief's (688,462) is the bubble; roof tap below it; the Hospital Collect is never retried"
+"Drill Ground (orange building, green magnifier bubble)",Drill Ground,Lv.30,none,740,880,"tag appeared after a camera shift; radial menu paw, blue police-cap, green arrow","OFF-SCREEN in the fresh frame (estimated from the camera offset 220,85 between frames), beyond the right edge x=715; not tapped on purpose"
+"Drill Ground (purple crystal building, crystal bubble)",Drill Ground,Lv.27,none,855,790,tag read in the panned frame,"OFF-SCREEN in the fresh frame (estimated), right of the red parade area"
+red soldier parade area,(no tag),,,600,830,"a tap at (610,810) in a shifted frame selected the Lv.27 Drill Ground","the red crowd at the bottom right of the fresh frame (500-715, 830-980); it belongs to the two Drill Grounds"
+bottom right edge,none,,,,,"one drag (680,620 to 430,330) showed the base wall and grey-blue fog","no third Drill Ground, no parade area beyond"
+Farmland,Farmland,Lv.28,none,260,545,"an empty-ground tap at (250,650) landed on it in the 10:26Z frame","this is the Lv.28 of the brief, not a Drill Ground"
+camera,WORLD button,,,660,940,WORLD then BASE restores the fresh frame exactly (the restored frames match),a tent tap shifts the camera about 30 px; a tap near the lower edge or the Hospital can shift it about 220 px

@@ -1,5 +1,5 @@
 rank,capacity_source,slots_gained,coin,slots_per_million_coin,power_at_T10,slot_needed,earliest_start,basis,filled_slot_value
-measured,Drill Ground Lv.28 to 29 (F1 panel),200,119.0M,1.68,"+329,400 (+30,400 building)",a builder,2026-11-24T09:20Z,"F1 panel read 0035-queue-run.md; guide L29 said 140M, the panel is 0.85 of it","200 T10 filled: +329,400 for about 1.4M food and 1.4M iron"
+measured,"Drill Ground Lv.28 to 29 (F1 panel, tap identity confirmed by F1b)",200,119.0M,1.68,"+329,400 (+30,400 building)",a builder,2026-11-24T09:20Z,"F1 panel read 0035-queue-run.md; guide L29 said 140M, the panel is 0.85 of it","200 T10 filled: +329,400 for about 1.4M food and 1.4M iron"
 1,Drill Ground to L21,200,11M,18.18,"+329,400",a builder,2026-11-24T09:20Z,"strategy schedule; 200 slots is a 1-2 source claim, T2 and F1 read the panel gain","200 T10 filled: +329,400 for about 1.4M food and 1.4M iron"
 2,Drill Ground to L22,200,15M,13.33,"+329,400",a builder,2026-11-24T09:20Z,"strategy schedule; 200 slots is a 1-2 source claim, T2 and F1 read the panel gain","200 T10 filled: +329,400 for about 1.4M food and 1.4M iron"
 3,Drill Ground to L23,200,18M,11.11,"+329,400",a builder,2026-11-24T09:20Z,"strategy schedule; 200 slots is a 1-2 source claim, T2 and F1 read the panel gain","200 T10 filled: +329,400 for about 1.4M food and 1.4M iron"

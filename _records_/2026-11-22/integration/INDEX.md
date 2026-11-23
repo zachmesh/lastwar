@@ -34,3 +34,4 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 890](landing-pr-890.md) - the run-notes move, 1095 articles into _run_notes_
 - [PR 891](landing-pr-891.md) - records-1021, strategy folder, owner decisions, model policy keys
 - [PR 892](landing-pr-892.md) - second records snapshot, stores, Black Market, season clock, donations T1
+- [PR 893](landing-pr-893.md) - third records snapshot, queue state moves and donations close rules
