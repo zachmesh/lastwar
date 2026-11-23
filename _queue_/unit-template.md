@@ -10,6 +10,7 @@ planned_for: <cadence window this unit serves, ISO 8601 UTC>
 not_before: <claim not allowed before this time, or empty>
 window: <phase or posture constraint or empty>
 est_minutes: <producer estimate, never above 15>
+serves: <what this unit serves, one line; upkeep for a regular unit, a plan item id for a growth unit, fill idle slot until the plan exists>
 chain_id: <continuation chain id or empty>
 chain_seq: <position inside the chain or empty>
 attempts: 0

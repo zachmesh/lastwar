@@ -13,11 +13,44 @@ est_minutes: 10
 serves: fill idle slot
 chain_id: growth-fill-2026-11-23
 chain_seq: 4
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-23T10:25:13Z
+lease_until: 2026-11-23T10:45:13Z
+result:
+  status: partial
+  started_at: 2026-11-23T10:25:13Z
+  finished_at: 2026-11-23T10:28:20Z
+  duration_seconds: 187
+  executor: operator
+  summary: Growth read run 20261123T102543Z-fa696e (claude-gateway/claude-sonnet-5-5, max-steps 11, 10 steps, claimed 10:25:13Z inside the 10:35Z window): builders 4 of 4 busy (Training Base to Lv.25, 22:54:22 to 22:54:32 left, finish about 2026-11-24T09:20:13Z), labs 2 of 2 busy (Unlock Oil Well 01:16:54 left, frees about 11:42:54Z; Defense Training VIII 2d 20:53:01), no COMPLETE button; nothing idle, nothing started; barracks training queues not read (tents tagged Lv.30, Lv.20, Lv.20; Lv.24 and the Lv.27 clock-bubble tents not found); no pistol tapped, nothing spent.
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/building-queues/1026-queue-run.md and 1026-queue-run.csv; run 20261123T102543Z-fa696e
+  follow_up: first free lab about 11:43Z belongs to research-growth-convert-2026-11-23-001, first free builder 2026-11-24T09:20Z to the 2026-11-24 fills; training queue read needs a fixed route to the Lv.24 and Lv.27 barracks
+  stats:
+    target: read builders, labs and training queues, fill only idle slots
+    achieved: builders and labs read, all busy, nothing to fill; training queues not read
+    resources_gained: none (observe-only)
+    points: 0
+    costs: model 0.163455 USD; nothing spent or started
+    verified: yes
+    blocker_category: c
+    slots_idle: 0
+    slots_filled: 0
+    run_id: 20261123T102543Z-fa696e
+    run_steps: 10
+    actions_done: 19
+    actions_refused: 0
+    model_s_per_step: 8.2
+    cost_usd: 0.163455
+    device_takeovers: 0
+    rules_used: R1,R4,R5,R7
+    rule_failed: none
+    rule_gap: No rule identifies which tent is which barracks; the camera drifts and tags show only after a tap.
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # building-queues
