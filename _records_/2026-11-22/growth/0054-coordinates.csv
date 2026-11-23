@@ -1,0 +1,9 @@
+target,point,note
+Right column,"Alliance 670,708; Mail 670,787; Inventory 670,852; Events 673,165",
+Left column,"hammer (builders) 108,200; flask (research) 110,258; trade or train shortcut 107,580",
+Camera restore,"WORLD 660,940, then the same button (BASE)",never with a menu open
+Backpack tabs,"Special 137,154; Resources 240,154; Speed-up 342,154; Heroes 445,154; Gear 548,154; Gift 651,154",
+Backpack quantity,"minus 180,823; slider handle right end 456,825, left 200,825; plus 494,823; number field 573,823","a tap on the number field does nothing"
+Backpack buttons,"Use 400,920; back arrow 112,914",Use never by default
+Panel X,"609,217 (upgrade panels); 611,222 (tech node); 611,281 (TRAIN UNITS)",
+Empty ground,"400,640 (the old 200,610 is a Gold Mine Lv.28)","SUPERSEDED 2026-11-23 15:26Z: (400,640) selected a Barracks after a camera shift; use the bare spot 310,660 or WORLD then BASE first (2700-routes.csv, fresh base frame)"

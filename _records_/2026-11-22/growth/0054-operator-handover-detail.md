@@ -1,18 +1,18 @@
 ---
 title: Operator handover 0054 detail
 created: 2026-11-23T09:10:00Z
-modified: 2026-11-23T14:52:00Z
-version: 1.2.0
-description: Sidecar of the operator handover - commands, screen coordinates, inventory map, ledger and record paths; the base map and the tag index moved out to their own records
+modified: 2026-11-23T16:12:00Z
+version: 1.8.0
+description: Sidecar of the operator handover - the commands, the standing hazards and the links to the route, coordinate, inventory and plunder files and the four topic pages split out of it
 status: handover
 grounded_in:
   - source: operator session work 2026-11-23T05:30Z to 12:20Z and the runs cited in the day INDEX
+  - source: coordinator order to split the page under the 500-word limit, sent in the quiet window of 2026-11-23
 ---
 
 # Detail for operator handover 0054
 
-Companion to [0054-operator-handover.md](0054-operator-handover.md). Pixel points are in the 1920x1080 screen
-frame, game window at about x 73-715, y 62-980.
+Companion to [0054-operator-handover.md](0054-operator-handover.md) and the seat page [handover.md](../../../_seats_/operator/handover.md). Pixel points are in the 1920x1080 screen frame, game window about x 73-715, y 62-980.
 
 ## Commands
 
@@ -26,37 +26,23 @@ frame, game window at about x 73-715, y 62-980.
 | record gate | `python3 _tools_/lint-gate/lint_gate.py record-check FILE` |
 | send reply | `DSH_WEB_URL=http://localhost:8080 SESSION_RELAY_JAR=/tmp/dsh-gate.cj python3 ~/dtadpole/reflection/_tools_/session-relay/session-relay.py send --runtime dsh --session session-4b4cb08d-fb77-419a-be34-14a72a3b73d1 --text "$(cat FILE)"` |
 
-## Coordinates
+## Standing hazards
 
-| Target | Point |
+Never press Go on the check-in banner, Details, Buy or a link; a foreground switch or a TIPS different-device dialog stops the run. Close menus at the bare spot (310,660), never (200,610). Full text: [run hazards](0054-run-hazards.md).
+
+## Where the rest is
+
+| File | Holds |
 |---|---|
-| Right column | Alliance 670,708; Mail 670,787; Inventory 670,852; Events 673,165 |
-| Left column | hammer (builders) 108,200; flask (research) 110,258; trade or train shortcut 107,580 |
-| Camera restore | WORLD 660,940, then the same button (BASE); never with a menu open |
-| Backpack tabs | Special 137,154; Resources 240,154; Speed-up 342,154; Heroes 445,154; Gear 548,154; Gift 651,154 |
-| Backpack quantity | minus 180,823; slider handle right end 456,825, left 200,825; plus 494,823; number field 573,823 (a tap does nothing) |
-| Backpack buttons | Use 400,920 (never by default); back arrow 112,914 |
-| Panel X | 609,217 (upgrade panels), 611,222 (tech node), 611,281 (TRAIN UNITS) |
-| Empty ground | 400,640 (the old 200,610 is a Gold Mine Lv.28) |
+| [0054-coordinates.csv](0054-coordinates.csv) | columns, Backpack tabs and buttons, panel X points |
+| [0054-routes.csv](0054-routes.csv) | donations, harvest, plunder, camera, oil, trucks settle, Oil Well taps |
+| [0054-inventory-map.csv](0054-inventory-map.csv) | Backpack Resources tab map |
+| [0054-plunder-fights.csv](0054-plunder-fights.csv) | one row per plunder fight |
+| [0054-run-hazards.md](0054-run-hazards.md), [0054-research-rules.md](0054-research-rules.md), [0054-plunder-notes.md](0054-plunder-notes.md), [0054-oil-well.md](0054-oil-well.md) | the rules and findings by topic |
+| [2700-routes.csv](../queue-planning/2700-routes.csv), [tag-index.csv](tag-index.csv) | planner routes, building tags |
 
-## Inventory map (Resources tab)
+Also: records in `_records_/2026-11-22/`; ledger [ledger.csv](ledger.csv); base map [1030-base-map.md](1030-base-map.md); Drill Grounds [1047-f1b-drill-ground.md](1047-f1b-drill-ground.md), [1054-f1c-drill-grounds.md](1054-f1c-drill-grounds.md).
 
-- The tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use; the Resource Chest (20,862) defaults to its
-  full stock. Row 3: Resource Choice Chest UR 552; row 4: SSR 587, SR 1,522, Resource Chest, Food Chest UR.
-- One drag of 260 px scrolls the grid; coin chests UR 87 (2.43M each, max per Use = stock), SSR 71, SR 122 sit lower.
+## Changelog
 
-## Paths and links
-
-- Ledger `_records_/2026-11-22/growth/ledger.csv`; records in `_records_/2026-11-22/`.
-- Base map and hazards: [1030-base-map.md](1030-base-map.md); Drill Grounds: [1047-f1b-drill-ground.md](1047-f1b-drill-ground.md),
-  [1054-f1c-drill-grounds.md](1054-f1c-drill-grounds.md); building tags: [tag-index.csv](tag-index.csv).
-
-## Routes proven 2026-11-23 14:40Z (session f364ec2c; records alliance-donations 1441, resource-collection 1445)
-
-| Route | Points |
-|---|---|
-| Donations | Alliance 670,708; Techs tile 514,677; node with the thumbs-up 245,525; coin Donate 495,756; never the gem Donate 292,756 |
-| Close donations | dialog X 611,222; Techs X 614,172 lands on the full Alliance screen; its blue back arrow 177,919 leaves to the base |
-| Harvest panels | icons coin 443,82, food 230,82, iron 338,82; Collect 553,552; panel X 612,209; never a Use or Open All row |
-| Run shape | an 8-step cap gives 7 effective actions (the 8th turn never runs); a click plus a wait in one turn closes a panel; three harvest panels take 11 turns, so two runs |
-
+- 1.8.0, 2026-11-23T16:12Z - split from 1,353 body words: coordinates, inventory map, route tables and the plunder results moved to four CSV files, the rules and findings to four topic pages; no fact deleted, the Empty ground point now carries its supersession note.

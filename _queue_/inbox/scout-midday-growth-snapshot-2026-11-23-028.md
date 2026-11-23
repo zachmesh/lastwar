@@ -34,6 +34,8 @@ Source: `_records_/2026-11-22/strategy/0147-store-ranking-v1.md` and buys sheet 
 
 The account has six exclusive weapons (a guide lists Kimberly, DVA, Tesla, Murphy, Carlie and Swift, unverified, so use the screen). Route: HEROES button (bottom bar, left), the hero list, the heroes that show an exclusive weapon in list order (left to right, top to bottom), the hero detail, its exclusive weapon section. This unit reads weapons four to six in that order; if fewer exist, say so and stop. Per weapon, one panel, three steps: the tag text (weapon and hero name as shown), unlocked or locked, the level, the NEXT-level SHARD COST (named shards owned over needed, and whether universal shards can fill it) and the POWER GAIN the preview shows for that next level (preview only; never Upgrade or Unlock). 
 
+PRIMARY, the unit is DONE when it is read: exclusive weapons 4 to 6, one panel each; nothing else. A missing panel because fewer weapons exist is DONE.
+
 Up to three runs, 10 steps each.
 
 Hazards: close menus with the bare spot (310,660) (not (400,640) after a camera shift); never tap WORLD (660,940) with a menu open low. In the Backpack the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use: select nothing, press nothing. Never press Use, Open, Convert, Sell, Buy, Upgrade, Unlock, Promote, Equip, Recruit or any shard control. Stop at a price or diamond.

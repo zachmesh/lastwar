@@ -1,7 +1,7 @@
 ---
 title: Plan of record, strategist, version 0.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T16:02:00Z
+modified: 2026-11-23T16:09:00Z
 version: 0.4.0
 level: L3
 description: The plan items with ids, levers, next actions, triggers, deadlines, expected gains and the measurement that closes each, from which the planner mints units; centre moved from capacity first to training slots first
@@ -36,7 +36,7 @@ Mac UTC, daily. Units carry `serves: PL-nn` or `serves: upkeep`. Start-by is tri
 | PL-15 | Decoration gallery, Crystal Shop reads | idle | 11-24 04:00 | decor +7.7K a day [M] | rows, prices |
 | PL-16 | Base Expansion line: both labs on the critical path | 12:45 | continuous | ETA 2027-01-08 to 01-23, oil row unverified [G] | node rows |
 | PL-17 | Oil Well Lv.21 to 30 chain, collect every 10 hours, depot daily | 11-24 09:20 | 12:00 | +60 oil an hour a level [M] | well level, oil |
-| PL-18 | Truck plunder at margin 1.2 or more, casualty guard | roster | 11-24 02:00 | 0.7M food and iron, 0.46M coin, 6 shards a fight [M] | fight records |
+| PL-18 | Truck plunder at margin 1.2 or more, casualty guard | roster | 11-24 02:00 | 0.73M food and iron, 0.47M coin, 4 shards a fight [M] | fight records |
 
 ## Rules the table relies on
 

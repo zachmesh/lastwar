@@ -34,6 +34,8 @@ Source: `_records_/2026-11-22/strategy/0147-store-ranking-v1.md` and buys sheet 
 
 Route: HEROES button (bottom bar, left), the Hero List, open one hero detail, the star and shard section (the section route is in the old H1 notes in `_records_/2026-11-22/perception-scout/2345-snapshot-protocol.md`). Use the same UR hero order as W1a and H1a (the Hero List, UR cards, left to right, top to bottom); if fewer remain, say so and stop. Per hero in this unit, one panel: the tag text (name as shown), stars, shards held, the COST of the next star (shards needed) and its POWER GAIN from the star preview (preview only; never Promote or Upgrade).
 
+PRIMARY, the unit is DONE when it is read: the star panels of UR heroes 4 to 6, one panel each; nothing else.
+
 Up to three runs, 10 steps each.
 
 Hazards: close menus with the bare spot (310,660) (not (400,640) after a camera shift); never tap WORLD (660,940) with a menu open low. In the Backpack the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use: select nothing, press nothing. Never press Use, Open, Convert, Sell, Buy, Upgrade, Unlock, Promote, Equip, Recruit or any shard control. Stop at a price or diamond.
