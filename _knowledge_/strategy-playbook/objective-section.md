@@ -1,7 +1,7 @@
 ---
 title: Objective
-created: 2026-11-23T07:46:59Z
-modified: 2026-11-23T07:46:59Z
+created: 2026-11-23T09:06:47Z
+modified: 2026-11-23T09:06:47Z
 version: 0.1.0
 sequence: 2
 description: Owner, 2026-10-25 - the ultimate goal is to increase Hero Power and Total Power, while balancing
