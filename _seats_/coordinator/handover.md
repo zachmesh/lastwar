@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T20:20:00Z
+modified: 2026-11-23T20:38:00Z
 level: L2
-version: 0.19.0
+version: 0.20.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ Respawn on the HARNESS meter (`session-relay inspect`, not the seat's estimate) 
 - Research divisor 3.678 (plus 268 percent): read the Finish Now clock.
 - Standing rule (Steer A): anything that could open another app, browser, store or payment surface needs his approval first; an unexpected foreground switch stops the run; consent requests are human-only; only the operator seat touches the desktop (others: `lsappinfo front`, no osascript).
 - The harness's own clicks count as idle input (self click); the 300 s wait is restored.
+- Plunder scans 02:30Z to 06:00Z (one fight each, stop at 4/4): the trade icon (107,580) has been absent since 16:39Z; if scan 001 closes 'blocked by route: trade icon absent', HOLD 002 to 008 until the icon is seen (each blocked run costs the 300 s gate).
 
 ## Open owner decisions
 
