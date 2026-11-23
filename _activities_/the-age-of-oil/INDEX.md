@@ -35,4 +35,4 @@ Season II warzone collective-progression event in the Events hub - three warzone
 ## Changelog
 
 - 1.4.0, 2026-11-23 - Owner name already replaced on main by the tree-wide pass (commit 0467e3ef), then split verbatim by `split_doc.py` from the body into ? key-named articles and 0 catalog pages, and added `rule-digest.md`. `--check` EQUAL against that file, body sha256 354056a6509d; the unsplit 1.3.0 file is commit 0467e3ef.
-- 1.5.0, 2026-11-23 - Links to run notes that moved to _run_notes_/the-age-of-oil/ now point there.
+- 1.5.0, 2026-11-23 - Relinked.

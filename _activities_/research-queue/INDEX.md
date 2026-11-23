@@ -44,4 +44,4 @@ Completing finished research and keeping research slots working, one activity fo
 ## Changelog
 
 - 1.7.0, 2026-11-23 - Split verbatim into 16 articles, added `rule-digest.md`; `--check` EQUAL, body sha256 6b04543a62c6; unsplit 1.6.0 is commit 11d23ccf.
-- 1.9.0, 2026-11-23 - Links to run notes that moved to _run_notes_/research-queue/ now point there.
+- 1.9.0, 2026-11-23 - Relinked.

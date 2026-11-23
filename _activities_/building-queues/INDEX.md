@@ -40,4 +40,4 @@ Checking build queues and upgrade state, one activity folder for building knowle
 ## Changelog
 
 - 1.7.0, 2026-11-23 - Split verbatim, added `rule-digest.md`; body sha256 0d39c77b4560; unsplit 1.6.0 is commit 11d23ccf.
-- 1.9.0, 2026-11-23 - Links to run notes that moved to _run_notes_/building-queues/ now point there.
+- 1.9.0, 2026-11-23 - Relinked.
