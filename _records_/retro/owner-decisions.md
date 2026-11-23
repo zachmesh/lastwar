@@ -394,6 +394,15 @@ one mention in a summary.
   filing; the retro recomputes and reports the age
   every run.
 - status: open
+- 2026-11-23 update (coordinator): the live read at 04:24Z
+  (`_records_/2026-11-22/building-queues/2024-queue-run.md`) found
+  builders 0 busy / 4 idle, so the question is wider than the Hut: all four
+  builders are idle and the operator, correctly, started nothing. Owner to
+  name what the builders build (the Lv.26 Builders Hut, or another build
+  the playbook allows), or approve a standing rule for resources-only
+  builds. An Oil Well build is likely gated by the Unlock Oil Well research
+  (done about 11:43Z, inference). Until answered, building-queues units are
+  reads. Cost of waiting: idle builder-hours accrue.
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
