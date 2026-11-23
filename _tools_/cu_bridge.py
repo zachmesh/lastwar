@@ -142,6 +142,10 @@ class McpClient:
         env.pop("NODE_PATH", None)
         env.pop("NODE_OPTIONS", None)
         env.pop("DYLD_INSERT_LIBRARIES", None)
+        # The owner has opted this Mac out of the 300 s local-input wait for
+        # runs the Last War bridge starts (CU-191/D-066). The computer-use
+        # default stays 300; a caller that wants it can set the variable.
+        env.setdefault("CU_OWNER_IDLE_SECONDS", "0")
         self.log = open(MCP_LOG, "a", encoding="utf-8")
         self.proc = subprocess.Popen(
             [NODE, str(SERVER), "--seat", SEAT, "--key-file", str(KEY_FILE)],
@@ -367,15 +371,28 @@ def _app_list(value: str | None) -> list[str]:
 
 def cmd_start(args: argparse.Namespace) -> int:
     _ensure_daemon()
-    payload = {
-        "task": args.task,
-        "environment": "macos-desktop",
-        "apps": _app_list(args.app),
-        "max_steps": args.max_steps,
-        "max_minutes": args.max_minutes,
-        "max_cost_usd": args.max_cost,
-        "live_view": True,
-    }
+    if args.browser:
+        if not args.start_url:
+            _die("--browser needs --start-url", 2)
+        payload = {
+            "task": args.task,
+            "environment": "chrome-browser",
+            "start_url": args.start_url,
+            "max_steps": args.max_steps,
+            "max_minutes": args.max_minutes,
+            "max_cost_usd": args.max_cost,
+            "live_view": True,
+        }
+    else:
+        payload = {
+            "task": args.task,
+            "environment": "macos-desktop",
+            "apps": _app_list(args.app),
+            "max_steps": args.max_steps,
+            "max_minutes": args.max_minutes,
+            "max_cost_usd": args.max_cost,
+            "live_view": True,
+        }
     if args.model:
         payload["model"] = args.model
     reply = _send(
@@ -394,7 +411,7 @@ def cmd_start(args: argparse.Namespace) -> int:
         {
             "run_id": run_id,
             "task": args.task,
-            "apps": payload["apps"],
+            "apps": payload.get("apps", []),
             "started_at": _now(),
             "updated_at": _now(),
             "state": started.get("state", "started"),
@@ -500,9 +517,11 @@ def build_parser() -> argparse.ArgumentParser:
     test = sub.add_parser("self-test", help="initialize MCP and list its tools")
     test.set_defaults(func=cmd_self_test)
 
-    start = sub.add_parser("start", help="start a desktop run")
+    start = sub.add_parser("start", help="start a desktop or browser run")
     start.add_argument("--task", required=True)
-    start.add_argument("--app", default=DEFAULT_APP, help="comma-separated bundle ids")
+    start.add_argument("--browser", action="store_true", help="run in a fresh headless Chrome instead of the desktop")
+    start.add_argument("--start-url", default="", help="browser mode: the http(s) page to open")
+    start.add_argument("--app", default=DEFAULT_APP, help="desktop mode: comma-separated bundle ids")
     start.add_argument("--model", default="", help="claude-gateway/<model> or a local alias")
     start.add_argument("--max-steps", type=int, default=20)
     start.add_argument("--max-minutes", type=float, default=10)
