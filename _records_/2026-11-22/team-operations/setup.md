@@ -38,6 +38,8 @@ verified: measured in session
 - `_records_/2026-11-22/team-operations/setup.md` - this record.
 - Coordinator schedule `schedule-9de37067-4365-474f-8d53-eb57d44f8166`,
   every 900 seconds, first firing 2026-11-23T03:23:31Z.
+- Pull request #858, `work/continuous-play-team`, opened 2026-11-22
+  19:22 PT; it carries this record and the team setup.
 
 ## Verification
 
