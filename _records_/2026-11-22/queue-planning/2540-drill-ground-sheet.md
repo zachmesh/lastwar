@@ -1,9 +1,9 @@
 ---
 title: Drill Ground Reference Sheet For The 09:20Z Builder Units 2540 2026-11-23
 created: 2026-11-23T03:04:00-08:00
-modified: 2026-11-23T03:36:00-08:00
+modified: 2026-11-23T04:24:00-08:00
 level: L0
-version: 1.3.0
+version: 1.4.0
 description: The reference the builder units for 2026-11-24T09:20Z point at - the four Drill Grounds with tap points and the pan, the measured upgrade previews with their tag texts, the funding plan and the hazards; the conversion procedure and speed-up use are on sheet 2541
 status: done
 activity: queue-planning
@@ -38,7 +38,7 @@ The three steps cost 261.8M coin and 321.3M iron.
 
 ## Funding plan [D], from the RC1 limits [M]
 
-Keeps the coin in the base at the buffer and the 50M fixed-chest reserve. (a) Grounds 1 and 2, 59.5M + 83.3M = 142.8M: ONE Use of 59 UR Coin Chests (59 x 2.4364M = 143.75M). (b) Ground 3, 119.0M: ONE Use of 19,834 plain Resource Chests choosing the 6K COIN option (119.004M). The slider is about 80 chests per pixel, so read the number field after the drag and accept 19,700 to 20,000; a miss of 1M coin is fine; the default 20,862 would be 125.2M, also acceptable if the drag fails, but say so. (c) After all three starts coin should read about 15M (floor 10M); fixed chests left: UR 28, SSR 71, SR 122, about 138M; the Builders Hut (guide about 22M coin) from SSR chests if the Strategist ranks it.
+Keeps the coin in the base at the buffer and the 50M fixed-chest reserve. (a) Grounds 1 and 2, 59.5M + 83.3M = 142.8M: ONE Use of N UR Coin Chests, N = ceil((142.8M + 10M - coin now) / 2.4364M), which is 59 from 9.8M, 58 from 12M and 63 from 0.2M (59 x 2.4364M = 143.75M); stop if N would exceed 87. (b) Ground 3, 119.0M: ONE Use of M plain Resource Chests choosing the 6K COIN option, M = ceil((119.0M + 10M - coin now) / 6,000), about 19,709 from 10.75M (19,834 is the planning figure at the 15M baseline); stop if M would exceed 20,862. The slider is about 80 chests per pixel, so read the number field after the drag and accept 19,700 to 20,000; a miss of 1M coin is fine; the default 20,862 would be 125.2M, also acceptable if the drag fails, but say so. (c) After all three starts coin should read about 15M (floor 10M); fixed chests left: UR 28, SSR 71, SR 122, about 138M; the Builders Hut (guide about 22M coin) from SSR chests if the Strategist ranks it.
 
 ## Hazards
 

@@ -1,7 +1,7 @@
 ---
 title: Forecast gate rule for the enqueue check
 created: 2026-11-23T10:02:00Z
-modified: 2026-11-23T10:02:00Z
+modified: 2026-11-23T12:57:00Z
 version: 1.0.0
 level: L3
 description: The rule the toolsmith implements so that a unit's plan item has a forecast row, first as a warning and later as a refusal, and when the ledger counts as stable
@@ -31,7 +31,7 @@ A unit carries `serves: PL-nn` or `serves: upkeep`. Upkeep is exempt. For a plan
 2. Every plan item PL-01 to PL-14 except PL-12 has at least one row (true at 10:05Z).
 3. The coach's first calibration report has landed.
 
-Earliest refusal: 2026-11-24T10:00Z. Until I log it, the check stays a warning.
+Earliest refusal: 2026-11-24T10:00Z (the columns last changed 09:20Z; no schema change since). Until I log it, the check stays a warning.
 
 ## Notes
 
