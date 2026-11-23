@@ -1,9 +1,9 @@
 ---
-title: B. Perception completeness
-created: 2026-11-23T08:36:55Z
-modified: 2026-11-23T08:36:55Z
+title: B. Perception completeness part 1
+created: 2026-11-23T09:02:25Z
+modified: 2026-11-23T09:02:25Z
 version: 0.1.0
-sequence: 3
+sequence: 4
 description: Per perception day.
 ---
 ## B. Perception completeness
@@ -37,11 +37,4 @@ form) written beside it, the zero sweep records under
   `created_at` in the pool minus the time of the observation
   pass that saw its item. Reported as median and maximum per
   day where both timestamps exist.
-
-Known defects - observed items carry no per-item timestamp; the
-observation file is appended pass by pass, so latency is
-computable at pass granularity only. Where a pass time cannot be
-recovered, latency for that day is a data-gap, not a zero. Until
-the scout diff auto-invocation lands (loop review open link 1),
-conversion measures a hand-run tool and must be read as such.
 

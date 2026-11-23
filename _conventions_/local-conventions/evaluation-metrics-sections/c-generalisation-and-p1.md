@@ -1,9 +1,9 @@
 ---
-title: C. Generalisation and discovery
-created: 2026-11-23T08:36:55Z
-modified: 2026-11-23T08:36:55Z
+title: C. Generalisation and discovery part 1
+created: 2026-11-23T09:02:25Z
+modified: 2026-11-23T09:02:25Z
 version: 0.1.0
-sequence: 4
+sequence: 6
 description: Per week, with daily counts kept.
 ---
 ## C. Generalisation and discovery
@@ -41,9 +41,4 @@ Thresholds - none hard in the first weeks; discovery is new and
 a quota would reward filing noise. A median candidate dwell
 over 3 days in `exploring` is a watch item, named at the weekly
 comparison.
-
-Known defects - state dwell depends on profile `modified`
-timestamps, which also move for unrelated edits; dwell is an
-approximation and is labelled as one until the register carries
-explicit state-change dates.
 

@@ -1,9 +1,9 @@
 ---
 title: E. Tool developer impact
-created: 2026-11-23T08:36:55Z
-modified: 2026-11-23T08:36:55Z
+created: 2026-11-23T09:02:25Z
+modified: 2026-11-23T09:02:25Z
 version: 0.1.0
-sequence: 6
+sequence: 10
 description: Per tool landing, rolled up weekly.
 ---
 ## E. Tool developer impact
