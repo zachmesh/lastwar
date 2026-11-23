@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-12T06:32:17Z
+modified: 2026-11-23T00:42:23Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-1343 event-claims execution record 2026-11-10 1358 queue run (done, full 6-tab hub sweep, nothing claimable, 10:45 follow-up closed, Hero Advancement ends about 14:03 at score 0; record commit b2c2b7a43 on records/2026-11-10)
   - source: ticker-0234 event-claims execution record 2026-11-11 0305 queue run (done, full hub sweep, nothing claimable, hub roster changed - Survey Center out, Zombie Invasion in - Age of Oil stage-1 badge unresolved, Wanted Boss back to Code 39; record commit 2abfb335c on records/2026-11-11)
   - source: ticker-2133 arms-race execution record 2026-11-11 2147 queue run (skipped-needs-owner, Age of Oil tab cross-read - Tech Research 9611/500, Building Upgrades 22680/500, 3d 20:08:22 left, stage track 1 of 4, badge 1, no claim located; record commit bca5a948c on records/2026-11-11)
+  - source: ticker-0234 event-claims execution record 2026-11-22 0253 queue run (partial, Events hub never opened, panned-view entry blocker, green up-arrow at (845,186) is a RETRACT control for "SPECORA X" not recenter, Cancel tapped, nothing retracted; record commit c5c9b88d6 on delivery branch ticker-0234-records-1122, not on main - provenance noted)
 ---
 
 
@@ -60,6 +61,7 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
 ## How it is done
 
 - Open Events and scan each active event for claim buttons and red dots.
+- Recenter the base view FIRST (2026-11-22 0253): a panned base view hides the top-right Events button from its usual place, and the unit's usual-point tap landed on empty map. Candidate recenter control is the red circular-arrow icon above the green up-arrow (about (753,152)) - untested. Verify the Events button is visible before tapping it. Do NOT tap the green up-arrow at (845,186) as a recenter control - it is a RETRACT control for a placed object ("SPECORA X"): it opens a "DO YOU WANT TO RETRACT THE SPECORA X?" confirmation dialog (Cancel / Confirm / "Don't show me today"). Cancel was tapped immediately at (373,701) in the 0253 unit and nothing was retracted.
 - Page through everything - the Events tab bar scrolls sideways, and
   the owner standing direction (evening of 2026-10-25) is to navigate
   through the pages to finish the red dots, not stop at the first
@@ -1360,3 +1362,14 @@ that drag is the sweep-completeness check, not wasted motion.
 - Cross-read only, not an events unit execution: the ticker-2133 arms-race unit (arms-race-2026-11-11-1803, 21:47-21:53 local) read the leftmost Events tab (Age of Oil season) from the Events screen. Evidence in `_records_/2026-11-11/arms-race/2147-queue-run.md` (commit bca5a948c on records/2026-11-11). Nothing explored or claimed here.
 - Live read: red "1" badge on the tab. "Unlock Tech: The Age of Oil - Complete a total of 500 Tech Research in this Warzone, 9611/500" and "Unlock Stage: Base Expansion II - Complete a total of 500 Building Upgrades in this Warzone, 22680/500", 3d 20:08:22 left, stage track 1 of 4. Against the 0305 full-hub sweep (6421/500 tech, 20418/500 upgrades, 4d 14:59 left): both warzone totals advanced and the timer is consistent (~19 h later); both goals are still exceeded with no Claim button located - the stage-1 badge claim, if any, remains unresolved. Commented on Issue #477 by this run.
 - Result stats: no events unit ran; nothing claimed, nothing spent; verified yes (tab read live in-unit); blocker_category none.
+
+## What the 2026-11-22 0253 unit added - hub never opened, panned-view entry blocker, green up-arrow is a RETRACT control, partial
+
+- Unit events-2026-11-21-2257 by ticker-0234, about 02:53 to 02:54 local, status partial - Events hub never opened (panned-view entry blocker). Evidence in `_records_/2026-11-22/event-claims/0253-queue-run.md` (commit c5c9b88d6 on delivery branch ticker-0234-records-1122 - NOT on main; provenance noted in the frontmatter source line). Session cc-87 on the owner Mac mini, Last War window 105986 (763x1050). 47 seconds, tool-measured.
+- The base view was still panned down-left from the trucks unit's failed tap, so the top-right Events button was not in its usual place.
+- Attempt 1: tapped the usual Events point (898,133). No hub opened; the tap landed on empty panned map area.
+- Attempt 2 (mistap, safely cancelled): tapped the green up-arrow at (845,186), reading it as a recenter control. It was not recenter - it opened a "DO YOU WANT TO RETRACT THE SPECORA X?" confirmation dialog (Cancel / Confirm / "Don't show me today"). Cancel was tapped immediately at (373,701); nothing was retracted and nothing changed. The dialog was dismissed and the base screen returned (power 149,417,850, Build: Oil Well).
+- The token budget was nearly out, so no further entry attempt was made. The red circular-arrow icon above the green arrow (about (753,152)) is the untested recenter candidate for the next unit.
+- Result: Events hub not opened. Tabs not read. Claims: 0. No reward was claimed, nothing was spent, no priced button was touched. No state changed by this unit except the cancelled dialog (no effect).
+- Next events unit must: recenter the base view first (candidate: the red circular-arrow icon), verify the Events button is visible, then sweep the hub tabs. Do not tap the green up-arrow at (845,186) - it is a retract control for a placed object, not recenter. See the updated How it is done entry.
+- Result stats: target sweep the Events hub tabs and claim earned rewards, achieved 0 claims - hub never opened, resources_gained none, costs 47 seconds of session time (tool-measured), no diamonds, no money, verified no - no event tab was read live in this unit, blocker_category e (entry blocker - panned view hid the Events button; recenter control misidentified).
