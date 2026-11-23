@@ -1,13 +1,13 @@
 ---
 title: Truck Plunder Rule Digest
 created: 2026-11-23T07:22:02Z
-modified: 2026-11-23T07:22:02Z
+modified: 2026-11-23T09:54:49Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: The standing rules a seat must follow when working Intercity Trade trucks, each cited to the split article file that carries it
 status: unverified
 grounded_in:
-  - source: split articles what-this-activity, scope-and-availability, cadence-section, limits-section, how-it-is-p1 and p2, how-it-p1-2, how-rewards-are-p1 and p2, how-to-enter-p1 to p4, day-20261025-p1 and p2, day-20261030-p1 to p4, open-questions-p1 to p3, run-20261111-0701-p1 and p2 and run-20261122-0252-p1 and p2 in this folder, plus the OD-20261123-03 and OD-20261123-05 log entries, read for the standing rules, every cited phrase matched against the text (44 of 44 matched)
+  - source: split articles what-this-activity, scope-and-availability, cadence-section, limits-section, how-it-is-p1 and p2, how-it-p1-2, how-rewards-are-p1 and p2, how-to-enter-p1 to p4, day-20261025-p1 and p2, day-20261030-p1 to p4, open-questions-p1 to p3, _records_/2026-11-11/truck-plunder/0701-queue-run.md and p2 and run-20261122-0252-p1 and p2 in this folder, plus the OD-20261123-03 and OD-20261123-05 log entries, read for the standing rules, every cited phrase matched against the text (44 of 44 matched)
   - source: assignment A-20261123-0648-scribe case (b)
 ---
 
