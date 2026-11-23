@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-23T16:40:00Z
 window: locate and record the builders hut no reading attached
 est_minutes: 8
-serves: snapshot
+serves: PL-08
 chain_id: locate-2026-11-23
 chain_seq: 2
 attempts: 0
@@ -34,7 +34,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 ## Brief (planner, LOCATE AND RECORD the Builders Hut, no reading, the Coach's cause 1 of the growth partials)
 
-serves: snapshot
+serves: PL-08
 
 The Builders Hut was never located: `tag-index.csv` row says 'not found'. Search the base by panning as in the Oil Well find (WORLD then BASE, drag (400,580) to (150,830), drag (660,470) to (390,620)) and the other quadrants, at most 8 pans; tap ONE building per fresh frame.
 

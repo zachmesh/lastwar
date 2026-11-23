@@ -1,0 +1,14 @@
+item,value,read_utc,note
+first frame,"base, no dialog, no boarding banner",2026-11-23T16:35:20Z,
+phase,"Tech Research, Contest Segment Lv.29-30, timer 01:24:14 (ends about 18:00Z)",2026-11-23T16:36:10Z,
+owner points,0,2026-11-23T16:36:10Z,live phase score
+chest 1,"6,250 points, ruby value 2,360",2026-11-23T16:36:10Z,locked
+chest 2,"12,500 points, ruby value 4,800",2026-11-23T16:36:10Z,locked
+chest 3,"30,000 points, ruby value 11,800",2026-11-23T16:36:10Z,locked
+counter chest,9 of 18,2026-11-23T16:36:10Z,"not full, not bouncing, not tapped"
+ranking row,"rank 10, 93,900 points",2026-11-23T16:36:10Z,lags the live score (rule 7): 93,900 equals the earlier phase total
+scoring row 1,"Increase Tech Power by 1pt: +1, Go",2026-11-23T16:36:10Z,needs a tech upgrade: not pressed
+scoring row 2,"Use 1-min Research Speed-up: +10, Go",2026-11-23T16:36:10Z,speed-up: red line
+scoring row 3,"Buy Packs containing Diamonds: +30, Go",2026-11-23T16:36:10Z,purchase: red line
+claimed,none,2026-11-23T16:36:15Z,no Claim button for a finished phase
+HUD after,"food 664.1M, iron 1.0G, coin 19.1M, oil 650.7K, energy 101, Total Power 150,416,946",2026-11-23T16:36:20Z,

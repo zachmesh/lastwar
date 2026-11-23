@@ -1,0 +1,15 @@
+regular,serves,verdict,reason
+secrets,PL-17,confirm,the Oil Depot task pays 30K oil a day; rows F-082 and F-117
+radar,PL-17,confirm,radar oil quests and the Bingo lines (240K once) feed the oil line
+trucks (own dispatch and settlement),PL-14,change from PL-18,own trucks pay about 3.8M food and iron and 2.4M coin a UR truck: rows F-126 and F-127 sit on PL-14
+"plunder (sessions, scans)",PL-18,confirm,rows F-088 to F-093 and F-132 to F-142
+harvest,PL-14,change from PL-16,"the collect supplies the resource line (iron floor F-143, food plan); PL-16 rows are research timings"
+donations,upkeep,change from PL-04,no lever shown; PL-04 is the lab line. Read the alliance technology panel once for a research speed line (H118); if it is there it serves PL-16
+passes,PL-05,confirm (G),the weekly cards are S2 Drone Components and S1 Drone Parts by name (record 1434); the pickup contents are unread; row F-012
+research,"PL-16 for path starts, PL-04 for reads and fills",confirm,either plan item has rows; the path node starts are the long line
+building-queues,"PL-08 for ground levels, PL-17 for the Oil Well chain",confirm,rows F-062 to F-070 and F-100
+training,PL-09,confirm,promotion and slot fills
+scout-midday and scout,"PL-07, or the item the read informs",confirm,"a read serves the plan item whose input it measures: hero counters PL-06, node oil rows PL-16, power breakdown PL-07"
+"mail, gifts, train, duel-score, star-ceremony, arms-race, daily-missions, treasures, events, ghost-ops, zero-sweep, survivors",upkeep,confirm,"no lever shown; survivors waits on the Unit Count extras read (H71, review 12-05)"
+help,upkeep for now,test,"requesting alliance help on a running node may shorten it (H118, F-144); if so it serves PL-16"
+vip,upkeep for now,test,"the VIP panel may list a research or construction speed bonus (H119, F-145); the flat 4h12m is unexplained"

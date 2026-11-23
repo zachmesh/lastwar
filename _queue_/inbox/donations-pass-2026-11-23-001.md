@@ -10,7 +10,7 @@ planned_for:
 not_before: 2026-11-23T17:44:00Z
 window: donation pass count about 5 to 7 refill one per 35 minutes
 est_minutes: 14
-serves: upkeep
+serves: PL-04
 chain_id: pass-2026-11-23
 chain_seq: 1
 attempts: 0
@@ -28,7 +28,7 @@ Serves: upkeep
 
 ## Brief (planner, donation pass, the refill test)
 
-serves: upkeep
+serves: PL-04
 
 Policy `_records_/2026-11-22/team-operations/2532-donations-tracker-policy.md`; activity `_activities_/alliance-donations/` (read its `rule-digest.md` first). Spend the live count and stop: DONE when spent or already spent at entry; PARTIAL when you stop early; FAILED when the panel is never reached; coin only, never the diamond Donate; count only witnessed taps. Route: the Alliance shield (ground it fresh), Techs, War tab. NO hand tap may precede this pass.
 

@@ -1,0 +1,8 @@
+item,value,read_utc,note
+first frame,"base, no dialog",2026-11-23T16:40:00Z,
+gift level before,"Gift Level 29, progress 34,861,780 of 257,900,000",2026-11-23T16:40:25Z,
+Regular Claim All,"475 Regular Alliance Gifts claimed",2026-11-23T16:40:40Z,"items: golden chest x43, 5-gem item x45, 600 coin x2.1K, 1.0K steel x1.5K, 5m builder speed-up x52, 1.0K bread x1.9K, 6.0K coin x116, 10.0K bread x58"
+Premium Claim All,"40 Premium Alliance Gifts claimed",2026-11-23T16:40:55Z,"items: gold bar x3, 500-badge item x6, metal crate x17, coin crate x39, bread crate x20, blue chest x8, 50-badge item x5, 5m builder speed-up x4, 20-gem item x3, 5m general speed-up x11, ice block x60"
+re-check,"both tabs all rows Claimed, no Claim All, no red dot",2026-11-23T16:41:10Z,
+gift level after,"Gift Level 29, progress 34,881,370 of 257,900,000",2026-11-23T16:41:10Z,progress reads alliance-wide (rule 4)
+HUD after,"energy 102, food 664.1M, iron 1.0G, coin 19.1M, diamonds 11,113",2026-11-23T16:41:15Z,"the Alliance button still shows a red dot, not investigated"

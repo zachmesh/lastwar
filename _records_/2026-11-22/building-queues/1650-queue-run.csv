@@ -1,0 +1,14 @@
+item,value,read_utc,note
+builders counter,4/4 busy,2026-11-23T16:50:50Z,left column
+builder 1,"Lv.25 Training Base upgrade, 06:29:20 as read",2026-11-23T16:51:00Z,"probably 16:29:20 (ends 2026-11-24T09:20Z, the handover figure); unverified"
+builder 2,"Lv.25 Training Base upgrade, 06:29:24 as read",2026-11-23T16:51:00Z,same note
+builder 3,"Lv.25 Training Base upgrade, 06:29:27 as read",2026-11-23T16:51:00Z,same note
+builder 4,"Lv.25 Training Base upgrade, 06:29:31 as read",2026-11-23T16:51:00Z,same note
+lab 1,"Food Output V, 1d 00:38:43 (ends about 2026-11-24T17:30Z)",2026-11-23T16:51:10Z,matches the handover
+lab 2,"Iron Output V, 1d 09:47:45 (ends about 2026-11-25T02:39Z)",2026-11-23T16:51:10Z,matches the handover
+idle builders,0,2026-11-23T16:51:00Z,
+idle labs,0,2026-11-23T16:51:10Z,
+barracks Lv.24 first run,tap (628 562) selected nothing: bare ground; the camera had shifted,2026-11-23T16:51:30Z,
+barracks Lv.24 retry,"after WORLD then BASE: tag 'Barracks Lv.24', buttons people, pistol, green up-arrow; pistol tap showed neither panel nor toast within 2 s; idle state not read",2026-11-23T16:53:00Z,run a16d45
+barracks Lv.20 retry,"tag 'Barracks Lv.20'; pistol tap showed neither panel nor toast; idle state not read",2026-11-23T16:53:20Z,
+earlier read,"13:44Z: Barracks Lv.24 and Lv.20 idle, blocked by Drill Ground Full (2 slots)",2026-11-23T13:44Z,troop-training/1344-queue-run.md; not re-confirmed

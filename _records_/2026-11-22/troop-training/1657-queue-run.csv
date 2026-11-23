@@ -1,0 +1,9 @@
+item,value,read_utc,note
+first frame,"base, no dialog; food 665.8M, iron 1.0G, coin 21.2M, Total Power 150,416,946",2026-11-23T16:57:35Z,
+Barracks Lv.24,"tag 'Barracks Lv.24'; pistol raised the toast 'Drill Ground Full: Unable to add more units.'; idle, blocked by capacity",2026-11-23T16:57:50Z,"no TRAIN UNITS panel"
+Barracks Lv.20,"tag 'Barracks Lv.20'; pistol raised the same toast; idle, blocked by capacity",2026-11-23T16:58:40Z,
+Barracks Lv.27,"tag 'Barracks Lv.27'; TRAIN UNITS panel: Lv.9 batch of 726, 'Training in progress' 02:57:18 at 16:59:20Z (ends about 19:56:38Z)",2026-11-23T16:59:20Z,"matches the 13:44Z read; Speed Up not pressed"
+Barracks Lv.30,"tag 'Barracks Lv.30'; TRAIN UNITS panel: Lv.10 batch of 793, 'Training in progress' 18:18:41 at 16:59:53Z (ends about 2026-11-24T11:18:34Z)",2026-11-23T16:59:53Z,"matches the 13:44Z read"
+slots_idle,2,2026-11-23T16:59:53Z,"Lv.24 and Lv.20, both blocked: slots_blocked_by_capacity 2, capacity_blocker 'Drill Ground Full'"
+run end,"step cap reached with the Lv.30 panel open (the close step was recorded, not executed)",2026-11-23T16:59:53Z,"closed by the cleanup run 20261123T170020Z-9d0187 (17:00:20Z, 0.060967 USD)"
+HUD after,"food 665.8M, iron 1.0G, coin 21.2M, Total Power 150,416,946",2026-11-23T17:00:45Z,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+first frame,"base, no panel, no different-device dialog",2026-11-23T16:38:50Z,
+boarding banner,"none in any frame (four looks)",2026-11-23T16:39:10Z,
+left column,"hammer 4/4, flask 2/2, vehicle icon about (107,647), radar dish with badge 11 about (107,713), hammer icon about (107,780); no locomotive icon, no countdown",2026-11-23T16:39:00Z,
+other signs,"no train notice or bubble; Warzone Duel countdown about 09:21; a 14:39 timer; quest line 'Upgrade Builder's Hut to Lv.26 (0/1)'",2026-11-23T16:39:00Z,
+HUD,"energy 101, food 664.1M, iron 1.0G, coin 19.1M, diamonds 11,113, Total Power 150,416,946",2026-11-23T16:39:15Z,
+train arrival mail,not read in this run,,"the 13:55Z read found the notice with no attachment and no Claim button; the mail unit of this batch reads the Event list"

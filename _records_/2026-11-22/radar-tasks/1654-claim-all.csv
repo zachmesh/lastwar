@@ -1,0 +1,16 @@
+item,value,read_utc,note
+first frame,"base, no dialog; radar dish badge 11",2026-11-23T16:54:20Z,
+bar before,"green Claim All, '11 task rewards can be claimed'; energy 104; '12 Radar Task(s) will be restored in 03:43:45' (about 20:38Z)",2026-11-23T16:54:40Z,
+Claim All,pressed once; a 'Drop Limit Update 216/300' banner then the reward popup,2026-11-23T16:54:50Z,approved ONCE by the coordinator
+reward: oil barrel,4.6K,2026-11-23T16:54:55Z,oil counter 650.7K to 655.4K
+reward: coin,2.0M,2026-11-23T16:54:55Z,coin 19.1M to 21.2M
+reward: iron,1.7M,2026-11-23T16:54:55Z,iron shows 1.0G before and after
+reward: bread (food),1.7M,2026-11-23T16:54:55Z,food 664.1M to 665.8M
+reward: EXP book,13.5M,2026-11-23T16:54:55Z,
+reward: crossed-swords item,4.8K,2026-11-23T16:54:55Z,
+reward: blue triangle item,633,2026-11-23T16:54:55Z,"read as gem-like by the model; diamonds stayed 11,113"
+reward: radar-style purple item,110,2026-11-23T16:54:55Z,
+reward: supply sack,27,2026-11-23T16:54:55Z,
+popup,"CONGRATULATIONS, all the rewards you received this time; no X, closed by tapping empty space; no chest, box, speed-up, price or Go",2026-11-23T16:54:55Z,
+bar after,"'You can complete 1 tasks, requires 10 Stamina' with a blue Quick Execute (not pressed); task counter 0/40; energy 104",2026-11-23T16:55:05Z,
+HUD after,"oil 655.4K, food 665.8M, coin 21.2M, iron 1.0G, energy 105, diamonds 11,113, Total Power 150,416,946; radar badge gone",2026-11-23T16:55:15Z,
