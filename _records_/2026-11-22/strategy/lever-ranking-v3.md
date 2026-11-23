@@ -1,7 +1,7 @@
 ---
 title: Lever ranking for strategy v3.0 draft
 created: 2026-11-23T09:02:00Z
-modified: 2026-11-23T18:11:00Z
+modified: 2026-11-23T20:10:00Z
 version: 0.4.0
 level: L3
 description: The merged capacity and materials ranking by power per scarce unit, with the evidence tag and the read that would change each rank
@@ -24,7 +24,7 @@ The owner ordered Base Expansion as the strategy's priority, so "HQ 31 and the A
 1. **Base Expansion line.** The path nodes give +411K power in all [S1] and HQ 31 +63,700 [M] with Hero Level Cap 155; oil binds, ETA 2027-01-11 for Base Expansion ([ETA note](0510-base-expansion-eta.md)). It also carries the 3rd Tech Center, Fast Builder V and hospital capacity.
 2. **Hero Tier 5 stars** for Lucius and Schuyler: 120 of the 680 universal shards held close the gaps (pattern, five of five), about +0.3M to +1.0M [G]; weapon steps for three heroes need 125 of 441. No builder, no coin; applied in the Thursday window.
 3. **Promotion, +2.75M,** when the panel opens.
-4. **Nine ground levels, about +3.2M,** +0.36M each; three start at 23:20Z today. Store buys wait: the stock covers the gaps.
+4. **Nine ground levels,** +0.23M each with T8 at the Lv.24 barracks (+0.36M with T10 if the Lv.30 queue frees; the 2.29M waiting enters only if a Collect works with partial room, p 0.2); three start at 23:20Z today. Store buys wait: the stock covers the gaps.
 
 ## Forecast, 30 days
 

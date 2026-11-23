@@ -1,0 +1,10 @@
+item,value,read_utc,note
+HUD,"food 668.7M, iron 1.0G, coin 23.0M, oil 658.7K, diamonds 11,113, energy 120, Total Power 150,416,946, builders 4/4, labs 2/2",2026-11-23T19:32:35Z,unchanged from 18:57Z
+base red dots,"Thanksgiving Event 1; red target icon 2 (timer 00:00:44); Alliance, Mail, Inventory red dots; chat 99+; none on Events, Heroes, radar dish",2026-11-23T19:32:35Z,resolved in the next rows
+timers,Warzone Duel 06:27:37 at turn 1; quest line 'Upgrade Builder's Hut to Lv.26 (0/1)',2026-11-23T19:32:35Z,
+Alliance tiles with a dot,"Alliance Wars, Help, Alliance Gifts, Alliance Events",2026-11-23T19:32:55Z,Help and Gifts resolve to the help and gifts units; Wars and Events unexplained
+Alliance tiles without a dot,"Members, Alliance Store, Alliance Techs, Assemble, Strength Ranking, Alliance City; buttons Record, Applicants, Alliance Star, Settings",2026-11-23T19:32:55Z,
+Events hub,"opened on Black Market (selected, 20d 06:27:09 left); tabs seen: a clipped ...rms Race, Black Market, Black Market Challenge, a clipped Winter Batt...; no red dot, New or Hot tag visible",2026-11-23T19:33:10Z,partly cut off at both edges
+Inventory tabs,"Special (selected, red badge 27, was 45 at 16:55Z), Resources, Speed-up, Heroes, Gear, Gift; only Special has a badge",2026-11-23T19:33:25Z,the Inventory red dot cleared after opening
+Hero List,"one red thumbs-up marker on card 4 (top row, fourth), left edge; bottom buttons back arrow, Recruit Heroes, Recommend",2026-11-23T19:33:35Z,the recommendation marker seen since 18:53Z
+change turn 1 to 14,"Warzone Duel timer 06:26:26; the target icon timer, badge and chat preview moved by themselves; HUD identical; Alliance, Mail and Thanksgiving badges unchanged",2026-11-23T19:33:50Z,

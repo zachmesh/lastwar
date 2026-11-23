@@ -1,0 +1,6 @@
+item,value,read_utc,note
+run 1 pan 1,"WORLD then BASE, drag (230,820) to (500,560): the south-west corner shows an airfield with helicopters and planes, tank and vehicle pads, a SALE market stall at the left edge, walls and snow; no hut",2026-11-23T19:21:50Z,run 0a6e75
+run 1 tap,"the SALE stall body (135,525) opened the EVENTS panel on the Black Market tab (purchase cards, Refresh Free, Quick Buy); nothing pressed; the bare-ground tap did not close it",2026-11-23T19:22:15Z,"the run stopped; closed by cleanup run 2fc8e8 with the panel back arrow (176,930), nothing bought"
+run 2 pan 1 and 2,"same south-west drag, one tap at (335,510) with no tag read, then a south drag (500,820) to (300,560): drill ground lanes 2 and 3 at the top, snowy empty ground below",2026-11-23T19:24:47Z,run c7ba46; no hut seen
+foreground switch,"at about 19:24:50Z Google Chrome became frontmost with no tap of mine (the last action at 19:24:47Z was a drag, front Last War); the bridge raised a consent request (new_app, com.google.Chrome) on the next click; not answered; run stopped 19:25:48Z",2026-11-23T19:25:16Z,Chrome still frontmost afterwards; nothing touched; coordinator told 19:26Z
+result,Builder's Hut not found; frames covered: south-west and south,2026-11-23T19:25:48Z,blocked by route

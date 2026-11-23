@@ -1,7 +1,7 @@
 ---
 title: Slot rules for the planner v1.5
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T18:12:00Z
+modified: 2026-11-23T20:10:00Z
 version: 1.5.0
 level: L3
 description: The allocation rules for the free labs and builders, the speed-up order, the slot-arrival protocol and the training rule once four Drill Grounds are known to exist
@@ -27,20 +27,20 @@ Rules, not units. Costs in [the level table](0030-dg-level-table.csv). Change si
 ## Builder rule (four builders at 23:20Z on 11-23, decisions 07 and 08)
 
 1. B1 the Oil Well from Lv.21 (it stands at Lv.20) without idling: one building, one builder, Lv.21 to 30 in 22 days naturally. B2, B3 and B4 the Lv.26, 27 and 28 ground levels, lowest first (34.7K, 25.1K and 19.6K a builder-day with T10, 23.2K for the first with T8); three need coin 262M, food 978M, iron 321M. Skip the Lv.30 ground, Hut, Gold Mine and Farmland steps (3.2K or less).
-2. HQ 31 is the last builder job, after Base Expansion; never the owner's running queue; every resource stays above its floor. Chests are converted 2 hours before, by the box policy.
+2. HQ 31 is the last builder job, after Base Expansion; never the owner's running queue; every resource stays above its floor.
 
 ## Speed-up pools
 
-Construction items (167,895 minutes) are for builders only: the well, the ground ladder (14,550, 20,370 and 26,481 minutes), then HQ 31; at most 10,000 minutes an upgrade and 35,000 a week, applied after the Tuesday window opens at 02:00Z on 11-24. Tech and general items are for research only.
+Construction items (167,895 minutes) are for builders only: the ground ladder, then HQ 31, not the well; at most 10,000 minutes an upgrade and 35,000 a week, applied after the Tuesday window opens at 02:00Z on 11-24. Tech and general items are for research only.
 
 ## Slot-arrival protocol (X exceeds Y, or a level completes)
 
 1. Read X of Y on the Drill Ground troops panel (small button).
-2. One hospital Collect tap before any training (H16).
-3. Collect a finished batch if the batch test shows it needs room.
-4. Train T10 at the idle Lv.30 barracks into exactly the free slots (T8 at the Lv.24 barracks if it is busy).
-5. Start Promote on an idle barracks when its gain is positive, T7 first; log power before and after each step.
+2. Read X of Y before every Collect attempt; log room and toast; try the smallest finished batch first (H16, H123).
+3. A finished batch cannot be collected while Full; after a level completes try the Collect for partial room (F-159), else train.
+4. Train T10 at the Lv.30 barracks into the free slots (T8 at the Lv.24 barracks if busy).
+5. Start Promote when its gain is positive, T7 first; log power before and after.
 
 ## Training and drop rules
 
-Requeue only into measured free slots. A power drop of 300K or more starts a Collect unit within 60 minutes.
+Requeue only into measured free slots. A power drop of 300K or more starts a Collect unit in 60 minutes.

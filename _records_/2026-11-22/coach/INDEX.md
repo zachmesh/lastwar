@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T18:16:00Z
+modified: 2026-11-23T20:29:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,7 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [1206-capacity-release-curve.md](1206-capacity-release-curve.md) - what a Drill Ground level releases: a step or a ramp, and the startable idle minutes.
 - [1012-builders-time-correction.md](1012-builders-time-correction.md) - the builders free tonight at 23:20Z, my files corrected, window margins of every trigger.
 - [0953-refill-test-score.md](0953-refill-test-score.md) - the refill test scored: H20 holds; the donations count by policy 2532.
 - [0925-coverage-since-cutover.md](0925-coverage-since-cutover.md) - honest serves coverage, the 14 no-serves units by name, hours serving nothing.
@@ -70,3 +71,6 @@ sidecars the runs cite.
 - [refill-test-prereg-2.csv](refill-test-prereg-2.csv) - the predictions for pass 002, registered 18:00Z before the data.
 - [refill-pass-log.csv](refill-pass-log.csv) and [refill-check-method.py](refill-check-method.py) - the entry-count check of rule 8 for each donations pass, with the formula and the shortfalls.
 - [trigger-window-margins.csv](trigger-window-margins.csv) - the margin of each named trigger to the quiet windows.
+- [wait-aggregate-method.py](wait-aggregate-method.py) - the daily D-066 numbers: minutes waited per day by unit and by cause, from growth/0054-waits.csv.
+- [wait-cause-overrides.csv](wait-cause-overrides.csv) - a stated cause with its evidence for a wait row that cannot be classified from the row alone.
+- [throughput-method.py](throughput-method.py) - operator units per available hour before and after the restored 300 s wait, with the wait share, for Steer A's two-hour measurement.

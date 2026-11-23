@@ -1,0 +1,7 @@
+rank,source,currency,what to buy,operator may press,condition,deadline
+1,"event stores (Thanksgiving Store, Gift of Thanks)",event tickets or ingredients,"construction, tech and general speed-ups, then oil, food, iron, coin","yes, each buy approved",read first (H120); per-person limits; lapse 2 hours before the event end,11-26T01:00Z or the event timer
+2,honor and Campaign star stores,"honor 130.1K, stars 1,260","Universal Exclusive Weapon Shards (25 for 2,500 honor; 4 for 300 stars)","yes after the one-step test, each buy approved",the Murphy Lv.3 to 4 step (20 shards) shows at least 20K power a level,11-26T01:00Z
+3,Black Market,"free refreshes; cash 10,350","weapon shard choice chest, UR hero shards, speed-ups; skip the rest","refresh yes (label must read Free, 10 a day); buys yes, each approved",tile names read first (BM2); a tile in rank 1 to 3 only,12-12T14:00Z closing sweep
+4,honor store decor components,honor,decoration components (150 for 200 honor),hold,after rank 2 spends; the decor line moves about 7.7K a day,review 11-30
+5,honor URU and other hero shards,honor,"UR Hero Universal Shard x10 for 3,000 honor",hold,680 held cover the Tier-5 gaps (96 and 24); revisit if the counter name read (H107) says otherwise,review 11-30
+6,Lottery (event),leftover event currency,random prizes,"yes, capped at 10 draws then report",only currency with no ranked store use; stop on any diamond price or payment screen,event timer

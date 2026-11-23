@@ -1,0 +1,11 @@
+item,value,tag_text,frame_utc,note
+hero 4 header,"Lucius (Sky Knight): UR, 4 stars, Lv.150 (max), power 3,009,670; Attack 47.2K, HP 2.8M, Defense 11.7K, March Size 453",Lucius,2026-11-23T18:59:20Z,"squad badge 1; a red thumbs-up marker on the card"
+hero 4 shard bar,"Tier tab, row under the skill icons: left gold puzzle-piece icon 683/96 (green); middle hero-shard icon 4/4 (green); right hero-shard icon 4/100 (red)",Lucius,2026-11-23T18:59:25Z,"icon names not shown; the 683 is shared with hero 5 (read as the held UR Hero Universal Shards, inferred)"
+hero 4 next-star gain,"Hero HP 134,797 to 146,518 (+11,721); Attack 2,032 to 2,209 (+177); Defense 513 to 557 (+44)",Lucius,2026-11-23T18:59:25Z,"no power figure; buttons blue and green 'Promote Tiers' not pressed"
+hero 5 header,"Schuyler (Magblade): UR, 4 stars, Lv.150, power 2,922,326; Attack 67.1K, HP 2.0M, Defense 11.3K, March Size 453",Schuyler,2026-11-23T18:59:45Z,squad badge 1
+hero 5 shard bar,"Tier tab: gold puzzle-piece 683/24 (green); hero shard 76/76 (green); hero shard 76/100 (red)",Schuyler,2026-11-23T18:59:50Z,
+hero 5 next-star gain,"Hero HP 62,028 to 67,422 (+5,394); Attack 3,556 to 3,865 (+309); Defense 446 to 485 (+39)",Schuyler,2026-11-23T18:59:50Z,no power figure
+hero 6 header,"Kimberly (Rocket Shadow): UR, 5 stars, Lv.150, power 2,800,055; Attack 66.6K, HP 1.9M, Defense 11.1K, March Size 435",Kimberly,2026-11-23T19:00:00Z,squad badge 2; Exclusive Weapons tab present
+hero 6 star panel,"Tier tab: 5 Stars, HP 86,134, Attack 5,233, Defense 636; 'The hero has been added to the Wall of Honor'; one blue Go; no shard bar, no next star",Kimberly,2026-11-23T19:00:00Z,"Skills tab: medal 10,721/1,600 with a green Upgrade and a red dot (not pressed)"
+where the star shards live,"Tier tab of a hero below 5 stars (row under the skill icons); a 5-star hero shows the Wall of Honor note instead",,2026-11-23T19:00:05Z,answers the 029 open question
+HUD,"power 150,416,946, diamonds 11,113, coin 23.0M unchanged",,2026-11-23T19:00:10Z,

@@ -1,7 +1,7 @@
 ---
 title: Plan of record, strategist, version 0.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T18:17:00Z
+modified: 2026-11-23T20:04:00Z
 version: 0.5.0
 level: L3
 description: The plan items with ids, levers, next actions, triggers, deadlines, expected gains and the measurement that closes each, from which the planner mints units; centre moved from capacity first to training slots first
@@ -25,7 +25,7 @@ Mac UTC, daily. Units carry `serves: PL-nn` or `serves: upkeep`. Start-by is tri
 | PL-04 | Iron Output V running; 550 tech min to end with Food V | idle now | 13:30 | +3.9K or more a node [M] | lab, power |
 | PL-05 | Monday drone feed from preview | D1 read | 11-24 01:30 | +25K to 90K [G] | drone |
 | PL-06 | Earned currencies to shards after reads | reads | 11-26 02:00 | +0.3M a milestone [S1] | buys |
-| PL-07 | Collect first, read twice, diff breakdown; batch tests 19:56, 11:18 | 13:00, 02:00 | weekly | +0.98M, +1.31M free or none [M] | power |
+| PL-07 | Collect first, read twice, diff breakdown; batch test: no collect at Full | 13:00, 02:00 | weekly | 2.29M waits [M] | power |
 | PL-08 | Builders: Oil Well Lv.21 to 30, three ground levels (decisions 07, 08) | 11-23 23:20 | 23:50 | +0.36M a level via new T10 [D] | queue |
 | PL-09 | Slot arrival: X of Y, one Collect, train T10, Promote | Y above X | event plus 30 min | +329K per 200 slots; promote to +2.75M [D] | X of Y |
 | PL-10 | Thursday medals and held shards | 11-26 02:00 | 11-27 02:00 | unread; node power [M] | skill, lab |

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+first frame,"base, no dialog; red dots on the Alliance button and the Help tile",2026-11-23T19:08:15Z,
+header before,"Today's points gained from Alliance Help: 620/1,000",2026-11-23T19:08:30Z,
+rows,"four rows, each 'Need help with building Lv.26 Training Base' 30/30, the owner account's own requests; the fourth cut off at the fold, not scrolled",2026-11-23T19:08:30Z,
+Help All,green; pressed once; no toast at the tap; the dots on Help and Alliance Wars cleared,2026-11-23T19:08:40Z,
+header after reopen,"660/1,000 (+40)",2026-11-23T19:08:55Z,rule 6: read after close and reopen
+HUD,"resources unchanged, Total Power 150,416,946",2026-11-23T19:09:05Z,Alliance and Mail still carry red dots

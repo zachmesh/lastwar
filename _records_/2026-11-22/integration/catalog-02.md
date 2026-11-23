@@ -24,3 +24,8 @@ Back to the [folder index](INDEX.md).
 - [PR 930](landing-pr-930.md) - close-on-grid, the count closes on the refill grid
 - [PR 931](landing-pr-931.md) - refill-formula, the Coach's entry-count formula as a dated note
 - [PR 932](landing-pr-932.md) - playbook-hook, the gate runs playbook-check on changed activity cards
+- [PR 933](landing-pr-933.md) - twelfth records snapshot, builders correction, cutover state file
+- [PR 934](landing-pr-934.md) - run-notes-move, mark and move the superseded run articles
+- [PR 935](landing-pr-935.md) - run-notes-move-polish, the table and index written once per block
+- [PR 936](landing-pr-936.md) - observation-migrate, move an uncommitted growth into the next part
+- [PR 937](landing-pr-937.md) - owner-idle-restore, the 300 s owner-idle wait restored (D-066)

@@ -1,0 +1,14 @@
+item,value,tag_text,frame_utc,note
+hero list,"16 cards in a 4x4 grid, all orange UR, Lv.150 x13 then 145, 133, 125; stars 5 5 5 4 / 4 5 5 4.5 / 4 4 4.5 5 / 4 (per the 13:00Z read); no card carries an exclusive weapon marker","HERO LIST",2026-11-23T18:44:20Z,"targets: the first three UR cards in list order"
+weapon 1 header,"Scamp (Carlie): unlocked, weapon Lv.10; hero UR Lv.150, power 3,964,558","Scamp / Carlie",2026-11-23T18:44:50Z,
+weapon 1 next-level gain,"Hero HP +231,613 to +259,687 (+28,074); Hero Attack +1,512 to +1,695 (+183); Hero Defense +1,026 to +1,150 (+124); resistance 3.00%; max skill level +33",,2026-11-23T18:44:55Z,"two of four weapon skills unlocked"
+weapon 1 shard cost,"blue Upgrade 441/45 and 15/15 (both green: affordable); green Upgrade 15/60 (red: short)",,2026-11-23T18:44:55Z,"icons only, no names: 441 is the same on all three weapons = the held Universal Exclusive Weapon Shards (inferred); 15/60 = the hero's own shards (inferred)"
+weapon 2 header,"Blade Striker (DVA): unlocked, weapon Lv.10; hero UR Lv.150, power 3,682,929","Blade Striker / DVA",2026-11-23T18:45:05Z,
+weapon 2 next-level gain,"Hero HP +104,040 to +116,651 (+12,611); Hero Attack +2,673 to +2,997 (+324); Hero Defense +889 to +997 (+108); resistance 3.00%; max skill level +33",,2026-11-23T18:45:10Z,"two of four weapon skills unlocked"
+weapon 2 shard cost,"counters 441/60 (green), 0/0, 0/60 (red)",,2026-11-23T18:45:10Z,"short by its own shards: 0 of 60"
+weapon 3 header,"Unyielding Warrior (Murphy): unlocked, weapon Lv.3; hero UR Lv.150, power 3,528,417","Unyielding Warrior / Murphy",2026-11-23T18:45:20Z,
+weapon 3 next-level gain,"Hero HP +92,487 to +105,700 (+13,213); Hero Attack +668 to +763 (+95); Hero Defense +430 to +492 (+62); resistance 2.00%; max skill level +31",,2026-11-23T18:45:25Z,"one of four weapon skills unlocked"
+weapon 3 shard cost,"counters 441/20 (green), 0/0, 0/20 (red)",,2026-11-23T18:45:25Z,"short by its own shards: 0 of 20"
+power gain,"no power figure on the tab; the Preview button shows a Lv.30 stat preview (Carlie: HP +1,003,657, Attack +6,554, Defense +4,446, resistance 5.00%, skill cap 40) with no power figure and no shard lines; closed by the back arrow (no X)",,2026-11-23T18:46:40Z,"run 91cea6; Upgrade never pressed; the next-level gain is the stat lines"
+universal shards held,"441 inferred from the counters; the Backpack was not read",,,"EXTRA not done"
+HUD,"power 150,416,946, diamonds 11,113, coin 23.0M unchanged",,2026-11-23T18:47:00Z,

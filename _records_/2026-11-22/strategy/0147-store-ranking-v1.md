@@ -1,8 +1,8 @@
 ---
 title: Store ranking v1
 created: 2026-11-23T09:47:00Z
-modified: 2026-11-23T17:39:00Z
-version: 1.1.0
+modified: 2026-11-23T19:09:00Z
+version: 1.2.0
 level: L3
 description: The ranking of honor, alliance and Campaign store items by hero value per currency, the exact buys, the holds and reserves, with forecasts
 status: unverified
@@ -22,7 +22,7 @@ On 11-10 the account held 417 Universal Exclusive Weapon Shards (441 now) and 68
 ## Ranking, best first
 
 1. **Apply what is held** in the Thursday window (server 11-26 02:00Z to 11-27 02:00Z): the weapon with the best power per shard, concentrating on one weapon until a milestone step (Lv.30, Lv.40) is reached; the carry hero with the cheapest star-up.
-2. **Buys are on hold.** The Squad 1 reads show 441 weapon and 680 hero universal shards held; the steps need 125 (Carlie 45, DVA 60, Murphy 20) and 120 (Lucius 96, Schuyler 24) [D, pattern H107]. Buy honor Universal Exclusive Weapon Shard x25, honor UR Hero Universal Shard x10 and Campaign stars only when the stock after Thursday is under 200 and 300. Honor 130.1K stays.
+2. **Buys are conditional.** The weapons are Lv.10, 10, 3, 2, 1 and Swift locked, and the line averages about 84K a level [D]; the Murphy Lv.3 to 4 step (20 shards of 441) measures it. At 20K or more a level buy honor Universal Exclusive Weapon Shard x25 and Campaign stars x4; else hold. See [the buy ranking](0640-store-buy-ranking.md).
 3. **Hold, read first:** Mason Shard x30 (30,000 alliance) unless Mason is a top-16 hero short of a star; Gear Blueprint UR, Skill Chip Chest UR, Decoration Chest and Decor Components, Drone Parts and Dielectric Ceramic (after the drone preview); Season tokens 800 (Gear Blueprint MR at 100, UR Hero Badge at 50; they may lapse at Season 3, H63).
 4. **Never now:** Resource Choice Chests (coin is not the gate), Hero Recruitment Ticket, 50 Stamina (red line).
 

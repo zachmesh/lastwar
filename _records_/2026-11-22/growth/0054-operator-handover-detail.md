@@ -1,8 +1,8 @@
 ---
 title: Operator handover 0054 detail
 created: 2026-11-23T09:10:00Z
-modified: 2026-11-23T16:12:00Z
-version: 1.8.0
+modified: 2026-11-23T18:24:00Z
+version: 1.9.0
 description: Sidecar of the operator handover - the commands, the standing hazards and the links to the route, coordinate, inventory and plunder files and the four topic pages split out of it
 status: handover
 grounded_in:
@@ -40,9 +40,11 @@ Never press Go on the check-in banner, Details, Buy or a link; a foreground swit
 | [0054-plunder-fights.csv](0054-plunder-fights.csv) | one row per plunder fight |
 | [0054-run-hazards.md](0054-run-hazards.md), [0054-research-rules.md](0054-research-rules.md), [0054-plunder-notes.md](0054-plunder-notes.md), [0054-oil-well.md](0054-oil-well.md) | the rules and findings by topic |
 | [2700-routes.csv](../queue-planning/2700-routes.csv), [tag-index.csv](tag-index.csv) | planner routes, building tags |
+| [0054-session-lessons.md](0054-session-lessons.md), [0054-task-texts.csv](0054-task-texts.csv), [0054-run-unit.sh](0054-run-unit.sh), [0054-done.py](0054-done.py) | session lessons and the helper kit with 35 task texts |
 
 Also: records in `_records_/2026-11-22/`; ledger [ledger.csv](ledger.csv); base map [1030-base-map.md](1030-base-map.md); Drill Grounds [1047-f1b-drill-ground.md](1047-f1b-drill-ground.md), [1054-f1c-drill-grounds.md](1054-f1c-drill-grounds.md).
 
 ## Changelog
 
 - 1.8.0, 2026-11-23T16:12Z - split from 1,353 body words: coordinates, inventory map, route tables and the plunder results moved to four CSV files, the rules and findings to four topic pages; no fact deleted, the Empty ground point now carries its supersession note.
+- 1.9.0, 2026-11-23T18:24Z - added the session lessons page and the helper kit (task texts CSV, run script, completion script).

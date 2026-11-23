@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-23T08:27:06Z
-expires_at: 2026-11-23T23:50:00Z
+expires_at: 2026-11-23T23:45:00Z
 planned_for:
-not_before: 2026-11-23T23:22:00Z
+not_before: 2026-11-23T23:20:15Z
 window: convert coin, start the lowest Drill Ground and apply bounded speed-ups when the builders free
 est_minutes: 15
 serves: PL-08
@@ -34,13 +34,13 @@ Decision `_records_/2026-11-22/team-operations/2603-first-builder-decision.md` (
 
 HAZARD: the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use: tap the intended tile first, confirm its name in a frame, never Use with another tile selected.
 
-Run 1, first the finished upgrades: hammer icon; press the button each finished Training Base entry shows, Complete or Collect (verb unverified [G], record its text; never Speed Up or Finish Now); Total Power before and after, since power registers only on Complete; note idle builders, or if none read the earliest time left and stop. Then the conversion: read coin. Inventory, Resources tab: select the Coin Chest UR (87 owned). N = ceil((142.8M + 10M - coin now) / 2.4364M) (from 9.8M that is 59, from 12M 58, from 0.2M 63; if N is 0 or less, skip). Set the field to N with the handle or minus, read the field AND the Total line in a frame, and before Use check the Total line is at least 142.8M + 10M - coin now. If N would exceed 87, STOP and record. Use once. Read coin.
+Run 1, first the finished upgrades: hammer icon; press the button each finished Training Base entry shows, Complete or Collect (verb unverified [G], record its text; never Speed Up or Finish Now); Total Power before and after, since power registers only on Complete; note idle builders, or if none read the earliest time left and stop. Coin: read it. The conversion was done by the two units `building-queues-growth-preconvert-2026-11-23-001` and `-002`; if coin is below the cost of the starts still to do plus 10M, stop and record the shortfall, do not convert here.
 
-Run 2, the starts: first idle builder, the Lv.26 ground (59.5M coin, 74.8M iron): read its tag and Upgrade preview, press Upgrade once, read the timer. Next idle builder, the Lv.27 ground (83.3M, 102.0M) the same way. Coin should then read about 15M. Speed-ups are unit 003's job.
+Run 2, the starts: first idle builder, the Lv.26 ground (59.5M coin, 74.8M iron): read its tag and Upgrade preview INCLUDING the troop capacity line (current and next), the Details figure and the free room, press Upgrade once, read the timer. Next idle builder, the Lv.27 ground (83.3M, 102.0M) the same way. Coin should then read about 15M. Speed-ups are unit 003's job.
 
 Tag text: write each building-panel number's tag text beside it (name and level above the building; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]; add a tag_text column.
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
-Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`.
 Quiet-window margin: this start (23:21Z trigger) is 8 h 39 min before the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).
