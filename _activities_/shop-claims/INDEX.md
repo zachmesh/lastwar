@@ -1,12 +1,13 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T15:05:38Z
+modified: 2026-11-23T15:29:11Z
 level: L1
-version: 1.65.0
+version: 1.66.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
+  - source: playbook test T3, one click on Go, _records_/2026-11-22/shop-claims/1511-queue-run.md, and Steer A's standing rule of 2026-11-23 relayed by the coordinator at 15:28Z
   - source: _records_/2026-11-22/shop-claims/2044-queue-run.md
   - source: _records_/2026-11-22/shop-claims/1059-queue-run.md
   - source: _records_/2026-11-22/shop-claims/2354-queue-run.md
@@ -83,7 +84,7 @@ Goal: claim every free shop item due and spend nothing.
 4. Weekly Pass tab: Free Supply should read Claimed.
 5. Read each pass card; only an owned pass shows Claim.
 6. Super Monthly Pass tab: Claim Reward once if owned.
-7. Leave Take All and the check-in Go alone.
+7. NEVER click Go: it opens the web store in Chrome, measured 2026-11-23; leave Take All alone.
 8. Back to base; record results.
 
 ## Rules
@@ -95,11 +96,10 @@ Goal: claim every free shop item due and spend nothing.
 
 ## Failures
 - Window lost or device offline - fix: probe before claiming, stop after one failure. `_records_/2026-11-19/shop-claims/1434-queue-run.md`
-- Check-in Go taps do nothing - fix: skip it, it opens the web store. `_records_/2026-11-22/shop-claims/1059-queue-run.md`
+- Check-in Go opens the web store in Chrome - never click it. `_records_/2026-11-22/shop-claims/1511-queue-run.md`
 - Pass list will not scroll - fix: press-drag 500,750 to 500,300. `_records_/2026-11-10/shop-claims/1836-queue-run.md`
 
 ## Open questions
-- Does check-in FREE GIFT pay in game? test: foreground-click Go once settled; run by operator.
 - Are the Iron and Coin cards below the fold owned? test: press-drag, read both; run by operator.
 - What is the G tab, and did Hot Sale Packs move? test: drag the tab bar; run by operator.
 
