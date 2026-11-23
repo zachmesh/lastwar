@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,"requested 20:03:58Z, idle 249 s, granted 20:04:55Z (counter 301 s at 20:04:51Z), 0.95 minutes",2026-11-23T20:04:55Z,see growth/0054-waits.csv
+frame,"WORLD then BASE: the Headquarters near the centre-right; unread buildings: a blue building (305,320) with a grey bubble, a red-roofed building (437,340) with an orange bubble, blue warehouses (390,390), a blue truck-like building (548,490); no flask bubble seen",2026-11-23T20:05:25Z,
+tap 1,"(305,335): tag Gear Factory Lv.20",2026-11-23T20:05:35Z,already known
+tap 2,"(548,495): opened the full-screen RADAR panel (Lv.13, 0/40, '12 Radar Task(s) will be restored in 00:32:29'); nothing pressed",2026-11-23T20:05:45Z,the run stopped at the panel; closed by the next run's first turn
+result,"Tech Center not found; not tapped: the red-roofed building (437,340), blue warehouses (390,390)",2026-11-23T20:05:49Z,blocked by route

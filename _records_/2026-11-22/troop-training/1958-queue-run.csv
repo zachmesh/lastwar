@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"requested 19:58:24Z, idle 1492 s, granted 19:58:24Z, 0 minutes waited (idle rule met, desktop free, front Last War)",2026-11-23T19:58:24Z,see growth/0054-waits.csv
+Total Power,"150,416,946 before and after",2026-11-23T19:58:25Z,tag text [G]: HUD figure
+tent and tag,"Barracks Lv.27 confirmed by its tag at about (462,582); round buttons blue, orange pistol (460,631), green up-arrow (not pressed)",2026-11-23T19:58:54Z,tag text: Barracks Lv.27
+bubble over Lv.27,"a round soldier-portrait bubble with no countdown, read as the finished-batch ready mark (unconfirmed); another tent kept a clock bubble; a third a portrait bubble",2026-11-23T19:58:54Z,
+pistol press 1,toast 'Drill Ground Full: Unable to add more units.'; no TRAIN UNITS panel,2026-11-23T19:59:01.278Z,click at 19:58:58.831Z
+COLLECT press,"one tap on the portrait bubble (460,531): the same toast 'Drill Ground Full: Unable to add more units.'; no reward animation; the bubble stayed",2026-11-23T19:59:23.406Z,click at 19:59:22.205Z
+pistol press 2,the same toast; no panel,2026-11-23T19:59:40.691Z,click at 19:59:39.473Z
+troop counts per tier,not read: the TRAIN UNITS panel never opened (an idle barracks raises the toast instead),2026-11-23T19:59:41Z,before and after unread
+Lv.27 queue,"not collected: the barracks shows the idle-barracks toast and the ready bubble; slots_idle 1, slots_blocked_by_capacity 1, capacity_blocker 'Drill Ground Full' (inferred)",2026-11-23T19:59:41Z,Lv.24 and Lv.20 are also blocked: three barracks in all
+HUD after,"food 668.7M, iron 1.0G, coin 23.0M, Total Power 150,416,946, energy 120",2026-11-23T20:00:00Z,owner input about 20:00:00Z (idle 13 s at 20:00:15Z)

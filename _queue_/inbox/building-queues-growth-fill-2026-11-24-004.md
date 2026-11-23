@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-23T07:55:32Z
-expires_at: 2026-11-24T00:35:00Z
+expires_at: 2026-11-24T01:25:00Z
 planned_for:
-not_before: 2026-11-24T00:20:00Z
+not_before: 2026-11-24T01:10:00Z
 window: growth read then fill idle slots window 11-24T09:55Z
 est_minutes: 10
 serves: fill idle slot
@@ -28,17 +28,17 @@ Produced by _tools_/queue.py. The executor reads the activity metadata and the s
 
 serves: fill idle slot
 
-Rules, reserves, red lines and the snap command are in `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. Snap takes only K or M numbers: write 1.1G as 1100M.
+Rules, reserves, red lines and the snap command are in `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`. Snap takes only K or M: 1.1G is 1100M.
 
 Read the builders, then the labs, then the training queues. Fill ONLY idle slots, each start costing at most one third of EACH needed stock and leaving the reserves. Never cancel, replace or reorder a running item. No speed-up, Finish Now, purchase or diamond spend. An idle slot at the read is a MISS: record the slot and the time.
 
-COIN HOLD LIFTED for ranked sinks. The builders freeing at 2026-11-23T23:20Z belong to the Oil Well chain unit `building-queues-oil-well-2026-11-24-001` (23:21Z) and the ground units `building-queues-growth-convert-2026-11-24-001` and `-002` (from 23:22Z): this fill reads the builders, presses COMPLETE, collects finished batches when slots open, and records any builder idle for more than one pass as a MISS with the time. It converts nothing and starts nothing.
+The builders freeing at 2026-11-23T23:20Z belong to the ground units `building-queues-growth-convert-2026-11-24-001` and `-002` and the Oil Well chain unit `building-queues-oil-well-2026-11-24-001` (all from 23:20:15Z): this fill reads the builders, presses COMPLETE, collects finished batches when room opens, and records any builder idle for more than one pass as a MISS with the time. It converts nothing and starts nothing.
 
 PRESS COMPLETE the moment a research or a build finishes: a finished research neither banks its power nor frees the lab until then.
 
 When a builder is idle and released: Drill Ground lowest first, then barracks Lv.24 to 27 (Lv.30 only for tier unlocks), the Oil Well has its own chain units. Base Expansion is the owner's priority (OD-18); a fill never takes a slot the plan owns. Labs: both run Age of Oil nodes; start nothing in a lab and never cancel a running one.
 
-TRAIN: never retry the Hospital Collect; it is all-or-nothing, needs at least 5,306 free slots at once and only repeats the toast. When Drill Ground slots open, collect finished batches, then fill with new T10 from surplus food and iron. No fights that wound troops while full.
+TRAIN: never retry a finished-batch collect while the Drill Ground is Full (toast 'Drill Ground Full: Unable to add more units', measured 19:59:22Z; blocked by capacity); never retry the Hospital Collect; it is all-or-nothing, needs at least 5,306 free slots at once and only repeats the toast. When Drill Ground slots open, collect finished batches, then fill with new T10 from surplus food and iron. No troop-wounding fights while full.
 
 Run one growth unit at a time.
 

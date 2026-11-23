@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"requested 20:45:35Z idle 45 s, previous run last click 20:44:50.808Z, granted 20:49:57Z, 4.37 minutes (self click)",2026-11-23T20:49:57Z,see growth/0054-waits.csv
+fragments,"M1 6, M2 6, M3 0, M4 3, M5 1, M6 8, M7 5, unchanged after the read",2026-11-23T20:50:15Z,tag text [G] (panel)
+screen,"title Hidden Treasure; Skip Animation ticked; Dig 1 time and Dig 2 time(s) greyed with no cost text; no Dig 10 times, no timer",2026-11-23T20:50:15Z,
+chest track,6/15 before and after,2026-11-23T20:50:15Z,
+taps,"the pickup truck icon, the Hidden Treasures tab, the back arrow; Skip Animation left as it was",,no dig
+base after,"BASE, no panel",2026-11-23T20:50:35Z,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+rail,"red dots on Alliance, Event, Regular, In-app Purchases; none on Battle Report, System, Favorite; no gift icon on any category",2026-11-23T19:12:55Z,rule 3: a red dot is not a claim
+Event list,"six mails, no gift icon: five train notices from allies, Returned Items, one Mega Express notice; only the newest has a red dot; Claim All blue, not pressed",2026-11-23T19:13:05Z,the 16:42Z Returned Items was claimed then
+Train arrival reward,no mail with that title in view,2026-11-23T19:13:05Z,no text to read
+System,"President Mail notices in language variants, no gift icon",2026-11-23T19:13:15Z,Claim All not pressed
+Alliance,"three New Alliance Marker mails with red dots, donation ranking notices, no gift icon",2026-11-23T19:13:20Z,Claim All not pressed
+HUD,"unchanged; diamonds 11,113; Total Power 150,416,946",2026-11-23T19:13:40Z,no TIPS popup at Mail close

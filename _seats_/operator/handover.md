@@ -1,7 +1,7 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T18:16:00Z
+modified: 2026-11-23T18:24:00Z
 level: L2
 version: 0.14.0
 description: The operator's live recipe - run recipe and hazards, research and plunder rules, stat names, gates, open items, links to the route card and the detail sidecar
@@ -15,7 +15,7 @@ grounded_in:
 
 # Handover - operator
 
-Updated 2026-11-23 16:05Z. Detail (commands, coordinates, routes, long rules): `_records_/2026-11-22/growth/0054-operator-handover-detail.md`, `tag-index.csv`. Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`, `2700-routes.csv`. Second device: `_records_/2026-11-22/team-operations/2715-second-device.md`, `2738-owner-orders-and-takeover.md`.
+Updated 2026-11-23 18:24Z. Lessons and task-text kit: `_records_/2026-11-22/growth/0054-session-lessons.md`. Detail (commands, coordinates, routes, long rules): `_records_/2026-11-22/growth/0054-operator-handover-detail.md`, `tag-index.csv`. Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`, `2700-routes.csv`. Second device: `_records_/2026-11-22/team-operations/2715-second-device.md`, `2738-owner-orders-and-takeover.md`.
 
 ## Holder
 

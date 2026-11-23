@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-23T08:27:07Z
 expires_at: 2026-11-24T00:20:00Z
 planned_for:
-not_before: 2026-11-23T23:22:00Z
+not_before: 2026-11-23T23:20:15Z
 window: convert coin, start the lowest Drill Ground and apply bounded speed-ups when the builders free
 est_minutes: 15
 serves: PL-08
@@ -34,13 +34,13 @@ Decision `_records_/2026-11-22/team-operations/2603-first-builder-decision.md` (
 
 HAZARD: the Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a live Use: tap the intended tile first, confirm its name in a frame, never Use with another tile selected.
 
-Run 1: hammer icon. Unit 001 completes the finished upgrades first; press Complete or Collect on any still uncollected. Skip any ground already upgrading. Read coin. Inventory, Resources tab: select the plain Resource Chest (20,862 owned; the field defaults to the FULL stock). Coin now is the coin after the first two starts. M = ceil((119.0M + 10M - coin now) / 6,000). Drag the handle (about 80 chests per pixel) until the field reads M or just above, read it in a frame, and before Use check 6K times the field is at least 119.0M + 10M - coin now. If M would exceed 20,862, STOP and record. Use once and choose ONLY the 6K Coins option; if it shows anything else or a cost, stop and record. If the drag cannot reach M, say so before Use. Never Resource Choice Chests.
+Run 1: hammer icon. Unit 001 completes the finished upgrades first; press Complete or Collect on any still uncollected. Skip any ground already upgrading. Read coin: the pre-conversion units funded the starts; if coin is below the cost of this start plus 10M, stop and record the shortfall.
 
-Run 2, the starts: the next idle builder, the Lv.28 ground (119.0M coin, 144.5M iron): read its tag and preview, press Upgrade once, read the timer. The fourth builder is the Oil Well (unit `building-queues-oil-well-2026-11-24-001` first): three are free for the grounds; if none is idle, stop. The Strategist's B2 to B4 pick governs.
+Run 2, the starts: the next idle builder, the Lv.28 ground (119.0M coin, 144.5M iron): read its tag and preview INCLUDING the troop capacity line (current and next), the Details figure and the free room, press Upgrade once, read the timer. The fourth builder is the Oil Well (unit `building-queues-oil-well-2026-11-24-001` runs second): three are free for the grounds; if none is idle, stop. The Strategist's B2 to B4 pick governs.
 
 Tag text: write each building-panel number's tag text beside it (name and level above the building; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]; add a tag_text column.
 
 Two runs, 10 steps each. No hero-lever conversion. No chain successor.
-Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`.
 Quiet-window margin: this start (23:21Z trigger) is 8 h 39 min before the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

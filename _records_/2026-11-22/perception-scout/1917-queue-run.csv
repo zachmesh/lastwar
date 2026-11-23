@@ -1,0 +1,7 @@
+item,value,read_utc,note
+route A Heroes,"Hero List: tabs All and three icon tabs; buttons Recruit Heroes, Recommend; no decoration entry",2026-11-23T19:18:10Z,
+route B HQ radial,"tag Headquarters Lv.30; four round buttons: blue people (468,411), blue bar-chart (527,459), orange broom (602,459), green up-arrow (662,411)",2026-11-23T19:19:50Z,only the broom was pressed (second run f499f8)
+broom result,"screen titled COSMETICS: tabs Base Skin (selected), Avatar Frame, Nameplate, Special Effects, Chat Bubble, a cut-off Wor... tab; Default Skin Permanent In use; two skins with green cart icons; no price shown",2026-11-23T19:20:10Z,"not a Decoration Gallery; back arrow (112,911) returned to the base"
+route C profile,"MY PROFILE: buttons Record, Account, Settings, Rankings, Follow; a display shelf with a gear icon, Moments; no decoration or customize entry",2026-11-23T19:18:50Z,closed with the X
+result,Decoration Gallery not found,2026-11-23T19:20:30Z,blocked by route
+HUD,"Total Power 150,416,946; diamonds 11,113",2026-11-23T19:20:30Z,

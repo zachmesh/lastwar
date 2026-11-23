@@ -1,0 +1,6 @@
+builder,free_utc,start_requested_utc,idle_s_at_request,start_granted_utc,minutes_lost_total,minutes_lost_to_waiting,minutes_lost_to_claim_or_operator,what_started,note
+builder 1,2026-11-23T23:20:12Z,,,,,,,,the four Training Base Lv.25 builds finish 23:20:12Z to 23:20:24Z; pending until the operator's records land
+builder 2,2026-11-23T23:20:12Z,,,,,,,,the four Training Base Lv.25 builds finish 23:20:12Z to 23:20:24Z; pending until the operator's records land
+builder 3,2026-11-23T23:20:12Z,,,,,,,,the four Training Base Lv.25 builds finish 23:20:12Z to 23:20:24Z; pending until the operator's records land
+builder 4,2026-11-23T23:20:12Z,,,,,,,,the four Training Base Lv.25 builds finish 23:20:12Z to 23:20:24Z; pending until the operator's records land
+HEADLINE: idle builder minutes of the 23:20Z start,,,,,sum over the four builders of (start granted - 23:20:12Z) in minutes,waiting = granted - requested,claim or operator = requested - 23:20:12Z,,

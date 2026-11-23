@@ -1,0 +1,5 @@
+builder,free_utc,start_requested_utc,idle_s_at_request,start_granted_utc,what_started,note
+builder 1,2026-11-23T23:20:12Z,,,,,"to fill at 23:20Z: the four Training Base Lv.25 builds end 23:20:12Z to 23:20:24Z"
+builder 2,2026-11-23T23:20:12Z,,,,,
+builder 3,2026-11-23T23:20:12Z,,,,,
+builder 4,2026-11-23T23:20:12Z,,,,,

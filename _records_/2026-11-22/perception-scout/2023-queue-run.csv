@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"requested 20:20:12Z idle 138 s, previous run last click 20:17:53.748Z, granted 20:23:00Z, 2.8 minutes (self click)",2026-11-23T20:23:00Z,see growth/0054-waits.csv
+quest line,"'Upgrade Builder's Hut to Lv.26' (read for the name, not tapped)",2026-11-23T20:23:20Z,
+"tap (682,452)",small tan hut south-east of the HQ with builder icons above: tag Hospital Lv.25,2026-11-23T20:23:50Z,known
+"tap (664,418)",small hut east of the HQ: tag Hospital Lv.20,2026-11-23T20:24:10Z,the Hospital tag reads Lv.20 or Lv.25 on the same building (tag-index)
+"tap (168,335)",blue building west of the HQ: tag Gear Factory Lv.20,2026-11-23T20:24:30Z,known
+"tap (674,440)",larger blue building east of the HQ near the clock tower: tag Alliance Support Hub Lv.30,2026-11-23T20:24:50Z,new tag row
+"tap (310,660) accidental","after a camera shift it selected a tent: tag Barracks Lv.30; no round button pressed; closed at (140,640)",2026-11-23T20:25:10Z,the bare spot is not safe after a shift
+not tapped,"the red-and-white store, blue and orange stacked buildings further west, a building named YOU",2026-11-23T20:25:30Z,"assumed known, tags unread"
+result,"Builder's Hut not found; frames covered: the HQ centre, west to the farmland, south to the Radar and training tents, east to the clock tower and Hospital",2026-11-23T20:26:20Z,blocked by route

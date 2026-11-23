@@ -1,9 +1,9 @@
 ---
 title: Researcher pass log - 2026-11-22 to 2026-11-23, with the T3 approval entry
 created: 2026-11-23T07:34:00-08:00
-modified: 2026-11-23T07:34:00-08:00
+modified: 2026-11-23T12:04:00-08:00
 level: L0
-version: 1.0.0
+version: 1.1.0
 description: The researcher seat log of assignments and artifacts, recording test T3 as run without the advance approval the new standing rule requires, and the practice for every later brief
 status: done
 grounded_in:
@@ -36,3 +36,7 @@ T3 was written by this seat, staged by the planner and run by the operator at 15
 - A line "Leaves the game: none" or "approved by Steer A on a date, exit plan: what is pressed, what is never pressed".
 - An unexpected foreground switch stops the run; press nothing, tell the coordinator within minutes.
 - Consent requests are human-only. This seat uses `lsappinfo front` at most, no osascript, no System Events; it has not touched the desktop in any pass.
+
+## 2026-11-23 12:04 PT, refill close
+
+Owner answer: the 14:39Z deficit was phone donations. Closed in donation-deficit-closed.md; the four long timers of 10-31 and 11-03 stay open, with a digit-misread hypothesis [G]. Later shortfalls read as elsewhere use; a higher count than predicted is the flag.

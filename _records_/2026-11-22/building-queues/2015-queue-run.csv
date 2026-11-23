@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"requested 20:06:58Z idle 81 s (self click), granted 20:15:34Z, 3.68 minutes waited",2026-11-23T20:15:34Z,see growth/0054-waits.csv
+start,"the Radar panel from the earlier run was closed with its back arrow (126,935); WORLD then BASE; one drag (540,700) to (290,450) brought four red parade fields into view",2026-11-23T20:16:00Z,
+Lv.26 tag,Drill Ground Lv.26,2026-11-23T20:16:20Z,tag text
+Lv.26 Details,"title 'Drill Ground Lv.26', header Building Details: 'Unit Count +8035'; a Survivors row of four slots each labelled Officer; button Quick Dispatch (not pressed); no troop capacity line, no x/y line, no unit count line other than +8035",2026-11-23T20:16:30Z,tag text Drill Ground Lv.26
+Lv.26 preview,"Lv.26 > 27; Hero EXP 24.0M; Unit Count +7,200 > +7,400 (+200); Power 118,600 > 140,200 (+21,600); Coin 23.0M/59.5M short (red, Obtain button); Iron 1.0G/74.8M met; no food line; prerequisite Lv.27 Headquarters met; original time 21d 11:19:25; effective 10d 02:30:19 (on the Upgrade button); Finish Now 86,561 diamonds",2026-11-23T20:16:50Z,"Upgrade, Finish Now and Obtain not pressed"
+Lv.28 tag,Drill Ground Lv.28,2026-11-23T20:17:15Z,tag text
+Lv.28 Details,'Unit Count +9211'; four Officer slots; Quick Dispatch; no capacity or x/y line,2026-11-23T20:17:25Z,tag text Drill Ground Lv.28
+Lv.28 preview,"Lv.28 > 29; Hero EXP 29.0M; Unit Count +7,600 > +7,800 (+200); Power 165,800 > 196,200 (+30,400); Coin 23.0M/119.0M short; Iron 1.0G/144.5M met; no food line; prerequisite Lv.29 Headquarters met; original time 39d 01:53:19; effective 18d 09:21:34; Finish Now 205,751 diamonds",2026-11-23T20:17:40Z,not pressed
+disagreement,"Details +8035 against preview current +7,200 (835); +9211 against +7,600 (1,611): the same gaps as 1054; unexplained",2026-11-23T20:17:40Z,Details likely adds officer or skill bonuses (unverified)
+Lv.30 and Lv.27,not read (optional),,
