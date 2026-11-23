@@ -4,7 +4,7 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.7.3
+version: 0.7.4
 title: Last War continuous-play team
 updated_at: '2026-11-23T09:22:00Z'
 state: active
@@ -170,7 +170,7 @@ seats:
     handover_ref: _seats_/coordinator/handover.md
   - key: operator
     principal: zhenc
-    session_id: session-f364ec2c-29f8-428d-bce6-26925a0bf6b0
+    session_id: session-a4974fdd-0099-4ce5-a3c1-74f7ad3b12b0
     session_started: '2026-11-23T09:07:57Z'
     title: '[Last War] Operator'
     assignment: assigned
