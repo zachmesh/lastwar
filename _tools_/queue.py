@@ -377,7 +377,7 @@ STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "created_at", "expires_at", "planned_for", "not_before",
-            "window", "est_minutes",
+            "window", "est_minutes", "serves",
             "chain_id", "chain_seq", "attempts", "max_attempts",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
@@ -611,6 +611,33 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
+UPGRADE_ACTIVITIES = ("building-queues", "research-queue", "troop-training")
+UPGRADE_MARKERS = ("upgrade", "growth-fill")
+
+
+def is_upgrade_type(fields):
+    """True for a unit that spends growth: its activity is building-queues, research-queue or troop-training, or its
+    activity, regular or unit id contains upgrade or growth-fill (the planner's fill units are
+    building-queues-growth-fill-*)."""
+    if str(fields.get("activity", "")) in UPGRADE_ACTIVITIES:
+        return True
+    named = " ".join(str(fields.get(k, "")) for k in ("activity", "regular", "unit")).lower()
+    return any(marker in named for marker in UPGRADE_MARKERS)
+
+
+def _unit_warnings(rel, text):
+    """Warnings (never errors) about one unit file's text: an upgrade-type unit (see is_upgrade_type) should say what it
+    serves, so the executor and the planner can weigh it. Only live units (inbox and claimed) are looked at; a unit
+    already done is history."""
+    state = rel.split("/", 1)[0]
+    if state not in ("inbox", "claimed"):
+        return []
+    fields, _ = parse_frontmatter(text)
+    if is_upgrade_type(fields) and not str(fields.get("serves", "")).strip():
+        return [f"{rel}: upgrade-type unit has no serves line (what it serves, one line; enqueue --serves TEXT)"]
+    return []
+
+
 def _validate_unit_text(rel, text):
     """Pool-integrity problems in one unit file's text, as strings.
 
@@ -643,7 +670,7 @@ def _validate_unit_text(rel, text):
     return problems
 
 
-def validate_pool(root):
+def validate_pool(root, warnings=None):
     """Pool-integrity problems in the unit files, as strings.
 
     A bad merge resolution that lands on the records branch used to
@@ -673,10 +700,12 @@ def validate_pool(root):
                 continue
             rel = f"{state}/{name}"
             problems.extend(_validate_unit_text(rel, text))
+            if warnings is not None:
+                warnings.extend(_unit_warnings(rel, text))
     return problems
 
 
-def validate_ref(root, ref):
+def validate_ref(root, ref, warnings=None):
     """Pool-integrity problems in the _queue_ tree at a git ref.
 
     Issue #661: merge dd865af64b ("Merge main into
@@ -743,30 +772,39 @@ def validate_ref(root, ref):
             continue
         rel = f"{state}/{fname}"
         problems.extend(_validate_unit_text(rel, shown.stdout))
+        if warnings is not None:
+            warnings.extend(_unit_warnings(rel, shown.stdout))
     return problems, None
 
 
 def cmd_validate(args):
+    warnings = []
     if getattr(args, "ref", ""):
-        problems, error = validate_ref(args.root, args.ref)
+        problems, error = validate_ref(args.root, args.ref, warnings)
         if error is not None:
             print(error, file=sys.stderr)
             return 2
+        for warning in warnings:
+            print(f"warning: {warning}")
         for problem in problems:
             print(problem)
+        note = f" ({len(warnings)} warning(s))" if warnings else ""
         if problems:
             print(f"pool invalid at {args.ref}: {len(problems)} "
-                  f"problem(s) (issue #661)")
+                  f"problem(s) (issue #661){note}")
             return 1
-        print(f"pool valid at {args.ref}")
+        print(f"pool valid at {args.ref}{note}")
         return 0
-    problems = validate_pool(args.root)
+    problems = validate_pool(args.root, warnings)
+    for warning in warnings:
+        print(f"warning: {warning}")
     for problem in problems:
         print(problem)
+    note = f" ({len(warnings)} warning(s))" if warnings else ""
     if problems:
-        print(f"pool invalid: {len(problems)} problem(s) (issue #441)")
+        print(f"pool invalid: {len(problems)} problem(s) (issue #441){note}")
         return 1
-    print("pool valid")
+    print(f"pool valid{note}")
     return 0
 
 
@@ -3676,6 +3714,11 @@ def cmd_enqueue(args):
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
         return 1
+    serves = " ".join((getattr(args, "serves", "") or "").split())   # one line, always
+    if getattr(args, "serves", "") and not serves:
+        print("refused: --serves is empty text - say what the unit serves "
+              "or leave the option out")
+        return 1
     # Unretirable-window refusal (issue #859): the design defines
     # an empty expires_at as "no deadline" (task-unit-queue-design.md
     # section 6), so _expire_stale is gated on a value that is
@@ -3827,9 +3870,13 @@ def cmd_enqueue(args):
         "attempts": 0, "max_attempts": args.max_attempts,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
+    if serves:
+        fields["serves"] = serves
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    if serves:
+        body += f"\nServes: {serves}\n"
     body += _sweep_task_text(args.regular, fields)
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
@@ -5939,6 +5986,10 @@ def main(argv=None):
     p.add_argument("--not-before", default="")
     p.add_argument("--est-minutes", type=int, default=DEFAULT_EST_MINUTES)
     p.add_argument("--window", default="")
+    p.add_argument("--serves", default="",
+                   help="one line saying what the unit serves; kept through "
+                        "claim, release and complete; validate warns when an "
+                        "upgrade-type unit has none")
     p.add_argument("--chain-id", default="")
     p.add_argument("--max-attempts", type=int,
                    default=DEFAULT_MAX_ATTEMPTS)
