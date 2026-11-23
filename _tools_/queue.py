@@ -24,6 +24,11 @@ roster entry in regulars.json (default upkeep); `enqueue` refuses a unit with no
 the roster, which then supplies it; `validate` reports a live inbox unit without one as an error (sync only
 warns, so an untagged unit never stops the tick).
 
+Every unit minted for a roster regular - by plan, sweep (and its fix-ups), sync and enqueue - carries a `## Brief` definition block written from
+the roster: the regular and its roster line (`name`), its activity folder (`activity_ref`, else `activity`) with the digest to read first, the
+regular-to-activity map and the route card named in the roster's `brief` object (a pointer to a file the repository lacks is left out), and the
+stop rule (if the digest does not cover a step, stop with blocked by prerequisite; never improvise).
+
 The forecast switch: when TEAM.yaml carries `coordination.queue.require_forecast: true` (off when the key or the file is absent), every path
 that creates a unit - `enqueue`, and the minting of `plan`, `sweep` and `sync` - refuses a unit whose serves is not a plan item with a row in the
 newest `_records_/<date>/strategy/forecast-ledger.csv` or an exempt word (upkeep, snapshot, baseline, fill idle slot). `--no-require-forecast`
@@ -1389,11 +1394,64 @@ def _sweep_task_text(regular, fields):
         f"\n{record}\n")
 
 
-def write_new_unit(root, fields, regular):
+_BRIEF_CONFIG = {}
+
+
+def _roster_brief_config(defs_path=None):
+    """The `brief` object of the roster beside this tool (regulars.json): repository paths the definition block points at."""
+    path = defs_path or _default_regulars_path()
+    if path not in _BRIEF_CONFIG:
+        try:
+            with open(path, encoding="utf-8") as fh:
+                cfg = json.load(fh).get("brief") or {}
+        except (OSError, ValueError, AttributeError):
+            cfg = {}
+        _BRIEF_CONFIG[path] = cfg if isinstance(cfg, dict) else {}
+    return _BRIEF_CONFIG[path]
+
+
+def definition_block(root, item, defs_path=None):
+    """The definition pointer a minted unit carries, written from its roster entry: the regular and its roster line, its activity folder
+    (`activity_ref`, else `activity`; the folder is named for the activity, not the regular id) with the digest to read first, the
+    regular-to-activity map and the route card when those files exist in the repository (a pointer to nothing is left out), and the stop
+    rule. Empty when the item names no regular."""
+    regular = item.get("id") or ""
+    if not regular:
+        return ""
+    cfg = _roster_brief_config(defs_path)
+    top = _repo_top(root)
+
+    def pointer(key):
+        rel = str(cfg.get(key) or "").strip()
+        return rel if rel and os.path.exists(os.path.join(top, rel)) else ""
+
+    name = " ".join(str(item.get("name") or "").split()).rstrip(".")
+    ref = str(item.get("activity_ref") or item.get("activity") or "").strip()
+    first = f"This unit is the regular `{regular}`" + (f": {name}." if name else ".")
+    if ref:
+        first += (f" Its definition is the activity folder `_activities_/{ref}/` (the folder is named for the activity, not the regular id): "
+                  "read its `rule-digest.md` first, then its `INDEX.md`.")
+    if pointer("map"):
+        first += f" The map of every regular to its activity folder is `{pointer('map')}`."
+    first += " If the digest does not cover a step, stop with 'blocked by prerequisite' and say which step; never improvise."
+    text = f"\n## Brief (definition pointer, from the roster)\n\n{first}\n"
+    second = []
+    if pointer("route_card"):
+        second.append(f"Routes and stop reasons: `{pointer('route_card')}`" + (f" (routes in `{pointer('routes')}`)." if pointer("routes") else "."))
+    if pointer("red_lines"):
+        second.append(f"Red lines and snap: `{pointer('red_lines')}`.")
+    if second:
+        text += "\n" + " ".join(second) + "\n"
+    return text
+
+
+def write_new_unit(root, fields, regular, item=None):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     body = (f"# {regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
+    if item:
+        body += definition_block(root, item)
     body += _sweep_task_text(regular, fields)
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
@@ -2214,7 +2272,7 @@ def _produce_for_window(root, item, planned_local, window="",
               f"regular a ledger plan item or an exempt serves in regulars.json, or pass --no-require-forecast for an emergency",
               file=sys.stderr)
         return None
-    write_new_unit(root, fields, regular)
+    write_new_unit(root, fields, regular, item)
     return fields["unit"]
 
 
@@ -4011,6 +4069,16 @@ def _chain_head_refusal(root, regular, chain_id, chain_seq):
     return None
 
 
+def _roster_item(regular, defs_path):
+    """The roster entry of a regular, or None when it is not in the roster or the roster cannot be read."""
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            items = json.load(fh).get("regulars", [])
+    except (OSError, ValueError, AttributeError):
+        return None
+    return next((i for i in items if i.get("id") == regular), None)
+
+
 def _roster_serves(regular, defs_path):
     """What the roster says a regular serves (DEFAULT_SERVES when its entry has no serves key); "" when the regular is not
     in the roster or the roster cannot be read."""
@@ -4250,6 +4318,9 @@ def cmd_enqueue(args):
             "rules before acting.\n")
     if serves:
         body += f"\nServes: {serves}\n"
+    roster_item = _roster_item(args.regular, getattr(args, "regulars_json", "") or _default_regulars_path())
+    if roster_item:                # a regular the roster knows carries the same definition pointer plan, sweep and sync write
+        body += definition_block(root, roster_item, getattr(args, "regulars_json", "") or None)
     body += _sweep_task_text(args.regular, fields)
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
