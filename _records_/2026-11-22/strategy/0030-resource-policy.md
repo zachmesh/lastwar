@@ -1,7 +1,7 @@
 ---
 title: Resource policy v3 draft
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T09:18:00Z
+modified: 2026-11-23T12:08:00Z
 version: 0.1.0
 level: L3
 description: Floors, the retirement of the three times rule for ranked capacity sinks, the coin and food conversion rule, speed-up bounds, earned currencies and the box rule
@@ -35,7 +35,7 @@ Open Food Chest UR (169 at 4.06M) only when a food start is within 2 hours and f
 
 ## Speed-ups
 
-Steer A bounds: preview first, no Finish Now, never the owner's queue, 35,000 minutes a week, log minutes and power. Decision 2425 default: at most 10,000 minutes per upgrade. Order: Extra Drill Ground path, then the cheapest Drill Ground level. Stock read 352,000 general, 168,000 construction, 15,000 or more tech minutes; scope of the last two is for Steer A to confirm.
+Steer A bounds: preview first, no Finish Now, never the owner's queue, 35,000 minutes a week, log minutes and power. Decision 2425 default: at most 10,000 minutes per upgrade. Order: the Drill Ground level with the fewest minutes per slot first. Stock 352,000 general, 168,000 construction, 15,000 or more tech minutes; construction items first, general kept in reserve (Steer A, 11:10Z).
 
 ## Earned currencies
 

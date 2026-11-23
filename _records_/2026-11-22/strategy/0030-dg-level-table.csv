@@ -1,7 +1,7 @@
 drill_ground,to_level,slots_gained,building_power,power_if_slots_filled_T10,coin_M,food_M,iron_M,builder_days,speed_up_minutes_to_finish,power_per_M_coin,power_per_builder_day,evidence
-"Lv.26 ground (field 1), preview unread (F1c)",27,200,21600,351000,59.5,221.0,74.8,10.12,14569,5899,34692,"guide x0.85, speed factor 0.4706; unread on this account"
-"Lv.26 then Lv.27 ground (field 4), preview unread",28,200,25600,355000,83.3,314.5,102.0,14.16,20397,4262,25063,"guide x0.85, speed factor 0.4706; unread on this account"
-Lv.28 ground (field 2) MEASURED F1b; later the Lv.26 and Lv.27 grounds,29,200,30400,359800,119.0,442.0,144.5,18.39,26481,3024,19565,"MEASURED panel 0035 (coin, iron, time, power, +200); food line not recorded"
-all three lower grounds; the Lv.30 ground (field 3) is at the cap,30,200,35800,365200,161.5,612.0,204.0,23.91,34424,2261,15277,"guide x0.85, speed factor 0.4706; unread on this account"
+Lv.26 ground (field 1),27,200,21600,351000,59.5,221.0,74.8,10.1,14550,5899,34692,"MEASURED F1c 1054: coin 59.5M, iron 74.8M, effective 10d 02:30:19, +21,600, +200; food line not listed (11-10 panel and guide: 221M)"
+Lv.27 ground (field 4) now; later the Lv.26 ground,28,200,25600,355000,83.3,314.5,102.0,14.15,20370,4262,25063,"MEASURED F1c: coin 83.3M, iron 102.0M, effective 14d 03:30:26, +25,600; food 314.5M on the 11-10 panel"
+Lv.28 ground (field 2) MEASURED F1b; later the Lv.26 and Lv.27 grounds,29,200,30400,359800,119.0,442.0,144.5,18.39,26481,3024,19565,"MEASURED F1b and F1c: coin 119.0M, iron 144.5M, effective 18d 09:21:34, +30,400; food line not listed (guide 442M)"
+"the three lower grounds, last step (the Lv.30 ground itself needs HQ 31 for Lv.31: coin 178.5M, food 671.5M, red)",30,200,35800,365200,161.5,612.0,204.0,23.91,34424,2261,15277,"guide x0.85, unread; the Lv.30 ground preview is Lv.30 to 31 (blocked)"
 needs a Lv.31 HQ,31,0,0,0,,,,,,,,"needs a Lv.31 HQ (prerequisite Base Expansion research unmet, 0035); not available"
 "TOTAL nine levels: Lv.26 ground 4, Lv.27 ground 3, Lv.28 ground 2",27 to 30,1800,271400,3236000,1067.6,4012.0,1324.3,165.3,238100,3031,19565,D: sums of the rows above by ground; the 406M read coin and 650M food stock cover the first three levels only

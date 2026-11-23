@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T09:12:00Z
+modified: 2026-11-23T12:25:00Z
 level: L2
-version: 0.5.0
+version: 0.6.0
 description: The operator's live recipe - launch route, first-tap settling rule, guards, red lines, what to read instead of giant profiles, open claim times
 status: unverified
 grounded_in:
@@ -33,6 +33,10 @@ The Mystery Supply Box quantity defaults to its FULL count, and the Resources ta
 
 Read first (builders, labs, training), fill only idle slots under the 3x rule above the reserves, collect first before a power read, press Complete the moment a node finishes, never retry the hospital Collect (all-or-nothing), never cancel a running item. Every unit carries a `serves:` line.
 
+## Stand-down 2026-11-23 12:20Z
+
+Coordinator order at 12:15Z: a second device is logged in (the TIPS dialog "Your account is currently active on a different device!", a vanished game process, a coin fall of 4.6M that is not the operator's), most likely the owner. Do not press Confirm (one was pressed about 12:11:50Z, next allowed after 12:41Z), do not tap the dialog's X, do not touch the game or claim a unit until the coordinator says resume. Token released. A desktop-gate refusal: save the `run-lock.mjs status` JSON in the record. A finished research waits for COMPLETE: press it first.
+
 ## Open
 
-Scout reads S1b and ST1 (Universal Shard counts, store balances); the next 4-hour claim about 12:51Z; the Lv.27 barracks batch about 19:56Z; a lab frees about 11:43Z; builders free 2026-11-24T09:20Z.
+Lab slot 2 idle since 11:42:55Z (unknown after 12:09Z); slot 1 Defense Training VIII ends about 2026-11-26T07:19Z; unit research-growth-convert-2026-11-23-002 unclaimed; survey in `_records_/2026-11-22/research-queue/1204-tech-survey.md`; Lv.27 batch about 19:56Z; builders free 2026-11-24T09:20Z; Tech Center and Builders Hut unlocated; the Train arrival reward mail not yet there.

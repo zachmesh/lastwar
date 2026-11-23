@@ -18,6 +18,37 @@ max_attempts: 3
 claimed_by: operator
 claimed_at: 2026-11-23T11:01:29Z
 lease_until: 2026-11-23T11:21:29Z
+result:
+  status: partial
+  started_at: 2026-11-23T11:01:29Z
+  finished_at: 2026-11-23T11:05:59Z
+  duration_seconds: 270
+  executor: operator
+  summary: B1 read, run 20261123T110221Z-eec05f (claude-gateway/claude-sonnet-5-5, max-steps 14, 14 steps, claimed 11:01:29Z inside the 11:02Z window): Headquarters Lv.30 read (tag Headquarters Lv.30; Building Details has no power line, two hero entries); Tech Center and Builders Hut NOT found among eight buildings tapped; tag index: Emergency Center Lv.20, Gear Factory Lv.20, Food Warehouse Lv.24, Component Factory Lv.20 (two), Training Base Lv.26, Ginkgo Tree Lv.1; the red and white building opens the store. Read-only, nothing pressed beyond Details, HUD unchanged.
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/perception-scout/1101-b1-hq-tech-hut.md and _records_/2026-11-22/growth/1101-b1-hq-tech-hut.csv; run 20261123T110221Z-eec05f
+  follow_up: find the Tech Center and the Builders Hut (try the right-hand buildings near the clock tower and beyond the left edge after a pan); read the Builders Hut Details (builder count, banked speed-up time); a 116min bubble appeared at the lower left
+  stats:
+    target: read HQ, Tech Center and Builders Hut levels and the hut bank
+    achieved: HQ Lv.30 and Details read; Tech Center and Builders Hut not found; seven other building tags read
+    resources_gained: none (observe-only)
+    points: 0
+    costs: model 0.217060 USD; nothing spent
+    verified: yes
+    blocker_category: c
+    run_id: 20261123T110221Z-eec05f
+    run_steps: 14
+    actions_done: 44
+    actions_refused: 0
+    model_s_per_step: 8.0
+    cost_usd: 0.217060
+    device_takeovers: 0
+    rules_used: R1,R6
+    rule_failed: none
+    rule_gap: No base building index exists; Tech Center and Builders Hut positions unknown, so tag-by-tag search costs about 14 turns.
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # scout-midday

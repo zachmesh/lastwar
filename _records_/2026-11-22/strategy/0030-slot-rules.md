@@ -1,7 +1,7 @@
 ---
 title: Slot rules for the planner v1.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T10:56:00Z
+modified: 2026-11-23T11:11:00Z
 version: 1.3.0
 level: L3
 description: The allocation rules for the free labs and builders, the speed-up order, the slot-arrival protocol and the training rule once four Drill Grounds are known to exist
@@ -30,7 +30,7 @@ Rules, not units. Costs in [the level table](0030-dg-level-table.csv). Change si
 
 ## Speed-up order (Steer A bounds)
 
-The level with the fewest minutes per slot first: L27 (14,600), L28 (20,400), L29 (26,481); at most 10,000 minutes an upgrade and 35,000 a week. Scope for construction and tech speed-ups awaits Steer A.
+Construction items first (about 167,760 minutes, building only; general items stay in reserve). The level with the fewest minutes per slot first: L27 (14,550), L28 (20,370), L29 (26,481); at most 10,000 minutes an upgrade, 30,000 in all, 35,000 a week; inside the Tuesday window on 11-24.
 
 ## Slot-arrival protocol (X exceeds Y, or a level completes)
 

@@ -1,0 +1,14 @@
+building,tag_text,panel,line,value,note
+Barracks,Barracks Lv.24,Building Details,Training Count,+666,run 20261123T113319Z-ae13e7 turn 3
+Barracks,Barracks Lv.24,Building Details,Survivors,"4 slots, each labelled Instructor (names omitted)","Quick Dispatch button present, not touched"
+Barracks,Barracks Lv.24,Upgrade preview,line,"Lv.24 to 25, no next tier named",run 20261123T113521Z-4cff3b; 11:35:32Z
+Barracks,Barracks Lv.24,Upgrade preview,Hero EXP,45.0M,
+Barracks,Barracks Lv.24,Upgrade preview,Unit Training Cap,510 to 520,
+Barracks,Barracks Lv.24,Upgrade preview,Unit Training Level,8 to 8 (no change),
+Barracks,Barracks Lv.24,Upgrade preview,Power,"101,100 to 120,600 (+19,500)",395 power per million coin
+Barracks,Barracks Lv.24,Upgrade preview,coin,"14.4M of 49.3M (red, short)","Obtain button beside it, not pressed"
+Barracks,Barracks Lv.24,Upgrade preview,iron,1.0G of 119.0M (met),no food line
+Barracks,Barracks Lv.24,Upgrade preview,prerequisite,"Lv.25 Headquarters (check mark, met)",HQ is Lv.30
+Barracks,Barracks Lv.24,Upgrade preview,time,"original 16d 10:22:49, effective 7d 17:35:27","Finish Now 78,498 diamonds, not pressed"
+Tech Center,not found,,,,not located in B1 or here; the planner may swap the target to T2
+camera,,,,,run 1: the second tap on the same tent after a camera shift read Barracks Lv.20 and then Hospital Lv.20; run 2 went from the first tap straight to the green arrow and succeeded

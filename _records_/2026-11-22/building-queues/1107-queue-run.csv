@@ -1,0 +1,12 @@
+kind,slot_or_building,tag_text,item,level,time_left_at_read,read_utc,finish_utc_computed,state,note
+builder,slot 1,(builder queue),Training Base upgrade,to Lv.25,22:12:13,2026-11-23T11:08:00Z,2026-11-24T09:20:13Z,busy,all four builders busy
+builder,slot 2,(builder queue),Training Base upgrade,to Lv.25,22:12:16,2026-11-23T11:08:00Z,2026-11-24T09:20:16Z,busy,all four builders busy
+builder,slot 3,(builder queue),Training Base upgrade,to Lv.25,22:12:19,2026-11-23T11:08:00Z,2026-11-24T09:20:19Z,busy,all four builders busy
+builder,slot 4,(builder queue),Training Base upgrade,to Lv.25,22:12:23,2026-11-23T11:08:00Z,2026-11-24T09:20:23Z,busy,all four builders busy
+lab,row 1,(research queue),Unlock Oil Well,Lv.0,00:34:46,2026-11-23T11:08:08Z,2026-11-23T11:42:54Z,busy,"frees about 11:42:54Z, belongs to research-growth-convert-2026-11-23-001"
+lab,row 2,(research queue),Defense Training VIII,Lv.7,2d 20:10:53,2026-11-23T11:08:08Z,2026-11-26T07:19:01Z,busy,
+training,"tent C (628,562)",Barracks Lv.24,pistol read,Lv.24,,2026-11-23T11:08:22Z,,"IDLE, blocked","toast 'Drill Ground Full: Unable to add more units.'; idle slot MISS recorded, no start possible"
+training,"tent D (668,535)",Barracks Lv.20,pistol read,Lv.20,,2026-11-23T11:09:15Z,,"IDLE, blocked","same toast; idle slot MISS recorded, no start possible"
+training,"tent A (462,585)",Barracks Lv.27,"TRAIN UNITS: Lv.9 batch of 726, Training in progress",Lv.27,08:46:34,2026-11-23T11:09:56Z,2026-11-23T19:56:30Z,busy,"Power 1352, Morale 625.0, Squad Load Capacity 2000, Unit HP 4167.45, Attack 33.87, Defense 6.96; Speed Up not pressed"
+training,"tent B (530,637)",Barracks Lv.30,"TRAIN UNITS: Lv.10 batch of 793, Training in progress",Lv.30,1d 00:06:14,2026-11-23T11:12:10Z,2026-11-24T11:18:24Z,busy,"Power 1647, Morale 750.0, Squad Load Capacity 2200, Unit HP 4779.05, Attack 38.87, Defense 7.96; tier numbers Lv.7 1,116, Lv.8 2,141, Lv.9 1,878, Lv.10 35.1K; Speed Up not pressed"
+hud,,,"food 648.5M, iron 1.0G, coin 14.4M, diamonds 11,136, Total Power 150,211,809",,,2026-11-23T11:12Z,,unchanged,"'112min' survivor bubble at the lower left counted down 116 to 111 min between 11:04Z and 11:09Z, unread"

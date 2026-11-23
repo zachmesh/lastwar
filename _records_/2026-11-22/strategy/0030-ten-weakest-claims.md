@@ -1,7 +1,7 @@
 ---
 title: The ten weakest claims in strategy v2.0
 created: 2026-11-23T08:32:00Z
-modified: 2026-11-23T08:47:00Z
+modified: 2026-11-23T12:08:00Z
 version: 1.0.2
 level: L3
 description: The ten claims of strategy v2.0 that most need a read, each with the cheapest read or experiment and who does it
@@ -32,4 +32,4 @@ Claims 1, 2 and 6 are one read (the Drill Ground panels) and decide the builder 
 
 ## Erratum 08:42Z
 
-Claim 6 has a candidate: Extra Drill Ground, 2,000 slots at Lv.1, about 700 Valor, 61M coin [S1] (H09, PL-02). Claim 3 is settled in part: no selector on the hospital Collect; partial space is untested (H16), so the 8.74M is a ceiling.
+Claim 6 had a candidate, Extra Drill Ground; it is spent, since all four grounds exist (F1b) and the plan carries no 61M coin or 700 Valor. Claim 3 is settled in part: no selector on the hospital Collect; partial space is untested (H16), so the 8.74M is a ceiling.

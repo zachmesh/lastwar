@@ -1,0 +1,16 @@
+kind,node_or_item,tag_text,level,effect_line,cost_or_note,time,state,note
+research,Unlock Oil Well,Research on Unlock Oil Well completed,Lv.0,,COMPLETE pressed 11:53:00.984Z,finished 11:42:55Z,"power +3,900 (150,211,809 to 150,215,709)","slot 1 now idle; the run was paused by a local_input pointer event at 11:53:16.761Z, stopped, retried once"
+tech hub,trees as displayed,TECH,,"Development 84%, Economy 98%, Hero 69%, Units 77%, Squad 1 Max Level, Squad 2 11%, Alliance Duel Max Level, Intercity Truck 95%, Special Forces 73% (Boost Power, badge 1, recommended), a fourth row cut off",,,read 11:53Z,"reached from the idle slot's Research button at (550,464)"
+node,Infirmary Expansion III,INFIRMARY EXPANSION III (Hospital's Capacity),4/5,"current +4.00%, next +5.00%","coin 14.4M of 20.1M (red, short), iron 1.0G of 6.7M, food 648.5M of 6.7M, Tech Center Lv.21 (met)","original 7d 20:39:00, effective 2d 12:57:11",not started,"Finish Now 16,655 diamonds not pressed; Obtain not pressed"
+node,Barracks Expansion III,BARRACKS EXPANSION III (Number of Trainees),4/5,"current +2.00%, next +2.50%","same costs: coin 14.4M of 20.1M (red), iron 1.0G of 6.7M, food 648.5M of 6.7M, Tech Center Lv.21 (met)","original 7d 20:39:00, effective 2d 12:57:11",not started,
+node,Research Enhancement III,RESEARCH ENHANCEMENT III (Research Speed Boost),MAX,current +10.00%,Maximum Level Reached,,,
+node,Infirmary Expansion II,INFIRMARY EXPANSION II (Hospital's Capacity),MAX,current +5.00%,none,,,
+node,Barracks Expansion II,BARRACKS EXPANSION II (Number of Trainees),MAX,current +2.50%,none,,,
+node,Research Enhancement II,RESEARCH ENHANCEMENT II (Research Speed Boost),MAX,current +10.00%,none,,,
+node,Rapid Field Dressing II,RAPID FIELD DRESSING II (Increase Unit Healing Speed),MAX,current +5.00%,none,,,
+node,Focused Training II,FOCUSED TRAINING II (Training Speed-up),MAX,current +5.00%,none,,,
+node,Extra Barracks,EXTRA BARRACKS (Gain more Barracks),MAX,current Unlocked,none,,,already unlocked
+node,Master Craftsman,MASTER CRAFTSMAN (Reduced resource cost for construction),MAX,current -5.00%,none,,,
+node,Fast Builder II,FAST BUILDER II (Increase building construction speed),MAX,current +5.00%,none,,,
+node,Drill Ground Expansion,NOT FOUND in the Development tree nodes opened,,,,,not read,"the tree continues below the nodes opened; may sit in another tree (Units, Economy)"
+conversion,coin chests,,,,none: nothing converted (the node was not found),,stock unchanged: coin 14.4M,brief: stop after the read if the node is not found

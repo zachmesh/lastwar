@@ -1,0 +1,8 @@
+mail,category,age_at_read,state,gift_icon,note
+an ally's Mega Express notice (title begins with an ally tag and 'Mega Exp...'),Event,32m,unread (red dot),none,"plain notice, no attachment"
+the owner alliance conductor's 'train has de...' notice,Event,1h,unread (red dot),none,the train boarded at 10:14Z departed about 10:21Z; this is the departure notice
+a commander's 'tra...' train notice,Event,3h,unread (red dot),none,plain notice
+Code 87 Individual Reward x3,Event,4h,read,none,three already-read reward mails
+Train arrival reward,Event,,NOT PRESENT at 11:26Z,,the reward mail arrives after the ride ends; arrival time unknown
+categories with a red dot,"Event, Regular, In-app Purchases",,unread,none on any category row,a red dot alone is not a claim; Claim All not pressed; Delete All not touched
+HUD before and after,,,,,"food 648.5M, iron 1.0G, coin 14.4M, diamonds 11,136, Total Power 150,211,809, identical"

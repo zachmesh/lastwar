@@ -1,0 +1,23 @@
+tag_text,level,fresh_frame_x,fresh_frame_y,note
+Headquarters,Lv.30,565,405,"B1 11:02Z; Details shows hero entries only, no power line"
+Barracks,Lv.27,462,585,"clock bubble at (460,530), Lv.9 batch of 726 ends about 19:56:30Z"
+Barracks,Lv.30,530,637,"clock bubble at (529,578), Lv.10 batch of 793 ends about 2026-11-24T11:18:24Z"
+Barracks,Lv.24,628,562,"idle, 'Drill Ground Full' toast; upgrade preview 49.3M coin"
+Barracks,Lv.20,668,535,"idle, 'Drill Ground Full' toast"
+Hospital,Lv.20,678,510,never retry the Hospital Collect
+Drill Ground,Lv.26,705,690,"parade field, approximate, plus or minus 60 px; tap a red soldier"
+Drill Ground,Lv.28,580,800,"parade field, approximate; upgrade to 29 costs 119.0M coin"
+Drill Ground,Lv.30,770,940,"parade field, approximate, near the bottom edge"
+Drill Ground,Lv.27,975,845,"parade field, approximate, off-screen right of the fresh frame"
+Tavern,Lv.20,,,"orange roof inside the Drill Ground compound, after one pan drag"
+Farmland,Lv.28,260,545,the Lv.28 once mistaken for a Drill Ground
+Emergency Center,Lv.20,245,268,glass tower with a red sign; later points drift 30 to 85 px
+Gear Factory,Lv.20,310,333,
+Food Warehouse,Lv.24,385,398,
+Component Factory,Lv.20,105,385,"a second one at (268,420)"
+Training Base,Lv.26,100,412,several Training Bases exist; four upgrades to Lv.25 run until 2026-11-24T09:20Z
+Chip Lab,Lv.20,478,255,from the D1 run
+Ginkgo Tree,Lv.1,115,188,a decoration
+"(store, no tag)",,437,348,"red and white building, opens the Cosmetics, Coupon and Crystal store"
+Tech Center,not found,,,still unlocated
+Builders Hut,not found,,,still unlocated

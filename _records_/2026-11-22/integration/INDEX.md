@@ -35,3 +35,7 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 - [PR 891](landing-pr-891.md) - records-1021, strategy folder, owner decisions, model policy keys
 - [PR 892](landing-pr-892.md) - second records snapshot, stores, Black Market, season clock, donations T1
 - [PR 893](landing-pr-893.md) - third records snapshot, queue state moves and donations close rules
+- [PR 894](landing-pr-894.md) - fourth records snapshot, decisions, Drill Ground and base-map records
+- [PR 895](landing-pr-895.md) - donations T1 follow-up, closing standard, shop-claims rule 9 held
+- [PR 896](landing-pr-896.md) - model policy persistence, respawn rule
+- [PR 897](landing-pr-897.md) - tag-text rule in six digests, snapshot-protocol article
