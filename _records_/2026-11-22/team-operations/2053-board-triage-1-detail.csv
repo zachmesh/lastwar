@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+859,,enqueue with --not-before and no --expires-at mints an unretirable unit,#864,lastwar toolsmith,P2,"fixed in PR #860, close on merge"
+854,tooling,Profile panel X unresponsive to coordinate taps - two consecutive units blocke,#861,lastwar operator,P2,"game control, operator knowledge"
+831,knowledge,"Secret Command Post: orange icon on resolved tasks is a plunder stamp, not Go;",#862,lastwar scribe,P2,
+826,tooling,Aged-out (lost) completion markers are invisible in the record trail - sync re,#864,lastwar toolsmith,P2,
+822,tooling,open_app spawns a duplicate LastWar window whose canvas takes no input,#864,lastwar toolsmith,P2,lesson already in the profile
+820,tooling,Live-tree action log has 6 invalid JSON lines (concatenated appends and one em,#865,lastwar toolsmith,P3,action log integrity
+818,tooling,Stale scout chains keep producing units days after their reset day (23 stale s,#861,lastwar toolsmith,P2,may already be fixed by the reset-day refusal
+815,"idea,play","Candidate task type: Arena building (Lv.1, max level) - new PvP mode on the ba",#862,lastwar scout,P2,"Arena is PvP; see OD-20261123-01, no tap"
+814,play,"Zombie Siege runs 2026-11-22 23:15, no routine coverage - check what it is and",#861,lastwar planner,P1,"Zombie Siege 23:15 PT tonight, stage a unit before 07:15Z"
+813,knowledge,Donation Count refills +1 on a roughly 20-minute clock-anchored cycle; the gre,#861,lastwar scribe,P2,
+809,tooling,Held patches in hidden_files are invisible to the tool-developer in-flight che,#863,lastwar toolsmith,P3,
+806,records,Ops record filename collision: a slipped 23:40 run and the next day's on-time ,#865,lastwar planner,P3,
+805,"idea,knowledge",idea: new events 3v3 Brawl and Champion Duel seen in Event Reminder (2026-11-2,#862,lastwar scribe,P2,"PvP events, read only"
+801,records,Scout-2026-11-10-011 unit result (failed Nov 14) disagrees with its Nov 21 DON,#865,lastwar planner,P3,
+800,"tooling,records",Scout coverage file says 0 unexplained red dots while pass narratives name 1+,#862,lastwar toolsmith,P3,
+799,records,Knowledge-organizer record file missing for 1132,#865,lastwar planner,P3,
+798,records,Planner record files missing for 0740 and 1640,#865,lastwar planner,P3,
+797,records,Ticker-1735 left no _records_ file and no day-INDEX section,#865,lastwar planner,P3,
+796,"records,compliance",PR #791 merged outside batch cadence (second records merge in the 19:00 window,#865,lastwar planner,P3,compliance
+795,"records,compliance",PR #716 merged outside batch cadence (second records merge in the 15:00 window,#865,lastwar planner,P3,compliance
