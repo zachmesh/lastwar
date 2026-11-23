@@ -26,12 +26,21 @@ def roster():
 
 
 class RosterEntries(unittest.TestCase):
-    def test_every_roster_entry_has_a_serves_key_and_the_default_is_upkeep(self):
+    def test_every_roster_entry_has_a_serves_key_and_the_default_for_an_entry_without_one_is_upkeep(self):
         for item in roster():
             self.assertIn("serves", item, item["id"])
             self.assertTrue(str(item["serves"]).strip(), item["id"])
-        self.assertEqual({item["serves"] for item in roster()}, {"upkeep"})
         self.assertEqual(load_queue_module().DEFAULT_SERVES, "upkeep")
+
+    def test_every_roster_serves_is_an_exempt_word_or_a_plan_item_with_a_ledger_row(self):
+        """So a roster entry can never carry a dead id once the forecast switch is on: the check is queue.py's own, against the newest ledger in this checkout."""
+        queue = load_queue_module()
+        ids, reason = queue.load_forecast_ledger(str(ROSTER.parent))
+        self.assertIsNotNone(ids, f"no forecast ledger to check the roster against: {reason}")
+        bad = {item["id"]: (item["serves"], queue.forecast_class(item["serves"], ids)) for item in roster()
+               if queue.forecast_class(item["serves"], ids) != "ok"}
+        self.assertEqual(bad, {}, "roster serves that are neither an exempt word nor a plan item with a ledger row (no-row: the ledger lacks the id; unknown: not an id)")
+        self.assertTrue(any(queue.PLAN_ITEM_ID.match(item["serves"]) for item in roster()))        # the maintenance regulars that feed a lever name it
 
     def test_the_roster_file_keeps_its_compact_layout(self):
         raw = ROSTER.read_text()

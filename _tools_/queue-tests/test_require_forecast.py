@@ -30,8 +30,9 @@ class Switchable(ForecastCase):
         self.team_path.write_text(text)
 
     def roster(self, name, serves, only=None):
-        """The real roster with one regular's serves replaced (or only that regular, for plan)."""
-        items = [dict(r, serves=serves) if r["id"] == name else r for r in REAL_ROSTER["regulars"]]
+        """The real roster with one regular's serves replaced (or only that regular, for plan); every other regular serves upkeep, so the
+        fixture says nothing about what the real roster maps."""
+        items = [dict(r, serves=serves) if r["id"] == name else dict(r, serves="upkeep") for r in REAL_ROSTER["regulars"]]
         if only:
             items = [r for r in items if r["id"] == only]
         path = self.repo / f"roster-{name}-{len(serves)}.json"
@@ -192,9 +193,10 @@ class Paths(Switchable):
             self.assertIn("--require-forecast", out, command)
 
     def test_the_real_roster_has_nothing_the_switch_would_refuse(self):
-        serves = {r.get("serves", "upkeep") for r in REAL_ROSTER["regulars"]}
         q = load_queue_module()
-        self.assertEqual({q.forecast_class(s, set()) for s in serves}, {"ok"})
+        ids, reason = q.load_forecast_ledger(str(QUEUE.parent))
+        self.assertIsNotNone(ids, reason)
+        self.assertEqual({q.forecast_class(r.get("serves", "upkeep"), ids) for r in REAL_ROSTER["regulars"]}, {"ok"})
 
 
 class ScoutDiffPath(Switchable):
