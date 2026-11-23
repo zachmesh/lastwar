@@ -1,12 +1,13 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T10:32:26Z
+modified: 2026-11-23T15:06:16Z
 level: L1
-version: 1.110.0
+version: 1.111.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
+  - source: operator handover base map and close routes _records_/2026-11-22/growth/0054-operator-handover-detail.md, closing state _records_/2026-11-22/alliance-donations/2340-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/1308-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/0554-queue-run.md
   - source: _records_/2026-11-22/alliance-donations/2340-queue-run.md
@@ -154,13 +155,12 @@ Goal: donate every run to the recommended technology.
 4. Open it; read count and coin cost.
 5. Tap coin Donate once; re-read count.
 6. Tap while the count reads 1 or more, read EXP and badge after the last tap, never diamonds.
+7. Close: the Techs X lands on the full Alliance screen; its blue back arrow (177,919) leaves to the base (2026-11-23).
 
 ## Rules
 - R1 Donate while the count reads 1 or more; a tap from a live 1/30 lands. After the last tap read Tech EXP and badge; grey Donate with a timer means the count is spent. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`
 - R2 A count needs a live read in the same unit; after the last tap close as count spent on the witness and never write a count. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`, `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
 - R3 Read recommended node and coin cost fresh each unit. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
-- R4 Re-read the count after every tap. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`
-- R5 Ground the Alliance shield fresh each screenshot. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`
 
 ## Failures
 - Count hidden by timer - by design after the last tap; close on the witness. `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
