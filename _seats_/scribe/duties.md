@@ -1,9 +1,9 @@
 ---
 title: Scribe seat duties
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:11:00-08:00
+modified: 2026-11-23T08:37:13Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The per-firing checklist for this seat
 status: unverified
 grounded_in:
@@ -26,3 +26,11 @@ grounded_in:
 
 Write the run at `_records_/<date>/<activity>/<HHMM>-run.md` and append the
 day index. The record carries inputs, outputs, stats and follow-up.
+
+## The fold rule
+
+A fold writes a NEW key-named article and never appends to an INDEX or to an existing page near the limit (300 words recommended, under 500 hard). The INDEX gets one pointer line. Run `lint_gate.py record-check` on a page before editing it; a page over 300 words is split first.
+
+## Changelog
+
+- 0.2.0, 2026-11-23 - The fold rule added (assignment A-20261123-0830-scribe).
