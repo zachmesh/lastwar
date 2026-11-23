@@ -1,24 +1,11 @@
 ---
-title: 7. Perception points in the day
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+title: 7. Perception points in the day part 2
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 18
-description: Perception is a heartbeat, not an appointment.
+sequence: 23
+description: Post-reset full pass - the first pass of the reset day, staged at the trade-day reset
 ---
-## 7. Perception points in the day
-
-Perception is a heartbeat, not an appointment. The two anchored
-passes below are the guaranteed floor - the minimum perception a
-day ever gets - and they are not the ceiling. A full pass also
-fires whenever the layer detects a state change it cannot price
-from partial views - a phase rotation boundary crossed, a reset
-of any sub-cycle, an announcement mail read - and partitioned
-perception rolls with every ticker heartbeat, each tick
-re-perceiving the surface groups whose state is volatile or
-whose last observation is stale, so a trigger rarely waits for
-the next anchored pass to be seen.
-
 - **Post-reset full pass** - the first pass of the reset day,
   staged at the trade-day reset (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer). It walks the whole checklist.
   This is the pass that builds the day - everything the reset

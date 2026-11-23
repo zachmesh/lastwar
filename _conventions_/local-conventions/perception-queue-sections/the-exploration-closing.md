@@ -1,9 +1,9 @@
 ---
 title: The exploration closing standard
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 26
+sequence: 35
 description: Under this protocol, an exploration unit for a candidate does not close on the surface was
 ---
 ### The exploration closing standard

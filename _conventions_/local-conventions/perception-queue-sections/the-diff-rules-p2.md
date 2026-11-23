@@ -1,17 +1,11 @@
 ---
-title: The diff rules
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+title: The diff rules part 2
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 12
-description: After each pass, the observation is diffed against three references - the regulars, the daily collection
+sequence: 16
+description: Known item, triggered.
 ---
-### The diff rules
-
-After each pass, the observation is diffed against three
-references - the regulars, the daily collection ledger, and the
-pool in all three states.
-
 - **Known item, triggered.** When a trigger from the list above
   fires for a profiled item, a unit of its regular is produced
   through the shared (regular, planned_for) invariant - already

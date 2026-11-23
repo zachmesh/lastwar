@@ -1,9 +1,9 @@
 ---
 title: The capability profile
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 9
+sequence: 12
 description: Under the owner refinement, _tools_/regulars.json is the index of a profile library, and each regular profile
 ---
 ### The capability profile

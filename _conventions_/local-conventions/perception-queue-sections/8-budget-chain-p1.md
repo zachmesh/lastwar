@@ -1,9 +1,9 @@
 ---
-title: 8. Budget, chain splitting and the observation file
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+title: 8. Budget, chain splitting and the observation file part 1
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 19
+sequence: 24
 description: A scout pass is bound by the same 15 minute unit cap as all work.
 ---
 ## 8. Budget, chain splitting and the observation file
@@ -40,14 +40,4 @@ explained, unexplained red dots - and its body carries the
 observed items per pass and per surface, in the schema of
 section 4. The file is the single input the diff works from,
 and the evidence every scout unit result points at.
-
-**Scout unit results.** A scout unit completes through
-`_tools_/queue.py complete` like any unit. Its result must carry -
-
-- `evidence` - the day observation file.
-- `stats` - surfaces_walked, items_observed, red_dots_seen,
-  red_dots_explained, unexplained_red_dots, unknown_items.
-- `follow_up` - the units the diff enqueued or raised, or the
-  unknowns awaiting their exploration unit, named - never a bare
-  `none` while the pass holds an open signal.
 

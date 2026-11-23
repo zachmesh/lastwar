@@ -1,9 +1,9 @@
 ---
 title: 12. Standing rules this layer inherits
-created: 2026-11-23T08:37:03Z
-modified: 2026-11-23T08:37:03Z
+created: 2026-11-23T09:03:33Z
+modified: 2026-11-23T09:03:33Z
 version: 0.1.0
-sequence: 29
+sequence: 40
 description: The red lines bind perception exactly as they bind execution - a scout reads a priced
 ---
 ## 12. Standing rules this layer inherits
