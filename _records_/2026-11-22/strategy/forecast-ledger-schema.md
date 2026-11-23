@@ -1,7 +1,7 @@
 ---
 title: Forecast ledger schema
 created: 2026-11-23T09:00:00Z
-modified: 2026-11-23T14:32:00Z
+modified: 2026-11-23T16:09:00Z
 version: 1.0.0
 level: L3
 description: The four kinds of forecast row, how the coach scores each, the source tags and the rule that a row is immutable once its action has run
@@ -34,7 +34,7 @@ F-013 and F-014 share one mechanism and are scored as one pair. F-025 and F-028 
 
 ## Range and probability rule
 
-From 2026-11-23 14:35Z, after nine rows closed (the coach table): a continuous row tagged G or on one source is written with its low times 0.75 and its high times 1.5; an [M] row keeps its range. A yield or loss that may be zero is two rows, a binary for whether it happens and a continuous for the size, never a range with a positive low. Binary probabilities carry no fixed shade until ten have closed (the 0.15 shade scored 0.2775 against 0.279 unshaded); use the observed rate where one exists. The coach scores raw and adjusted values (H101).
+From 2026-11-23 14:35Z, after nine rows closed (the coach table): a continuous row tagged G or on one source is written with its low times 0.75 and its high times 1.5; an [M] row keeps its range. The ratio rule (high over low about 3) is waived for rows widened this way. A yield or loss that may be zero is two rows, a binary for whether it happens and a continuous for the size, never a range with a positive low. Binary probabilities carry no fixed shade until ten have closed (the 0.15 shade scored 0.2775 against 0.279 unshaded); use the observed rate where one exists. The coach scores raw and adjusted values (H101).
 
 ## Known weaknesses
 

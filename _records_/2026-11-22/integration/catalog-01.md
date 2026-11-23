@@ -49,3 +49,4 @@ description: Catalog 01 of the Integrator's per-landing notes for PRs 878 onward
 - [PR 915](landing-pr-915.md) - never click Go on the check-in banner, standing boundary
 - [PR 916](landing-pr-916.md) - truck-plunder, either half of the plunder order stands
 - [PR 917](landing-pr-917.md) - growth-plan, OD-18 dated notes and seven lever rows
+- [PR 918](landing-pr-918.md) - tenth records snapshot, plunder, Oil Well chain, T3 incident, quiet windows
