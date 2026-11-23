@@ -75,7 +75,7 @@ coordination:
     coordinator_review_seconds: 900
     loop_schedule_id: schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0
     loop_schedule_owner_session: session-4b4cb08d-fb77-419a-be34-14a72a3b73d1
-    approved_model_ref: null
+    approved_model_ref: _conventions_/local-conventions/team-organization.md
     cap_authority_ref: _conventions_/local-conventions/continuous-play-team.md
   reporting:
     owner_gateway: coordinator

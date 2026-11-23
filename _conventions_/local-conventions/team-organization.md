@@ -276,8 +276,30 @@ The top-level sessions are created with:
 DSH_WEB_URL=http://localhost:8080 SESSION_RELAY_JAR=/tmp/dsh-gate.cj \
   python3 ~/dtadpole/reflection/_tools_/session-relay/session-relay.py spawn \
   --workspace /Users/zhenchen/zachmesh/lastwar --title '[Last War] <Role>' \
+  --model claude-sonnet-5-5 --effort xhigh \
   --prompt-file /tmp/lw-<role>-bootstrap.md
 ```
+
+The explicit `--model` and `--effort` are required: the relay's own default
+is `claude-opus-5-5`, so a replacement seat spawned without them comes up on
+the wrong model.
+
+### Model policy
+
+Owner decision, 2026-11-22 20:22 PT: every DSH session under
+`/Users/zhenchen/zachmesh/lastwar` runs **Claude Sonnet 5.5 at xHigh effort**
+(`claude-sonnet-5-5`, `reasoningEffort: xhigh`, provider `meta-claude`).
+
+- Applied through `session/selectModel` to the nine top-level sessions (the
+  Steward, Coordinator and seven seats) and verified by `session-relay
+  inspect`, which reports `model=claude-sonnet-5-5/xhigh` for each.
+- The seven retired child-session predecessors are owned by subagent routing;
+  the host refuses `selectModel` on them (`session/agent-busy`). They are idle
+  and unused; they stay as they are until archived, and no new work goes to
+  them.
+- A running session picks the new model up at its next turn.
+- The computer-use run model is a separate setting (`--model` on
+  `cu_bridge.py start`, currently `claude-gateway/claude-sonnet-5-5`).
 
 The gate supplies the cookie; no seat reads the DSH launch token.
 
