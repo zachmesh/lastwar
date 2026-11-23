@@ -1,9 +1,9 @@
 ---
 title: Strategy 1 - where we are
 created: 2026-11-23T08:19:08Z
-modified: 2026-11-23T08:23:27Z
+modified: 2026-11-23T09:08:31Z
 level: L1
-version: 0.1.0
+version: 0.2.0
 description: The measured power split, the troops waiting in the hospital and the coin behaviour of the account
 status: unverified
 grounded_in:
@@ -24,12 +24,9 @@ grounded_in:
 
 ## Errata
 
-The original text above stays (C2); the newer record governs.
-
-- "(39,460 of 39,460)": read on a Drill Ground Lv.30 panel on 2026-10-31 07:04 (`_records_/2026-10-31/troop-training/0704-queue-run.md`) and not re-read; the 2026-11-23 Building Details read a Drill Ground Lv.28 with Unit Count +9211 (`_records_/2026-11-22/growth/2344-fill-run.md`), possibly another building; step P1 reads how many exist.
-- "Troops are nearly all T10": the Train panel on 2026-11-23 lists Lv.7 1,116, Lv.8 2,141, Lv.9 1,878 and Lv.10 35.1K, Lv.6 cut off (`_records_/2026-11-22/growth/2357-troop-read.md`), about 87 percent T10 by count over those four tiers; the 1,609 average [D] depends on the unread tier mix.
-- "Food 732M and iron 1.1G": the HUD read of 2026-11-23 07:48Z is food 638.0M and iron 1.0G (`_records_/2026-11-22/growth/2344-fill-run.md`), still above the floors.
+The corrections to this text are on [errata](strategy-where-we-are-errata.md).
 
 ## Changelog
 
 - 0.1.0, 2026-11-23 - Landed from strategy v2.0, replacing the v1.5 pages.
+- 0.2.0, 2026-11-23 - The Errata moved verbatim to strategy-where-we-are-errata.md (page budget 300 words).
