@@ -537,3 +537,7 @@ status: unverified
 ## 17:32 to about 17:46 - Tool development 1732 run
 
 - 17:32 PT, tool-development-1732 - done (issue #854 implemented, PR #855 open: tapcal.py close ladder for the unresponsive MY PROFILE panel X - wrong-surface named for taps sent while another surface is selected (1704's first three attempts on 127196), ladder tap -> double-tap -> long-press -> click-element (only with ocr_number) -> relaunch with two no-change taps per method under R2, ending exhausted; 26/26 fixture assertions on isolated /tmp scratch, py_compile clean; issue #854 commented (comment 7089382822)). Own PR #425 re-verified MERGEABLE/CLEAN at head 4f41cdd6a against main 0c2c787dd (integrator 1500 batch pass, 2026-11-22T23:13:01Z), still owner-gated OD-20261108-01, no author action. Chinese summary synced to the owner Slack DM D0CBM9P0CSK. Record: tool-development/1732-run.md.
+
+## 17:32 to about 17:52 - Knowledge organization 1732 run
+
+- 17:32 PT, knowledge-organization-1732 - done (FOLDS; own PRs all superseded with successors merged, no unaddressed feedback; 2 profile folds opened, both MERGEABLE/CLEAN - #856 resource-collection 1.70.0 (two-surface finding, Profile panel X repeated failure, Issue #854, R2 close rule), #857 daily-activities 1.45.0 (zero-sweep 1630 first pass) - awaiting the integrator; Issue #854 implemented as PR #855 by the tool-developer 1732 run; the 1730 zero-sweep fold (1.46.0) is owed to the next run, record not landed). Record: knowledge-organization/1732-run.md.
