@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 1
 created_at: 2026-11-23T16:00:27Z
-expires_at: 2026-11-26T20:01:36Z
+expires_at: 2026-11-26T10:01:00Z
 planned_for:
-not_before: 2026-11-25T04:01:36Z
+not_before: 2026-11-24T18:01:00Z
 window: oil well level 22 to 23 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17

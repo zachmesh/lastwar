@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T16:17:00Z
+modified: 2026-11-23T18:16:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,9 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [1012-builders-time-correction.md](1012-builders-time-correction.md) - the builders free tonight at 23:20Z, my files corrected, window margins of every trigger.
+- [0953-refill-test-score.md](0953-refill-test-score.md) - the refill test scored: H20 holds; the donations count by policy 2532.
+- [0925-coverage-since-cutover.md](0925-coverage-since-cutover.md) - honest serves coverage, the 14 no-serves units by name, hours serving nothing.
 - [0813-growth-partial-causes.md](0813-growth-partial-causes.md) - the growth partial rate, three causes and a fix each.
 - [0810-calibration-report-2.md](0810-calibration-report-2.md) - all closed continuous rows scored; the hit-rate rule called.
 - [0710-quiet-windows.md](0710-quiet-windows.md) - the four cu quiet windows in the plan triggers and the idle subtraction.
@@ -63,3 +66,7 @@ sidecars the runs cite.
 - [donation-timers.csv](donation-timers.csv) and [refill-test-prereg.csv](refill-test-prereg.csv) - the 89 recorded cooldown timers and the predictions registered at 15:02Z.
 - [slot-idle-intervals.csv](slot-idle-intervals.csv), [slot-idle-method.py](slot-idle-method.py) and [slot-idle-now.csv](slot-idle-now.csv) - idle intervals, the subtraction script and the 15:05Z result.
 - [forecast-calibration-2.csv](forecast-calibration-2.csv), [forecast-calibration-binary.csv](forecast-calibration-binary.csv) and [growth-partial-causes.csv](growth-partial-causes.csv) - the twelve continuous and ten binary rows scored and the growth causes.
+- [coverage-honest.csv](coverage-honest.csv) and [coverage-honest-method.py](coverage-honest-method.py) - coverage by window and the re-runnable script.
+- [refill-test-prereg-2.csv](refill-test-prereg-2.csv) - the predictions for pass 002, registered 18:00Z before the data.
+- [refill-pass-log.csv](refill-pass-log.csv) and [refill-check-method.py](refill-check-method.py) - the entry-count check of rule 8 for each donations pass, with the formula and the shortfalls.
+- [trigger-window-margins.csv](trigger-window-margins.csv) - the margin of each named trigger to the quiet windows.

@@ -1,10 +1,10 @@
 ---
 title: Oil Well Level 20 To 30 Builder Chain 2900 2026-11-23
 created: 2026-11-23T08:10:00-08:00
-modified: 2026-11-23T08:10:00-08:00
+modified: 2026-11-23T10:30:00-08:00
 level: L0
-version: 1.0.0
-description: The facts, route, per level procedure and earliest finish schedule for the builder B1 chain that raises the Oil Well from level 20 to 30 from 2026-11-24T09:21Z, as units staged one per level
+version: 1.1.0
+description: The facts, route, per level procedure and earliest finish schedule for the builder B1 chain that raises the Oil Well from level 20 to 30 from 2026-11-23T23:21Z, as units staged one per level
 status: done
 activity: queue-planning
 run_id: queue-planning-2026-11-23-0810-oil-well-chain
@@ -30,15 +30,15 @@ At each finish: press Complete on the Oil Well entry in the hammer panel (never 
 
 | Level | Start at or after (Z) | Earliest finish (Z) |
 |---|---|---|
-| 20 to 21 | 11-24 09:21 | 11-24 18:41 |
-| 21 to 22 | 11-24 18:41 | 11-25 04:01 |
-| 22 to 23 | 11-25 04:01 | 11-25 13:21 |
-| 23 to 24 | 11-25 13:21 | 11-25 22:42 |
-| 24 to 25 | 11-25 22:42 | 11-26 08:02 |
-| 25 to 26 | 11-26 08:02 | 11-26 17:22 |
-| 26 to 27 | 11-26 17:22 | 11-27 02:43 |
-| 27 to 28 | 11-27 02:43 | 11-27 12:03 |
-| 28 to 29 | 11-27 12:03 | 11-27 21:23 |
-| 29 to 30 | 11-27 21:23 | 11-28 06:44 |
+| 20 to 21 | 11-23 23:21 | 11-24 08:41 |
+| 21 to 22 | 11-24 08:41 | 11-24 18:01 |
+| 22 to 23 | 11-24 18:01 | 11-25 03:21 |
+| 23 to 24 | 11-25 03:21 | 11-25 12:42 |
+| 24 to 25 | 11-25 12:42 | 11-25 22:02 |
+| 25 to 26 | 11-25 22:02 | 11-26 07:22 |
+| 26 to 27 | 11-26 07:22 | 11-26 16:43 |
+| 27 to 28 | 11-26 16:43 | 11-27 02:03 |
+| 28 to 29 | 11-27 02:03 | 11-27 11:23 |
+| 29 to 30 | 11-27 11:23 | 11-27 20:44 |
 
-The finish of 24 to 25 can fall in the daily quiet window 08:00Z to 08:25Z on 11-26: the Complete and the next start move to the nearest edge, or the coordinator asks the cu coordinator for a one-line exception if the builder would idle more than 15 minutes.
+CORRECTED 2026-11-23 18:13Z: the four builders are free at 23:20Z TODAY (the Training Base timers read 05:13:04 to 05:13:15 at 18:07Z), not 2026-11-24T09:20Z, so the whole chain starts 10 hours earlier than first written. The first finish, 08:41Z, falls 16 minutes after the daily quiet window 08:00Z to 08:25Z; no earliest finish falls inside it, but real finishes are later than these lower bounds, so a finish that lands in a window moves to the nearest edge or takes a one-line exception if the builder would idle more than 15 minutes.

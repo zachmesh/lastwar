@@ -1,0 +1,6 @@
+item,value,read_utc,note
+left column,"hammer 4/4 (107,200); flask 2/2 (107,265); white pickup (107,647); satellite dish (107,714); hammer (107,780); NO trade icon at (107,580)",2026-11-23T17:51:25Z,"the trade icon was there at 16:23Z and absent from 16:39Z (after the plunder count reached 4/4 at 16:24Z)"
+attempt 1,"tap (107,647): opened the Secret Command Post (Secret Mobile Squad), not Intercity Trade; left by its back arrow",2026-11-23T17:51:35Z,run 20261123T175115Z-d26a91; nothing changed there
+attempt 2,"tap on the yellow train building (522,218): opened the campaign map (Chapter 15, Prologue, Hard, Nightmare tabs); nothing tapped on it; left by its back arrow",2026-11-23T17:59:10Z,run 20261123T175857Z-fdf5f0
+trade screen,not reached,,"Trade Count, contracts and truck slots unread"
+settle, dispatch and refresh,none,,"no truck settled, none dispatched, no refresh used, no contracts or diamonds spent"

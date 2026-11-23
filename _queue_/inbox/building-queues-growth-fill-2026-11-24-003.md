@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-23T07:55:31Z
-expires_at: 2026-11-24T10:20:00Z
+expires_at: 2026-11-24T00:20:00Z
 planned_for:
-not_before: 2026-11-24T10:05:00Z
+not_before: 2026-11-24T00:05:00Z
 window: growth read then fill idle slots window 11-24T09:40Z
 est_minutes: 10
 serves: fill idle slot
@@ -32,7 +32,7 @@ Rules, reserves, red lines and the snap command are in `_records_/2026-11-22/tea
 
 Read the builders, then the labs, then the training queues. Fill ONLY idle slots, each start costing at most one third of EACH needed stock and leaving the reserves. Never cancel, replace or reorder a running item. No speed-up, Finish Now, purchase or diamond spend. An idle slot at the read is a MISS: record the slot and the time.
 
-COIN HOLD LIFTED for ranked sinks. The builders freeing at 2026-11-24T09:20Z belong to the Oil Well chain unit `building-queues-oil-well-2026-11-24-001` (09:21Z) and the ground units `building-queues-growth-convert-2026-11-24-001` and `-002` (from 09:22Z): this fill reads the builders, presses COMPLETE, collects finished batches when slots open, and records any builder idle for more than one pass as a MISS with the time. It converts nothing and starts nothing.
+COIN HOLD LIFTED for ranked sinks. The builders freeing at 2026-11-23T23:20Z belong to the Oil Well chain unit `building-queues-oil-well-2026-11-24-001` (23:21Z) and the ground units `building-queues-growth-convert-2026-11-24-001` and `-002` (from 23:22Z): this fill reads the builders, presses COMPLETE, collects finished batches when slots open, and records any builder idle for more than one pass as a MISS with the time. It converts nothing and starts nothing.
 
 PRESS COMPLETE the moment a research or a build finishes: a finished research neither banks its power nor frees the lab until then.
 

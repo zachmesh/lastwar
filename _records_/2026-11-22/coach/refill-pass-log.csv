@@ -1,0 +1,6 @@
+pass,entry_utc,anchor_utc,predicted_count,observed_count,shortfall,taps_since_anchor,timer_end_utc,grid_offset_s,verdict,note,cap_note
+T1 test (anchor of the series),2026-11-23T10:11:50Z,,,1,,,2026-11-23T10:17:57.107Z,-0.29,anchor,entry 1/30; the one tap from 1/30 landed; timer end read 10:12:47.107Z + 5:10,
+unit 1441,2026-11-23T14:39:00.956Z,2026-11-23T10:17:57.107Z,14,8,6,0 witnessed (T2 read-only; the owner's phone taps are unknown),2026-11-23T14:57:57.397Z,+0.00,shortfall; closes DONE (timer end is the anchor),counts used elsewhere or partial accrual [G]; the owner's phone shares the count,
+pass 001,2026-11-23T17:45:43.410Z,2026-11-23T14:57:57.397Z,9,9,0,0 witnessed,2026-11-23T17:57:57.286Z,-0.11,match; closes DONE under the amended rule,three reads end 17:57:56.97 to 17:57:57.29,
+pass 002,2026-11-23T21:15:00Z (planned),2026-11-23T17:57:57.286Z,10,,,0 so far,,,pending,predicted before the data; an entry after 21:17:57 gives 11,
+overnight accrual test (proposed by the researcher),entry near 13:00Z,timer end of a spend near 06:00Z (about 06:17:57),21,,,0,,,proposed,"gap under 9 h so the cap does not hide the answer; a shortfall in a quiet overnight window points to partial accrual, a clean one to daytime phone use; the owner question is the cheaper closure","gap about 7 h, under the cap"

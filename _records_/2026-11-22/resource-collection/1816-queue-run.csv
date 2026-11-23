@@ -1,0 +1,6 @@
+resource,available_before,available_after,owned_before,owned_after,gain,output_per_hour,note
+coin,"1,566,496",0,"21,481,248","23,048,977","+1,567,729",444.5K,"3.52 h of output: fits the 14:45Z pass"
+food,"2,373,547",0,"666,340,955","668,717,311","+2,376,356",674.9K,"3.52 h: fits 14:45Z"
+iron,"2,191,770",0,"1,078,346,935","1,080,541,297","+2,194,362",622.7K,"3.52 h: fits 14:45Z"
+oil,"3,280",0,"655,479","658,759","+3,280",1.2K,"2.73 h: fits the 15:34Z collect"
+HUD after,,,,,,,"coin 23.0M, food 668.7M, iron 1.0G, oil 658.7K, energy 111, diamonds 11,113, Total Power 150,416,946 unchanged"

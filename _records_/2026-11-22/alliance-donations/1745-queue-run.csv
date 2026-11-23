@@ -1,0 +1,17 @@
+seq,run,utc,count_before,count_after,node,coin_cost,note
+entry,20261123T174509Z-2a6969,2026-11-23T17:45:43.410Z,9/30,,Quick Construction 9/10,1000,"ENTRY READ before any tap: count 9/30, coin Donate green, no timer, diamond button 2 (not pressed); the dialog first showed in the frame at 17:45:37.830Z; the last tap before this was 14:40:53.005Z (1441)"
+1,20261123T174509Z-2a6969,2026-11-23T17:45:49.893Z,9/30,8/30,Quick Construction 9/10,1000,witnessed count fall
+2,20261123T174509Z-2a6969,2026-11-23T17:45:58.046Z,8/30,7/30,Quick Construction 9/10,1000,witnessed count fall
+3,20261123T174509Z-2a6969,2026-11-23T17:46:05.247Z,7/30,6/30,Quick Construction 9/10,1000,witnessed count fall
+4,20261123T174509Z-2a6969,2026-11-23T17:46:13.974Z,6/30,5/30,Quick Construction 9/10,1000,"witnessed; a hold-down hint appeared, ignored"
+5,20261123T174509Z-2a6969,2026-11-23T17:46:23.369Z,5/30,4/30,Quick Construction 9/10,1000,witnessed count fall
+6,20261123T174509Z-2a6969,2026-11-23T17:46:32.086Z,4/30,3/30,Quick Construction 9/10,1000,witnessed count fall
+7,20261123T174509Z-2a6969,2026-11-23T17:46:44.560Z,3/30,2/30,Quick Construction 9/10,1000,"witnessed; a ticker banner passed, no name recorded"
+8,20261123T174509Z-2a6969,2026-11-23T17:46:54.447Z,2/30,1/30,Quick Construction 9/10,1000,witnessed count fall
+9,20261123T174509Z-2a6969,2026-11-23T17:47:04.217Z,1/30,timer 00:10:48,Quick Construction 9/10,1000,"LAST tap: green to grey with a timer, 00:10:48 read at 17:47:09.063Z (4.8 s after the tap)"
+timer read 2,20261123T174509Z-2a6969,2026-11-23T17:47:16.286Z,,timer 00:10:41,,,"12.1 s after the last tap; end 17:57:57.29Z"
+timer read 3,20261123T174759Z-64c738,2026-11-23T17:48:00.966Z,,timer 00:09:56,,,"cleanup run, no tap on Donate; end 17:57:56.97Z"
+grid check,,2026-11-23T17:57:57.397Z,,,,,"three reads end at 17:57:57.06Z, 17:57:57.29Z and 17:57:56.97Z: within 0.5 s of 14:57:57.397Z + 9 x 1,200 s (a 20-minute grid); H35 would end 17:52:57.397Z"
+verdict,,,,,,,"H20 (count 9 at entry, first timer end 17:57:57); H35 rejected (predicted 5 and 17:52:57); no refill model mismatch"
+tail,,2026-11-23T17:47:16Z,,,,,"SKIPPED: the first timer read 10:41, over the 10-minute limit"
+total,,,,,,9000,"9 witnessed landed taps, 9,000 coins; diamond Donate never pressed"

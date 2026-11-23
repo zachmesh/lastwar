@@ -1,0 +1,9 @@
+item,value,read_utc,note
+builders counter,4/4 busy before and after,2026-11-23T18:06:55Z,
+builder 1,"Training Base to Lv.25, Time Left 05:13:04",2026-11-23T18:07:08.651Z,"ends about 23:20:12.7Z"
+builder 2,"Training Base to Lv.25, Time Left 05:13:08",2026-11-23T18:07:08.651Z,"ends about 23:20:16.7Z"
+builder 3,"Training Base to Lv.25, Time Left 05:13:11",2026-11-23T18:07:08.651Z,"ends about 23:20:19.7Z"
+builder 4,"Training Base to Lv.25, Time Left 05:13:15",2026-11-23T18:07:08.651Z,"ends about 23:20:23.7Z"
+cross-check,"first frame 05:13:10, 05:13:13, 05:13:16, 05:13:20 at 18:07:02.941Z; the 16:51Z read 06:29:20 to 06:29:31 gives 23:20Z too",2026-11-23T18:07:03Z,"the first digit is 0 (05 and 06), not 1: the 1650 guess '16:29' was wrong"
+idle builders,0,2026-11-23T18:07:08Z,slots_idle 0; no capacity blocker
+HUD,"builders 4/4; no panel left open",2026-11-23T18:07:30Z,

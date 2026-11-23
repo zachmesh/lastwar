@@ -1,0 +1,7 @@
+item,value,read_utc,note
+first frame,"base, no panel, no dialog; energy 110",2026-11-23T18:13:50Z,
+gate before,"one white '?' bubble at the left gate about (146,649) with a small figure beneath it about (143,686)",2026-11-23T18:13:55Z,"the bubble beside the avatar and other '?' bubbles were not scanned"
+tap,"one tap on the figure (143,686); no ground tap needed",2026-11-23T18:14:00Z,"unlabelled bubble tapped once only"
+result,"a small speech bubble at the left edge, only '...soon!' readable (the truck icon covered the start); no survivor card, no name, role, level or button",2026-11-23T18:14:05Z,"the same pattern as 2003 (welcome) and 1338"
+after,"the '?' bubble and the figure gone and not back in the next frame",2026-11-23T18:14:10Z,"processed but unverified: nobody is counted as recruited"
+HUD,"food 666.3M, iron 1.0G, coin 21.4M, diamonds 11,113, Total Power 150,416,946 unchanged",2026-11-23T18:14:10Z,

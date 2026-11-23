@@ -1,0 +1,19 @@
+page,item,value,read_utc,note
+Store,end timer,"7d 08:03:21 at 17:56:39.323Z and 7d 08:03:15 at 17:56:45.076Z: ends 2026-12-01T02:00:00Z",2026-11-23T17:56:45Z,"the Store page runs one day longer than the other tabs"
+Lottery,end timer,"6d 08:02:59 at 17:57:01.260Z: ends 2026-11-30T02:00:00Z",2026-11-23T17:57:01Z,
+Gift of Thanks,end timer,"6d 08:02:53 at 17:57:07.272Z: ends 2026-11-30T02:00:00Z",2026-11-23T17:57:07Z,
+Login,end timer,"6d 08:02:44 at 17:57:15.980Z: ends 2026-11-30T02:00:00Z",2026-11-23T17:57:15Z,
+Store,currency and balance,"Thanksgiving tickets (roasted-turkey ticket icon): balance 6",2026-11-23T17:56:45Z,balance shown in red where not enough
+Store,row 1,"cornucopia-like item (name not shown); needs 100 tickets (6/100); limit 1; blue Go Obtain",2026-11-23T17:56:45Z,not pressed
+Store,row 2,"Lv.5 chest item; 100 tickets (6/100); limit 1; blue Go Obtain",2026-11-23T17:56:45Z,not pressed
+Store,row 3,"puzzle piece; 10 tickets (6/10); limit 10; blue Go Obtain",2026-11-23T17:56:45Z,not pressed
+Store,row 4,"gold trophy item; 1 ticket (6/1); limit 600; green Redeem (the only affordable row)",2026-11-23T17:56:45Z,not pressed
+Store,row 5,"cut off below the fold; only 'Limit: 40' visible",2026-11-23T17:56:45Z,not scrolled
+Store,badge and reminder,"tab badge 3; 'Exchange Reminder' box ticked",2026-11-23T17:56:45Z,
+Lottery,balance and costs,"10 tickets; Draw x1 costs 1 ticket; Draw x10 costs 10 tickets",2026-11-23T17:57:01Z,none pressed
+Lottery,round,"'Next Round 08:03:00' (the round closes 02:00Z); trophy bubble 'Waiting for results...'; Records and Gift Box buttons; Skip Animation unticked",2026-11-23T17:57:01Z,"prize list and odds sit behind info buttons: not read"
+Gift of Thanks,balances,"7 turkeys; 30 ingredients; Gift Turkey button x7; cooking pot with a red dot and a plus button; badge 1",2026-11-23T17:57:07Z,"no recipe cost and no sent limit shown on the page; 'Gift a turkey with your like' unticked"
+Gift of Thanks,rewards per gift,"lottery tickets, a cornucopia item, a Lv.5 chest, a puzzle piece",2026-11-23T17:57:07Z,
+Login,days,"Day 01 claimed; day 02 gold trophy x300; days 03 to 05 chest x10 each; day 06 Lv.5 chest x1; day 07 V1 gold chest x2; days 02 to 07 not claimable yet",2026-11-23T17:57:15Z,
+taps,"icon (598,160), Lottery tab (369,158), Gift of Thanks tab (519,158), Login tab (634,150), back arrow (175,930)",,"no Redeem, Obtain, Go, Draw, Gift, pot, claim or chest"
+HUD,"coin 21.2M, food 665.8M, iron 1.0G, oil 655.4K, diamonds 11,113, Total Power 150,416,946; icon badge 1 before and after",2026-11-23T17:57:35Z,unchanged

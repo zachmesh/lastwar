@@ -15,7 +15,7 @@ Emergency Center,Lv.20,245,268,glass tower with a red sign; later points drift 3
 Gear Factory,Lv.20,310,333,
 Food Warehouse,Lv.24,385,398,
 Component Factory,Lv.20,105,385,"a second one at (268,420)"
-Training Base,Lv.26,100,412,several Training Bases exist; four upgrades to Lv.25 run until 2026-11-24T09:20Z
+Training Base,Lv.26,100,412,several Training Bases exist; four upgrades to Lv.25 run until 2026-11-23T23:20:12Z (read 2026-11-23T18:07Z, 05:13:04 left; the earlier 2026-11-24T09:20Z was wrong)
 Chip Lab,Lv.20,478,255,from the D1 run
 Ginkgo Tree,Lv.1,115,188,a decoration
 "(store, no tag)",,437,348,"red and white building, opens the Cosmetics, Coupon and Crystal store"
@@ -27,3 +27,6 @@ Iron Mine,Lv.27,215,472,"dark pump-like structure, left side; read 2026-11-23T15
 Material Workshop,Lv.20,152,182,"blue and brown group, top left; read 2026-11-23T15:42:30Z"
 Secret Command Post,Lv.1,,,"outpost in the far-left corner after pan 3 (about 130,775 on that frame); read 2026-11-23T15:49:58Z, run c7387c"
 Oil Well,Lv.20,1090,340,"north-east wall beside grey tanks, off-screen right of the fresh frame (derived from two pans: drag 400 580 to 150 830, then 660 470 to 390 620; tap about 572 740 on the second frame); preview Lv.20 to 21 costs iron 8.5M, time 19:50:38 original and 09:20:18 effective; read 2026-11-23T15:54:02Z, run 884a03"
+Arena,Lv.1,575,300,"glowing ring or dome structure, upper right, under the mid-base trophy bubble; read 2026-11-23T18:01:45Z, run 2f61d4; the view shifts after selections"
+Drone Center,Lv.1,400,205,"next to the grey jet airstrip, top of the city, two round buttons; read 2026-11-23T18:02:15Z, run 2f61d4"
+Eternal Pyramid,Lv.3,250,200,"golden pyramid, upper left, two round buttons; read 2026-11-23T18:02:25Z, run 2f61d4"

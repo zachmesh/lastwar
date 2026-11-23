@@ -1,0 +1,14 @@
+item,value,read_utc,note
+first frame,"base, no dialog, no boarding banner",2026-11-23T18:05:35Z,
+phase,"Drone Boost, Contest Segment Lv.29-30, timer 03:54:11 (ends about 22:00Z)",2026-11-23T18:05:55Z,
+owner points,1000,2026-11-23T18:05:55Z,"= 10 stamina x 100: the 18:04:20Z radar Quick Execute (10 energy) counts under 'Use 1 Stamina +100' (inferred)"
+chest 1,"1,500 points, ruby value 2,360",2026-11-23T18:05:55Z,"locked, 500 points short"
+chest 2,"10,000 points, ruby value 4,800",2026-11-23T18:05:55Z,locked
+chest 3,"30,000 points, ruby value 11,800",2026-11-23T18:05:55Z,locked
+counter chest,9 of 18,2026-11-23T18:05:55Z,"not full, not bouncing, not tapped"
+ranking row,"rank 10, 94,900 points",2026-11-23T18:05:55Z,lags the live score (rule 7)
+scoring row 1,"Use 10 Drone Battle Data points: +1, Go",2026-11-23T18:05:55Z,not opened
+scoring row 2,"Use 1 Stamina: +100, Go",2026-11-23T18:05:55Z,"spends energy; its Go path is not known to avoid a march: not pressed"
+scoring row 3,"Buy Packs containing Diamonds: +30, Go",2026-11-23T18:05:55Z,purchase: red line
+claimed,none,2026-11-23T18:06:00Z,
+HUD after,"food 666.3M, iron 1.0G, coin 21.4M, oil 655.4K, energy 109, Total Power 150,416,946",2026-11-23T18:06:10Z,

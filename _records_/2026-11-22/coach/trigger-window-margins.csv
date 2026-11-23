@@ -1,0 +1,17 @@
+trigger,time_utc,inside_a_window,minutes_after_previous_window_end,minutes_before_next_window_start,nearest_window,status
+donations-pass-002 entry,11-23 21:15Z,no,145,645,after QW3,clear
+Lv.27 T9 batch complete (collect same day),11-23 19:56Z,no,66,724,after QW3,clear
+"builders free, four Training Base builds",11-23 23:20Z,no,270,520,after QW3,clear
+one-shot moved by the coordinator,11-23 23:21Z,no,271,519,after QW3,clear
+Oil Well chain -002 opens,11-24 08:41Z,no,16,1399,after QW4,clear
+Oil Well chain -003,11-24 18:02Z,no,577,838,after QW4,clear
+Oil Well chain -004,11-25 03:22Z,no,1137,278,before QW4,clear
+Oil Well chain -005,11-25 12:43Z,no,258,1157,after QW4,clear
+Oil Well chain -006,11-25 22:03Z,no,818,597,before QW4,clear
+Oil Well chain -007,11-26 07:24Z,no,1379,36,before QW4,clear
+Oil Well chain -008,11-26 16:44Z,no,499,916,after QW4,clear
+Oil Well chain -009,11-27 02:05Z,no,1060,355,before QW4,clear
+Oil Well chain -010,11-27 11:25Z,no,180,1235,after QW4,clear
+Food Output V Complete,11-24 17:30Z,no,545,870,after QW4,clear
+Iron Output V Complete,11-25 02:39Z,no,1094,321,before QW4,clear
+Lv.30 T10 batch complete,11-24 11:18Z,no,173,1242,after QW4,clear

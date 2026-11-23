@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-23T11:27:56Z
-expires_at: 2026-11-24T10:50:00Z
+expires_at: 2026-11-24T04:00:00Z
 planned_for:
-not_before: 2026-11-24T09:22:00Z
+not_before: 2026-11-24T02:05:00Z
 window: bounded construction speed ups on the three drill ground upgrades inside the Tuesday window
 est_minutes: 15
 serves: PL-08
@@ -24,7 +24,7 @@ lease_until:
 
 Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
 
-Serves: capacity source: bounded speed-ups on the Drill Ground upgrades (construction items first)
+Serves: PL-08
 
 ## Brief (planner, bounded speed-ups on the three Drill Ground upgrades, decision 2603 and Steer A's amendments)
 
@@ -40,5 +40,5 @@ Third unit, after units 001 and 002 have started the upgrades. Decision `_record
 Up to three runs, 10 steps each. Do not enqueue a chain successor.
 Tag text: beside every number from a building panel write its tag text (name and level above the building after the tap; `_records_/2026-11-22/coach/0255-tag-text-check.md`); none means [G]. Add a tag_text column.
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`; stop with one named reason, never improvise.
-Quiet-window margin: this start (09:21Z trigger) is 56 min after the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
+Quiet-window margin: this start (02:05Z, the Base Expansion duel day) is 5 h 55 min before the daily 08:00-08:25Z window; see `_records_/2026-11-22/queue-planning/2830-quiet-window-margins.md`.
 Cost cap, stated: 0.90 USD (the harness stops near 0.36 of it).

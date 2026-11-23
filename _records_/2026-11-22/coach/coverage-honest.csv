@@ -1,0 +1,6 @@
+window,executed,ranked_id,ranked_name,exempt,other_wording,no_serves_line,coverage_units,coverage_unit_hours,hours,serving_nothing_strict_h,serving_nothing_lenient_h,note
+last 6 h to 17:22Z,44,8,2,23,11,0,23%,39%,3.03,0.83,0.33,context
+last 12 h to 17:22Z,75,8,5,27,21,14,17%,30%,4.56,2.01,0.85,context; the coordinator's baseline is 15% and 26% on a window a few minutes earlier
+"since the serves requirement went live 09:51:47Z, units created after it",31,8,0,18,5,0,26%,50%,2.21,0.34,0.04,all 31 carry a serves line
+"since the cutover 17:30:53Z (the verdict), at 17:56Z",2,1,0,1,0,0,50%,46%,0.15,0.0,0.0,"n is 2; alarm on this basis (limit 60); matches the conformance tool's first reading: units 50%, unit-hours 46%, not ranked 1 unit 0.08 h of 0.15 h"
+last 12 h to 17:55Z (context),76,9,5,28,21,13,18%,31%,4.65,1.95,0.79,the tool reads 16% and 27% of 76 on a window a few minutes different

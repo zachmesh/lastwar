@@ -1,10 +1,10 @@
 ---
 title: Drill Ground Reference Sheet For The 09:20Z Builder Units 2540 2026-11-23
 created: 2026-11-23T03:04:00-08:00
-modified: 2026-11-23T07:50:00-08:00
+modified: 2026-11-23T10:30:00-08:00
 level: L0
-version: 1.6.0
-description: The reference the builder units for 2026-11-24T09:20Z point at - the four Drill Grounds with tap points and the pan, the measured upgrade previews with their tag texts, the funding plan and the hazards; the conversion procedure and speed-up use are on sheet 2541
+version: 1.7.0
+description: The reference the builder units for 2026-11-23T23:20Z (corrected: the builders are free at 23:20Z today; 09:20 was the Oil Well upgrade's duration) point at - the four Drill Grounds with tap points and the pan, the measured upgrade previews with their tag texts, the funding plan and the hazards; the conversion procedure and speed-up use are on sheet 2541
 status: done
 activity: queue-planning
 run_id: queue-planning-2026-11-23-0304-drill-ground-sheet

@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T16:19:00Z
+modified: 2026-11-23T18:14:00Z
 level: L2
-version: 0.17.0
+version: 0.18.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -22,11 +22,11 @@ Updated 2026-11-23 16:10Z (Mac UTC; quote `date -u`). Earlier versions are in gi
 
 ## Triggers (each dispatches the operator BY NAME; check the desktop lock first)
 
-Builders 2026-11-24T09:21Z `schedule-f3804b22`; forecast-refusal flip 2026-11-24T00:05Z `schedule-41383442`; Complete times 17:30:30Z `schedule-de14b612`. Quiet windows for the cu team: 08:00Z to 08:25Z daily and three one-offs today; during one, claim nothing, press nothing; the cu team takes the device token with `--exclusive`. A TIPS 'different device' dialog means STOP: never Confirm without the owner.
+Builders 2026-11-23T23:21Z `schedule-f3804b22` (they free at 23:20:12Z TODAY: the earlier 09:20Z was a misread of the Oil Well duration, corrected 18:13Z); forecast-refusal flip 2026-11-24T00:05Z `schedule-41383442`; Complete times 17:30:30Z `schedule-de14b612`. Quiet windows for the cu team: 08:00Z to 08:25Z daily and three one-offs today; during one, claim nothing, press nothing; the cu team takes the device token with `--exclusive`. A TIPS 'different device' dialog means STOP: never Confirm without the owner.
 
-## Oil Well chain (from 2026-11-24 09:21Z)
+## Oil Well chain (from 2026-11-23 23:21Z)
 
-Units `building-queues-oil-well-2026-11-24-001` to `-010` (Lv.20 to 30, iron only) sort last in `queue.py next`: DISPATCH EACH BY NAME at the real finish. After the operator reports unit N's finish time, create a one-shot at finish plus 30 s that dispatches N+1 and says to create the next. Earliest finishes: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`; Lv.24 to 25 may fall in the quiet window.
+Units `building-queues-oil-well-2026-11-24-001` to `-010` (Lv.20 to 30, iron only) sort last in `queue.py next`: DISPATCH EACH BY NAME at the real finish. After the operator reports unit N's finish time, create a one-shot at finish plus 30 s that dispatches N+1 and says to create the next. Earliest finishes: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`; The first finish is about 2026-11-24T08:41Z: after the 08:25Z quiet window.
 
 ## Respawn and landings
 
