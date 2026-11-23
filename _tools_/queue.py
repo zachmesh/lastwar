@@ -658,6 +658,106 @@ def _missing_serves(rel, text):
             f"from regulars.json)"]
 
 
+# The forecast ledger (the Strategist's, owner wish 2026-11-23: the strategy is observed): a live unit's serves should be a plan item
+# that has a row in `_records_/<date>/strategy/forecast-ledger.csv` (plan_item column), or an exempt word. Warning in validate;
+# a refusal in enqueue only under --require-forecast, which the coordinator switches on when the Strategist calls the ledger stable.
+FORECAST_LEDGER = re.compile(r"^_records_/([^/]+)/strategy/forecast-ledger\.csv$")
+FORECAST_EXEMPT = ("upkeep", "snapshot", "baseline")
+FORECAST_FILL = re.compile(r"^fill[- ]idle[- ]slot\b", re.I)
+PLAN_ITEM_ID = re.compile(r"^[A-Z]{2,4}-\d{1,3}$")
+
+
+def _parse_ledger(text):
+    """(plan item ids, reason): ids from the plan_item column, reason None; or (None, why it cannot be used)."""
+    import csv
+    import io
+    try:
+        reader = csv.DictReader(io.StringIO(text))
+        if "plan_item" not in (reader.fieldnames or []):
+            return None, "it has no plan_item column"
+        return {(row.get("plan_item") or "").strip() for row in reader} - {""}, None
+    except csv.Error:
+        return None, "it is not readable as CSV"
+
+
+def _repo_top(root):
+    out = subprocess.run(["git", "-C", root, "rev-parse", "--show-toplevel"], capture_output=True, text=True)
+    return out.stdout.strip() if out.returncode == 0 and out.stdout.strip() else os.path.dirname(os.path.abspath(root))
+
+
+def load_forecast_ledger(root, ref=""):
+    """(plan item ids, reason) of the newest forecast-ledger.csv by date folder: in the working tree, or at `ref` when one is given.
+    ids is None, with a reason, when there is no ledger or it cannot be read."""
+    if ref:
+        tree = subprocess.run(["git", "-C", root, "ls-tree", "-r", "--full-tree", "--name-only", ref, "--", "_records_"],
+                              capture_output=True, text=True)      # --full-tree: the pool root is a subdirectory, which ls-tree would stop at
+        names = sorted((n for n in tree.stdout.splitlines() if FORECAST_LEDGER.match(n)), key=lambda n: FORECAST_LEDGER.match(n).group(1))
+        if not names:
+            return None, "no forecast ledger at the ref"
+        shown = subprocess.run(["git", "-C", root, "show", f"{ref}:{names[-1]}"], capture_output=True, text=True)
+        return _parse_ledger(shown.stdout) if shown.returncode == 0 else (None, "the ledger cannot be read at the ref")
+    top = _repo_top(root)
+    dated = []
+    base = os.path.join(top, "_records_")
+    try:
+        for day in os.listdir(base):
+            if os.path.isfile(os.path.join(base, day, "strategy", "forecast-ledger.csv")):
+                dated.append(day)
+    except OSError:
+        pass
+    if not dated:
+        return None, "no forecast ledger found"
+    try:
+        with open(os.path.join(base, sorted(dated)[-1], "strategy", "forecast-ledger.csv"), encoding="utf-8") as fh:
+            return _parse_ledger(fh.read())
+    except (OSError, UnicodeDecodeError):
+        return None, "the ledger cannot be read"
+
+
+def forecast_class(serves, ids):
+    """Where a serves line stands against the ledger: ok, no-row (it names a plan item id the ledger has no row for), unknown (it is
+    neither a ledger plan item nor an exempt word) or unchecked (no ledger to read). Comma or semicolon separated parts all count."""
+    worst = "ok"
+    for part in re.split(r"[;,]", serves or ""):
+        part = " ".join(part.split())
+        if not part or part.lower() in FORECAST_EXEMPT or FORECAST_FILL.match(part):
+            continue
+        if ids is None:
+            verdict = "unchecked"
+        elif part in ids:
+            continue
+        else:
+            verdict = "no-row" if PLAN_ITEM_ID.match(part) else "unknown"
+        if worst == "ok" or (worst == "unchecked" and verdict != "unchecked") or (worst == "unknown" and verdict == "no-row"):
+            worst = verdict
+    return worst
+
+
+def forecast_warnings(units, ids, reason):
+    """Counts-only warnings for the live inbox units (rel -> serves): never a ledger row or a serves text."""
+    classes = {rel: forecast_class(serves, ids) for rel, serves in units.items()}
+    out = []
+    unchecked = sorted(r for r, c in classes.items() if c == "unchecked")
+    if unchecked:
+        out.append(f"forecast: {reason} ({len(unchecked)} live inbox unit(s) serve something that needs it and could not be "
+                   f"checked): {', '.join(unchecked[:5])}{' ...' if len(unchecked) > 5 else ''}")
+    for kind, text in (("no-row", "serve a plan item id that has no row in the forecast ledger"),
+                       ("unknown", "serve something that is neither a ledger plan item nor an exempt word (upkeep, snapshot, baseline, "
+                                   "fill idle slot)")):
+        bad = sorted(r for r, c in classes.items() if c == kind)
+        if bad:
+            out.append(f"forecast: {len(bad)} live inbox unit(s) {text}: {', '.join(bad[:5])}{' ...' if len(bad) > 5 else ''}")
+    return out
+
+
+def _inbox_serves(rel, text):
+    """(rel, serves) for a live inbox unit that has a serves line, else None (a missing one is already an error)."""
+    if rel.split("/", 1)[0] != "inbox" or not _frontmatter_top_keys(text)[1]:
+        return None
+    serves = " ".join(str(parse_frontmatter(text)[0].get("serves", "")).split())
+    return (rel, serves) if serves else None
+
+
 def _validate_unit_text(rel, text):
     """Pool-integrity problems in one unit file's text, as strings.
 
@@ -690,7 +790,7 @@ def _validate_unit_text(rel, text):
     return problems
 
 
-def validate_pool(root, warnings=None, tagging=None):
+def validate_pool(root, warnings=None, tagging=None, forecast=None):
     """Pool-integrity problems in the unit files, as strings.
 
     A bad merge resolution that lands on the records branch used to
@@ -724,6 +824,11 @@ def validate_pool(root, warnings=None, tagging=None):
                 warnings.extend(_unit_warnings(rel, text))
             if tagging is not None:
                 tagging.extend(_missing_serves(rel, text))
+            if forecast is not None and _inbox_serves(rel, text):
+                forecast.update([_inbox_serves(rel, text)])
+    if warnings is not None and forecast:
+        ids, reason = load_forecast_ledger(root)
+        warnings.extend(forecast_warnings(forecast, ids, reason))
     return problems
 
 
@@ -757,6 +862,7 @@ def validate_ref(root, ref, warnings=None, tagging=None):
     --full-name for the repo-root-relative filter below to
     hold (same pitfall as records_branch_done_units).
     """
+    forecast = {}
     try:
         listing = subprocess.run(
             ["git", "-C", root, "ls-tree", "-r", "--full-name",
@@ -798,6 +904,11 @@ def validate_ref(root, ref, warnings=None, tagging=None):
             warnings.extend(_unit_warnings(rel, shown.stdout))
         if tagging is not None:
             tagging.extend(_missing_serves(rel, shown.stdout))
+        if _inbox_serves(rel, shown.stdout):
+            forecast.update([_inbox_serves(rel, shown.stdout)])
+    if warnings is not None and forecast:
+        ids, reason = load_forecast_ledger(root, ref)
+        warnings.extend(forecast_warnings(forecast, ids, reason))
     return problems, None
 
 
@@ -820,7 +931,7 @@ def cmd_validate(args):
             return 1
         print(f"pool valid at {args.ref}{note}")
         return 0
-    problems = validate_pool(args.root, warnings, tagging) + tagging
+    problems = validate_pool(args.root, warnings, tagging, {}) + tagging
     for warning in warnings:
         print(f"warning: {warning}")
     for problem in problems:
@@ -3829,6 +3940,16 @@ def cmd_enqueue(args):
               f"(what it serves, one line); roster regulars inherit it from "
               f"regulars.json and {args.regular!r} is not in the roster")
         return 1
+    if getattr(args, "require_forecast", False):
+        ids, reason = load_forecast_ledger(root)
+        verdict = forecast_class(serves, ids)
+        if verdict != "ok":
+            what = {"unchecked": f"{reason}, so its serves line cannot be checked",
+                    "no-row": "its serves line names a plan item id that has no row in the forecast ledger",
+                    "unknown": "its serves line is neither a ledger plan item nor an exempt word (upkeep, snapshot, baseline, fill idle slot)"}[verdict]
+            print(f"refused: --require-forecast: {what} - serve a plan item the Strategist has put in the ledger, or one of the exempt "
+                  f"words; nothing queued")
+            return 1
     # Unretirable-window refusal (issue #859): the design defines
     # an empty expires_at as "no deadline" (task-unit-queue-design.md
     # section 6), so _expire_stale is gated on a value that is
@@ -6166,6 +6287,9 @@ def main(argv=None):
     p.add_argument("--max-attempts", type=int,
                    default=DEFAULT_MAX_ATTEMPTS)
     p.add_argument("--regulars-json", default="")
+    p.add_argument("--require-forecast", action="store_true",
+                   help="refuse a unit whose serves is not a plan item with a row in the newest forecast ledger or an exempt word "
+                        "(upkeep, snapshot, baseline, fill idle slot); off until the Strategist calls the ledger stable")
     p.set_defaults(fn=cmd_enqueue)
 
     p = sub.add_parser("list")

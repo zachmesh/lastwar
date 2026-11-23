@@ -1,8 +1,8 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T09:45:00Z
-version: 1.3.0
+modified: 2026-11-23T10:05:29Z
+version: 1.4.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
 
@@ -23,5 +23,7 @@ Each pool is a throwaway repository under /tmp with the tool's temp-dir and curr
 `LASTWAR_QUEUE_ALLOW_*` variables, so nothing touches the live pool.
 
 `test_next_expired.py`: `next` never names a unit whose window has closed (pick_key sorts by expiry first, so an expired unit used to lead the list), and `claim` refuses one by name.
+
+`test_forecast.py`: `validate` warns (never errors) for a live inbox unit whose serves names a plan item with no row in the newest `_records_/<date>/strategy/forecast-ledger.csv`, or is neither a ledger plan item nor an exempt word, and for a missing ledger when a unit needs it; counts and unit names only. `enqueue --require-forecast` refuses the same; off by default.
 
 Run: `python3 -m unittest discover -s _tools_/queue-tests`.
