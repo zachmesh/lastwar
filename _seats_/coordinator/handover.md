@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T16:10:00Z
+modified: 2026-11-23T16:19:00Z
 level: L2
-version: 0.16.0
+version: 0.17.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
 status: unverified
 grounded_in:
@@ -30,7 +30,7 @@ Units `building-queues-oil-well-2026-11-24-001` to `-010` (Lv.20 to 30, iron onl
 
 ## Respawn and landings
 
-Past 85 percent context, with the seat's handover under 500 words: `python3 _tools_/spawn-seat/spawn_seat.py --title '[Last War] <Seat>' --prompt-file <bootstrap>`; record the id in TEAM.yaml, the handover and /tmp/lw-new-operator-id.txt; tell Steer A; stand the old session down. Landings (Integrator; never push local main): stage explicit paths, commit, `git branch land/records-<UTC> HEAD`, verify in a CLEAN worktree (`check --base origin/main --landing`) and with `/tmp/lw-scan-branch.py`, hand over the name; after each merge `git fetch && git rebase --autostash origin/main`. No checkout, switch, reset or stash in the live tree.
+On the HARNESS meter (`session-relay inspect` context percent, not the seat's own estimate) at 88 percent or failing compaction, in a quiet window or a gap between units, never in a Complete or a plunder session, with the seat's handover under 500 words: `python3 _tools_/spawn-seat/spawn_seat.py --title '[Last War] <Seat>' --prompt-file <bootstrap>`; record the id in TEAM.yaml, the handover and /tmp/lw-new-operator-id.txt; tell Steer A; stand the old session down. Landings (Integrator; never push local main): stage explicit paths, commit, `git branch land/records-<UTC> HEAD`, verify in a CLEAN worktree (`check --base origin/main --landing`) and with `/tmp/lw-scan-branch.py`, hand over the name; after each merge `git fetch && git rebase --autostash origin/main`. No checkout, switch, reset or stash in the live tree.
 
 ## Facts to carry
 
