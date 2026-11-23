@@ -1,8 +1,8 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T13:40:23Z
-version: 1.5.0
+modified: 2026-11-23T14:47:41Z
+version: 1.6.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
 
@@ -25,5 +25,7 @@ needs it; counts and unit names only. `enqueue --require-forecast` refuses the s
 `test_require_forecast.py`: the switch `coordination.queue.require_forecast` in TEAM.yaml (off when absent) makes `enqueue`, the minting
 of `plan`, `sweep` and `sync`, and `scout_diff.py`'s enqueue calls refuse a unit with no ledger row; `--no-require-forecast` overrides and
 the refusal names it.
+
+`test_token_lease.py`: `token-acquire --lease-minutes N` (1 to 60, default 15, a renewal takes it again) and `--exclusive`, which makes `claim` refuse every other executor while the token is live (`claim --ignore-token` is the way past); an ordinary token never blocks a claim.
 
 Run: `python3 -m unittest discover -s _tools_/queue-tests`.
