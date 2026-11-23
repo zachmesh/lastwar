@@ -1,8 +1,8 @@
 ---
 title: How to enter
 created: 2026-11-23T07:18:19Z
-modified: 2026-11-23T07:18:19Z
-version: 0.1.0
+modified: 2026-11-23T15:05:38Z
+version: 0.2.0
 sequence: 3
 description: Base screen cart icon opens the shop on the HOT DEALS tab row.
 ---
@@ -22,3 +22,4 @@ description: Base screen cart icon opens the shop on the HOT DEALS tab row.
   not move the list.
 - Entry, 2026-11-10 2256: from the Alliance Techs tree, the panel X closed to the Alliance menu, the menu back arrow returned to the map, and the cart icon at (903,63) opened the shop on HOT DEALS, first try each. The cart point (903,63) is confirmed again as the shop entry.
 
+2026-11-23: the cart now opens on Official Event and the tab row has no Hot Sale Packs tab; see [shop state](shop-state.md).

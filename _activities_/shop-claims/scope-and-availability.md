@@ -1,8 +1,8 @@
 ---
 title: Scope and availability
 created: 2026-11-23T07:18:19Z
-modified: 2026-11-23T07:18:19Z
-version: 0.1.0
+modified: 2026-11-23T15:05:38Z
+version: 0.2.0
 sequence: 5
 description: Only already owned passes pay pickups.
 ---
@@ -17,3 +17,4 @@ description: Only already owned passes pay pickups.
 - The pass list re-sorts after a claim, claimed cards move - scroll
   to find the card that is still claimable.
 
+2026-11-23: a $4.99 button can be Renew on an owned pass (both weekly cards read owned); never tap a price button, Renew included; see [shop state](shop-state.md).

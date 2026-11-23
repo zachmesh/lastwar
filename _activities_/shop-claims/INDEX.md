@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T09:39:11Z
+modified: 2026-11-23T15:05:38Z
 level: L1
-version: 1.64.0
+version: 1.65.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -79,7 +79,7 @@ Goal: claim every free shop item due and spend nothing.
 ## Route
 1. Check LastWar has a window and is frontmost.
 2. Open the shop from the base cart icon.
-3. Hot Deals: tap Free Claim on a pack with no price.
+3. Hot Deals banner: tap Free Claim on a pack with no price (none 2026-11-23).
 4. Weekly Pass tab: Free Supply should read Claimed.
 5. Read each pass card; only an owned pass shows Claim.
 6. Super Monthly Pass tab: Claim Reward once if owned.
@@ -87,9 +87,9 @@ Goal: claim every free shop item due and spend nothing.
 8. Back to base; record results.
 
 ## Rules
-- R1 Check window and device before claiming; if lost, stop the pass. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R1 Check window and device before claiming; if lost, stop. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
 - R2 Never tap a price button, Renew, Extension or Take All. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
-- R3 Get Now and Buy x1 cards are offers; only owned passes pay. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
+- R3 A $4.99 button can be Renew on an owned pass; Get Now and Buy x1 are offers. Status: tested. 2026-11-23. `_records_/2026-11-22/shop-claims/1457-queue-run.md`
 - R4 Reset is 18:00:00 (02:00 UTC), not 19:00. Status: verified. 2026-11-22. `_records_/2026-11-22/shop-claims/2044-queue-run.md`
 - R5 Free Supply usually auto-claims on open; if unclaimed, tap it. Status: verified. 2026-11-11. `_records_/2026-11-11/shop-claims/0656-queue-run.md`
 
@@ -101,7 +101,7 @@ Goal: claim every free shop item due and spend nothing.
 ## Open questions
 - Does check-in FREE GIFT pay in game? test: foreground-click Go once settled; run by operator.
 - Are the Iron and Coin cards below the fold owned? test: press-drag, read both; run by operator.
-- Does a Season hub return (Season Photo, OD-20261101-03)? test: look for the base Season icon; run by operator.
+- What is the G tab, and did Hot Sale Packs move? test: drag the tab bar; run by operator.
 
 ## Numbers
 Numbers, 7 days to 2026-11-23: 12 units; done 25%; done-or-by-design 25%; partial 2, failed 7; mean steps 6 (2 of 12 report it); top blocker f missing precondition (6 of 9 non-done).
@@ -109,6 +109,5 @@ Numbers, 7 days to 2026-11-23: 12 units; done 25%; done-or-by-design 25%; partia
 ## Links
 - [Rule digest](rule-digest.md)
 - [All catalogs](article-catalogs.md)
-- [Newest record](../../_records_/2026-11-22/shop-claims/2044-queue-run.md)
-- [Season Photo record](../../_records_/2026-11-22/shop-claims/2354-queue-run.md)
-- [How to enter](how-to-enter.md)
+- Newest record `_records_/2026-11-22/shop-claims/1457-queue-run.md`
+- [Shop state](shop-state.md)
