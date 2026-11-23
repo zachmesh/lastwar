@@ -44,3 +44,7 @@ Agents: toolsmith 6, coach 6, planner 4, scribe 3, scout 1. Priorities: P2 5, P3
 ## Next
 
 Slice 3 is the next 20 (#7xx and below). Rows stay in the same CSV format, at most 20 per slice.
+
+## Correction (appended 2026-11-23T04:56Z)
+
+The Notes line listing six ticker-era rows is wrong. The CSV, which the Steward applied, assigns the coach #734, #736, #740, #741, #742 and #743 (#734 is retro discipline, not ticker-era; five of the six are obsolete candidates) and assigns #737 to the toolsmith. #737 stays with the toolsmith; the toolsmith verifies and closes it if obsolete. Slice 2 is applied and read back 20 of 20.

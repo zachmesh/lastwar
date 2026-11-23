@@ -1,0 +1,21 @@
+issue,labels,title,epic,agent,priority,note
+732,tooling,Tool-developer held-patch duplication,#863,lastwar toolsmith,P3,held-patch duplication
+731,records,pr-integration mirror records missing for ALL Nov 17 passes,#865,lastwar scribe,P3,"historical, pr-integration mirror records"
+730,"tooling,records",Claim-before-read process failure recurred third and fourth time,#865,lastwar coach,P3,ticker-era; verify and close if obsolete
+729,"records,play","Window lost, duel day 2 lost whole",#861,lastwar coach,P3,historical duel loss
+728,records,pr-catchall chain gaps now four,#865,lastwar coach,P3,ticker-era; verify and close if obsolete
+727,records,pr-integration mirror records missing for most Nov 16 passes,#865,lastwar scribe,P3,"historical, pr-integration mirror records"
+726,"tooling,records","_queue_/completed/ completion markers undocumented, stranded units unrestored",#865,lastwar toolsmith,P3,completion markers
+725,records,Last-success marker contradicted by the pool,#865,lastwar planner,P3,
+724,tooling,Live-tool drift 1.5.1 vs 1.5.4,#864,lastwar toolsmith,P3,may be obsolete; verify
+723,records,Planner gap Nov 13 to Nov 14,#865,lastwar coach,P3,historical gap
+722,records,Retro gap Nov 12 to Nov 14,#865,lastwar coach,P3,historical gap
+721,"tooling,records","VPS delivery break, about 80 hours",#864,lastwar toolsmith,P3,previous host delivery break
+720,"records,play","Mac-offline outage, zero play Nov 12 to Nov 15",#861,lastwar coach,P3,historical outage
+712,tooling,Plan stages an already-expired zero-sweep unit and duplicates tonight's sweep ,#861,lastwar toolsmith,P2,plan stages an expired zero-sweep unit
+709,tooling,pass_worktree.py reuses an existing branch instead of creating from --base: st,#864,lastwar toolsmith,P3,
+705,tooling,"Sync reap/expire acts on the worktree snapshot, not the live pool - expired un",#861,lastwar toolsmith,P2,"reap acts on the snapshot, not the live pool"
+694,tooling,Ticker passes running queue.py from the main-tree checkout get a stale tool: n,#864,lastwar toolsmith,P3,may be fixed by the currency check; verify
+689,tooling,Control channel locks with outcome_unknown after a session drop: input blocked,#864,lastwar toolsmith,P2,control lock after a session drop
+688,"idea,tooling",No tool measures tap coordinates from a screenshot image (IMP-20261101-08 pron,#861,lastwar toolsmith,P3,tap-coordinate measurement tool
+682,records,Stranded ticker-2105 delivery: commit 546fa2cc7 (radar 1803 + survivors 1803) ,#865,lastwar planner,P3,previous host delivery
