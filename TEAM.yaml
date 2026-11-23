@@ -6,7 +6,7 @@
 schema: reflection/session-team/v3
 version: 0.4.0
 title: Last War continuous-play team
-updated_at: '2026-11-23T04:04:00Z'
+updated_at: '2026-11-23T04:14:00Z'
 state: active
 runtime: dsh
 project_path: .
@@ -112,6 +112,10 @@ oncall: zhenc
 # session-eb024f72-e661-4a77-9303-66af95dbcfd1 to its own session and took
 # over the loop clock (coordination.execution.loop_schedule_id). The Steward
 # stays outside the roster as the owner gateway (top-level `steward`).
+# 2026-11-23T04:12Z: migration M2 - the operator moved from the Steward's
+# child session 238b9ce7-1c06-4bc5-9901-42aa8b27e087 (unreachable from the
+# coordinator: DSH routes it only through its parent) to the top-level
+# session below. All eight seats are now top-level sessions.
 seats:
   - key: coordinator
     principal: zhenc
@@ -140,8 +144,8 @@ seats:
     handover_ref: _seats_/coordinator/handover.md
   - key: operator
     principal: zhenc
-    session_id: session-238b9ce7-1c06-4bc5-9901-42aa8b27e087
-    session_started: '2026-11-23T03:08:00Z'
+    session_id: session-b718c7de-6aab-4159-b87e-41aa424237e9
+    session_started: '2026-11-23T04:12:26Z'
     title: '[Last War] Operator'
     assignment: assigned
     roles:
