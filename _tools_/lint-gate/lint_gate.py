@@ -27,6 +27,11 @@ from pathlib import Path
 VERSION = "1.7.0"
 GATE_RULES = ("document-concision", "entry-points", "type-instance-trees")
 PRIVACY_RULE, PRIVACY_FILE, PRIVACY_CACHE = "privacy", "privacy-denylist.txt", "lint-gate-privacy-cache.json"
+# The playbook cards (OD-20261123-15): `_tools_/playbook-check/playbook_check.py changed` runs on the changed _activities_/<a>/INDEX.md pages.
+# Only a card that lost its shape or passes the card word cap blocks; every other finding (staleness, an unresolved path, too many rules...)
+# is a warning with counts; an INDEX that is not a card is skipped; a repository without the tool, or a tool that cannot run, is silent or a warning.
+PLAYBOOK_RULE, PLAYBOOK_TOOL, PLAYBOOK_BLOCKING = "playbook-card", "_tools_/playbook-check/playbook_check.py", ("card-shape-lost", "card-too-long")
+PLAYBOOK_TIMEOUT = 60
 EXPECT = re.compile(r"^#\s*expect-min\s+(\d+)\s*$", re.IGNORECASE)
 MARKER = re.compile(r"^#\s*marker:\s*(.*\S)\s*$", re.IGNORECASE)
 EXPECT_MESSAGE = "denylist does not match as expected (regex versus fixed string?)"
@@ -491,6 +496,33 @@ def privacy_scan_staged(top: Path, staged: bool = True) -> dict:
                     seen.add(line)
                     result["hits"].append(("line", safe_path(path or "?", patterns), line, n))
     return result
+
+
+def playbook_findings(top: Path, staged: bool, base: str) -> tuple[list[str], list[str]]:
+    """(blocking lines, warning lines) from playbook_check over the changed activity INDEX pages. Counts and codes only: nothing from a card."""
+    tool = top / PLAYBOOK_TOOL
+    if not tool.is_file():
+        return [], []
+    command = [sys.executable, "-B", str(tool), "--root", str(top), "--format", "json", "changed"] + (["--staged"] if staged else ["--base", base])
+    env = {k: v for k, v in os.environ.items() if not k.startswith("GIT_") or k == "GIT_INDEX_FILE" and staged}
+    try:
+        out = subprocess.run(command, capture_output=True, text=True, timeout=PLAYBOOK_TIMEOUT, env=env)
+        data = json.loads(out.stdout)
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return [], [f"{PLAYBOOK_RULE}: the card check could not run; nothing was blocked"]
+    block, other = [], {}
+    for card in data.get("cards", []):
+        path = f"_activities_/{card.get('activity')}/INDEX.md"
+        for code in sorted(card.get("errors", {})):
+            if code in PLAYBOOK_BLOCKING:
+                block.append(f"[{PLAYBOOK_RULE}] {path}: {code}" + (" (a card is 300 words or fewer)" if code == "card-too-long" else
+                                                                  " (it was a card and no longer has its Route and Rules sections)"))
+            else:
+                other[code] = other.get(code, 0) + card["errors"][code]
+        for code, n in card.get("warnings", {}).items():
+            other["warn " + code] = other.get("warn " + code, 0) + n
+    warn = [f"{PLAYBOOK_RULE}: card finding(s) that do not block - " + ", ".join(f"{k} {v}" for k, v in sorted(other.items()))] if other else []
+    return block, warn
 
 
 def print_privacy_hits(hits: list, limit: int = 40) -> None:
@@ -1005,9 +1037,12 @@ def cmd_check(a) -> int:
     started = time.time()
     root = Path(a.root).resolve()
     top = repo_top(root)
-    rules = tuple(r for r in (a.rules or os.environ.get("LINT_GATE_RULES") or ",".join(GATE_RULES + (PRIVACY_RULE,))).split(",") if r)
+    rules = tuple(r for r in (a.rules or os.environ.get("LINT_GATE_RULES") or ",".join(GATE_RULES + (PRIVACY_RULE, PLAYBOOK_RULE))).split(",") if r)
     if a.landing:
         require_landing_ready(top, a, rules)
+    play_block, play_warn = playbook_findings(top, a.staged, a.base or "HEAD") if PLAYBOOK_RULE in rules else ([], [])
+    for w in play_warn:
+        print(f"lint-gate: warning: {w}")
     privacy = None
     if PRIVACY_RULE in rules:
         privacy = privacy_scan_staged(top, a.staged)
@@ -1032,9 +1067,11 @@ def cmd_check(a) -> int:
             report = run_linter(paths, top, ["--base", ref], FULL_TIMEOUT, staged=False)
             mode = f"base {ref}"
     except GateError:
-        if hits or failures or added:          # these block even when the linter cannot run
+        if hits or failures or added or play_block:          # these block even when the linter cannot run
             print_privacy_hits(hits)
-            print(f"lint-gate: {len(hits) + len(failures) + len(added)} finding(s) block this commit; the linter could not run.")
+            for line in play_block:
+                print(f"BLOCKED {line}")
+            print(f"lint-gate: {len(hits) + len(failures) + len(added) + len(play_block)} finding(s) block this commit; the linter could not run.")
             return 1
         raise
     base = BaseTree(top, ref, staged=a.staged)
@@ -1047,17 +1084,21 @@ def cmd_check(a) -> int:
     print_privacy_hits(hits)
     for f in blocking:
         print(f"BLOCKED {short(f)}")
+    for line in play_block:
+        print(f"BLOCKED {line}")
     seconds = time.time() - started
     seen = (f"privacy {privacy['patterns']} pattern(s) over {privacy['lines']} added line(s)" if privacy and privacy["patterns"]
             else "privacy not checked")
     note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt finding(s) ignored, "
             f"{other} error(s) of other rules ignored, {seen}")
-    total = len(blocking) + len(hits) + len(failures) + len(added)
+    total = len(blocking) + len(hits) + len(failures) + len(added) + len(play_block)
     if total:
         print(f"lint-gate: {total} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
         if blocking:
             print("Trim the document under 500 words (300 is recommended) or move measured rows to a CSV beside it; "
                   "a folder needs its INDEX.md. See _conventions_/core-conventions/document-concision.md.")
+        if play_block:
+            print("Playbook cards: keep a card at 300 words or fewer with its Route and Rules sections (_tools_/playbook-check/INDEX.md).")
         if hits:
             print("Privacy: take the identifier out of the added line or file name (see "
                   "_conventions_/local-conventions/account-privacy.md); the denylist is local and never committed.")
