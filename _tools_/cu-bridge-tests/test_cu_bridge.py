@@ -2,6 +2,11 @@
 JSON-RPC lines of the real one) runs under a temporary copy of the bridge in /tmp, so no real computer-use server, device
 or run is touched.
 
+Nothing here sleeps on a guess: every wait is on a condition (a marker file, a process gone, a reachable daemon) with a
+generous ceiling, so a loaded machine slows a test but cannot fail it. Every test is SKIPPED while `_queue_/claimed/` of
+this checkout or of the main checkout holds a file (a live run holds the one desktop and its device token), and the fake
+server runs under a seat name of its own, so a test can never hold or contend for what the operator's run needs.
+
 Run: python3 -m unittest discover -s _tools_/cu-bridge-tests
 """
 from __future__ import annotations
@@ -46,7 +51,13 @@ for line in sys.stdin:
             if rid not in runs:
                 text(mid, {"error": "no run in this server"})
             else:
-                time.sleep(min(int(args.get("wait_seconds", 0)), 10))
+                if int(args.get("wait_seconds", 0)) > 0 and os.environ.get("FAKE_INFLIGHT"):
+                    open(os.environ["FAKE_INFLIGHT"], "w").close()       # tell the test the poll has reached the server
+                    end = time.time() + 120
+                    while time.time() < end and not os.path.exists(os.environ.get("FAKE_RELEASE", "")):
+                        time.sleep(0.05)                                  # held until the test releases it
+                elif int(args.get("wait_seconds", 0)) > 0:
+                    time.sleep(min(int(args.get("wait_seconds", 0)), 10))
                 text(mid, {"state": runs[rid]})
         elif name == "computer_use_control":
             rid = args.get("run_id")
@@ -59,8 +70,37 @@ for line in sys.stdin:
 '''
 
 
+def live_run_holds_the_desktop() -> str | None:
+    """The claimed folder that holds a file (a live run, or its device token), in this checkout or the main one."""
+    if os.environ.get("CU_TESTS_IGNORE_LIVE_RUN") == "1":
+        return None
+    repo = HERE.parent.parent
+    folders = {repo / "_queue_" / "claimed"}
+    common = subprocess.run(["git", "-C", str(repo), "rev-parse", "--git-common-dir"], capture_output=True, text=True).stdout.strip()
+    if common:
+        main = (repo / common).resolve().parent
+        folders.add(main / "_queue_" / "claimed")
+    for folder in sorted(folders):
+        if folder.is_dir() and any(p.suffix == ".md" for p in folder.iterdir()):
+            return str(folder)
+    return None
+
+
+def wait_for(condition, timeout=90, step=0.1):
+    """True as soon as the condition holds, False after the ceiling; never a fixed sleep."""
+    end = time.time() + timeout
+    while time.time() < end:
+        if condition():
+            return True
+        time.sleep(step)
+    return bool(condition())
+
+
 class BridgeCase(unittest.TestCase):
     def setUp(self):
+        held = live_run_holds_the_desktop()
+        if held:
+            self.skipTest(f"a live run holds a file in {held}; set CU_TESTS_IGNORE_LIVE_RUN=1 to run anyway")
         self.root = Path(tempfile.mkdtemp(prefix="cu-test-", dir="/tmp"))     # short path: unix sockets are length limited
         tools = self.root / "_tools_"
         tools.mkdir()
@@ -70,8 +110,10 @@ class BridgeCase(unittest.TestCase):
         server.mkdir(parents=True)
         (server / "server.mjs").write_text(FAKE_SERVER)
         (self.root / "key").write_text("fake-key\n")
+        self.inflight, self.release = self.root / "inflight", self.root / "release"
         self.env = dict(os.environ, CU_PROJECT=str(self.root / "fake"), CU_KEY_FILE=str(self.root / "key"),
-                        CU_NODE_BIN=sys.executable)
+                        CU_NODE_BIN=sys.executable, CU_SEAT=f"cu-test-{self.root.name[-8:]}",
+                        FAKE_INFLIGHT=str(self.inflight), FAKE_RELEASE=str(self.release))
         self.addCleanup(self.cleanup)
 
     def cleanup(self):
@@ -103,11 +145,8 @@ class BridgeCase(unittest.TestCase):
             return False
         return True
 
-    def gone(self, *pids, wait=8):
-        end = time.time() + wait
-        while time.time() < end and any(self.alive(p) for p in pids):
-            time.sleep(0.2)
-        return not any(self.alive(p) for p in pids)
+    def gone(self, *pids, wait=60):
+        return wait_for(lambda: not any(self.alive(p) for p in pids), wait, 0.1)
 
     def info(self, pid):
         return json.loads((self.root / "_tools_/state" / f"cu_bridge-{pid}.json").read_text())
@@ -142,9 +181,9 @@ class Restart(BridgeCase):
         new = result["started"]
         self.assertNotEqual(new, old)
         self.assertEqual(self.serve_pids(), [new])                             # no orphan serve process
+        self.assertTrue(wait_for(lambda: self.listing()["daemons"][0]["reachable"]), "the new daemon never answered")
         listing = self.listing()
         self.assertEqual([d["pid"] for d in listing["daemons"]], [new])
-        self.assertTrue(listing["daemons"][0]["reachable"])
         entry = next(x for x in listing["runs"] if x["run_id"] == run)
         self.assertEqual((entry["state"], entry["daemon"]), ("lost", "daemon gone"))
         status = self.run_bridge("status", "--run-id", run)
@@ -179,9 +218,7 @@ class OneDaemon(BridgeCase):
                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         try:
             self.assertTrue(self.gone(first, child))
-            end = time.time() + 15
-            while time.time() < end and self.serve_pids() != [proc.pid]:
-                time.sleep(0.2)
+            self.assertTrue(wait_for(lambda: self.serve_pids() == [proc.pid], 90))
             self.assertEqual(self.serve_pids(), [proc.pid])
         finally:
             proc.terminate()
@@ -192,14 +229,16 @@ class OneDaemon(BridgeCase):
         run = self.start_run()
         poll = subprocess.Popen([sys.executable, "-B", self.bridge, "status", "--run-id", run, "--wait", "4"], env=self.env,
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        time.sleep(1)
-        started = time.time()
-        r = self.run_bridge("ensure")                                          # a ping is answered while the poll waits
+        self.addCleanup(self.release.touch)                                     # never leave the fake server holding
+        self.assertTrue(wait_for(self.inflight.exists), "the poll never reached the server")
+        r = self.run_bridge("ensure")                                          # answered while the poll is still held
+        self.assertIsNone(poll.poll(), "the poll finished before ensure was answered, so nothing was proven")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertLess(time.time() - started, 3)
         self.assertEqual(json.loads(r.stdout)["pid"], pid)
         self.assertFalse(json.loads(r.stdout)["started"])
-        poll.communicate(timeout=30)
+        self.release.touch()
+        poll.communicate(timeout=120)
+        self.assertEqual(poll.returncode, 0)
         self.assertEqual(self.serve_pids(), [pid])
 
 

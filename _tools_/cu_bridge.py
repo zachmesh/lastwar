@@ -206,11 +206,15 @@ def _daemon_info(pid: int) -> dict:
         pass
     sock = _sock_for(pid)
     reachable = False
-    if sock.exists():
+    for timeout in (3, 6, 10):                 # a loaded machine can starve a healthy daemon for seconds: ask again,
+        if not sock.exists() or not _pid_alive(pid):       # slower, before calling it unreachable (`control stop` ends orphans)
+            break
         try:
-            reachable = _send({"cmd": "ping"}, timeout=3, sock=sock).get("ok") is True
+            reachable = _send({"cmd": "ping"}, timeout=timeout, sock=sock).get("ok") is True
         except Exception:
             reachable = False
+        if reachable:
+            break
     return {"pid": pid, "alive": _pid_alive(pid), "reachable": reachable, "orphan": _pid_alive(pid) and not reachable,
             "registered": bool(registry), "mcp_pid": registry.get("mcp_pid"), "started_at": registry.get("started_at"),
             "socket": str(sock)}
