@@ -1,9 +1,9 @@
 ---
 title: Seat Protocol
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:11:00-08:00
+modified: 2026-11-23T09:41:36Z
 level: L2
-version: 0.1.0
+version: 0.2.0
 description: The shared rules every seat follows when it is woken
 status: unverified
 grounded_in:
@@ -49,3 +49,7 @@ A reply without an artifact path or a measurement is `partial`, not `done`.
 - An assignment is bounded by its question, its evidence and its completion
   condition. When the condition is met, stop; do not expand the scope.
 - Append-only records are never rewritten. A correction is a new entry.
+
+## Respawn
+
+Spawn a seat only with `_tools_/spawn-seat/spawn_seat.py`, never a bare `session-relay spawn`, which keeps the wrong default model. Read the model back with `session-relay inspect`: `claude-sonnet-5-5/xhigh`. The checklist is in the [model policy](../_conventions_/local-conventions/team-organization-sections/model-policy.md) (OD-20261123-16).
