@@ -224,6 +224,35 @@ class Check(Case):
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
         self.assertIn("positive-control-failed", r.stdout)
 
+    def test_a_gate_that_cannot_run_blocks_the_landing_and_an_unreadable_base_fails_early(self):
+        real = str(LINT_GATE)
+        gate = self.tmp / "cannot_run_gate.py"
+        gate.write_text("import subprocess, sys\nif sys.argv[1] == 'check':\n    print('lint-gate: cannot run: made up', file=sys.stderr)\n"
+                        f"    sys.exit(2)\nsys.exit(subprocess.run([sys.executable, {real!r}, *sys.argv[1:]]).returncode)\n")
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "ok\n"})
+        r = self.run_tool("check", "work/clean", "--seat", "toolsmith", "--lint-gate", str(gate))
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("lint_gate_exit: 2", r.stdout)
+        self.assertIn("lint-gate-could-not-run", r.stdout)
+        self.assertNotIn("reasons: lint-gate\n", r.stdout)
+        self.assertEqual(self.run_tool("push", "work/clean").returncode, 3)                # nothing passed, so nothing is pushed
+        bad = self.run_tool("check", "work/clean", "--seat", "toolsmith", "--base", "origin/nope", "--lint-gate", str(LINT_GATE))
+        self.assertEqual(bad.returncode, 1)
+        self.assertIn("base-unreadable", bad.stdout)
+        self.assertNotIn("changed_files", bad.stdout)                                      # it stopped before scanning an empty range
+        self.assertEqual(self.log_lines()[-1]["reasons"], ["base-unreadable"])
+
+    def test_the_landing_form_is_what_the_check_asks_the_gate_for(self):
+        spy = self.tmp / "spy_gate.py"
+        spy.write_text("import subprocess, sys\nopen(%r, 'a').write(' '.join(sys.argv[1:4]) + '\\n')\n"
+                       "sys.exit(subprocess.run([sys.executable, %r, *sys.argv[1:]]).returncode)\n" % (str(self.tmp / "gate-calls.txt"), str(LINT_GATE)))
+        self.branch("work/clean", {"_tools_/INDEX.md": TOOLS_INDEX + "ok\n"})
+        r = self.run_tool("check", "work/clean", "--seat", "toolsmith", "--lint-gate", str(spy))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        calls = (self.tmp / "gate-calls.txt").read_text()
+        self.assertIn("check --base origin/main", calls)
+        self.assertNotIn("check --staged", calls)
+
     def test_named_tests_run_in_the_clean_worktree_and_a_failure_blocks(self):
         self.branch("work/good", {"_tools_/t-tests/test_x.py": PASSING + "# touched\n"})
         r = self.check("work/good", "toolsmith", "--test", "_tools_/t-tests")

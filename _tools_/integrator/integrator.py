@@ -288,6 +288,11 @@ def cmd_check(a, root):
     branch = named_branch(a.branch)
     sha = resolve(root, branch)
     base = a.base
+    if not git(root, "rev-parse", "--verify", "--quiet", f"{base}^{{commit}}", check=False).stdout.strip():
+        # an unreadable base would make the diff and the log ranges empty, and an empty scan reads as a pass
+        say(f"check {branch} head {sha[:10]} against {base}: FAIL\n  reasons: base-unreadable")
+        log_action(root, "check", branch=branch, head=sha, base=base, seat=a.seat, result="fail", reasons=["base-unreadable"])
+        return 1
     patterns = denylist_patterns(root)
     reasons, counts = [], {}
     if not patterns:
@@ -335,10 +340,12 @@ def cmd_check(a, root):
                            "wrap_aware_files_matching": census_files})
             if files or lines or names or msg_hits or who_hits or census_files:
                 reasons.append("privacy-matches")
-        lint = run([sys.executable, "-B", lint_gate_path(a), "check", "--base", base, "--root", str(wt)])
+        lint = run([sys.executable, "-B", lint_gate_path(a), "check", "--base", base, "--landing", "--root", str(wt)])
         counts["lint_gate_exit"] = lint.returncode
         counts["lint_gate_blocked"] = lint.stdout.count("BLOCKED")
-        if lint.returncode:
+        if lint.returncode == 2:                          # OD-20261123-06: a landing waits until the gate can run
+            reasons.append("lint-gate-could-not-run")
+        elif lint.returncode:
             reasons.append("lint-gate")
         for folder in a.test or []:
             out = run([sys.executable, "-B", "-m", "unittest", "discover", "-s", str(wt / folder)])
