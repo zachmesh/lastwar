@@ -1,82 +1,21 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-23T04:03:00Z
-version: 1.12.0
+modified: 2026-11-23T08:38:25Z
+version: 1.13.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
 ---
 
-# Local conventions
+# Local Conventions
 
-Instance folder. Holds the articles that state how the adopted format works
-in this repository.
+The local convention articles of this repository. This document was split verbatim into 3 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
 
-## Contents
+- [Local conventions](local-conventions.md) - Instance folder.
+- [Contents part 1](contents-section-p1.md) - contents-section - Typed-folder adoption — the pinned source conventions, the constitution clauses in force, and the...
+- [Contents part 2](contents-section-p2.md) - contents-section - Daily collection ledger — the master list of everything collectible or due in one...
 
-- [Typed-folder adoption](typed-folder-adoption.md) — the pinned source
-  conventions, the constitution clauses in force, and the local type registry.
-- [Recording rules](recording-rules.md) — evidence, language, approvals and
-  append-only rules for knowledge, tasks, activities and play records.
-- [Account privacy](account-privacy.md) — the executor rule against publishing
-  game-account identifiers, names, personal account data and identifying combinations.
-- [Task intake workflow](task-intake-workflow.md) — how a newly named task
-  is checked against the task types, registered if missing, executed if
-  new, and only checked and updated if it already exists.
-- [Task unit queue design](task-unit-queue-design.md) — the design
-  the routine runs on: short task units drawn from a file queue
-  instead of long segment runs, the execution discipline rules,
-  the perception layer contract, and the retro review mechanism
-  of section 14.
-- [Miss audit 2026-10-31](miss-audit-2026-10-31.md) — the root cause
-  audit of every non-done queue unit of 2026-10-30 and 2026-10-31,
-  with the owner expanded collection checklist checked line by line.
-- [Reflection 2026-10-31](reflection-2026-10-31.md) — the reflection
-  on that audit, with every fix mapped to the file it landed in.
-- [Loop review 2026-10-31](loop-review-2026-10-31.md) — the review of
-  whether the feedback and improvement loop is closed, with the four
-  open links filed for the first retro.
-- [Team organization](team-organization.md) — the roster, cadence, communication contract, failure playbooks and migration plan for the eight top-level DSH seats.
-- [Continuous play team](continuous-play-team.md) — the operating model
-  for the durable DSH team that plays continuously and measures its
-  execution, its discovery and its own learning rate.
-- [Evaluation metrics](evaluation-metrics.md) — the specification for
-  measuring the play system itself: execution efficiency per task
-  type, perception completeness and discovery generalisation, retro
-  effectiveness, the measured impact of the tool developer and the
-  knowledge organiser, and loop health, with the monitoring
-  thresholds the daily retro enforces.
-- [Ops execution records](ops-execution-records.md) — a
-  mental-model convention for the whole repository, not only a
-  record format: what is recorded is always an execution,
-  never a session, and every activity of the loop (game
-  execution, perception, planning, retro, tool development,
-  knowledge organisation, PR integration) is itself an
-  execution that leaves a structured record the retro measures
-  with one ruler. It operationalises, for the loop's own work,
-  the single-source-of-truth statement of the task unit queue
-  design's section 14, and is cross-referenced with it rather
-  than redefining it.
-- [Push and PR policy](push-and-pr-policy.md) — the two-tier push
-  policy the owner approved on 2026-10-31: execution records,
-  queue state, logs and tool state push straight to main, while
-  load-bearing knowledge and code (tools, conventions, activity
-  profiles, the regulars) land by pull request through the VPS
-  `gh` route, enforced by discipline and the retro audit while
-  the Free plan offers no branch protection.
-- [Daily collection ledger](daily-collection-ledger.md) — the master
-  list of everything collectible or due in one reset day, each line
-  with the live read that closes it, walked by the pre-reset zero
-  sweeps.
-- [Perception-driven queue](perception-driven-queue.md) — the scout
-  layer; daily work is determined by what the game screen actually
-  offers, perceived first into structured items and scheduled by
-  observation triggers rather than fixed slots, with the regulars
-  kept as a capability profile library, new tasks discovered,
-  profiled and scheduled under the discovery protocol, the
-  scout_diff tool of Phase 2, and the learning and knowledge
-  hardening protocol.
-- [Held patches register](held-patches.md) — the in-repo record of tool
-  patches held outside the repository, consulted by the tool-developer
-  step-2 in-flight check before re-implementing an issue (issue #809).
+## Changelog
+
+- 1.13.0, 2026-11-23 - Split verbatim by split_doc.py into 3 articles; --check EQUAL (4266 characters), sha256 6f0136af14c7; the unsplit 1.12.0 file is commit 6d019ade

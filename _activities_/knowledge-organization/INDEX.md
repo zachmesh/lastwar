@@ -1,9 +1,9 @@
 ---
 title: Knowledge Organization
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-23T07:40:44Z
+modified: 2026-11-23T08:32:53Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: The knowledge organiser - folding what executions learn back into the activity profiles, resolving contradictions, and keeping the shared structures coherent
 status: active
 grounded_in:
@@ -27,23 +27,8 @@ scout name roster coherent. It does not operate the game.
 
 ## Cadence
 
-Hourly and incremental, as the standing job
-`lastwar-knowledge-organizer`, working from a watermark in its
-latest record; plus one fuller consolidation sweep of the
-ended trade day on the first run after each trade-day
-reset (02:00 UTC absolute boundary, about 18:00 PST
-now, 19:00 PDT before the DST end). Correction,
-2026-11-03 2032: the standing 19:00 local label is
-superseded - the 1846 live counters and the PR 249
-daily-reset tool fix settle the boundary. This profile
-now states the settled boundary; the standing job's
-schedule wording still states 19:00 and is an
-owner-job definition, so the schedule text itself is
-left for the owner or the daily retro, not rewritten
-here. Filed as Issue #247; closure belongs to the
-daily retro. Feedback order each run: unaddressed integrator review
-points on profile PRs first, then the knowledge-organization
-backlog entries, then new records since the watermark.
+Hourly and incremental, with one fuller sweep after each trade-day reset; the full text, including the 2026-11-03 correction of the reset label, is in [cadence-section](cadence-section.md).
+
 
 ## Inputs
 
@@ -73,3 +58,7 @@ backlog entries, then new records since the watermark.
   profile, never by editing a record file.
 - A superseded claim is never left standing silently; a
   correction is always noted where the claim lived.
+
+## Changelog
+
+- 1.3.0, 2026-11-23 - The Cadence section moved verbatim to cadence-section.md to keep this page under 300 words; a one-line summary stays here.
