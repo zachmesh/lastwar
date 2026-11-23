@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T07:45:36Z
-version: 2.4.0
+modified: 2026-11-23T07:57:57Z
+version: 2.5.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -46,3 +46,4 @@ and staging runtime state.
 | [split-doc](split-doc/INDEX.md) | verbatim document splitter | [own index](split-doc/INDEX.md) |
 | [cu-bridge-tests](cu-bridge-tests/INDEX.md) | bridge daemon lifecycle tests | [own index](cu-bridge-tests/INDEX.md) |
 | [queue-tests](queue-tests/INDEX.md) | queue unit serves-key tests | [own index](queue-tests/INDEX.md) |
+| [resource-map-tests](resource-map-tests/INDEX.md) | resource_map.py amount and power-key tests | [own index](resource-map-tests/INDEX.md) |

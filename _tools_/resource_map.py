@@ -7,25 +7,36 @@ against the floors in _tools_/resources.json so a stretched resource
 (coin at 565K on 2026-10-25) is flagged instead of discovered late.
 
 Usage:
-  resource_map.py snap food=276.9M iron=267.6M coin=565.1K [--note TEXT]
+  resource_map.py snap food=276.9M iron=267.6M coin=565.1K power_total=1.1G [--note TEXT]
+                 (amounts: a bare number, commas allowed, or a K, M, G or B suffix)
   resource_map.py show     latest snapshot with floor flags
   resource_map.py check    only the warnings (silent when all healthy)
 """
 import argparse, json, os, sys
 from datetime import datetime
+from decimal import Decimal, InvalidOperation
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFS = os.path.join(ROOT, "resources.json")
 HIST = os.path.join(ROOT, "state", "resources.jsonl")
 
+SUFFIXES = {"K": 1_000, "M": 1_000_000, "G": 1_000_000_000, "B": 1_000_000_000}    # B: billion, if the HUD ever shows it
+
+
 def parse_amount(text):
-    text = text.strip().replace(",", "")
+    """A HUD amount as an integer: a bare number, commas allowed, or a number with a K, M, G (or B) suffix, any case.
+
+    Decimal, not float, does the multiplication: int(float(text) * mult) lands one short for about 300 of the one-decimal
+    values the HUD shows (32.3K gave 32299). The result still truncates toward zero, as before.
+    """
+    cleaned = str(text).strip().replace(",", "")
     mult = 1
-    if text[-1:] in "Mm":
-        mult, text = 1_000_000, text[:-1]
-    elif text[-1:] in "Kk":
-        mult, text = 1_000, text[:-1]
-    return int(float(text) * mult)
+    if cleaned[-1:].upper() in SUFFIXES:
+        mult, cleaned = SUFFIXES[cleaned[-1:].upper()], cleaned[:-1]
+    try:
+        return int(Decimal(cleaned) * mult)
+    except (InvalidOperation, ValueError):
+        raise ValueError(f"cannot read the amount {text!r}: a number, commas allowed, with an optional K, M, G or B suffix")
 
 def load_defs():
     with open(DEFS) as f:
@@ -65,7 +76,11 @@ def main():
         values = {}
         for pair in args.pairs:
             key, _, raw = pair.partition("=")
-            values[key] = parse_amount(raw)
+            try:
+                values[key] = parse_amount(raw)
+            except ValueError as error:
+                print(f"error: {key}: {error}", file=sys.stderr)
+                return 2
         rec = {"at": datetime.now().isoformat(timespec="seconds"),
                "note": args.note, "values": values}
         os.makedirs(os.path.dirname(HIST), exist_ok=True)

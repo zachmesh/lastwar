@@ -1,5 +1,5 @@
 {
- "note": "Resource definitions for the resource map - floors are the low water marks a run should flag, sinks are the known spends, push sources are where more comes from. Values are judgement calls from play on 2026-10-25, to be tuned with the owner. total_power is a growth metric tracked per the playbook objective, not a spendable resource.",
+ "note": "Resource definitions for the resource map - floors are the low water marks a run should flag, sinks are the known spends, push sources are where more comes from. Values are judgement calls from play on 2026-10-25, to be tuned with the owner. total_power is a growth metric tracked per the playbook objective, not a spendable resource. The power_* keys are the Power screen's breakdown (total, hero, unit, building, drone, tech): growth metrics for the coach, not spendable resources, no floors.",
  "resources": {
   "black_rock": {
    "crit_below": null,
@@ -144,6 +144,56 @@
     "truck refresh after the free one - never paid autonomously"
    ],
    "warn_below": 20
+  },
+  "power_total": {
+   "crit_below": null,
+   "label": "Power breakdown: total (the Power screen's overall figure; the keys below are its parts)",
+   "push_sources": [],
+   "sinks": [],
+   "warn_below": null
+  },
+  "power_hero": {
+   "crit_below": null,
+   "label": "Power breakdown: hero power",
+   "push_sources": [
+    "hero growth"
+   ],
+   "sinks": [],
+   "warn_below": null
+  },
+  "power_unit": {
+   "crit_below": null,
+   "label": "Power breakdown: unit power",
+   "push_sources": [
+    "troop tiers"
+   ],
+   "sinks": [],
+   "warn_below": null
+  },
+  "power_building": {
+   "crit_below": null,
+   "label": "Power breakdown: building power",
+   "push_sources": [
+    "building power"
+   ],
+   "sinks": [],
+   "warn_below": null
+  },
+  "power_drone": {
+   "crit_below": null,
+   "label": "Power breakdown: drone power",
+   "push_sources": [],
+   "sinks": [],
+   "warn_below": null
+  },
+  "power_tech": {
+   "crit_below": null,
+   "label": "Power breakdown: tech power",
+   "push_sources": [
+    "research"
+   ],
+   "sinks": [],
+   "warn_below": null
   }
  },
  "version": 1
