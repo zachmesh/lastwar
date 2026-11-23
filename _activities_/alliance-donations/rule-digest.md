@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations Rule Digest
 created: 2026-11-23T05:55:44Z
-modified: 2026-11-23T10:24:41Z
+modified: 2026-11-23T10:32:26Z
 level: L1
-version: 0.8.0
+version: 0.9.0
 description: The standing rules an operator must follow when donating to alliance technology, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -24,17 +24,17 @@ grounded_in:
 
 # Rule digest
 
-Each rule: status, the date of its newest supporting record, up to two records.
+Each rule: status, date, up to two records.
 
-1. Donate every run to the recommended node, while the count reads 1 or more (rule 5); a live read of 0 remaining is checked only. Status: tested. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`, `_records_/2026-11-02/alliance-donations/1810-queue-run.md`
+1. Donate every run to the recommended node (rule 5); a live read of 0 remaining is checked only. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`, `_records_/2026-11-02/alliance-donations/1810-queue-run.md`
 2. Read the recommended marker and coin cost fresh each unit; the marker moves and the cost varies by node. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, `_records_/2026-11-11/alliance-donations/1004-queue-run.md`
 3. Never press the diamond button without owner approval. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`, `_records_/2026-10-26/alliance-donations/1403-segment-1-run.md`
-4. Re-read the count after every tap; a greyed tap is unlanded until the count is re-read after its timer. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, `_records_/2026-11-07/alliance-donations/2018-queue-run.md`
+4. Verify each tap by the live count falling by one, the last by a grey Donate timer ([closing standard](closing-standard.md)). Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`, `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
 5. Donate while the count reads 1 or more; a tap from a live 1/30 lands. After the last tap read Tech EXP and badge; grey Donate with a timer means the count is spent. Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`
-6. Close only on a live count read in the same unit. Timer hides it: close unverified, tracker untouched, re-read enqueued. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/0554-queue-run.md`, `_records_/2026-11-02/alliance-donations/1810-queue-run.md`
+6. A count figure needs a live read in the same unit; after the last tap close as count spent on the witness, never writing a count ([closing standard](closing-standard.md)). Status: tested. 2026-11-23. `_records_/2026-11-22/alliance-donations/1012-t1-test.md`, `_records_/2026-11-22/alliance-donations/0319-queue-run.md`
 7. The footer is display only, never a closing figure. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, `_records_/2026-11-10/alliance-donations/0011-queue-run.md`
-8. The count is a pool that refills with time, not a fixed daily 30; the rate is unsettled, so log it: at the first read write the count and the UTC time to the second; at the last Donate tap write the cooldown timer value and the UTC time to the second; make no extra taps. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/0441-queue-run.md`, `_records_/2026-11-11/alliance-donations/1004-queue-run.md`
+8. The count is a pool that refills with time, the rate unsettled: each unit spends the live count, with no 30-a-day quota, and logs it: at the first read write the count and the UTC time to the second; at the last Donate tap write the cooldown timer value and the UTC time to the second; make no extra taps. The day total is witnessed landed taps and a spent-count close is DONE (tracker policy `_records_/2026-11-22/team-operations/2532-donations-tracker-policy.md`). Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/0441-queue-run.md`, `_records_/2026-11-11/alliance-donations/1004-queue-run.md`
 9. Re-ground entry from each screenshot; never carry a point across framings. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/1308-queue-run.md`, `_records_/2026-11-10/alliance-donations/0011-queue-run.md`
 10. Nothing is claimed by hand for the daily reward. Status: verified. 2026-11-22. `_records_/2026-11-22/alliance-donations/2340-queue-run.md`, `_records_/2026-11-10/alliance-donations/0011-queue-run.md`
 
-Unverified claims, each with its test where one exists: [unverified claims](unverified-claims.md).
+Unverified: [claims](unverified-claims.md).
