@@ -11,11 +11,13 @@ by atomic rename, claims carry a lease, an executor batch is bounded
 to 15 minutes, and exactly one executor holds the device token.
 
 The decision commands (enqueue, sync, plan, sweep, next) run only
-from a copy identical to main's _tools_/queue.py (issue #694): a
-stale copy refuses, exit 1, so a pass that runs the tool from the
-main working tree fails loudly instead of deciding on old
-behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for isolated
-/tmp fixture validation of a new tool version.
+from a copy that is equal to main's _tools_/queue.py or ahead of it
+(main's version is one of this checkout's own versions of the file;
+a warning names both blobs) (issue #694): a copy that is behind
+main, or has diverged from it, refuses, exit 1, so a pass that runs
+the tool from a stale working tree fails loudly instead of deciding
+on old behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for
+isolated /tmp fixture validation of a new tool version.
 
 They also refuse when this copy - or the pool it would decide on -
 sits under the system temp directory (issue #429): a pass worktree
@@ -2252,6 +2254,12 @@ def _fetch_main(git_dir):
     otherwise. The ref is ROSTER_FRESH_REF, the same private ref
     the roster check already used, so a second fetch in one
     process is a no-op fast-forward.
+
+    The fetch is not shallow and updates no remote-tracking ref
+    (--refmap=): an earlier `--depth 1` made every checkout that
+    ran a tick shallow, with origin/main grafted to a parentless
+    commit, so `git pull --ff-only` and ahead/behind counts of
+    main against origin/main were wrong.
     """
     if (_MAIN_FETCH_CACHE["attempted"]
             and _MAIN_FETCH_CACHE["dir"] == git_dir):
@@ -2265,7 +2273,7 @@ def _fetch_main(git_dir):
         return False, "no-remote"
     try:
         fetch = subprocess.run(
-            ["git", "-C", git_dir, "fetch", "--depth", "1", remote,
+            ["git", "-C", git_dir, "fetch", "--no-tags", "--refmap=", remote,
              "+main:%s" % ROSTER_FRESH_REF],
             capture_output=True, text=True, timeout=60)
     except (OSError, subprocess.SubprocessError):
@@ -2436,16 +2444,53 @@ def main_tool_source():
     return show.stdout, None
 
 
-def tool_is_current():
-    """(True, None) when this copy matches main's queue.py.
+def _git_blob_id(data):
+    """The git blob id of these bytes (what `git hash-object` prints)."""
+    return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
-    Returns (True, None) when the running file is byte-identical
-    to main's copy, (False, None) when main's copy differs, and
-    (None, warning) when main cannot be read. The byte compare
-    cannot tell ahead from behind: any difference is stale for a
-    live pass, which must run main's tool - isolated fixture
-    validation of a new tool version sets
-    LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 instead.
+
+def _history_has_blob(blob):
+    """True when this blob is a version of this file in the history of the checkout holding it.
+
+    Reads `git log --raw` of the file, so a shallow checkout still shows the version at its boundary. A history that
+    cannot be read counts as not containing the blob, which refuses: the safe side.
+    """
+    name = os.path.basename(os.path.realpath(__file__))
+    try:
+        log = subprocess.run(
+            ["git", "-C", _tool_dir(), "log", "--format=", "--raw",
+             "--no-abbrev", "-m", "--", name],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return log.returncode == 0 and blob in log.stdout
+
+
+def classify_tool(local, main_source):
+    """How this copy stands against main's: equal, ahead or stale.
+
+    Issue #694 byte-compared the two and so could not tell ahead from behind: on 2026-11-23 a live copy that held
+    commits main had not landed yet was refused for 15 minutes. Now equal when the bytes match; ahead when main's version
+    is one of this checkout's own versions of the file (this copy is a later one, not yet on main); stale otherwise -
+    main's is newer, or the two histories diverged. Only stale refuses.
+    """
+    if local == main_source:
+        return "equal"
+    return "ahead" if _history_has_blob(_git_blob_id(main_source)) else "stale"
+
+
+def ahead_warning(local, main_source):
+    return ("this copy of queue.py (blob %s) is ahead of main's (blob %s): main's version is in this checkout's history, "
+            "so the pass may run it; land the change on main before another pass depends on it (issue #694)"
+            % (_git_blob_id(local)[:10], _git_blob_id(main_source)[:10]))
+
+
+def tool_is_current():
+    """(True, None) equal, (True, warning) ahead, (False, None) stale, (None, warning) when main cannot be read.
+
+    Ahead is current for a live pass: it runs a later version of the tool than main has, and the warning names both
+    blobs. Stale - main's copy newer, or the histories diverged - is the only case a pass must not run in; isolated
+    fixture validation of a new tool version sets LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 instead.
     """
     try:
         with open(os.path.realpath(__file__), "rb") as handle:
@@ -2455,7 +2500,12 @@ def tool_is_current():
     main_source, warning = main_tool_source()
     if main_source is None:
         return None, warning
-    return local == main_source, None
+    state = classify_tool(local, main_source)
+    if state == "equal":
+        return True, None
+    if state == "ahead":
+        return True, ahead_warning(local, main_source)
+    return False, None
 
 
 def refuse_if_tool_stale(cmd):
@@ -2485,12 +2535,15 @@ def refuse_if_tool_stale(cmd):
         print(f"warning: {warning} (issue #694)", file=sys.stderr)
         return None
     if current:
+        if warning:                           # ahead of main: allowed, with both blobs named
+            print(f"warning: {warning}", file=sys.stderr)
         return None
     print(f"{cmd} refused: this copy of queue.py differs from "
-          f"main's _tools_/queue.py - run the tool from a fresh "
-          f"main checkout (a pass worktree, never the main working "
-          f"tree) so the pass decides on current behaviour "
-          f"(issue #694)", file=sys.stderr)
+          f"main's _tools_/queue.py and is not ahead of it - main's "
+          f"copy is newer or the two histories diverged. Run the tool "
+          f"from a fresh main checkout (a pass worktree, never the "
+          f"main working tree) so the pass decides on current "
+          f"behaviour (issue #694)", file=sys.stderr)
     return 1
 
 
@@ -2501,7 +2554,8 @@ def _tool_identity():
     sha256 of this copy, the git HEAD of the checkout holding it
     (or None outside a git checkout), and the currency of this
     copy against main's _tools_/queue.py (issue #694) - current,
-    stale, or unknown when main cannot be read - plus main's
+    ahead (a later version of the file than main's, allowed), stale,
+    or unknown when main cannot be read - plus main's
     sha256 when readable. Pure reporting: it never refuses, so a
     stale copy can still name itself stale and a copy under the
     system temp directory still answers.
@@ -2529,7 +2583,7 @@ def _tool_identity():
                     if main_source is not None else None)
     else:
         main_sha = hashlib.sha256(main_source).hexdigest()
-        currency = "current" if local == main_source else "stale"
+        currency = {"equal": "current", "ahead": "ahead", "stale": "stale"}[classify_tool(local, main_source)]
     return {"tool": "queue.py", "path": path, "sha256": sha,
             "git_head": head, "currency": currency,
             "main_sha256": main_sha, "currency_warning": warning}

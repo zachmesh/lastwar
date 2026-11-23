@@ -1,7 +1,7 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-23T08:38:01Z
+modified: 2026-11-23T08:50:19Z
 version: 2.6.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
@@ -19,6 +19,7 @@ and staging runtime state.
 | Tool | Does | Article |
 |---|---|---|
 | [queue.py](queue.py) | work-unit queue; a unit may carry a `serves` line (`enqueue --serves`, kept through claim and complete; `validate` warns when an upgrade-type unit has none) | [queue](tool-details/queue-part-1.md) |
+| [queue-guard-tests](queue-guard-tests/INDEX.md) | stale-tool guard tests (issue 694) | [own index](queue-guard-tests/INDEX.md) |
 | [regulars.py](regulars.py) | recurring activities | [planning](tool-details/planning-and-scouting-tools.md) |
 | [duel.py](duel.py) | duel day and advice | [planning](tool-details/planning-and-scouting-tools.md) |
 | [resource_map.py](resource_map.py) | resource snapshots | [planning](tool-details/planning-and-scouting-tools.md) |
