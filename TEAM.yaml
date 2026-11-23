@@ -4,9 +4,9 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.3.0
+version: 0.4.0
 title: Last War continuous-play team
-updated_at: '2026-11-23T04:03:00Z'
+updated_at: '2026-11-23T04:04:00Z'
 state: active
 runtime: dsh
 project_path: .
@@ -45,6 +45,16 @@ references:
   continuation_policy: _conventions_/local-conventions/continuous-play-team.md
   setup_verification: _records_/2026-11-22/team-operations/setup.md
 record_owner: coordinator
+# Owner gateway, outside the seat roster. The Steward is the owner's root DSH
+# session. It relays owner instructions and approvals to the coordinator and
+# receives needs-owner escalations. It is not a seat: it holds no write scope,
+# takes no assignment and runs no loop schedule. The coordinator seat moved
+# from this session to its own session at 2026-11-23T04:04Z.
+steward:
+  session_id: session-eb024f72-e661-4a77-9303-66af95dbcfd1
+  title: '[Last War] Steward'
+  role: owner-gateway
+  principal: zhenc
 coordination:
   review_interval_minutes: 15
   seat_review:
@@ -63,6 +73,8 @@ coordination:
     work_mode: continuous
     continuation_requirement: the coordinator's 15-minute schedule is the loop clock; every other seat is woken by a bounded assignment and replies with an artifact path
     coordinator_review_seconds: 900
+    loop_schedule_id: schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0
+    loop_schedule_owner_session: session-4b4cb08d-fb77-419a-be34-14a72a3b73d1
     approved_model_ref: null
     cap_authority_ref: _conventions_/local-conventions/continuous-play-team.md
   reporting:
@@ -96,11 +108,15 @@ oncall: zhenc
 # sessions created through the local gate. The operator stays on its child
 # session until the current unit closes, then gets the same treatment. The
 # child ids are recorded as predecessors in each seat's handover.md.
+# 2026-11-23T04:04Z: the coordinator seat moved from the Steward session
+# session-eb024f72-e661-4a77-9303-66af95dbcfd1 to its own session and took
+# over the loop clock (coordination.execution.loop_schedule_id). The Steward
+# stays outside the roster as the owner gateway (top-level `steward`).
 seats:
   - key: coordinator
     principal: zhenc
-    session_id: session-eb024f72-e661-4a77-9303-66af95dbcfd1
-    session_started: '2026-11-23T02:52:00Z'
+    session_id: session-4b4cb08d-fb77-419a-be34-14a72a3b73d1
+    session_started: '2026-11-23T04:04:00Z'
     title: '[Last War] Coordinator'
     assignment: assigned
     roles:

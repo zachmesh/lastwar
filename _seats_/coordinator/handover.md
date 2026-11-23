@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-22T19:21:00-08:00
+modified: 2026-11-23T04:05:00Z
 level: L2
-version: 0.2.0
+version: 0.3.0
 description: The live state a replacement coordinator starts from after the 2026-11-22 establishment
 status: unverified
 grounded_in:
@@ -17,9 +17,18 @@ Updated 2026-11-22 19:21 PT.
 
 ## Holder
 
-- Seat: `coordinator`, session `session-eb024f72-e661-4a77-9303-66af95dbcfd1`.
-- Loop clock: `schedule-9de37067-4365-474f-8d53-eb57d44f8166`, every 900
-  seconds, first firing 2026-11-23T03:23:31Z.
+- Seat: `coordinator`, session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`
+  (`[Last War] Coordinator`), since 2026-11-23T04:04Z.
+- Loop clock: `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0`, title
+  `Last War loop tick`, every 900 seconds, first firing
+  2026-11-23T04:18:57Z, owned by the coordinator session.
+- Owner gateway: the Steward, `session-eb024f72-e661-4a77-9303-66af95dbcfd1`,
+  outside the seat roster (`TEAM.yaml` top-level `steward`). Needs-owner
+  escalations go there and to the owner decisions register.
+- Predecessor holder: the Steward session held this seat from
+  2026-11-23T02:52Z to 04:04Z with the loop clock
+  `schedule-9de37067-4365-474f-8d53-eb57d44f8166`; the Steward deletes that
+  schedule after this take-over, so only one loop clock remains.
 
 ## Open commitments
 
