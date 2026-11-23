@@ -424,6 +424,25 @@ entries to implemented.
 - status: open - rules in `_seats_/coordinator/duties.md` and
   the loop schedule prompt from 2026-11-23T04:16Z.
 
+### IMP-20261123-02 - per-activity improvement loop and grouping
+
+- source: owner question 2026-11-23T04:30Z, audit
+  `_records_/2026-11-22/team-operations/2034-activity-loop-audit.md`
+- class: process
+- leak: 0 of 37 activity profiles state an improvement target, current value,
+  owner, review date or closure check; the three meta-activities that run the
+  loop (pr-integration, tool-development, knowledge-organization) are the
+  thinnest and stalest; `_activities_` is flat with no grouping; 17 profiles
+  exceed 1,000 lines; 2 profiles have invalid YAML frontmatter.
+- target metric: share of activity profiles with a loop block (target metric,
+  current value from records, last change, next review) - 0 of 37 now, goal 37
+  of 37; invalid-frontmatter profiles 2 to 0.
+- verification: the coach's per-type loop table lists all 37 types with a value
+  sourced from records; the lint over `_activities_` reports 0 invalid
+  frontmatter; grouping, if approved, passes `queue.py validate`.
+- status: open - awaiting the owner's go-ahead on grouping (a convention change,
+  scribe by PR; toolsmith to check whether tools hard-code the flat path).
+
 ## Closed
 
 None yet. The first closures are expected at the 2026-11-01
