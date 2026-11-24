@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T21:28:00Z
+modified: 2026-11-24T02:14:19Z
 level: L1
-version: 1.115.0
+version: 1.116.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -169,7 +169,6 @@ Goal: donate every run to the recommended technology.
 - Window or device lost - fix: owner clicks the Dock icon. `_records_/2026-11-17/alliance-donations/1240-queue-run.md`
 
 ## Open questions
-- Does the grid hold across the UTC day boundary? Test: pass 003, entry 00:30Z, predicts 10; run by coach.
 - Does the badge item witness every node? Test: read it before and after a counted tap at Quick Construction and at Rallied Attack; run by operator.
 
 ## Numbers
