@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 23:03:56.780Z, run started 23:03:57.564Z), 13 s after the previous record write; owner idle 21,116 s: wait 0",2026-11-24T23:03:57.564Z,see growth/0054-waits.csv
+badges,"first frame 23:04:02.7Z: the tram icon not drawn, pickup none, radar dish 3",2026-11-24T23:03:57.564Z,tram badge rule: none; not tapped
+fragments,"M1 x6, M2 x4, M3 x3, M4 x2, M5 x0, M6 x6, M7 x5 (before and after: unchanged since 19:24Z)",2026-11-24T23:04:14.069Z,"tag text [G]: Hidden Treasures; the pickup icon (107,647), the tab (310,162)"
+dig buttons,"Dig 1 time and Dig 2 time(s) both greyed, no price text; Skip Animation already ticked; no timer",2026-11-24T23:04:14.069Z,no full set
+chest track,8/15 before and after,2026-11-24T23:04:14.069Z,"no dig, no popup"
+close,"the back arrow (176,929); the base with no panel",2026-11-24T23:04:29.143Z,
+drags,"drags tried 0, cancelled 0",,

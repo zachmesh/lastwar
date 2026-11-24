@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 21:21:41.219Z, run started 21:21:42.198Z), 10 s after the front script; owner idle 14,987 s (the 300 s gate met): wait 0",2026-11-24T21:21:42.198Z,see growth/0054-waits.csv
+badges,"first frame 21:21:47.2Z (timer 04:38:14): the tram icon not drawn, pickup none, radar dish 1; a white speech bubble with a black question mark at about (145,650) beside the pickup icon",2026-11-24T21:21:42.198Z,tram badge rule: none; not tapped
+step 0 front log,"BEFORE 21:21:29.083Z front=Google Chrome (ASN 0x4b04b); the standing front script (osascript activate LastWar) at 21:21:29.2Z; AFTER 21:21:32.251Z front=LastWar; nothing of Chrome read, pressed or screenshotted; no Chrome dialog, consent or login surface over our window in the first frame",2026-11-24T21:21:32.251Z,tag text [G]: lsappinfo front; Steer A's 21:11Z ruling (B)
+question-mark bubble,"a white speech bubble with a black '?' at about (145,650) beside the pickup icon (107,647): the survivor-gate bubble seen at 18:39:57Z; READ ONLY, never pressed",2026-11-24T21:21:47.163Z,no text on it
+HUD before,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173; the coin Donate costs 1000",2026-11-24T21:21:47.163Z,"the coin covers 11,000"
+entry count,"Quick Construction Lv.9 of 10: 11/30 at 21:22:14.3Z; the coin Donate green, no timer",2026-11-24T21:22:14.331Z,the Coach's registered entry 11 from 21:17:57Z (12 from 21:37:57Z): matched; a count above 11 or six below would have flagged
+taps,"11 coin Donate taps at (495,756): 21:22:18.0Z, :23.5Z, :30.8Z, :38.2Z, 21:22:57.4Z, 21:23:05.9Z, :13.5Z, :21.0Z, :29.6Z, :38.9Z and 21:23:57.198Z (the last tap)",2026-11-24T21:23:57.198Z,"counts after taps 1 to 10: 10, 9, 8, 7, about 6, 5, about 4, 3, 2, 1 (two partly hidden, the coin total fell by 1,000 each); after tap 11 the timer replaced the count"
+live count before the last tap,1/30 [G] in the frame at 21:23:49.3Z (after tap 10),2026-11-24T21:23:49.284Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:13:49 read in the saved frame at 21:24:08.4Z (a 6x crop confirms): the end 21:37:57.4Z on the grid point 21:37:57.4Z within 0.1 s,2026-11-24T21:24:08.398Z,within the 3 s rule; the Tech EXP bar 5.2M of 8.0M unchanged
+close,"the dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base; no TIPS popup",2026-11-24T21:24:41.448Z,count after the last tap not written (hidden by design)
+drags,"drags tried 0, cancelled 0",,

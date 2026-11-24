@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:33:09.017Z, run started 22:33:09.810Z), 17 s after the previous record write; owner idle 19,272 s: wait 0",2026-11-24T22:33:09.810Z,see growth/0054-waits.csv
+badges,"22:33:14.8Z (timer 03:26:47): the tram icon not drawn, pickup none, radar dish 3, labs 2/2; 22:33:40.3Z: the same, a red target icon 3 newly drawn at (670,640)",2026-11-24T22:33:09.810Z,tram badge rule: none; not tapped
+lab 1,"Lv.1 Food Output V upgrade in progress: Time Left 21:05:46 at 22:33:21.4Z, 21:05:40 at 22:33:27.9Z: ends 2026-11-25T19:39:07.4Z; class RUNNING; Speed Up (not pressed)",2026-11-24T22:33:21.426Z,tag text [G]: RESEARCH QUEUE; expected 19:39:07.8Z: MATCHED
+lab 2,"Lv.0 Oil Output I upgrade in progress: 1d 10:04:13 at 22:33:21.4Z, 1d 10:04:07 at 22:33:27.9Z: ends 2026-11-26T08:37:34.4Z; class RUNNING; Speed Up",2026-11-24T22:33:21.426Z,expected 08:37:34.8Z: MATCHED
+three classes,"EMPTY 0, FINISHED WAITING 0, RUNNING 2; slots_idle 0",2026-11-24T22:33:21.426Z,
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292 unchanged",2026-11-24T22:33:40.347Z,"pressed: the flask (108,262) and the X (608,360)"
+drags,"drags tried 0, cancelled 0",,

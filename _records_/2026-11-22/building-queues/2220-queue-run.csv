@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 22:20:34.749Z, run started 22:20:35.737Z), 18 s after the previous run ended; owner idle 18,519 s: wait 0",2026-11-24T22:20:35.737Z,see growth/0054-waits.csv
+badges,"22:20:39.8Z (timer 03:39:22): the tram icon NOT DRAWN (a crop of the saved frame confirms), pickup none, radar dish 3; 22:21:12.6Z: the same; the red target icon 3",2026-11-24T22:20:35.737Z,tram badge rule: none; not tapped
+builder 1,Lv.26 Drill Ground upgrade in progress: Time Left 1d 12:47:51 at 22:20:45.6Z (1d 12:47:46 and 1d 12:47:41 at the next frames): ends 2026-11-26T11:08:36.6Z; Speed Up (not pressed); no help indicator drawn,2026-11-24T22:20:45.592Z,tag text [G]: Building Queue; expected 11-26T11:08:36Z: MATCHED
+builder 2,Lv.27 Drill Ground: 5d 03:10:16: ends 2026-11-30T01:31:01.6Z,2026-11-24T22:20:45.592Z,expected 11-30T01:31Z: MATCHED
+builder 3,Lv.23 Oil Well upgrade (to Lv.24): 08:50:34: ends 2026-11-25T07:11:19.6Z,2026-11-24T22:20:45.592Z,expected 11-25T07:11:20Z: MATCHED within 0.4 s
+builder 4,Lv.28 Drill Ground: 9d 01:29:28: ends 2026-12-03T23:50:13.6Z,2026-11-24T22:20:45.592Z,expected 12-03T23:50Z: MATCHED
+help indicator,"none drawn on any row (no help icon, hand, Help button, count or progress); each row a green progress bar and a Speed Up button",2026-11-24T22:20:45.592Z,the Alliance Help screen not opened
+slots,"slots_idle 0; slots_blocked_by_capacity 0 (all four builders busy, hammer 4/4)",2026-11-24T22:20:50.881Z,
+pickup bubble and tram,"the question-mark bubble: a white speech bubble, a black '?' glyph, no text, at about (145,648) beside the pickup icon: READ, NEVER PRESSED; the tram icon not drawn",2026-11-24T22:20:39.841Z,a crop of the saved last frame confirms
+HUD,"food 156.9M, iron 778.5M, coin 27.8M, oil 638.4K, diamonds 11,173, Total Power 150,103,292 unchanged",2026-11-24T22:21:12.645Z,"pressed: the hammer icon (108,200) and the X (612,237)"
+drags,"drags tried 0, cancelled 0",,

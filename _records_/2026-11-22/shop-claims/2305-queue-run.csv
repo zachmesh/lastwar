@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.7 s after the request (start requested 23:04:51.620Z, run started 23:04:52.366Z), 13 s after the previous record write; run 2 (23:06:27.9Z) admitted 0.7 s after its request; owner idle 21,170 and 21,265 s: wait 0",2026-11-24T23:04:52.366Z,see growth/0054-waits.csv
+badges,"23:04:57.9Z (timer 02:55:03): the tram icon not drawn, pickup none, radar dish 3; the base after 23:07:12.9Z: the same",2026-11-24T23:04:52.366Z,tram badge rule: none; not tapped
+page at the top,"Free Supply 'Claimed'; the Legendary banner Renew All $19.99; S2 Drone Components Remaining 5d 2:54:47 'Already claimed today'; S1 Drone Parts Remaining 5d 2:54:47 'Already claimed today'; S2 title y 531, S1 title y 769; the tab row: Hot Sale Packs, Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, a cut-off tab",2026-11-24T23:05:19.906Z,tag text [G]: Weekly Pass tab
+pan 1 and S1,the page moved 150 px (S1 title 769 to 619); S1 Drone Parts Remaining 5d 2:54:32: 'Already claimed today',2026-11-24T23:05:33.808Z,accepted
+pan 2 and EXP,149 px (EXP title 856 to 707); EXP Weekly Pass Remaining 5d 2:54:19: 'Already claimed today',2026-11-24T23:05:47.849Z,
+pan 3 and Iron,"150 px (EXP title 707 to 557); the Iron card (Elite) title y 795, Remaining 5d 2:53:59: 'Already claimed today'; its price row cut off at the bottom",2026-11-24T23:06:02.128Z,
+pan 4,(run 2) 150 px (Iron title 795 to 645); the Coin card's title y 882 came into view,2026-11-24T23:06:45.713Z,accepted
+pan 5 and Coin,150 px (Coin title 882 to 732); Coin Weekly Pass (Elite): Remaining 5d 2:53:04: 'Already claimed today'; Renew $4.99 with a 50 gem icon; no Claim button,2026-11-24T23:06:57.382Z,the fifth and last pan
+pressed,"the shop cart (633,82), the Weekly Pass tab (620,153), the back arrow (103,935): nothing on any card",2026-11-24T23:07:05.719Z,"drags tried 5, cancelled 0"
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292",2026-11-24T23:07:12.953Z,unchanged
+drags,"drags tried 5, cancelled 0",,

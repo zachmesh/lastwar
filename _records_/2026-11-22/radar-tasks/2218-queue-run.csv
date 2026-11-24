@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:18:31.631Z, run started 22:18:32.415Z), 27 s after the previous run ended; owner idle 18,397 s: wait 0",2026-11-24T22:18:32.415Z,see growth/0054-waits.csv
+badges,"first frame 22:18:36.4Z: the tram icon not drawn, pickup none, radar dish 1, hammer 4/4, flask 2/2; the base after 22:19:59.9Z: radar dish 3",2026-11-24T22:18:32.415Z,tram badge rule: none; not tapped
+pickup bubble,"a white speech bubble with a black '?' glyph, no text, at about (145,649) beside the pickup icon (107,647); read, never pressed",2026-11-24T22:18:36.402Z,tag text [G]: left column
+radar before,"'You can complete 7 tasks, requires 70 Stamina' with a blue Quick Execute; energy 163 (93 after the cost, above the floor 40); '12 Radar Task(s) will be restored in 04:19:25'",2026-11-24T22:18:49.778Z,oil counter 638.4K
+Quick Execute,"pressed once (393,934): energy 163 to 93; the bar became a green Claim All '9 task rewards can be claimed'",2026-11-24T22:19:02.583Z,oil not paid
+Claim All and dialog,"Claim All once; the dialog 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 9 radar task rewards at once. Continue?' (no price): Confirm once (481,698)",2026-11-24T22:19:20.630Z,Steer A's rule: Confirm allowed for that text (the count 9 read from the dialog)
+reward popup,"'Drop Limit Update 87/328' banner; CONGRATULATIONS: cash 130, radar item 380, food bag 26, EXP 15.4M, card 1.6K, triangle item 225, iron 4.2M, bread 4.2M, coin 2.8M; no oil line; dismissed by an empty tap (393,820)",2026-11-24T22:19:28.843Z,oil 638.4K before and after
+radar after,"Quick Execute offered again ('1 task, requires 10 Stamina'): not pressed; energy 93; tasks 0/40; '12 Radar Task(s) will be restored in 04:18:28' (about 02:38Z)",2026-11-24T22:19:49.414Z,the radar dish badge 1 to 3
+HUD,"food 152.6M to 156.9M, iron 774.3M to 778.5M, coin 25.0M to 27.8M, oil 638.4K unchanged, energy 163 to 93, diamonds 11,173, Total Power 150,103,292",2026-11-24T22:19:59.852Z,front at the end LastWar 22:20:15Z
+drags,"drags tried 0, cancelled 0",,

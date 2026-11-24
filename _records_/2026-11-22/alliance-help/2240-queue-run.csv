@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:40:15.431Z, run started 22:40:16.177Z), 56 s after the previous run ended; owner idle 19,697 s: wait 0",2026-11-24T22:40:16.177Z,see growth/0054-waits.csv
+badges,22:40:21.4Z: the Alliance button with a red dot; the tram icon not drawn; the Help tile with a red dot,2026-11-24T22:40:16.177Z,tram badge rule: none; not tapped
+before,"Help page (Alliance shield (670,708), Help tile (513,516)): header 780 of 1,000; four rows 30/30, the fourth cut off",2026-11-24T22:40:40.031Z,tag text [G]: Help page
+Help All,"the green Help All (393,766) pressed once at 22:40:45.2Z; no toast, no row disappeared",2026-11-24T22:40:53.164Z,
+after the reopen,"the Help page closed (611,232) and reopened (513,516): header 940 of 1,000 (+160); the rows 30/30 again",2026-11-24T22:41:02.410Z,the header updates only after a reopen
+close,"the Help page X (611,232), the Alliance back arrow (177,918); the base",2026-11-24T22:41:10.381Z,"HUD food 159.8M, iron 781.2M, coin 29.7M, diamonds 11,173, Total Power 150,103,292"
+drags,"drags tried 0, cancelled 0",,

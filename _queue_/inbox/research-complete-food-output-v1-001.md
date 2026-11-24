@@ -40,5 +40,5 @@ Facts [M] (record research-queue/1734, 17:35:35Z, after another actor changed th
 1. Re-read coin, food, iron and oil in a fresh frame (the account moves when the owner's phone moves): write them.
 2. If finished: press COMPLETE on Food Output V Lv.1; write Total Power before and after.
 3. Read both labs again; write each timer to the second. Start NOTHING here: the next node is the Strategist's, named by the Coordinator; an idle lab is reported, not filled. Never Finish Now, never a speed-up here, no diamond or item spend.
-Up to two runs. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+Up to two runs. FRONT (Steer A 21:11Z): at the start, if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release, tell the Coordinator. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 Cost cap, stated: 0.50 USD.

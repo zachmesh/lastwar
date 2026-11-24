@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.9 s after the request (start requested 23:00:29.192Z, run started 23:00:30.051Z), 47 s after the previous record write; run 2 admitted 0.8 s after its request (23:01:43.3Z); owner idle 20,909 and 20,982 s: wait 0",2026-11-24T23:00:30.051Z,see growth/0054-waits.csv
+badges,"23:00:35.3Z (timer 02:59:26): the Events icon none, the tram icon not drawn; 23:01:48.4Z: the Thanksgiving Event icon 5; 23:02:17.0Z: Thanksgiving 2, the tram icon not drawn",2026-11-24T23:00:30.051Z,tram badge rule: none; not tapped
+hub,"opened on Arms Race; tabs: 'f Oil' (The Age of Oil), Arms Race, Black Market, Black Market Challenge; no red dot",2026-11-24T23:00:47.109Z,tag text [G]: Events hub
+The Age of Oil,"milestone track 1 to 4 with 3 reached; cards 'Unlock: Lv. 31-35 Zombies on World Map' 11944/2000 and 'Rapid Rescue' 2455159/25000, 5d 02:59:08 left; no green Claim",2026-11-24T23:00:53.013Z,
+Arms Race,"Base Building, about 02:59 left; three chests with gem price tags (2,360, 4,800, 11,800); Go arrows; no green Claim",2026-11-24T23:00:58.963Z,priced: never pressed
+Black Market,"19d 02:58:53; three top slots Sold Out (one Free-tagged), three items at 500 each; a free Refresh (not a Claim)",2026-11-24T23:01:06.976Z,
+Black Market Challenge,5d 02:58:46; earned today 555/600; four Go To rows,2026-11-24T23:01:13.846Z,Go: not pressed
+Thanksgiving Store,"countdown 6d 02:58:05 (6d 02:57:54 at the next read); tabs: the Store (dot 3), Thanksgiving Lottery (no dot: NEVER opened), Gift of Thanks (dot 1), a cut-off 'Th'; 6 turkey tickets; rows 1 to 4 as above (the same as at 19:28Z); row 5 clipped; no plain free Claim",2026-11-24T23:02:01.181Z,a store row is an exchange: excluded; the Redeem 6/1 not pressed
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292 before and after",2026-11-24T23:02:17.028Z,"pressed: the Events icon (673,160), four tabs, the Thanksgiving icon (598,165), the back arrows"
+drags,"drags tried 0, cancelled 0",,

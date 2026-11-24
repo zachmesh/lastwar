@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:34:55.389Z, run started 22:34:56.155Z), 33 s after the previous record write; owner idle 19,377 s: wait 0",2026-11-24T22:34:56.155Z,see growth/0054-waits.csv
+badges,"22:35:05.7Z (timer 03:24:56): the Mail envelope a plain red dot, the tram icon not drawn, pickup none, radar dish 3; 22:35:22.6Z (timer 03:24:38): the same; the base after 22:36:32.8Z: the Mail envelope still with its red dot",2026-11-24T22:34:56.155Z,tram badge rule: none; not tapped
+dot before,"the Mail envelope (670,787): a plain red dot, no number",2026-11-24T22:35:05.681Z,tag text [G]: right-edge icon column; timer 03:24:56
+refresh,"WORLD (660,940) at 22:35:11.7Z, BASE (660,940) at 22:35:19.4Z; no icon tapped",2026-11-24T22:35:22.632Z,
+dot after,"the Mail envelope: a plain red dot, no number: UNCHANGED (timer 03:24:38)",2026-11-24T22:35:22.632Z,the dot holds no real claim: no gift icon or Claim in any list
+Event list,"several 'train has...' mails, a 'Mega Exp...' mail and the Train arrival notice; the mails with red dots carry no gift icon or Claim; the list's buttons Delete All and Claim All (neither pressed)",2026-11-24T22:35:39.350Z,never Delete All; no Claim All
+Train arrival notice,"already read: the title 'Train arrival reward!' with a train picture; attachments all ticked received (a 2.5K item, an orange item with a 2.5K tag, two 50-count chests, another orange item, a greyed crossed item); no Claim button",2026-11-24T22:35:45.653Z,nothing pressed
+System and Alliance lists,"System: 'Planned Update Notice' unread (a red dot only) and read president mails; Alliance: all read (donation rankings, two zombie siege reports, an exercise result, marker notices): no gift icon",2026-11-24T22:36:09.152Z,
+rail,"red dots on Battle Report, Event, System, Regular and In-app Purchases; none on Alliance or Favorite; no gift icon on any category before or after",2026-11-24T22:36:16.846Z,"Battle Report, Regular and In-app Purchases not opened"
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, energy 96, Total Power 150,103,292 (before and after)",2026-11-24T22:36:32.772Z,no TIPS popup on closing
+drags,"drags tried 0, cancelled 0",,
