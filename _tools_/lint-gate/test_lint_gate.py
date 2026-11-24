@@ -426,6 +426,55 @@ class Watch(GateCase):
         self.assertIn("0200-big-run.md", r.stdout)
         self.assertIn("largest documents", r.stdout)
 
+    def test_the_text_report_lists_each_new_document_over_500_with_its_path_and_marks_the_exempt_ones(self):
+        self.write("_records_/2026-11-22/legacy-activity/0200-big-run.md", doc(700, "Big"))          # new, not exempt: blocks
+        self.write("_records_/2026-11-23/INDEX.md", doc(650, "Day"))                                  # new, exempt by the day-index glob
+        self.run_git("add", "-A")
+        self.run_git("commit", "-q", "--no-verify", "-m", "two new")
+        r = self.gate("watch", "--baseline", str(self.tmp / "baseline.json"), "--anchor", "HEAD~1")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        out = r.stdout
+        self.assertIn("new documents at or over 500 words: 2", out)
+        self.assertRegex(out, r"\n\s+7\d\d\s+_records_/2026-11-22/legacy-activity/0200-big-run\.md\n")      # words and path, no exempt mark
+        self.assertRegex(out, r"\n\s+6\d\d\s+_records_/2026-11-23/INDEX\.md  \[exempt: exempt\.txt\]\n")
+        self.assertIn("exempt documents: 1", out)
+        self.assertIn("  _records_/2026-11-23/INDEX.md  [document-concision]", out)
+        self.assertIn("new gate errors vs anchor, by path: 1", out)
+        self.assertIn("  _records_/2026-11-22/legacy-activity/0200-big-run.md  [document-concision]", out)
+
+    def test_the_lists_are_in_the_json_summary_with_no_text_of_the_documents(self):
+        self.write("_records_/2026-11-23/INDEX.md", doc(650, "Day"))
+        self.run_git("add", "-A")
+        self.run_git("commit", "-q", "--no-verify", "-m", "a day index")
+        r = self.watch("--anchor", "HEAD~1")
+        summary = json.loads(r.stdout.split("\nbaseline summary written")[0])
+        self.assertEqual([(d["path"], d["exempt"]) for d in summary["new_documents"]], [("_records_/2026-11-23/INDEX.md", True)])
+        self.assertEqual(summary["new_documents"][0]["words"], 650)
+        self.assertEqual(summary["exempt_list"], [{"path": "_records_/2026-11-23/INDEX.md", "rule": "document-concision"}])
+        self.assertEqual((summary["new_documents_more"], summary["exempt_list_more"], summary["new_error_list"]), (0, 0, []))
+
+    def test_no_new_documents_prints_none(self):
+        r = self.gate("watch", "--baseline", str(self.tmp / "baseline.json"))
+        self.assertIn("new documents at or over 500 words: 0 (none)", r.stdout)
+        self.assertIn("exempt documents: 0 (none)", r.stdout)
+
+    def test_the_lists_are_capped_at_50_unless_list_asks_for_all(self):
+        rows = [{"path": f"_records_/d{i:03d}.md", "body_words": 600 + i, "legacy": False, "hard_violation": True, "severity": "error"}
+                for i in range(60)]
+        report = self.tmp / "report.json"
+        report.write_text(json.dumps({"errors": [], "document_budgets": {"documents": rows}}))
+        r = self.gate("watch", "--baseline", str(self.tmp / "baseline.json"), "--from-json", str(report), "--top", "3")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("new documents at or over 500 words: 60", r.stdout)
+        self.assertEqual(r.stdout.count("_records_/d0"), 60 - 10 + 3)                    # 50 listed, plus the 3 in the largest-documents table
+        self.assertIn("(10 more; run with --list for all)", r.stdout)
+        saved = json.loads((self.tmp / "baseline.json").read_text())
+        self.assertEqual((len(saved["new_documents"]), saved["new_documents_more"]), (50, 10))
+        self.assertLess((self.tmp / "baseline.json").stat().st_size, 20000)
+        full = self.gate("watch", "--baseline", str(self.tmp / "baseline.json"), "--from-json", str(report), "--list", "--no-write", "--top", "3")
+        self.assertNotIn("more; run with --list", full.stdout)
+        self.assertEqual(full.stdout.count("_records_/d0"), 60 + 3)
+
     def test_top_list_is_capped_and_no_full_list_is_stored(self):
         rows = [{"path": f"_records_/d{i}.md", "body_words": 100 + i, "legacy": False, "hard_violation": False,
                  "severity": "ok"} for i in range(80)]
