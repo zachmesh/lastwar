@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,none: start at 05:02:30Z (wait 0),2026-11-24T05:02:30Z,see growth/0054-waits.csv
+HUD,"food 125.4M, iron 769.1M, coin 23.0M, oil 671.6K, diamonds 11,133, energy 83 (red dot beside it), Total Power 150,046,960; a 26.72K counter with a plus button; Warzone Duel VS timer about 20:57",2026-11-24T05:02:40Z,tag text [G]: HUD
+Thanksgiving Event badge 2,"Store tab 3, Gift of Thanks tab 1 (other tabs not seen); Thanksgiving Store page: timer 6d 20:55; rows Go Obtain 6/100 limit 1 (twice), Go Obtain 6/10 limit 10, Redeem 6/1 limit 600, a further row cut off; nothing pressed",2026-11-24T05:03:40Z,badge 2 against tab dots 3 and 1: unexplained
+Events badge 1,"the hub opens on Black Market Challenge (timer 5d 20:55, 130/600 earned today); tabs Black Market, Black Market Challenge, Desert Battlefield: no dot or badge on any visible tab; four Go To rows",2026-11-24T05:04:30Z,unexplained
+Alliance dot,"tiles with a dot: Help, Alliance Gifts, Alliance Events; none on Alliance Wars, Members, Store, Techs, Assemble, Strength Ranking, Alliance City",2026-11-24T05:03:00Z,Help and Gifts: new requests and gifts; Alliance Events dot: not opened (unexplained)
+Mail dot,"categories with a dot: Battle Report, Regular, In-app Purchases; none on Alliance, Event, System, Favorite",2026-11-24T05:03:15Z,unread mails
+Inventory dot,"Special tab selected, Emote Choice Chest II the selected tile; dots on a mystery chest (223) and a golden chest (220); a small 377 badge near Special partly hidden; other tabs unread",2026-11-24T05:03:30Z,unopened chests; 377 unexplained
+red target icon,"radar timer icon: badge 5 then 2 with a countdown (00:00:40), not pressed",2026-11-24T05:03:00Z,radar pins never tapped
+quest tracker,'Upgrade Oil Well to Lv.22 (1/1)' with a red dot: the quest is complete and ready to turn in (the Main Tasks Claim),2026-11-24T05:02:40Z,a claimable main-task reward
+"Heroes, WORLD, Warzone Duel",no dot; chat bubble 99+,2026-11-24T05:02:40Z,
+pressed,"nothing that claims, collects, spends or sends",,observe only

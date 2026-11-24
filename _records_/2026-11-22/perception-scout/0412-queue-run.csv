@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 04:12:43Z (wait 0),2026-11-24T04:12:43Z,see growth/0054-waits.csv
+route,"Mail (670,787), the Battle Report category (287,181), one report row (390,277): the report opened at 04:13:23.8Z",2026-11-24T04:13:23.762Z,tag text [G]: mail screens
+report header,"a Lv.20 Zombie Horde against the owner account's base; location label with coordinates; time 2026-11-23 17:47:43 (the game's time stamp: 01:47:43Z); left side Defeat (the horde), right side Victory (the owner account)",2026-11-24T04:13:23.762Z,"a horde attack on the base, NOT the 01:15Z stronghold search; the owner side won"
+losses,"bar -6,300 (horde) and -4,953 (owner side); Overview rows: three horde squads 2,100 each (-2,100 each) against three owner squads 2,247 (-1,036), 2,175 (-1,772) and 2,145 (-2,145)",2026-11-24T04:13:23.762Z,"-1,036 -1,772 -2,145 = -4,953; wounded or dead split not shown on this part"
+rounds,Round 1: two rows Victory; horde heroes Lv.240 against owner heroes Lv.150; a Details button,2026-11-24T04:13:23.762Z,Details not pressed
+rewards and result text,below the fold of the report: NOT READ (no scroll in this run),,a follow-up read is needed
+TIPS dialog,"after the third back arrow tap (113,934) at 04:13:42.8Z an in-game dialog titled TIPS: 'Enable notifications and never miss important messages again.' with buttons Cancel (yellow) and Enable Now (blue) appeared over the base; the model pressed nothing and escalated; the run was stopped without answering the consent request",2026-11-24T04:13:45.896Z,Enable Now would start the macOS notification permission request (the UserNotificationCenter alert of 02:34Z may be the same chain: unverified)
+Zombie Siege page,not reached,,
+state,the dialog is still on screen over the base; nothing pressed; token released 04:18:13Z,2026-11-24T04:18:13Z,waiting for the coordinator's word on Cancel

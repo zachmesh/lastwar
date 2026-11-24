@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 05:00:22Z (wait 0),2026-11-24T05:00:22Z,see growth/0054-waits.csv
+Free Supply,Claimed before and after,2026-11-24T05:00:50Z,tag text [G]: Weekly Pass tab
+S2 Drone Components,"Legendary, 'Already claimed today' with Renew $4.99 (50 diamonds) before and after; not touched",2026-11-24T05:00:50Z,
+S1 Drone Parts,"Epic, Remaining 5d 20:59:10 then 5d 20:58:33; Daily Pickup of 15 items; a green Claim button with no price, cut off by the bottom edge of the page",2026-11-24T05:00:50Z,
+drag,"one drag from (394,700) to (394,380): the page did not move; the Claim stayed clipped",2026-11-24T05:01:05Z,drag up does not scroll this page (the scroll wheel did not either at 04:44Z)
+taps,"two taps on the visible top of the Claim at (572,913) and (572,917): no popup, no change",2026-11-24T05:01:25Z,the model tapped although the button was not fully inside the page (the brief's condition); three earlier taps at 04:43Z and 04:45Z also changed nothing
+result,blocked by route: Claim clipped; the S1 pickup (15 items) is unclaimed,2026-11-24T05:01:40Z,"Legendary Claim All, Renew, Buy never touched"
+diamonds,"11,133 before and after",2026-11-24T05:01:45Z,

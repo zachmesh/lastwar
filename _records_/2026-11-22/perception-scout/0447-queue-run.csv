@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,none: start at 04:47:56Z (wait 0),2026-11-24T04:47:56Z,see growth/0054-waits.csv
+list,"Battle Report list: six rows, all Victory and '3h ago': Lv.20, Lv.19, Lv.18, Lv.17, Lv.16, Lv.15 (partly cut off) Zombie Horde; no time stamps on the list",2026-11-24T04:51:20.333Z,tag text [G]: Battle Report list
+report stamp,"2026-11-23 17:47:43 (the game's time stamp, about 01:47:43Z) on the Lv.20 report",2026-11-24T04:51:30.187Z,
+result and bars,"left side Lv.20 Zombie Horde Defeat; right side owner account Victory; loss bars -6,300 (horde) and -4,953 (owner side)",2026-11-24T04:51:30.187Z,
+Overview,"three horde squads 2,100 each, each -2,100; owner squads 2,247 (-1,036), 2,175 (-1,772) and 2,145 (-2,145)",2026-11-24T04:51:30.187Z,"1,036 + 1,772 + 2,145 = 4,953; wounded, dead and healed NOT shown separately"
+Round 1,"three battle rows, each five Lv.240 zombie units against five Lv.150 owner heroes with a Details button (not pressed): the first two Victory for the owner side, the third Victory for the horde side",2026-11-24T04:51:49Z,
+Round 2,"one battle row, Victory for the owner side, with a Details button",2026-11-24T04:52:02Z,the report ends here
+rewards,"not shown: no REWARDS section; the bottom shows only the back arrow, the star and the bin",2026-11-24T04:52:02Z,a touch swipe (a drag) moved the report once; the scroll wheel did not move it
+schedule,"the report carries no schedule or footnote; the Zombie Siege page (read 04:49Z): Enemy Power 30,200,000; Lv.10 stronghold selected, Base Level Required Lv.30, a 94 counter; progress 1,411,560/300,000; 'Auto-searching for Lv.10 Stronghold at 2026-11-26 23:15'; 'Search available again after server time 2026-11-26 at 00:00'; button Cancel Schedule (not pressed)",2026-11-24T04:49:30Z,"server time is UTC minus 2 hours, so 23:15 server is 01:15Z on the next day; the base defended by itself (Victory); the horde waves are not scheduled on any page read"
+TIPS dialog,did not appear in either run,,Cancel rule ready
+Total Power,"150,046,960",2026-11-24T04:52:30Z,

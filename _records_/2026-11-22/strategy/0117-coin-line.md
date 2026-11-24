@@ -1,7 +1,7 @@
 ---
 title: Coin line
 created: 2026-11-23T23:08:00Z
-modified: 2026-11-23T23:08:00Z
+modified: 2026-11-24T04:01:00Z
 version: 1.0.0
 level: L3
 description: Dated coin conversions and the supply against need after the fixed Coin Chests were spent on the first three ground levels, with the order of chests
@@ -24,6 +24,8 @@ grounded_in:
 | 11-24 15:30Z | about 28M | Oil Output I level 1 (11.2M), a Special Forces fill (under 25M), the 10M floor; the harvest adds about 8M by 17:30Z |
 | each later start | need plus the 10M floor, 2 hours before | Oil Output I levels 2 to 10 are covered by the harvest (about 10.6M a day) |
 | large items | in time | Base Expansion 174.1M, HQ 31 433.5M, ground levels 83M to 161M |
+
+11-26 20:00Z to 21:00Z: about 60M coin (plain chests) and about 265M food (65 typed UR Food Chests) for the next ground level (decision 2026-11-24-03).
 
 Order: plain Resource Chests first (about 125M in one Use; each also offered 10K food or iron), then SR, SSR and UR choice chests. A 1.0G choice-chest minimum is the only hard floor.
 

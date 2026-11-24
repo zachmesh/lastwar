@@ -32,6 +32,6 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 ## Brief (planner, the 06:03Z wave specifics)
 
-Idle-slot read: close with `--stat slots_idle=<N>`, the TOTAL open slots including the blocked ones, and for slots blocked by a full Drill Ground `--stat slots_blocked_by_capacity=<N> --stat capacity_blocker="Drill Ground Full"` (blocker at most 40 characters). A finished batch collects only when the free room covers it (726 collected at 03:30:53Z; the 793 batch does not fit in 274): this read presses no Collect. Read only: never Train, Collect, Upgrade or Research here. The four builders run the ground and Oil Well upgrades; the Oil Well hand-offs are named units: this read presses nothing.
+Idle-slot read: a FINISHED item waiting for its Complete tap (a wrapped gift box) is FINISHED WAITING, not idle: record its name and the minutes since it finished; tap the gift box only if this unit's task is Complete. Close with `--stat slots_idle=<N>` (the TOTAL open slots) and, for slots blocked by a full Drill Ground, `--stat slots_blocked_by_capacity=<N> --stat capacity_blocker="Drill Ground Full"`. Read only: never Train, Collect, Upgrade or Research here.
 
 Safe tap: the bare spot (310,660), not (400,640) after a camera shift (WORLD then BASE first).

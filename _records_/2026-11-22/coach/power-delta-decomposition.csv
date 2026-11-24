@@ -2,9 +2,10 @@ component,power,share_of_net,basis
 "OUR GAIN: two research Completes (11:53Z, 13:56Z)",7800,,"tech +3,900 each"
 OUR GAIN: Oil Well Lv.20 to 21 Complete (02:24:23Z),4200,,building
 "OUR GAIN: Lv.27 T9 x726 batch collected (03:30:53Z), room freed by the external siege",981552,,"726 x 1,352"
-"OUR GAIN, total",993552,218% of the net's size,what we caused; the four builds started tonight add power only as they complete
-"OTHER DEVICE, attributed by category (11:53Z to 12:51Z on 11-23)",197337,43% of the net's size,"hero +149,237 (Decorations and Building Stats +133,767), drone +1,800, building +23,200, tech +23,100 [D]"
-"EXTERNAL, RECOVERABLE: 1,000 T10 troops wounded by the owner-set Zombie Siege (01:15Z)",-1647000,-361% of the net's size,"in the hospital: Severely Wounded Lv.10 1,364; +1,647,000 only when healed AND collected, and that needs 1,000 room"
-"NET CHANGE since the 150,211,809 read at 07:47Z on 11-23",-456111,,"150,211,809 to 149,755,698"
-CHECK: our gain + other device + external,-456111,,equals the net change
-LOCKED BEHIND TROOP ROOM now,,6.1% to 8.2% of the total,"wounded 1,364 x 1,647 = 2,246,508; healed pile 5,306 x 1,063 to 1,647 = 5,640,278 to 8,738,982 (tier mix unread); Lv.30 batch 793 x 1,647 = 1,306,071; total 9,192,857 to 12,291,561 for 7,463 troops"
+"OUR GAIN: Lv.24 finished batch of 274 Lv.8 collected (03:51Z to 03:53Z), room freed by the external siege",291262,,"274 x 1,063; the room the siege freed is used up: 726 + 274 = 1,000"
+"OUR GAIN, total",1284814,,what we caused; the four builds started tonight add power only as they complete
+"OTHER DEVICE, attributed by category (11:53Z to 12:51Z on 11-23)",197337,,"hero +149,237 (Decorations and Building Stats +133,767), drone +1,800, building +23,200, tech +23,100 [D]"
+"EXTERNAL, RECOVERABLE: 1,000 T10 troops wounded by the owner-set Zombie Siege (01:15Z)",-1647000,,"in the hospital: Severely Wounded Lv.10 1,364; +1,647,000 only when healed AND collected, which needs 1,000 room"
+"NET CHANGE since the 150,211,809 read at 07:47Z on 11-23",-164849,,"150,211,809 to 150,046,960"
+CHECK: our gain + other device + external,-164849,,equals the net change
+LOCKED BEHIND TROOP ROOM now,,6.1% to 8.2% of the total,"wounded 1,364 x 1,647 = 2,246,508; healed pile 5,306 x 1,063 to 1,647 = 5,640,278 to 8,738,982 (tier mix unread); Lv.30 batch 793 x 1,647 = 1,306,071; total 9,192,857 to 12,291,561 for 7,463 troops; the 274 collected were never in this count (it was a hidden finished batch: before the collect the pile was 7,737); PLUS about 249 T8 probably still waiting in the Lv.24 barracks (+264,687) [D], 7,712 troops in all"

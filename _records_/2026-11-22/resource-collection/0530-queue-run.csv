@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 05:30:06Z (wait 0),2026-11-24T05:30:06Z,see growth/0054-waits.csv
+oil panel before,"title Oil; owned 671.6K (671,633); Building Acquisition 1.2K/H; Collect Resources Available 2,352; no capacity or time-until-full line; buttons Details (not pressed), Collect, Go (The Age of Oil), Go (Radar Vehicle), a $19.99 Oil Special Offer Pack, X",2026-11-24T05:30:40Z,tag text [G]: Oil panel
+Collect,pressed once; no toast or popup,2026-11-24T05:30:50Z,
+oil panel after,"owned 673,985 (673.9K); Available Resources 0; output 1.2K/H",2026-11-24T05:30:55Z,"+2,352 oil"
+minutes since last,"03:38:55Z to about 05:30:50Z = 111.9 minutes; 2,352 over 111.9 minutes = 1.261K an hour: the Lv.21 output 1,260 an hour (the panel rounds to 1.2K/H)",2026-11-24T05:30:55Z,the third collection
+HUD,"oil 673.9K; food 125.4M, iron 769.2M, coin 23.0M, diamonds 11,153, Total Power 150,046,960",2026-11-24T05:31:00Z,
+drag count,"drags tried 0, cancelled 0",,

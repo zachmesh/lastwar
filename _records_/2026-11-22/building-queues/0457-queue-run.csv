@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 04:57:10Z (wait 0),2026-11-24T04:57:10Z,see growth/0054-waits.csv
+tag,Hospital Lv.25,2026-11-24T04:57:40Z,tag text Hospital Lv.25
+panel,"title HOSPITAL; Severely Wounded Units 1,364/7,999 with a green bar; one troop row: a Lv.10 icon, count 1,364, a minus button, a slider at its maximum, a plus button and a quantity box reading 1,364; Completed 5,306 (green bar)",2026-11-24T04:57:50Z,no control touched
+buttons,"Collect (green), X, a small info 'i' icon at the lower right, the minus and plus buttons on the troop row; no Heal button visible",2026-11-24T04:57:50Z,info icon not pressed
+heal cost,not shown,2026-11-24T04:57:50Z,
+heal time,not shown,2026-11-24T04:57:50Z,
+speed-up line,not shown,2026-11-24T04:57:50Z,
+free room,"7,999 - 1,364 - 5,306 = 1,329 (computed: the panel has no free-room line)",2026-11-24T04:57:50Z,unchanged since 02:07Z
+Total Power,"150,046,960",2026-11-24T04:58:10Z,

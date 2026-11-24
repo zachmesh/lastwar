@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 04:10:02Z (wait 0),2026-11-24T04:10:02Z,see growth/0054-waits.csv
+lab 1,"row 'Lv.0 Food Output V upgrade in progress', busy; Time Left 13:19:35 then 13:19:31 (04:10:23.8Z): ends 2026-11-24T17:29:55Z",2026-11-24T04:10:23.807Z,tag text [G]: Research Queue row
+lab 1 Speed Up panel,"bar 13:19:08; Instant Speed-up line 13:20:00; Finish Now [13:19:18], yellow Buy & Use 1,851 diamonds (never pressed)",2026-11-24T04:10:46.392Z,Finish Now clock = bar + 10 s; the Instant line is the Time Left rounded up to the minute
+lab 2,"row 'Lv.0 Iron Output V upgrade in progress', busy; Time Left 22:28:37 then 22:28:32: ends 2026-11-25T02:38:56Z",2026-11-24T04:10:23.807Z,the brief named Coin Output V in lab 2 ending about 14:59:10Z: not what the panel shows
+lab 2 Speed Up panel,"bar 22:27:42; Instant Speed-up line 22:28:00; Finish Now [22:27:52], yellow Buy & Use 2,963 diamonds (never pressed)",2026-11-24T04:11:13.318Z,same +10 s and rounding
+idle,0 of 2 labs idle; counter 2/2; slots_idle 0,2026-11-24T04:10:24Z,
+oil counter,671.6K at the start and the end,2026-11-24T04:11:40Z,
+Total Power,"150,046,960",2026-11-24T04:11:40Z,

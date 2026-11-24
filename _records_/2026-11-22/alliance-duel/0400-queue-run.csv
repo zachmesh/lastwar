@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 04:00:14Z (wait 0),2026-11-24T04:00:14Z,see growth/0054-waits.csv
+tan trophy bubble,"no on three looks: the tan bubble at (600,710) holds a green vehicle, not a trophy",2026-11-24T04:00:35Z,
+other bubbles,"red target icon above the Alliance shield (670,640); a small white bubble with a green vehicle (630,742)",2026-11-24T04:00:35Z,
+mid-base trophy,"a gold trophy bubble over the mid-base building (583,218), flickering; never tapped",2026-11-24T04:00:40Z,OD-20261123-01
+taps,none,,waits only
+HUD,"Total Power 150,046,960; diamonds 11,113",2026-11-24T04:00:50Z,

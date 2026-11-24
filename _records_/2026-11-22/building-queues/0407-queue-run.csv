@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 04:07:04Z (wait 0),2026-11-24T04:07:04Z,see growth/0054-waits.csv
+builder 1,"Drill Ground to Lv.26: Time Left 2d 17:03:17 (04:07:20.1Z), 2d 17:03:03 (04:07:33.5Z): ends 2026-11-26T21:10:36Z; busy, button Speed Up (not pressed)",2026-11-24T04:07:33.465Z,tag text [G]: queue row
+builder 2,Drill Ground to Lv.27: 6d 18:14:27 then 6d 18:14:13: ends 2026-11-30T22:21:46Z; busy,2026-11-24T04:07:33.465Z,
+builder 3,Oil Well to Lv.21 (upgrading to Lv.22): 03:54:26 then 03:54:12: ends 2026-11-24T08:01:45Z; busy,2026-11-24T04:07:33.465Z,inside the 08:00Z quiet window
+builder 4,Drill Ground to Lv.28: 11d 07:51:59 then 11d 07:51:45: ends 2026-12-05T11:59:18Z; busy,2026-11-24T04:07:33.465Z,
+idle,0 of 4 builders idle; slots_idle 0; slots_blocked_by_capacity 0,2026-11-24T04:07:33Z,
+Hospital,"tag Hospital Lv.25; Severely Wounded Units 1,364 of 7,999; Lv.10 row 1,364; Completed 5,306; free room 7,999 - 1,364 - 5,306 = 1,329; buttons Collect, plus and minus not pressed",2026-11-24T04:08:39.470Z,tag text Hospital Lv.25
+change since 02:07Z,"none: wounded, completed and free room equal the baseline (no healing, no new casualties)",2026-11-24T04:08:39Z,Heal never pressed
+Total Power,"150,046,960 at the start and the end",2026-11-24T04:09:00Z,

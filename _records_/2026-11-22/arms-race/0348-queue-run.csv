@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 03:48:55Z (wait 0),2026-11-24T03:48:55Z,see growth/0054-waits.csv
+phase,Unit Progression (Contest Segment Lv.29-30); timer 02:10:52 then 02:10:36,2026-11-24T03:49:20Z,tag text [G]: panel
+points,owner account 0 points; rank 9,2026-11-24T03:49:25Z,
+point chests,"15,000 (2,360 rubies), 30,000 (4,800 rubies) and 75,000 (11,800 rubies): all locked, no bounce, no red dot",2026-11-24T03:49:25Z,not tapped
+counter chest,"top left 0 of 2, not full",2026-11-24T03:49:25Z,
+scoring rows,Train a Lv.10 unit +31 (Go); Use 1-min Training Speed-up +10 (Go); Buy Packs containing Diamonds +30 (Go): none has a safe free path,2026-11-24T03:49:30Z,no Go pressed
+claim,nothing claimable; nothing tapped,2026-11-24T03:49:40Z,
+HUD,"food 125.4M, iron 769.1M, coin 23.0M, oil 671.6K, energy 68, Total Power 149,755,698",2026-11-24T03:49:45Z,

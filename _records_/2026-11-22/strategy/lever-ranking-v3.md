@@ -1,7 +1,7 @@
 ---
 title: Lever ranking for strategy v3.0 draft
 created: 2026-11-23T09:02:00Z
-modified: 2026-11-24T02:15:00Z
+modified: 2026-11-24T04:26:00Z
 version: 0.4.0
 level: L3
 description: The merged capacity and materials ranking by power per scarce unit, with the evidence tag and the read that would change each rank
@@ -22,7 +22,7 @@ The owner ordered Base Expansion as the strategy's priority, so "HQ 31 and the A
 ## Top five
 
 1. **Base Expansion line** (owner order). Path nodes +411K power [S1] and HQ 31 +63,700 [M] with Hero Level Cap 155; oil binds, ETA 2027-01-08 to 01-23 ([ETA note](0510-base-expansion-eta.md)); it carries the 3rd Tech Center, Fast Builder V and Research Enhancement V.
-2. **Drill Ground levels,** the only reachable room: 8,189 troops (10.2M to 13.3M power) wait behind it; +200 slots a level, three started at 23:20Z, the first done 12-03 19:20Z ([room levers](0670-room-levers.md)).
+2. **Drill Ground levels,** the only reachable room (ramp base case: each level releases 200 finished troops, 35.7K, 25.6K and 19.9K a builder-day on the first three, about 1,042 troops waiting, then training): 8,189 troops (10.2M to 13.3M power) wait behind it; +200 slots a level, three started at 23:20Z, the first done 12-03 19:20Z ([room levers](0670-room-levers.md)).
 3. **Unit Count extras:** 5,969 slots of unread source; a read-only unit decides if they can be raised.
 4. **Hero Tier 5 stars** for Lucius and Schuyler: 120 of 680 shards close the gaps, +0.3M to +1.0M [G]; weapon steps wait for the Murphy test (0640).
 5. **Promotion, +2.75M,** when the panel opens.

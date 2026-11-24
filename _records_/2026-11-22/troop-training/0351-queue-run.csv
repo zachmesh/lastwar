@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 03:51:07Z (wait 0),2026-11-24T03:51:07Z,see growth/0054-waits.csv
+first frame,"no different-device dialog; food 125.4M, iron 769.1M, coin 23.0M, Total Power 149,755,698",2026-11-24T03:51:30Z,
+Barracks Lv.24,"tag Barracks Lv.24; the pistol showed a toast 'Training complete: 274 Lv. 8 units are ready' with '+274' and 'POWER +291,262': the finished units were collected by that press; Total Power 149,755,698 to 150,046,960; queue now idle",2026-11-24T03:52:00Z,"unintended collect: the pistol collects a finished batch (power +1,063 per Lv.8 unit)"
+Barracks Lv.20,"tag Barracks Lv.20; pistol: toast 'Drill Ground Full: Unable to add more units.'; queue blocked, no panel",2026-11-24T03:52:20Z,the 274 collected units filled the room (about 274 was left)
+Barracks Lv.27,"tag Barracks Lv.27; pistol opened TRAIN UNITS with no queue running; Lv.9 selected; slider at its maximum 726; Train button 1d 10:19:35; Finish Now also 1d 10:19:35 (not pressed); stats Power 1352, Morale 625.0, Squad Load Capacity 2000, HP 4167.45, Attack 33.87, Defense 7.04",2026-11-24T03:52:40Z,idle; the slider maximum shows no capacity limit
+Barracks Lv.30,"tag Barracks Lv.30; TRAIN UNITS with a batch running: Lv.10 x793, 'Training in progress 07:25:14' (ends about 11:18:30Z), Speed Up not pressed; stats Power 1647, Morale 750.0, Squad Load Capacity 2200, HP 4779.05, Attack 38.87, Defense 8.04",2026-11-24T03:53:00Z,queue active
+HUD,"Total Power 150,046,960; food 125.4M, iron 769.1M, coin 23.0M",2026-11-24T03:53:20Z,only the collect changed anything
