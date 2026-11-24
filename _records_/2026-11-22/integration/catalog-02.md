@@ -36,3 +36,4 @@ Back to the [folder index](INDEX.md).
 - [PR 942](landing-pr-942.md) - refill-verified, the refill clock verified on two pre-registered passes
 - [PR 943](landing-pr-943.md) - owner-idle-launcher, the owner-idle value in the launch path (OD-27)
 - [PR 944](landing-pr-944.md) - cu-launcher-note, the owner-idle 0 moves to the launcher line
+- [PR 945](landing-pr-945.md) - fourteenth records snapshot, units of 20:50Z to 22:45Z, OD-27 with catalog 04

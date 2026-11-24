@@ -1,0 +1,16 @@
+item,value,read_utc,note
+wait,none: start at 00:30:23Z (wait 0),2026-11-24T00:30:23Z,see growth/0054-waits.csv
+entry count,"10/30, coin Donate green at 1000, no timer, node Quick Construction 9/10; the dialog first on screen at the 00:30:54.5Z frame, read as 10/30 from the 00:31:00.333Z frame",2026-11-24T00:31:00.333Z,"BEFORE any Donate tap; registered prediction 10: matched, no flag"
+tap 1,00:31:06.224Z: count 9/30,2026-11-24T00:31:11.201Z,
+tap 2,00:31:16.693Z: 8/30,2026-11-24T00:31:19.556Z,
+tap 3,00:31:23.148Z: 7/30,2026-11-24T00:31:27.996Z,
+tap 4,00:31:32.405Z: 6/30,2026-11-24T00:31:38.602Z,
+tap 5,00:31:43.171Z: 5/30,2026-11-24T00:31:46.088Z,
+tap 6,00:31:51.193Z: 4/30,2026-11-24T00:31:54.032Z,
+tap 7,00:32:00.591Z: 3/30,2026-11-24T00:32:03.449Z,
+tap 8,00:32:09.148Z: 2/30,2026-11-24T00:32:12.006Z,
+tap 9,"00:32:18.877Z: 1/30, button green (the live count before the last tap, read at 00:32:23.840Z)",2026-11-24T00:32:23.840Z,
+tap 10 LAST,00:32:29.606Z: the coin Donate went grey with a timer,2026-11-24T00:32:32.454Z,"diamond Donate never pressed; 10,000 coins"
+first timer,00:05:17 read at 00:32:40.169Z: ends 00:37:57.17Z; grid 00:37:57.397Z: within 0.23 s,2026-11-24T00:32:40.169Z,one read only (a second read was dropped to save cost)
+witness,"Tech EXP bar 4.6M/8.0M (4.5M at 21:17Z); Tech Donation Today 7,450 to 8,550 after the dialog closed",2026-11-24T00:33:09Z,a rise corroborates
+close,"the dialog X, the Techs X and the Alliance back arrow closed; the run completed at step 22 (cost 0.279798)",2026-11-24T00:33:30Z,no cleanup run needed

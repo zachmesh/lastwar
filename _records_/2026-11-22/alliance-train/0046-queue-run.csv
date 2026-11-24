@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,none: start at 00:46:01Z (wait 0),2026-11-24T00:46:01Z,see growth/0054-waits.csv
+boarding banner,none in any frame (waits over about 40 seconds),2026-11-24T00:46:30Z,
+left column,"hammer 4/4, flask 2/2, truck icon with a ? bubble (107,648), radar dish (107,714), hammer (107,780); no locomotive",2026-11-24T00:46:30Z,
+other signs,an announcement banner only; VS countdown 01:13:59 to 01:13:30; a red target icon with a countdown; Alliance and Inventory red dots,2026-11-24T00:46:35Z,
+HUD,"Total Power 150,416,946; diamonds 11,113; energy 72",2026-11-24T00:46:40Z,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 23:43:34Z (wait 0),2026-11-23T23:43:34Z,see growth/0054-waits.csv
+fragments,"M1 6, M2 6, M3 0, M4 3, M5 1, M6 8, M7 5, unchanged after the read",2026-11-23T23:43:55Z,tag text [G] (panel)
+screen,"Dig 1 time and Dig 2 time(s) greyed with no cost text; Skip Animation ticked, left as it was; no timer",2026-11-23T23:43:55Z,
+chest track,6/15 before and after,2026-11-23T23:43:55Z,
+taps,"the pickup truck icon, the Hidden Treasures tab, the back arrow; no dig",,no dig
+base after,"BASE, no panel",2026-11-23T23:44:05Z,

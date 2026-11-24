@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,none: start at 23:20:33Z (wait 0),2026-11-23T23:20:33Z,see growth/0054-waits.csv
+Training Base entries,"all four builders idle (0/4) at the first read 23:20:50Z; each row shows a Construct button; no finished entry to press; Total Power 150,416,946 before and after",2026-11-23T23:20:50Z,tag text [G]: panel rows; the entries had completed on their own
+Lv.26 tag and Details,tag Drill Ground Lv.26; Details 'Unit Count +8035'; no capacity or free-room line,2026-11-23T23:21:55Z,tag text Drill Ground Lv.26
+Lv.26 preview [M],"Lv.26 to 27; Hero EXP 24.0M; Unit Count +7,200 to +7,400; Power 118,600 to 140,200 (+21,600); cost rows, all green and visible without scrolling: Lv.27 Headquarters, iron 1.0G/74.8M, FOOD 674.4M/221.0M; coin 59.5M (coin fell by exactly that); original time 21d 11:19:25; effective 10d 02:30:19; Finish Now (diamonds) not pressed",2026-11-23T23:22:10Z,food row shown; the preview did not scroll
+Lv.26 Upgrade,"pressed once at 23:22:18.031Z; field timer 10d 01:51:07; builders 1/4; coin 272.5M to 213.0M, food 674.4M to 453.4M",2026-11-23T23:22:18.031Z,
+Lv.27 tag and Details,tag Drill Ground Lv.27; Details 'Unit Count +8843',2026-11-23T23:22:55Z,tag text Drill Ground Lv.27
+Lv.27 preview [M],"Lv.27 to 28; Hero EXP 26.0M; Unit Count +7,400 to +7,600; Power 140,200 to 165,800 (+25,600); cost rows, all green, no scroll: Lv.28 Headquarters, iron 1.0G/102.0M, FOOD 453.4M/314.5M; coin 83.3M; original time 30d 01:27:10; effective 14d 03:30:26",2026-11-23T23:23:15Z,food row shown
+Lv.27 Upgrade,"pressed once at 23:23:21.851Z; field timer 14d 02:51:14; builders 2/4; coin 213.0M to 129.7M, food 453.4M to 138.9M, iron to 909.3M",2026-11-23T23:23:21.851Z,
+builders panel,"row 1 Lv.26 Drill Ground upgrade: 9d 19:54:56 left at 23:25:41.346Z: ends 2026-12-03T19:20:37Z; row 2 Lv.27 Drill Ground upgrade: 13d 20:56:07: ends 2026-12-07T20:21:48Z; rows 3 and 4 idle (Construct, red dot); Speed Up not pressed",2026-11-23T23:25:41.346Z,"the timers sit 6.5 hours under the previews (alliance help or a bonus, unverified)"
+HUD,"coin 129.7M, iron 909.3M, food 138.9M, Total Power 150,416,946 unchanged, builders 2/4",2026-11-23T23:25:55Z,

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 23:33:12Z (wait 0),2026-11-23T23:33:12Z,see growth/0054-waits.csv
+run 1,23:33:12Z to 23:34:18Z: after three drags only a part of an orange tile with count 169 was visible and a tap during the scroll did not select; stopped without pressing Use,2026-11-23T23:34:18Z,food 136.0M unchanged
+food before,136.0M (the HUD rounds to 0.1M),2026-11-23T23:34:30Z,tag text [G]: HUD
+tile,"'Food Chest (UR)', 'At the current Base Level, you can obtain 4.06M Food', owned 169 (about 103 expected: the planner's count was old)",2026-11-23T23:35:03Z,N = ceil((542M - 136.0M) / 4.06M) = 101 (100.0 rounded up)
+before Use,"field 101, Total 410.14M (slider drag then four plus taps at 23:35:21.5Z to 23:35:39.5Z)",2026-11-23T23:35:40Z,
+Use,one press at 23:35:44.748Z (the last tap); popup CONGRATULATIONS 410.1M food dismissed at 23:35:55.607Z; no confirmation dialog,2026-11-23T23:35:44.748Z,Food Chest (UR) 169 to 68
+food after,"546.1M, 4.1M over the target 542M",2026-11-23T23:36:05Z,"no shortfall; iron 900.8M, coin 127.8M and Total Power 150,416,946 unchanged"
+builders panel lines,"Lv.26 Drill Ground upgrade: Time Left 9d 19:55:06 (23:25:31.9Z), 9d 19:55:01 (23:25:36.9Z), 9d 19:54:56 (23:25:41.3Z), 9d 19:50:49 (23:29:48.2Z), 9d 19:50:42 (23:29:55.2Z); Lv.27 Drill Ground upgrade: 13d 20:56:17, 20:56:12, 20:56:07 at the same three frames, then 13d 20:52:00 and 13d 20:51:53; Oil Well upgrade: 02:48:05 (23:29:48.2Z), 02:47:58 (23:29:55.2Z)",2026-11-23T23:29:55.213Z,"records 2320 and 2328; panel line text: building and level, 'upgrade', Time Left"
+flat reduction,"Upgrade press time to panel end against the preview effective time: Lv.26 press 23:22:18.03Z, end 2026-12-03T19:20:37Z, duration 9d 19:58:19 against 10d 02:30:19: 6h 31m 59.7s; Lv.27 press 23:23:21.85Z, end 2026-12-07T20:21:48Z, 13d 20:58:26 against 14d 03:30:26: 6h 31m 59.5s; Oil Well press 23:29:34.81Z, end 2026-11-24T02:17:53Z, 02:48:18 against 09:20:18: 6h 31m 59.6s",2026-11-23T23:36:30Z,"a FLAT 6h 32m 00s on all three (within 0.5 s), not a percentage: the base durations are 10d, 14d and 9h; the cause is unverified"

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 23:28:21Z (wait 0),2026-11-23T23:28:21Z,see growth/0054-waits.csv
+route,"WORLD then BASE, drag (400,580) to (150,830), drag (660,470) to (390,620), pumpjack taps at (508,808) then (504,862) on the fresh frame",2026-11-23T23:29:10Z,the Oil Well is at the north-east wall
+tag,Oil Well Lv.20,2026-11-23T23:29:15Z,tag text Oil Well Lv.20
+preview [M],"Lv.20 to 21; Hero EXP 660.0K; Oil Output/hr 1,200 to 1,260; Power 23,200 to 27,400 (+4,200); Max Production Time 10:40:00 to 10:48:00; cost rows all green and visible without scrolling: Lv.30 Headquarters, Lv.1 Unlock Oil Well, iron 909.3M/8.5M; original time 19:50:38; effective 09:20:18 (on the Upgrade button); Finish Now 456 diamonds not pressed",2026-11-23T23:29:28Z,"no food row after scrolling (the scroll changed nothing); no coin or oil row; the Upgrade button was BLUE, not green"
+Upgrade,pressed once at 23:29:34.806Z; quest line 'Upgrade Oil Well to Lv.21 (1/1)'; builders 3/4,2026-11-23T23:29:34.806Z,no confirmation or diamond popup
+builders panel,Oil Well upgrade Time Left 02:48:05 at 23:29:48.18Z and 02:47:58 at 23:29:55.21Z: ends 2026-11-24T02:17:53Z; Lv.26 Drill Ground 9d 19:50:42: ends 2026-12-03T19:20:37Z; Lv.27 Drill Ground 13d 20:51:53: ends 2026-12-07T20:21:48Z (both unchanged since 23:25Z); builder 4 idle,2026-11-23T23:29:55.213Z,the Oil Well timer read 08:41:06 over the building right after the press and 02:48:05 in the panel 13 seconds later: unexplained (alliance help is a guess)
+resources,"iron 909.3M to 900.8M (8.5M); food 138.9M to 136.0M and coin 129.7M to 127.8M also fell (unexplained, not in the preview; the owner plays by hand)",2026-11-23T23:30:10Z,
+Total Power,"150,416,946 before and after (the +4,200 registers on Complete)",2026-11-23T23:30:15Z,

@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-23T13:35:27Z
 expires_at: 2026-11-24T04:40:00Z
 planned_for:
-not_before: 2026-11-24T02:10:00Z
+not_before: 2026-11-24T02:30:00Z
 window: barracks read tonight idle queues blocked by capacity named
 est_minutes: 10
 serves: PL-09

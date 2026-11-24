@@ -1,7 +1,7 @@
 ---
 title: Oil Well hand-off rule
 created: 2026-11-23T22:30:00Z
-modified: 2026-11-23T22:30:00Z
+modified: 2026-11-23T23:35:00Z
 version: 1.0.0
 level: L3
 description: The rule for re-ranking builder 1 at each Oil Well level hand-off, with the oil date each level moves, the power per builder-day on two assumptions and the coin test
@@ -23,7 +23,7 @@ At each hand-off (a level completes, the next starts) the unit note records thre
 
 ## Rule
 
-Keep B1 on the well while the level is coin-free and beats the best free alternative on power per builder-day or moves HQ 31's oil date by at least 0.3 days per builder-day. If a panel shows coin, compare power per million coin: the ladder is 5.9K, Gold Mine 622, and Lv.28 on the sheet's coin about 500. Every alternative costs coin (Gold Mine 23.8M, Hut 18.7M, Barracks 49.3M), so the well is the only coin-free builder job. Likely stop point: Lv.27 to 28, or earlier if coin appears. Oil only matters while it binds: the path's oil day is 35 to 49 and HQ 31's 50 to 65 [G], against 45 to 60 for the lab chain.
+Keep B1 on the well while the level is coin-free and beats the best free alternative on power per builder-day or moves HQ 31's oil date by at least 0.3 days per builder-day. If a panel shows coin, compare power per million coin: the ladder is 5.9K, Gold Mine 622, and Lv.28 on the sheet's coin about 500. Every alternative costs coin (Gold Mine 23.8M, Hut 18.7M, Barracks 49.3M), so the well is the only coin-free builder job. With the flat 6h32m reduction (H125) the rising-extrapolation power per builder-day is 36K (Lv.21), 21K, 14K, 9.3K, 6.5K (Lv.25), 4.7K, 3.5K (Lv.27), 2.6K (Lv.28), 2.1K and 1.7K (Lv.30). Likely stop point: Lv.27 to 28 (2.6K, below Gold Mine at 3.2K), or earlier if coin appears. Oil only matters while it binds: the path's oil day is 35 to 49 and HQ 31's 50 to 65 [G], against 45 to 60 for the lab chain.
 
 ## Oil model
 

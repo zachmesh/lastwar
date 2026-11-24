@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 00:39:48Z (wait 0),2026-11-24T00:39:48Z,see growth/0054-waits.csv
+rail before,"Alliance gift icon; red dots on Event, Regular and In-app Purchases; none on Battle Report, System, Favorite",2026-11-24T00:40:10Z,
+Event,"first mail unread, no gift icon; Claim All blue, not pressed; no mail titled Train arrival reward in the visible list (ally train notices, Returned Items, a Mega Express mail)",2026-11-24T00:40:25Z,list not scrolled
+System,"president notices only, no gift icon; Claim All not pressed",2026-11-24T00:40:35Z,
+Alliance Claim All,"the first mail (an alliance exercise notice) had a gift icon; Claim All pressed once; popup CONGRATULATIONS: EXP 105.8M, a 50.0K item, triangle item 4.6K, 5m speed-ups x30, x19, x29, x20 and x22, coin 12.1M, food 19.0M, iron 19.0M; plus a gift received toast",2026-11-24T00:40:50Z,"dismissed by an empty tap at (400,800)"
+rail after,"the Alliance gift icon gone; red dots on Event, Regular and In-app Purchases remain (unread mails only)",2026-11-24T00:41:00Z,
+HUD,"food 105.6M to 124.6M, iron 757.7M to 776.7M, coin 10.0M to 22.1M, diamonds 11,113, Total Power 150,416,946 unchanged",2026-11-24T00:41:05Z,

@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T21:29:00Z
+modified: 2026-11-24T00:42:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -28,6 +28,7 @@ sidecars the runs cite.
 - [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
 - [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
 - [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
+- [1537-flat-reduction-series.md](1537-flat-reduction-series.md) - the flat 6 h 32 min on the builders panel, the research 4 h 12 min, and the builders' start against 23:20:12Z.
 - [1327-pass-002-and-wait-cost.md](1327-pass-002-and-wait-cost.md) - donation pass 002 scored; the measured cost of the 300 s wait for the owner's D-066 note.
 - [1206-capacity-release-curve.md](1206-capacity-release-curve.md) - what a Drill Ground level releases: a step or a ramp, and the startable idle minutes.
 - [1012-builders-time-correction.md](1012-builders-time-correction.md) - the builders free tonight at 23:20Z, my files corrected, window margins of every trigger.
@@ -75,3 +76,6 @@ sidecars the runs cite.
 - [wait-aggregate-method.py](wait-aggregate-method.py) - the daily D-066 numbers: minutes waited per day by unit and by cause, from growth/0054-waits.csv.
 - [wait-cause-overrides.csv](wait-cause-overrides.csv) - a stated cause with its evidence for a wait row that cannot be classified from the row alone.
 - [throughput-method.py](throughput-method.py) - operator units per available hour before and after the restored 300 s wait, with the wait share, for Steer A's two-hour measurement.
+- [flat-reduction-series.csv](flat-reduction-series.csv) - preview, actual and difference for each build and research node, with the test registered before the next starts.
+- [daily-report-inputs-2026-11-24.csv](daily-report-inputs-2026-11-24.csv) - the headline numbers staged for the next daily report.
+- [refill-reset-test-prereg.csv](refill-reset-test-prereg.csv) - the three outcomes for pass 004 across the 02:00Z reset, registered before the data, with the confound and the one old datum.

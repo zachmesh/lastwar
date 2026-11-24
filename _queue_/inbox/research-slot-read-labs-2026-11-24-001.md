@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-23T13:35:25Z
 expires_at: 2026-11-24T04:35:00Z
 planned_for:
-not_before: 2026-11-24T02:10:00Z
+not_before: 2026-11-24T02:30:00Z
 window: labs read tonight idle slots blocker named
 est_minutes: 8
 serves: PL-04

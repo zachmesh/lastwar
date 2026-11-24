@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-23T11:27:56Z
 expires_at: 2026-11-24T04:00:00Z
 planned_for:
-not_before: 2026-11-24T02:05:00Z
+not_before: 2026-11-24T02:30:00Z
 window: bounded construction speed ups on the three drill ground upgrades inside the Tuesday window
 est_minutes: 15
 serves: PL-08
