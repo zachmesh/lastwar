@@ -1,23 +1,32 @@
 ---
 title: Shop claims scroll recipe
 created: 2026-11-24T13:07:41Z
-modified: 2026-11-24T13:07:41Z
-version: 0.1.0
+modified: 2026-11-24T23:37:20Z
+version: 0.2.0
 description: The composed press, hold, move, hold, release pan that moves a clipped page, with the nine drags measured and the first working result
 ---
 
 # Shop claims scroll recipe
 
-Dated 2026-11-24, from the Coach's drag table (`_records_/2026-11-22/coach/drag-distance-table.csv`) and record `_records_/2026-11-22/shop-claims/1301-queue-run.md`. Back to [how to enter](how-to-enter.md).
+Dated 2026-11-24, from the Coach's drag table (`_records_/2026-11-22/coach/drag-distance-table.csv`). Back to [how to enter](how-to-enter.md).
 
 ## The recipe
 
-On a clipped page start from the blank right margin, in ONE message: mouse_move to the start, left_mouse_down, wait 1 s, ONE move of 175 px, wait 1 s, left_mouse_up, then the screenshot after the up; a malformed or missing wait refuses the whole batch and nothing runs. Then tap the now-visible claim once, only if it is a plain Claim with no price, gem or diamond icon.
+On a clipped page send ONE message: mouse_move to the start point, left_mouse_down, wait 1 s, ONE move of 175 px, wait 1 s, left_mouse_up, then the screenshot after the up. A malformed or missing wait refuses the whole batch and nothing runs. The page moves about 150 px (12 pans on the Weekly Pass page: 150 or 149). Then tap a now-visible claim once, only if it is a plain Claim with no price, gem or diamond icon.
 
-## The evidence
+## The start point is page-specific
 
-Nine drags on the Weekly Pass page. Single drag events: three from a card (320 px) moved 0; from the blank right margin 70 px and 135 px moved 0, and 250 px flung the page out of view. The composed pan of experiment 007 (13:01:54.9Z, (685,650) to (685,475), holds of 1 s, 2,371 ms) moved it 150 px with no fling: the S1 Claim went from y 915 (clipped) to 765, and one tap paid Drone Parts x15 (the card then reads Already claimed today).
+| Page | Start | Moved |
+|---|---|---|
+| Weekly Pass (shop) | blank right margin, x 685 | 150 px (`_records_/2026-11-22/shop-claims/1301-queue-run.md`, `1327`) |
+| History list, Dispatch tab | blank right margin, x 670 | 150 px (`_records_/2026-11-22/truck-plunder/1850-queue-run.md`) |
+| Backpack grid, Speed-up then Resources tab | margin, x 665 | 0 px twice (`_records_/2026-11-22/perception-scout/1601-queue-run.md`) |
+| Thanksgiving Store list | strip right of the rows, x 639 | 0 px (`_records_/2026-11-22/event-claims/1927-queue-run.md`) |
+| Backpack grid, Special tab | centre of a tile-gap crossing, (274,448) | 143 px, no tile selected (`_records_/2026-11-22/perception-scout/2315-queue-run.md`) |
+| Backpack grid, Resources tab | the same pixel | 150 px, no selection (`_records_/2026-11-22/perception-scout/2328-queue-run.md`) |
+
+On a Backpack grid start at the CENTRE of the crossing of a gap between tiles; the gap is about 20 px wide, so there is no 60 px rule (n = 2). A card start moved nothing (three drags of 320 px).
 
 ## Still open [G]
 
-Why it works: 150 px moved for a 175 px pan (perhaps a touch slop). After the result the Coach weighs touch duration 0.56, distance threshold 0.22, movement duration 0.13. A clean one-variable test is not run, by Steer A's ruling.
+Why the margin works on some pages only, and why 150 px moves for a 175 px pan. A single drag event moved nothing at 70 and 135 px and flung at 250 px.
