@@ -1,0 +1,15 @@
+first_file_time_utc,source,original,effective,ratio,speed_factor,context
+11-23 10:53Z,growth/1047,39d 01:53:19,18d 09:21:34,0.4706,2.125,"on 1.0G of **144.5M** (met), prerequisite   Lv.29 Headquarters (met),"
+11-23 11:36Z,growth/1132,16d 10:22:49,7d 17:35:27,0.4706,2.125,"mark, met)"",HQ is Lv.30 Barracks,Barracks Lv.24,Upgrade preview,time,"""
+11-23 12:16Z,research-queue/1204,11d 05:30:00,3d 15:04:33,0.3231,3.095,"its,0/5 locked,Unit Defense Boost 0 to 1.50%,22.4M (short),7.4M,7.4M,"""
+11-23 12:16Z,research-queue/1204,7d 11:40:00,2d 10:03:02,0.3231,3.095,"pacity for units' 3.00% to 4.00%,18.6M (short),6.2M (met),6.2M (met),"""
+11-23 12:16Z,research-queue/1204,15d 17:18:00,5d 01:54:22,0.3231,3.095,",0/5 locked,Unit HP Boost 0 to 1.50%,40.3M (short),13.4M,not visible,"""
+11-23 13:25Z,perception-scout/1323,9d 18:28:20,4d 14:20:24,0.4706,2.125,"s (met); Coin Output/hr 20,160 to 20,880 (+720);   power **+14,800**;"
+11-23 16:13Z,growth/0054,19:50:38,09:20:18,0.4706,2.125,"1,260 an hour, power +4,200, storage 10:40:00 to 10:48:00, iron 8.5M,"
+11-23 18:20Z,strategy/dec-,111d 18:21:40,52d 14:17:16,0.4706,2.125,"times 0.85). Held: oil 647,039, iron 1.0G, food 653.9M, coin 55,963."
+11-24 08:14Z,building-queues/0808,1d 09:32:09,15:46:54,0.4706,2.125,"2,300 to 37,700, output 1,320 to 1,380, storage 10:56:00 to 11:04:00,"
+11-24 17:36Z,strategy/0650,1d 22:57:01,20:11:38,0.4301,2.325,"asured, new time factor  The Lv.24 start (17:31:42Z, record 1731) has"
+11-24 02:25Z,building-queues/0218,1d 01:47:49,12:08:24,0.4706,2.125,Oil Well Lv.21 to 22 start (the regex had missed it)
+11-23 23:39Z,building-queues/2338,39d 01:53:19,18d 09:21:34,0.4706,2.125,Lv.28 Drill Ground to Lv.29 start
+DERIVED,from the Lv.27 and Lv.28 end shifts,,,,0.8604 old over new,"CHANGE TIME of the construction speed factor: 17:04:18Z from the 17:28:54.8Z read of the three ends and 17:02:53Z from the exact ends of the 18:06:41Z builders read (Lv.26 11-26T11:08:36.6Z, Lv.27 11-30T01:31:01.6Z, Lv.28 12-03T23:50:13.6Z; the same ends differ by about 13 s between the two reads, which moves the answer by about 1.4 minutes): so BETWEEN 17:02:50Z AND 17:04:20Z, within two minutes before the game restart at 17:04:31Z; old factor 2.000, new 2.325; the earlier 'within 13 seconds' was too precise"
+SERIES NOTE,"Steer A 17:50Z: record the factor at EVERY start (original over effective), a column in the start log",,,,,11-23: 2.125 on eight readings from 10:53Z to 23:39Z; 11-24: 2.125 at 02:25Z and 08:14Z; 2.325 at 17:33Z; the research factor 3.095 (11-23 12:16Z) is a different series

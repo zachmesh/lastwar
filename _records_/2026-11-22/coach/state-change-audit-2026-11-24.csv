@@ -1,0 +1,2 @@
+unit,finished_utc,status,state_change,state_read_present,pattern_valid,what_was_read,verdict
+passes-2026-11-24-1057,2026-11-24 19:03Z,done,no,yes,yes: 'what was read | step 5 | 19:02:49Z',"S1, EXP, Iron and Coin each read Already claimed today (pans 1 to 5)","FIRST unit with the keys; the nothing-to-do is TRUE: all four cards were claimed by us today (S1 13:02Z, EXP 15:08Z, Iron 15:09Z, Coin 15:32Z); disagreement: none"

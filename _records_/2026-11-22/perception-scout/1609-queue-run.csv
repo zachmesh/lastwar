@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 16:09:10.809Z, run started 16:09:11.764Z), 3 minutes after my previous run ended; owner idle 28531 s: wait 0",2026-11-24T16:09:11.764Z,see growth/0054-waits.csv
+badges,"read 1 at 16:09:22.9Z (timer 09:50:32) and read 2 at 16:09:45.4Z (timer 09:50:16): hammer none, flask none, tram none, pickup none, radar dish 3; trade count: not readable on the base (last read 5/5 at 15:55Z)",2026-11-24T16:09:11.764Z,tram badge rule: none; not tapped
+Total Power and diamonds,"Total Power 150,051,860; diamonds 11,173",2026-11-24T16:09:22.858Z,tag text [G]: HUD
+resources,"food 149.0M, iron 782.6M, coin 35.0M, oil 687.0K, the gold-plate counter 26.72K (a blue plus); energy 98 with a red dot; level 30; builders 4/4; research 2/2",2026-11-24T16:09:22.858Z,
+left column,"hammer none; flask none; tram none; pickup none; radar dish 3; the lower-left icons (hero portrait, chest) none",2026-11-24T16:09:45.390Z,"a crop of the left column (x 73 to 213, y 520 to 780) of the saved frame step 5 confirms: tram none, pickup none, radar dish 3"
+right column,"Events 1; Thanksgiving Event 2; Alliance a red dot; Mail a red dot; Inventory none; the red target icon cycling 3, 2, 1, 2 with a countdown reaching 00:00:30; chat 99+",2026-11-24T16:09:30.204Z,
+quest line,'Upgrade Builder's Hut to Lv.26 (0/1)',2026-11-24T16:09:30.204Z,
+other,a NEW bubble and a gold trophy bubble over the base (never tapped); building timer 14:09; timer tags 2d 05:00:52 and 10d 19:49:34,2026-11-24T16:09:37.394Z,scrolling banner ordinary
+drags,"drags tried 0, cancelled 0",,

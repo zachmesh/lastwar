@@ -1,0 +1,15 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s after the request (start requested 17:55:21.407Z, run started 17:55:22.171Z), 1 minute after my previous run ended; run 2 (17:56:24.2Z) admitted 0.8 s after the request, 26 s after run 1 ended; owner idle 2,633 and 2,695 s: wait 0; both runs ended before 18:02Z (the last at 17:57:31Z)",2026-11-24T17:55:22.171Z,see growth/0054-waits.csv
+badges,"17:55:27.3Z (timer 08:04:34) and 17:57:17.7Z: tram none, pickup none, radar dish 3",2026-11-24T17:55:22.171Z,tram badge rule: none; not tapped
+HUD Total Power,"150,103,292 at 17:55:27Z and 150,103,292 at 17:57:17Z (the figure tapped at (300,148))",2026-11-24T17:55:27.270Z,"tag text [G]: HUD; 150,051,860 at 16:09Z: +51,432"
+Power Details opened,"POWER DETAILS with the Hero, Drone and Building categories already expanded and a Power Up button (not pressed); no separate total on the panel",2026-11-24T17:55:38.512Z,run 1 stopped: a chevron tap would collapse
+Hero Power,"66,391,681: Hero Level 42,503,484; Decorations & Building Stats 7,511,283; Gear 5,775,201; Hero Skill 4,282,510; Hero Tier 4,009,495; Exclusive Weapon 2,182,608; Wall of Honor 127,100",2026-11-24T17:55:38.512Z,"03:32Z baseline 66,390,649: +1,032, all in Decorations & Building Stats (7,510,251 to 7,511,283)"
+Drone Power,"5,842,475: Drone Level 3,494,400; Drone Component 1,639,876; Skill Chip 708,200",2026-11-24T17:55:38.512Z,"baseline 5,842,475: unchanged"
+Building Power,"9,823,925: Buildings 6,687,800; Survivor 3,136,125 (the sum of the two lines is the total)",2026-11-24T17:57:03.624Z,"baseline 9,776,425: +47,500"
+Unit Power,"63,137,934: no chevron on the row: no lines to read",2026-11-24T17:57:03.624Z,"baseline 62,846,672: +291,262"
+Tech Power,"4,907,277: no chevron on the row: no lines to read",2026-11-24T17:57:03.624Z,"baseline 4,899,477: +7,800"
+sum,"66,391,681 + 5,842,475 + 9,823,925 + 63,137,934 + 4,907,277 = 150,103,292 = the HUD total exactly",2026-11-24T17:57:03.624Z,the five categories account for all of Total Power
+question,"about 46,000 unattributed since 15:56Z: the only category baseline is 03:32Z; since then Building is +47,500 (the same size), Hero +1,032, Tech +7,800, Unit +291,262 (the 03:30Z collect and the 793 batch are earlier than 15:56Z): the +51,432 since 16:09Z is not split by category here (no 15:56Z category read exists)",,"Building +47,500 is the match in size; the Oil Well Lv.23 completion is part of it"
+speed sources,not reached (no panel listing speeds by source on the Power Details; not searched),,
+pressed,"the HUD figure (300,148), the Hero chevron (592,217) and the Drone chevron (592,263) once each (both collapsed), the X (612,149): no Power Up, no upgrade",2026-11-24T17:56:43.845Z,a 'Violet's Gift received!' toast flashed over the panel: ordinary
+drags,"drags tried 0, cancelled 0",,

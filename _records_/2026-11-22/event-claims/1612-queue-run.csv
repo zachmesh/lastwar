@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 18:12:26.255Z, run started 18:12:27.032Z), 20 s after the previous run ended; owner idle 3,654 s: wait 0",2026-11-24T18:12:27.032Z,see growth/0054-waits.csv
+badges,"first frame 18:12:31.3Z (timer 07:47:30): tram none, pickup none, radar dish none; last base frame 18:13:09.5Z: tram none (a crop of the saved frame confirms), pickup none, radar dish none; Events icon none, Thanksgiving Event 5",2026-11-24T18:12:27.032Z,tram badge rule: none; not tapped
+hub,"opened on the first tab 'The Age of Oil' (Lv. 31-35 Zombies and Rapid Rescue cards, no Claim); tab bar: The Age of Oil, Arms Race, Black Market, a cut-off B tab; no red dot on any tab",2026-11-24T18:12:45.644Z,tag text [G]: Events hub
+Arms Race page,"tapped (372,155) once at 18:12:49.985Z: phase Hero Advancement, Contest Segment Lv.29-30; timer 03:47:08 (03:46:59 on the re-read); points 0; counter chest 1/2; the ranking list's owner row rank 12 with 4,000 points (the previous phase's figure)",2026-11-24T18:13:01.561Z,phase changed from Drone Boost
+ladder,"three milestone chests 2,000 points (a price tag 2,360), 4,000 (4,800) and 12,000 (11,800), each with a red-gem price tag: purchase offers; no Claim text, no red dot; rewards not named",2026-11-24T18:13:01.561Z,nothing pressed
+scoring rows,"1 Hero Recruitment +400; 'Use at least 2,000 Hero EXP at a time' +1; Buy Packs containing Diamonds +30: each a green arrow: none pressed (nothing spent to score)",2026-11-24T18:13:01.561Z,
+HUD,"diamonds 11,173, iron 767.6M, food 146.0M, coin 20.7M, oil 638.4K, energy 163, Total Power 150,103,292 unchanged",2026-11-24T18:13:09.459Z,"pressed: the Events icon (673,162), the Arms Race tab (372,155), the back arrow (176,931)"
+drags,"drags tried 0, cancelled 0",,

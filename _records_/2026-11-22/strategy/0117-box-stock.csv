@@ -10,8 +10,8 @@ Resource Choice Chest UR,552,2.43,M coin or 4.06M iron or food,1341.4,choice,7 l
 Food Chest UR,169,4.06,M food,686.1,typed food,food shortfall only,none,read 0009
 Food Chest SSR SR R,9448,unread,M food,unread,typed food,after the read,none,counts unverified
 Iron Chest UR SSR SR R,9701,4.06 1.35 0.169 0.017,M iron,4394,typed iron,iron shortfall only,none,read 0009
-Violet Loot,139,unread,random resources or materials,unread,random,sample up to 22 then top-ups,none,text only
-Mystery Supply Box,299,unknown,"chest, rare pool unknown",unknown,random,PL-13 sample up to 22,none,"read 0009 (299 on 11-23; said to contain Universal UR Shards and 5,000 diamonds); my 365 came from the operator's slider default and is withdrawn; about 329 with today's 30; sample n = 10"
+Violet's Loot (gold question-mark chest),350,unread,"a Violet shard or 2,500 alliance contribution points",unread,random,sample up to 22 then top-ups,none,"NAMED 16:21Z by the panel (record 1619); 139 on the 11-23 read, so +211 since (source unread); never sampled"
+Mystery Supply Box,376,0.145,M food or iron (0.857 SR choice chest) [n=21],54.5,random,PL-13 sample up to 22,none,"NAMED 16:21Z by the panel; 387 to 376 after the second sample (record 1644); 21 sampled: 18 SR choice chests, one module x20, one blue triangle x100, one Lv.1 chest, no shard or diamond. The 0009 grid read of 299 was correct (the 08:51Z depot claim paid 67: 366 at 08:55Z). Secrets claims pay boxes daily (04:38Z 223, 05:38Z 67, 07:36Z 67) plus the Assist's 30: 387 inflow on 11-24, yet the 16:01Z read was 387 against 743 expected: 356 unaccounted (H130)"
 Skill Medal and hero chests,9521,unread,hero levers,unread,hero,Thursday window only,not coin,read 0009
 Diamond items,277990,n/a,diamonds,n/a,diamond,never,never,labels only
 Metal-crate chest,6,unread,contents unread,unread,random,sample before any bulk open; box policy R6,none,"11-24 13:30Z, from the 120-point daily missions chest, unopened (record daily-missions 1330)"
@@ -21,3 +21,4 @@ Weekly Pass S1 Drone Parts,15,unread,contents unread,unread,random,"Backpack rea
 Weekly Pass EXP chest,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, EXP pass, hero EXP chest; the passes end 11-30 02:00Z"
 Weekly Pass Iron pickup crate,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, Iron pass, contents unread; the passes end 11-30 02:00Z"
 Weekly Pass Gold Coin Chest,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, Coin pass, claimed 15:32:30Z, tier unread; the passes end 11-30 02:00Z"
+Nameplate Choice Chest VII,1,unread,"1 of 19 nameplates or 2,000 diamonds",unread,choice,owner decision before any open,none,"NAMED 16:21Z by the panel (record 1619); diamonds received are income, never spent"

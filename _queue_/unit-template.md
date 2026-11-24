@@ -46,7 +46,7 @@ tag text beside every number taken from a building panel, and stops with
 one named reason: blocked by capacity, by the owner on another device, by
 cost, by prerequisite, by route or by window.
 
-Close DONE or PARTIAL by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (the counter or card state after, in the summary) or a verified nothing-to-do state with ONE `state_read: <what was read, quoted> | <frame: step or file> | <HH:MM:SSZ>` line (the key `evidence` stays the record path); PARTIAL when the state could not be read or the route not completed.
+Close DONE or PARTIAL by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (the counter or card state after, in the summary) or a verified nothing-to-do state with ONE `state_read: <what was read, quoted> | <frame: step or file> | <HH:MM:SSZ>` line (the key `evidence` stays the record path); PARTIAL when the state could not be read or the route not completed. Complete with `--state-change yes|no`: yes when the result changed the game state (named in the summary), no otherwise (a no on a DONE needs the state_read line).
 
 On completion the executor runs `_tools_/queue.py complete`, which
 writes the result section into this file's frontmatter - status,

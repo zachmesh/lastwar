@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 17:50:29.523Z, run started 17:50:30.323Z), 14 minutes after my previous run ended; owner idle 2,342 s: wait 0; the first click 17:50:41.2Z (the Alliance shield) is the model's own turn",2026-11-24T17:50:30.323Z,see growth/0054-waits.csv
+badges,"first frame 17:50:36.3Z (timer 08:09:25): tram none, pickup none, radar dish 3",2026-11-24T17:50:30.323Z,tram badge rule: none; not tapped
+HUD before,"food 143.9M, iron 765.6M, coin 19.4M (the coin covers the 11 taps: 11,000), oil 635.7K, the plate counter 26.72K, diamonds 11,173",2026-11-24T17:50:36.267Z,tag text [G]: HUD; unchanged since 17:36Z
+route,"Alliance shield (670,708), Techs (514,677), the recommended node (245,525): Quick Construction Lv.9 of 10",2026-11-24T17:50:55.204Z,
+entry count,"11/30 [G] at 17:51:02.585Z; the coin Donate green at 1,000, no cooldown timer; Tech EXP 5.1M of 8.0M",2026-11-24T17:51:02.585Z,"the Coach's registered entry 11 matches (14:04:55.6Z last tap, 0 left; grid points 14:17:57 to 17:57:57 gave 11)"
+taps,"11 coin Donate taps at (495,756): 17:51:06.5Z, 17:51:21.5Z, :34.5Z, :43.9Z, :52.1Z, :59.4Z, 17:52:07.3Z, :14.5Z, :21.1Z, :30.1Z and 17:52:37.038Z (the last tap)",2026-11-24T17:52:37.038Z,"reads after the taps 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, then the timer replaced the count; after tap 1 a Crit x2 animation hid the count"
+live count before the last tap,1/30 [G] read after tap 10 (frame at 17:52:32.3Z),2026-11-24T17:52:32.320Z,the close condition met
+timer,"the coin Donate grey with a cooldown 00:05:18 read in the frame at 17:52:40.1Z (end 17:57:58.1Z) and 00:05:07 in the frame at 17:52:50.2Z (step 18, end 17:57:57.2Z, read from the saved frame): the end on the grid point 17:57:57.4Z within 0.2 s (the model's report mislabelled the two frames)",2026-11-24T17:52:50.179Z,within the 3 s rule
+witness,"the Tech EXP bar 5.1M of 8.0M, not visibly changed; the donation reward 50 EXP and 50 per tap",2026-11-24T17:52:50.179Z,
+close,"the donation dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base; no TIPS popup",2026-11-24T17:53:23.548Z,count after the last tap not written (hidden by design)
+drags,"drags tried 0, cancelled 0",,

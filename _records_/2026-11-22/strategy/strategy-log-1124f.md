@@ -1,7 +1,7 @@
 ---
 title: Strategy log 2026-11-24 part f
 created: 2026-11-24T16:07:00Z
-modified: 2026-11-24T16:08:00Z
+modified: 2026-11-24T16:25:00Z
 version: 1.0.0
 level: L3
 description: Sixth log of 2026-11-24, covering the productive share rule for the weekly review

@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 18:41:07.775Z, run started 18:41:08.638Z), 41 s after my previous run ended; owner idle 5,369 s: wait 0",2026-11-24T18:41:08.638Z,see growth/0054-waits.csv
+badges,"first frame 18:41:15.9Z: the tram icon not visible at (107,580), pickup none, radar dish none; after WORLD then BASE 18:41:40.2Z: the same",2026-11-24T18:41:08.638Z,tram badge rule: none; not tapped
+dot before,"the Alliance button (670,708): a red dot, no count",2026-11-24T18:41:15.920Z,tag text [G]: Alliance button; timer 07:18:45
+refresh,"WORLD (660,940) at 18:41:22.1Z, BASE (660,940) at 18:41:29.5Z; no icon tapped",2026-11-24T18:41:32.681Z,
+dot after,"the Alliance button: a red dot, no count: UNCHANGED (timer 07:18:21)",2026-11-24T18:41:40.193Z,"the dot held a real claim: 490 Regular and 17 Premium gifts: it was already lit, not refreshed by the round trip"
+gifts before,"Gift Level 29, progress 43,114,430 of 257,900,000; both tabs with red dots; Regular Claim All green with a count 490",2026-11-24T18:42:00.809Z,"Alliance (670,708), Gifts tile (273,595)"
+Regular Claim All,"490 Regular Alliance Gifts claimed (once): gold chest x39, iron (1.0K) x2.3K, coin (600) x1.9K, food (1.0K) x2.2K, 5m speed-up x62, diamond item (5) x50, iron (10.0K) x58, food (10.0K) x29",2026-11-24T18:42:15.102Z,"Claim All (393,918); summary dismissed by an empty tap (400,820)"
+Premium Claim All,"17 Premium Alliance Gifts claimed (once): two gold tickets x1 each, a 50-badge item x10, resource crates x24, x8 and x7, diamond item (20) x2, a blue material x340",2026-11-24T18:42:35.160Z,"Claim All (550,918); summary dismissed (400,830)"
+re-check,"both tabs: every row Claimed, no red dots, no Claim All; progress 43,128,250 of 257,900,000, Level 29",2026-11-24T18:42:49.330Z,the Alliance button still shows a red dot at the base (another item)
+HUD,"food 149.8M, iron 771.4M, coin 23.2M, diamonds 11,173 at the end (the bar may not have refreshed); Total Power 150,103,292",2026-11-24T18:42:56.182Z,the crates and chests unopened
+drags,"drags tried 0, cancelled 0",,

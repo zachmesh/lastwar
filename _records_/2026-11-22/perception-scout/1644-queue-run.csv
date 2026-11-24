@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 16:44:54.691Z, run started 16:44:55.739Z), 22 minutes after my previous run ended; owner idle 30674 s: wait 0",2026-11-24T16:44:55.739Z,see growth/0054-waits.csv
+badges,"first frame 16:45:01.1Z (timer 09:15:00): tram none, pickup none, radar dish 3; last frame 16:46:08.8Z (timer 09:13:53): the same",2026-11-24T16:44:55.739Z,tram badge rule: none; not tapped
+panel before,"the Special tab selected; the purple question-mark chest tile tapped once (454,510) at 16:45:12.2Z; panel title 'Mystery Supply Box'; stack 387; quantity field 387 (the default is the full stock)",2026-11-24T16:45:13.357Z,tag text [G]: item panel; step 3 frame
+slider,"ONE drag starting on the handle (456,824) to the far left (196,824) at 16:45:18.5Z: the quantity field read 1, the handle at the far left",2026-11-24T16:45:20.367Z,"drag tried 1, cancelled 0: the batch-1 method"
+plus taps,"four plus clicks (493,823) at 16:45:24.9Z to 16:45:28.5Z: the field read 5; four more at 16:45:34.5Z to 16:45:38.4Z: 9; two more at 16:45:45.2Z and 16:45:46.3Z: 11; no minus, no Max, no typing",2026-11-24T16:45:47.525Z,final frame 11 before the Use: step 7 frame
+Use,"ONE Use tap (401,920) at 16:45:50.855Z with the field at exactly 11 and the title Mystery Supply Box",2026-11-24T16:45:54.074Z,the single act; no second Use
+payout,"CONGRATULATIONS popup, three tiles: a blue-frame chest (a blue-silver crate with a yellow chevron, the SR-coloured chest of the Resources tab) x9; a green-frame blue triangle item x100; a grey-white-frame 'Lv.1' chest x1; no shard, no diamond amount, no price, no choice; nothing opened or converted",2026-11-24T16:45:54.074Z,read in the saved frame step 8 (cropped at 2x): the quote is exact; the chest's name is not shown (frame colour only)
+after,"dismissed by a tap on dimmed ground (640,770); the panel: stack 376 (387 - 11), the field back at 376; the back arrow (112,914) to the base",2026-11-24T16:46:02.152Z,the tile on the grid reads 376
+HUD,"diamonds 11,173 before and after",2026-11-24T16:46:08.756Z,no diamonds paid
+drags,"drags tried 1, cancelled 0",,

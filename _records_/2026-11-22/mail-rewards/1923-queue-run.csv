@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 19:22:59.103Z, run started 19:22:59.883Z), 70 s after the previous run ended; owner idle 7,873 s: wait 0",2026-11-24T19:22:59.883Z,see growth/0054-waits.csv
+badges,first frame 19:23:03.7Z: the Mail envelope with a red dot; the tram icon not drawn; the base after 19:23:49.9Z: the same,2026-11-24T19:22:59.883Z,tram badge rule: none; not tapped
+rail,"Mail (670,783): categories Battle Report, Alliance, Event, System, Regular, In-app Purchases, Favorite: red dots on Battle Report, Event, System, Regular and In-app Purchases; none on Alliance or Favorite; no gift icon on any category, before or after",2026-11-24T19:23:09.507Z,tag text [G]: Mail rail
+Event list,"several unread mails from an ally (train and Mega Exp notices) with a red dot only, no gift icon and no Claim; not opened (Claim All would open the next unread mail: not pressed)",2026-11-24T19:23:14.561Z,"never Claim All, Delete or Read All"
+Train arrival notice,"already read; the owner account and a train picture; every attachment ticked received (a 2.5K item, a 1-count item, two 50-count chests not opened, another 1-count item, a crossed-out grey 2.5K item); no Claim button",2026-11-24T19:23:18.561Z,claimed earlier (record 1557)
+System list,one unread 'Planned Update Notice' (a red dot only) and read president mails: no gift icon,2026-11-24T19:23:33.143Z,no claim
+Alliance list,"all read (donation rankings, zombie siege reports, an exercise report, marker notices): no gift icon",2026-11-24T19:23:40.173Z,no claim
+close,"the Mail screen closed (113,934): no TIPS popup; the base",2026-11-24T19:23:49.893Z,"HUD food 152.6M, iron 774.3M, coin 25.0M, diamonds 11,173, energy 163, Total Power 150,103,292 unchanged"
+drags,"drags tried 0, cancelled 0",,

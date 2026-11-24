@@ -1,0 +1,7 @@
+scenario,oil_available_now_or_per_hour,gap_left,days_to_close,assumptions_and_status
+HUD oil today,"687,000 held; the HQ 31 path needs 1.2M","513,000",,"oil 647,000 at 11-23 12:51Z to 687,000 at 11-24 14:53Z: +40,000 in 26.0 h = 1,536 an hour measured"
+the well alone,"1,320 an hour (Oil Well Lv.22)","513,000",16.2,"the two collects of 11-24 were +5,241 (10:28Z) and +5,800 (14:53Z), each about 1.3K an hour: the well as read; Lv.23 (17:27Z) adds 60 an hour"
+the measured HUD rate,"1,536 an hour","513,000",13.9,includes about 230 an hour (5.5K a day) from other collected sources (radar tasks and similar)
+"barrels in stock, USED","oil barrels 3.0K x6 and 6.0K x27 = 18,000 + 162,000 = 180,000 (11-23, tile labels only, never selected)","333,000",9.0,UNVERIFIED: the Use effect 'oil per label' was never tried; the Resources tab of the 11-24 read cut these off (row 4)
+barrels plus the depot's items paid today,"180,000 + 5 x 6.0K (30,000, the 07:36Z Oil Depot claim, held as items) = 210,000","303,000",8.2,the same assumption; the depot pays 30K a day as items
+"barrels, depot items now AND the depot every day","1,536 + 1,250 an hour (30K a day)","303,000",4.5,the depot's 30K a day used as it arrives

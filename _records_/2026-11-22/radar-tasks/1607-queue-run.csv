@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 18:07:38.644Z, run started 18:07:39.403Z), 34 s after the previous run ended; owner idle 3,368 s: wait 0",2026-11-24T18:07:39.403Z,see growth/0054-waits.csv
+badges,"first frame 18:07:44.7Z: tram none, pickup none, radar dish 3, hammer 4/4, flask 2/2; last base frame 18:08:48.2Z: tram none (a crop of the saved frame confirms), pickup none, radar dish none",2026-11-24T18:07:39.403Z,tram badge rule: none; not tapped
+bar before,"'You can complete 2 tasks, requires 20 Stamina' with a blue Quick Execute; '12 Radar Task(s) will be restored in 02:30:19' (about 20:38Z); energy 183",2026-11-24T18:07:54.604Z,tag text [G]: radar bar
+Quick Execute,"pressed once (393,934); energy 183 to 163 (floor 40 held); no popup",2026-11-24T18:08:00.269Z,
+Claim All,"the bar '5 task rewards can be claimed'; Claim All once, then the dialog 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 5 radar task rewards at once. Continue?' with no price: Confirm once (the known template, count 5)",2026-11-24T18:08:24.393Z,Steer A's rule: Confirm allowed for that text
+popup,"CONGRATULATIONS: cash 90, radar token 50, a food bag 11, EXP 6.3M, a blue book item 1.6K, a triangle item 183, iron 1.3M, bread 1.3M, coin 878.4K, oil 880; no chest or speed-up",2026-11-24T18:08:38.095Z,"dismissed by an empty tap (393,860); toasts 'Violet's Gift received!' and 'Drop Limit Update 67/328' ordinary"
+after,no bar and no popup; energy 163; 'Fully restore at 11-25 06:38:08 local time'; the radar dish badge none,2026-11-24T18:08:48.157Z,Quick Execute not run again
+HUD,"food 143.9M to 145.3M, iron 765.6M to 767.0M, coin 19.4M to 20.3M, oil 635.7K to 636.6K, energy 183 to 163, diamonds 11,173, Total Power 150,103,292",2026-11-24T18:08:48.157Z,
+drags,"drags tried 0, cancelled 0",,
