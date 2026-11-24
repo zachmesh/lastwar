@@ -1,0 +1,16 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.9 s after the request (start requested 20:17:06.913Z, run started 20:17:07.883Z), 1 minute after my previous record write; run 2 (20:19:21.6Z) and run 3 (20:20:06.2Z) admitted 0.9 s and 0.8 s after their requests; owner idle 11,114, 11,249 and 11,293 s (the 300 s gate met): wait 0",2026-11-24T20:17:07.883Z,see growth/0054-waits.csv
+badges,first base frame 20:19:22.9Z (timer 05:40:33): the tram icon NOT drawn; the pickup icon with a question-mark bubble beside it; radar dish badge 1; the Thanksgiving Event icon 5; at 20:21:00.3Z (timer 05:39:01): the same (a crop of the saved frame confirms the tram icon absent),2026-11-24T20:17:07.883Z,tram badge rule: none; not tapped
+route,"the 'Last War' menu (81,14) at 20:17:15.6Z, then the Quit item (95,236) at 20:17:21.2Z by its written text; the window gone at 20:17:23.4Z; Google Chrome in front at 20:17:23Z (the OS fallback), nothing pressed or read there",2026-11-24T20:17:23.606Z,tag text [G]: the application menu; the run cancelled by the standing foreground rule; the coordinator told at 20:18Z
+reopen,"10 s waited (20:17:23Z to 20:17:47Z); the standing front script `osascript -e 'tell application ""LastWar"" to activate'` run at 20:17:48.5Z: LastWar running and in front at 20:17:51Z",2026-11-24T20:17:51Z,no Dock click needed
+login,"the first frame at 20:19:22.9Z (91 s after the reopen): the BASE already showing; no splash, login or dialog; no TIPS 'Enable notifications' and no 'active on a different device' dialog, so NO Cancel and NO Confirm was tapped",2026-11-24T20:19:22.955Z,the owner's standing order OD-17 unused
+HUD,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173, Total Power 150,103,292, hammer 4/4, flask 2/2 (the same at 20:19:22.9Z, 20:20:07Z and 20:21:00Z)",2026-11-24T20:21:00.292Z,identical to the 19:28:37Z read
+Lv.26 Drill Ground,Time Left 1d 14:48:12 at 20:20:24.3Z: ends 2026-11-26T11:08:36.3Z,2026-11-24T20:20:24.297Z,expected 11-26T11:08:36Z: MATCHED
+Lv.27 Drill Ground,5d 05:10:37: ends 2026-11-30T01:31:01.3Z,2026-11-24T20:20:24.297Z,expected 11-30T01:31:01.6Z: MATCHED
+Lv.28 Drill Ground,9d 03:29:50: ends 2026-12-03T23:50:14.3Z,2026-11-24T20:20:24.297Z,expected 12-03T23:50:13.6Z: MATCHED within 0.7 s
+Oil Well Lv.24,'Lv.23 Oil Well' upgrade 10:50:56: ends 2026-11-25T07:11:20.3Z,2026-11-24T20:20:24.297Z,expected 07:11:19.6Z: MATCHED within 0.7 s
+Food Output V,Lv.1 upgrade 23:18:22 at 20:20:46.0Z: ends 2026-11-25T19:39:08.0Z,2026-11-24T20:20:45.995Z,expected 19:39:07.8Z: MATCHED
+Oil Output I,Lv.0 upgrade 1d 12:16:49: ends 2026-11-26T08:37:35.0Z,2026-11-24T20:20:45.995Z,expected 08:37:34.8Z: MATCHED
+tram icon,"NOT DRAWN at (107,580); the white pickup icon at (107,647) with a question-mark bubble beside it; the radar dish with badge 1",2026-11-24T20:21:00.292Z,a crop of the saved last frame confirms
+not touched,"the Thanksgiving Lottery tab never opened; the red draw button never touched; no other tap beyond the hammer, the flask and two X",,the Thanksgiving badge 5 again after the restart
+drags,"drags tried 0, cancelled 0",,

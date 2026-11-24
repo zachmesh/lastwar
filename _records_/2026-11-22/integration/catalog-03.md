@@ -28,3 +28,4 @@ Back to the [folder index](INDEX.md).
 - [PR 974](landing-pr-974.md) - state-read, complete --state-read; the queue tests stop inheriting the live switch
 - [PR 975](landing-pr-975.md) - state-read part 2, state_change and the require_state_read switch (off)
 - [PR 976](landing-pr-976.md) - forecast-override-count, the override marker and the forecast-overrides counter
+- [PR 977](landing-pr-977.md) - twenty-first records snapshot, units of 16:10Z to 19:45Z, handovers

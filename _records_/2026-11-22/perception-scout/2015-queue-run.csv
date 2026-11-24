@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 20:15:30.123Z, run started 20:15:31.002Z), 30 minutes after my previous run; owner idle 11,019 s (the 300 s gate met): wait 0",2026-11-24T20:15:31.002Z,see growth/0054-waits.csv
+badges,none readable: the base was not visible (the loading screen has no icon columns),2026-11-24T20:15:31.002Z,tram badge rule: none; not tapped
+window,"the full-window loading screen: an orange lottery machine with a red button at about (394,592) on dark blue; no HUD, no controls",2026-11-24T20:15:34.738Z,tag text [G]: the Last War window; the same screen as at 19:41:30Z
+toast,no 'Violet's Gift received!' toast drawn in the frame (one at 19:41:24Z drew over this screen),2026-11-24T20:15:34.738Z,
+dialog,"none: no dialog, macOS alert, other app or consent request",2026-11-24T20:15:34.738Z,front check at the end: LastWar 20:15:41Z
+base reads,"not available: no HUD, Total Power or tram icon (the last base read was 19:28:37Z: food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173)",2026-11-24T20:15:34.738Z,
+input,"none: one 1 s wait; no tap, key or scroll",,the relaunch unit is the coordinator's (Steer A pre-authorized it)
+drags,"drags tried 0, cancelled 0",,
