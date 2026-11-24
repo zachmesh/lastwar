@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 15:36:12.403Z, run started 15:36:13.146Z), 3 minutes after my previous run ended; owner idle 26557 s: wait 0",2026-11-24T15:36:13.146Z,see growth/0054-waits.csv
+badges,first frame 15:36:17.8Z: tram none (the mail unit's text asked for the count; step 1 only was read); the run stopped at step 1,2026-11-24T15:36:13.146Z,tram badge rule: none; not tapped
+front watch,15:36:13.1Z run started with LastWar in front; 15:36:23.423Z the runner's guard: front 'UserNotificationCenter' ASN 0x0-0x197de7c5; run stopped; token released 15:36:23Z,2026-11-24T15:36:23.423Z,tag text [G]: front-watch line
+lsappinfo front,"15:36:34Z: 'UserNotificationCenter' ASN 0x0-0x197de7c5 (in front); the coordinator names pid 50586, in front since 15:36:22Z",2026-11-24T15:36:34Z,same turn as the stop
+killall,ONE standing 'killall -9 UserNotificationCenter NotificationCenter' at 15:36:34Z (the alert-return rule in the unit text) BEFORE the coordinator's hold arrived; 15:36:37Z: front 'UserNotificationCenter' with a NEW ASN 0x0-0x197e07c7: it respawned and the alert persisted; no second killall,2026-11-24T15:36:37Z,for the coordinator: the killall did not clear this alert
+front watch after,"15:36:45Z, 15:36:50Z, 15:36:55Z, 15:37:00Z, 15:37:06Z, 15:37:11Z and 15:37:25Z: front 'UserNotificationCenter' ASN 0x0-0x197e07c7 on every poll",2026-11-24T15:37:25Z,LastWar away since 15:36:23Z
+alert text,not read: no frame was taken after the switch and screen capture is not permitted ('could not create image from display'),,nothing answered
+mail unit,the Event mail 'Train arrival reward!' not opened; no Claim pressed; no HUD delta,,the unit to be re-sent by name after the restore word (15:57Z)
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 15:21:36.090Z, run started 15:21:36.831Z), 15 s after the previous record write and 15 s after the previous run ended; owner idle 25682 s: wait 0",2026-11-24T15:21:36.831Z,see growth/0054-waits.csv
+badges,"first frame 15:21:41.4Z: tram none, pickup none, radar dish 3",2026-11-24T15:21:36.831Z,tram badge rule: none; not tapped
+rail,"red dots on Battle Report, System, Regular and In-app Purchases; a gift icon on Event only; Alliance and Favorite neither; the same before and after",2026-11-24T15:21:46.190Z,tag text [G]: Mail category rail
+Event list,"three unread train notices from allies, one 'Mega Exp...' notice and 'Train arrival reward!' with a gift icon; the Claim All button blue with a red dot (not green)",2026-11-24T15:21:57.109Z,
+Train arrival reward mail,"opened once (380,497): names an ally and shows its level and power (not recorded); five attachments: two 2.5K items, two 50-count chests, one crossed-out 2.5K item; a GREEN Claim button on the mail: NOT pressed; the back arrow used",2026-11-24T15:22:10.695Z,the mail the 09:57Z boarding earned (digest 7): claimable by its own Claim button: for the coordinator
+System list,a planned update notice (unread) and read president mails; no gift icon: no Claim All,2026-11-24T15:22:20.364Z,
+Alliance,not opened: no red dot or gift icon on the rail; turns spent on the extra back arrows,,
+claim,none pressed,,"diamonds 11,173 before and after; energy 89; no TIPS popup after leaving Mail"
+drags,"drags tried 0, cancelled 0",,

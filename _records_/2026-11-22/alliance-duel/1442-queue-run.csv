@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 14:42:13.195Z, run started 14:42:13.934Z), 52 s after the previous record write and 1 minute after the previous run ended; owner idle 23331 s: wait 0",2026-11-24T14:42:13.934Z,see growth/0054-waits.csv
+badges,"first frame 14:42:20.6Z: tram none, pickup none, radar dish 3",2026-11-24T14:42:13.934Z,tram badge rule: none; not tapped
+duel day,Base Expansion; countdown 11:17:35 then 11:17:17 (ends about 2026-11-25T02:00Z); no day number shown,2026-11-24T14:42:32.734Z,tag text [G]: panel
+personal daily total,"5,739,000 beside the gold points icon on Today's Theme (no label)",2026-11-24T14:42:32.734Z,"5,439,000 at 10:32Z: +300,000 since"
+target and gap,"3,600,000; gap -2,139,000 (exceeded)",,
+chests,"Today's Theme row 40,000, 150,000 and 540,000 with the bar full (more pages not opened)",2026-11-24T14:42:32.734Z,
+day scores,"owner alliance 691,376,928 (57 percent), rival 514,863,322 (43 percent); the winner earns 2 Alliance Duel Score",2026-11-24T14:42:43.694Z,left side read as the owner alliance (unverified)
+weekly score,not read (Weekly Schedule not opened); Infinite Roulette tab not visible,,
+trophy icon,"at the end a gold trophy bubble at about (509,218) over the base, not in the first frame; never tapped",2026-11-24T14:43:04.541Z,OD-20261123-01
+HUD,"food 143.5M, iron 777.4M, coin 31.5M, diamonds 11,173, energy 81, Total Power 150,051,860",2026-11-24T14:43:04.541Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"run 1 (14:54:12.5Z) admitted 0.8 s after the request, 18 s after the previous run ended; run 2 (14:56:50.1Z) stopped at once on an ordinary 'Violet's Gift received!' toast (the model's caution); run 3 (14:57:14.6Z) admitted 1.0 s after the request, 8 s after run 2: wait 0; owner idle 24046 to 24227 s",2026-11-24T14:54:13.328Z,see growth/0054-waits.csv
+badges,"first frames 14:54:18.8Z and 14:57:19.8Z: tram none, pickup none, radar dish 3",2026-11-24T14:54:13.328Z,tram badge rule: none; not tapped
+bubbles,"small round portrait bubbles over the four tents (a white face over Lv.27, red-helmet and blue-soldier ones over the others); no digit legible at this resolution (no zoom)",2026-11-24T14:54:35.963Z,tag text [G]
+Unit Count X of Y,not shown on any tag or panel,2026-11-24T14:54:49.328Z,room about 0
+Barracks Lv.24,"tag Barracks Lv.24; ONE pistol press (598,616) at 14:54:55.796Z: the toast 'Drill Ground Full: Unable to add more units.' and no panel; Total Power unchanged; class BLOCKED",2026-11-24T14:54:57.025Z,
+stray tag,"the 14:55:11.7Z tap at (140,880) hit the 'Upgrade Builder's Hut' quest banner: the camera jumped to the Builder's Hut Lv.25 tag (nothing pressed in it); the WORLD then BASE pair cleared it",2026-11-24T14:55:14.600Z,"never use (140,880) after a pan"
+Barracks Lv.20,"tag Barracks Lv.20; ONE pistol press (598,585) at 14:56:14.8Z: the same toast, no panel; class BLOCKED",2026-11-24T14:56:16.054Z,
+Barracks Lv.27,"tag Barracks Lv.27; pistol (459,631) at 14:57:56.5Z: TRAIN UNITS with no batch: Lv.9, slider maximum 726 (4.1M each), Train 1d 10:19:35, no toast; class EMPTY QUEUE; closed with its X (611,281)",2026-11-24T14:57:57.735Z,
+Barracks Lv.30,"tag Barracks Lv.30; pistol (527,679) at 14:58:36.3Z: no panel, the toast 'Drill Ground Full: Unable to add more units.'; class BLOCKED: the Lv.10 batch of 793 that ended 11:18Z waits uncollectable (the brief expected BATCH RUNNING at 10:23Z)",2026-11-24T14:58:38.784Z,the capacity blocker
+Total Power,"150,051,860 before and after every press",2026-11-24T14:58:53Z,"drags tried 0, cancelled 0"
+drags,"drags tried 0, cancelled 0",,

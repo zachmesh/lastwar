@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 14:03:22.424Z, run started 14:03:23.321Z), 32 minutes after my previous run ended; owner idle 21006 s: wait 0; the first click 14:03:32.475Z (the Alliance shield) is the model's own turn",2026-11-24T14:03:23.321Z,see growth/0054-waits.csv
+badges,"first frame 14:03:28.8Z: tram (107,580), pickup and radar dish none; Warzone Duel timer 11:56:32",2026-11-24T14:03:28.827Z,tram badge rule: none; not tapped
+route,"Alliance shield (670,708), Techs (514,677), the recommended node (245,525): Quick Construction Lv.9 of 10",2026-11-24T14:03:49.410Z,tag text [G]: donation dialog
+entry count,"8/30 [G] at 14:03:56.319Z; the coin Donate green at 1,000 coins, no cooldown timer; Tech EXP 5.0M of 8.0M",2026-11-24T14:03:56.319Z,the Coach's registered entry 8 matches; the prediction: the 0 left at 11:37:10Z plus 8 grid points (11:57:57 to 13:57:57)
+taps,"8 coin Donate taps at (495,756): 14:04:02.2Z, :10.0Z, :15.2Z, :25.0Z, :33.8Z, :41.2Z, :47.3Z and 14:04:55.636Z (the last tap)",2026-11-24T14:04:55.636Z,"each 1,000 coins; reads after the taps 7, 6, 5, 4, 3, 2, 1, then the timer replaced the count"
+live count before the last tap,1/30 [G] read after tap 7 (14:04:49.2Z),2026-11-24T14:04:49.153Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:12:53 read at 14:05:04.418Z (then 00:12:44 at 14:05:12.842Z): the end 14:17:57.4Z and 14:17:56.8Z,2026-11-24T14:05:04.418Z,the 20-minute grid point 14:17:57.397Z: within 0.1 s
+witness,"the Tech EXP bar 5.0M of 8.0M the same as at entry; 'Tech Donation Today' 3,050 to 3,950 (+900 for 8 taps)",2026-11-24T14:05:44Z,Tech Donation Today 112.5 per tap here against 107.7 at 11:37Z
+count after,"the count line is replaced by the timer: not written, never derived",2026-11-24T14:05:04.418Z,the next grid point 14:17:57.4Z gives one more
+close,"the donation dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base, no TIPS popup",2026-11-24T14:05:43.704Z,"drags tried 0, cancelled 0"

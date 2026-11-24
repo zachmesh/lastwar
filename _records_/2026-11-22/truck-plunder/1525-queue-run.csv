@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the desktop lock was held by a cu gate run (gate-cu-main-2e6afa02b, started 15:23:00.0Z): first checked 15:24:11Z, free at 15:25:20.1Z: waited 1.15 minutes (69 s), note OTHER; then the run was admitted 0.8 s after the request (start requested 15:25:25.571Z, run started 15:25:26.340Z); owner idle 25912 s",2026-11-24T15:25:26.340Z,see growth/0054-waits.csv
+badges,"first frame 15:25:30.98Z: tram none, pickup none, radar dish 3 (Warzone Duel timer 10:34:35); 15:26:17.4Z: tram none (timer 10:33:44)",2026-11-24T15:25:26.340Z,tram badge rule: none; not tapped
+HUD,"diamonds 11,173; iron 780.1M; food 146.5M; coin 33.4M; oil 687.0K; Total Power 150,051,860: unchanged since 15:04Z",2026-11-24T15:25:30.981Z,tag text [G]: HUD; the registered +50 diamonds for the SR not in
+Hospital,"tag Hospital Lv.20; Severely Wounded 1,364 of 7,999; Completed 5,306; Collect not pressed; free room 7,999 - 1,364 - 5,306 = 1,329",2026-11-24T15:26:00.960Z,unchanged
+tram badge,"none at 15:26:17.4Z: 'badge absent: no tap'; a crop of the left column (x 73 to 213, y 520 to 780) of the saved frame step 7 confirms: tram none, pickup none, radar dish 3; the SR of 10:05:46Z (04:53:35 shown) was due about 14:59:21Z, 27 minutes ago",2026-11-24T15:26:17.373Z,the tram not tapped; the returned trucks due: the SR only (slot 1)
+not done,"the trade screen not opened; the settle, slot 4's unlock text, the History Dispatch tab and the Defense Failed pan not reached; this was the third and last try",,
+drags,"drags tried 0, cancelled 0",,

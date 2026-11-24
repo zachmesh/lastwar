@@ -5,9 +5,9 @@ activity: truck-plunder
 segment: 2
 priority: 1
 created_at: 2026-11-24T10:13:23Z
-expires_at: 2026-11-24T20:30:00Z
+expires_at: 2026-11-24T19:30:00Z
 planned_for:
-not_before: 2026-11-24T18:30:00Z
+not_before: 2026-11-24T18:05:00Z
 window: settle the second wave
 est_minutes: 15
 serves: PL-18
@@ -32,10 +32,13 @@ This unit is the regular `trucks`: Trucks - settle returned trucks via Truck Det
 
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (routes in `_records_/2026-11-22/queue-planning/2700-routes.csv`). Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`.
 
-## Brief (planner, TRADE CYCLE B2: settle, dispatch and plunder on one badge, Steer A 10:16Z)
+## Brief (planner, TRADE CYCLE B2: settle the SR first, then two fights, then the History screen, Steer A 15:57Z)
 
 serves: PL-18
 
-Do the TRADE CYCLE exactly as `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` says: read it first; its steps 0 to 4 (the Hospital before the tram tap, then settle, dispatch, plunder, close). THIS CYCLE: ESTIMATE, re-timed from the real arrivals of cycle A: the two trucks of cycle A return about 18:20Z to 18:30Z: SETTLE them; no dispatch (5/5); plunder only if the count is under 4.
-NO badge: close 'badge absent: no tap' (the Coordinator re-dispatches 15 minutes later, at most 3 tries). Up to 3 runs of 12 steps. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
-Cost cap, stated: 0.90 USD.
+Do `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` (steps 0 to 4) and the History screen of `_records_/2026-11-22/queue-planning/3150-history-screen-read.md`. Opens 18:05Z, only if the badge is LIT: FIRST write the badge state AND ITS COUNT with the UTC time. No badge, or the screen not open: close 'badge absent: no tap'; re-reads at 18:20Z and 18:35Z (3 tries at most); B3 settles the UR at about 18:50Z. AT THE 18:20Z RE-READ (the SR derived back 18:00:30Z): first WORLD then BASE (the camera moves; NO tap on any icon), then read the badge ONCE and write whether it lit (the Coach's test: lit = a stale dot refreshed). Badge lit:
+(1) Hospital first (free room 1,000 or more; stop after a fight wounding over 50).
+(2) SETTLE THE SR of cycle A FIRST (cargo 2.5M, 2.5M, 1.6M): the settle ends the badge; the screen stays open. HUD before and after; the Your Truck tab's return stamp, deadline, quality, cargo.
+(3) TWO plunder fights (count 2/4 to 4/4), OD-20 guards: one scan, Quick Plunder once and Battle once; guard under 25.61M; arrival over 30 minutes; UR or SSR with a UR 500-badge stack in either half; no alliance mate.
+(4) In the SAME visit the slot 4 text (plain text only) and the History screen by 3150 (read only; never tap inside a row). No dispatch (5/5). Up to TEN runs. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+Cost cap, stated: 1.50 USD.

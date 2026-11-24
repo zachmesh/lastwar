@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 15:16:02.767Z, run started 15:16:03.545Z), 21 s after the previous run ended; owner idle 25351 s: wait 0",2026-11-24T15:16:03.545Z,see growth/0054-waits.csv
+badges,"first frame 15:16:09.1Z: tram none, pickup none, radar dish 3 (Warzone Duel timer 10:43:52); 15:17:05.5Z: tram none (timer 10:42:56)",2026-11-24T15:16:03.545Z,tram badge rule: none; not tapped
+HUD before the settle,"diamonds 11,173; iron 780.1M; food 146.5M; coin 33.4M; oil 687.0K; the 26.72K counter; Total Power 150,051,860",2026-11-24T15:16:09.123Z,tag text [G]: HUD; unchanged since 15:04Z
+Hospital,"tag read Hospital Lv.20 (the tag alternates Lv.20 and Lv.25 on the same panel figures); the orange middle button (599,568) once; Severely Wounded 1,364 of 7,999; Completed 5,306; Collect not pressed; free room 7,999 - 1,364 - 5,306 = 1,329",2026-11-24T15:16:40.605Z,unchanged
+tram badge,"none at 15:17:05.5Z: 'badge absent: no tap'; a crop of the left column (x 73 to 213, y 520 to 780) from the saved frame step 8 confirms no badge on the tram or the pickup, 3 on the radar dish; the SR of 10:05:46Z (04:53:35 shown) was due about 14:59:21Z, 17 minutes ago",2026-11-24T15:17:05.542Z,the tram not tapped
+not done,"the trade screen not opened; the unsettled-truck deadline read, the settle, slot 4's unlock text, the History Dispatch tab and the Defense Failed pan not reached",,try 3 at most
+drags,"drags tried 0, cancelled 0",,

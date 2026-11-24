@@ -1,9 +1,9 @@
 ---
 title: Trade Cycle Settle Dispatch And Plunder On One Badge 3110 2026-11-24
 created: 2026-11-24T02:25:00-08:00
-modified: 2026-11-24T03:50:00-08:00
+modified: 2026-11-24T06:45:00-08:00
 level: L0
-version: 1.2.0
+version: 1.3.0
 description: The procedure of one trade cycle - at a tram badge, settle the returned trucks, dispatch into the empty slots by rule 2, then plunder within today's count and the OD-20 guards - built from record 1000 and Steer A's ruling of 2026-11-24 10:16Z
 status: done
 activity: queue-planning
@@ -33,7 +33,7 @@ WORLD then BASE; write the tram icon's (107,580) badge state with the UTC time; 
 
 ## 2 Dispatch, rule 2
 
-Up to the unit's number, into each empty slot's green plus ((298,450), (362,450), (426,450)); at most 3 out at once, 5 a day. SR or above as rolled: Let's Go ONCE. Below SR: the free dice refresh once, then up to two Trade Contract refreshes (the dice tag shows count and price 1); never a refresh that shows a diamond; no Mega Mode (UR duel days only, ticket or free). Per dispatch: a frame, quality, arrival, count.
+Up to the unit's number, into each empty slot's green plus ((298,450), (362,450), (426,450)); at most 3 out at once, 5 a day. SR or above as rolled: Let's Go ONCE. Below SR: the free dice refresh once, then Trade Contract refreshes, each after reading the price line (the contract count and 1): up to TEN per slot and 60 a day over the five dispatches (Steer A 14:30Z); the stock floor is 80 (below 120 each further refresh needs a one-line reason in the unit note); any diamond or other price: STOP; after ten take the best roll as it stands; no Mega Mode (UR duel days only). Per dispatch: frame, quality, arrival, count, contracts used.
 
 ## 3 Plunder
 
@@ -41,4 +41,4 @@ Switch to the Others' Trucks tab. Stop after any fight wounding more than 50 tro
 
 ## 4 Close
 
-The trade screen stays open across the runs of one unit (no trip to the base between runs); every fight records the guard, quality, cargo and loot. The History read (once, cycle A only, Steer A 11:33Z): before the back arrow, one tap on the History button, write the title, tabs and first rows' text and dates, press nothing in it, no drag, close it by one tap. The blue back arrow (109,941), then read the Hospital free room again; write the badge state and trade count again. Another app, alert or dialog: stop, name `lsappinfo front`; TIPS Cancel only.
+The trade screen stays open across the runs of one unit (no trip to the base between runs); every fight records the guard, quality, cargo and loot. The History read (cycle A only) is done. The blue back arrow (109,941), then read the Hospital free room again; write the badge state and trade count again. Another app, alert or dialog: stop, name `lsappinfo front`; TIPS Cancel only.

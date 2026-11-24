@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 15:03:54.515Z, run started 15:03:55.306Z), 5 minutes after my previous run ended; owner idle 24626 s: wait 0",2026-11-24T15:03:55.306Z,see growth/0054-waits.csv
+badges,"first frame 15:03:59.97Z: tram none, pickup none, radar dish 3 (Warzone Duel timer 10:56:01); 15:04:46.3Z: tram none (timer 10:55:14)",2026-11-24T15:03:55.306Z,tram badge rule: none; not tapped
+HUD before the settle,"diamonds 11,173; iron 780.1M; food 146.5M; coin 33.4M; oil 687.0K (hidden by a banner in the first frame, read a few frames later); Total Power 150,051,860",2026-11-24T15:03:59.972Z,tag text [G]: HUD; the Coach's registered +50 diamonds for the SR is not yet in the count
+Hospital,"tag Hospital Lv.25; Severely Wounded 1,364 of 7,999; Completed 5,306; Collect not pressed; free room 7,999 - 1,364 - 5,306 = 1,329 at 15:04:23.6Z: unchanged",2026-11-24T15:04:23.555Z,"free room at least 1,000"
+tram badge,none at 15:04:46.3Z: 'badge absent: no tap'; the SR dispatched 10:05:46Z with 04:53:35 shown is due about 14:59:21Z; the tram not tapped,2026-11-24T15:04:46.298Z,the radar dish carries 3 (the radar claims)
+not done,"the trade screen not opened; the settle, slot 4's unlock text, the History Dispatch tab and the Defense Failed pan not reached",,the coordinator re-dispatches 15 minutes later (at most 3 tries)
+drags,"drags tried 0, cancelled 0",,

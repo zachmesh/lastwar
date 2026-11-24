@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"restore at 15:47:55Z (one standing killall, LastWar in front 15:47:59Z); run 1 admitted 0.8 s after the request (start requested 15:48:18.507Z, run started 15:48:19.326Z), run 2 (15:50:13.8Z) admitted 0.8 s after the request, 1 minute after run 1: wait 0; owner idle 27282 and 27398 s",2026-11-24T15:48:19.326Z,see growth/0054-waits.csv
+badges,"first frames 15:48:25.0Z and 15:50:18.4Z: TRAM BADGE 1 (a crop of the saved base frame confirms the red 1), pickup none, radar dish 3; the Events icon badge 1; base after 15:50:57.0Z: tram 1, pickup none, radar dish 3",2026-11-24T15:48:19.326Z,tram badge rule: none; not tapped
+hub,"run 1: the hub opened on Black Market Challenge (320 of 600); the tab bar: a cut-off far-left tab with a red dot, Black Market, Black Market Challenge (selected), Desert Battlefield; no drag made",2026-11-24T15:48:40.124Z,tag text [G]: Events hub
+tab tap,"run 2: ONE tap at (160,158) on the far-left sliver with the red dot at 15:50:32.9Z: the Arms Race page opened (title read: Drone Boost)",2026-11-24T15:50:35.643Z,the Arms Race tab sits left of Black Market; no drag needed when the hub opens on the neighbouring tab
+phase,"Drone Boost, Contest Segment Lv.29-30; timer 02:09:18 at 15:50:42Z (ends about 17:59:60Z); owner points 4,000; rank 12; counter chest 0/2",2026-11-24T15:50:42.325Z,
+ladder,"1,500 points: silver chest, reached (a green progress bar, a highlighted gold frame), a red-gem price tag 2,360; 10,000: blue chest, not reached, tag 4,800; 30,000: gold chest, not reached, tag 11,800; no 'Claim' text, no bounce, no red dot on any chest",2026-11-24T15:50:42.325Z,the gem tags read as purchase offers: nothing pressed; the chest reward items are not shown
+scoring rows,Use 10 Drone Battle Data points +1; Use 1 Stamina +100 (a thumbs-up); Buy Packs containing Diamonds (1 diamond) +30: none pressed (no resource spent to score),2026-11-24T15:50:42.325Z,
+claims,none made: no plain Claim exists on the ladder; the tab's red dot has no claim behind it that was visible,,"the 1,500 chest cannot be claimed free (a ruby tag, no Claim)"
+HUD,"diamonds 11,173, iron 780.1M, food 146.5M, coin 33.4M, oil 687.0K, energy 95, Total Power 150,051,860 unchanged",2026-11-24T15:50:56.977Z,"closed with the back arrow (176,932)"
+drags,"drags tried 0, cancelled 0",,

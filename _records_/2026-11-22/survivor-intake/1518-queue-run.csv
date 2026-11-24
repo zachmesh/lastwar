@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 15:18:20.910Z, run started 15:18:21.858Z), 59 s after the previous run ended; owner idle 25489 s: wait 0",2026-11-24T15:18:21.858Z,see growth/0054-waits.csv
+badges,"first frame 15:18:22.3Z: tram none, pickup none, radar dish 3; hammer 4/4; flask 2/2",2026-11-24T15:18:21.858Z,tram badge rule: none; not tapped
+gate,no figure and no '?' bubble at the left gate before or after; the avatar at the lower left shows no minutes or ready mark; the quest bar 'Upgrade Builder's Hut to Lv.26 (0/1)',2026-11-24T15:18:28.096Z,tag text [G]
+pressed,nothing: nine waits; a 'gift received' toast and scrolling banners ordinary,2026-11-24T15:19:21.728Z,no intake
+HUD,"food 146.5M, iron 780.1M, coin 33.4M, oil 687.0K, gems 11,173, Total Power 150,051,860 unchanged",2026-11-24T15:19:21.728Z,
+drags,"drags tried 0, cancelled 0",,

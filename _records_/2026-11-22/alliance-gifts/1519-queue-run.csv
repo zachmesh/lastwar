@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 15:19:47.820Z, run started 15:19:48.804Z), 12 s after the previous record write and 12 s after the previous run ended; owner idle 25575 s: wait 0",2026-11-24T15:19:48.804Z,see growth/0054-waits.csv
+badges,"first frame 15:19:49.2Z: tram none, pickup none, radar dish 3",2026-11-24T15:19:48.804Z,tram badge rule: none; not tapped
+gift level before,"Gift Level 29, progress 41,818,050 of 257,900,000; both tabs with red dots; Regular green Claim All with a count 826",2026-11-24T15:20:14.106Z,tag text [G]: Alliance Gifts
+Regular Claim All,"827 Regular Alliance Gifts claimed (once): gold chest x70, gem item (5) x91, bread (1.0K) x3.3K, 5m speed-up x90, coin (600) x3.7K, bread (10.0K) x29, iron (1.0K) x3.3K, coin (6.0K) x29",2026-11-24T15:20:29.299Z,dialog of 8 item types
+Premium Claim All,"20 Premium Alliance Gifts claimed (once): gold bar x1, 500 medal item x4, coin crate x10, metal crate x12, food crate x14, purple chest x18, a material item x60, 5m speed-up x4; a 'Recruit Heroes! 140/10' banner shown",2026-11-24T15:20:48.411Z,dialog of 8 item types
+re-check,"Premium: no red dot, no Claim All, all rows Claimed; Regular: 2 new claimable gifts (Claim All green with a badge 2) arrived during the run, left (once per tab); progress 41,830,960 of 257,900,000, still Level 29",2026-11-24T15:20:55.041Z,
+HUD,"Total Power 150,051,860; gems 11,173; resources unchanged in the bar (the crates unopened)",2026-11-24T15:21:03.462Z,drags tried 0
+drags,"drags tried 0, cancelled 0",,

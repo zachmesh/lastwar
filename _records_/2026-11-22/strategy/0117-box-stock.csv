@@ -11,8 +11,13 @@ Food Chest UR,169,4.06,M food,686.1,typed food,food shortfall only,none,read 000
 Food Chest SSR SR R,9448,unread,M food,unread,typed food,after the read,none,counts unverified
 Iron Chest UR SSR SR R,9701,4.06 1.35 0.169 0.017,M iron,4394,typed iron,iron shortfall only,none,read 0009
 Violet Loot,139,unread,random resources or materials,unread,random,sample up to 22 then top-ups,none,text only
-Mystery Supply Box,365,unknown,"chest, rare pool unknown",unknown,random,PL-13 sample up to 22,none,n = 1
+Mystery Supply Box,299,unknown,"chest, rare pool unknown",unknown,random,PL-13 sample up to 22,none,"read 0009 (299 on 11-23; said to contain Universal UR Shards and 5,000 diamonds); my 365 came from the operator's slider default and is withdrawn; about 329 with today's 30; sample n = 10"
 Skill Medal and hero chests,9521,unread,hero levers,unread,hero,Thursday window only,not coin,read 0009
 Diamond items,277990,n/a,diamonds,n/a,diamond,never,never,labels only
 Metal-crate chest,6,unread,contents unread,unread,random,sample before any bulk open; box policy R6,none,"11-24 13:30Z, from the 120-point daily missions chest, unopened (record daily-missions 1330)"
 Gold chest (mission),6,unread,contents unread,unread,random,sample before any bulk open; box policy R6,none,"11-24 13:30Z, from the 120-point daily missions chest, unopened; not the Coin Chest"
+Weekly Pass S2 chest (Lv.4),1,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, S2 Drone Components pass, claimed 04:40Z area; the passes end 11-30 02:00Z"
+Weekly Pass S1 Drone Parts,15,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, S1 pass, drone line PL-05; the passes end 11-30 02:00Z"
+Weekly Pass EXP chest,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, EXP pass, hero EXP chest; the passes end 11-30 02:00Z"
+Weekly Pass Iron pickup crate,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, Iron pass, contents unread; the passes end 11-30 02:00Z"
+Weekly Pass Gold Coin Chest,3,unread,contents unread,unread,random,"Backpack read first, then the box policy; none opened",none,"11-24, daily weekly pass cards, Coin pass, claimed 15:32:30Z, tier unread; the passes end 11-30 02:00Z"

@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T13:10:00Z
+modified: 2026-11-24T16:12:00Z
 level: L2
-version: 0.17.0
+version: 0.18.0
 description: The operator's live recipe - run recipe and hazards, research and plunder rules, stat names, gates, open items, links to the route card and the detail sidecar
 status: unverified
 grounded_in:
@@ -16,7 +16,7 @@ grounded_in:
 
 # Handover - operator
 
-Updated 2026-11-24 12:30Z. Lessons and task-text kit: `_records_/2026-11-22/growth/0054-session-lessons.md`. Detail: `_records_/2026-11-22/growth/0054-operator-handover-detail.md`, `0054-run-hazards.md`. Routes: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`. Kit in the same folder: `0054-run-unit.sh` (new-tree runner), `0054-mk-record.py`, `0054-task-texts.csv`. Research: `0054-research-rules.md`; plunder: `0054-plunder-notes.md`; second device: `_records_/2026-11-22/team-operations/2715-second-device.md`.
+Updated 2026-11-24 16:12Z. Lessons and kit: `_records_/2026-11-22/growth/0054-session-lessons.md`, `0054-operator-handover-detail.md`, `0054-run-hazards.md`, `0054-run-unit.sh`, `0054-mk-record.py`, `0054-task-texts.csv`. Routes: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`. Research: `0054-research-rules.md`; plunder: `0054-plunder-notes.md`; second device: `_records_/2026-11-22/team-operations/2715-second-device.md`.
 
 ## Holder
 
@@ -24,20 +24,24 @@ Only the operator holds the device token and sends game input. Reply in four lin
 
 ## Run recipe
 
-- ONE unit, one run, one claim at a time, each BY NAME, its own `queue.py complete` and a record of 350 words or fewer plus a CSV. token-acquire; claim (stale receipt: `queue.py read --record PATH --executor operator`); `cu_bridge.py lock` must read free (a cu run: wait, log a waits row); `killall -9 UserNotificationCenter NotificationCenter`; `lsappinfo` names LastWar; `cu_bridge.py start --app com.lastwar.ios --model claude-gateway/claude-sonnet-5-5`; poll `status --run-id`. 16 steps or fewer (19 screenshots end `context_full`); EXACTLY ONE action per turn; the scrolling top banner is ordinary text.
-- Owner-idle wait: restored 20:04Z (OD-23), 0 from the restart after 21:25Z (OD-27), 300 s again from 2026-11-24T08:36:10Z when the bridge moved to the computer-use worktree (CU-720's carry): waits are 0 s on every run since; the cost is cu gate runs holding the lock about 2.4 min.
-- Dialogs: TIPS "Enable notifications": Cancel only, never Enable Now. Radar Claim All confirm ("will not grant Alliance Duel points"): Confirm. Consent requests are human-only. "Active on a different device": stop, never Confirm.
-- STANDING RULE: a foreground switch stops the run: press nothing, `lsappinfo front` by name, tell the coordinator. A macOS alert: the standing killall only on the coordinator's word. The owner's "Google Chrome for Testing" job: hold, no killall.
-- Drags: taps first; a clipped page moves only by the composed pan (hazards page, shop-claims 1301); count written. Never Go, Obtain, a spending Train, Heal or Collect in the Hospital, the gold trophy bubble.
+- ONE unit, one run, one claim at a time, each BY NAME, its own `queue.py complete` and a record of 350 words or fewer plus a CSV. token-acquire; claim (stale receipt: `queue.py read --record PATH --executor operator`); `cu_bridge.py lock` free (else wait, log a waits row); pre-start killall; `lsappinfo` names LastWar; `cu_bridge.py start --app com.lastwar.ios --model claude-gateway/claude-sonnet-5-5`; poll `status --run-id`. 16 steps or fewer (19 screenshots end `context_full`); EXACTLY ONE action per turn; the scrolling banner is ordinary text.
+- Owner-idle wait: 300 s since 2026-11-24T08:36:10Z (CU-720's carry); waits are 0 s on every run; the cost is cu gate runs holding the lock about 2.4 min (log a waits row, note OTHER).
+- Dialogs: TIPS "Enable notifications": Cancel only. Radar Claim All confirm ("will not grant Alliance Duel points"): Confirm. Consent requests are human-only. "Active on a different device": stop.
+- STANDING RULE: a foreground switch stops the run: press nothing, `lsappinfo front` by name, tell the coordinator. A macOS alert (the owner's Screen Recording prompt, recurs about 22:07Z): only after the coordinator's restore word, `killall -9 UserNotificationCenter NotificationCenter`, `lsappinfo front`; respawn: wait 30 s, once more; still in front: stop. Never open or read the window. Chrome for Testing: hold.
+- Drags: taps first; a clipped page moves only by the composed pan (hazards page); the Backpack grid did not move under it (1601). Never Go, Obtain, a spending Train, Heal or Collect in the Hospital, the gold trophy bubble.
 
 ## Trucks and trains
 
-The tram icon (107,580): no badge, no tap (it only pans the camera to the station); with a red badge it opens Intercity Trade (Others' Trucks is the plunder list: read only; Your Truck holds the slots). Own dispatch: rule 2 (SR or above Let's Go once; below SR the free dice, then Trade Contract refreshes through the dice tag); no Mega Mode. A carriage plus bubble plays a cinematic into the Station Platform; boarding: carriage 2, quantity 3, Gift Contract once.
+The tram icon (107,580): no badge, no tap (a truck unit; the train read may tap it: a camera pan only); a badge opens Intercity Trade on Your Truck. A lone returned truck lights the badge; an empty slot at 5/5 does not; one slot tap settles and puts it out. Rule 2 dispatch: SR or above Let's Go once, below SR the free dice then contract refreshes (more by the coordinator's word); no Mega Mode. Boarding: carriage 2, quantity 3.
+
+## Closing rule (Steer A 16:03Z)
+
+DONE: the staged claim was taken, or a verified nothing-to-do state quoted as `state_read: <quoted> | <frame> | <HH:MM:SSZ>`; no evidence line: PARTIAL; unread state, alert, absent badge or clipped claim: PARTIAL. Never close DONE to lower the partial rate.
 
 ## Game facts
 
-A finished upgrade shows a gift box: one tap is the Complete. Every upgrade runs 23,520 s under the preview time. Barracks Lv.24 and Lv.20 read "Drill Ground Full"; the Lv.30 batch ended 11:18:24Z. Donation grid: 03:57:57.397Z plus k x 1,200 s.
+A finished upgrade shows a gift box: one tap is the Complete. Upgrades run 23,520 s under the preview time. Barracks Lv.24, Lv.20 and Lv.30 read "Drill Ground Full". Donation grid: 03:57:57.397Z plus k x 1,200 s.
 
 ## Open
 
-Oil Well Lv.23 ends 2026-11-24T17:27:28Z; labs 17:30Z and 2026-11-25T02:39Z; the S1 Drone Parts Claim was claimed 13:02Z by the composed pan (next daily pickup after the 18:00 reset).
+Oil Well Lv.23 ends 17:27:28Z; labs 17:30Z and 11-25T02:39Z; the Weekly Pass page: five composed pans from the top reach the Coin card (pickups reset 18:00 server time).
