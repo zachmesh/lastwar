@@ -136,7 +136,16 @@ class Paths(Switchable):
         self.assertEqual(sorted(out["skipped_forecast_refusals"]), sorted(f["unit"] for f in out["forecast_refusals"]))
         self.assertEqual(out["already_present"], 0)                                      # a refusal is not "already present"
         self.assertEqual(self.inbox(), [])
-        self.assertIn("fails the forecast check (no-row)", r.stderr)
+        self.assertIn("fails the forecast check (its serves line names a plan item id that has no row in the forecast ledger)", r.stderr)
+
+    def test_plan_refuses_a_serves_with_wording_and_says_it_is_the_strict_rule(self):
+        r, out = self.plan("PL-01 the Oil Well chain")
+        self.assertEqual(r.returncode, 1)
+        self.assertEqual(out["planned"], [])
+        self.assertEqual({f["reason"] for f in out["forecast_refusals"]}, {"unknown"})                # the machine-readable word is unchanged
+        self.assertIn("fails the forecast check (its serves line fails the strict rule: each comma or semicolon part must be a plan item id "
+                      "with a ledger row or an exempt word (upkeep, snapshot, baseline, fill idle slot))", r.stderr)
+        self.assertEqual(self.inbox(), [])
 
     def test_plan_mints_for_a_ledger_row_an_exempt_serves_the_override_and_the_switch_off(self):
         for serves, extra in (("PL-01", ()), ("upkeep", ()), ("fill idle slot with research", ()), ("PL-99", ("--no-require-forecast",))):

@@ -70,7 +70,7 @@ class Validate(ForecastCase):
         r = self.validate()
         lines = self.warnings(r)
         self.assertEqual(len(lines), 1)
-        self.assertIn("2 live inbox unit(s) serve something that is neither a ledger plan item nor an exempt word", lines[0])
+        self.assertIn("2 live inbox unit(s) serve something that fails the strict rule: each comma or semicolon part must be a plan item id with a ledger row or an exempt word", lines[0])
         self.assertNotIn("grow the account somehow", r.stdout)
         self.no_leak(r)
 
@@ -80,7 +80,7 @@ class Validate(ForecastCase):
         lines = self.warnings(self.validate())
         self.assertEqual(len(lines), 2)
         self.assertTrue(any("plan item id that has no row" in l for l in lines))
-        self.assertTrue(any("neither a ledger plan item" in l for l in lines))
+        self.assertTrue(any("fails the strict rule" in l for l in lines))
 
     def test_the_newest_ledger_by_date_is_the_one_read(self):
         self.ledger("2026-11-20", ["PL-77"])
@@ -158,9 +158,20 @@ class Enqueue(ForecastCase):
         self.assertIn("--no-require-forecast", r.stdout)
         r = self.refused("grow the account somehow")
         self.assertEqual(r.returncode, 1)
-        self.assertIn("neither a ledger plan item nor an exempt word", r.stdout)
+        self.assertIn("its serves line fails the strict rule: each comma or semicolon part must be a plan item id with a ledger row or an exempt word (upkeep, snapshot, baseline, fill idle slot)", r.stdout)
         self.assertEqual(list((self.pool / "inbox").glob("*.md")), [])
         self.no_leak(r)
+
+    def test_the_strict_rule_in_two_examples_and_a_refusal_that_says_it_is_the_rule(self):
+        for serves in ("PL-01", "PL-01, PL-02", "PL-01; upkeep"):                         # every part is a ledger plan item or an exempt word: accepted
+            r = self.refused(serves)
+            self.assertEqual(r.returncode, 0, f"{serves}: {r.stdout}{r.stderr}")
+        for serves in ("PL-01 the Oil Well chain", "PL-01; free text"):                   # a part with wording or free text: refused, as the rule says
+            r = self.refused(serves)
+            self.assertEqual(r.returncode, 1, f"{serves}: {r.stdout}{r.stderr}")
+            self.assertIn("fails the strict rule: each comma or semicolon part must be a plan item id with a ledger row or an exempt word", r.stdout)
+            self.assertNotIn(serves, r.stdout)                                           # the refusal never echoes the serves text
+        self.assertEqual(len(list((self.pool / "inbox").glob("*.md"))), 3)               # only the three accepted ones were queued
 
     def test_a_missing_ledger_refuses_a_plan_item_but_not_an_exempt_word(self):
         (self.repo / "_records_" / "2026-11-22" / "strategy" / "forecast-ledger.csv").unlink()

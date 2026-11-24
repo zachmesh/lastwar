@@ -31,7 +31,8 @@ stop rule (if the digest does not cover a step, stop with blocked by prerequisit
 
 The forecast switch: when TEAM.yaml carries `coordination.queue.require_forecast: true` (off when the key or the file is absent), every path
 that creates a unit - `enqueue`, and the minting of `plan`, `sweep` and `sync` - refuses a unit whose serves is not a plan item with a row in the
-newest `_records_/<date>/strategy/forecast-ledger.csv` or an exempt word (upkeep, snapshot, baseline, fill idle slot). `--no-require-forecast`
+newest `_records_/<date>/strategy/forecast-ledger.csv` or an exempt word (upkeep, snapshot, baseline, fill idle slot); the rule is strict: each comma or
+semicolon part of the serves line must be one of those, so `PL-17, PL-08` passes and `PL-17 the Oil Well chain` is refused. `--no-require-forecast`
 skips it for one call (an emergency enqueue; the refusal names it), `--require-forecast` forces it on; LASTWAR_TEAM_FILE names another file.
 
 They also refuse when this copy - or the pool it would decide on -
@@ -748,6 +749,14 @@ def forecast_class(serves, ids):
     return worst
 
 
+# The strict rule, said once (Steer A 2026-11-24: a refusal for 'PL-17 the Oil Well chain' was first read as a defect). The serves line is split on commas
+# and semicolons and EVERY part must be a plan item id with a ledger row, an exempt word or the fill idle slot pattern.
+FORECAST_STRICT_RULE = ("each comma or semicolon part must be a plan item id with a ledger row or an exempt word "
+                        "(upkeep, snapshot, baseline, fill idle slot)")
+FORECAST_VERDICT_TEXT = {"no-row": "its serves line names a plan item id that has no row in the forecast ledger",
+                         "unknown": f"its serves line fails the strict rule: {FORECAST_STRICT_RULE}"}
+
+
 def forecast_warnings(units, ids, reason):
     """Counts-only warnings for the live inbox units (rel -> serves): never a ledger row or a serves text."""
     classes = {rel: forecast_class(serves, ids) for rel, serves in units.items()}
@@ -757,8 +766,7 @@ def forecast_warnings(units, ids, reason):
         out.append(f"forecast: {reason} ({len(unchecked)} live inbox unit(s) serve something that needs it and could not be "
                    f"checked): {', '.join(unchecked[:5])}{' ...' if len(unchecked) > 5 else ''}")
     for kind, text in (("no-row", "serve a plan item id that has no row in the forecast ledger"),
-                       ("unknown", "serve something that is neither a ledger plan item nor an exempt word (upkeep, snapshot, baseline, "
-                                   "fill idle slot)")):
+                       ("unknown", f"serve something that fails the strict rule: {FORECAST_STRICT_RULE}")):
         bad = sorted(r for r, c in classes.items() if c == kind)
         if bad:
             out.append(f"forecast: {len(bad)} live inbox unit(s) {text}: {', '.join(bad[:5])}{' ...' if len(bad) > 5 else ''}")
@@ -2268,7 +2276,7 @@ def _produce_for_window(root, item, planned_local, window="",
         # The forecast switch (coordination.queue.require_forecast): the roster's serves for this regular is not a ledger plan item or an
         # exempt word, so the unit is not minted. Recorded for the command to report; the command exits 1.
         _FORECAST_REFUSALS.append({"unit": unit_id, "regular": regular, "reason": verdict})
-        print(f"refused: {unit_id} - the roster's serves for {regular} fails the forecast check ({verdict}); not staging it - give the "
+        print(f"refused: {unit_id} - the roster's serves for {regular} fails the forecast check ({FORECAST_VERDICT_TEXT.get(verdict, verdict)}); not staging it - give the "
               f"regular a ledger plan item or an exempt serves in regulars.json, or pass --no-require-forecast for an emergency",
               file=sys.stderr)
         return None
@@ -4154,9 +4162,7 @@ def cmd_enqueue(args):
         ids, reason = load_forecast_ledger(root)
         verdict = forecast_class(serves, ids)
         if verdict != "ok":
-            what = {"unchecked": f"{reason}, so its serves line cannot be checked",
-                    "no-row": "its serves line names a plan item id that has no row in the forecast ledger",
-                    "unknown": "its serves line is neither a ledger plan item nor an exempt word (upkeep, snapshot, baseline, fill idle slot)"}[verdict]
+            what = {"unchecked": f"{reason}, so its serves line cannot be checked", **FORECAST_VERDICT_TEXT}[verdict]
             print(f"refused: forecast check ({source}): {what} - serve a plan item the Strategist has put in the ledger, or one of the exempt "
                   f"words; for an emergency enqueue pass --no-require-forecast; nothing queued")
             return 1
