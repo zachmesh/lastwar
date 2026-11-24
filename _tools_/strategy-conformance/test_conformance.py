@@ -541,6 +541,12 @@ class Coverage(PoolCase):
         self.assertIn("coverage", alarms)
         self.assertEqual(next(a for a in json.loads(r.stdout)["alarms"] if a["alarm"] == "coverage")["below"], ["unit-hours"])    # hours are the verdict
 
+    def test_the_output_says_hours_decide_and_units_are_the_trend(self):
+        self.fill(6, 4)
+        out = self.run_tool().stdout
+        self.assertIn("coverage rule: hours decide, units are the trend (the alarm compares unit-hours with the 60 percent limit)", out)
+        self.assertEqual(out.count("coverage rule:"), 1)
+
     def test_a_low_unit_count_with_healthy_hours_does_not_alarm_but_is_printed_as_context(self):
         self.fill(4, 6, hours_ranked=1.0, hours_other=0.1)                              # 40 percent of the units, 87 percent of the hours
         r, alarms = self.alarms()

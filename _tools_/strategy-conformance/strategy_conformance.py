@@ -397,6 +397,7 @@ def render(result: dict) -> str:
                      f"{sc['serves_nothing_units']} units, {sc['serves_nothing_hours']:g} h of {sc['total_hours']:g} h")
     else:
         lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}): no unit executed since yet (n/a)")
+    lines.append(f"coverage rule: hours decide, units are the trend (the alarm compares unit-hours with the {c['coverage_limit_percent']:g} percent limit)")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
         note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")
