@@ -19,7 +19,8 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     `_tools_/state/strategy-cutover.json` ({"since": "ISO UTC"}); the first-parent commit in git that introduced a
                     plan item id as a roster serves (`_tools_/regulars.json`), i.e. the merge of the remap. With none of them the
                     rolling figure is the verdict and the output says so. Both lines also give the units that serve nothing
-                    (not ranked) with their hours of the total.
+                    (not ranked) with their hours of the total. Percentages print to one decimal; the alarm compares the UNROUNDED
+                    value (84 of 141 = 59.57 is below 60, though it once rounded to 60 and passed).
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
@@ -42,6 +43,7 @@ import argparse
 import csv
 import importlib.util
 import json
+import math
 import os
 import re
 import subprocess
@@ -109,15 +111,28 @@ def resolve_cutover(root: Path, since_flag: str):
     return (at, "git: the merge that introduced the roster serves ids") if at else (None, "no cutover: give --since TIME, write " + CUTOVER_STATE + ", or land the remap")
 
 
-def coverage_stats(units: list) -> dict:
-    """Units and unit-hours serving a ranked item, and the units that serve nothing (not ranked) with their hours of the total."""
+def shown(value, limit):
+    """A percentage to one decimal for print and JSON; the alarm compares the unrounded value. A value below the limit is never shown as
+    the limit or more (59.96 against 60 shows 59.9, not 60.0), so the printed figure and the alarm agree."""
+    if value is None:
+        return None
+    text = round(value, 1)
+    if limit is not None and value < limit <= text:
+        text = math.floor(value * 10) / 10
+    return text
+
+
+def coverage_stats(units: list, limit=None) -> dict:
+    """Units and unit-hours serving a ranked item, and the units that serve nothing (not ranked) with their hours of the total. The percentages
+    are shown to one decimal (`units_percent`, `unit_hours_percent`); the unrounded values the alarm compares are `*_exact`."""
     ranked = [u for u in units if u.ranked]
     total_hours = sum(u.hours for u in units)
     ranked_hours = sum(u.hours for u in ranked)
     unit_pct = percent(len(ranked), len(units))
     hour_pct = percent(ranked_hours, total_hours)
     return {"executed": len(units), "ranked_units": len(ranked),
-            "units_percent": None if unit_pct is None else round(unit_pct), "unit_hours_percent": None if hour_pct is None else round(hour_pct),
+            "units_percent": shown(unit_pct, limit), "unit_hours_percent": shown(hour_pct, limit),
+            "units_percent_exact": unit_pct, "unit_hours_percent_exact": hour_pct,
             "total_hours": round(total_hours, 2), "ranked_hours": round(ranked_hours, 2),
             "serves_nothing_units": len(units) - len(ranked), "serves_nothing_hours": round(total_hours - ranked_hours, 2)}
 
@@ -304,12 +319,12 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
     counts["slot_reads"] = idle
     # coverage: the rolling window is context; the verdict is the units executed since the cutover when one is known
     cutover, cutover_source = resolve_cutover(root, a.since)
-    rolling = coverage_stats(executed)
+    rolling = coverage_stats(executed, a.coverage_percent)
     counts["rolling"] = {"hours": hours, **rolling}
     since_stats = None
     if cutover is not None:
         since_units = [u for u in done if u.status in EXECUTED and u.finished and cutover <= u.finished <= now]
-        since_stats = coverage_stats(since_units)
+        since_stats = coverage_stats(since_units, a.coverage_percent)
         counts["since_cutover"] = {"since": cutover.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": cutover_source, **since_stats}
     else:
         counts["since_cutover"] = None
@@ -319,8 +334,8 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
     verdict, basis = (since_stats, "since-cutover") if since_stats is not None else (rolling, "rolling")
     counts["coverage_verdict_basis"] = basis
     if verdict["executed"]:
-        low = [name for name, v in (("units", verdict["units_percent"]), ("unit-hours", verdict["unit_hours_percent"]))
-               if v is not None and v < a.coverage_percent]
+        low = [name for name, v in (("units", verdict["units_percent_exact"]), ("unit-hours", verdict["unit_hours_percent_exact"]))
+               if v is not None and v < a.coverage_percent]                  # the unrounded values: 59.57 is below 60
         if low:
             alarm = {"alarm": "coverage", "basis": basis, "below": low, "units_percent": verdict["units_percent"],
                      "unit_hours_percent": verdict["unit_hours_percent"], "limit": a.coverage_percent, "executed": verdict["executed"]}
