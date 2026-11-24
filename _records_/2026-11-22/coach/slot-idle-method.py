@@ -6,7 +6,9 @@ windows ending at the cutoff it prints, by slot type: slot-minutes available, ra
 no input was allowed), adjusted idle and its share, of which blocked by capacity (the finished troops cannot be collected while the Drill Ground is full: the slot reads idle but nothing can start), and the startable idle that remains. Bases: builders 4 slots, labs 2, training barracks 3 (Lv.20 unprobed)."""
 import csv,sys,os,datetime as dt
 H=os.path.dirname(os.path.abspath(__file__))
-fmt=lambda s: dt.datetime.strptime(s.replace("Z",""),"%Y-%m-%dT%H:%M:%S" if s.count(":")==2 else "%Y-%m-%dT%H:%M")
+def fmt(s):
+    s=s.replace("Z","")
+    return dt.datetime.strptime(s,"%Y-%m-%dT%H:%M:%S.%f" if "." in s else ("%Y-%m-%dT%H:%M:%S" if s.count(":")==2 else "%Y-%m-%dT%H:%M"))
 cut=fmt(sys.argv[1]) if len(sys.argv)>1 else dt.datetime(2026,11,23,15,5)
 def ov(a0,a1,b0,b1): return max(0.0,(min(a1,b1)-max(a0,b0)).total_seconds()/60)
 wins=[]

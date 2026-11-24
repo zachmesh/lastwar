@@ -26,9 +26,13 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
-Units minted after the forecast refusal switches on (2026-11-24T00:05Z), chain follow-ups
-included, are refused unless serves is a plan item id with a row in the forecast ledger or an
-exempt word: write the ledger row before the unit.
+Units minted after the forecast refusal switches on (planned 2026-11-24T10:05Z, and only once the
+Strategist announces the ledger stable), chain follow-ups included, are refused unless serves is a
+plan item id with a row in the forecast ledger or an exempt word: write the ledger row before the unit.
+
+A FALLBACK unit (staged for a case that may not happen) says 'DISPATCH ONLY WHEN NAMED' and carries priority 9 and a
+not_before beyond any plausible tick pick until it is needed, because the 15-minute ticker picks `next` by ranking: a moot
+unit is a trap; retire it the moment its case is closed.
 
 A brief that can reach a banner, a Go, a Buy, a link, a web, a share or an
 external-app button carries one line: 'may open another app: needs Steer A's

@@ -3,18 +3,18 @@ unit: building-queues-oil-well-2026-11-24-006
 regular: building-queues
 activity: building-queues
 segment: 1
-priority: 1
+priority: 9
 created_at: 2026-11-23T16:00:30Z
-expires_at: 2026-11-27T14:02:00Z
+expires_at: 2026-11-27T21:06:53Z
 planned_for:
-not_before: 2026-11-25T22:02:00Z
+not_before: 2026-11-26T03:06:00Z
 window: oil well level 25 to 26 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17
 chain_id: oil-well-2026-11-24
 chain_seq: 6
 attempts: 0
-max_attempts: 3
+max_attempts: 8
 claimed_by:
 claimed_at:
 lease_until:
@@ -36,7 +36,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-17
 
-Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.25 upgrade finishes; the window opens at the earliest possible finish and the coordinator dispatches it by name at the real one. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`), never complete it. If finished: press Complete (never Speed Up or Finish Now); Total Power before and after. Then go to the well by the route in the sheet, read the tag ('Oil Well Lv.25'; stop and report if it differs), open the Upgrade preview ('Lv.25 to 26') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the finish time in UTC. If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at the nearest edge, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
+Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.25 upgrade finishes; the window opens before the expected finish (real times run about 6 h 32 min under the previews, so the estimate is uncertain) and the coordinator dispatches it by name at the real one. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`), never complete it. If finished: press Complete (never Speed Up or Finish Now); Total Power before and after. Then go to the well by the route in the sheet, read the tag ('Oil Well Lv.25'; stop and report if it differs), open the Upgrade preview ('Lv.25 to 26') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the preview's effective time, the panel's end time in UTC and their difference in seconds (expected 23,520 s). If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at the nearest edge, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
 
-Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm. Iron only: no coin, food or oil, no speed-up, never Finish Now. Tag text beside every number; none means [G].
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm.
 Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

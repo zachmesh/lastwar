@@ -1,5 +1,5 @@
-builder,free_utc,start_requested_utc,idle_s_at_request,start_granted_utc,what_started,note
-builder 1,2026-11-23T23:20:12Z,,,,,"to fill at 23:20Z: the four Training Base Lv.25 builds end 23:20:12Z to 23:20:24Z"
-builder 2,2026-11-23T23:20:12Z,,,,,
-builder 3,2026-11-23T23:20:12Z,,,,,
-builder 4,2026-11-23T23:20:12Z,,,,,
+builder,free_utc,start_requested_utc,idle_s_at_request,start_granted_utc,what_started,note,upgrade_pressed_utc
+builder 1,2026-11-23T23:20:12.5Z,2026-11-23T23:20:20Z,,2026-11-23T23:20:33Z,"Drill Ground Lv.26 to Lv.27 (unit building-queues-growth-convert-2026-11-24-001)","requested = the coordinator's dispatch; granted = the claim and run start (the lock waited 0); Upgrade pressed 2.1 minutes after the builder freed; ends 2026-12-03T19:20:37Z",2026-11-23T23:22:18.031Z
+builder 2,2026-11-23T23:20:16.5Z,2026-11-23T23:20:20Z,,2026-11-23T23:20:33Z,"Drill Ground Lv.27 to Lv.28 (same unit)","Upgrade pressed 3.1 minutes after the builder freed; ends 2026-12-07T20:21:48Z",2026-11-23T23:23:21.851Z
+builder 3,2026-11-23T23:20:19.5Z,2026-11-23T23:28:10Z,,2026-11-23T23:28:21Z,"Oil Well Lv.20 to Lv.21 (unit building-queues-oil-well-2026-11-24-001)","requested = the run request after the coordinator named the unit; Upgrade pressed 9.25 minutes after the builder freed; ends 2026-11-24T02:17:53Z",2026-11-23T23:29:34.806Z
+builder 4,2026-11-23T23:20:23.5Z,2026-11-23T23:38:00Z,,2026-11-23T23:38:11Z,"Drill Ground Lv.28 to Lv.29 (unit building-queues-growth-convert-2026-11-24-002)","requested after the food conversion; Upgrade pressed 19.4 minutes after the builder freed; ends 2026-12-12T02:29:20Z",2026-11-23T23:39:45.957Z

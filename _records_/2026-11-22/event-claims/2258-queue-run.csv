@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 22:58:39Z (wait 0),2026-11-23T22:58:39Z,see growth/0054-waits.csv
+first frame,"Events icon without badge; Thanksgiving Event badge 1; diamonds 11,113; Total Power 150,416,946; energy 50",2026-11-23T22:58:55Z,the Thanksgiving tabs are read by their own unit
+tab bar,"one sideways drag moved the bar only slightly: The Age of Oil, Arms Race (medal tab), Black Market, Black Market Challenge partly visible; no red dot or New tag readable",2026-11-23T22:59:10Z,one drag used
+The Age of Oil,"stages 1 and 2 complete, stage 3 current, stage 4 locked; cards Unlock Lv. 31-35 Zombies (5565/2000) and Rapid Rescue (1,380,986/25,000) met with faded green checks; no Claim button, no red dot",2026-11-23T22:59:25Z,nothing to claim
+Arms Race,"Hero Advancement Lv.29-30, about 3 hours, points 0; chests 2,000, 4,000, 12,000 points at 2,360, 4,800 and 11,800 rubies (buy-now offers); tasks Hero Recruitment +400, Use Hero EXP +1, Buy Diamond Packs +30, each a green Go arrow",2026-11-23T22:59:40Z,skipped: nothing free
+Black Market Challenge,"Earned today 600/600, 6-day timer; tasks Radar Task, Secret Mobile Squad, Doom Elite, Zombie each with Go To",2026-11-23T22:59:50Z,skipped: a Go list
+claims,none; Events and HUD unchanged,2026-11-23T23:00:00Z,no popup

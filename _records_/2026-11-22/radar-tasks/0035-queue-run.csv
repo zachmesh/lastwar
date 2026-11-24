@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 00:35:43Z (wait 0),2026-11-24T00:35:43Z,see growth/0054-waits.csv
+bar before,'1 task rewards can be claimed' with a green Claim All; energy 70; '12 Radar Task(s) will be restored in 02:02:15' (about 02:38Z),2026-11-24T00:36:00Z,
+Quick Execute,"not offered (no stamina cost, no tasks): nothing tapped; energy 70",2026-11-24T00:36:00Z,energy floor 40 not in play
+Claim All,"pressed once; popup lines: radar item x10, food bag x1, blue triangle item x183, coin 247.2K; no oil line; the food bag not opened; a Drop Limit Update banner 272/300",2026-11-24T00:36:15Z,
+bar after,empty; radar dish badge cleared; energy 70,2026-11-24T00:36:25Z,
+oil counter,666.8K before and after (no oil in the reward),2026-11-24T00:36:25Z,
+HUD,"coin 9.8M to 10.0M, food 105.6M, iron 757.7M, diamonds 11,113, Total Power 150,416,946 unchanged",2026-11-24T00:36:30Z,

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 00:52:22Z (wait 0),2026-11-24T00:52:22Z,see growth/0054-waits.csv
+To-do List,Server Time 22:52:36 at the 00:52:37.409Z frame and 22:52:46 at 00:52:47.435Z: UTC minus 2 hours exactly; date 2026-11-23,2026-11-24T00:52:47.435Z,tag text [G]: panel header
+To-do rows,one row only: Zombie Siege 23:15 (server) with a calendar icon and a Go button (not pressed); no Alliance Exercise row (past); footer 'Alliance markers with countdowns will also be shown here.',2026-11-24T00:52:47Z,23:15 server is 01:15Z
+Alliance screen,"Alliance Events tile without a visible red dot; dots on Alliance Wars, Help and Alliance Gifts",2026-11-24T00:53:08Z,
+Alliance Events tabs,"a first selected tab (a rally challenge tab, timer 1d 01:06:52, 'Complete 5/5 event rallies ... Claimed'), Alliance Exercise, Zombie Siege",2026-11-24T00:53:33Z,
+Zombie Siege tab,"Enemy Power 30,200,000; Select Stronghold level Lv.9 / Lv.10; Base Level Required Lv.30; progress 1,696,820/300,000; line 'Auto-searching for Lv.10 Stronghold at 2026-11-23 23:15' with a calendar icon; button Cancel Schedule (not pressed); no mode label, no Preparing or Battle countdown, no Your Time Zone line, no Offline Participation switch, no banner",2026-11-24T00:53:42.643Z,"a scheduled PvE auto-search, owner-set"
+Alliance mail,"top row '[Alliance Exercise] Alliance R...' 1h ago with an opened-envelope icon and no gift icon or attachment (claimed by mail-2026-11-24-0015 at 00:40Z); below: three New Alliance Marker rows 11h old, Daily Donation Rankings 22h, Weekly Donation Ranking 22h",2026-11-24T00:54:00Z,Claim All not pressed
+HUD,"Total Power 150,416,946; coin 22.1M; energy 73; VS timer 01:07:38",2026-11-24T00:52:25Z,
