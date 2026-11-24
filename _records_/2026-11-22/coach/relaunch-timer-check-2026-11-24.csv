@@ -1,0 +1,9 @@
+timer,"known_end (builders 18:06Z, labs 17:35Z)",end read after the relaunch (20:20Z),difference_seconds
+Lv.26 Drill Ground,11-26 11:08:36.6Z,11-26 11:08:36.3Z,-0.3
+Lv.27 Drill Ground,11-30 01:31:01.6Z,11-30 01:31:01.3Z,-0.3
+Lv.28 Drill Ground,12-03 23:50:13.6Z,12-03 23:50:14.3Z,+0.7
+Oil Well Lv.23 to 24,11-25 07:11:19.6Z,11-25 07:11:20.3Z,+0.7
+Food Output V Lv.1,11-25 19:39:07.0Z,11-25 19:39:08.0Z,+1.0
+Oil Output I Lv.0,11-26 08:37:34.0Z,11-26 08:37:35.0Z,+1.0
+HUD,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173, Total Power 150,103,292 at 19:28Z","identical at 20:19:22.9Z, 20:20:07Z and 20:21:00Z",0
+READING,"a quit by the app menu and a reopen by the standing front script returned the base 91 s after the reopen with NO dialog (no TIPS, no different-device dialog) and NO timer change",the relaunch is a safe repair for a hung screen,the absence of the different-device dialog suggests no other device session was live at 20:19Z [G]

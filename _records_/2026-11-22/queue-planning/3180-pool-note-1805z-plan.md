@@ -34,3 +34,7 @@ Pool 52 units, validate 'pool valid', no unit at or over 450 words. Forecast gat
 ## Fixed items of the next hours
 
 The badge probe 18:04Z, cycle B2 18:05Z on a lit badge, B3 18:50Z (the UR), pass 008 at 21:10Z, cycle C 02:15Z, the Oil Well Lv.24 hand-off 07:09Z on 11-25 (real end 07:11:20Z), the lab Completes 11-25 19:39Z and 11-26 08:37Z, the room collect about 11:10Z on 11-26 (provisional). The next plan is the 22Z ping.
+
+## Appended 19:58Z: pending items
+
+An extra ping is set for 2026-11-25T03:15:00Z, after the 02:57Z secrets record: read the real Refugee, Rescue and Oil Depot timers and stage the three claim units, each opening a few minutes after its timer, with the Special tab count tags (Mystery Supply Box and Violet's Loot) read before and after each claim (Steer A's test (a) and the Coach's gift-income test). The lottery relaunch unit (`scout-midday-relaunch-lastwar-2026-11-24-001`, 20:16:00Z to 20:50:00Z) is sent only if the 20:15Z frame still shows the loading screen; if the screen cleared I retire it. The Store read's redeem unit waits for the Strategist's ranking of the trophy row.

@@ -1,0 +1,18 @@
+topic,time_utc,measure,evidence
+lottery_tab,2026-11-24T19:29:18.5Z,"one tap on the Thanksgiving Lottery tab (369,158): a full-window loading screen with an orange machine and a red DRAW button at about (394,592), no controls, no back arrow",run 20261124T192901Z-562b8b
+lottery_frames_1,2026-11-24T19:29:20Z to 19:34:03Z,15 frames unchanged,runs 20261124T192901Z-562b8b to 20261124T193159Z-c0b6b3
+lottery_frames_2,2026-11-24T19:36:38Z to 19:40:37Z,8 frames unchanged; the toast 'Violet's Gift received!' still drew over it so the game ran,run 20261124T193634Z-7f5b42
+lottery_back_tap,2026-11-24T19:41:19.7Z,"one tap at the back-arrow spot (175,930): nothing drawn there, the red button 400 px away; the screen unchanged at 19:41:24Z and 19:41:30Z",run 20261124T194111Z-07790b
+wait_tool,2026-11-24T19:36:35Z,a wait over 10 s is refused; three 10 s waits in one turn do 30 s,run 20261124T193634Z-7f5b42
+store_list_pan,2026-11-24T19:28:21.6Z,"the margin pan on the Thanksgiving Store list (x 639, y 812 to 637) moved 0 px",run 20261124T192740Z-6bd54f
+backpack_pan,2026-11-24T16:19Z,two margin pans (665 600 to 425) moved the Backpack grid 0 px,records perception-scout 1619
+history_pan,2026-11-24T18:36:20.5Z and 18:54:51.0Z,"the composed pan from the blank right margin x 670 (y 700 to 525) moved the History list 150 px, twice",records truck-plunder 1820 and 1850
+clipped_page_pan,2026-11-24T13:08Z,"a single drag event moved nothing at 70 and 135 px and flung at 250 px; the composed pan moved 150 px (S1 Claim y 915 to 765)",shop-claims 1301; 1158; 1211; 1150; 1248
+stale_tram_dot,2026-11-24T18:21:28.6Z and 18:51:02.1Z,"the tram icon was dark or not drawn until ONE WORLD tap and ONE BASE tap; then drawn with badge 1 (7.8 s after the BASE tap on the second)",records truck-plunder 1820 and 1850
+tram_icon_absent,2026-11-24T18:39:57Z onward,the tram icon is NOT DRAWN at the base while no truck waits,records survivor-intake 1639 and later
+oil_well_complete,2026-11-24T02:28Z,"a finished upgrade shows a wrapped gift box; one tap on its body is the Complete (Oil Well +4,200 power 0218; +4,900 power 0808)",records building-queues 0218 and 0808
+owner_idle_wait,2026-11-24T08:36:10Z,300 s in the config from the computer-use worktree move (restored 20:04Z OD-23; 0 after 21:25Z OD-27); every run since was admitted in 0.7 to 1.2 s,records waits csv 0054-waits.csv
+cu_gate_runs,2026-11-24T11:28Z,cu gate runs hold the desktop lock about 2.4 min (a nightly near 11:28Z; PR gate runs after cu merges); seen 18:59:48.9Z to 19:02:11.5Z,passes 1858
+macos_alerts,2026-11-24T02:34:19Z and 09:05:46Z and 15:36:23Z,UserNotificationCenter alert: no tap before the coordinator's word then the standing killall; the third stayed in front for 11 minutes,records mail-rewards 1536
+chrome_for_testing,2026-11-24T10:00:05Z to 10:01:01Z,the owner's ai-sync job: left by itself (hold no killall); the cu 'CU Fixture' 11:09:32Z to 11:09:48Z a dry run,coordinator notes
+hung_screen_relaunch,2026-11-24T20:17:21.2Z to 20:19:22.9Z,"quit by the app menu (Quit item (95,236)); Google Chrome fell to front 20:17:23Z (untouched); reopened by the front script 20:17:48.5Z; the first frame after the login at 91 s was already the base; no dialog; HUD and Total Power identical; six timers within 0.7 s; about 50 minutes of downtime (the Lottery tab tap 19:29:18.5Z to the first base frame 20:19:22.9Z); no loss; first-frame state: the pickup icon has a question-mark bubble beside it (read, not pressed; the planner reads it next)","records perception-scout 2017 and event-claims 1927"
