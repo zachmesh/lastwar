@@ -404,7 +404,7 @@ STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "created_at", "expires_at", "planned_for", "not_before",
-            "window", "est_minutes", "serves",
+            "window", "est_minutes", "serves", "forecast_override",
             "chain_id", "chain_seq", "attempts", "max_attempts",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
@@ -922,6 +922,20 @@ def set_forecast_override(args):
     """Minting commands (plan, sweep, sync) take the same flags as enqueue; remember them for _produce_for_window."""
     on, source, _w = forecast_required(args)
     _FORECAST_OVERRIDE["value"] = on if source.startswith("--") else None
+
+
+def forecast_override_verdict(root, serves):
+    """The audit marker for --no-require-forecast: the verdict the forecast check WOULD have refused this serves with (no-row, unknown or
+    unchecked), when the flag let it through on a repository whose TEAM.yaml switch is on; '' when the flag was not used, the switch is off,
+    or the serves passes anyway. A unit carrying a non-empty marker is one the override changed the outcome for."""
+    if _FORECAST_OVERRIDE["value"] is not False or not team_requires_forecast()[0]:
+        return ""
+    key = _repo_top(root)
+    if key not in _FORECAST_LEDGER_CACHE:
+        _FORECAST_LEDGER_CACHE[key] = load_forecast_ledger(root)
+    ids, _reason = _FORECAST_LEDGER_CACHE[key]
+    verdict = forecast_class(serves, ids)
+    return "" if verdict == "ok" else verdict
 
 
 def forecast_gate(root, serves):
@@ -2351,6 +2365,9 @@ def _produce_for_window(root, item, planned_local, window="",
               f"regular a ledger plan item or an exempt serves in regulars.json, or pass --no-require-forecast for an emergency",
               file=sys.stderr)
         return None
+    marked = forecast_override_verdict(root, fields["serves"])
+    if marked:                                      # --no-require-forecast let a unit through that the check would have refused: audit marker
+        fields["forecast_override"] = marked
     write_new_unit(root, fields, regular, item)
     return fields["unit"]
 
@@ -4390,6 +4407,11 @@ def cmd_enqueue(args):
     }
     if serves:
         fields["serves"] = serves
+    set_forecast_override(args)
+    marked = forecast_override_verdict(root, serves or "")
+    if marked:                                      # --no-require-forecast let a unit through that the check would have refused: audit marker
+        fields["forecast_override"] = marked
+        print(f"note: the forecast check ({marked}) was bypassed with --no-require-forecast; {unit} is marked forecast_override: {marked}")
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
@@ -4402,6 +4424,39 @@ def cmd_enqueue(args):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
+    return 0
+
+
+def cmd_forecast_overrides(args):
+    """The audit counter of --no-require-forecast: units the override let through that the forecast check would have refused, by kind, with
+    their names (never their serves text), over the inbox, claimed and done pools; --since keeps those created at or after an instant."""
+    since = parse_iso(args.since) if args.since else None
+    if args.since and since is None:
+        print(f"forecast-overrides: --since {args.since!r} is not a UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+        return 2
+    kinds, names = {}, []
+    for state in STATES:
+        for f in list_units(args.root, state):
+            kind = str(f.get("forecast_override") or "").strip()
+            if not kind:
+                continue
+            created = parse_iso(f.get("created_at", ""))
+            if since and (created is None or created < since):
+                continue
+            kinds[kind] = kinds.get(kind, 0) + 1
+            names.append({"unit": f.get("unit", f.get("_file", "")), "state": state, "kind": kind, "created_at": f.get("created_at", ""),
+                          "regular": f.get("regular", "")})
+    names.sort(key=lambda n: (n["created_at"], n["unit"]))
+    if args.format == "json":
+        print(json.dumps({"since": args.since or "", "total": len(names), "by_kind": kinds, "units": names}, indent=1))
+        return 0
+    print(f"units the --no-require-forecast override let through that the check would have refused"
+          f"{' since ' + args.since if args.since else ''}: {len(names)}"
+          + (f" ({', '.join(f'{k} {v}' for k, v in sorted(kinds.items()))})" if kinds else ""))
+    for n in names[:50]:
+        print(f"  {n['unit']}  [{n['state']}, {n['kind']}]  {n['created_at']}")
+    if len(names) > 50:
+        print(f"  ({len(names) - 50} more; --format json lists all)")
     return 0
 
 
@@ -6716,6 +6771,12 @@ def main(argv=None):
     p = sub.add_parser("release")
     p.add_argument("--unit", required=True)
     p.set_defaults(fn=cmd_release)
+
+    p = sub.add_parser("forecast-overrides",
+                       help="count the units --no-require-forecast let through that the forecast check would have refused (names only)")
+    p.add_argument("--since", default="", help="only units created at or after this UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+    p.add_argument("--format", choices=("text", "json"), default="text")
+    p.set_defaults(fn=cmd_forecast_overrides)
 
     p = sub.add_parser("token-acquire")
     p.add_argument("--executor", required=True)
