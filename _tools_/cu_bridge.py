@@ -748,6 +748,31 @@ def cmd_lock(args: argparse.Namespace) -> int:
     return {"free": 0, "unknown": 2}.get(state["state"], 1)
 
 
+def approval_hint(apps) -> str:
+    """A hint line for `start`, only when it applies: the desktop run asks a human to approve an app that has no `always` record in
+    $CU_HOME/app-approvals.json (schema cu-app-approvals/v1; this process's CU_HOME, which is the daemon's unless one was exported only for the
+    server) through the control-link. Empty when every requested app has a record, or for a run with no apps (the browser). It names only
+    the requested apps that lack a record, never the others in the store. A hint, not a request: nothing is asked here."""
+    if not apps:
+        return ""
+    store = Path(os.environ.get("CU_HOME") or Path.home() / ".computer-use").expanduser() / "app-approvals.json"
+    try:
+        data = json.loads(store.read_text(encoding="utf-8"))
+        if data.get("schema") != "cu-app-approvals/v1" or not isinstance(data.get("apps"), list):
+            raise ValueError("schema")
+        known = {entry.get("bundleId") for entry in data["apps"] if isinstance(entry, dict)}
+    except FileNotFoundError:
+        known = set()
+    except (OSError, ValueError, AttributeError):
+        return ("hint: the app approval record could not be read, so an app may ask a human to approve it through the control-link "
+                "(a hint, not a request)")
+    missing = [app for app in apps if app not in known]
+    if not missing:
+        return ""
+    return (f"hint: {', '.join(missing)} has no 'always' approval record, so the run asks a human to approve it through the control-link "
+            f"(a hint, not a request)")
+
+
 def cmd_start(args: argparse.Namespace) -> int:
     if not SEAT_PATTERN.match(SEAT):
         _die(f"CU_SEAT {SEAT!r} is not a [cu] seat key (^cu-[a-z0-9]+(-[a-z0-9]+){{0,3}}$): the computer-use desktop lock refuses "
@@ -815,7 +840,10 @@ def cmd_start(args: argparse.Namespace) -> int:
     )
     print(json.dumps(started, indent=2))
     print()
-    print("Approve the app (first use only) and control the run from a real terminal:")
+    hint = approval_hint(payload.get("apps", []))
+    if hint:
+        print(hint)
+    print("Control the run from a real terminal:")
     print(f"  node {PROJECT}/_tools_/agent-core/cli.mjs control-link {run_id}")
     return 0
 
