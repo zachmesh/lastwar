@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 03:39:26Z (wait 0),2026-11-24T03:39:26Z,see growth/0054-waits.csv
+bar before,"'You can complete 4 tasks, requires 40 Stamina' with a blue Quick Execute; '12 Radar Task(s) will be restored in 04:58:23'; energy 106",2026-11-24T03:39:50Z,
+Quick Execute,"pressed once; energy 106 to 67 (39, the bar said 40); energy floor 40 held",2026-11-24T03:40:10Z,
+bar after,'10 task rewards can be claimed' with a green Claim All,2026-11-24T03:40:25Z,
+Claim All,"pressed once; a TIPS dialog: 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 10 radar task rewards at once. Continue?' with Cancel and Confirm ('Don't show me today' unchecked); the run pressed Confirm (an in-game claim confirmation, no price)",2026-11-24T03:40:40Z,not the different-device dialog; the duel theme today is Base Expansion; the coordinator was told
+popup,"CONGRATULATIONS: EXP 10.0M, plane item 1.6K, blue triangle item 591, 5m speed-up x4, 1m speed-up x25, iron 2.3M, food 2.3M, coin 1.8M, oil barrel 800; the top row (130, 25, 50, 25) cut off and unread",2026-11-24T03:40:55Z,dismissed by an empty tap
+bar last,"'You can complete 1 tasks, requires 10 Stamina'; energy 67; restore countdown 04:57:10",2026-11-24T03:41:10Z,energy 67 is above the 40 floor
+HUD,"food 123.0M to 125.4M, iron 766.8M to 769.1M, coin 21.1M to 23.0M, oil 670.8K to 671.6K, Total Power 149,755,698 unchanged",2026-11-24T03:41:30Z,

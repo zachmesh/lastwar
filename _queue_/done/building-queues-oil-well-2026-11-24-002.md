@@ -1,0 +1,71 @@
+---
+unit: building-queues-oil-well-2026-11-24-002
+regular: building-queues
+activity: building-queues
+segment: 1
+priority: 1
+created_at: 2026-11-23T16:00:26Z
+expires_at: 2026-11-24T04:30:00Z
+planned_for:
+not_before: 2026-11-24T02:17:53Z
+window: oil well level 21 to 22 builder b1 chain complete the previous level and start this one
+est_minutes: 8
+serves: PL-17
+chain_id: oil-well-2026-11-24
+chain_seq: 2
+attempts: 1
+max_attempts: 8
+claimed_by: operator
+claimed_at: 2026-11-24T02:18:26Z
+lease_until: 2026-11-24T02:38:26Z
+result:
+  status: done
+  started_at: 2026-11-24T02:18:26Z
+  finished_at: 2026-11-24T02:27:55Z
+  duration_seconds: 569
+  executor: operator
+  summary: The finished Oil Well completed by tapping its wrapped gift box (Total Power +4,200) and the Lv.21 to 22 upgrade started once: rows Lv.30 HQ, Unlock Oil Well, iron 11.9M, effective 12:08:24; builders panel end 2026-11-24T08:01:46Z (after 07:55Z, inside the quiet window); flat 23,520 s holds
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/building-queues/0218-queue-run.md and 0218-queue-run.csv; run 20261124T022404Z-015e67
+  follow_up: the Oil Well Lv.22 ends 08:01:46Z inside the 08:00Z to 08:25Z quiet window; the four Training Base completions (green helmet bubbles?) may also be pending taps
+  stats:
+    target: Complete the Oil Well, start Lv.21 to 22 with every cost row read
+    achieved: Complete +4,200 power, start pressed once, all rows read
+    resources_gained: iron -11.9M
+    points: 0
+    costs: none spent; model 0.447 USD
+    verified: yes
+    run_id: 20261124T022404Z-015e67
+    run_steps: 15
+    actions_done: 14
+    actions_refused: 0
+    cost_usd: 0.447
+    device_takeovers: 0
+    complete_power_gain: 4200
+    end_utc: 2026-11-24T08:01:46Z
+    rules_used: 1
+  stats_missing: []
+  stats_warnings: []
+---
+
+# building-queues
+
+Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
+
+Serves: PL-17
+
+## Brief (definition pointer, from the roster)
+
+This unit is the regular `building-queues`: Building queues - read the four build queues, record running upgrades and idle slots; read-only, never start builds. Its definition is the activity folder `_activities_/building-queues/` (the folder is named for the activity, not the regular id): read its `rule-digest.md` first, then its `INDEX.md`. The map of every regular to its activity folder is `_records_/2026-11-22/queue-planning/2760-regular-to-activity-map.csv`. If the digest does not cover a step, stop with 'blocked by prerequisite' and say which step; never improvise.
+
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (routes in `_records_/2026-11-22/queue-planning/2700-routes.csv`). Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`.
+
+## Brief (planner, builder B1: Oil Well Lv.21 to 22, chain unit 2 of 10, PL-17)
+
+serves: PL-17
+
+Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.21 upgrade finishes (MEASURED: it ends 2026-11-24T02:17:53Z, not 08:41Z); the window opens before the expected finish (real times run about 6 h 32 min under the previews, so the estimate is uncertain) and the coordinator dispatches it by name at the real one. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`), never complete it. If finished: press Complete (never Speed Up or Finish Now); Total Power before and after. Then go to the well by the route in the sheet, read the tag ('Oil Well Lv.21'; stop and report if it differs), open the Upgrade preview ('Lv.21 to 22') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the preview's effective time, the panel's end time in UTC and their difference in seconds (expected 23,520 s). If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at the nearest edge, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
+
+Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (safe tap: bare spot (310,660), not (400,640) after a camera shift). A TIPS dialog about another device: STOP, report, never Confirm.
+Cost cap, stated: 0.60 USD (the harness stops near 0.36 of it).

@@ -55,3 +55,12 @@ date_pt,time_pt,utc,total_power,records_carrying_value,source_file
 2026-11-23,03:53,2026-11-23T11:53Z,150215709,1,"_records_/2026-11-22/growth/ledger.csv (row 11:53:00Z, after the Unlock Oil Well Complete)"
 2026-11-23,04:51,2026-11-23T12:51Z,150413046,4,_records_/2026-11-22/research-queue/1257-age-of-oil-survey.md:16 (HUD)
 2026-11-23,05:56,2026-11-23T13:56Z,150416946,2,"_records_/2026-11-22/growth/ledger.csv (row 13:56:35Z, after the Coin Output V Complete)"
+2026-11-23,00:48,2026-11-24T00:48:45Z,150416946,3,_records_/2026-11-22/alliance-duel/0048-queue-run.csv:7 (HUD; also 00:45:45Z and 00:47:40Z)
+2026-11-23,01:30,2026-11-24T01:30Z,150412005,1,_records_/2026-11-22/daily-activities/0129-queue-run.csv:26 (start of run A)
+2026-11-23,01:33,2026-11-24T01:33Z,150408711,1,same line (end of run A)
+2026-11-23,01:35,2026-11-24T01:35Z,150385653,1,same line (run B1)
+2026-11-23,01:36,2026-11-24T01:36Z,150356007,1,same line (run B2 and C): the new level
+2026-11-23,17:51,2026-11-24T01:51Z,148769946,1,"operator read at 01:51Z as relayed by the coordinator; the new level, 1,647,000 under the 00:50Z read"
+2026-11-23,17:53,2026-11-24T01:53:20Z,148769946,1,"_records_/2026-11-22/resource-collection/0151-queue-run.csv:7 (HUD, before and after the harvest)"
+2026-11-23,18:24,2026-11-24T02:24:23Z,148774146,1,"_records_/2026-11-22/building-queues/0218-queue-run.md (after the Oil Well Complete, +4,200)"
+2026-11-23,19:31,2026-11-24T03:31Z,149755698,2,"_records_/2026-11-22/perception-scout/0330-queue-run.csv (after the collect, +981,552; Power Details 03:32Z sums to it)"

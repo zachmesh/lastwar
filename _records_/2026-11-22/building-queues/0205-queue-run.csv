@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,none: start at 02:05:48Z (wait 0),2026-11-24T02:05:48Z,see growth/0054-waits.csv
+Total Power,"148,769,946 in the first frame and in the last frame (unchanged during the run)",2026-11-24T02:06:00Z,"150,416,946 at 00:50Z: a fall of 1,647,000"
+squads,"no squad, march line or march icon on the base or in the left column; the World map March Queues read 0/3",2026-11-24T02:06:30Z,H-A (troops out on a march) not supported
+Zombie Siege page,"Enemy Power 30,200,000; stronghold Lv.9 and Lv.10 (Lv.10 selected); Base Level Required Lv.30; progress 1,401,890/300,000; line 'Search available again after server time 2026-11-26 at 00:00.'; button 'Cooldown: 1d 23:53:52' then 1d 23:53:42 (not pressed); no text about squads out, troop counts or return time",2026-11-24T02:06:50Z,the 01:15Z auto-search ran: the cooldown ends 2026-11-26T02:00Z
+Hospital tag,Hospital Lv.25,2026-11-24T02:07:30Z,tag text Hospital Lv.25
+Hospital panel,"HOSPITAL: Severely Wounded Units 1,364 of 7,999; a Lv.10 row 1,364 (slider at 1,364); Completed 5,306; buttons Collect, plus and minus (none pressed)",2026-11-24T02:07:40Z,"364 wounded before (07:5xZ and 18:xx records): +1,000"
+free room,"7,999 - 1,364 - 5,306 = 1,329",2026-11-24T02:07:40Z,computed
+Drill Ground Lv.26,"tag Drill Ground Lv.26; Details 'Building Details', Unit Count +8035, four officers in the Survivors section, button Quick Dispatch (not pressed); no troop-over-capacity line, no outside or marching count",2026-11-24T02:08:20Z,"a mistaken tap on the news ticker opened Chat, closed by its back arrow, nothing sent"
+Power Details,"visible only: Hero Power 66,390,649; Drone Power 5,842,475; Building Power 9,772,225; a Troops category not visible (the panel was cut off, no scroll)",2026-11-24T02:08:50Z,Power Up not pressed
+verdict,"H-B WOUNDED confirmed: +1,000 Severely Wounded Lv.10 (364 to 1,364) matches the 1,647,000 fall; H-A (marching) and H-C (dead) not supported",2026-11-24T02:09:00Z,"1,000 x 1,647 = 1,647,000"

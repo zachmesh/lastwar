@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"none: the runs started at 03:30:03Z, the claim was taken afterwards at 03:33:07Z",2026-11-24T03:30:03Z,see growth/0054-waits.csv
+collect,"one tap on the portrait bubble above the Lv.27 barracks tent (461,530) at 03:30:53.390Z: no toast, no refusal; troop figures walked out of the tent; the bubble stayed showing",2026-11-24T03:30:53.390Z,"the Drill Ground had room again (1,000 troops are in the Hospital); the earlier test at 19:59:22Z was refused 'Drill Ground Full'; tag text [G]: bubble tap"
+Total Power,"148,774,146 before the tap; 149,755,698 after it: +981,552 (1,352 per T9 unit x 726)",2026-11-24T03:31:04Z,HUD digits
+Hero Power,"66,390,649: Hero Level 42,503,484; Decorations and Building Stats 7,510,251; Gear 5,775,201; Hero Skill 4,282,510; Hero Tier 4,009,495; Exclusive Weapon 2,182,608; Wall of Honor 127,100",2026-11-24T03:32:07Z,tag text [G]: Power Details panel
+Drone Power,"5,842,475: Drone Level 3,494,400; Drone Component 1,639,876; Skill Chip 708,200",2026-11-24T03:32:07Z,
+Building Power,"9,776,425: Buildings 6,640,300; Survivor 3,136,125",2026-11-24T03:32:14Z,"9,772,225 at 02:08Z plus the Oil Well +4,200"
+Unit (troop) Power,"62,846,672 (no chevron, no sub-rows)",2026-11-24T03:32:14Z,includes the 726 T9 collected
+Tech Power,"4,899,477 (no chevron, no sub-rows)",2026-11-24T03:32:14Z,
+check,"the five categories add up to 149,755,698 = the HUD figure",2026-11-24T03:32:14Z,no note on the panel
+troops,"not marching (March Queues 0/3 at 02:06Z); wounded 1,364 of 7,999 at 02:07Z (not re-read)",2026-11-24T03:32:14Z,
+snapshot,"resource_map.py snap saved at 03:32:51Z (the power_troop key flagged unknown, saved as 62,846,700)",2026-11-24T03:32:51Z,note scout-midday-growth-power-a-2026-11-24-001
+pressed,Power Up never pressed; one chevron collapse and two scrolls inside the panel; the panel closed with its X,2026-11-24T03:32:30Z,

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 03:34:33Z (wait 0),2026-11-24T03:34:33Z,see growth/0054-waits.csv
+Post before,"Your Tasks badge 9; Assist Allies 0/5; Plunder Others 0/5; no green Claim; Mega Refresh and Mega Deploy active; cards seen (4 of 9, the list not scrolled): UR Capture the Oil Depot Lv5 with a Go button (available, pays 6.0K oil x5 plus other rewards), UR Rescue Missing Agent Lv5 Go, SSR Search for Missing Refugees Lv5 Go twice",2026-11-24T03:34:57Z,tag text [G]: card list
+Mega Deploy popup,"UR Only unchecked (not touched); every row ticked: Capture the Oil Depot 04:00:00, Rescue Missing Agent 02:00:00, Search for Missing Refugees 01:00:00 twice, Train Refugees (cut off); Perform Now with no price or diamond",2026-11-24T03:35:11.619Z,rows below Train Refugees unread
+presses,"Mega Deploy at 03:35:02.460Z (click 473,926); Perform Now at 03:35:16.130Z (click 393,815); no diamond, no Mega Refresh",2026-11-24T03:35:16.130Z,one press each
+cards after,UR Rescue Missing Agent 02:00:31; UR Capture the Oil Depot 04:00:10 (deployed); SSR Search for Missing Refugees 01:00:05; SSR Provide Tech Support to Refugees 01:00:10; Mega Refresh and Mega Deploy greyed; Your Tasks badge cleared,2026-11-24T03:35:36.519Z,read at the re-entry frame
+claim times,Oil Depot 03:35:36.5Z + 04:00:10 = about 2026-11-24T07:35:46Z; Rescue Missing Agent about 05:36:07Z; the two refugee tasks about 04:35:42Z and 04:35:47Z,2026-11-24T03:35:36.519Z,finished tasks left unclaimed for hours get plundered (1104 lesson)
+oil,668.6K before and after (the task pays on finish),2026-11-24T03:36:00Z,30K oil once a day
+exit,"the blue back arrow returned to the World map, not the base (the base button was not in the allowed taps)",2026-11-24T03:35:41.255Z,the next run starts with the WORLD and BASE toggle

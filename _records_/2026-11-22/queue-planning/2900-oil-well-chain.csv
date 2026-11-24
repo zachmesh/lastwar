@@ -1,7 +1,7 @@
 level_step,hand_off_unit,expected_start_utc,expected_real_end_utc,basis,unit_not_before_utc,unit_expires_utc,unit_priority,unit_max_attempts
 20 to 21,building-queues-oil-well-2026-11-24-001 (done),2026-11-23T23:29:34Z,2026-11-24T02:17:53Z,"measured: preview 09:20:18, panel end 02:17:53",,,1,
-21 to 22,building-queues-oil-well-2026-11-24-002,2026-11-24T02:17:53Z,2026-11-24T07:53:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-24T02:17:53Z,2026-11-24T04:30:00Z,1,8
-22 to 23,building-queues-oil-well-2026-11-24-003,2026-11-24T07:53:53Z,2026-11-24T17:08:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-24T07:08:00Z,2026-11-25T19:53:53Z,9,8
+21 to 22,building-queues-oil-well-2026-11-24-002,2026-11-24T02:25:21Z,2026-11-24T08:01:45Z,"measured: preview 12:08:24, panel end 08:01:45.8 (flat 23,520 s held)",2026-11-24T08:25:00Z,2026-11-24T04:30:00Z,1,8
+22 to 23,building-queues-oil-well-2026-11-24-003,2026-11-24T07:53:53Z,2026-11-24T17:08:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-24T08:25:30Z,2026-11-24T10:30:00Z,1,8
 23 to 24,building-queues-oil-well-2026-11-24-004,2026-11-24T17:08:53Z,2026-11-25T08:42:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-24T11:08:00Z,2026-11-26T05:08:53Z,9,8
 24 to 25,building-queues-oil-well-2026-11-24-005,2026-11-25T08:42:53Z,2026-11-26T09:06:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-25T02:42:00Z,2026-11-26T20:42:53Z,9,8
 25 to 26,building-queues-oil-well-2026-11-24-006,2026-11-26T09:06:53Z,2026-11-27T21:52:53Z,"Decision 08 effective duration minus 23,520 s [G]",2026-11-26T03:06:00Z,2026-11-27T21:06:53Z,9,8

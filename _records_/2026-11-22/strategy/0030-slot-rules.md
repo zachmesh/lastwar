@@ -1,7 +1,7 @@
 ---
 title: Slot rules for the planner v1.5
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T22:30:00Z
+modified: 2026-11-24T03:39:00Z
 version: 1.5.0
 level: L3
 description: The allocation rules for the free labs and builders, the speed-up order, the slot-arrival protocol and the training rule once four Drill Grounds are known to exist
@@ -36,11 +36,11 @@ Construction items (167,895 minutes) are for builders only: the ground ladder, t
 ## Slot-arrival protocol (X exceeds Y, or a level completes)
 
 1. Read X of Y on the Drill Ground troops panel (small button).
-2. Read X of Y before every Collect attempt; log room and toast; try the smallest finished batch first (H16, H123).
+2. Read X of Y first; when room could exist (a build completes or troops are wounded) try one Collect tap per unit and log room and toast (H16, H123).
 3. A finished batch cannot be collected while Full; after a level completes try the Collect for partial room (F-159), else train.
-4. Train T10 at the Lv.30 barracks into the free slots (T8 at the Lv.24 barracks if busy).
+4. Train T10 at the Lv.30 barracks into free slots (T8 at Lv.24).
 5. Start Promote when its gain is positive, T7 first; log power before and after.
 
 ## Training and drop rules
 
-Requeue only into measured free slots. A power drop of 300K or more starts a Collect unit in 60 minutes.
+Requeue only into measured free slots. A power drop of 300K or more starts a Collect unit.

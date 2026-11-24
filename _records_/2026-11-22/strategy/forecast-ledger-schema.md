@@ -1,7 +1,7 @@
 ---
 title: Forecast ledger schema
 created: 2026-11-23T09:00:00Z
-modified: 2026-11-23T16:09:00Z
+modified: 2026-11-24T01:41:00Z
 version: 1.0.0
 level: L3
 description: The four kinds of forecast row, how the coach scores each, the source tags and the rule that a row is immutable once its action has run
@@ -39,3 +39,8 @@ From 2026-11-23 14:35Z, after nine rows closed (the coach table): a continuous r
 ## Known weaknesses
 
 Rows F-003 and F-004 were created after a first failed attempt at 08:30Z. F-001 was restored after an edit that followed its action. Thirty rows are too few for a reliable hit rate; read the first calibration as a drift signal, not a grade.
+
+## Attributable gain
+
+Rows on Total Power score our own change only: the collect-first read before and after the action, with any external change inside the window logged apart (the other-device +197,337 at 11:53Z to 12:51Z, the siege -60,939 at 01:30Z to 01:36Z). Power per builder-day and the 30-day base use our gain only.
+

@@ -1,8 +1,8 @@
 ---
 title: Operator run recipe and hazards 0054
 created: 2026-11-23T16:12:00Z
-modified: 2026-11-23T21:37:00Z
-version: 1.3.0
+modified: 2026-11-24T02:29:00Z
+version: 1.4.0
 description: Operator sidecar page - the run recipe and hazards moved verbatim from handover 0.9.0, plus the run-shape and never-press lines from the route tables
 status: handover
 grounded_in:
@@ -28,3 +28,7 @@ An 8-step cap gives 7 effective actions (the 8th turn never runs); a click plus 
 ## Never
 
 The Go button on the check-in banner opens the web store in Chrome ([1528-t3-focus-incident.md](../shop-claims/1528-t3-focus-incident.md)); a consent request is human-only.
+
+## Finished upgrades and drags (02:28Z)
+
+A finished upgrade leaves the queue by itself; the building shows a wrapped gift box, and one tap on its body is the Complete (Oil Well +4,200 power, 0218). One drag per turn: two in one turn lost two runs.
