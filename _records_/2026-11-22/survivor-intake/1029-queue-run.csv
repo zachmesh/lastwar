@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:29:27.669Z, run started 10:29:28.502Z), 3 minutes after the previous run's last click (10:28:44Z); owner idle 8186 s: wait 0",2026-11-24T10:29:28.502Z,see growth/0054-waits.csv
+badges,"first frame 10:29:35.3Z: tram, pickup and radar dish none; hammer 4/4; flask 2/2",2026-11-24T10:29:35.329Z,tram badge rule: none
+before,"no survivor bubble (minutes or ready mark) beside the avatar; a white '?' bubble with a small figure at the left gate about (146,649)",2026-11-24T10:29:35.329Z,tag text [G]
+tap,"one tap on the gate figure (143,686) at 10:29:40.277Z: a speech bubble 'This is my welcome...' (cut off), no card, no buttons, gone within about a second; nothing recruitable",2026-11-24T10:29:42.496Z,
+after,"the gate '?' bubble gone; no survivor bubble; energy 83 to 84; Total Power 150,051,860",2026-11-24T10:30:38.429Z,a 'gift received' toast: ordinary
+pressed,"only that single tap; nothing with a diamond, price, Buy, Obtain or Speed Up",,no intake; drags 0

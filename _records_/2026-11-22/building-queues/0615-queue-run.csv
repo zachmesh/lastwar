@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,none: start at 06:15:04Z (wait 0),2026-11-24T06:15:04Z,see growth/0054-waits.csv
+builder 1,Drill Ground to Lv.26: Time Left 2d 14:55:16 at 06:15:20.9Z: ends 2026-11-26T21:10:37Z; busy,2026-11-24T06:15:20.907Z,tag text [G]: queue row
+builder 2,Drill Ground to Lv.27: 6d 16:06:26: ends 2026-11-30T22:21:47Z; busy,2026-11-24T06:15:20.907Z,
+builder 3,Oil Well to Lv.22 (the row read 'Lv.21 Oil Well upgrade'): 01:46:25: ends 2026-11-24T08:01:46Z; busy,2026-11-24T06:15:20.907Z,inside the 08:00Z to 08:25Z quiet window
+builder 4,Drill Ground to Lv.28: 11d 05:43:58: ends 2026-12-05T11:59:19Z; busy,2026-11-24T06:15:20.907Z,
+gift box,none over a building (red decorative gift boxes at the lower left of the base: not tapped),2026-11-24T06:17:00Z,no finished item waiting
+lab 1,"Lv.0 Food Output V upgrade in progress, Time Left 11:14:13 at 06:15:41.5Z: ends 2026-11-24T17:29:54Z; busy",2026-11-24T06:15:41.512Z,
+lab 2,"Lv.0 Iron Output V upgrade in progress, 20:23:14: ends 2026-11-25T02:38:55Z; busy",2026-11-24T06:15:41.512Z,
+idle,0 of 4 builders and 0 of 2 labs idle; slots_idle 0; slots_blocked_by_capacity 0,2026-11-24T06:15:41Z,
+Hospital,"tag Hospital Lv.25; Severely Wounded 1,364 of 7,999 (one Lv.10 row 1,364); Completed 5,306; Collect not pressed; free room 7,999 - 1,364 - 5,306 = 1,329: unchanged since 02:07Z",2026-11-24T06:16:29.545Z,tag text Hospital Lv.25
+misstep,"a tap meant for bare snow at (140,884) landed on the quest bar and the camera moved to the Builder's Hut; the tag closed by a snow tap; nothing pressed",2026-11-24T06:17:05Z,
+Total Power,"150,046,960",2026-11-24T06:17:30Z,drags tried 0

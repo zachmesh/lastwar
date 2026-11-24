@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 10:57:40.661Z, run started 10:57:41.546Z), 16 minutes after the previous run's last click; owner idle 9876 s: wait 0",2026-11-24T10:57:41.546Z,see growth/0054-waits.csv
+badges,"first frame 10:57:47.0Z: tram, pickup (a '?' bubble beside it, not a badge) and radar dish none; the Events icon badge 1",2026-11-24T10:57:47.032Z,tram badge rule: none
+tab bar,"the hub opened on Arms Race; one drag of the tab row: The Age of Oil, Arms Race (selected), Black Market, Black Market Challenge (red '!' tag, cut off)",2026-11-24T10:58:00.980Z,"drag tried 1, cancelled 0"
+The Age of Oil,"stage 3 current; cards 'Unlock: Lv. 31-35 Zombies on World Map' 9,151 of 2,000 and 'Rapid Rescue' 2,071,312 of 25,000, faded green checks; timers about 5d 15:01; no Claim button",2026-11-24T10:58:09.365Z,tag text [G]: event page
+Arms Race,"Base Building, 3:01:42 left, 0 points, 0/2 counter chest; the three chests priced (6,250, 12,500, 30,000 points): not tapped; tasks Go arrows",2026-11-24T10:58:18.437Z,
+Black Market Challenge,"earned today 250 of 600, 5d 15:01 left; four Go To rows; no claim items",2026-11-24T10:58:27.828Z,
+claims,none made,,
+HUD,"diamonds 11,153, coin 24.9M, oil 681.2K, food 131.3M, iron 765.1M, energy 89, Total Power 150,051,860; Events badge 1 unchanged",2026-11-24T10:58:41.050Z,

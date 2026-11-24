@@ -1,7 +1,7 @@
 ---
 title: Owner digest lines
 created: 2026-11-23T23:08:00Z
-modified: 2026-11-24T04:00:00Z
+modified: 2026-11-24T06:52:00Z
 version: 1.0.0
 level: L3
 description: Lines collected for the weekly owner digest of 2026-11-30, in plain words without account identifiers, each with the source record
@@ -22,4 +22,5 @@ For the digest draft due 2026-11-30 04:00Z. Each line is one sentence; dates in 
 5. About 7,500 troops (9.2M to 12.3M power, 6 to 8 percent of the total) are locked behind troop room; two finished batches (726 and 274, +1.27M power) were collected once the wounded left room: finished in the barracks, healed or wounded in the hospital; a full Drill Ground blocks every Collect, so new slots come first. A Zombie Siege wounded 1,000 troops (1.65M power, recoverable by healing once there is room); cooldown to 11-26.
 6. Truck plunder is a supplement: about 0.73M food and iron, 0.47M coin and 4 shards a fight, no troops lost in three fights.
 7. The weapon line (2.18M power over 26 levels) may be worth more than assumed; one 20-shard step tests it before any store buy.
-8. Do not repeat the old 8.74M hospital figure; it was a ceiling.
+8. The Zombie Siege reward was 300K coin and 45.5M EXP (about 4.5K power if the EXP is used on heroes; it is not power until used); its cost was 1,000 T10 wounded, 1.65M power, recoverable only with room. The wounded freed 1,000 ground slots, so 1.27M of finished troops were collected: net about -0.4M until the wounded are healed. A repeat (next search 11-27 01:15Z) leaves 329 hospital beds free, which also stops plunder (free room under 1,000); a second repeat would kill 671 troops. The schedule is the owner's.
+9. Do not repeat the old 8.74M hospital figure; it was a ceiling.

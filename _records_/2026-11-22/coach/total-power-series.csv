@@ -65,3 +65,4 @@ date_pt,time_pt,utc,total_power,records_carrying_value,source_file
 2026-11-23,18:24,2026-11-24T02:24:23Z,148774146,1,"_records_/2026-11-22/building-queues/0218-queue-run.md (after the Oil Well Complete, +4,200)"
 2026-11-23,19:31,2026-11-24T03:31Z,149755698,2,"_records_/2026-11-22/perception-scout/0330-queue-run.csv (after the collect, +981,552; Power Details 03:32Z sums to it)"
 2026-11-23,19:53,2026-11-24T03:53:20Z,150046960,2,"_records_/2026-11-22/troop-training/0351-queue-run.csv:8 (after the Lv.24 collect, +291,262)"
+2026-11-24,00:11,2026-11-24T08:11:07Z,150051860,1,"_records_/2026-11-22/building-queues/0808-queue-run.md (after the Oil Well Complete, +4,900)"

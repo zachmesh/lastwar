@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 06:23:45Z (wait 0),2026-11-24T06:23:45Z,see growth/0054-waits.csv
+coin,"available 1,230,597 to 0; owned 23,218,992 to 24,450,822 (+1,231,830); 444.5K an hour",2026-11-24T06:24:30Z,tag text [G]: panel
+food,"available 1,869,215 to 0; owned 125,736,862 to 127,608,888 (+1,872,026); 674.9K an hour",2026-11-24T06:25:00Z,
+iron,"available 1,727,295 to 0; owned 769,529,840 to 771,258,864 (+1,729,024); 622.7K an hour",2026-11-24T06:25:30Z,
+oil,"available 1,155 to 0; owned 673,985 to 675,140 (+1,155); 1.2K an hour",2026-11-24T06:26:00Z,the first frame had a banner over the oil counter; read from the next frame
+HUD,"coin 24.4M, food 127.6M, iron 771.2M, oil 675.1K, energy 90, diamonds 11,153, Total Power 150,046,960 unchanged",2026-11-24T06:26:15Z,
+drag count,"drags tried 0, cancelled 0",,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 10:36:04.107Z, run started 10:36:05.096Z), 28 s after the previous record write; owner idle 8581 s: wait 0",2026-11-24T10:36:05.096Z,see growth/0054-waits.csv
+badges,"first frame 10:36:05.5Z: tram (107,580) NONE ('no badge'), pickup none, radar dish none; Warzone Duel timer 15:23:56",2026-11-24T10:36:05.532Z,tram badge rule: no badge: not tapped
+boarding banner,none in any frame,2026-11-24T10:36:24.717Z,tag text [G]: top banner area
+train icon,"the only train-like icon is the round blue tram at (107,580): no countdown, no text, no red dot; not tapped",2026-11-24T10:36:10.166Z,
+station countdown,"not read: reading it needs the tram tap (it pans the camera to the station), which the rule forbids without a badge and the unit does not name; the last known: the departure at about 10:06:44Z with our boarding",,skipped by rule
+HUD,"Total Power 150,051,860; gems 11,153; a scrolling server announcement ordinary",2026-11-24T10:36:44.803Z,drags tried 0

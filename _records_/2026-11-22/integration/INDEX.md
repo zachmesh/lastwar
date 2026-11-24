@@ -22,3 +22,4 @@ From PR 878 on, each landing has its own small file (one landing per file, 300 w
 
 - [Landing catalog 01](catalog-01.md) - one line per landing note from PR 878 on; new landings are added to the newest catalog, not here
 - [Landing catalog 02](catalog-02.md) - the next set of per-landing notes
+- [Landing catalog 03](catalog-03.md) - the next set of per-landing notes

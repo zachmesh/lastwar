@@ -1,0 +1,9 @@
+item,value,read_utc,note
+restore,"09:26:39Z standing killall only; lsappinfo front named LastWar at 09:26:41Z (before: UserNotificationCenter); Steer A's watch log line '2026-11-24T09:26:39Z front=ASN:0x0-0x1593c927: name=LastWar'; no click, key or osascript",2026-11-24T09:26:41Z,the permission stays undecided
+wait,"run 1: start requested 09:30:03.286Z, run started 09:30:04.176Z (0.9 s); run 2: requested 09:30:23.385Z, started 09:30:24.133Z (0.7 s; 9 s after run 1's end, the CU-720 carry case); owner idle 4630 s and 4649 s: wait 0; the first click of run 2 09:30:32.302Z is the model's own turn",2026-11-24T09:30:24.133Z,see growth/0054-waits.csv
+run 1,the game still showed the SECRET COMMAND POST panel (left open by the 09:05Z secrets run); the brief's start state did not match; the model tapped nothing (1 step),2026-11-24T09:30:14Z,my script error: the panel was never closed after the alert
+run 2,"closed the panel with its blue back arrow (175,930) at 09:30:32.302Z; WORLD at 09:30:39.564Z; the world map read twice (09:30:43Z and 09:30:57Z): centred on the base (a tower with its tag), a March Queues 0/3 panel with a gift icon badge 6, an 'Alliance' tag at the right edge, a Digging Stronghold label; NO green truck marker with a countdown and no other truck marker; BASE tapped at 09:31:01.172Z",2026-11-24T09:30:57.192Z,"tag text [G]: world map; the earlier marker (607,463) on the 07:14Z frame is not there now"
+marker,"not verified: nothing tapped, nothing opened",2026-11-24T09:31:04Z,"no panel, no price"
+quest banner,"the HUD line 'Upgrade Oil Well to Lv.23 (1/1)' shows a green check on the world map frame (a Main Tasks claim may be waiting, as with the Lv.22 one)",2026-11-24T09:30:57.192Z,not pressed
+front app,LastWar frontmost throughout (read-only logger 09:30:01Z); no alert after the restore,2026-11-24T09:31:20Z,"Total Power 150,051,860"
+drag count,"drags tried 0, cancelled 0",,

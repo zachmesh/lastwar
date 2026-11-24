@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"requested 06:04:19Z, granted 06:05:50Z, 1.52 minutes (OTHER: a cu-integrator gate run held the desktop 06:03:18Z to about 06:05:40Z); idle wait is 0",2026-11-24T06:05:50Z,see growth/0054-waits.csv
+first run,20261124T060550Z-089444 ended error 'context_full: 19 screenshots (31.0 MB) past the per-request limit' at step 18 (38 actions) with no final report: a barracks read of four tents needs two or three runs of 12 to 16 steps,2026-11-24T06:08:54Z,"its frames: Total Power 150,046,960 after the Lv.24 pistol; the Lv.30 TRAIN UNITS panel was left open"
+bubbles,"Lv.27 round soldier-face bubble (460,531); Lv.30 clock bubble (529,578); Lv.24 soldier-face bubble (616,516); Lv.20 soldier-face bubble (659,485); digits not readable at this resolution (no zoom allowed)",2026-11-24T06:12:40.062Z,the Lv.24 digit (about 249 expected) unread
+Unit Count X of Y,not shown on any tag or panel,2026-11-24T06:12:54Z,room about 0
+Barracks Lv.24,"tag Barracks Lv.24; one pistol press (06:10:18.6Z, click 599,615): the tag closed, no toast, no panel, Total Power unchanged 150,046,960; class UNCLASSIFIED (the Drill Ground Full toast, if shown, faded before the frame)",2026-11-24T06:10:21.844Z,"also pressed in the first run at 06:06:46Z (click 598,616): same"
+Barracks Lv.20,"tag Barracks Lv.20; one pistol press (06:11:29.8Z, click 599,584): the tag closed, no toast, no panel, Total Power unchanged; class UNCLASSIFIED",2026-11-24T06:11:32.847Z,also pressed in the first run at 06:07:29Z: same
+Barracks Lv.27,"tag Barracks Lv.27; pistol (06:12:59.9Z, click 460,632): TRAIN UNITS panel with NO batch in progress, no toast; Lv.9 selected (cost 2,604), slider at its maximum 726, Train button 1d 10:19:35, Finish Now the same time (not pressed); class EMPTY QUEUE",2026-11-24T06:13:01.129Z,"closed with its X (611,281)"
+Barracks Lv.30,"TRAIN UNITS panel open at the start of run 2: Lv.10 x793, 'Training in progress 05:08:47' (06:09:32Z): ends about 2026-11-24T11:18:19Z, Speed Up not pressed; class BATCH RUNNING",2026-11-24T06:09:36.848Z,its pistol was pressed once in the first run at 06:08:53Z
+toast,"'Alliance Gift (SSR) received!' faded in after the Lv.27 panel closed: an in-game gift notice, recognised; nothing pressed",2026-11-24T06:13:14Z,
+Total Power,"150,046,960 before and after every press",2026-11-24T06:13:14Z,no finished batch was collected
+drag count,"drags tried 0, cancelled 0",,

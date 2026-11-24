@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,none: start at 06:22:00Z (wait 0),2026-11-24T06:22:00Z,see growth/0054-waits.csv
+labs counter,2/2 before and after the panel,2026-11-24T06:22:10Z,
+lab 1,Lv.0 Food Output V upgrade in progress: Time Left 11:07:44 then 11:07:39 (ends about 2026-11-24T17:29:55Z),2026-11-24T06:22:20Z,tag text [G]: Research Queue row
+lab 2,Lv.0 Iron Output V upgrade in progress: Time Left 20:16:46 then 20:16:40 (ends about 2026-11-25T02:38:56Z),2026-11-24T06:22:20Z,
+idle or Complete,"no lab idle, none shows Complete; the blue Speed Up on each, not pressed",2026-11-24T06:22:25Z,

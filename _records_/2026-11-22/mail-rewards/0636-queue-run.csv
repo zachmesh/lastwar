@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 06:36:44Z (wait 0),2026-11-24T06:36:44Z,see growth/0054-waits.csv
+rail,"red dots on Battle Report, Event, Regular and In-app Purchases; no gift icon on any category before or after",2026-11-24T06:37:10Z,tag text [G]: Mail category rail
+Event list,"two unread ally mails ('Mega Exp...' and 'train has d...'); read mails: Alliance Duel Individual Ranking, Daily Participation Rewards, Arms Race Ranking Reward and another ally train mail; none with a gift icon; Claim All blue, not green",2026-11-24T06:37:25Z,no mail titled Train arrival reward
+System list,"first six mails president mails in several languages plus a Warzone Duel mail: all read, no gift icon",2026-11-24T06:37:35Z,
+Alliance list,"Daily Donation Rankings, TWO Zombie Siege Reports, an Alliance Exercise mail and two New Alliance Marker mails: no gift icon",2026-11-24T06:37:40Z,the Zombie Siege Reports are alliance mails not opened by this unit: a candidate for the siege reward question
+claim,none pressed (no gift icon),,
+HUD,"food 127.6M, iron 771.2M, coin 24.4M, diamonds 11,153, energy 92, Total Power 150,046,960 unchanged",2026-11-24T06:37:45Z,drags tried 0

@@ -1,0 +1,5 @@
+item,value,read_utc,note
+wait,none: start at 06:34:24Z (wait 0),2026-11-24T06:34:24Z,see growth/0054-waits.csv
+boarding banner,none in any frame,2026-11-24T06:34:45Z,tag text [G]: top banner area
+left column,"a round blue tram icon at (107,580) with no countdown, text or red dot (the Intercity Trade icon); a small orange vehicle badge above it (103,541); a blue vehicle icon (107,647)",2026-11-24T06:34:45Z,no tap
+HUD,"Total Power 150,046,960; energy 91; Warzone Duel 19:25:36 to 19:25:06; red dots on Alliance, Mail and Inventory; Thanksgiving badge 2, Events badge 1",2026-11-24T06:35:00Z,drags tried 0

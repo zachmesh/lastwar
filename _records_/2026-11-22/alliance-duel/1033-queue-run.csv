@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:33:11.811Z, run started 10:33:12.565Z), 20 s after the previous run's last click (the carry case); owner idle 8410 s: wait 0",2026-11-24T10:33:12.565Z,see growth/0054-waits.csv
+badges,"first frame 10:33:12.979Z: tram, pickup and radar dish none",2026-11-24T10:33:12.979Z,tram badge rule: none
+tan trophy bubble,"no: the tan bubble at (600,710) holds a green military vehicle, not a trophy cup; a white bubble with a green vehicle below the shield at (628,743)",2026-11-24T10:33:20.549Z,tag text [G]: HUD
+other bubbles,"the Alliance shield, Mail and Inventory each with a red dot; the red target icon badge 4",2026-11-24T10:33:55.982Z,
+mid-base trophy,"a gold trophy bubble over the building in the middle of the base at about (583,218), flickering with a NEW tag; never tapped",2026-11-24T10:33:26.372Z,OD-20261123-01
+taps,none,,waits only; drags 0
+HUD,"Total Power 150,051,860; energy 84; builders 4/4; labs 2/2; gems 11,153",2026-11-24T10:33:55.982Z,

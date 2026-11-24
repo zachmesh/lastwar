@@ -26,9 +26,10 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
-Units minted after the forecast refusal switches on (planned 2026-11-24T10:05Z, and only once the
-Strategist announces the ledger stable), chain follow-ups included, are refused unless serves is a
-plan item id with a row in the forecast ledger or an exempt word: write the ledger row before the unit.
+THE FORECAST REFUSAL IS LIVE (since 2026-11-24T10:48:40Z): every unit minted or synced, chain follow-ups
+included, is refused unless EACH comma or semicolon part of serves is a plan item id with a row in the forecast
+ledger or an exempt word (upkeep, snapshot, baseline): 'PL-17' passes, 'PL-17 the Oil Well chain' is refused.
+Write the ledger row before the unit. Emergency path: `--no-require-forecast` on enqueue.
 
 A FALLBACK unit (staged for a case that may not happen) says 'DISPATCH ONLY WHEN NAMED' and carries priority 9 and a
 not_before beyond any plausible tick pick until it is needed, because the 15-minute ticker picks `next` by ranking: a moot

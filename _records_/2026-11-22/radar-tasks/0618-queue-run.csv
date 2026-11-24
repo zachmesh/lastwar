@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 06:18:20Z (wait 0),2026-11-24T06:18:20Z,see growth/0054-waits.csv
+bar before,"'You can complete 1 tasks, requires 10 Stamina' with a blue Quick Execute; '12 Radar Task(s) will be restored in' about 02:19 (ends about 08:38Z); energy 98",2026-11-24T06:18:40Z,tag text [G]: radar bar
+Quick Execute,pressed once; energy 98 to 88 (cost 10; floor 40 held),2026-11-24T06:18:55Z,
+bar after,'1 task rewards can be claimed' with a green Claim All,2026-11-24T06:19:05Z,
+Claim All,"pressed once; dialog: 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 1 radar task rewards at once. Continue?' with Cancel and Confirm, no price: the run pressed Confirm once",2026-11-24T06:19:15Z,the same template as the confirmed 03:40Z dialog with the count 1 in place of 10; disclosed to the coordinator
+rewards,"CONGRATULATIONS: cash x10, radar token x10, food sack x2 (Drop Limit Update banner 25/328), EXP 1.5M, iron 316.8K, bread (food) 316.8K, coin 182.4K; no oil, chest, box or speed-up",2026-11-24T06:19:25Z,popup dismissed by an empty tap
+after,bottom bar gone; radar progress 0/40 before and after; no badge on the dish,2026-11-24T06:19:35Z,
+HUD,"food 125.4M to 125.7M, iron 769.2M to 769.5M, coin 23.0M to 23.2M, oil 673.9K, energy 98 to 88, diamonds 11,153, Total Power 150,046,960",2026-11-24T06:19:45Z,
+drag count,"drags tried 0, cancelled 0",,

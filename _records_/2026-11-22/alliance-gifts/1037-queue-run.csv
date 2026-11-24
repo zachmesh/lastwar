@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:37:59.009Z, run started 10:37:59.835Z), 7 s after the previous record write and 61 s after the previous run's last click; owner idle 8695 s: wait 0",2026-11-24T10:37:59.835Z,see growth/0054-waits.csv
+badges,"first frame 10:38:06.4Z: tram, pickup and radar dish none",2026-11-24T10:38:06.425Z,tram badge rule: none
+gift level before,"Gift Level 29, progress 40,151,460 of 257,900,000; both tabs with a red dot; Regular green Claim All with a count 249",2026-11-24T10:38:24.048Z,tag text [G]: Alliance Gifts
+Regular Claim All,"249 Regular Alliance Gifts claimed (once): golden chest x19, gem item (5) x28, 5m speed-up x31, coin (600) x1.1K, bread (1.0K) x754, iron (1.0K) x1.2K, coin (6.0K) x87",2026-11-24T10:38:37.758Z,dialog of 7 item types
+Premium Claim All,"13 Premium Alliance Gifts claimed (once): 2.5K badge x2, blue chest x8, bread crate x10, coin crate x23, resource crate x6",2026-11-24T10:38:56.246Z,dialog of 5 item types
+re-check,"both tabs: the visible rows read Claimed, no Claim All, no red dot; progress 40,160,150 of 257,900,000, still Level 29",2026-11-24T10:39:02.067Z,only the top rows of each tab seen
+HUD,"Total Power 150,051,860; a red target button with badge 2 and a 00:00:22 timer above the Alliance button",2026-11-24T10:39:13.071Z,drags tried 0

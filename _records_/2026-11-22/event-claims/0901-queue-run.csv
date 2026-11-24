@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 09:01:35.989Z, run started 09:01:36.753Z); the first click 09:01:44.369Z is the model's own turn; owner idle 2924 s; the previous run's last click 08:55:33Z (6 minutes earlier): wait 0",2026-11-24T09:01:36.753Z,see growth/0054-waits.csv
+tab bar,"the Events hub opened on Arms Race with a left tab cut off ('f Oil'); one sideways drag of the tab row: The Age of Oil, Arms Race (icon tab, selected), Black Market, Black Market Challenge (red dot, partly visible)",2026-11-24T09:01:53.321Z,"drag tried 1, cancelled 0; badge 1 on the Events icon before and after"
+The Age of Oil,"milestones 1 to 3 reached, 4 locked; cards 'Unlock: Lv. 31-35 Zombies on World Map' 8,947 of 2,000 (faint green check) and 'Rapid Rescue' 2,037,256 of 25,000 (faint green check); no Claim button, no glowing chest",2026-11-24T09:02:00.260Z,tag text [G]: event page
+Arms Race,"Tech Research, 0/2 counter chest, score 0, about 58 minutes left; the three chests priced (2,360, 4,800, 11,800 gems): not tapped; tasks Increase Tech Power, Research Speed-up, Buy Packs: Go arrows",2026-11-24T09:02:07.476Z,
+Black Market Challenge,"earned today 140 of 600; four Go To rows (Radar Task, Secret Mobile Squad, Doom Elite, Zombie); no claim items",2026-11-24T09:02:13.868Z,
+claims,none made,,
+HUD,"diamonds 11,153, coin 21.3M, oil 675.1K, food 126.0M, iron 760.0M, energy 120, Total Power 150,051,860",2026-11-24T09:02:27.335Z,

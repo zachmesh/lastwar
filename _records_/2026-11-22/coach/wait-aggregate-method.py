@@ -4,7 +4,7 @@
 Reads the operator's wait rows (default _records_/2026-11-22/growth/0054-waits.csv; columns wait_requested_utc, idle_s_at_request,
 wait_granted_utc, minutes_waited and a unit column when present; a refusal owner_active at the lock is a wait row). minutes_waited
 is the operator's stated cost and is used as written: a unit with its own not_before can be granted later than the gate was met, so granted
-minus requested can be larger; rows where the two differ are listed so the note can be read. Causes: idle 300 s or more at the request = the idle rule was met, the wait had another cause (another run holding the desktop, a
+minus requested can be larger; rows where the two differ are listed so the note can be read. Causes: no idle value in the row (the idle wait is 0): classed from the note, 'other (desktop held by another run)' when it says DESKTOP BUSY or held the desktop. Otherwise idle 300 s or more at the request = the idle rule was met, the wait had another cause (another run holding the desktop, a
 bridge restart). Idle under 300 s: SELF CLICK when the previous run's last click (column prev_run_last_click_utc) lies within 3 s of
 request minus idle (the lock counts the harness's own clicks: not an owner-idle cost); OWNER IDLE when it does not (the last input
 was not the harness's); UNCLASSIFIED when the column is empty. wait-cause-overrides.csv (unit, cause, evidence) overrides with a stated
@@ -34,7 +34,10 @@ for r in csv.DictReader(open(path)):
     if gr and abs(((gr-req).total_seconds()/60)-stated)>0.2: bad+=1
     u=r.get("unit") or r.get("unit_id") or "(no unit named)"; per[u]=per.get(u,0)+calc; n+=1
     idle=float(r.get("idle_s_at_request") or 0); pc=t(r.get("prev_run_last_click_utc","") or "")
+    note=(r.get("note","") or "")
     if u in ov: c=ov[u]
+    elif not (r.get("idle_s_at_request","") or "").strip():
+        c="other (desktop held by another run)" if ("DESKTOP BUSY" in note or "held the desktop" in note) else "none or unclassified (no idle read; the idle wait is 0)"
     elif idle>=300: c="other (idle rule met)"
     elif pc is None: c="unclassified (under 300 s, previous click not logged)"
     else: c="self click" if abs(((req-dt.timedelta(seconds=idle))-pc).total_seconds())<=3 else "owner idle"

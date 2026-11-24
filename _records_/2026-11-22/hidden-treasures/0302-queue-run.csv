@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 09:02:58.428Z, run started 09:02:59.384Z), 41 s after the previous run's last click (09:02:17.8Z): the CU-720 carry case: wait 0; the first click 09:03:08.454Z is the model's own turn; owner idle 3006 s",2026-11-24T09:02:59.384Z,see growth/0054-waits.csv
+fragments before,"M1 7, M2 5, M3 4, M4 3, M5 1, M6 7, M7 6: a full set of seven on hand; M5 the scarcest",2026-11-24T09:03:24.746Z,tag text [G]: Hidden Treasures panel
+Dig,"Dig 1 time green with no diamond, price or dollar sign, pressed once; Skip Animation already ticked (not touched); Dig 2 time(s) greyed",2026-11-24T09:03:29.990Z,
+reward,"a gray-and-gold material x12, gold coin pile x24, medal x900, 1-minute speed-up x50, blue triangle x200, silver bars x100",2026-11-24T09:03:38.167Z,"one item unnamed on the icon; popup dismissed by an empty tap (400,800)"
+fragments after,"M1 6, M2 4, M3 3, M4 2, M5 0, M6 6, M7 5",2026-11-24T09:04:01.092Z,every fragment down by one; M5 now zero: the next dig needs it
+chest track,"7/15 before, 8/15 after; no timer seen",2026-11-24T09:04:01.092Z,
+drag count,"drags tried 0, cancelled 0",,

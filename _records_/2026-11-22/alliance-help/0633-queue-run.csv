@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,none: start at 06:32:57Z (wait 0),2026-11-24T06:32:57Z,see growth/0054-waits.csv
+before,"header 120/1,000; four rows: the owner's own Food Output V request (30/30, 'Time reduced: 10:02:00', cannot be helped), an ally's Oil Output III research, an ally's Coin Protection research, an ally's Lv 26 Emergency Center building (cut off at the bottom; rows below unknown, no scroll)",2026-11-24T06:33:20Z,tag text [G]: Help page
+Help All,the green Help All pressed once; the three ally rows disappeared; no toast seen,2026-11-24T06:33:35Z,never an individual Help button
+after,"header 400/1,000; only the owner's own row left",2026-11-24T06:33:50Z,+280 points: more helps than the three rows seen (7 at 40 points) or a larger value per help: unverified
+HUD,"food 127.6M, iron 771.2M, coin 24.4M, Total Power 150,046,960, gems 11,153",2026-11-24T06:34:00Z,drags tried 0

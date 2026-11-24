@@ -1,7 +1,7 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T04:02:00Z
+modified: 2026-11-24T10:52:00Z
 level: L2
 version: 0.21.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
@@ -22,7 +22,7 @@ Updated 2026-11-23 20:20Z (Mac UTC; quote `date -u`). Earlier versions are in gi
 
 ## Triggers (each dispatches the operator BY NAME; check the desktop lock first)
 
-Pending one-shots: 04:36Z refugee claim, 05:37Z rescue claim, 07:00Z donation pass 004, 07:35:30Z depot claim (ends by 07:58Z), 07:55Z cu window confirm (08:00Z to 08:25Z: claim nothing; the cu team creates the CU-721 worktree; the Toolsmith restarts the bridge after, never within 15 minutes of a hand-off or 09:50Z to 10:20Z), 08:25:30Z Oil Well Lv.23 hand-off, 10:05Z forecast flip (needs the Strategist's announcement), 11-26 21:11:30Z room collect. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
+Forecast gate LIVE since 10:48:40Z (TEAM 0.7.5; live step = checkout rebase; emergency override --no-require-forecast). Pending one-shots: 10:57Z group, 14:15Z settle and dispatch the last two trucks; 15:04Z settle the SR then the four plunder scans (guards: hospital free room at least 1,000, stop after a fight wounding over 50); 17:28Z Oil Well Lv.24 hand-off (Lv.23 ends 17:27:27Z), 17:30:30Z lab Complete; 11-26 21:11:30Z room collect. OD-27 ended 08:36Z (bridge on lastwar-bridge). The tram icon opens Intercity Trade only WITH a badge. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
 
 ## Oil Well chain
 
@@ -36,7 +36,7 @@ Respawn on the HARNESS meter (`session-relay inspect`) at 88 percent, in a gap, 
 
 - Standing rule (Steer A): anything that could open another app, browser, store or payment surface needs his approval first; an unexpected foreground switch stops the run; consent requests are human-only; only the operator seat touches the desktop (others: `lsappinfo front`, no osascript).
 - The harness's own clicks count as idle input (self click): the wait is TEMPORARILY 0 (OD-27) until CU-720.
-- Plunder scans are HELD: tapping the trade icon (107,580) at 02:34Z raised a macOS alert; no tap until Steer A rules. Guard: hospital free room under 1,000 stops (1,329 at 02:33Z). Room: a finished batch collects only if the room covers it; press each barracks' pistol once per read (an idle one may hold a finished batch).
+- Plunder: route unknown ((107,580) is the Alliance Train shortcut); verify every HUD icon by its label first. Guard: hospital free room under 1,000 stops. Room: a finished batch collects if the room covers it; press each barracks' pistol once per read.
 
 ## Open owner decisions
 

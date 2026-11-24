@@ -44,3 +44,9 @@ Back to the [folder index](INDEX.md).
 - [PR 950](landing-pr-950.md) - finished-batch-lesson, a Drill Ground Full toast is not idle
 - [PR 951](landing-pr-951.md) - finished-batch-lesson-2, a collect admits what fits, the card taught the wrong inference
 - [PR 952](landing-pr-952.md) - known-dialogs, the three known dialogs and the safe answer to each
+- [PR 953](landing-pr-953.md) - seventeenth records snapshot, units of 03:50Z to 05:45Z, loop tick record
+- [PR 954](landing-pr-954.md) - cu-project-path, the bridge runs the lastwar-bridge worktree (CU-721)
+- [PR 955](landing-pr-955.md) - start-hint, the bridge prints the approval hint only for an app with no record
+- [PR 956](landing-pr-956.md) - conformance-exact, the alarm compares the unrounded coverage percentage
+- [PR 957](landing-pr-957.md) - forecast-refusal-text, the strict forecast rule said once
+- [PR 958](landing-pr-958.md) - forecast-refusal-probe, Steer A's probe of the require_forecast switch

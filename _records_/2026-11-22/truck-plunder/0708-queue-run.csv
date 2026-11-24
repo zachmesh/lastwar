@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 07:08:48Z (wait 0),2026-11-24T07:08:48Z,see growth/0054-waits.csv
+pre-start,killall -9 UserNotificationCenter NotificationCenter and lsappinfo front named LastWar (the standing pre-start); a read-only logger of the front app name every 0.25 s ran from 07:08:47Z,2026-11-24T07:08:47Z,log /tmp/operator-tasks/frontlog_ft1.txt
+fresh frame,"WORLD then BASE (07:08:59.0Z and 07:09:02.1Z), the fresh base frame read at 07:09:12.327Z; the round blue tram icon at (107,580) grounded",2026-11-24T07:09:12.327Z,tag text [G]: left column
+the tap,"ONE tap at (107,580) at 07:09:16.165Z; never repeated",2026-11-24T07:09:16.165Z,
+frame after,"07:09:18.364Z: the base panned to the train station (a station building, a golden train with carriage plus bubbles, tracks); over the station a conductor avatar with a countdown 02:57:26; no Intercity Trade screen, no title, no X; at 07:09:23.911Z the same",2026-11-24T07:09:18.364Z,the icon is the ALLIANCE TRAIN shortcut (the camera moves to the train station); the Intercity Trade icon is not on the base
+front app,"LastWar frontmost throughout: the front log shows a single entry (07:08:47.605Z LastWar) and no change to 07:11:37Z; no macOS alert, no sheet, no second dialog",2026-11-24T07:09:40Z,the 02:34:19Z UserNotificationCenter alert did not repeat: icon safe
+Trade screen,"not opened: nothing to close; no Plunder, Battle or Refresh pressed",2026-11-24T07:09:24Z,the plunder scans need a different entry
+HUD,"Total Power 150,046,960 before and after; the base left panned to the train station area (the next run starts with WORLD then BASE)",2026-11-24T07:09:30Z,drags tried 0

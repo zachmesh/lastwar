@@ -48,6 +48,6 @@ def main():
     n=len(ex); T=sum(h.values()); rk=c["ranked id"]+c["ranked name"]; rh=h["ranked id"]+h["ranked name"]
     strict=h["other wording"]+h["no serves line"]; notrk=n-rk; notrh=T-rh
     row=[f"{lo:%m-%d %H:%MZ} to {now:%m-%d %H:%MZ}"+(" (created since)" if a.created_since else ""),n,c["ranked id"],c["ranked name"],c["exempt"],c["other wording"],c["no serves line"],
-         f"{rk/n:.0%}" if n else "n/a",f"{rh/T:.0%}" if T else "n/a",round(T,2),round(strict,2),round(lenient,2),f"{notrk} units {notrh:.2f} h not ranked"]
+         f"{rk/n:.1%}" if n else "n/a",f"{rh/T:.1%}" if T else "n/a",round(T,2),round(strict,2),round(lenient,2),f"{notrk} units {notrh:.2f} h not ranked"]
     print(*row,sep=" | ")
 if __name__=="__main__": main()

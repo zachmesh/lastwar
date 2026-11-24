@@ -1,8 +1,8 @@
 ---
 title: Forecast gate rule for the enqueue check
 created: 2026-11-23T10:02:00Z
-modified: 2026-11-23T12:57:00Z
-version: 1.0.0
+modified: 2026-11-24T10:49:00Z
+version: 1.1.0
 level: L3
 description: The rule the toolsmith implements so that a unit's plan item has a forecast row, first as a warning and later as a refusal, and when the ledger counts as stable
 status: unverified
@@ -36,3 +36,10 @@ Earliest refusal: 2026-11-24T10:00Z (the columns last changed 09:20Z; no schema 
 ## Notes
 
 The ledger moves by appended rows and amendment notes, never by deleted ids, so an id that once passed keeps passing. Forecast rows for reads carry a metric instead of a power figure; they count as rows.
+
+## As implemented and probed (2026-11-24)
+
+The announcement is in strategy-log-1124c.md (10:23Z) and the switch is `coordination.queue.require_forecast: true` (branch `land/forecast-flip`). Steer A's probe in a scratch queue root with the real 181-row ledger: a serves of an imaginary plan item is refused, a unit with no serves line is refused, `upkeep` and `PL-17` pass, and the emergency path `--no-require-forecast` passes. The rule is strict: the serves line is split on commas and semicolons and each part must be a ledger plan item id, an exempt word or the fill-idle-slot pattern, so `PL-17, PL-08` passes and `PL-17 the Oil Well chain` is refused. All 51 inbox units classify ok.
+
+Live since 2026-11-24T10:48:40Z (PR 959, merge b341250ac): the live TEAM.yaml 0.7.5 carries the switch and `queue.py validate` reads 'pool valid' for the planner's 51 units. A unit that serves a new plan item needs its ledger row first.
+
