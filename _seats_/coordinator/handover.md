@@ -1,10 +1,10 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T11:50:00Z
+modified: 2026-11-24T16:20:00Z
 level: L2
-version: 0.21.0
-description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
+version: 0.22.0
+description: The live state a replacement coordinator starts from - holder, roster, operating rules, schedules, the trade cycle, the macOS alert and open decisions
 status: unverified
 grounded_in:
   - source: coordinator ticks _records_/2026-11-22/team-operations/2011-tick.md to 2228-clean-branch.md
@@ -13,32 +13,31 @@ grounded_in:
 
 # Handover - coordinator
 
-Updated 2026-11-23 20:20Z (Mac UTC; quote `date -u`). Earlier versions are in git history.
+Updated 2026-11-24 16:20Z (Mac UTC; quote `date -u`). Earlier versions are in git history.
 
 ## Holder, clock, roster
 
-- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s: `tool_sync.py`, `model_guard.py --apply`, `queue.py next`); daily `schedule-e1887d97` 12:00Z (word budget; wakes Coach and Planner); weekly `schedule-fee71877`.
-- TEAM.yaml 0.7.4, 10 seats (the operator's id is there). Steer A (`session-eb024f72-e661-4a77-9303-66af95dbcfd1`) and Steer B (`session-e127662e-07ba-4385-b905-3d0e90fd1eeb`) relay the owner and settle collisions.
+- Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s: `tool_sync.py`, `model_guard.py --apply`, `queue.py next`). Planner ping `schedule-4803c6f4` at 02, 06, 10, 14, 18, 22Z; daily `schedule-e1887d97` 11:55Z; weekly `schedule-fee71877` 11-30 01:00Z (add: retire or assign the scout seat).
+- TEAM.yaml 0.7.5, 10 seats; the operator's id is in /tmp/lw-new-operator-id.txt. Steer A `session-eb024f72-e661-4a77-9303-66af95dbcfd1` and Steer B `session-e127662e-07ba-4385-b905-3d0e90fd1eeb` relay the owner.
 
-## Triggers (each dispatches the operator BY NAME; check the desktop lock first)
+## Dispatch (the operator BY NAME, one claim at a time; lock and `lsappinfo front` first)
 
-Forecast gate LIVE since 10:48:40Z (TEAM 0.7.5; live step = checkout rebase; emergency override --no-require-forecast). Pending one-shots: 14:03Z pass 006, 14:15Z cycle A, 15:04Z cycle B and scans, 17:28Z Oil Well Lv.24 hand-off, 17:30:30Z lab, 17:50Z pass 007, passes 008 to 011 (21:10Z, 00:40Z, 04:30Z, 07:10Z), trade cycles B2, C, D after cycle A's arrivals, 11-26 21:11:30Z room collect. Set a wake for every staged pass. OD-27 ended 08:36Z (bridge on lastwar-bridge). The tram icon opens Intercity Trade only WITH a badge. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
+Wakes: 17:28Z Oil Well Lv.24 hand-off (Lv.23 ends 17:27:27.5Z), 17:30:30Z lab, 17:50Z pass 007, 18:03:30Z badge probe then cycle B2 (`trucks-dispatch-2026-11-24-005`, on a LIT badge: settle the SR first, two fights, History read), B3 `-010` 18:50Z (UR), pass 008 21:10Z, 009 00:40Z, 010 04:30Z, 011 07:10Z, cycle C 02:15Z, 11-26 21:11:30Z room collect. Set a wake for every staged pass.
 
-## Oil Well chain
+## Rules learned
 
-Units `building-queues-oil-well-2026-11-24-003` to `-010` (priority 9 until needed): DISPATCH EACH BY NAME at the real finish (the builders panel end, a flat 6 h 32 min under the preview); after each reply set a one-shot at finish plus 30 s; skip the 08:00Z window; re-rank B1 by power per builder-day and oil date. A finished building completes by tapping its wrapped gift box. Schedule: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`.
+- Composed pan recipe (clipped pages, margin start, one message): mouse_move, left_mouse_down, wait 1, one move of 175 px, wait 1, left_mouse_up, screenshot; moves 150 px. The Backpack grid ignored it (0 px).
+- The tram badge: a returned unsettled truck lights it (can lag); no badge, no tap. Hospital free room 1,000 stops plunder.
+- Closing rule 3170: DONE for a taken claim or a `state_read:` line; else PARTIAL.
+- Contract refresh caps: ten a slot, 60 a day, floor 80; one downgrade test in cycle C.
+- Branch names carry the date; yesterday's land/records-1609 collided once.
 
-## Respawn and landings
+## The macOS alert
 
-Respawn on the HARNESS meter (`session-relay inspect`) at 88 percent, in a gap, never mid-Complete: `python3 _tools_/spawn-seat/spawn_seat.py --title '[Last War] <Seat>' --prompt-file <bootstrap>`; record the id in TEAM.yaml and /tmp/lw-new-operator-id.txt; tell Steer A; stand the old session down. Landings (Integrator; never push local main): stage explicit paths, commit, `git branch land/records-<UTC> HEAD`, verify in a CLEAN worktree (`check --base origin/main --landing`) and `/tmp/lw-scan-branch.py`, hand over the name; after a merge `git rebase --autostash origin/main`. No checkout, switch, reset or stash in the live tree.
+A Screen Recording re-approval for CUHelper, every about 6 h 31 min (02:34, 09:05, 15:36Z; next about 22:07Z and 04:38Z). Only the owner can answer. Never touch it: hold, then after the deadline (5 minutes now) the operator runs the standing killall once and once more if it respawns. Keep 22:00Z to 22:15Z calm.
 
-## Facts to carry
+## Open
 
-- Standing rule (Steer A): anything that could open another app, browser, store or payment surface needs his approval first; an unexpected foreground switch stops the run; consent requests are human-only; only the operator seat touches the desktop (others: `lsappinfo front`, no osascript).
-- The harness's own clicks count as idle input (self click): the wait is TEMPORARILY 0 (OD-27) until CU-720.
-- Plunder: route unknown ((107,580) is the Alliance Train shortcut); verify every HUD icon by its label first. Guard: hospital free room under 1,000 stops. Room: a finished batch collects if the room covers it; press each barracks' pistol once per read.
-
-## Open owner decisions
-
-- OD-20261123-21 (second device): the owner's phone donations raise the odds, not an answer: keep OPEN.
-- CU-721 APPROVED (OD-28): worktree under computer-use-wt created by cu-integrator in a 08:00Z window; the Toolsmith restarts between runs; OD-27 (wait 0) ends then.
+- Steer A decides the Backpack rows 4 (park, select tiles, or wheel) and OD-21 (second device).
+- Pending seat work: the Toolsmith's `state_read` validation and units-share alarm line; the Strategist's overdue reads; Integrator branches.
+- Respawn at 88 percent on the harness meter in a gap: `spawn_seat.py --title '[Last War] <Seat>' --prompt-file <bootstrap>`; record the id; tell Steer A. Landings: Integrator; never push local main; no checkout, switch, reset or stash in the live tree.
