@@ -4,9 +4,9 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.7.4
+version: 0.7.5
 title: Last War continuous-play team
-updated_at: '2026-11-23T09:22:00Z'
+updated_at: '2026-11-24T10:25:22Z'
 state: active
 runtime: dsh
 project_path: .
@@ -64,6 +64,11 @@ steward:
   principal: zhenc
 coordination:
   review_interval_minutes: 15
+  # The forecast gate (strategy gate rule 0202, phase 2): from the Strategist's announcement of
+  # 2026-11-24T10:23Z a unit whose serves names no plan item with a ledger row (and no exempt
+  # word) is refused at enqueue. Honoured by queue.py and scout_diff.py; absent or false means off.
+  queue:
+    require_forecast: true
   # The team's GitHub Project board (reflection issue-driven-work/project-boards.md).
   # Owned by the repository owner and LINKED to zachmesh/lastwar since 2026-11-23;
   # the earlier board under another user is a superseded, closed backup. Nothing adds
