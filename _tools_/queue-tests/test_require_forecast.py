@@ -254,3 +254,85 @@ class ScoutDiffPath(Switchable):
         self.setUp()
         self.team("coordination:\n  queue:\n    require_forecast: false\n")
         self.assertEqual(len(self.apply("PL-99")[0]), 1)
+
+class OverrideAudit(Switchable):
+    """The audit counter of --no-require-forecast: a unit the flag let through that the check would have refused carries forecast_override."""
+
+    def fm(self, state, unit, key):
+        return self.frontmatter_line(state, unit, key)
+
+    def queued(self, r):
+        return re.search(r"queued (\S+)", r.stdout).group(1)
+
+    def test_a_bypassed_refusal_marks_the_unit_and_says_so_and_the_mark_survives_claim_and_complete(self):
+        self.team()
+        r = self.enqueue_raw("PL-99", "--no-require-forecast")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        unit = self.queued(r)
+        self.assertIn(f"{unit} is marked forecast_override: no-row", r.stdout)
+        self.assertEqual(self.fm("inbox", unit, "forecast_override"), "forecast_override: no-row")
+        self.assertEqual(self.queue("claim", "--unit", unit, "--executor", "tester").returncode, 0)
+        self.assertEqual(self.fm("claimed", unit, "forecast_override"), "forecast_override: no-row")
+        self.assertEqual(self.queue("complete", "--unit", unit, "--status", "done", "--summary", "x").returncode, 0)
+        self.assertEqual(self.fm("done", unit, "forecast_override"), "forecast_override: no-row")
+
+    def test_the_kind_follows_the_verdict_no_row_or_unknown(self):
+        self.team()
+        a = self.queued(self.enqueue_raw("PL-99", "--no-require-forecast", regular="regular-1", activity="activity-1"))
+        b = self.queued(self.enqueue_raw("grow the account somehow", "--no-require-forecast", regular="regular-2", activity="activity-2"))
+        self.assertEqual(self.fm("inbox", a, "forecast_override"), "forecast_override: no-row")
+        self.assertEqual(self.fm("inbox", b, "forecast_override"), "forecast_override: unknown")
+
+    def test_an_override_that_changed_nothing_leaves_no_mark(self):
+        self.team()
+        r = self.enqueue_raw("upkeep", "--no-require-forecast")                           # the check would have passed it anyway
+        self.assertEqual(r.returncode, 0)
+        self.assertNotIn("forecast_override", r.stdout)
+        self.assertNotIn("forecast_override", (self.pool / "inbox" / f"{self.queued(r)}.md").read_text())
+
+    def test_no_flag_or_the_switch_off_leaves_no_mark(self):
+        self.team()
+        r = self.enqueue_raw("PL-01")
+        self.assertNotIn("forecast_override", (self.pool / "inbox" / f"{self.queued(r)}.md").read_text())
+        self.team("coordination:\n  queue:\n    require_forecast: false\n")
+        r = self.enqueue_raw("PL-99", "--no-require-forecast", regular="regular-2", activity="activity-2")
+        self.assertEqual(r.returncode, 0)
+        self.assertNotIn("forecast_override", (self.pool / "inbox" / f"{self.queued(r)}.md").read_text())
+
+    def test_the_minting_funnel_marks_too(self):
+        self.team()
+        roster = self.roster("mail", "PL-99", only="mail")
+        r = self.queue("plan", "--regulars-json", str(roster), "--hours", "2", "--no-require-forecast")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        units = self.inbox()
+        self.assertTrue(units)
+        for name in units:
+            self.assertIn("forecast_override: no-row", (self.pool / "inbox" / name).read_text())
+
+    def test_the_counter_counts_by_kind_with_names_only_and_filters_by_date(self):
+        self.team()
+        a = self.queued(self.enqueue_raw("PL-99", "--no-require-forecast", regular="regular-1", activity="activity-1"))
+        b = self.queued(self.enqueue_raw("a secret free text of the planner", "--no-require-forecast", regular="regular-2", activity="activity-2"))
+        self.enqueue_raw("upkeep", "--no-require-forecast", regular="regular-3", activity="activity-3")
+        r = self.queue("forecast-overrides")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("let through that the check would have refused: 2 (no-row 1, unknown 1)", r.stdout)
+        self.assertIn(a, r.stdout)
+        self.assertIn(b, r.stdout)
+        self.assertNotIn("secret free text", r.stdout + r.stderr)                          # names and kinds only
+        data = json.loads(self.queue("forecast-overrides", "--format", "json").stdout)
+        self.assertEqual((data["total"], data["by_kind"]), (2, {"no-row": 1, "unknown": 1}))
+        self.assertEqual({u["unit"] for u in data["units"]}, {a, b})
+        future = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        self.assertEqual(json.loads(self.queue("forecast-overrides", "--since", future, "--format", "json").stdout)["total"], 0)
+        self.assertEqual(self.queue("forecast-overrides", "--since", "yesterday").returncode, 2)
+
+    def test_the_counter_reads_all_three_pools_and_an_empty_pool_says_zero(self):
+        self.team()
+        self.assertIn(": 0", self.queue("forecast-overrides").stdout)
+        a = self.queued(self.enqueue_raw("PL-99", "--no-require-forecast"))
+        self.queue("claim", "--unit", a, "--executor", "tester")
+        self.queue("complete", "--unit", a, "--status", "done", "--summary", "x")
+        data = json.loads(self.queue("forecast-overrides", "--format", "json").stdout)
+        self.assertEqual([(u["unit"], u["state"]) for u in data["units"]], [(a, "done")])
+
