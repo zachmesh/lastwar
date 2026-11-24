@@ -12,15 +12,16 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     count (builders_idle, slots_idle, queue_slots_idle, queues_idle, labs_idle or idle_slots, which include the
                     blocked ones) and the blocker text; N, at most the open slots, is subtracted from the idle count and printed
                     beside it, with the blocker text when the stats carry one.
-  coverage          units, or unit-hours (result duration, else est_minutes), serving a RANKED item are under
-                    --coverage-percent (60) of what executed. Two lines are printed: the ROLLING window (--hours, 12; context, it
-                    stays low while old units age out) and SINCE THE CUTOVER (units executed after the roster remap landed): the
-                    verdict, which the alarm and the Coach quote. The cutover is, in order: --since TIME; the state file
-                    `_tools_/state/strategy-cutover.json` ({"since": "ISO UTC"}); the first-parent commit in git that introduced a
-                    plan item id as a roster serves (`_tools_/regulars.json`), i.e. the merge of the remap. With none of them the
-                    rolling figure is the verdict and the output says so. Both lines also give the units that serve nothing
-                    (not ranked) with their hours of the total. Percentages print to one decimal; the alarm compares the UNROUNDED
-                    value (84 of 141 = 59.57 is below 60, though it once rounded to 60 and passed).
+  coverage          the share of the operator's HOURS (unit-hours: result duration, else est_minutes) serving a RANKED item is under
+                    --coverage-percent (60) of what executed (Steer A 2026-11-24: a unit count moves by splitting or merging units, hours do
+                    not; the share of UNITS is printed as context and trend, it does not alarm). Two lines are printed: the ROLLING window
+                    (--hours, 12; context, it stays low while old units age out) and SINCE THE CUTOVER (units executed after the roster remap
+                    landed): the verdict, which the alarm and the Coach quote. The cutover is, in order: --since TIME; the state file
+                    `_tools_/state/strategy-cutover.json` ({"since": "ISO UTC"}); the first-parent commit in git that introduced a plan item
+                    id as a roster serves (`_tools_/regulars.json`), i.e. the merge of the remap. With none of them the rolling figure is the
+                    verdict and the output says so. Both lines also give the units that serve nothing (not ranked) with their hours of the
+                    total. Percentages print to one decimal; the alarm compares the UNROUNDED value (59.57 is below 60, though it once
+                    rounded to 60 and passed).
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
@@ -333,11 +334,12 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
     counts["coverage_unit_hours_percent"] = rolling["unit_hours_percent"]
     verdict, basis = (since_stats, "since-cutover") if since_stats is not None else (rolling, "rolling")
     counts["coverage_verdict_basis"] = basis
+    counts["coverage_verdict_metric"] = "unit-hours"
+    counts["coverage_limit_percent"] = a.coverage_percent
     if verdict["executed"]:
-        low = [name for name, v in (("units", verdict["units_percent_exact"]), ("unit-hours", verdict["unit_hours_percent_exact"]))
-               if v is not None and v < a.coverage_percent]                  # the unrounded values: 59.57 is below 60
-        if low:
-            alarm = {"alarm": "coverage", "basis": basis, "below": low, "units_percent": verdict["units_percent"],
+        hours_exact = verdict["unit_hours_percent_exact"]       # Steer A 2026-11-24: the verdict is the share of the operator's HOURS serving a ranked item
+        if hours_exact is not None and hours_exact < a.coverage_percent:      # (a unit count moves by splitting or merging units); the unrounded value: 59.57 is below 60
+            alarm = {"alarm": "coverage", "basis": basis, "metric": "unit-hours", "below": ["unit-hours"], "units_percent": verdict["units_percent"],
                      "unit_hours_percent": verdict["unit_hours_percent"], "limit": a.coverage_percent, "executed": verdict["executed"]}
             if basis == "since-cutover":
                 alarm["since"] = counts["since_cutover"]["since"]
@@ -384,17 +386,18 @@ def render(result: dict) -> str:
     r = c["rolling"]
     if r["executed"]:
         lines.append(f"coverage ROLLING {r['hours']:g} h (context{', not the verdict' if c['coverage_verdict_basis'] == 'since-cutover' else ''}): "
-                     f"units {r['units_percent']}%, unit-hours {r['unit_hours_percent']}% of {r['executed']} units | serving nothing "
-                     f"{r['serves_nothing_units']} units, {r['serves_nothing_hours']:g} h of {r['total_hours']:g} h")
+                     f"unit-hours {r['unit_hours_percent']}% (limit {c['coverage_limit_percent']:g}) | units {r['units_percent']}% of {r['executed']} "
+                     f"(context) | serving nothing {r['serves_nothing_units']} units, {r['serves_nothing_hours']:g} h of {r['total_hours']:g} h")
     sc = c["since_cutover"]
     if sc is None:
         lines.append(f"coverage SINCE CUTOVER: not set ({c['cutover_note']}); the rolling figure is the verdict")
     elif sc["executed"]:
-        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}) - THE VERDICT: units {sc['units_percent']}%, unit-hours "
-                     f"{sc['unit_hours_percent']}% of {sc['executed']} units | serving nothing {sc['serves_nothing_units']} units, "
-                     f"{sc['serves_nothing_hours']:g} h of {sc['total_hours']:g} h")
+        lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}) - THE VERDICT: unit-hours {sc['unit_hours_percent']}% (limit "
+                     f"{c['coverage_limit_percent']:g}) | units {sc['units_percent']}% of {sc['executed']} (context, trend) | serving nothing "
+                     f"{sc['serves_nothing_units']} units, {sc['serves_nothing_hours']:g} h of {sc['total_hours']:g} h")
     else:
         lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}): no unit executed since yet (n/a)")
+    lines.append(f"coverage rule: hours decide, units are the trend (the alarm compares unit-hours with the {c['coverage_limit_percent']:g} percent limit)")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
         note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")

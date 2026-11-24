@@ -85,7 +85,7 @@ class Conforming(PoolCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("conforming", r.stdout)
         self.assertIn("executed in window 10", r.stdout)
-        self.assertIn("coverage ROLLING 12 h (context): units 60.0%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context): unit-hours 60.0% (limit 60) | units 60.0% of 10 (context)", r.stdout)
         self.assertIn("coverage SINCE CUTOVER: not set", r.stdout)
         self.assertNotIn(SECRET, r.stdout + r.stderr)                     # no summary, target or unit text
         self.assertNotIn("mail-2026", r.stdout)                           # no unit ids either
@@ -343,9 +343,9 @@ class Cutover(PoolCase):
     def test_both_lines_are_printed_and_the_since_line_is_the_verdict(self):
         self.old_and_new()
         r = self.run_tool("--since", iso(180))
-        self.assertIn("coverage ROLLING 12 h (context, not the verdict): units 33.3%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context, not the verdict): unit-hours 33.3% (limit 60) | units 33.3% of 12 (context)", r.stdout)
         self.assertIn("coverage SINCE CUTOVER", r.stdout)
-        self.assertIn("(--since) - THE VERDICT: units 100.0%, unit-hours 100.0% of 4 units | serving nothing 0 units, 0 h of 1 h", r.stdout)
+        self.assertIn("(--since) - THE VERDICT: unit-hours 100.0% (limit 60) | units 100.0% of 4 (context, trend) | serving nothing 0 units, 0 h of 1 h", r.stdout)
         self.assertEqual(r.returncode, 0, r.stdout)                                  # the rolling 33 percent does not alarm any more
 
     def test_the_json_carries_both_with_the_units_that_serve_nothing_and_their_hours(self):
@@ -364,7 +364,8 @@ class Cutover(PoolCase):
             self.unit("done", ago=400 + i, serves="PL-01")                                 # rolling is full of ranked units
         r, d = self.data("--since", iso(180))
         alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
-        self.assertEqual((alarm["basis"], alarm["below"], alarm["units_percent"], alarm["executed"]), ("since-cutover", ["units", "unit-hours"], 25, 4))
+        self.assertEqual((alarm["basis"], alarm["below"], alarm["units_percent"], alarm["executed"]), ("since-cutover", ["unit-hours"], 25.0, 4))
+        self.assertEqual(alarm["metric"], "unit-hours")
         self.assertTrue(alarm["since"].endswith("Z"))
         self.assertGreater(d["counts"]["rolling"]["units_percent"], 60)
 
@@ -439,21 +440,46 @@ class Cutover(PoolCase):
         self.assertEqual(since["since"], "2026-11-23T08:30:00Z")                       # the merge, not the remap commit on the branch
         self.assertEqual(since["source"], "git: the merge that introduced the roster serves ids")
 
-    def test_the_alarm_compares_the_unrounded_percentage_84_of_141_is_below_60(self):
+    def test_the_units_share_84_of_141_is_context_only_and_prints_one_decimal(self):
         for i in range(84):
             self.unit("done", ago=10 + i, serves="PL-17", hours=0.5)                  # ranked, long
         for i in range(57):
-            self.unit("done", ago=95 + i, serves="upkeep", hours=0.1)                 # not ranked, short: unit-hours stay high
+            self.unit("done", ago=95 + i, serves="upkeep", hours=0.1)                 # not ranked, short: the hours stay high
         r, d = self.data("--since", iso(300))
         since = d["counts"]["since_cutover"]
         self.assertEqual((since["executed"], since["ranked_units"]), (141, 84))
-        self.assertEqual(since["units_percent"], 59.6)                                # one decimal; it used to round to 60 and pass
+        self.assertEqual(since["units_percent"], 59.6)                                # one decimal; it used to round to 60
         self.assertAlmostEqual(since["units_percent_exact"], 59.5745, places=3)
         self.assertGreater(since["unit_hours_percent"], 80)
+        self.assertNotIn("coverage", {a["alarm"] for a in d["alarms"]})              # the verdict is the hours: healthy
+        self.assertIn("units 59.6% of 141 (context, trend)", self.run_tool("--since", iso(300)).stdout)
+
+    def test_unit_hours_of_59_6_percent_must_alarm_and_print_one_decimal(self):
+        self.unit("done", ago=10, serves="PL-17", hours=0.596)
+        self.unit("done", ago=12, serves="upkeep", hours=0.404)
+        r, d = self.data("--since", iso(300))
+        since = d["counts"]["since_cutover"]
+        self.assertEqual(since["unit_hours_percent"], 59.6)
+        self.assertLess(since["unit_hours_percent_exact"], 60)
         alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
-        self.assertEqual((alarm["basis"], alarm["below"]), ("since-cutover", ["units"]))
+        self.assertEqual((alarm["metric"], alarm["below"], alarm["unit_hours_percent"]), ("unit-hours", ["unit-hours"], 59.6))
         self.assertEqual(r.returncode, 1)
-        self.assertIn("units 59.6%", self.run_tool("--since", iso(300)).stdout)
+        self.assertIn("unit-hours 59.6% (limit 60)", self.run_tool("--since", iso(300)).stdout)
+
+    def test_splitting_a_unit_cannot_green_the_verdict_because_hours_do_not_move(self):
+        self.unit("done", ago=10, serves="PL-17", hours=1.0)                          # one ranked hour, one upkeep hour
+        self.unit("done", ago=12, serves="upkeep", hours=1.0)
+        _r, whole = self.data("--since", iso(300))
+        self.setUp()                                                                  # a fresh pool: the ranked hour split into ten units
+        for i in range(10):
+            self.unit("done", ago=10 + i, serves="PL-17", hours=0.1)
+        self.unit("done", ago=25, serves="upkeep", hours=1.0)
+        _r, split = self.data("--since", iso(300))
+        self.assertEqual(whole["counts"]["since_cutover"]["unit_hours_percent"], 50.0)
+        self.assertEqual(split["counts"]["since_cutover"]["unit_hours_percent"], 50.0)
+        self.assertGreater(split["counts"]["since_cutover"]["units_percent"], 90)     # the unit count moved a lot
+        self.assertIn("coverage", {a["alarm"] for a in whole["alarms"]})
+        self.assertIn("coverage", {a["alarm"] for a in split["alarms"]})              # and the hours verdict did not
 
     def test_exactly_at_the_limit_passes_and_just_under_fires(self):
         for i in range(6):
@@ -495,7 +521,7 @@ class Cutover(PoolCase):
     def test_a_unit_that_finished_exactly_at_the_cutover_counts_and_the_output_stays_counts_only(self):
         self.unit("done", ago=60, serves="PL-17")
         r = self.run_tool("--since", iso(60))
-        self.assertIn("of 1 units", r.stdout)
+        self.assertIn("units 100.0% of 1 (context", r.stdout)
         self.assertNotIn(SECRET, r.stdout + r.stderr)
 
 
@@ -513,7 +539,21 @@ class Coverage(PoolCase):
         self.fill(59, 41)
         r, alarms = self.alarms()
         self.assertIn("coverage", alarms)
-        self.assertEqual(next(a for a in json.loads(r.stdout)["alarms"] if a["alarm"] == "coverage")["below"], ["units", "unit-hours"])
+        self.assertEqual(next(a for a in json.loads(r.stdout)["alarms"] if a["alarm"] == "coverage")["below"], ["unit-hours"])    # hours are the verdict
+
+    def test_the_output_says_hours_decide_and_units_are_the_trend(self):
+        self.fill(6, 4)
+        out = self.run_tool().stdout
+        self.assertIn("coverage rule: hours decide, units are the trend (the alarm compares unit-hours with the 60 percent limit)", out)
+        self.assertEqual(out.count("coverage rule:"), 1)
+
+    def test_a_low_unit_count_with_healthy_hours_does_not_alarm_but_is_printed_as_context(self):
+        self.fill(4, 6, hours_ranked=1.0, hours_other=0.1)                              # 40 percent of the units, 87 percent of the hours
+        r, alarms = self.alarms()
+        self.assertNotIn("coverage", alarms)
+        counts = json.loads(r.stdout)["counts"]["rolling"]
+        self.assertEqual((counts["units_percent"], counts["unit_hours_percent"]), (40.0, 87.0))
+        self.assertIn("units 40.0% of 10 (context)", self.run_tool().stdout)
 
     def test_unit_hours_can_alarm_when_the_unit_count_does_not(self):
         self.fill(6, 4, hours_ranked=0.1, hours_other=1.0)
