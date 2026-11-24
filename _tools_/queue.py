@@ -405,7 +405,7 @@ FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
-                "claimed_count", "evidence", "state_read", "follow_up",
+                "claimed_count", "evidence", "state_read", "state_change", "follow_up",
                 "stats", "stats_missing", "stats_warnings"]
 # result.state_read (Steer A, 2026-11-24): the evidence a DONE that rests on a verified nothing-to-claim or nothing-to-do state carries, one line:
 # '<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>', for example 'Already claimed today (S1) | step 6 frame | 15:07:44Z'.
@@ -414,6 +414,17 @@ RESULT_ORDER = ["status", "started_at", "finished_at",
 STATE_READ_FRAME = re.compile(r"^(step\s*\d+(\s+frame)?|[\w.\-/]+\.(png|jpe?g|webp|md|json|csv|txt))$", re.I)
 STATE_READ_TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d:[0-5]\dZ$")
 STATE_READ_PATTERN = "<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>"
+
+
+def normalise_state_change(text):
+    """('yes'|'no'|'', problem): the self-declared result.state_change (the Coach's proposal, 2026-11-24): did the unit change the game state?
+    Anything but yes or no is not stored and says so; it never refuses a completion."""
+    value = " ".join((text or "").split()).lower()
+    if not value:
+        return "", ""
+    if value in ("yes", "no"):
+        return value, ""
+    return "", "state_change must be yes or no"
 
 
 def state_read_problem(text):
@@ -5204,6 +5215,7 @@ def cmd_complete(args):
     summary_text = " ".join(summary_raw.split()) if ("\n" in summary_raw or "\r" in summary_raw) else summary_raw
     state_read = " ".join(state_read_raw.replace("\r", "\n").split())        # stored on one line
     state_read_bad = state_read_problem(state_read_raw) if state_read else ""
+    state_change, state_change_bad = normalise_state_change(getattr(args, "state_change", ""))
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -5215,6 +5227,7 @@ def cmd_complete(args):
         "claimed_count": len(claimed_items),
         "evidence": args.evidence or "",
         **({"state_read": state_read} if state_read else {}),
+        **({"state_change": state_change} if state_change else {}),
         "follow_up": args.follow_up or "none",
         "stats": stats,
         "stats_missing": missing,
@@ -5297,6 +5310,8 @@ def cmd_complete(args):
     write_unit(path, fields, body)
     os.rename(path, target)
     print(f"completed {args.unit} with status {args.status}")
+    if state_change_bad:
+        print(f"warning: {args.unit} closes with a state_change that is not yes or no - not stored; it never refuses the closing")
     if state_read_bad:
         print(f"warning: {args.unit} closes with a state_read that does "
               f"not fit '{STATE_READ_PATTERN}': {state_read_bad} - "
@@ -6636,6 +6651,10 @@ def main(argv=None):
                    help="for a DONE that rests on a verified nothing-to-claim or nothing-to-do state, one line: "
                         "'<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>' (stored as result.state_read; "
                         "a pattern mismatch is a warning, never a refusal)")
+    p.add_argument("--state-change", default="",
+                   help="self-declared: yes if the unit changed the game state (a claim taken that paid, a build or research started, "
+                        "a batch collected, a truck dispatched or settled, a fight, a conversion), no if it found nothing to do; stored as "
+                        "result.state_change (anything else is not stored, with a warning, never a refusal)")
     p.add_argument("--follow-up", default="")
     p.add_argument("--stat", action="append", default=[])
     p.add_argument("--rules-used", default="",

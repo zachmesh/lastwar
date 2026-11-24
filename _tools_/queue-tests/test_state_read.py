@@ -122,3 +122,53 @@ class StateRead(PoolCase):
         r = self.queue("validate")
         self.assertNotIn("state_read", r.stdout + r.stderr)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+
+class StateChange(PoolCase):
+    """result.state_change: the unit's own declaration yes or no, stored beside evidence and state_read; optional, no warning when absent."""
+
+    def finish(self, *extra, status="done"):
+        unit = self.enqueue("--serves", "made up")
+        self.assertEqual(self.queue("claim", "--unit", unit, "--executor", "tester").returncode, 0)
+        r = self.queue("complete", "--unit", unit, "--status", status, "--summary", "x", *extra)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        fields, _ = load_queue_module().read_unit(str(self.path("done", unit)))
+        return r, fields["result"], unit
+
+    def test_yes_and_no_are_stored_beside_evidence_and_state_read_without_a_warning(self):
+        for value in ("yes", "no"):
+            self.setUp()
+            r, result, unit = self.finish("--state-change", value, "--state-read", GOOD, "--evidence", "_records_/x.md")
+            self.assertEqual(result["state_change"], value)
+            self.assertNotIn("state_change", r.stdout)
+            text = self.path("done", unit).read_text()
+            self.assertLess(text.index("evidence:"), text.index("state_read:"))
+            self.assertLess(text.index("state_read:"), text.index("state_change:"))
+            self.assertLess(text.index("state_change:"), text.index("follow_up:"))
+
+    def test_case_and_spaces_are_normalised(self):
+        _r, result, _ = self.finish("--state-change", "  YES ")
+        self.assertEqual(result["state_change"], "yes")
+
+    def test_absent_means_no_key_and_no_warning(self):
+        r, result, unit = self.finish()
+        self.assertNotIn("state_change", result)
+        self.assertNotIn("state_change", r.stdout)
+        self.assertNotIn("state_change", self.path("done", unit).read_text())
+
+    def test_anything_else_is_not_stored_and_never_refuses_the_closing(self):
+        for value in ("maybe", "true", "1", "yes, partly"):
+            self.setUp()
+            r, result, _ = self.finish("--state-change", value)
+            self.assertNotIn("state_change", result, value)
+            self.assertIn("warning:", r.stdout)
+            self.assertIn("state_change that is not yes or no - not stored; it never refuses the closing", r.stdout)
+
+    def test_it_is_kept_for_every_closing_status_and_listed_in_the_help(self):
+        for status in ("done", "partial", "failed", "skipped-needs-owner"):
+            self.setUp()
+            _r, result, _ = self.finish("--state-change", "no", status=status)
+            self.assertEqual(result["state_change"], "no", status)
+        out = re.sub(r"\s+", " ", self.queue("complete", "--help").stdout)
+        self.assertIn("--state-change", out)
+        self.assertIn("yes if the unit changed the game state", out)

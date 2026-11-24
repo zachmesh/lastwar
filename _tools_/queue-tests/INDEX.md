@@ -1,7 +1,7 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-24T16:13:29Z
+modified: 2026-11-24T16:18:08Z
 version: 1.9.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
@@ -28,6 +28,6 @@ rule (each comma or semicolon part must be a ledger plan item or an exempt word)
 `test_unit_brief.py`: every unit minted for a roster regular carries the `## Brief` definition block; a pointer to a missing file is left out.
 
 `test_state_read.py`: `complete --state-read` (or a `state_read:` line in the summary) stores `result.state_read` beside `evidence`; its pattern
-`what was read | step N or file | HH:MM:SSZ` is checked, a mismatch a warning never a refusal; a multi-line summary is folded to one line.
+`what was read | step N or file | HH:MM:SSZ` is checked, a mismatch a warning never a refusal; `--state-change yes|no` stores the unit's own declaration; a multi-line summary is folded to one line.
 
 Run: `python3 -m unittest discover -s _tools_/queue-tests`.
