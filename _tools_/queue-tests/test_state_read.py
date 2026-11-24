@@ -122,3 +122,140 @@ class StateRead(PoolCase):
         r = self.queue("validate")
         self.assertNotIn("state_read", r.stdout + r.stderr)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+
+class StateChange(PoolCase):
+    """result.state_change: the unit's own declaration yes or no, stored beside evidence and state_read; optional, no warning when absent."""
+
+    def finish(self, *extra, status="done"):
+        unit = self.enqueue("--serves", "made up")
+        self.assertEqual(self.queue("claim", "--unit", unit, "--executor", "tester").returncode, 0)
+        r = self.queue("complete", "--unit", unit, "--status", status, "--summary", "x", *extra)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        fields, _ = load_queue_module().read_unit(str(self.path("done", unit)))
+        return r, fields["result"], unit
+
+    def test_yes_and_no_are_stored_beside_evidence_and_state_read_without_a_warning(self):
+        for value in ("yes", "no"):
+            self.setUp()
+            r, result, unit = self.finish("--state-change", value, "--state-read", GOOD, "--evidence", "_records_/x.md")
+            self.assertEqual(result["state_change"], value)
+            self.assertNotIn("state_change", r.stdout)
+            text = self.path("done", unit).read_text()
+            self.assertLess(text.index("evidence:"), text.index("state_read:"))
+            self.assertLess(text.index("state_read:"), text.index("state_change:"))
+            self.assertLess(text.index("state_change:"), text.index("follow_up:"))
+
+    def test_case_and_spaces_are_normalised(self):
+        _r, result, _ = self.finish("--state-change", "  YES ")
+        self.assertEqual(result["state_change"], "yes")
+
+    def test_absent_means_no_key_and_no_warning(self):
+        r, result, unit = self.finish()
+        self.assertNotIn("state_change", result)
+        self.assertNotIn("state_change", r.stdout)
+        self.assertNotIn("state_change", self.path("done", unit).read_text())
+
+    def test_anything_else_is_not_stored_and_never_refuses_the_closing(self):
+        for value in ("maybe", "true", "1", "yes, partly"):
+            self.setUp()
+            r, result, _ = self.finish("--state-change", value)
+            self.assertNotIn("state_change", result, value)
+            self.assertIn("warning:", r.stdout)
+            self.assertIn("state_change that is not yes or no - not stored; it never refuses the closing", r.stdout)
+
+    def test_it_is_kept_for_every_closing_status_and_listed_in_the_help(self):
+        for status in ("done", "partial", "failed", "skipped-needs-owner"):
+            self.setUp()
+            _r, result, _ = self.finish("--state-change", "no", status=status)
+            self.assertEqual(result["state_change"], "no", status)
+        out = re.sub(r"\s+", " ", self.queue("complete", "--help").stdout)
+        self.assertIn("--state-change", out)
+        self.assertIn("yes if the unit changed the game state", out)
+
+
+class RequireStateRead(PoolCase):
+    """The switch coordination.queue.require_state_read (Steer A, 2026-11-24): on, a DONE that declares state_change no without a valid state_read
+    line is DOWNGRADED to partial with a note - never refused, so the unit cannot stay claimed until its lease expires. Off by default."""
+
+    def team(self, on=True):
+        path = self.repo / "TEAM.yaml"
+        path.write_text(f"coordination:\n  queue:\n    require_state_read: {'true' if on else 'false'}\n")
+        self.env["LASTWAR_TEAM_FILE"] = str(path)
+
+    def finish(self, *extra, status="done"):
+        unit = self.enqueue("--serves", "made up")
+        self.assertEqual(self.queue("claim", "--unit", unit, "--executor", "tester").returncode, 0)
+        r = self.queue("complete", "--unit", unit, "--status", status, "--summary", "x", *extra)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)                      # never a refusal
+        self.assertTrue(self.path("done", unit).exists())                           # and never left claimed
+        self.assertFalse(self.path("claimed", unit).exists())
+        fields, _ = load_queue_module().read_unit(str(self.path("done", unit)))
+        return r, fields["result"]
+
+    def test_on_a_no_done_without_a_line_is_downgraded_to_partial_with_a_note(self):
+        self.team()
+        r, result = self.finish("--state-change", "no")
+        self.assertEqual(result["status"], "partial")
+        self.assertIn("downgraded from done to partial: state_change no needs a valid state_read line (missing) while require_state_read is on", result["closing_note"])
+        self.assertIn("completed", r.stdout)
+        self.assertIn("with status partial", r.stdout)
+        self.assertIn("note:", r.stdout)
+        self.assertEqual(result["state_change"], "no")
+
+    def test_on_an_invalid_line_is_downgraded_too_and_stored_as_given(self):
+        self.team()
+        r, result = self.finish("--state-change", "no", "--state-read", "nothing | the screen | 15:07Z")
+        self.assertEqual(result["status"], "partial")
+        self.assertIn("(does not fit the pattern)", result["closing_note"])
+        self.assertEqual(result["state_read"], "nothing | the screen | 15:07Z")
+        self.assertIn("state_read does not fit the pattern", " ".join(result["stats_warnings"]))
+
+    def test_on_a_no_done_with_a_valid_line_stays_done(self):
+        self.team()
+        r, result = self.finish("--state-change", "no", "--state-read", GOOD)
+        self.assertEqual(result["status"], "done")
+        self.assertNotIn("closing_note", result)
+        self.assertNotIn("note:", r.stdout)
+
+    def test_on_a_yes_done_or_one_with_no_declaration_stays_done(self):
+        self.team()
+        for extra in (("--state-change", "yes"), ()):
+            self.setUp()
+            self.team()
+            _r, result = self.finish(*extra)
+            self.assertEqual(result["status"], "done", extra)
+            self.assertNotIn("closing_note", result)
+
+    def test_only_a_done_is_downgraded(self):
+        self.team()
+        for status in ("partial", "failed", "skipped-needs-owner"):
+            self.setUp()
+            self.team()
+            _r, result = self.finish("--state-change", "no", status=status)
+            self.assertEqual(result["status"], status)
+            self.assertNotIn("closing_note", result)
+
+    def test_off_by_default_the_key_false_or_no_team_file(self):
+        for setup in (lambda: None, lambda: self.team(False)):
+            self.setUp()
+            setup()
+            _r, result = self.finish("--state-change", "no")
+            self.assertEqual(result["status"], "done")
+            self.assertNotIn("closing_note", result)
+
+    def test_the_key_must_sit_at_coordination_queue(self):
+        self.setUp()
+        path = self.repo / "TEAM.yaml"
+        path.write_text("queue:\n  require_state_read: true\n")
+        self.env["LASTWAR_TEAM_FILE"] = str(path)
+        _r, result = self.finish("--state-change", "no")
+        self.assertEqual(result["status"], "done")
+
+    def test_the_forecast_switch_alone_does_not_turn_it_on(self):
+        self.setUp()
+        path = self.repo / "TEAM.yaml"
+        path.write_text("coordination:\n  queue:\n    require_forecast: false\n")
+        self.env["LASTWAR_TEAM_FILE"] = str(path)
+        _r, result = self.finish("--state-change", "no")
+        self.assertEqual(result["status"], "done")

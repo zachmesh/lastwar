@@ -35,6 +35,10 @@ newest `_records_/<date>/strategy/forecast-ledger.csv` or an exempt word (upkeep
 semicolon part of the serves line must be one of those, so `PL-17, PL-08` passes and `PL-17 the Oil Well chain` is refused. `--no-require-forecast`
 skips it for one call (an emergency enqueue; the refusal names it), `--require-forecast` forces it on; LASTWAR_TEAM_FILE names another file.
 
+The closing rule: `complete --state-read '<what was read> | <step N or file> | <HH:MM:SSZ>'` and `--state-change yes|no` store result.state_read and result.state_change;
+a state_read that does not fit its pattern is a warning. When TEAM.yaml carries `coordination.queue.require_state_read: true` (off when absent), a DONE that declares
+state_change no without a valid state_read line is downgraded to partial with result.closing_note, never refused (a refusal would leave the unit claimed).
+
 They also refuse when this copy - or the pool it would decide on -
 sits under the system temp directory (issue #429): a pass worktree
 under /tmp can vanish mid-pass to the runtime's /tmp sweep, so a
@@ -405,7 +409,7 @@ FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
-                "claimed_count", "evidence", "state_read", "follow_up",
+                "claimed_count", "evidence", "state_read", "state_change", "closing_note", "follow_up",
                 "stats", "stats_missing", "stats_warnings"]
 # result.state_read (Steer A, 2026-11-24): the evidence a DONE that rests on a verified nothing-to-claim or nothing-to-do state carries, one line:
 # '<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>', for example 'Already claimed today (S1) | step 6 frame | 15:07:44Z'.
@@ -414,6 +418,17 @@ RESULT_ORDER = ["status", "started_at", "finished_at",
 STATE_READ_FRAME = re.compile(r"^(step\s*\d+(\s+frame)?|[\w.\-/]+\.(png|jpe?g|webp|md|json|csv|txt))$", re.I)
 STATE_READ_TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d:[0-5]\dZ$")
 STATE_READ_PATTERN = "<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>"
+
+
+def normalise_state_change(text):
+    """('yes'|'no'|'', problem): the self-declared result.state_change (the Coach's proposal, 2026-11-24): did the unit change the game state?
+    Anything but yes or no is not stored and says so; it never refuses a completion."""
+    value = " ".join((text or "").split()).lower()
+    if not value:
+        return "", ""
+    if value in ("yes", "no"):
+        return value, ""
+    return "", "state_change must be yes or no"
 
 
 def state_read_problem(text):
@@ -811,8 +826,8 @@ def _team_file():
     return os.environ.get(TEAM_FILE_ENV) or os.path.join(os.path.dirname(_tool_dir()), "TEAM.yaml")
 
 
-def _scan_require_forecast(text):
-    """Without PyYAML: the value of coordination.queue.require_forecast by indentation, or None."""
+def _scan_require_forecast(text, wanted="require_forecast"):
+    """Without PyYAML: the value of coordination.queue.<wanted> by indentation, or None."""
     stack = []
     for raw in text.splitlines():
         if not raw.strip() or raw.lstrip().startswith("#"):
@@ -823,7 +838,7 @@ def _scan_require_forecast(text):
             stack.pop()
         if not value.strip():
             stack.append((indent, key))
-        elif [k for _i, k in stack] == ["coordination", "queue"] and key == "require_forecast":
+        elif [k for _i, k in stack] == ["coordination", "queue"] and key == wanted:
             return value.split("#", 1)[0].strip()
     return None
 
@@ -854,6 +869,39 @@ def team_requires_forecast():
         except Exception as exc:
             result = (False, f"cannot parse {path} ({type(exc).__name__}): require_forecast is treated as off")
     _TEAM_SWITCH.update(loaded=result, path=path)
+    return result
+
+
+_TEAM_STATE_READ = {"loaded": None, "path": None}
+
+
+def team_requires_state_read():
+    """(value, warning): the TEAM.yaml switch coordination.queue.require_state_read (Steer A, 2026-11-24); off when the file or the key is absent. On, a
+    DONE that declares state_change no without a valid state_read line is downgraded to partial with a note (never refused)."""
+    path = _team_file()
+    if _TEAM_STATE_READ["loaded"] is not None and _TEAM_STATE_READ["path"] == path:
+        return _TEAM_STATE_READ["loaded"]
+    result = (False, None)
+    try:
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+    except FileNotFoundError:
+        text = None
+    except (OSError, UnicodeDecodeError) as exc:
+        result = (False, f"cannot read {path} ({type(exc).__name__}): require_state_read is treated as off")
+        text = None
+    if text is not None:
+        try:
+            try:
+                import yaml
+                data = yaml.safe_load(text) or {}
+                raw = ((data.get("coordination") or {}).get("queue") or {}).get("require_state_read")
+            except ImportError:
+                raw = _scan_require_forecast(text, "require_state_read")
+            result = (raw is True or str(raw).strip().lower() in ("true", "yes", "on", "1"), None)
+        except Exception as exc:
+            result = (False, f"cannot parse {path} ({type(exc).__name__}): require_state_read is treated as off")
+    _TEAM_STATE_READ.update(loaded=result, path=path)
     return result
 
 
@@ -5184,6 +5232,24 @@ def cmd_complete(args):
             stats[key.strip()] = _scalar(value)
     rule_stats, rule_warnings = _rule_stats(args)
     stats.update(rule_stats)                                    # the flags win over a --stat of the same name
+    state_read_raw = getattr(args, "state_read", "") or ""
+    summary_raw = args.summary or ""
+    if not state_read_raw.strip():                 # no flag: a `state_read:` line inside the summary counts (a line of its own, else the rest of the text after it)
+        found = re.search(r"(?mi)^[ \t]*state_read:[ \t]*(\S.*)$", summary_raw) or re.search(r"(?i)\bstate_read:[ \t]*(\S.*)$", summary_raw)
+        state_read_raw = found.group(1) if found else ""
+    # A summary with a line break would write its later lines as top-level frontmatter keys; folded to one line it stays whole and safe.
+    summary_text = " ".join(summary_raw.split()) if ("\n" in summary_raw or "\r" in summary_raw) else summary_raw
+    state_read = " ".join(state_read_raw.replace("\r", "\n").split())        # stored on one line
+    state_read_bad = state_read_problem(state_read_raw) if state_read else ""
+    state_change, state_change_bad = normalise_state_change(getattr(args, "state_change", ""))
+    closing_note = ""
+    if (args.status == "done" and state_change == "no" and (not state_read or state_read_bad)
+            and team_requires_state_read()[0]):
+        # coordination.queue.require_state_read (on): a 'nothing to do' DONE without a valid evidence line is a partial (Steer A's rule),
+        # downgraded here with a note and never refused - a refused complete would leave the unit claimed until its lease expires.
+        closing_note = ("downgraded from done to partial: state_change no needs a valid state_read line "
+                        f"({'missing' if not state_read else 'does not fit the pattern'}) while require_state_read is on")
+        args.status = "partial"
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
@@ -5195,15 +5261,6 @@ def cmd_complete(args):
     blocker_bad = blocker_category_not_enum(stats)
     over_cap = isinstance(duration, int) and \
         duration > UNIT_CAP_SECONDS
-    state_read_raw = getattr(args, "state_read", "") or ""
-    summary_raw = args.summary or ""
-    if not state_read_raw.strip():                 # no flag: a `state_read:` line inside the summary counts (a line of its own, else the rest of the text after it)
-        found = re.search(r"(?mi)^[ \t]*state_read:[ \t]*(\S.*)$", summary_raw) or re.search(r"(?i)\bstate_read:[ \t]*(\S.*)$", summary_raw)
-        state_read_raw = found.group(1) if found else ""
-    # A summary with a line break would write its later lines as top-level frontmatter keys; folded to one line it stays whole and safe.
-    summary_text = " ".join(summary_raw.split()) if ("\n" in summary_raw or "\r" in summary_raw) else summary_raw
-    state_read = " ".join(state_read_raw.replace("\r", "\n").split())        # stored on one line
-    state_read_bad = state_read_problem(state_read_raw) if state_read else ""
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -5215,6 +5272,8 @@ def cmd_complete(args):
         "claimed_count": len(claimed_items),
         "evidence": args.evidence or "",
         **({"state_read": state_read} if state_read else {}),
+        **({"state_change": state_change} if state_change else {}),
+        **({"closing_note": closing_note} if closing_note else {}),
         "follow_up": args.follow_up or "none",
         "stats": stats,
         "stats_missing": missing,
@@ -5297,6 +5356,10 @@ def cmd_complete(args):
     write_unit(path, fields, body)
     os.rename(path, target)
     print(f"completed {args.unit} with status {args.status}")
+    if closing_note:
+        print(f"note: {args.unit} {closing_note}")
+    if state_change_bad:
+        print(f"warning: {args.unit} closes with a state_change that is not yes or no - not stored; it never refuses the closing")
     if state_read_bad:
         print(f"warning: {args.unit} closes with a state_read that does "
               f"not fit '{STATE_READ_PATTERN}': {state_read_bad} - "
@@ -6636,6 +6699,10 @@ def main(argv=None):
                    help="for a DONE that rests on a verified nothing-to-claim or nothing-to-do state, one line: "
                         "'<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>' (stored as result.state_read; "
                         "a pattern mismatch is a warning, never a refusal)")
+    p.add_argument("--state-change", default="",
+                   help="self-declared: yes if the unit changed the game state (a claim taken that paid, a build or research started, "
+                        "a batch collected, a truck dispatched or settled, a fight, a conversion), no if it found nothing to do; stored as "
+                        "result.state_change (anything else is not stored, with a warning, never a refusal)")
     p.add_argument("--follow-up", default="")
     p.add_argument("--stat", action="append", default=[])
     p.add_argument("--rules-used", default="",
