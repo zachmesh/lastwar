@@ -12,4 +12,5 @@ builders,1,2026-11-23T23:20:12.651Z,2026-11-23T23:22:18.031Z,0,builder 1 free 23
 builders,1,2026-11-23T23:20:16.651Z,2026-11-23T23:23:21.851Z,0,builder 2 free 23:20:16.65Z; started the Lv.27 ground to Lv.28,no
 builders,1,2026-11-23T23:20:19.651Z,2026-11-23T23:29:34.806Z,0,builder 3 free 23:20:19.65Z; started the Oil Well Lv.20 to 21,no
 builders,1,2026-11-23T23:20:23.651Z,2026-11-23T23:39:45.957Z,0,"builder 4 free 23:20:23.65Z; started the Lv.28 ground to Lv.29 (2338-queue-run.md), after the food pre-conversion 2333",no
-builders,1,2026-11-24T08:01:46Z,,0,"Oil Well Lv.22 finishes 08:01:46Z by the builders panel, inside the 08:00Z to 08:25Z quiet window: the next start can come at 08:25Z at the earliest; open, counts once the cutoff passes it (the quiet-window minutes are subtracted)",no
+builders,1,2026-11-24T08:01:46Z,2026-11-24T08:12:33.334Z,0,"Oil Well Lv.22 finished 08:01:45.8Z; claimed 08:08:46Z (inside the 08:00Z to 08:25Z window: released by cu, final yes 08:08:30Z, a sanctioned exception); Complete tap 08:11:06.986Z; Lv.22 to 23 started 08:12:33.3Z: 10.79 builder-min, of which 9.35 finished and waiting for the Complete tap (0808-queue-run.md)",no
+builders,1,2026-11-24T17:27:27.5Z,,0,"Oil Well Lv.23 finishes 17:27:27.5Z by the builders panel; idle until the next level starts; open, counts once the cutoff passes it",no

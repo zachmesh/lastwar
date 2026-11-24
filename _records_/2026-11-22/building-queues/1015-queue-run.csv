@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 10:15:16.906Z, run started 10:15:17.928Z), 33 s after the previous run's last click (10:14:36Z; the carry case); owner idle 7339 s: wait 0",2026-11-24T10:15:17.928Z,see growth/0054-waits.csv
+left-column badges,"first frame 10:15:23.6Z: tram (107,580) NONE; pickup none (a '?' bubble beside it is not a badge); radar dish none; hammer 4/4; flask 2/2",2026-11-24T10:15:23.641Z,tram badge rule: none: not tapped
+builder 1,"Drill Ground to Lv.26: Time Left 2d 10:55:01 at 10:15:35.8Z: ends 2026-11-26T21:10:37Z; busy, button Speed Up (not pressed)",2026-11-24T10:15:35.785Z,tag text [G]: queue row
+builder 2,Drill Ground to Lv.27: 6d 12:06:11: ends 2026-11-30T22:21:47Z; busy,2026-11-24T10:15:35.785Z,
+builder 3,Oil Well (Lv.22 to 23 in progress; the row reads 'Lv.22 Oil Well'): 07:11:52: ends 2026-11-24T17:27:28Z; busy,2026-11-24T10:15:35.785Z,matches 17:27:27.5Z
+builder 4,Drill Ground to Lv.28: 11d 01:43:43: ends 2026-12-05T11:59:19Z; busy,2026-11-24T10:15:35.785Z,
+gift box,none seen over a building,2026-11-24T10:16:00Z,no finished item waiting
+lab 1,"Lv.0 Food Output V upgrade in progress, Time Left 07:13:58 at 10:15:55.9Z: ends 2026-11-24T17:29:54Z",2026-11-24T10:15:55.863Z,
+lab 2,"Lv.0 Iron Output V upgrade in progress, 16:23:00: ends 2026-11-25T02:38:56Z",2026-11-24T10:15:55.863Z,
+idle,0 of 4 builders and 0 of 2 labs idle; slots_idle 0; slots_blocked_by_capacity 0,2026-11-24T10:15:56Z,
+Hospital,"tag Hospital Lv.25; Severely Wounded 1,364 of 7,999 (one Lv.10 row 1,364); Completed 5,306; buttons Collect, plus, minus and an info icon, none pressed; free room 7,999 - 1,364 - 5,306 = 1,329: unchanged since 02:07Z",2026-11-24T10:16:59Z,tag text Hospital Lv.25
+Total Power,"150,051,860",2026-11-24T10:17:17.680Z,"drags tried 0, cancelled 0"

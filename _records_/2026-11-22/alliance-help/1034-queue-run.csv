@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:34:24.633Z, run started 10:34:25.410Z), 48 s after the previous run's last click (the carry case); owner idle 8482 s: wait 0",2026-11-24T10:34:25.410Z,see growth/0054-waits.csv
+badges,"first frame 10:34:25.8Z: tram, pickup and radar dish none; the Alliance button with a red dot; no help bubble on the base",2026-11-24T10:34:25.834Z,tram badge rule: none
+before,"header 400/1,000; four rows: the owner's own Food Output V research request (30/30, 'Time reduced: 10:02:00', cannot be helped), an ally's Lv.26 Drone Parts Workshop, an ally's Coin Protection research, an ally's Lv.23 Iron Mine (second line cut off)",2026-11-24T10:34:48.794Z,tag text [G]: Help page
+Help All,"the green Help All pressed once (393,766); the three ally rows disappeared; no toast seen",2026-11-24T10:34:53.399Z,never an individual Help button
+after,"header 600/1,000; only the owner's own row left; Help All still green",2026-11-24T10:35:11.335Z,+200 points
+HUD,"food 131.3M, iron 765.1M, coin 24.9M, Total Power 150,051,860, gems 11,153, energy 84 to 85",2026-11-24T10:35:24.068Z,drags tried 0

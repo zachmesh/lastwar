@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:31:41.580Z, run started 10:31:42.353Z), 51 s after the previous run's last click (10:30:38Z, the carry case); owner idle 8320 s: wait 0",2026-11-24T10:31:42.353Z,see growth/0054-waits.csv
+badges,"first frame 10:31:48.8Z: tram, pickup and radar dish none",2026-11-24T10:31:48.811Z,tram badge rule: none
+duel day,Base Expansion; countdown 15:27:59 then 15:27:51 (ends about 2026-11-25T02:00Z); no day number shown,2026-11-24T10:32:01.915Z,tag text [G]: panel
+personal daily total,"5,439,000 beside the gold points icon on Today's Theme (no label)",2026-11-24T10:32:01.915Z,"4,992,000 at 06:31Z: +447,000 since (the 07:00Z donation pass, 10 taps)"
+target and gap,"3,600,000; gap -1,839,000 (exceeded)",,
+chests,"Today's Theme row 40,000, 150,000 and 540,000 with the bar full (more pages not opened; no 3,600,000 chest on the first page)",2026-11-24T10:32:01.915Z,
+day scores,"owner alliance 511,036,238 (58 percent), rival 373,920,451 (42 percent); the winner earns 2 Alliance Duel Score",2026-11-24T10:32:18.769Z,left side read as the owner alliance (unverified)
+weekly score,not read (Weekly Schedule not opened); Infinite Roulette tab not visible,,
+trophy icon,"a gold trophy bubble over the mid-base building at about (583,217), not in the right column; never tapped",2026-11-24T10:32:33.635Z,OD-20261123-01
+HUD,"Total Power 150,051,860; energy 84; red target icon badge 4 with a 00:00:30 countdown",2026-11-24T10:32:39.136Z,"drags tried 0, cancelled 0"

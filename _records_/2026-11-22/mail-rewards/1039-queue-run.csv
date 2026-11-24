@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:39:38.094Z, run started 10:39:38.890Z), 1 s after the previous record write and 2 minutes after the previous run's last click; owner idle 8793 s: wait 0",2026-11-24T10:39:38.890Z,see growth/0054-waits.csv
+badges,"first frame 10:39:45.5Z: tram, pickup and radar dish none",2026-11-24T10:39:45.498Z,tram badge rule: none
+rail,"red dots on Battle Report, Event, Regular and In-app Purchases; none on Alliance, System, Favorite; no gift icon on any category before or after",2026-11-24T10:39:57.150Z,tag text [G]: Mail category rail
+Event list,five unread mails with red dots (two 'Mega Exp...' from an ally and three train notices from allies) and one read mail ('Alliance Duel Individual Ranking'); no gift icons; Claim All blue; no mail titled Train arrival reward in the visible list,2026-11-24T10:40:06.117Z,not scrolled
+System list,"read system mails (president mails in several languages), no gift icon, Claim All blue: not pressed",2026-11-24T10:40:17.501Z,
+Alliance list,"read mails (donation rankings, zombie siege reports, an exercise mail, alliance markers), no gift icon, Claim All blue: not pressed",2026-11-24T10:40:31.247Z,
+claim,none pressed (no gift icon),,
+HUD,"diamonds 11,153; energy 85 to 86; Total Power 150,051,860; no TIPS popup after leaving Mail",2026-11-24T10:40:50.952Z,drags tried 0

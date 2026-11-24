@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 11:00:52.639Z, run started 11:00:53.442Z), 37 s after the previous record write and 1 minute after the previous run ended; owner idle 10067 s: wait 0",2026-11-24T11:00:53.442Z,see growth/0054-waits.csv
+badges,"first frame 11:00:58.8Z: tram, pickup (a '?' bubble beside it, not a badge) and radar dish none",2026-11-24T11:00:58.829Z,tram badge rule: none
+Your Tasks,"Assist Allies 0/5, Plunder Others 0/5; UR Rescue Missing Agent PERFECT; UR Capture the Oil Depot PERFECT; SSR Search for Missing Refugees PERFECT; SSR Provide Tech Support to Refugees PERFECT; a fifth card cut off (no scroll); no timer, no green Claim; Mega Refresh and Mega Deploy greyed; mode Normal",2026-11-24T11:01:11.195Z,tag text [G]: card list; the card timers: none (all claimed); the next claims come at the next daily set
+Ally Tasks,"tab badge 5; four UR 5-star ally cards each with a blue Assist button and rewards (a purple box x6, EXP 412.8K, iron 324.9K, food 324.9K); no timer on any card; a fifth card not visible; no Assist pressed",2026-11-24T11:01:29.304Z,a free step for a follow-up unit (Assist Allies 0/5)
+Others' Tasks,empty: 'No marked Secret Tasks. Please find one and share it to the Alliance Chat.',2026-11-24T11:01:35.665Z,
+claims,none pressed (no green Claim),,
+exit,"the back arrow (176,929); the base; a red target icon with a small countdown at the right edge",2026-11-24T11:01:59.096Z,"drags tried 0, cancelled 0"

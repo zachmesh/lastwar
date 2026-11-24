@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 06:22:53Z (wait 0),2026-11-24T06:22:53Z,see growth/0054-waits.csv
+before,"the base with no panel; level 30, energy 89; food 125.7M, iron 769.5M, coin 23.2M, oil 673.9K, a 26.72K counter, Total Power 150,046,960, gems 11,153; red dots on Alliance, Mail and Inventory",2026-11-24T06:23:05Z,tag text [G]: HUD
+avatar cluster,"the round portrait and a chest icon: no minutes number, no ready mark",2026-11-24T06:23:10Z,
+gate,"no gate figure and no white question-mark bubble; only a round white truck button near (146,649), not tapped; the strip behind the chat bar not visible",2026-11-24T06:23:10Z,the grey '?' marks are chat bubbles
+pressed,nothing (waits only),,no intake
+after,"the same: no survivor bubble, no panel; the red target icon 2 to 3",2026-11-24T06:23:30Z,

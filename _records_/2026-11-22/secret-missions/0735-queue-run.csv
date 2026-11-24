@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 07:35:49Z (the window opens 07:35:30Z; wait 0),2026-11-24T07:35:49Z,see growth/0054-waits.csv
+before,"title SECRET COMMAND POST read; oil counter 675.1K; Total Power 150,046,960; UR Capture the Oil Depot Lv5 with a green Claim (finished, no timer); UR Rescue Missing Agent, SSR Search for Missing Refugees and SSR Provide Tech Support to Refugees PERFECT; a fifth card cut off; Assist Allies 0/5, Plunder Others 0/5; Mega Refresh and Mega Deploy greyed",2026-11-24T07:36:09.388Z,tag text [G]: card list; the card was already finished at the first read (due about 07:35:46Z)
+Claim,"one tap on the green Claim (575,489) at 07:36:13.243Z",2026-11-24T07:36:13.243Z,the in-game Claim only
+rewards,"Iron 3.2M; Black Market Cash 40; Mystery Supply Box 67; Oil 6.0K x5 (the 30K oil, as items); Treasure Map Fragment #3 x2, #1 x2 and #5 x1; Food 3.2M; Hero EXP 4.1M",2026-11-24T07:36:16.073Z,popup dismissed by an empty tap at 07:36:21.955Z
+oil counter,"675.1K before and 675.1K after (read about 1 s after leaving): the oil reward is 5 items of 6.0K, not added to the counter; iron 771.2M to 774.5M and food 127.6M to 130.8M did rise",2026-11-24T07:36:58.520Z,the 30K oil sits in the Inventory as items (use is a later decision); no Use pressed
+after,the Oil Depot card PERFECT like the others; no timers or Claim buttons,2026-11-24T07:36:24.793Z,
+Mega Deploy,"one tap at 07:36:29.946Z (472,926): no popup, no toast, greyed; Perform Now not pressed",2026-11-24T07:36:32.807Z,nothing pending: NO NEW TIMERS
+next,the next secret card pair at the 4-hour start (unverified time; the cards went PERFECT at 02:05Z after the last pair),,
+HUD,"Total Power 150,046,960; drags tried 0, cancelled 0",2026-11-24T07:36:58Z,press nothing until 08:25Z

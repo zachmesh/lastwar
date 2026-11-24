@@ -39,4 +39,5 @@ Iron Output V (lab 2) was started 2026-11-23T14:00:54Z for 131,879 s and ends ab
 5. No other speed-ups. Read the oil counter.
 
 Up to two runs, 12 steps each. Tag text beside every number; none means [G].
+HUD taps: verify each HUD icon by its label or glyph in a frame before the tap.
 Cost cap, stated: 0.90 USD per run (the harness stops near 0.36 of it).

@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:26:36.686Z, run started 10:26:37.447Z), 33 s after the previous run's last click (10:26:08Z, the carry case); owner idle 8016 s: wait 0",2026-11-24T10:26:37.447Z,see growth/0054-waits.csv
+badges,"first frame 10:26:43.8Z: tram, pickup and radar dish none; hammer 4/4; flask 2/2",2026-11-24T10:26:43.797Z,tram badge rule: none
+coin,"available 1,798,660 to 0 (capacity bar 23,189,222 / 16,474,999); owned 23,189,222 to 24,989,115 (+1,799,893); 444.5K an hour",2026-11-24T10:27:08Z,tag text [G]: panel
+food,"available 2,729,767 to 0 (bar 128,627,888 / 49,642,724); owned 128,627,888 to 131,359,527 (+2,731,639); 674.9K an hour",2026-11-24T10:27:36Z,
+iron,"available 2,518,719 to 0 (bar 762,672,864 / 59,840,549); owned 762,672,864 to 765,194,177 (+2,521,313); 622.7K an hour",2026-11-24T10:28:07Z,
+oil,"available 5,219 to 0; owned 676,020 to 681,261 (+5,241); 1.3K an hour (the Oil Well Lv.22); the Collect button sat at (553,526), not (553,501)",2026-11-24T10:28:46Z,"Details, Go, Use and the $19.99 Oil Special Offer Pack not touched"
+HUD,"coin 24.9M, food 131.3M, iron 765.1M, oil 681.2K, energy 83, diamonds 11,153, Total Power 150,051,860 unchanged",2026-11-24T10:28:56.905Z,"drags tried 0, cancelled 0"

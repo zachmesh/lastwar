@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 06:35:16Z (wait 0),2026-11-24T06:35:16Z,see growth/0054-waits.csv
+gift level before,"Gift Level 29, progress 39,142,110 of 257,900,000; Regular badge 448 and Premium badge 27, each tab with a green Claim All",2026-11-24T06:35:40Z,tag text [G]: Alliance Gifts
+Regular Claim All,"448 Regular Alliance Gifts claimed (once): chest x41, gem item (5) x39, coin (600) x2.1K, iron (1.0K) x1.7K, 5m speed-up x41, bread (1.0K) x2.2K, iron (10K) x29, bread (10K) x29, coin (6.0K) x29",2026-11-24T06:36:00Z,dialog of 9 item types
+Premium Claim All,"27 Premium Alliance Gifts claimed (once): paw ticket x2, medal (2.5K) x1, gem item (100) x1, an item x17, a chest x10, an item x8, a coin pile x44, medal (50) x5, gem item (5) x1, 5m speed-up x20 three times",2026-11-24T06:36:10Z,dialog of 12 item types; four icons unnamed
+re-check,"both tabs without a red dot, Claim All gone, the visible rows Claimed; progress 39,159,390 of 257,900,000",2026-11-24T06:36:20Z,only the top four rows of each tab seen (no scroll)
+HUD,"Total Power 150,046,960; Alliance, Mail and Inventory red dots remain; Events 1, Thanksgiving 2",2026-11-24T06:36:25Z,drags tried 0

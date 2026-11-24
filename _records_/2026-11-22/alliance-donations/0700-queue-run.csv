@@ -1,0 +1,16 @@
+item,value,read_utc,note
+wait,none: start at 07:00:39Z (the window opens 07:00Z; wait 0),2026-11-24T07:00:39Z,see growth/0054-waits.csv
+entry count,"10/30, coin Donate green at 1000, no timer; node Quick Construction 9/10; the dialog first on screen at the 07:01:06.5Z frame, read as 10/30 from the 07:01:11.915Z frame",2026-11-24T07:01:11.915Z,"BEFORE any Donate tap; predicted 10 (03:57:57.39Z anchor, no tap since): matched, no flag"
+tap 1,07:01:18.556Z: count 9/30,2026-11-24T07:01:19.757Z,
+tap 2,07:01:24.786Z: 8/30,2026-11-24T07:01:27.236Z,
+tap 3,07:01:32.490Z: 7/30,2026-11-24T07:01:34.538Z,
+tap 4,07:01:40.069Z: 6/30 (a Crit x3 shown),2026-11-24T07:01:41.256Z,
+tap 5,07:01:47.615Z: the animation hid the count; read 5/30 at the 07:01:57.231Z frame,2026-11-24T07:01:57.231Z,
+tap 6,07:02:02.261Z: 4/30,2026-11-24T07:02:04.668Z,
+tap 7,07:02:09.429Z: 3/30,2026-11-24T07:02:11.853Z,
+tap 8,07:02:20.407Z: 2/30,2026-11-24T07:02:21.609Z,
+tap 9,"07:02:29.207Z: 1/30 read live at the 07:02:30.412Z frame, before the last tap",2026-11-24T07:02:30.412Z,1/30 read live before the last tap
+tap 10 LAST,07:02:37.116Z: the coin Donate went grey with a timer,2026-11-24T07:02:44.864Z,"10 clicks logged at (495,756); the model counted 9: the log is authoritative; no diamond Donate; 10,000 coins"
+first timer,"00:15:12 read at 07:02:44.864Z: ends 07:17:56.9Z; grid 07:17:57.397Z (03:57:57.397Z + 3 x 1,200 s): within 0.5 s",2026-11-24T07:02:44.864Z,one read; the count line hidden behind the timer
+witness,Tech EXP bar 4.8M/8.0M and the node 9/10 unchanged,2026-11-24T07:02:45Z,not required
+close,"the dialog X, the Techs X and the Alliance back arrow closed in the run; the base shows",2026-11-24T07:03:31Z,drags tried 0

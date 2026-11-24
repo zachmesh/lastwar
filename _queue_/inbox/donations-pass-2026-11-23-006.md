@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-24T03:40:52Z
 expires_at: 2026-11-24T15:15:00Z
 planned_for:
-not_before: 2026-11-24T14:00:00Z
+not_before: 2026-11-24T14:03:00Z
 window: donation pass about 3.5 hours after the previous
 est_minutes: 10
 serves: PL-04

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:11:25.102Z, run started 10:11:25.895Z); owner idle 7108 s; my previous run's last click 10:08:45Z (2.7 minutes earlier): wait 0; the first click 10:11:34.100Z (the shop cart) is the model's own turn",2026-11-24T10:11:25.895Z,see growth/0054-waits.csv
+badges,left-column badges not read in this run (the HUD hidden by the shop),,
+Free Supply,Claimed before and after,2026-11-24T10:11:52.982Z,tag text [G]: Weekly Pass tab
+S2 Drone Components,Legendary: 'Already claimed today' with Renew $4.99; Remaining 5d 15:48:12 then 5d 15:47:23; not touched,2026-11-24T10:11:52.982Z,
+S1 Drone Parts,"Epic: Remaining 5d 15:48:12 then 5d 15:47:23; Daily Pickup a gear item x15, Total x105; a green Claim with a red dot and no price, partly cut off at the bottom edge of the page",2026-11-24T10:11:52.982Z,
+drag,"ONE drag from (394,700) to (394,380) at 10:11:56.553Z: the page did not move; the Claim stayed clipped",2026-11-24T10:11:59.447Z,"drag tried 1, cancelled 0; the same as 05:01Z"
+taps,"two taps on the visible top of the Claim at (572,914) at 10:12:10.183Z and (572,913) at 10:12:26.575Z: no popup, no change (the two-tap limit)",2026-11-24T10:12:29.466Z,five taps in all across 04:43Z to 10:12Z have changed nothing
+result,blocked by route: Claim clipped; the S1 pickup (gear item x15) is unclaimed,2026-11-24T10:12:38.375Z,"Legendary Claim All, Renew, Buy and Go never touched"
+diamonds,"11,153 before and after",2026-11-24T10:12:46Z,

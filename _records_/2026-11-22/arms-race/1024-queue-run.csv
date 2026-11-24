@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 10:24:33.403Z, run started 10:24:34.178Z), 57 s after the previous run's last click (10:23:50Z, the carry case); owner idle 7894 s: wait 0",2026-11-24T10:24:34.178Z,see growth/0054-waits.csv
+badges,"first frame 10:24:34.6Z: tram, pickup and radar dish none; hammer 4/4; flask 2/2",2026-11-24T10:24:34.614Z,tram badge rule: none
+route,"the Events icon (673,160); the hub opened on Black Market Challenge; the cut-off left tab (157,155) tapped (no drag): the page 'Base Building'",2026-11-24T10:24:50.045Z,tag text [G]: Events hub; the tab label was not read
+phase,Base Building; timer 03:35:11,2026-11-24T10:24:50.045Z,
+points,owner account 0 points; rank 10,2026-11-24T10:24:50.045Z,
+point chests,"6,250 (2,360 rubies), 12,500 (4,800 rubies) and 30,000 (11,800 rubies): all locked, no bounce, no red dot",2026-11-24T10:24:50.045Z,not tapped
+counter chest,"0 of 2, not full",2026-11-24T10:24:50.045Z,
+scoring rows,Increase Building Power by 1pt +1 (a chevron button); Use 1-min Construction Speed-up +10; Buy Packs containing Diamonds +30: none a safe free path; none pressed,2026-11-24T10:24:50.045Z,
+HUD,"food 128.6M, iron 762.6M, coin 23.1M, oil 676.0K, energy 83, Total Power 150,051,860",2026-11-24T10:25:05Z,drags tried 0

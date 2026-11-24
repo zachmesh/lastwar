@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 06:45:02Z (wait 0; the window opens 06:45Z),2026-11-24T06:45:02Z,see growth/0054-waits.csv
+Alliance list,"Daily Donation Rankings (4h ago); Zombie Siege Report (Alliance) (4h ago); Zombie Siege Report (Individual) (4h ago); an Alliance Exercise mail (7h); two New Alliance Marker mails (17h); every row an opened-envelope icon, no gift or attachment mark",2026-11-24T06:45:40Z,tag text [G]: Alliance mail list
+mail 1 Alliance,"date 2026-11-23 17:48:00 (about 01:48:00Z); text 'Congrats Commander, your Alliance defended 1623 waves from a Lv.10 Stronghold, earning extra supplies'; rewards: five tiles: 37 (a 300.0K tile), 80, 80, 45.5M and 4.0K; ranking table: the top three commanders Perfect at wave 20, a fourth row Perfect, the list cut off below",2026-11-24T06:45:55Z,one swipe moved it a few pixels; the rest of the ranking unread
+mail 2 Individual,"date 2026-11-23 17:48:00; text 'Congratulations! You held off 20 waves from a Lv. 10 Stronghold, seizing the following supplies:'; rewards five tiles each with a green check: a blue tile 50 over 180, three 1-minute tiles 300, 300 and 600, an orange gear tile 25",2026-11-24T06:46:43.245Z,the whole mail fit one frame; no ranking lines
+troops and casualties,"not in either mail (no troops sent, no wounded or dead counts)",,the horde report and the Hospital are the only loss data
+claim control,"no attachment, Claim or Collect button in either mail; only the back arrow, star and bin (not pressed)",2026-11-24T06:46:43Z,"the rewards were paid by the 04:04:55Z Alliance Claim All (EXP 45.5M, coin 300.0K, supply chest x80, coin chest x80, medal 4.0K, gear x25, three 1-minute speed-ups 600/300/300, badge 184): the same counts"
+cooldown text,none in either mail,,
+banner,the first run (20261124T064502Z-c9cee9) stopped after mail 1 on an ordinary scrolling announcement banner it took for an unrecognised toast; the second run read mail 2,2026-11-24T06:46:07Z,"no dialog, no other app"
+drag count,"drags tried 1 (the mail 1 swipe from the left margin), cancelled 0",,

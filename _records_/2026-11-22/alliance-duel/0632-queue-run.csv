@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 06:32:13Z (wait 0),2026-11-24T06:32:13Z,see growth/0054-waits.csv
+tan trophy bubble,"no on two looks: the tan bubble at (600,710) holds a green vehicle icon, not a trophy cup",2026-11-24T06:32:30Z,tag text [G]: HUD
+other bubbles,"the Alliance shield (670,708) with a red dot; Mail (670,785); Inventory (670,850); no Help bubble",2026-11-24T06:32:30Z,
+mid-base trophy,"no gold trophy over a building this time; a small gold nugget bubble near (171,512)",2026-11-24T06:32:35Z,never tapped
+taps,none,,waits only; drags 0
+HUD,"Total Power 150,046,960; gems 11,153; Warzone Duel 19:27:23",2026-11-24T06:32:40Z,

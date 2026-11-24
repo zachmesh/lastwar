@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-24T04:33:00Z
+modified: 2026-11-24T06:58:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -85,3 +85,4 @@ sidecars the runs cite.
 - [1215-partial-collect-evidence.md](1215-partial-collect-evidence.md) - barracks collects look partial: the Lv.24 evidence, the tests registered, the correction to 1206.
 - [idle-blocked-audit.csv](idle-blocked-audit.csv) - the re-check of every earlier 'idle, blocked' read for finished batches we did not collect.
 - [partial-collect-test-prereg.csv](partial-collect-test-prereg.csv) - the three outcomes of the 11-26T21:10Z room test, Lv.30 pressed first, registered before the data.
+- [zombie-siege-ledger.csv](zombie-siege-ledger.csv) - the Zombie Siege's reward against its cost, and the hospital exposure of a repeat.
