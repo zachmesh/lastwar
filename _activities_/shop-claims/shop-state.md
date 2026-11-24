@@ -1,8 +1,8 @@
 ---
 title: Shop claims shop state on 2026-11-23
 created: 2026-11-23T15:05:38Z
-modified: 2026-11-23T15:05:38Z
-version: 0.1.0
+modified: 2026-11-24T13:07:41Z
+version: 0.2.0
 description: The shop as the operator's passes run read it on 2026-11-23 - the tab row, the owned weekly passes, Free Supply and the Weekly Deal packs, as dated notes under the older pages
 ---
 
@@ -21,3 +21,5 @@ S2 Drone Components and S1 Drone Parts both show Remaining 6d 11:07:32 (ends 202
 ## The rest of the shop
 
 Free Supply reads Claimed, not by this run. Weekly Deal shows three priced packs only (Oil Special Offer $19.99, Valor Badge $99.99, Base Upgrade $19.99), never tapped. The Super Monthly Pass shows Buy x1 and Switch, not owned. The free pack of 2026-11-22 has a timer that ends about 02:00Z on 2026-11-24 (21:15:42 at 04:44:11Z), so it is plausibly not due again before the reset; one timer, unverified. No price, Renew, Take All, Buy, Switch or Go was tapped.
+
+2026-11-24: the S1 Drone Parts pickup, one tap at 13:02:09.8Z on a plain Claim, paid Drone Parts x15; reads Already claimed today (`_records_/2026-11-22/shop-claims/1301-queue-run.md`).
