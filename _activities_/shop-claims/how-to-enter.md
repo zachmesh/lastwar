@@ -1,8 +1,8 @@
 ---
 title: How to enter
 created: 2026-11-23T07:18:19Z
-modified: 2026-11-24T12:01:35Z
-version: 0.4.0
+modified: 2026-11-24T12:18:36Z
+version: 0.5.0
 sequence: 3
 description: Base screen cart icon opens the shop on the HOT DEALS tab row.
 ---
@@ -24,4 +24,4 @@ description: Base screen cart icon opens the shop on the HOT DEALS tab row.
 
 2026-11-23: the cart now opens on Official Event and the tab row has no Hot Sale Packs tab; see [shop state](shop-state.md).
 
-2026-11-24: the press-drag from (500,750) above starts on a card and is not the method: three card-start drags did not move the Weekly Pass page. One drag from the blank right margin, (685,650) to (685,400), moved it a long way and over-scrolled it (`_records_/2026-11-22/shop-claims/1150-queue-run.md`); Page Down did nothing; a 70 px margin drag, (685,330) to (685,260), moved it 0 px (`_records_/2026-11-22/shop-claims/1158-queue-run.md`). So: a drag that starts on a card is read as a card gesture and moves nothing; start on the blank right margin (x about 685), one drag, a frame after. The distance is under test; an over-scroll is corrected by one drag back, its distance untested.
+2026-11-24: the press-drag from (500,750) above starts on a card: not the method. Measured here (S1 Claim at y 915, `_records_/2026-11-22/coach/drag-distance-table.csv`): three card-start drags of 320 px moved 0; margin drags of 70 px (`_records_/2026-11-22/shop-claims/1158-queue-run.md`) and 135 px (`_records_/2026-11-22/shop-claims/1211-queue-run.md`) moved 0; 250 px (`_records_/2026-11-22/shop-claims/1150-queue-run.md`) flung the page out of view. So: a drag that starts on a card is a card gesture; start on the blank right margin (x about 685), one drag, a frame after. The threshold lies between 135 and 250 px: 135 px or less moves nothing, and no distance brings the claim into view without the fling. An over-scroll's correction distance is untested.

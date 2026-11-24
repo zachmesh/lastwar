@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-24T11:59:07Z
+modified: 2026-11-24T12:18:36Z
 level: L1
-version: 1.67.0
+version: 1.68.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -100,7 +100,7 @@ Goal: claim every free shop item due and spend nothing.
 - Pass list will not scroll - fix: press-drag 500,750 to 500,300. `_records_/2026-11-10/shop-claims/1836-queue-run.md`
 
 ## Open questions
-- Are the Iron and Coin cards below the fold owned? test: press-drag, read both; run by operator.
+- Are the Iron and Coin cards below the fold owned? test: a 250 px fling (parked, CU-768); run by operator.
 - What is the G tab, and did Hot Sale Packs move? test: drag the tab bar; run by operator.
 
 ## Numbers
