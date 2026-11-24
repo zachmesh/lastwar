@@ -1,8 +1,8 @@
 ---
 title: Troop training errata
 created: 2026-11-23T13:46:17Z
-modified: 2026-11-23T13:46:17Z
-version: 0.1.0
+modified: 2026-11-24T04:18:34Z
+version: 0.2.0
 description: The corrections to the Troop training articles, moved word for word from the rule digest to keep it under 300 words
 ---
 
@@ -19,3 +19,4 @@ Unverified until a live read settles each; articles stay verbatim, the newer gov
 - day-20261031-p4 "live again for requeue": day-20261031-p5 (2026-11-22), two non-reproductions.
 - day-20261031-p1 "left for an owner decision": superseded by OD-20261123-05 (_records_/retro/owner-decisions-log/od-20261123-05.md), then OD-20261031-03 (owner): troop and barracks untouched, no Quick Dispatch tap; a march is a red line.
 - how-it-is-p1 "Keep every barracks busy": bounded 2026-11-23 by the growth start rule (_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md): queues filled at the highest tier from surplus above the reserves (_records_/2026-11-22/team-operations/2340-growth-charter-draft.csv); no speed-ups.
+- day-20261031-p2 (2026-11-09 1330) "Lv.27 is idle and blocked": superseded 2026-11-24, the toast at room 0 fits both an empty queue and a finished batch, and a collect admits what fits; one pistol press per read decides (finished-batch-lesson.md, digest rule 5).
