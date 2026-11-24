@@ -1,7 +1,7 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-23T21:26:00Z
+modified: 2026-11-24T01:12:00Z
 level: L2
 version: 0.20.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
@@ -42,4 +42,4 @@ Respawn on the HARNESS meter (`session-relay inspect`, not the seat's estimate) 
 ## Open owner decisions
 
 - OD-20261123-21 (second device): the owner's phone donations raise the odds, not an answer: keep OPEN.
-- CU-721 (computer-use tree): the cu write-up is due before 21:30Z to Steer A or B; no worktree and no change to the pinned checkout until he answers; it would bring CU-720 (the gate stops counting our clicks).
+- CU-721 APPROVED (OD-28): worktree under computer-use-wt created by cu-integrator in a 08:00Z window; the Toolsmith restarts between runs; OD-27 (wait 0) ends then.

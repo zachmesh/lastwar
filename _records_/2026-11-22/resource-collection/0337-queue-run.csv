@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 03:37:25Z (wait 0),2026-11-24T03:37:25Z,see growth/0054-waits.csv
+start,the World map was showing (the previous run left it there): the BASE button tapped once first,2026-11-24T03:37:40Z,
+coin,"available 786,644 to 0; owned 20,395,115 to 21,182,992 (+787,877); 444.5K an hour",2026-11-24T03:38:00Z,tag text [G]: panel
+food,"available 1,193,335 to 0; owned 121,884,054 to 123,079,262 (+1,195,208); 674.9K an hour",2026-11-24T03:38:20Z,
+iron,"available 1,099,345 to 0; owned 765,771,168 to 766,872,240 (+1,101,072); 622.7K an hour",2026-11-24T03:38:40Z,
+oil,"available 2,194 to 0; owned 668,639 to 670,833 (+2,194); 1.2K an hour",2026-11-24T03:38:55Z,
+HUD,"coin 21.1M, food 123.0M, iron 766.8M, oil 670.8K, energy 106, diamonds 11,113, Total Power 149,755,698 unchanged",2026-11-24T03:39:05Z,

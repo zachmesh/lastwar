@@ -15,3 +15,7 @@ Oil Well chain -010,11-27 11:25Z,no,180,1235,after QW4,clear
 Food Output V Complete,11-24 17:30Z,no,545,870,after QW4,clear
 Iron Output V Complete,11-25 02:39Z,no,1094,321,before QW4,clear
 Lv.30 T10 batch complete,11-24 11:18Z,no,173,1242,after QW4,clear
+"Oil Well Lv.22 real finish (panel end, replaces the estimate)",11-24 08:01Z,yes,,,QW4,"INSIDE QW4: 1.8 min after its start, 23.2 min before its end; the next start waits to 08:25Z, 23.2 builder-minutes, about 280 power-equivalent at Lv.22 to 23's per-builder-day"
+"Drill Ground Lv.26 to 27 completes (after the 29,440 speed-up minutes)",11-26 21:10Z,no,,,after QW4 of 11-26 by 12.8 h; before QW4 of 11-27 by 10.8 h,clear
+Drill Ground Lv.27 to 28 completes,11-30 22:21Z,no,,,after QW4 of 11-30 by 14.0 h,clear
+Drill Ground Lv.28 to 29 completes,12-05 11:59Z,no,,,after QW4 of 12-05 by 3.6 h,clear

@@ -40,7 +40,7 @@ OD-20261123-20: TRADE TRUCKS ONLY; no other PvP. Look ONCE, never loop. Read the
 
 1. Intercity Trade, Others' Trucks: read the list once, no refresh unless its button reads Free.
 2. TARGET: a gold (UR) or purple (SSR) truck, a UR 500-badge stack in EITHER half, guard under Squad 1 (25.61M), arrival over 30 minutes away. Four fights: x9, x3 of 6, 0 of 6, x6 of 9: the half does not decide. PREFER the card with the MOST shards; the opened card decides.
-3. With a target: CASUALTY GUARD first: read the Hospital Lv.25 figures behind its tag's orange middle button (free room = 7,999 minus wounded minus 'Completed'; 2,329 at 16:22Z); STOP under 1,000: 'blocked by capacity: hospital room'. Never Collect, Heal or Speed Up. Quick Plunder once, Battle once: ONE fight per unit.
+3. With a target: CASUALTY GUARD first: read the Hospital Lv.25 figures behind its tag's orange middle button (free room = 7,999 minus wounded minus 'Completed'; 1,329 at 02:07Z, wounded 1,364); STOP under 1,000: 'blocked by capacity: hospital room'. Never Collect, Heal or Speed Up. Quick Plunder once, Battle once: ONE fight per unit.
 4. Per fight record: shards won; per item the share of the cargo taken; the card's shard count and stack slots; troops wounded; the count; Total Power. Two fights in a row each wounding over 100: write a stop.
 
 If another scan finished under 15 minutes ago, close this one skipped: 'too soon'.

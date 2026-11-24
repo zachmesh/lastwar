@@ -7,8 +7,9 @@ training,1,2026-11-22T18:05Z,,0,"Lv.24 barracks idle since its batch was collect
 training,1,2026-11-22T00:00Z,2026-11-22T17:58Z,0,Lv.30 idle until requeued 17:58Z on 11-22,unknown
 training,1,2026-11-22T00:00Z,2026-11-22T09:34Z,0,Lv.27 idle until requeued 09:34Z on 11-22,unknown
 training,1,2026-11-23T19:56:34Z,,0,"Lv.27 T9 x726 batch finished 19:56:34Z and cannot be collected: 'Drill Ground Full: Unable to add more units' at 19:59:22Z (1958-queue-run.md); the slot reads idle, really blocked; open",yes
-builders,1,2026-11-24T02:17:53Z,,0,"Oil Well Lv.21 finishes 2026-11-24T02:17:53Z by the builders panel; idle until the next level starts; open, counts once the cutoff passes it",no
+builders,1,2026-11-24T02:17:53Z,2026-11-24T02:25:21.917Z,0,Oil Well Lv.21 finished 02:17:53.2Z; claimed 02:18:26Z; the Lv.21 to 22 upgrade started 02:25:21.9Z (0218-queue-run.md): the hand-off idle 7.48 builder-min,no
 builders,1,2026-11-23T23:20:12.651Z,2026-11-23T23:22:18.031Z,0,builder 1 free 23:20:12.65Z (1806-queue-run.md); started the Lv.26 ground to Lv.27,no
 builders,1,2026-11-23T23:20:16.651Z,2026-11-23T23:23:21.851Z,0,builder 2 free 23:20:16.65Z; started the Lv.27 ground to Lv.28,no
 builders,1,2026-11-23T23:20:19.651Z,2026-11-23T23:29:34.806Z,0,builder 3 free 23:20:19.65Z; started the Oil Well Lv.20 to 21,no
 builders,1,2026-11-23T23:20:23.651Z,2026-11-23T23:39:45.957Z,0,"builder 4 free 23:20:23.65Z; started the Lv.28 ground to Lv.29 (2338-queue-run.md), after the food pre-conversion 2333",no
+builders,1,2026-11-24T08:01:46Z,,0,"Oil Well Lv.22 finishes 08:01:46Z by the builders panel, inside the 08:00Z to 08:25Z quiet window: the next start can come at 08:25Z at the earliest; open, counts once the cutoff passes it (the quiet-window minutes are subtracted)",no

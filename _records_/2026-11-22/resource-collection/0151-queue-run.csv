@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 01:51:03Z (wait 0),2026-11-24T01:51:03Z,see growth/0054-waits.csv
+coin,"available 668,091 to 0; owned 22,190,173 to 22,860,115 (+669,942); 444.5K an hour; capacity bar 16,474,999 (owned above it, Collect worked)",2026-11-24T01:52:00Z,1.5 hours since 00:22Z
+food,"available 1,014,288 to 0; owned 124,691,957 to 125,709,054 (+1,017,097); 674.9K an hour",2026-11-24T01:52:20Z,
+iron,"available 935,870 to 0; owned 776,731,840 to 777,671,168 (+939,328); 622.7K an hour",2026-11-24T01:52:40Z,
+oil,"available 1,800 to 0; owned 666,839 to 668,639 (+1,800); 1.2K an hour",2026-11-24T01:53:00Z,last collect 00:22Z
+HUD,"coin 22.8M, food 125.7M, iron 777.6M, oil 668.6K, energy 85, diamonds 11,113, Total Power 148,769,946 before and after",2026-11-24T01:53:20Z,"Total Power is 1,647,000 under the 150,416,946 of 00:50Z: unexplained, not from this run"

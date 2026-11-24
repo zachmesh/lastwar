@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 01:48:02Z (the window opens 01:48:00Z; wait 0),2026-11-24T01:48:02Z,see growth/0054-waits.csv
+count read 1,"Donation Count 4/30; coin Donate (right) green, no cooldown timer; node Quick Construction 9/10",2026-11-24T01:48:36.549Z,the first dialog frame; inside the window 01:48:00Z to 01:55:00Z
+count read 2,Donation Count 4/30; coin Donate green; no timer,2026-11-24T01:48:44.579Z,
+prediction,4 = 1 + floor((01:48:36.5Z - 00:37:57.17Z) / 20 min) = 1 + floor(3.53),2026-11-24T01:48:36.549Z,"matched, no difference"
+Tech EXP and Tech Donation Today,"Tech EXP 4.7M of 8.0M; Tech Donation Today 8,550 (unchanged since 00:33Z)",2026-11-24T01:48:44.579Z,
+taps,"Alliance shield (01:48:11.3Z), Techs (01:48:25.1Z), node (01:48:33.6Z), dialog X (01:48:49.3Z), Techs X (01:48:57.6Z), Alliance back arrow (01:49:06.2Z); neither Donate button pressed",,nothing spent
+base after,"BASE, no panel; a toast 'Alliance Gifts received!' and a timed event icon near the Alliance button",2026-11-24T01:49:10Z,

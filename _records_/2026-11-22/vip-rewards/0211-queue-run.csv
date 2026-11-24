@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 02:11:29Z (wait 0),2026-11-24T02:11:29Z,see growth/0054-waits.csv
+VIP page before,"VIP13, 1,680,440/2,000,000 points; 'You've logged in 6 days in a row. Collect 160 VIP points tomorrow.'; Daily Freebie a green Claim with no price (not gated: the timer had ended about 02:00:30Z); a chest icon at the top right with a red dot; VIP Exclusive offer $99.99 not pressed",2026-11-24T02:11:52.659Z,tag text [G]: VIP page
+Claim,"one press on the Claim button at 02:11:56.596Z (click 564,658)",2026-11-24T02:11:56.596Z,a plain in-game Claim
+popup,"Congratulations: orange puzzle-piece item x2, orange resource crate x13, grey metal crate x13, gold coin crate x13; dismissed by an empty tap at 02:12:18Z",2026-11-24T02:11:58.812Z,the crates are unopened
+after,"VIP points 1,680,440/2,000,000 unchanged; Daily Freebie a grey timer 23:47:42 at 02:12:11.9Z: ends about 2026-11-25T01:59:54Z",2026-11-24T02:12:11.864Z,the Freebie gives no VIP points
+chest icon,the top-right chest icon showed a red dot: the Login Chest state still unread (not pressed),2026-11-24T02:11:52Z,ledger line 13 unverified

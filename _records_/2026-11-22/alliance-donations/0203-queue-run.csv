@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 02:03:01Z (the window opens 02:03:00Z; wait 0),2026-11-24T02:03:01Z,see growth/0054-waits.csv
+count read 1,"Donation Count 5/30; coin Donate (right) green, no timer; node Quick Construction 9/10",2026-11-24T02:03:29.666Z,the first dialog frame was 02:03:24.5Z; inside the window 02:03:00Z to 02:09:00Z
+count read 2,Donation Count 5/30; coin Donate green; no timer,2026-11-24T02:03:35.265Z,
+outcome,"(a) NO RESET: the count is 5 = READ A (4 at 01:48:36.5Z) plus the 01:57:57.4Z grid point; not 0 with a timer, not 30; B is not equal to A (no flag)",2026-11-24T02:03:35Z,the 02:00:00Z reset did not touch the donation count
+Tech EXP and Tech Donation Today,"Tech EXP 4.7M of 8.0M; Tech Donation Today 8,550 (unchanged since 00:33Z and READ A)",2026-11-24T02:03:35Z,the daily figure did not reset at 02:00Z
+taps,"Alliance shield (02:03:10.6Z), Techs (02:03:15.5Z), node (02:03:21.7Z), dialog X (02:03:40.0Z), Techs X (02:03:48.8Z), Alliance back arrow (02:03:55.0Z); neither Donate button pressed",,nothing spent

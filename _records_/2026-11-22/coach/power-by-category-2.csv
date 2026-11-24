@@ -1,0 +1,15 @@
+category,line,value_2026-11-23_0747Z,value_2026-11-24_0332Z,change,attribution
+hero,Hero Level,42492064,42503484,11420,other device (the owner's phone) [D]
+hero,Decorations and Building Stats,7376484,7510251,133767,other device (the owner's phone) [D]
+hero,Gear,5771364,5775201,3837,other device (the owner's phone) [D]
+hero,Hero Skill,4282510,4282510,0,
+hero,Hero Tier,4009282,4009495,213,other device (the owner's phone) [D]
+hero,Exclusive Weapon,2182608,2182608,0,
+hero,Wall of Honor,127100,127100,0,
+hero,Hero Power total,66241412,66390649,149237,other device [D]
+drone,Drone Power total,5840675,5842475,1800,other device [D]
+building,Building Power total,9749025,9776425,27400,"+4,200 OUR Oil Well Complete at 02:24:23Z; +23,200 other device [D]"
+unit,Unit Power,63512120,62846672,-665448,"+981,552 OUR collect of the Lv.27 T9 x726 batch at 03:30:53Z (room freed by the siege) -1,647,000 the 1,000 wounded: exactly -665,448"
+tech,Tech Power,4868577,4899477,30900,"+7,800 OUR two research Completes; +23,100 other device [D]"
+total,HUD Total Power,150211809,149755698,-456111,sums match the HUD at both reads
+CHECK,"other-device step 197,337 = hero +149,237 + drone +1,800 + building +23,200 + tech +23,100",,,197337,"equals the +197,337 measured 11:53Z to 12:51Z on 11-23; within hero, Decorations and Building Stats alone is +133,767"

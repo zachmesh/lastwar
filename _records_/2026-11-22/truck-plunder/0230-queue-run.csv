@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 02:30:41Z (wait 0),2026-11-24T02:30:41Z,see growth/0054-waits.csv
+trade icon,"PRESENT at (107,580): a round blue tram icon above the white pickup (107,647) and the radar dish (107,714); three reads",2026-11-24T02:31:00Z,the 02:00Z reset returned it (absent since 16:39Z)
+hospital guard,"tag Hospital Lv.25; Severely Wounded 1,364/7,999; Completed 5,306; free room 1,329 (not under 1,000); Collect never pressed",2026-11-24T02:33:00Z,tag text Hospital Lv.25
+Total Power,"148,774,146",2026-11-24T02:33:30Z,
+tap,"one tap on the trade icon (107,580) at 02:34:16.5Z; the frame right after still showed the base",2026-11-24T02:34:16.5Z,the Intercity Trade screen never read
+FOREGROUND SWITCH,"macOS UserNotificationCenter (a new process, no bundle id) in front from 02:34:19Z; the guard cancelled the run at step 2 (cost 0.024915); nothing pressed, nothing answered; LastWar not frontmost",2026-11-24T02:34:20Z,"told the coordinator at 02:35Z; screencapture unavailable, so the alert text is unread"
+scan and fight,"not run: the Plunder Count, the four cards and any fight not read",,"no plunder, no wounded"

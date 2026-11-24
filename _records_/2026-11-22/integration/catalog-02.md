@@ -37,3 +37,6 @@ Back to the [folder index](INDEX.md).
 - [PR 943](landing-pr-943.md) - owner-idle-launcher, the owner-idle value in the launch path (OD-27)
 - [PR 944](landing-pr-944.md) - cu-launcher-note, the owner-idle 0 moves to the launcher line
 - [PR 945](landing-pr-945.md) - fourteenth records snapshot, units of 20:50Z to 22:45Z, OD-27 with catalog 04
+- [PR 946](landing-pr-946.md) - fifteenth records snapshot, units of 22:45Z to 00:55Z, builders starts
+- [PR 947](landing-pr-947.md) - scribe handover 0.4.0, the CU-721 follow-up
+- [PR 948](landing-pr-948.md) - refill-reset, the 02:00Z reset does not touch the count or the grid

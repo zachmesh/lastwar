@@ -1,0 +1,10 @@
+step,room_free,basis
+before the siege (Drill Ground Full),about 0,'Drill Ground Full' refused every collect; derived [D]
+"after the 1,000 wounded left the army (01:15Z to 01:51Z)","about 1,000",the troops sit in the hospital
+after the Lv.27 T9 x726 batch collected whole (03:30:53Z),"about 274 = 1,000 - 726","no refusal; Total Power +981,552; consistent with room conserved [D]"
+the Lv.30 x793 batch (ends 11:18Z),needs 793: 519 more than the 274 free,will not fit now; fits when room reaches 793
+Lv.26 ground to 27 completes 2026-11-26T21:10:37Z,274 + 200 = 474,"+200 slots a level (panel Unit Count +7,200 to +7,400) [G]; still under 793"
+Lv.27 ground to 28 completes 2026-11-30T22:21:48Z,674,still under 793
+Lv.28 ground to 29 completes 2026-12-05T11:59:18Z,874,"793 fits from here, if nothing else changes (new troops, healing): the third level"
+"healing and collecting the 1,000 wounded","needs 1,000 room","do not heal now: a healed troop joins the 5,306 'Completed' pile and gains nothing until room exists"
+partial collect with room BELOW the batch size,untested,"the 726 was collected whole when room (1,000) covered it"

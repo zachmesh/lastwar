@@ -1,0 +1,26 @@
+item,value,read_utc,note
+wait,none: start at 01:29:33Z (wait 0),2026-11-24T01:29:33Z,see growth/0054-waits.csv
+1 Food bubbles,"NOT AT ZERO: six bread bubbles standing; panel Available 772,434",2026-11-24T01:30:30Z,fix-up harvest-2026-11-24-0137 (PL-16)
+2 Iron bubbles,"NOT AT ZERO: five standing; panel Available 710,119",2026-11-24T01:30:30Z,fix-up harvest-2026-11-24-0137
+3 Coin bubbles,"NOT AT ZERO: five standing; panel Available 510,639",2026-11-24T01:30:30Z,fix-up harvest-2026-11-24-0137
+4 EXP bubbles,"UNREADABLE: a book-like icon at (437,296) not identified",2026-11-24T01:30:30Z,closed unverified R1
+5 Titanium bubbles,"UNREADABLE: not seen, not identified",2026-11-24T01:30:30Z,closed unverified R1
+6 Armed Truck,"UNREADABLE: a truck-type icon at (630,740) not identified as an armed-truck bubble, no timer read",2026-11-24T01:30:30Z,closed unverified R1
+7 Drone components,AT ZERO: Drone Components pass 'Already claimed today' (Remaining 6d 0:28:09),2026-11-24T01:32:30Z,
+8 Upgrade ore,UNREADABLE: no reward popup named ore in this unit,2026-11-24T01:36:00Z,closed unverified R1
+9 Screws,UNREADABLE: no screw line read,2026-11-24T01:36:00Z,closed unverified R1
+10 Shop Daily Pickup and Free Supply,AT ZERO: Free Supply Claimed; no Daily Pickup tab; Super Monthly Pass offer only,2026-11-24T01:32:30Z,
+11 Pass daily pickups,AT ZERO: both pass cards Already claimed today,2026-11-24T01:32:30Z,
+12 VIP Daily Freebie,"NOT CLAIMABLE: grey timer 00:27:32 at about 01:33Z, ends about 02:00:30Z; VIP 13, 1,680,200 of 2,000,000",2026-11-24T01:33:00Z,timer-gated until after the reset; nothing to enqueue before it
+13 VIP login chest,UNREADABLE: no control labelled Login Chest; a chest icon at the top right without state,2026-11-24T01:33:00Z,closed unverified R1
+14 Daily activity chests,"UNREADABLE this read: activity points 220, chests too small to tell claimed from claimable; carried from the 00:50Z tap read (all five opened as contents previews only: claimed); daily refresh in 00:26:49",2026-11-24T01:33:30Z,closed unverified R1 (carried from daily-missions/0049)
+"15 Mail, six categories","AT ZERO for gifts: no gift icon on the seven categories; red dots on Battle Report, Event, Regular and In-app Purchases are unread mails",2026-11-24T01:35:00Z,no category opened
+16 Alliance gifts,"NOT AT ZERO: Gift Level 29, 36,247,530 of 257,900,000; Regular Claim All 73; Premium all Claimed",2026-11-24T01:35:20Z,fix-up gifts-2026-11-24-0137 (upkeep)
+17 Alliance donations,"NOT AT ZERO: Donation Count 3 of 30 (Quick Construction 9/10), coin Donate green at 1,000",2026-11-24T01:35:40Z,fix-up donations-2026-11-24-0137 (PL-04); READ A at 01:47:30Z follows
+18 Trucks,"UNREADABLE: the trade icon (107,580) is absent",2026-11-24T01:36:30Z,closed unverified R1
+19 Alliance train,UNREADABLE: no Boarding banner or locomotive icon; the station panel is not reachable,2026-11-24T01:36:30Z,closed unverified R1
+20 Radar,"AT ZERO: level 13, 0/40, no Claim All, no task; 12 tasks restore in 01:07:30",2026-11-24T01:31:00Z,
+21 Duel total against 3.6M,"AT ZERO: personal total 35,163,439 against 3,600,000 (gap -31,563,439); Radar Training, 00:29:02 left at the read",2026-11-24T01:31:10Z,the closing figure
+22 Crystal,"NAMED STATUS: not located, age 30 days from 2026-10-25 (owner-named open item)",2026-11-24T01:36:30Z,rule R5
+23 Glittering Market,"NAMED STATUS: not located, age 24 days from 2026-10-31 (owner-named open item)",2026-11-24T01:36:30Z,rule R5
+Total Power,"150,412,005 at the start of run A, 150,408,711 at its end, 150,385,653 in B1, 150,356,007 in B2 and C: a fall of 60,939 since the 150,416,946 read at 00:50Z; no press of this sweep can cause it (only panel opens and back arrows)",2026-11-24T01:37:00Z,"probable cause: the owner-set Zombie Siege auto-search at 01:15Z (troops lost), unverified"
