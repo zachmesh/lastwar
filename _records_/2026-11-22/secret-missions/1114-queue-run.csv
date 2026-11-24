@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"run 1: start requested 11:14:08.852Z, run started 11:14:09.555Z (0.7 s; owner idle 10862 s); run 2: requested 11:16:29.490Z, started 11:16:30.237Z (0.7 s; 17 s after run 1 ended, the carry case): wait 0",2026-11-24T11:14:09.555Z,see growth/0054-waits.csv
+badges,"11:14:14.5Z and 11:16:34.5Z: tram (107,580) NONE, pickup none, radar dish none; at the end a red target icon with a count 1 and a countdown 00:00:38 at the right of the base, none at the start",2026-11-24T11:14:14.497Z,tram badge rule: none; not tapped
+March Queues before,"World map panel 'March Queues 0/3': only Add Queue, no march, no timer (not tapped)",2026-11-24T11:14:30.440Z,tag text [G]: World map
+Squad 1 before,"HERO LIST (title), tabs All and three unit-type icons; no Squad 1 tab: cards carry a small squad number in the top-right corner; five show '1' (the four in the top row and the first of the second row), all Lv.150; no on-march, wounded, task, locked or idle mark; one small red thumbs-up (a recommend badge) on the fourth card of the top row",2026-11-24T11:14:51.295Z,nothing pressed on the Heroes screen
+title,"SECRET COMMAND POST; tabs jeep (selected), Hidden Treasures, Ghost Ops; Assist Allies 0/5, Plunder Others 0/5; Ally Tasks badge 5",2026-11-24T11:15:20.262Z,
+Ally cards before,"four visible UR 5-star ally cards, each with a blue Assist button reading only 'Assist'; no task text line, no hero or squad mention, no timer, no cost or requirement line; each with the same four reward tiles: a purple Mystery Supply Box x6, Hero EXP 412.8K, iron 324.9K, food 324.9K",2026-11-24T11:15:39.259Z,"no price, diamond or item"
+the press,"ONE tap on the top card's Assist button (575,507) at 11:17:05.552Z",2026-11-24T11:17:10.195Z,one press in the unit
+result,"banner 'ASSIST SUCCESSFUL' with a plain reward popup: iron 324.9K, Mystery Supply Box x6, food 324.9K, Hero EXP 412.8K; no picker, confirm or price; popup dismissed by an empty tap (680,850)",2026-11-24T11:17:16.929Z,
+after,"Assist Allies 1/5; the top card gone; the Ally Tasks badge 4; four cards remain with Assist buttons, none pressed",2026-11-24T11:17:33.381Z,a scrolling president banner ignored
+March Queues after,"0/3, no march listed",2026-11-24T11:18:00.558Z,unchanged
+Squad 1 after,"five Lv.150 heroes, no state marks (the same thumbs-up badge); still available",2026-11-24T11:18:27.231Z,unchanged
+Total Power,"150,051,860 before and after",2026-11-24T11:18:49.518Z,"drags tried 0, cancelled 0"

@@ -1,7 +1,7 @@
 ---
 title: Iron line for the plan
 created: 2026-11-23T16:09:00Z
-modified: 2026-11-23T16:09:00Z
+modified: 2026-11-24T11:33:00Z
 version: 1.0.0
 level: L3
 description: The iron needs to the HQ 31 start against held iron, output and chests, with the conversion rule
@@ -27,6 +27,10 @@ grounded_in:
 ## Supply [M]
 
 Held 1.067G; output 622.7K an hour (14.9M a day), 0.83G in 56 days: 1.9G. Plunder pays about 0.7M a fight (2.8M a day at 4 fights). Typed Iron Chests: about 4.4G on 11-22, unread today (H117). Truck settlements pay 3.8M a UR truck if the trade screen works.
+
+## Supply per day, with the Assist and plunder
+
+Iron: harvest 14.9M, plunder about 2.9M (4 fights), Assist Allies about 1.6M (5 presses at 324.9K; an existing daily stream, the counter read 5 of 5 on earlier days, so it is a baseline term my model had left out, counted once and only in this line (the harvest rate of 14.9M is the panel production rate and excludes claimed rewards), not new income; the daily count may be limited by new cards), own trucks 0 to 19M [S1, unproven]: 19.4M a day without trucks, about 0.97G in 50 days against the 2.85G need with 0.9G held, so the gap without the typed stock falls from about 1G to about 0.8G after 0.2G of Assist and plunder over 50 days. Food is the same except harvest 16.2M. Hero EXP from the Assist (413K a press) is not power at the cap (about 200 power a day).
 
 ## Reading
 

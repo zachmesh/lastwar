@@ -32,10 +32,12 @@ This unit is the regular `trucks`: Trucks - settle returned trucks via Truck Det
 
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (routes in `_records_/2026-11-22/queue-planning/2700-routes.csv`). Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`.
 
-## Brief (planner, TRADE CYCLE A: settle, dispatch and plunder on one badge, Steer A 10:16Z)
+## Brief (planner, TRADE CYCLE A, Steer A 10:16Z, 11:33Z and 11:45Z)
 
 serves: PL-18
 
-Do the TRADE CYCLE exactly as `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` says: read it first; its steps 0 to 4 (the Hospital before the tram tap, then settle, dispatch, plunder, close). THIS CYCLE: about 14:15Z: the UR (back 14:07:11Z) and the SSR (14:13:31Z) have returned: SETTLE both; DISPATCH the last TWO of today's five (count to 5/5); then, on Others' Trucks, PLUNDER up to TWO fights (the screen's 'Your Plunder Count Today' decides, never arithmetic).
-NO badge: close 'badge absent: no tap' (the Coordinator re-dispatches 15 minutes later, at most 3 tries). Up to THREE runs, 25 minutes in all, ENDING BY 15:00Z (the SR returns 14:59Z: cycle B's entry). THE TRADE SCREEN STAYS OPEN across the runs of this unit: do NOT go to the base between runs; each continuation run's first frame names the screen. Record per fight the guard, the quality, the cargo and the loot; after closing, read the Hospital free room again. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+Do the TRADE CYCLE as `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` says: read it first; steps 0 to 4. THIS CYCLE: the UR (back 14:07Z) and the SSR (14:13Z) have returned: SETTLE both; DISPATCH the last TWO of today's five (count to 5/5); then, on Others' Trucks, PLUNDER up to TWO fights ('Your Plunder Count Today' decides, never arithmetic).
+NO badge: close 'badge absent: no tap'. Up to THREE runs, 25 minutes, ENDING BY 15:00Z. THE TRADE SCREEN STAYS OPEN across the runs: no trip to the base between runs; each run's first frame names the screen. Per fight record guard, quality, cargo, loot; after closing re-read the Hospital free room.
+CLOSING STEP 6, the one exception to 'never History' (Steer A 11:33Z): AFTER the fights, BEFORE the back arrow, ONE tap on the 'History' button (top right of the plunder list), a frame: write the screen's TITLE, its TABS if any, and the FIRST ROWS' text and dates exactly as read (kind: dispatch or plunder, when, result, reward or loot). Press NOTHING in it (no row, Recover, refresh or filter). Then up to TWO WHEEL scrolls on the list (no drag), a frame after each: write the OLDEST date shown; if the list does not move write 'wheel inert on the History list'. Close by back arrow or X (one tap); no second visit.
+May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 Cost cap, stated: 0.90 USD.

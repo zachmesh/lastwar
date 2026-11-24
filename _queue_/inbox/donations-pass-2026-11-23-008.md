@@ -1,18 +1,18 @@
 ---
-unit: donations-pass-2026-11-23-005
+unit: donations-pass-2026-11-23-008
 regular: donations
 activity: alliance-donations
 segment: 1
 priority: 2
-created_at: 2026-11-24T03:40:51Z
-expires_at: 2026-11-24T11:45:00Z
+created_at: 2026-11-24T11:42:55Z
+expires_at: 2026-11-24T22:20:00Z
 planned_for:
-not_before: 2026-11-24T10:30:00Z
+not_before: 2026-11-24T21:05:00Z
 window: donation pass about 3.5 hours after the previous
 est_minutes: 10
 serves: PL-04
 chain_id: pass-2026-11-23
-chain_seq: 5
+chain_seq: 8
 attempts: 0
 max_attempts: 3
 claimed_by:

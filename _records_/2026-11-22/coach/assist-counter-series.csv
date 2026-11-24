@@ -1,0 +1,11 @@
+when,reading,source,who pressed
+"2026-10-25 to 2026-11-04, every visit","Assist Allies 5 of 5, full (one record: 'no assists needed or made today')","secret-missions 2320, 0149, 0657, 1057, 1457, 0257, 1345, 0952, 0545, 0248",not the unit that read it: someone filled it before each visit
+2026-11-23 04:49Z (11-22 20:49 PT),0/5 with 5 cards waiting,secret-missions 2049 (secrets-2026-11-22-1857),start of the day that began at the 02:00Z reset
+2026-11-23 about 05:29Z,"3/5: 'one ally assist taken, two more waiting'","team-operations/2132-tick, secret-missions 2129",the operator's claim runs
+2026-11-23 about 05:58Z,"5/5, the daily cap",secret-missions 2158,the operator's claim run 3
+2026-11-23 07:09Z to 22:57Z,"5/5, nothing due or no assist taken",secret-missions 2331 and later,cap reached
+2026-11-24 11:15Z,0/5 with four UR cards (nine hours after the 02:00Z reset),secret-missions/1114-queue-run.csv:6,none yet today
+2026-11-24 11:17Z,"1/5 after one press, reward measured",secret-missions/1114-queue-run.csv:8,the operator
+2026-11-24 11:23Z to 11:25Z,"1/5 to 5/5 (the daily cap) by four presses, one per card after reading it; four cards still showed an Assist button at the cap, none pressed; a pressed card reappeared at the bottom of the list with a 5-minute timer tile",secret-missions/1122-queue-run.csv:7-10,the operator
+CADENCE,"the cards respawn within minutes, so the daily cap of five, not the card supply, is the limit",,
+READING,"the daily five were pressed on the previous day (0 to 5 between 04:49Z and 05:58Z, by the operator's claim runs) and the counter read full on nearly every earlier visit: the Assist stream is an existing daily income; what is new is the first MEASURED reward; the extra presses today add value only if the five would otherwise be missed before the 02:00Z reset",,

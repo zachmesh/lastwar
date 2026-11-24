@@ -1,7 +1,7 @@
 ---
 title: Coin line
 created: 2026-11-23T23:08:00Z
-modified: 2026-11-24T04:01:00Z
+modified: 2026-11-24T11:25:00Z
 version: 1.0.0
 level: L3
 description: Dated coin conversions and the supply against need after the fixed Coin Chests were spent on the first three ground levels, with the order of chests
@@ -26,6 +26,8 @@ grounded_in:
 | large items | in time | Base Expansion 174.1M, HQ 31 433.5M, ground levels 83M to 161M |
 
 11-26 20:00Z to 21:00Z: about 60M coin (plain chests) and about 265M food (65 typed UR Food Chests) for the next ground level (decision 2026-11-24-03).
+
+Mystery Supply Boxes: 365 on the 11-22 read (stale, less the boxes sampled since) plus about 30 a day from the Assist, an existing stream, so the daily 30 is already in the stock trend; open the whole stack with one typed Use about 11-30, when the plain chests start; by the 10-box sample each box is about 0.9 SR choice chest (about 91K coin or 152K food), so 365 boxes are about 33M coin-equivalent and 30 a day about 2.7M.
 
 Order: plain Resource Chests first (about 125M in one Use; each also offered 10K food or iron), then SR, SSR and UR choice chests. A 1.0G choice-chest minimum is the only hard floor.
 

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 13:15:49.883Z, run started 13:15:50.762Z), 12 minutes after my previous run ended; owner idle 18155 s: wait 0",2026-11-24T13:15:50.762Z,see growth/0054-waits.csv
+badges,"first frame 13:15:55.1Z: tram, pickup and radar dish none (Events countdown 12:44:06); after closing none (12:43:43)",2026-11-24T13:15:55.093Z,tram badge rule: none
+panel,title MISSION; tabs Main Tasks and Daily Tasks; Daily Tasks already selected,2026-11-24T13:16:00.972Z,tag text [G]: Mission panel
+rows before,Greet Visitors 3/3 with a Claim at y about 430; Dispatch Trade Trucks 3/3 with a Claim at y about 552; Defeat any Doom Elite 0/1 and Recruit Heroes 0/1 each with a Go; a fifth row cut off at the bottom; activity points 90; tab badge 2,2026-11-24T13:16:00.972Z,"both Claims fully inside the panel with a plain 'Claim' label, so NOT below the fold"
+pan,"not needed, not made: no margin x, start y or fixed feature written; no batch sent; the composed-pan event not applicable",2026-11-24T13:16:00.972Z,drags tried 0
+Claim,"ONE tap at (574,430) at 13:16:09.559Z: no popup; activity points 90 to 130 (+10 and +30: both rows claimed by the one tap); the badge 2 to 1; both Claim rows gone; the second Claim not tapped",2026-11-24T13:16:11.767Z,'Dispatch Trade Trucks' counts the 10:05Z own dispatch
+rows after,"Defeat any Doom Elite, Recruit Heroes, Kill 5 zombies on World Map 0/5 and Attack a Commander 0/1, all with Go (none pressed); the 120 chest looks highlighted: not touched, its quantity unread",2026-11-24T13:16:11.767Z,the 120 chest is claimable at 130 points (for a unit)
+HUD,"gems 11,153, iron 766.8M, food 132.9M, coin 24.9M",2026-11-24T13:16:18.716Z,"closed with the back arrow (113,930)"

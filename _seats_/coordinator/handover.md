@@ -1,7 +1,7 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T10:52:00Z
+modified: 2026-11-24T11:50:00Z
 level: L2
 version: 0.21.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
@@ -22,7 +22,7 @@ Updated 2026-11-23 20:20Z (Mac UTC; quote `date -u`). Earlier versions are in gi
 
 ## Triggers (each dispatches the operator BY NAME; check the desktop lock first)
 
-Forecast gate LIVE since 10:48:40Z (TEAM 0.7.5; live step = checkout rebase; emergency override --no-require-forecast). Pending one-shots: 10:57Z group, 14:15Z settle and dispatch the last two trucks; 15:04Z settle the SR then the four plunder scans (guards: hospital free room at least 1,000, stop after a fight wounding over 50); 17:28Z Oil Well Lv.24 hand-off (Lv.23 ends 17:27:27Z), 17:30:30Z lab Complete; 11-26 21:11:30Z room collect. OD-27 ended 08:36Z (bridge on lastwar-bridge). The tram icon opens Intercity Trade only WITH a badge. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
+Forecast gate LIVE since 10:48:40Z (TEAM 0.7.5; live step = checkout rebase; emergency override --no-require-forecast). Pending one-shots: 14:03Z pass 006, 14:15Z cycle A, 15:04Z cycle B and scans, 17:28Z Oil Well Lv.24 hand-off, 17:30:30Z lab, 17:50Z pass 007, passes 008 to 011 (21:10Z, 00:40Z, 04:30Z, 07:10Z), trade cycles B2, C, D after cycle A's arrivals, 11-26 21:11:30Z room collect. Set a wake for every staged pass. OD-27 ended 08:36Z (bridge on lastwar-bridge). The tram icon opens Intercity Trade only WITH a badge. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
 
 ## Oil Well chain
 

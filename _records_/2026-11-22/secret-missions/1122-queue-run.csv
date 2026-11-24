@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"run 1: start requested 11:22:07.267Z, run started 11:22:08.214Z (0.95 s; owner idle 11339 s); run 2: requested 11:24:51.673Z, started 11:24:52.391Z (0.7 s; 14 s after run 1 ended, the carry case): wait 0",2026-11-24T11:22:08.214Z,see growth/0054-waits.csv
+badges,"11:22:13Z: tram (107,580) NONE, pickup none, radar dish none; after the panel closed (11:25:49Z) none; a red target icon at the right of the base came and went (00:00:58 countdown, badge 1 to 3)",2026-11-24T11:22:13.046Z,tram badge rule: none; not tapped
+March Queues start,"0/3, no march, no timer (Add Queue not tapped)",2026-11-24T11:22:24.952Z,tag text [G]: World map
+Squad 1 start,"HERO LIST: five cards with squad number 1, all Lv.150; the only mark a small red thumbs-up on the fourth top-row card",2026-11-24T11:22:46.499Z,nothing pressed on the Heroes screen
+title,SECRET COMMAND POST; Ally Tasks tab; Assist Allies 1/5; tab badge 4,2026-11-24T11:23:10.144Z,
+press 1,"top card (UR, a bare Assist button, tiles Mystery Supply Box x6, Hero EXP 412.8K, iron 324.9K, food 324.9K, no cost line): Assist (575,507) at 11:23:35.148Z: 'ASSIST SUCCESSFUL'; tiles iron 324.9K, Mystery Supply Box x6, food 324.9K, Hero EXP 412.8K; count 2/5; badge 4 to 3; popup dismissed by an empty tap (450,935)",2026-11-24T11:23:39.801Z,"no picker, price or item"
+press 2,"next top card (UR, same layout): Assist at 11:24:05.185Z: 'ASSIST SUCCESSFUL', the same four tiles; count 3/5; badge 3 to 2",2026-11-24T11:24:07.962Z,
+press 3,"run 2: top card (a UR 4-star, same tiles, no cost): Assist (576,507) at 11:25:04.389Z: 'ASSIST SUCCESSFUL' with a chat line of three helmets, same tiles; count 4/5; badge 1; the pressed card then reappeared at the bottom of the list with an extra 5m timer tile and an Assist button (observed, not pressed)",2026-11-24T11:25:07.157Z,"popup dismissed by an empty tap (110,750)"
+press 4,"next top card (same layout): Assist at 11:25:28.348Z: 'ASSIST SUCCESSFUL', the same tiles; count 5/5 (the cap); badge gone; four cards still show an Assist button, none pressed",2026-11-24T11:25:33.073Z,
+March Queues end,"0/3, no march, no timer",2026-11-24T11:26:02.791Z,unchanged
+Squad 1 end,"five cards with squad number 1, all Lv.150, the same thumbs-up mark; unchanged and available",2026-11-24T11:26:26.107Z,unchanged
+Total Power,"150,051,860 unchanged",2026-11-24T11:25:49Z,"drags tried 0, cancelled 0; ally names not recorded"

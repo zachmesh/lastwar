@@ -1,88 +1,52 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-24T06:58:00Z
-version: 1.0.0
-description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
+modified: 2026-11-24T13:50:00Z
+version: 1.1.0
+description: Execution records for coach on 2026-11-22, one line per note and the data and method files grouped by topic; the day index lists the runs.
 ---
 
 # coach records, 2026-11-22
 
-Execution records for coach on 2026-11-22, one file per run, with the CSV
-sidecars the runs cite.
+Records of the coach seat: one line per note, newest first, then the data and method files by topic. The day index lists the runs.
 
-## Runs
+## Notes
 
-- [2346-growth-baseline.md](2346-growth-baseline.md) - Story 871, the Total
-  Power series, net and daily-maximum pace, the 2026-11-09 outlier, the gain
-  ledger and the weekly tracking template.
-- [2350-daily-measurement.md](2350-daily-measurement.md) - the first daily
-  measurement report after the restart.
-- [2354-category-baseline.md](2354-category-baseline.md) - gain per day by
-  category against 2026-11-08, recorded versus unattributed, misses, resources.
-- [2358-fall-analysis.md](2358-fall-analysis.md) - the 2026-11-09 drop, the
-  whole-troop-unit finding, the event reconstruction and the collect-first rule.
-- [2359-coin-trace.md](2359-coin-trace.md) - where the coin went.
-- [2400-hospital-finding.md](2400-hospital-finding.md) - healed troops waiting behind the Drill Ground cap.
-- [0035-conformance-report-1.md](0035-conformance-report-1.md) - the six conformance KPIs and the drift list, first report.
-- [0055-run-articles-audit.md](0055-run-articles-audit.md) - audit of the 1,767 run articles against the records.
-- [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook quality baselines, pilot numbers lines, rotation.
-- [0125-numbers-line-format.md](0125-numbers-line-format.md) - the fixed numbers line, the ranking rule and the stat names.
-- [1537-flat-reduction-series.md](1537-flat-reduction-series.md) - the flat 6 h 32 min on the builders panel, the research 4 h 12 min, and the builders' start against 23:20:12Z.
-- [1327-pass-002-and-wait-cost.md](1327-pass-002-and-wait-cost.md) - donation pass 002 scored; the measured cost of the 300 s wait for the owner's D-066 note.
-- [1206-capacity-release-curve.md](1206-capacity-release-curve.md) - what a Drill Ground level releases: a step or a ramp, and the startable idle minutes.
-- [1012-builders-time-correction.md](1012-builders-time-correction.md) - the builders free tonight at 23:20Z, my files corrected, window margins of every trigger.
-- [0953-refill-test-score.md](0953-refill-test-score.md) - the refill test scored: H20 holds; the donations count by policy 2532.
-- [0925-coverage-since-cutover.md](0925-coverage-since-cutover.md) - honest serves coverage, the 14 no-serves units by name, hours serving nothing.
-- [0813-growth-partial-causes.md](0813-growth-partial-causes.md) - the growth partial rate, three causes and a fix each.
-- [0810-calibration-report-2.md](0810-calibration-report-2.md) - all closed continuous rows scored; the hit-rate rule called.
-- [0710-quiet-windows.md](0710-quiet-windows.md) - the four cu quiet windows in the plan triggers and the idle subtraction.
-- [0701-refill-check.md](0701-refill-check.md) - independent check of the donation refill datum and the pre-registered test.
-- [0631-calibration-update.md](0631-calibration-update.md) - the first guarded plunder fight scores four forecasts; interval hits 0 of 4.
-- [0501-conformance-report-2.md](0501-conformance-report-2.md) - the second conformance report at 12:58Z, published late.
-- [0501-calibration-report.md](0501-calibration-report.md) - calibration of the five closed forecasts.
-- [0255-tag-text-check.md](0255-tag-text-check.md) - the building-read tag text check and its baseline.
-- [0236-donations-count.md](0236-donations-count.md) - the donations units counted by policy 2532 and the witnessed tap totals.
-- [0145-cross-activity-review.md](0145-cross-activity-review.md) - review of the 100 cross-activity duplicate rows, the 14 not to mark, the donation 1/30 evidence.
+- [0348-daily-report-2026-11-24.md](0348-daily-report-2026-11-24.md) - daily report, 12:00Z 11-24
+- [0335-trade-history-read-spec.md](0335-trade-history-read-spec.md) - Trade History read specification
+- [1537-flat-reduction-series.md](1537-flat-reduction-series.md) - flat 6 h 32 min series
+- [1327-pass-002-and-wait-cost.md](1327-pass-002-and-wait-cost.md) - pass 002; the 300 s wait cost
+- [1215-partial-collect-evidence.md](1215-partial-collect-evidence.md) - barracks collects look partial
+- [1206-capacity-release-curve.md](1206-capacity-release-curve.md) - Drill Ground release, step or ramp
+- [1012-builders-time-correction.md](1012-builders-time-correction.md) - builders free 23:20Z correction
+- [0953-refill-test-score.md](0953-refill-test-score.md) - refill test scored, H20 holds
+- [0925-coverage-since-cutover.md](0925-coverage-since-cutover.md) - coverage since the cutover
+- [0813-growth-partial-causes.md](0813-growth-partial-causes.md) - growth partial causes and fixes
+- [0810-calibration-report-2.md](0810-calibration-report-2.md) - calibration report 2
+- [0710-quiet-windows.md](0710-quiet-windows.md) - quiet windows, idle subtraction
+- [0701-refill-check.md](0701-refill-check.md) - refill datum check and test
+- [0631-calibration-update.md](0631-calibration-update.md) - calibration update 1
+- [0501-conformance-report-2.md](0501-conformance-report-2.md) - conformance report 2
+- [0501-calibration-report.md](0501-calibration-report.md) - calibration report 1
+- [0255-tag-text-check.md](0255-tag-text-check.md) - tag text check
+- [0236-donations-count.md](0236-donations-count.md) - donations counted by policy 2532
+- [0145-cross-activity-review.md](0145-cross-activity-review.md) - cross-activity class-a review
+- [0125-numbers-line-format.md](0125-numbers-line-format.md) - numbers line format
+- [0119-playbook-baselines.md](0119-playbook-baselines.md) - playbook baselines, rotation
+- [0055-run-articles-audit.md](0055-run-articles-audit.md) - run articles audit
+- [0035-conformance-report-1.md](0035-conformance-report-1.md) - conformance report 1
+- [2400-hospital-finding.md](2400-hospital-finding.md) - hospital finding
+- [2359-coin-trace.md](2359-coin-trace.md) - coin trace
+- [2358-fall-analysis.md](2358-fall-analysis.md) - 11-09 fall analysis
+- [2354-category-baseline.md](2354-category-baseline.md) - category baseline, misses
+- [2350-daily-measurement.md](2350-daily-measurement.md) - daily measurement 1
+- [2346-growth-baseline.md](2346-growth-baseline.md) - growth baseline
 
-## Sidecars
+## Data and methods
 
-- [total-power-series.csv](total-power-series.csv) - 53 distinct readings.
-- [power-gain-ledger.csv](power-gain-ledger.csv) - 18 measured gain rows.
-- [power-by-category.csv](power-by-category.csv) - the 2026-11-08 and 2026-11-22 breakdowns.
-- [weekly-tracking.csv](weekly-tracking.csv) - W1 to W5 baseline, W6 blank.
-- [fixed-state-readings.csv](fixed-state-readings.csv) - slots A and B.
-- [misses-log.csv](misses-log.csv) - idle-slot reads on 2026-11-22.
-- [resource-deltas.csv](resource-deltas.csv) - food, iron and coin between the two snapshots.
-- [troop-events.csv](troop-events.csv) - queues, collections, heal and capacity events.
-- [power-dips.csv](power-dips.csv) - steps of 100,000 or more and the whole-unit test.
-- [candidate-causes.csv](candidate-causes.csv) - eight candidates, evidence, test, status.
-- [coin-series.csv](coin-series.csv) and [coin-windows.csv](coin-windows.csv) - coin reads and spend windows.
-- [conformance-kpis.csv](conformance-kpis.csv), [conformance-units.csv](conformance-units.csv), [slot-idle-minutes.csv](slot-idle-minutes.csv), [plan-triggers.csv](plan-triggers.csv) and [drift-list.csv](drift-list.csv) - the conformance loop data.
-- [run-articles-audit.csv](run-articles-audit.csv), [run-articles-audit-totals.csv](run-articles-audit-totals.csv) and [run-articles-audit-method.py](run-articles-audit-method.py) - the audit rows, totals by activity and the script.
-- [playbook-rules.csv](playbook-rules.csv), [playbook-activity-stats.csv](playbook-activity-stats.csv), [playbook-pilot-numbers.csv](playbook-pilot-numbers.csv), [playbook-worst-three.csv](playbook-worst-three.csv) and [playbook-rotation.csv](playbook-rotation.csv) - the playbook quality data.
-- [playbook-numbers-lines.csv](playbook-numbers-lines.csv), [playbook-stats-method.py](playbook-stats-method.py) and [queue-parse.py](queue-parse.py) - the numbers line for all 31 activities and the re-runnable script.
-- [run-articles-cross-activity-review.csv](run-articles-cross-activity-review.csv), [run-articles-not-superseded.csv](run-articles-not-superseded.csv) and [run-articles-cross-review-method.py](run-articles-cross-review-method.py) - the 100 reviewed rows, the 14 flagged and the script.
-- [donations-units-new-rule.csv](donations-units-new-rule.csv) - each donations unit with taps logged, taps witnessed and the new status.
-- [building-read-tag-check.csv](building-read-tag-check.csv) - building-read rows with and without their tag text, by file.
-- [forecast-calibration.csv](forecast-calibration.csv) - the five closed forecasts with in_range, error_pct and brier for the Strategist to enter.
-- [donation-timers.csv](donation-timers.csv) and [refill-test-prereg.csv](refill-test-prereg.csv) - the 89 recorded cooldown timers and the predictions registered at 15:02Z.
-- [slot-idle-intervals.csv](slot-idle-intervals.csv), [slot-idle-method.py](slot-idle-method.py) and [slot-idle-now.csv](slot-idle-now.csv) - idle intervals, the subtraction script and the 15:05Z result.
-- [forecast-calibration-2.csv](forecast-calibration-2.csv), [forecast-calibration-binary.csv](forecast-calibration-binary.csv) and [growth-partial-causes.csv](growth-partial-causes.csv) - the twelve continuous and ten binary rows scored and the growth causes.
-- [coverage-honest.csv](coverage-honest.csv) and [coverage-honest-method.py](coverage-honest-method.py) - coverage by window and the re-runnable script.
-- [refill-test-prereg-2.csv](refill-test-prereg-2.csv) - the predictions for pass 002, registered 18:00Z before the data.
-- [refill-pass-log.csv](refill-pass-log.csv) and [refill-check-method.py](refill-check-method.py) - the entry-count check of rule 8 for each donations pass, with the formula and the shortfalls.
-- [trigger-window-margins.csv](trigger-window-margins.csv) - the margin of each named trigger to the quiet windows.
-- [wait-aggregate-method.py](wait-aggregate-method.py) - the daily D-066 numbers: minutes waited per day by unit and by cause, from growth/0054-waits.csv.
-- [wait-cause-overrides.csv](wait-cause-overrides.csv) - a stated cause with its evidence for a wait row that cannot be classified from the row alone.
-- [throughput-method.py](throughput-method.py) - operator units per available hour before and after the restored 300 s wait, with the wait share, for Steer A's two-hour measurement.
-- [flat-reduction-series.csv](flat-reduction-series.csv) - preview, actual and difference for each build and research node, with the test registered before the next starts.
-- [daily-report-inputs-2026-11-24.csv](daily-report-inputs-2026-11-24.csv) - the headline numbers staged for the next daily report.
-- [refill-reset-test-prereg.csv](refill-reset-test-prereg.csv) - the three outcomes for pass 004 across the 02:00Z reset, registered before the data, with the confound and the one old datum.
-- [power-delta-decomposition.csv](power-delta-decomposition.csv) - the net power change since 06:48Z on 11-23 split into our gain, the other device and the external casualties.
-- [hospital-test-prereg.csv](hospital-test-prereg.csv) - the three readings of the 1,000-troop external power drop (wounded, dead, away), registered before the hospital read.
-- [power-by-category-2.csv](power-by-category-2.csv) and [drill-ground-room.csv](drill-ground-room.csv) - the component accounting that attributes the other-device step exactly, and the room timeline for the waiting troops.
-- [1215-partial-collect-evidence.md](1215-partial-collect-evidence.md) - barracks collects look partial: the Lv.24 evidence, the tests registered, the correction to 1206.
-- [idle-blocked-audit.csv](idle-blocked-audit.csv) - the re-check of every earlier 'idle, blocked' read for finished batches we did not collect.
-- [partial-collect-test-prereg.csv](partial-collect-test-prereg.csv) - the three outcomes of the 11-26T21:10Z room test, Lv.30 pressed first, registered before the data.
-- [zombie-siege-ledger.csv](zombie-siege-ledger.csv) - the Zombie Siege's reward against its cost, and the hospital exposure of a repeat.
+- Power and troops: [total-power-series.csv](total-power-series.csv), [power-gain-ledger.csv](power-gain-ledger.csv), [power-delta-decomposition.csv](power-delta-decomposition.csv), [power-by-category.csv](power-by-category.csv), [power-by-category-2.csv](power-by-category-2.csv), [power-dips.csv](power-dips.csv), [troop-events.csv](troop-events.csv), [resource-deltas.csv](resource-deltas.csv), [coin-series.csv](coin-series.csv), [coin-windows.csv](coin-windows.csv), [drill-ground-room.csv](drill-ground-room.csv), [hospital-test-prereg.csv](hospital-test-prereg.csv), [partial-collect-test-prereg.csv](partial-collect-test-prereg.csv), [zombie-siege-ledger.csv](zombie-siege-ledger.csv), [assist-rewards.csv](assist-rewards.csv), [assist-counter-series.csv](assist-counter-series.csv)
+- Refill and donations: [refill-pass-log.csv](refill-pass-log.csv), [refill-check-method.py](refill-check-method.py), [refill-test-prereg.csv](refill-test-prereg.csv), [refill-test-prereg-2.csv](refill-test-prereg-2.csv), [refill-reset-test-prereg.csv](refill-reset-test-prereg.csv), [donation-timers.csv](donation-timers.csv), [donations-units-new-rule.csv](donations-units-new-rule.csv)
+- Idle, builders and waits: [slot-idle-intervals.csv](slot-idle-intervals.csv), [slot-idle-minutes.csv](slot-idle-minutes.csv), [slot-idle-now.csv](slot-idle-now.csv), [slot-idle-method.py](slot-idle-method.py), [idle-blocked-audit.csv](idle-blocked-audit.csv), [builders-start-vs-free.csv](builders-start-vs-free.csv), [flat-reduction-series.csv](flat-reduction-series.csv), [trigger-window-margins.csv](trigger-window-margins.csv), [plan-triggers.csv](plan-triggers.csv), [wait-aggregate-method.py](wait-aggregate-method.py), [wait-cause-overrides.csv](wait-cause-overrides.csv), [wait-minutes-by-unit.csv](wait-minutes-by-unit.csv), [cu-gate-runs.csv](cu-gate-runs.csv), [throughput-method.py](throughput-method.py)
+- Coverage and conformance: [coverage-honest.csv](coverage-honest.csv), [coverage-honest-method.py](coverage-honest-method.py), [coverage-series-unrounded.csv](coverage-series-unrounded.csv), [conformance-kpis.csv](conformance-kpis.csv), [conformance-units.csv](conformance-units.csv), [daily-report-numbers.py](daily-report-numbers.py), [daily-report-inputs-2026-11-24.csv](daily-report-inputs-2026-11-24.csv), [drift-list.csv](drift-list.csv), [queue-parse.py](queue-parse.py), [weekly-tracking.csv](weekly-tracking.csv)
+- Forecasts and growth: [pickups-claimed-on-arrival.csv](pickups-claimed-on-arrival.csv), [own-priors-scored.csv](own-priors-scored.csv), [drag-distance-table.csv](drag-distance-table.csv), [forecast-calibration.csv](forecast-calibration.csv), [forecast-calibration-2.csv](forecast-calibration-2.csv), [forecast-calibration-binary.csv](forecast-calibration-binary.csv), [candidate-causes.csv](candidate-causes.csv), [growth-partial-causes.csv](growth-partial-causes.csv), [fixed-state-readings.csv](fixed-state-readings.csv), [misses-log.csv](misses-log.csv), [building-read-tag-check.csv](building-read-tag-check.csv)
+- Playbook and run articles: [playbook-rules.csv](playbook-rules.csv), [playbook-activity-stats.csv](playbook-activity-stats.csv), [playbook-pilot-numbers.csv](playbook-pilot-numbers.csv), [playbook-numbers-lines.csv](playbook-numbers-lines.csv), [playbook-rotation.csv](playbook-rotation.csv), [playbook-worst-three.csv](playbook-worst-three.csv), [playbook-stats-method.py](playbook-stats-method.py), [run-articles-audit.csv](run-articles-audit.csv), [run-articles-audit-totals.csv](run-articles-audit-totals.csv), [run-articles-audit-method.py](run-articles-audit-method.py), [run-articles-cross-activity-review.csv](run-articles-cross-activity-review.csv), [run-articles-cross-review-method.py](run-articles-cross-review-method.py), [run-articles-not-superseded.csv](run-articles-not-superseded.csv)

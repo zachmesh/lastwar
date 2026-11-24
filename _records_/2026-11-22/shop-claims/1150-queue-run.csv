@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 11:50:25.238Z, run started 11:50:26.263Z), 12 minutes after my previous run ended; owner idle 13035 s: wait 0",2026-11-24T11:50:26.263Z,see growth/0054-waits.csv
+badges,"first frame 11:50:32.9Z: tram, pickup and radar dish none; last frame 11:51:41Z none; event timer 14:09:29 then 14:08:20",2026-11-24T11:50:32.933Z,tram badge rule: none
+page before,"Free Supply 'Claimed'; the Legendary banner with a green Claim All (not touched); S2 Drone Components 'Already claimed today' with Renew $4.99; S1 Drone Parts Remaining 5d 14:09:01, Daily Pickup 15 (a gear icon), its green Claim at about (573,915) clipped at the bottom edge",2026-11-24T11:50:59.873Z,tag text [G]: Weekly Pass tab
+the drag,"ONE drag UP from the blank right margin (685,650) to (685,400) at 11:51:04.610Z: the page MOVED a long way: the S1 card scrolled up and out of view behind the Legendary banner; Iron and Coin pass cards now visible with Claim buttons at (573,642) and (573,879), not touched",2026-11-24T11:51:11.893Z,"drag tried 1, cancelled 0: the first drag since 05:01Z to move the page: it started on the blank margin; the earlier drags started at (394,700) on the card area"
+the key,ONE Page Down key press: the page did not move; the S1 card still out of view,2026-11-24T11:51:25.756Z,key count 1
+Claim,not tapped: the S1 Claim never sat fully inside the page (the drag over-scrolled and the key moved nothing); no second try by rule,2026-11-24T11:51:25.756Z,blocked by route: Claim clipped
+diamonds,"11,153 before and after",2026-11-24T11:51:41.261Z,"exit with the back arrow (103,935)"
+finding,"a SHORT drag (about 60 to 80 px) from the blank right margin (685,650) may bring the S1 Claim inside the page; the Iron and Coin pass cards below S1 show their own green Claim buttons (unread: may be unclaimed daily pickups)",2026-11-24T11:51:11.893Z,for the planner; nothing pressed on them

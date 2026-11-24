@@ -1,7 +1,7 @@
 ---
 title: Plan of record, strategist, version 0.3
 created: 2026-11-23T08:33:00Z
-modified: 2026-11-23T20:04:00Z
+modified: 2026-11-24T11:23:00Z
 version: 0.5.0
 level: L3
 description: The plan items with ids, levers, next actions, triggers, deadlines, expected gains and the measurement that closes each, from which the planner mints units; centre moved from capacity first to training slots first
@@ -32,7 +32,7 @@ Mac UTC, daily. Units carry `serves: PL-nn` or `serves: upkeep`. Start-by is tri
 | PL-11 | Name Black Market tiles; Age of Oil stage 4 on 11-29 | 09:05 | 12:30 | 0 | names |
 | PL-12 | Weekly review, season plan, digest | 11-29 20:00 | 11-30 04:00 | 0 | digest |
 | PL-13 | Box batch 2 in an idle gap, else stop at 10 | idle | 11-24 14:00 | 0 now [G] | tiles |
-| PL-14 | Supply: harvest, trucks, chests just in time | start in 2 h | 11-24 07:20 | 0; no shortage | records |
+| PL-14 | Supply: harvest, trucks, assist, chests | start in 2 h | 11-24 07:20 | 0; no shortage | records |
 | PL-15 | Decoration gallery, Crystal Shop reads | idle | 11-24 04:00 | decor +7.7K a day [M] | rows |
 | PL-16 | Base Expansion line: the chain, one lab at a time | 12:45 | continuous | ETA 2027-01-08 to 01-23, oil row unverified [G] | rows |
 | PL-17 | Oil Well Lv.21 to 30 chain, collect every 10 hours, depot daily | 11-23 23:20 | 00:30 | +60 oil an hour a level [M] | well, oil |

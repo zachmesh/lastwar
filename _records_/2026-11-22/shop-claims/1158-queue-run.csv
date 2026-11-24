@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 11:58:43.024Z, run started 11:58:43.792Z), 6 minutes after my previous run ended; owner idle 13532 s: wait 0",2026-11-24T11:58:43.792Z,see growth/0054-waits.csv
+badges,"first frame 11:58:49.8Z: tram, pickup and radar dish none (base countdown 14:01:12); last read 11:59:41Z none (14:00:20)",2026-11-24T11:58:49.791Z,tram badge rule: none
+page before,"Free Supply 'Claimed'; the Legendary banner with a green Claim All and a red dot (not touched); S2 'Already claimed today' with Renew $4.99 (not touched); S1 Drone Parts Remaining 5d 14:00:48, Daily Pickup and Total rows, the Get Now row cut off; the green Claim with a red dot at about y=915, cut off by the content's bottom fade",2026-11-24T11:59:12.708Z,tag text [G]: Weekly Pass tab
+the drag,"ONE touch drag UP of 70 px from (685,330) to (685,260) at 11:59:18.127Z; the start point plain blue margin right of the banner",2026-11-24T11:59:19.328Z,"drag tried 1, cancelled 0"
+page after,"the page looked the same: 0 px of movement; the S1 Claim still at about y=915, clipped; S1 Remaining 5d 14:00:36",2026-11-24T11:59:25.292Z,"no over-scroll, so no correction drag"
+Claim,not pressed (clipped at the edge): blocked by route: Claim clipped; no popup,2026-11-24T11:59:25.292Z,
+Iron and Coin cards,never visible in any frame: nothing read,2026-11-24T11:59:25.292Z,for the planner
+diamonds,"11,153 before and after",2026-11-24T11:59:41.209Z,"exit with the back arrow (103,935)"
+finding,"a 70 px margin drag moved the page 0 px; a 250 px drag (11:51Z) moved it a long way and over-scrolled: the drag seems to move the page only past a distance threshold, then by a large jump; an intermediate length (about 120 to 150 px) is the next experiment",2026-11-24T11:59:25.292Z,for the planner; not tried here (the permission allowed a correction drag only after an over-scroll)
