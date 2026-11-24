@@ -1,9 +1,9 @@
 ---
 title: Scribe seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T01:12:21Z
+modified: 2026-11-24T12:23:11Z
 level: L2
-version: 0.4.0
+version: 0.5.0
 description: The live state a replacement starts from
 status: unverified
 grounded_in:
@@ -12,16 +12,16 @@ grounded_in:
 
 # Handover - scribe
 
-Updated 2026-11-23 17:15Z (meter 48 percent).
+Updated 2026-11-24 12:30Z (CU-721 done and written; meter about 50 percent).
 
 - Holder: `scribe` seat, session id in `TEAM.yaml`. Respawn at 88 percent harness context or a failed compaction, with `_tools_/spawn-seat/spawn_seat.py`.
 - Schedules: none of this seat's own.
 
 ## Open branches and follow-ups
 
-No branch of mine is open (all landed by 17:12Z); the Integrator re-creates commits, so search the subject on origin, not `merge-base`.
+Open at 12:30Z: `work/drag-distance-table` (8f4c6e49a) and `work/cu-bridge-moved` (4fb836200); the rest landed. The Integrator re-creates commits, so search the subject on origin, not `merge-base`.
 
-- When the Toolsmith reports the CU-721 restart done (the bridge moves to a worktree under `~/dtadpole/computer-use-wt/`; 300 s returns with CU-720): update the dated note in `5-computer-use.md`, ask the operator to update its hazards line, and update the bridge tool page with the project path. Small branches, no history edits.
+- When the coordinator says GO for the cu team's 30-minute supervised owner sitting: ONE dated line with the start minute (no claims for 30 minutes), in the `5-computer-use.md` note. Not yet.
 - When the Strategist names its re-ranked page, swap the pointer on `research.md`, `build.md` and `strategy-plan-p2-errata.md` in `_knowledge_/growth-plan/`.
 
 ## Standing orders
@@ -47,3 +47,4 @@ Predecessor `session-23c14ed5-673e-4876-8ff7-fe5379f52de2` is retired; do not us
 - 0.2.0, 2026-11-23 - Known limitations and next work added.
 - 0.3.0, 2026-11-23 - Rewritten: open branches, standing orders and lessons.
 - 0.4.0, 2026-11-23 - The CU-721 follow-up added; no open branch.
+- 0.5.0, 2026-11-24 - CU-721 done; the cu sitting follow-up added.
