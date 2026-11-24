@@ -1,7 +1,7 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-24T08:18:00Z
+modified: 2026-11-24T10:22:00Z
 level: L2
 version: 0.21.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, the growth Epic, in-flight landings and open decisions
@@ -22,7 +22,7 @@ Updated 2026-11-23 20:20Z (Mac UTC; quote `date -u`). Earlier versions are in gi
 
 ## Triggers (each dispatches the operator BY NAME; check the desktop lock first)
 
-Pending one-shots: 09:10Z bridge restart onto the CU-721 worktree lastwar-bridge (Toolsmith; Developer One told first; OD-27 ends), then ONE read-only run, Steer A's yard-bubble test (tram icon then one yard bubble) about 09:20Z, 09:45Z train boarding (before 10:06:44Z); 10:00Z planner ping; 10:05Z forecast flip (needs the Strategist's announcement); 17:28Z Oil Well Lv.24 hand-off (Lv.23 ends 17:27:27Z), 17:30:30Z lab Complete; 11-26 21:11:30Z room collect. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
+Pending one-shots: 10:25Z forecast flip (TEAM.yaml coordination.queue.require_forecast after the Strategist's fresh announcement; branch land/forecast-flip; Steer A probes a SCRATCH root); 14:15Z settle and dispatch the last two trucks; 15:04Z settle the SR then the four plunder scans (guards: hospital free room at least 1,000, stop after a fight wounding over 50); 17:28Z Oil Well Lv.24 hand-off (Lv.23 ends 17:27:27Z), 17:30:30Z lab Complete; 11-26 21:11:30Z room collect. OD-27 ended 08:36Z (bridge on lastwar-bridge). The tram icon opens Intercity Trade only WITH a badge. A TIPS 'different device' dialog means STOP: never Confirm. Any unexpected foreground switch: stop, answer nothing, tell Steer A.
 
 ## Oil Well chain
 
