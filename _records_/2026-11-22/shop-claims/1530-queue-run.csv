@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s after the request (start requested 15:30:07.388Z, run started 15:30:08.147Z), 3 minutes after my previous run ended (the unit opened 15:30:00Z); run 2 (15:31:53.2Z) admitted 0.7 s after the request, 18 s after run 1 ended: wait 0; owner idle 26193 and 26298 s",2026-11-24T15:30:08.147Z,see growth/0054-waits.csv
+badges,"first frame 15:30:15.5Z: tram none, pickup none, radar dish 3 (Warzone Duel timer 10:29:46); base after leaving the shop 15:32:59.0Z: tram none (a crop of the left column of the saved frame confirms), pickup none, radar dish 3",2026-11-24T15:30:08.147Z,tram badge rule: none; not tapped
+page at the top,"Free Supply 'Claimed'; the Legendary banner Claim All with a red dot (not touched); S2 'Already claimed today' (Remaining 5d 10:29:27); S1 'Already claimed today'; S2 title y 531, S1 title y 769",2026-11-24T15:30:40.133Z,tag text [G]: Weekly Pass tab
+pan 1,composed pan: the page moved 150 px (S1 title 769 to 619),2026-11-24T15:30:52.866Z,accepted; the S1 pickup already claimed on arrival; nothing tapped
+pan 2,the page moved 149 px (EXP title 856 to 707),2026-11-24T15:31:06.588Z,the EXP pickup already claimed on arrival; nothing tapped
+pan 3,the page moved 150 px (EXP title 707 to 557),2026-11-24T15:31:21.978Z,"the Iron card 'Already claimed today' (Remaining 5d 10:28:40), its Renew button cut off at the bottom; nothing tapped"
+pan 4,run 2: the page moved 150 px (the Iron title 795 to 645),2026-11-24T15:32:09.508Z,accepted
+pan 5,the page moved 150 px (the Coin title 882 to 732),2026-11-24T15:32:24.045Z,accepted: the fifth and last pan
+Coin card,"label Coin Weekly Pass (Elite); Remaining 5d 10:27:37 (owned); a plain green Claim at y about 879 with no price line and no gem or diamond icon, fully inside the content; Claim tapped ONCE at 15:32:30.5Z: CONGRATULATIONS with one item, a gold coin chest x3; dismissed by an empty tap (685,600); state after 'Already claimed today', Remaining 5d 10:27:18, Renew $4.99 (not pressed)",2026-11-24T15:32:44.531Z,"not claimed on arrival: a new daily pickup, paid"
+other,"the Legendary banner's button changed from Claim All to Renew All $19.99 after the claims (not touched); the shop left with its back arrow (103,935)",2026-11-24T15:32:52.860Z,the chests join the stock unopened
+HUD,"food 146.5M, iron 780.1M, coin 33.4M, diamonds 11,173 unchanged",2026-11-24T15:32:59.0Z,
+drags,"drags tried 5, cancelled 0",,

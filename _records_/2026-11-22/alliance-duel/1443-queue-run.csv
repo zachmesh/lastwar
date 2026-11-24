@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 14:43:37.899Z, run started 14:43:38.725Z), 17 s after the previous record write and 1 minute after the previous run ended; owner idle 23415 s: wait 0",2026-11-24T14:43:38.725Z,see growth/0054-waits.csv
+badges,"first frame 14:43:39.1Z: tram none, pickup none, radar dish 3",2026-11-24T14:43:38.725Z,tram badge rule: none; not tapped
+tan trophy bubble,"no: the tan bubble at (600,710) holds a green tank or helmet icon, not a trophy cup; others: a tan bubble with a portrait at (600,780), a green helmet bubble at (546,741), a portrait bubble at (521,858)",2026-11-24T14:43:43.788Z,tag text [G]: HUD
+mid-base trophy,"a gold trophy bubble over the building in the middle of the base at about (509,218), sometimes reading NEW; never tapped",2026-11-24T14:43:57.099Z,OD-20261123-01
+taps,none,,waits only; drags 0
+HUD,"Total Power 150,051,860; energy 81; builders 4/4; labs 2/2; gems 11,173",2026-11-24T14:44:11.521Z,
+drags,"drags tried 0, cancelled 0",,

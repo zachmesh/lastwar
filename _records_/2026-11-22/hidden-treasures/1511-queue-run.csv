@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 15:11:12.831Z, run started 15:11:13.555Z), 6 s after the previous record write and 1 minute after the previous run ended; owner idle 25063 s: wait 0",2026-11-24T15:11:13.555Z,see growth/0054-waits.csv
+badges,"first frame 15:11:19.2Z: tram none, pickup none, radar dish 3",2026-11-24T15:11:13.555Z,tram badge rule: none; not tapped
+route,"the jeep icon (107,647) then the Hidden Treasures tab (310,162); Dig 1 time and Dig 2 time(s) buttons",2026-11-24T15:11:32.237Z,tag text [G]: Hidden Treasures panel
+fragments,"M1 6, M2 4, M3 3, M4 2, M5 0, M6 6, M7 5: a full set of seven NOT on hand (M5 at 0); unchanged",2026-11-24T15:11:32.237Z,
+Dig,"both dig buttons greyed, no cost text; Skip Animation already ticked (not touched): nothing pressed",2026-11-24T15:11:32.237Z,
+chest track,"8/15, unchanged; no timer on the tab",2026-11-24T15:11:32.237Z,
+exit,"the back arrow (176,929); the base",2026-11-24T15:11:46.719Z,
+drags,"drags tried 0, cancelled 0",,

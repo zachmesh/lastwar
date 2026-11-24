@@ -1,8 +1,8 @@
 ---
 title: Intercity Trade History read - the specification, our own dispatch days, and the interpretation registered before the data
 created: 2026-11-24T11:45:00Z
-modified: 2026-11-24T11:57:00Z
-version: 1.0.1
+modified: 2026-11-24T14:47:00Z
+version: 1.0.2
 description: Coach specification of the one read-only look at the Intercity Trade History tab that Steer A asked for, the dispatch and plunder days our own records show since 11-11, and how the tab will be read before it is seen
 status: done
 activity: coach
@@ -22,15 +22,7 @@ grounded_in:
 
 ## What our own records say
 
-The claim "the team has not dispatched own trucks since 11-11" is **wrong for 11-23**: the operator seat dispatched two own SR trucks at about 05:05Z (unit `trucks-2026-11-22-1857`, record 2105, Trade Count 0 to 2/5). Our records show dispatches or plunder on only these days:
-
-| UTC day | What we did |
-|---|---|
-| 11-11 | own trucks (0701) |
-| 11-23 | two own trucks at 05:05Z; plunder fights at 14:25Z (and a second) |
-| 11-12 to 11-22 | **none in our records**, 11 days |
-
-So "days without a dispatch by us" since 11-11 is 11 of the 12 days from 11-12 to 11-23. That is what the report states, not "quota lost".
+The claim "no own dispatch since 11-11" is **wrong for 11-23**: the operator seat dispatched two own SR trucks at about 05:05Z (record 2105) and fought at 14:25Z. Our records hold dispatch or plunder on 11-11 and 11-23 only, so **11 of the 12 days from 11-12 to 11-23 have none**: the report says "days without a dispatch by us", not "quota lost".
 
 ## Registered before the data
 
@@ -40,3 +32,7 @@ So "days without a dispatch by us" since 11-11 is 11 of the 12 days from 11-12 t
 4. The tab does not name a device, so "who" is by comparison with our records.
 
 Lost income is booked only if the tab shows empty days; until then the value stays "up to five trucks a day".
+
+## Result, cycle A at 14:31Z (truck-plunder/1416)
+
+The screen has tabs **Plunder** (active), **Dispatch** and **Favorite**; times are **relative**, with no dates. Against my four readings: (1) the Plunder tab shows our fights (two at 1m and 4m ago, then 22h ago twice, 23h ago and 1d ago, a Victory), so it logs plunder; the **Dispatch tab was never opened**, so our 11-23 dispatches are unread. (2) and (3) are **not answered**: the wheel was inert on the list (the 13th to 15th scrolls that moved nothing, all at the content centre, the margin recipe untried), so no older row and no oldest date. (4) No device is named. One new fact: a **Defense Failed** row sits below the Victory, cut off, so one of our trucks was plundered at some point. The owner question stays open; the next read is one tap on Dispatch.

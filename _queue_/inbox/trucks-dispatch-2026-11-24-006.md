@@ -36,6 +36,6 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-18
 
-Do the TRADE CYCLE exactly as `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` says: read it first; its steps 0 to 4 (the Hospital before the tram tap, then settle, dispatch, plunder, close). THIS CYCLE: ESTIMATE, re-timed from the real arrivals of cycle C (it ends before the 08:00Z window): SETTLE; DISPATCH the last TWO (count to 5/5); PLUNDER what remains of the count.
-NO badge: close 'badge absent: no tap' (the Coordinator re-dispatches 15 minutes later, at most 3 tries). Up to 3 runs of 12 steps. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
-Cost cap, stated: 0.90 USD.
+Do the TRADE CYCLE exactly as `_records_/2026-11-22/queue-planning/3110-trade-cycle.md` says: read it first; its steps 0 to 4 (the Hospital before the tram tap, then settle, dispatch, plunder, close). FIRST write the tram badge state AND ITS COUNT with the UTC time, the slots out and the returned trucks due (the Coach's table). THIS CYCLE: ESTIMATE, re-timed from the real arrivals of cycle C (it ends before the 08:00Z window): SETTLE; DISPATCH the last TWO (count to 5/5); PLUNDER what remains of the count.
+NO badge: close 'badge absent: no tap' (the Coordinator re-dispatches 15 minutes later, at most 3 tries). Up to TEN runs of 12 steps. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+Cost cap, stated: 1.50 USD.

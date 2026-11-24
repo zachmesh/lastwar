@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.2 s after the request (start requested 15:57:41.773Z, run started 15:57:42.967Z), 1 minute after my previous run ended; owner idle 27844 s: wait 0",2026-11-24T15:57:42.967Z,see growth/0054-waits.csv
+badges,"first frame 15:57:48.3Z (timer 10:02:13): tram none, pickup none, radar dish 3; base after 15:59:24.5Z (timer 10:00:37): tram none, pickup none, radar dish 3",2026-11-24T15:57:42.967Z,tram badge rule: none; not tapped
+HUD before,"diamonds 11,173; iron 782.6M; food 149.0M; coin 35.0M; oil 687.0K; Total Power 150,051,860",2026-11-24T15:57:48.323Z,tag text [G]: HUD
+Event list,"six rows: the Train arrival reward row (3h ago, a gift icon), four ally train mails (1h, 3h, 5h, 8h ago) and a Mega Exp mail (5h ago), each with a red dot; bottom buttons a red Delete All and a blue Claim All with a red dot: neither pressed",2026-11-24T15:58:12.956Z,"category Event (393,378)"
+attachments,"read before the Claim: a green triangle item 2.5K; an orange medal item x1 (2.5K label); a blue chest 50; a blue chest 50; an orange medal item x1 (2.5K label); a greyed crossed-out green triangle item 2.5K on a second row; buttons back arrow, star, trash and a green Claim; no price or diamond line",2026-11-24T15:58:24.092Z,"the mail opened (380,497)"
+Claim,"the mail's own green Claim (565,933) once at 15:58:29.1Z",2026-11-24T15:58:39.244Z,never Claim All
+paid,"CONGRATULATIONS: orange medal items x2 (2.5K labels), blue chests x100, a green triangle item 2.5K; behind it the game showed the train DETAILS screen; the popup dismissed by an empty tap (672,610), the details screen left with its back arrow (113,927)",2026-11-24T15:58:48.111Z,the two blue chests of 50 NOT opened: they join the stock
+mail after,"the green Claim gone; the attachments still listed; back arrow, star and trash only; the Event category lost its gift icon and shows a red dot",2026-11-24T15:58:56.674Z,
+HUD after,"diamonds 11,173, iron 782.6M, food 149.0M, coin 35.0M, Total Power 150,051,860 unchanged (the items went to the bag); oil unreadable (a banner covered it)",2026-11-24T15:59:24.478Z,"four back arrows (113,935) to the base"
+drags,"drags tried 0, cancelled 0",,

@@ -18,3 +18,6 @@ Back to the [folder index](INDEX.md).
 - [PR 964](landing-pr-964.md) - drag-distance-table, the threshold lies between 135 and 250 px
 - [PR 965](landing-pr-965.md) - cu-bridge-moved, the bridge moved to the worktree and the 300 s wait is back (CU-721)
 - [PR 966](landing-pr-966.md) - scribe handover 0.5.0, CU-721 done
+- [PR 967](landing-pr-967.md) - scroll-recipe, a composed press moves a clipped page (experiment 007)
+- [PR 968](landing-pr-968.md) - daily-missions-lesson, row position depends on the panel state; errata moved to its own page
+- [PR 969](landing-pr-969.md) - nineteenth records snapshot, units of 11:10Z to 13:40Z, word-budget review

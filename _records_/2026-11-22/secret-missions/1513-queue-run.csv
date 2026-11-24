@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 15:13:47.785Z, run started 15:13:48.832Z), 21 s after the previous record write and 21 s after the previous run ended; owner idle 25217 s: wait 0",2026-11-24T15:13:48.832Z,see growth/0054-waits.csv
+badges,"first frame 15:13:54.1Z: tram none, pickup none, radar dish 3",2026-11-24T15:13:48.832Z,tram badge rule: none; not tapped
+counters,"Assist Allies 5/5 (the daily cap, read first); Plunder Others 0/5; mode Normal",2026-11-24T15:14:10.102Z,tag text [G]: card list
+Your Tasks,"UR Rescue Missing Agent PERFECT; UR Capture the Oil Depot PERFECT; SSR Search for Missing Refugees PERFECT; SSR Provide Tech Support to Refugees PERFECT; a fifth card cut off (no scroll); no green Claim, no timer; Mega Refresh and Mega Deploy greyed",2026-11-24T15:14:10.102Z,the card timers: none (all claimed); the next claims at the next daily set
+Ally Tasks,"four ally cards (a UR and three SSR, 4 stars) each with a blue Assist button (not pressed: the counter is 5/5); a fifth cut off",2026-11-24T15:14:26.358Z,
+Others' Tasks,red badge 1: one UR 4-star card marked by an ally with a blue Plunder button (not pressed: Plunder Others is never tapped),2026-11-24T15:14:33.705Z,PvP: a red line
+slip,the model's last turn held two 1-second waits in one batch: no effect on the game,2026-11-24T15:14:54.526Z,
+drags,"drags tried 0, cancelled 0",,

@@ -5,7 +5,7 @@ activity: research-queue
 segment: 1
 priority: 1
 created_at: 2026-11-23T15:09:24Z
-expires_at: 2026-11-25T04:30:00Z
+expires_at: 2026-11-25T04:25:00Z
 planned_for:
 not_before: 2026-11-25T02:39:30Z
 window: lab 2 iron output v completion about 0239z fallback if not moved by the speed up

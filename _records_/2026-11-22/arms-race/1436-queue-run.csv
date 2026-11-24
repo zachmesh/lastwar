@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 14:36:47.241Z, run started 14:36:48.294Z), 2 minutes after my previous run ended; owner idle 23007 s: wait 0",2026-11-24T14:36:48.294Z,see growth/0054-waits.csv
+badges,"first frame 14:36:48.7Z: tram, pickup and radar dish none; hammer 4/4; flask 2/2",2026-11-24T14:36:48.294Z,tram badge rule: none; not tapped
+page,"Events hub; one drag of the tab row (drag tried 1, cancelled 0), then the Arms Race tab (372,155): phase Drone Boost (Contest Segment Lv.29-30); timer 03:22:48; owner points 0; rank 12 with 0 points",2026-11-24T14:36:58.301Z,tag text [G]: event page
+chests,"point chests 1,500 (2,360 rubies), 10,000 (4,800 rubies) and 30,000 (11,800 rubies): all locked, no bounce, no red dot; counter chest 0 of 2",2026-11-24T14:37:13.132Z,not tapped
+scoring rows,"Use 10 Drone Battle Data: +1 point (a green arrow); Use 1 Stamina: +100 points (a green arrow, a thumbs-up mark: the likely free path); Buy Packs containing Diamonds (1 diamond): +30 (not safe): none pressed",2026-11-24T14:37:13.132Z,for the planner: Use 1 Stamina is +100
+HUD,"food 141.3M, iron 775.1M, coin 30.2M, oil 681.2K, energy 120, Total Power 150,051,860",2026-11-24T14:37:28.631Z,
+drags,"drags tried 1, cancelled 0",,

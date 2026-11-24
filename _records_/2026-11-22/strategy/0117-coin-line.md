@@ -1,7 +1,7 @@
 ---
 title: Coin line
 created: 2026-11-23T23:08:00Z
-modified: 2026-11-24T11:25:00Z
+modified: 2026-11-24T15:51:00Z
 version: 1.0.0
 level: L3
 description: Dated coin conversions and the supply against need after the fixed Coin Chests were spent on the first three ground levels, with the order of chests
@@ -27,10 +27,12 @@ grounded_in:
 
 11-26 20:00Z to 21:00Z: about 60M coin (plain chests) and about 265M food (65 typed UR Food Chests) for the next ground level (decision 2026-11-24-03).
 
-Mystery Supply Boxes: 365 on the 11-22 read (stale, less the boxes sampled since) plus about 30 a day from the Assist, an existing stream, so the daily 30 is already in the stock trend; open the whole stack with one typed Use about 11-30, when the plain chests start; by the 10-box sample each box is about 0.9 SR choice chest (about 91K coin or 152K food), so 365 boxes are about 33M coin-equivalent and 30 a day about 2.7M.
+Mystery Supply Boxes: 299 on the 11-23 inventory read (my 365 was a slider default and is withdrawn; about 329 with today's 30; their text says Universal UR Shards and 5,000 diamonds, the 10-box sample paid SR choice chests) plus about 30 a day from the Assist, an existing stream, so the daily 30 is already in the stock trend; open the whole stack with one typed Use about 11-30, when the plain chests start; by the 10-box sample each box is about 0.9 SR choice chest (about 91K coin or 152K food), so 329 boxes are about 30M coin-equivalent and 30 a day about 2.7M.
 
 Order: plain Resource Chests first (about 125M in one Use; each also offered 10K food or iron), then SR, SSR and UR choice chests. A 1.0G choice-chest minimum is the only hard floor.
 
+Income items against need: [stock-to-need check](0117-income-vs-need.md).
+
 ## Supply against need to day 60
 
-Harvest 0.64G, plain chests 0.13G, choice chests above the floor 0.97G, plunder 0.08G: about 1.8G against about 2.1G (path 1.65G, HQ 31 433.5M). Own trucks (about 12M a day if the trade screen works, F-126 and F-127) cover the rest; otherwise some ground levels wait. Do not forecast a rebuilt fixed-chest buffer.
+Harvest 0.64G, plain chests 0.13G, choice chests above the floor 0.97G, plunder 0.08G: about 1.8G against about 2.1G (path 1.65G, HQ 31 433.5M). Own trucks now measured as cargo, coin 9.9M a day (about 0.59G in 60 days; the 10:00Z SSR and UR settle credited coin 4.35M in full [M], one truck of ours was once plundered so I plan on 10 to 20 percent less), lift supply to about 2.4G against 2.1G for the long line, so it is funded and the six later ladder levels (0.8G) are short by about 0.5G. Trade Contracts (the dispatch cap, income and stock): see [the contracts page](0117-contracts.md). Do not forecast a rebuilt fixed-chest buffer.

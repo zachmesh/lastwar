@@ -5,7 +5,7 @@ trucks (own dispatch and settlement),PL-14,change from PL-18,own trucks pay abou
 "plunder (sessions, scans)",PL-18,confirm,rows F-088 to F-093 and F-132 to F-142
 harvest,PL-14,change from PL-16,"the collect supplies the resource line (iron floor F-143, food plan); PL-16 rows are research timings"
 donations,upkeep,change from PL-04,"no lever shown; PL-04 is the lab line. 1,000 coin a donation, one refill per 20 minutes (record 1745); the node donated is Quick Construction 9/10; if level 10 gives a construction gain it serves PL-08; read the alliance technology panel once for a research speed line (H118)"
-passes,PL-05,confirm (G),the weekly cards are S2 Drone Components and S1 Drone Parts by name (record 1434); the pickup contents are unread; row F-012
+passes,"PL-05 for the drone cards (S1, S2), PL-14 for the Coin, Iron and EXP cards",confirm (G),"11-24: the Coin pass paid a Gold Coin Chest x3, Iron a pickup crate x3, EXP a chest x3 (items, unopened); the drone cards stay PL-05"
 research,"PL-16 for path starts, PL-04 for reads and fills",confirm,either plan item has rows; the path node starts are the long line
 building-queues,"PL-08 for ground levels, PL-17 for the Oil Well chain",confirm,rows F-062 to F-070 and F-100
 training,PL-09,confirm,promotion and slot fills

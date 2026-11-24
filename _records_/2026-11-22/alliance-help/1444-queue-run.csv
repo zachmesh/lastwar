@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 14:44:38.950Z, run started 14:44:39.703Z), 14 s after the previous record write and 14 s after the previous run ended; owner idle 23475 s: wait 0",2026-11-24T14:44:39.703Z,see growth/0054-waits.csv
+badges,"first frame 14:44:40.2Z: tram none, pickup none, radar dish 3; the Alliance button with a red dot; no help bubble on the base",2026-11-24T14:44:39.703Z,tram badge rule: none; not tapped
+before,"header 600/1,000; four rows: the owner's own Food Output V research request (30/30, cannot be helped), an ally's Food Output V research, an ally's Lv.23 Tech Center, an ally's Lv.20 Tech Center (cut off at the bottom)",2026-11-24T14:45:04.000Z,tag text [G]: Help page
+Help All,"the green Help All pressed once (393,766); the three ally rows disappeared; no help toast seen",2026-11-24T14:45:12.170Z,never an individual Help button
+after,"header 660/1,000; only the owner's own row left (30/30)",2026-11-24T14:45:29.162Z,+60 points
+HUD,"food 143.5M, iron 777.4M, coin 31.5M, Total Power 150,051,860, gems 11,173, energy 81 to 82",2026-11-24T14:45:42.258Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 14:38:08.271Z, run started 14:38:09.045Z), 28 s after the previous record write and 2.4 minutes after the previous run ended; owner idle 23087 s: wait 0",2026-11-24T14:38:09.045Z,see growth/0054-waits.csv
+badges,"first frame 14:38:13.2Z: tram, pickup and radar dish none; hammer 4/4; flask 2/2",2026-11-24T14:38:09.045Z,tram badge rule: none; not tapped
+bar before,"'You can complete 4 tasks, requires 40 Stamina' with a blue Quick Execute; 12 radar tasks restore in 05:59:47 (about 20:38Z); energy 120",2026-11-24T14:38:38.281Z,tag text [G]: radar bar
+Quick Execute,"pressed once (393,934); energy 120 to 80 (floor 40 held); no popup",2026-11-24T14:38:30.708Z,
+Claim All,"the bar '6 task rewards can be claimed'; Claim All once, then the dialog 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 6 radar task rewards at once. Continue?' with no price: Confirm once (the known template, count 6)",2026-11-24T14:38:58.128Z,Steer A's rule: Confirm allowed for that text
+popup,"CONGRATULATIONS: cash x70, radar token x60, a food sack x17, EXP 8.7M, a blue triangle item x183, a blue plane card x800, iron 2.2M, bread 2.2M, coin 1.2M; no oil line, no chest or speed-up",2026-11-24T14:39:09.242Z,"two dismissal taps (250,760) and (540,810) hit the animation (a Coin tooltip opened) and left the popup open; the third (400,820) closed it"
+after,"'You can complete 2 tasks, requires 20 Stamina'; energy 80; radar badge none before, 3 after",2026-11-24T14:39:44.491Z,Quick Execute not run again
+HUD,"food 141.3M to 143.5M, iron 775.1M to 777.4M, coin 30.2M to 31.5M, oil 681.2K, energy 120 to 80, diamonds 11,173, Total Power 150,051,860",2026-11-24T14:39:50.168Z,
+drags,"drags tried 0, cancelled 0",,

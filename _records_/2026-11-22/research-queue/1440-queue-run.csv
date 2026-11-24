@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 14:40:22.832Z, run started 14:40:23.587Z), 16 s after the previous record write and 41 s after the previous run ended; owner idle 23221 s: wait 0",2026-11-24T14:40:23.587Z,see growth/0054-waits.csv
+badges,"first frame 14:40:28.2Z: tram none, pickup none, radar dish 3 (after the radar claims), hammer 4/4, flask 2/2",2026-11-24T14:40:23.587Z,tram badge rule: none; not tapped
+labs counter,2/2 before and after the panel,2026-11-24T14:40:28.244Z,
+lab 1,Lv.0 Food Output V upgrade: Time Left 02:49:15 at 14:40:39.2Z: ends 2026-11-24T17:29:54Z,2026-11-24T14:40:39.174Z,tag text [G]: Research Queue row; matches 17:29:54Z
+lab 2,Lv.0 Iron Output V upgrade: Time Left 11:58:17 at 14:40:39.2Z: ends 2026-11-25T02:38:56Z,2026-11-24T14:40:39.174Z,matches 02:38:55Z
+idle or Complete,"no lab idle, none shows Complete; a Speed Up on each, not pressed; no Finish Now text",2026-11-24T14:40:44.559Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,7 +1,7 @@
 ---
 title: Serves map answer
 created: 2026-11-23T17:02:00Z
-modified: 2026-11-23T17:51:00Z
+modified: 2026-11-24T15:36:00Z
 version: 1.0.0
 level: L3
 description: The strategist's answer to the planner's regular serves map, with four changes, two tests and a cadence for the units that serve nothing
@@ -24,7 +24,7 @@ Row by row in [the sidecar](serves-map-answer.csv). Every plan item named has at
 
 ## Confirmed
 
-secrets and radar (PL-17), passes (PL-05: the weekly cards are S2 Drone Components and S1 Drone Parts by name [G]; contents unread), building-queues (PL-08), training (PL-09), scouts (PL-07 or the item the read informs).
+secrets and radar (PL-17), passes (PL-05 for the S2 and S1 drone cards; PL-14 for the Coin, Iron and EXP cards, which paid chests and crates on 11-24), building-queues (PL-08), training (PL-09), scouts (PL-07 or the item the read informs).
 
 ## Two tests before the last two move
 

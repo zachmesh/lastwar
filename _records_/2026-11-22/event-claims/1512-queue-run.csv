@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 15:12:08.295Z, run started 15:12:09.125Z), 14 s after the previous record write and 14 s after the previous run ended; owner idle 25118 s: wait 0",2026-11-24T15:12:09.125Z,see growth/0054-waits.csv
+badges,"first frame 15:12:15.9Z: tram none, pickup none, radar dish 3; the Events icon badge 1",2026-11-24T15:12:09.125Z,tram badge rule: none; not tapped
+tab bar,"the hub opened on the Arms Race page (Drone Boost, red dot); one drag of the tab row (drag tried 1, cancelled 0): The Age of Oil, Arms Race (red dot), Black Market, Black Market Challenge (red '!' tag, cut off)",2026-11-24T15:12:33.283Z,tag text [G]: event page
+The Age of Oil,"stages 1 to 3 reached, 4 locked; cards 'Unlock: Lv. 31-35 Zombies on World Map' 10,483 of 2,000 (green check) and 'Rapid Rescue' 2,224,360 of 25,000; no Claim button or red dot",2026-11-24T15:12:43.085Z,
+Arms Race,"Drone Boost; owner points 4,000 (0 at 14:37Z); counter chest 0/2; about 2h47m left; the three chests 1,500, 10,000 and 30,000 points with red-gem price tags (2,360, 4,800, 11,800) read as buy-now offers; the tab kept its red dot but no plain Claim button was seen: nothing pressed",2026-11-24T15:12:50.361Z,"the 1,500 milestone passed at 4,000 points: whether it is claimable was not read (for the coordinator)"
+Black Market Challenge,"earned today 320 of 600, about 5d 10:46 left; four Go To rows; no claim items",2026-11-24T15:13:01.109Z,
+claims,none made,,
+HUD,"food 146.5M, iron 780.1M, coin 33.4M, oil 687.0K, diamonds 11,173, energy 87, Total Power 150,051,860 unchanged; Events badge 1 unchanged",2026-11-24T15:13:14.564Z,
+drags,"drags tried 1, cancelled 0",,
