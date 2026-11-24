@@ -405,8 +405,31 @@ FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
-                "claimed_count", "evidence", "follow_up", "stats",
-                "stats_missing", "stats_warnings"]
+                "claimed_count", "evidence", "state_read", "follow_up",
+                "stats", "stats_missing", "stats_warnings"]
+# result.state_read (Steer A, 2026-11-24): the evidence a DONE that rests on a verified nothing-to-claim or nothing-to-do state carries, one line:
+# '<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>', for example 'Already claimed today (S1) | step 6 frame | 15:07:44Z'.
+# A new key beside `evidence` (which keeps the record path). Optional here (a DONE that took a claim carries the counter in its summary); when
+# present its pattern is checked and a mismatch is a warning in the closing and in result.stats_warnings, never a refusal.
+STATE_READ_FRAME = re.compile(r"^(step\s*\d+(\s+frame)?|[\w.\-/]+\.(png|jpe?g|webp|md|json|csv|txt))$", re.I)
+STATE_READ_TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d:[0-5]\dZ$")
+STATE_READ_PATTERN = "<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>"
+
+
+def state_read_problem(text):
+    """'' when `text` fits the state_read pattern, else what is wrong with it (short, never the text itself)."""
+    if "\n" in text or "\r" in text:
+        return "it must be one line"
+    parts = [p.strip() for p in text.split("|")]
+    if len(parts) != 3:
+        return f"it needs three parts separated by ' | ': {STATE_READ_PATTERN}"
+    if not parts[0]:
+        return "the first part (what was read) is empty"
+    if not STATE_READ_FRAME.match(parts[1]):
+        return "the frame part must be 'step N' (or 'step N frame') or a file name"
+    if not STATE_READ_TIME.match(parts[2]):
+        return "the time part must be HH:MM:SSZ"
+    return ""
 
 
 def now_utc():
@@ -5172,16 +5195,26 @@ def cmd_complete(args):
     blocker_bad = blocker_category_not_enum(stats)
     over_cap = isinstance(duration, int) and \
         duration > UNIT_CAP_SECONDS
+    state_read_raw = getattr(args, "state_read", "") or ""
+    summary_raw = args.summary or ""
+    if not state_read_raw.strip():                 # no flag: a `state_read:` line inside the summary counts (a line of its own, else the rest of the text after it)
+        found = re.search(r"(?mi)^[ \t]*state_read:[ \t]*(\S.*)$", summary_raw) or re.search(r"(?i)\bstate_read:[ \t]*(\S.*)$", summary_raw)
+        state_read_raw = found.group(1) if found else ""
+    # A summary with a line break would write its later lines as top-level frontmatter keys; folded to one line it stays whole and safe.
+    summary_text = " ".join(summary_raw.split()) if ("\n" in summary_raw or "\r" in summary_raw) else summary_raw
+    state_read = " ".join(state_read_raw.replace("\r", "\n").split())        # stored on one line
+    state_read_bad = state_read_problem(state_read_raw) if state_read else ""
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
         "finished_at": iso(finished),
         "duration_seconds": duration,
         "executor": fields.get("claimed_by", ""),
-        "summary": args.summary or "",
+        "summary": summary_text,
         "claimed": claimed_items,
         "claimed_count": len(claimed_items),
         "evidence": args.evidence or "",
+        **({"state_read": state_read} if state_read else {}),
         "follow_up": args.follow_up or "none",
         "stats": stats,
         "stats_missing": missing,
@@ -5201,6 +5234,9 @@ def cmd_complete(args):
                               if blocker_bad else [])
                            + (["duration exceeds 15-minute unit cap"]
                               if over_cap else [])
+                           + ([f"state_read does not fit the pattern: "
+                               f"{state_read_bad}"]
+                              if state_read_bad else [])
                            + rule_warnings),
     }
     # Screen-blocking overlay (issue #436): a short closing that
@@ -5261,6 +5297,10 @@ def cmd_complete(args):
     write_unit(path, fields, body)
     os.rename(path, target)
     print(f"completed {args.unit} with status {args.status}")
+    if state_read_bad:
+        print(f"warning: {args.unit} closes with a state_read that does "
+              f"not fit '{STATE_READ_PATTERN}': {state_read_bad} - "
+              f"stored as given; a warning for now, not a refusal")
     if missing:
         print(f"warning: {args.unit} closes with missing required "
               f"result.stats keys: {', '.join(missing)} - the "
@@ -6592,6 +6632,10 @@ def main(argv=None):
     p.add_argument("--summary", default="")
     p.add_argument("--claimed-items", default="")
     p.add_argument("--evidence", default="")
+    p.add_argument("--state-read", default="",
+                   help="for a DONE that rests on a verified nothing-to-claim or nothing-to-do state, one line: "
+                        "'<what was read, quoted> | <frame: step number or file> | <HH:MM:SSZ>' (stored as result.state_read; "
+                        "a pattern mismatch is a warning, never a refusal)")
     p.add_argument("--follow-up", default="")
     p.add_argument("--stat", action="append", default=[])
     p.add_argument("--rules-used", default="",
