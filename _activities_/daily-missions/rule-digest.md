@@ -1,9 +1,9 @@
 ---
 title: Daily Missions Rule Digest
 created: 2026-11-23T07:22:20Z
-modified: 2026-11-23T09:50:09Z
+modified: 2026-11-24T13:21:19Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules a seat must follow when working the daily missions list and its claims, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -22,14 +22,7 @@ grounded_in:
 7. Next Refresh points at the 18:00 local reset (_records_/2026-11-08/perception-scout/0229-queue-run.md).
 8. Name no unseen rows; the activity star's composition is open (open-questions-p4).
 
-Unverified: slow-drag scrolling and normalized coordinates, from old ticker units, not the current bridge (_records_/2026-11-09/daily-missions/1519-queue-run.md); the Plunder row as PvP (the OD names no row).
+9. The rows' position depends on the panel's state: read it before any pan, and a 'below the fold' reading made while the panel was scrolled is not a fact about the page; on 2026-11-24 both Claim rows (Greet Visitors 3/3, Dispatch Trade Trucks 3/3) sat inside the panel and one tap claimed both (`_records_/2026-11-22/daily-missions/1315-queue-run.md`).
+10. Dispatch Trade Trucks 3 times links the panel to the truck plan (PL-18): +30 activity points, with Greet Visitors +10 [D], read 90 to 130 on 2026-11-24 with the 120 chest highlighted (`_records_/2026-11-22/daily-missions/1315-queue-run.md`); the chests sit at 40, 80, 120, 160 and 200 points (`_records_/2026-11-22/daily-missions/0049-queue-run.md`), and whether the trucks decide the 160 chest depends on the day's maximum, which these pages do not give [G].
 
-## Errata
-
-Unverified until a live read settles each; articles stay verbatim, the newer governs.
-
-- day-20261101-known "claim each task individually": _records_/2026-11-09/daily-missions/1519-queue-run.md (2026-11-09, newer).
-- day-20261101-reset "mechanism stays unverified": _records_/2026-11-09/daily-missions/1519-queue-run.md (2026-11-09, newer) verified it.
-- _records_/2026-11-08/daily-missions/1628-queue-run.md "removed all four completed": _records_/2026-11-08/daily-missions/1753-queue-run.md (2026-11-08 1753, newer), rows sink.
-- day-20261101-reset "19:00 reset": _records_/2026-11-08/perception-scout/0229-queue-run.md (2026-11-08, newer) reads 18:00; arbitration unconfirmed.
-- _records_/2026-11-10/daily-missions/1426-queue-run.md "red line - never start buildings": superseded 2026-11-23 by OD-20261109-02 (decided by the owner, _records_/retro/owner-decisions-log/od-20261109-02.md): resource-only upgrades may start, no diamonds, never Finish Now.
+Unverified: slow-drag scrolling and normalized coordinates, from old ticker units, not the current bridge (_records_/2026-11-09/daily-missions/1519-queue-run.md); the Plunder row as PvP (the OD names no row). Errata: [errata](errata.md).
