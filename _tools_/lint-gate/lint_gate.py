@@ -44,6 +44,7 @@ HOOKS_REL = "_tools_/lint-gate/hooks"
 HOOK_NAMES = ("pre-commit", "pre-merge-commit")
 EXEMPT_REL = "_tools_/lint-gate/exempt.txt"
 TOP_KEPT, GROWTH, MIN_GROWTH_WORDS, GROWTH_FILE_CAP = 50, 0.20, 20, 400
+LIST_CAP = 50           # new, exempt and new-error paths kept in the summary and printed by watch (--list prints them all)
 TAG = re.compile(r"\[([a-z][a-z-]*)\]\s*$")
 NOT_NAME = re.compile(r" not (.+) \[type-instance-trees\]\s*$")
 
@@ -1345,6 +1346,13 @@ def cmd_watch(a) -> int:
         f["new"] += r["severity"] == "error"
         f["words"] += r["body_words"]
     largest = sorted(rows, key=lambda r: (-r["body_words"], r["path"]))
+    # Which documents the counts are about (the daily review names each new one over 500 and its owner): the new ones at or over 500 words
+    # (marked when exempt.txt covers them), the exempt ones, and the new gate errors that block. Paths and word counts only.
+    exempt_list = sorted({(path_of(f), tag_of(f) or "?") for f in exempt})
+    exempt_set = {p for p, _ in exempt_list}
+    new_docs = sorted(({"path": r["path"], "words": r["body_words"], "exempt": r["path"] in exempt_set}
+                       for r in rows if r["severity"] == "error"), key=lambda d: (-d["words"], d["path"]))
+    blocking_list = sorted({(path_of(f), tag_of(f) or "?") for f in blocking})
     prev_head, growth, growth_note = prev.get("git_head"), [], ""
     if prev_head:
         try:
@@ -1360,11 +1368,15 @@ def cmd_watch(a) -> int:
         "legacy_structural": len(legacy_structural), "by_top_folder": folders,
         "top": [{"path": r["path"], "words": r["body_words"]} for r in largest[:TOP_KEPT]],
         "growth": growth[:20],
+        "new_documents": new_docs[:LIST_CAP], "new_documents_more": max(0, len(new_docs) - LIST_CAP),
+        "exempt_list": [{"path": p, "rule": t} for p, t in exempt_list[:LIST_CAP]], "exempt_list_more": max(0, len(exempt_list) - LIST_CAP),
+        "new_error_list": [{"path": p, "rule": t} for p, t in blocking_list[:LIST_CAP]], "new_error_list_more": max(0, len(blocking_list) - LIST_CAP),
     }
     if a.format == "json":
         print(json.dumps(summary, indent=1))
     else:
-        print_watch(summary, largest[:a.top], growth_note, prev.get("generated_at"))
+        print_watch(summary, largest[:a.top], growth_note, prev.get("generated_at"),
+                    {"new": new_docs, "exempt": exempt_list, "errors": blocking_list} if a.list else None)
     if not a.no_write:
         baseline_file.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp = tempfile.mkstemp(dir=baseline_file.parent, prefix=".lint-baseline-")
@@ -1376,7 +1388,30 @@ def cmd_watch(a) -> int:
     return 0
 
 
-def print_watch(s: dict, largest: list[dict], growth_note: str, prev_at: str | None) -> None:
+def print_watch_lists(s: dict, full: dict | None) -> None:
+    """The documents behind the counts, with their paths: new ones at or over 500 words, exempt ones, and new blocking errors. The first LIST_CAP of
+    each (what the summary keeps) unless `--list` passes `full`, which holds all of them."""
+    def section(title: str, shown: list, total: int, line) -> None:
+        print(title + ("" if total else " (none)"))
+        for item in shown:
+            print(line(item))
+        if total > len(shown):
+            print(f"  ({total - len(shown)} more; run with --list for all)")
+
+    new = full["new"] if full else s["new_documents"]
+    exempt = full["exempt"] if full else [(e["path"], e["rule"]) for e in s["exempt_list"]]
+    errors = full["errors"] if full else [(e["path"], e["rule"]) for e in s["new_error_list"]]
+    new_total = len(s["new_documents"]) + s["new_documents_more"]
+    exempt_total = len(s["exempt_list"]) + s["exempt_list_more"]
+    errors_total = len(s["new_error_list"]) + s["new_error_list_more"]
+    section(f"new documents at or over {HARD_WORDS} words: {new_total:,}", new, new_total,
+            lambda d: f"  {d['words']:>7,}  {d['path']}" + ("  [exempt: exempt.txt]" if d["exempt"] else ""))
+    section(f"exempt documents: {exempt_total:,}", exempt, exempt_total, lambda e: f"  {e[0]}  [{e[1]}]")
+    if errors_total:
+        section(f"new gate errors vs anchor, by path: {errors_total:,}", errors, errors_total, lambda e: f"  {e[0]}  [{e[1]}]")
+
+
+def print_watch(s: dict, largest: list[dict], growth_note: str, prev_at: str | None, full: dict | None = None) -> None:
     n = s["new_errors"]
     print(f"lint-gate watch {s['generated_at']}  head {s['git_head'][:8]}  anchor {s['anchor'][:8]}")
     print(f"documents {s['documents']:,} | over 300 words: {s['over_300']:,} | at or over 500: {s['over_500']:,} "
@@ -1387,6 +1422,7 @@ def print_watch(s: dict, largest: list[dict], growth_note: str, prev_at: str | N
           f"legacy structural {s['legacy_structural']}")
     if s["new_errors_total"]:
         print("  -> assign the owning seat a fix")
+    print_watch_lists(s, full)
     print(f"{'top folder':<22}{'docs':>7}{'>300':>7}{'>=500':>7}{'legacy':>8}{'new':>5}")
     for name, f in sorted(s["by_top_folder"].items(), key=lambda kv: -kv[1]["over_500"]):
         print(f"{name:<22}{f['documents']:>7}{f['over_300']:>7}{f['over_500']:>7}{f['legacy']:>8}{f['new']:>5}")
@@ -1431,6 +1467,7 @@ def build_parser() -> argparse.ArgumentParser:
     w.add_argument("--top", type=int, default=10)
     w.add_argument("--min-growth-words", type=int, default=MIN_GROWTH_WORDS, help="ignore growth smaller than this")
     w.add_argument("--format", choices=("text", "json"), default="text")
+    w.add_argument("--list", action="store_true", help="print every new, exempt and new-error path (default: the first 50 of each)")
     w.add_argument("--no-write", action="store_true")
     w.add_argument("--privacy", action="store_true", help="count files and lines per top folder for each denylist pattern; "
                    "counts and paths only, no matched text")
