@@ -85,7 +85,7 @@ class Conforming(PoolCase):
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertIn("conforming", r.stdout)
         self.assertIn("executed in window 10", r.stdout)
-        self.assertIn("coverage ROLLING 12 h (context): units 60%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context): units 60.0%", r.stdout)
         self.assertIn("coverage SINCE CUTOVER: not set", r.stdout)
         self.assertNotIn(SECRET, r.stdout + r.stderr)                     # no summary, target or unit text
         self.assertNotIn("mail-2026", r.stdout)                           # no unit ids either
@@ -343,9 +343,9 @@ class Cutover(PoolCase):
     def test_both_lines_are_printed_and_the_since_line_is_the_verdict(self):
         self.old_and_new()
         r = self.run_tool("--since", iso(180))
-        self.assertIn("coverage ROLLING 12 h (context, not the verdict): units 33%", r.stdout)
+        self.assertIn("coverage ROLLING 12 h (context, not the verdict): units 33.3%", r.stdout)
         self.assertIn("coverage SINCE CUTOVER", r.stdout)
-        self.assertIn("(--since) - THE VERDICT: units 100%, unit-hours 100% of 4 units | serving nothing 0 units, 0 h of 1 h", r.stdout)
+        self.assertIn("(--since) - THE VERDICT: units 100.0%, unit-hours 100.0% of 4 units | serving nothing 0 units, 0 h of 1 h", r.stdout)
         self.assertEqual(r.returncode, 0, r.stdout)                                  # the rolling 33 percent does not alarm any more
 
     def test_the_json_carries_both_with_the_units_that_serve_nothing_and_their_hours(self):
@@ -438,6 +438,53 @@ class Cutover(PoolCase):
         since = d["counts"]["since_cutover"]
         self.assertEqual(since["since"], "2026-11-23T08:30:00Z")                       # the merge, not the remap commit on the branch
         self.assertEqual(since["source"], "git: the merge that introduced the roster serves ids")
+
+    def test_the_alarm_compares_the_unrounded_percentage_84_of_141_is_below_60(self):
+        for i in range(84):
+            self.unit("done", ago=10 + i, serves="PL-17", hours=0.5)                  # ranked, long
+        for i in range(57):
+            self.unit("done", ago=95 + i, serves="upkeep", hours=0.1)                 # not ranked, short: unit-hours stay high
+        r, d = self.data("--since", iso(300))
+        since = d["counts"]["since_cutover"]
+        self.assertEqual((since["executed"], since["ranked_units"]), (141, 84))
+        self.assertEqual(since["units_percent"], 59.6)                                # one decimal; it used to round to 60 and pass
+        self.assertAlmostEqual(since["units_percent_exact"], 59.5745, places=3)
+        self.assertGreater(since["unit_hours_percent"], 80)
+        alarm = next(a for a in d["alarms"] if a["alarm"] == "coverage")
+        self.assertEqual((alarm["basis"], alarm["below"]), ("since-cutover", ["units"]))
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("units 59.6%", self.run_tool("--since", iso(300)).stdout)
+
+    def test_exactly_at_the_limit_passes_and_just_under_fires(self):
+        for i in range(6):
+            self.unit("done", ago=10 + i, serves="PL-17", hours=0.25)
+        for i in range(4):
+            self.unit("done", ago=20 + i, serves="upkeep", hours=0.25)
+        r, d = self.data("--since", iso(300))                                         # 6 of 10 = 60.0 exactly
+        self.assertEqual(d["counts"]["since_cutover"]["units_percent"], 60.0)
+        self.assertNotIn("coverage", {a["alarm"] for a in d["alarms"]})
+        self.unit("done", ago=30, serves="upkeep", hours=0.25)                        # 6 of 11 = 54.5
+        _r, d = self.data("--since", iso(300))
+        self.assertIn("coverage", {a["alarm"] for a in d["alarms"]})
+
+    def test_a_value_below_the_limit_is_never_shown_as_the_limit(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("sc", str(Path(__file__).parent / "strategy_conformance.py"))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        self.assertEqual(mod.shown(59.96, 60), 59.9)                                   # would round to 60.0 and look passing beside the alarm
+        self.assertEqual(mod.shown(59.94, 60), 59.9)
+        self.assertEqual(mod.shown(60.0, 60), 60.0)
+        self.assertEqual(mod.shown(60.04, 60), 60.0)
+        self.assertEqual(mod.shown(33.333, 60), 33.3)
+        self.assertIsNone(mod.shown(None, 60))
+
+        class U:
+            def __init__(self, ranked, hours):
+                self.ranked, self.hours = ranked, hours
+        stats = mod.coverage_stats([U(True, 5.99), U(False, 4.01)], 60)               # unit-hours 59.9 exactly: below, fires on its own
+        self.assertEqual(stats["unit_hours_percent"], 59.9)
+        self.assertLess(stats["unit_hours_percent_exact"], 60)
 
     def test_a_bad_since_is_a_usage_error(self):
         self.old_and_new()
