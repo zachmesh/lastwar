@@ -1,8 +1,8 @@
 ---
 title: 5. Result and result statistics part 1
 created: 2026-11-23T09:03:48Z
-modified: 2026-11-23T09:03:48Z
-version: 0.1.0
+modified: 2026-11-24T16:09:43Z
+version: 0.2.0
 sequence: 10
 description: On completion the executor writes a result mapping into the same frontmatter (via _tools_/queue.py complete) and
 ---
@@ -30,7 +30,7 @@ result:
 ```
 
 Core result fields are fixed (status, times, duration, executor,
-claimed list and count, evidence, follow-up). The `stats` mapping is
+claimed list and count, evidence, follow-up). A nothing-to-do `done` also carries `state_read` (part 2). The `stats` mapping is
 open - each activity defines its own keys in its `_activities_`
 metadata (points gained, chests claimed, donations made, trucks
 dispatched), and executors pass them as key values at completion.
