@@ -1,8 +1,8 @@
 ---
 title: 8. What stays the same
 created: 2026-11-23T09:03:48Z
-modified: 2026-11-24T04:38:27Z
-version: 0.2.0
+modified: 2026-11-24T11:59:07Z
+version: 0.3.0
 sequence: 18
 description: The red lines, the kick rule for the different-device dialog, the Arms Race just-enough rule and
 ---
@@ -21,6 +21,8 @@ description: The red lines, the kick rule for the different-device dialog, the A
   grant Alliance Duel points, and you are about to claim 10 radar task rewards at once. Continue?"
   (Cancel, Confirm, no price): Confirm is allowed for that exact text only
   (`_records_/2026-11-22/radar-tasks/0339-queue-run.md`).
+- Scrolling a clipped page, 2026-11-24 (the operator's copy is the route card): a drag that starts on a card is read as a card gesture and moves nothing; start on the blank right margin (x about 685), short (60 to 80 px), one drag, a frame after; an over-scroll is corrected by one short drag back (20 to 40 px) (`_records_/2026-11-22/shop-claims/1150-queue-run.md`; the evidence
+  rows are in `_records_/2026-11-22/queue-planning/2700-routes.csv`).
 - The regulars tracker stays the cadence source of truth; the pool is
   a work distribution layer over it, not a replacement.
 - The `segment` field survives only as a reporting tag recording
