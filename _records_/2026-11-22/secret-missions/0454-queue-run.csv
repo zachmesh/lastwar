@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,none: start at 04:54:40Z (wait 0),2026-11-24T04:54:40Z,see growth/0054-waits.csv
+UR Rescue Missing Agent,"Lv.5, counting down: 00:41:17 (04:54:56.8Z) to 00:40:50 (04:55:18.4Z): ends about 2026-11-24T05:36:08Z",2026-11-24T04:55:18.399Z,tag text [G]: card list
+UR Capture the Oil Depot,"Lv.5, counting down: 02:40:55 to 02:40:28 (04:55:18.4Z): ends about 2026-11-24T07:35:46Z",2026-11-24T04:55:18.399Z,as predicted from the 03:35Z deploy
+SSR cards,"Search for Missing Refugees and Provide Tech Support to Refugees: PERFECT stamp, no Claim; a fifth card partly visible and unreadable (no scroll)",2026-11-24T04:54:56.787Z,
+counters,"Assist Allies 0/5, Plunder Others 0/5; Mega Refresh and Mega Deploy greyed; the mode label read Normal",2026-11-24T04:54:56.787Z,
+claim,nothing showed a green Claim: nothing claimed,2026-11-24T04:55:00Z,
+Mega Deploy,"one tap at 04:55:10.348Z (473,926): no popup, no toast; Perform Now not pressed; cards unchanged",2026-11-24T04:55:13.190Z,nothing pending to deploy
+HUD,"Total Power 150,046,960",2026-11-24T04:55:40Z,

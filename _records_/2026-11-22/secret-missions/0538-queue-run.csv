@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"requested 05:37:55Z, granted 05:38:30Z, 0.58 minutes (OTHER: a cu-integrator gate run held the desktop 05:35:55Z to about 05:38:20Z); idle wait is 0",2026-11-24T05:38:30Z,see growth/0054-waits.csv
+Post before,"title SECRET COMMAND POST read; UR Rescue Missing Agent Lv.5 with a green Claim (finished); UR Capture the Oil Depot Lv.5 counting down 01:56:58 (05:38:48.1Z); both SSR refugee cards PERFECT; Assist Allies 0/5, Plunder Others 0/5; Mega Refresh and Mega Deploy greyed; a fifth card cut off",2026-11-24T05:38:48.132Z,tag text [G]: card list
+Claim,"one tap on the green Claim (575,489) at 05:38:52.081Z",2026-11-24T05:38:52.081Z,the in-game Claim only
+rewards,Black Market Cash x40; Mystery Supply Box x67; Resource Chest x300; Upgrade Ore x800; 5m Research Speed-up x50; Treasure Map Fragment #3 x2; Hero EXP 4.1M,2026-11-24T05:38:54.292Z,popup dismissed by an empty tap at 05:38:58.8Z
+after,Rescue Missing Agent PERFECT; Capture the Oil Depot 01:56:45 then 01:56:39 then 01:56:33 (05:39:13.1Z): ends about 2026-11-24T07:35:46Z; the two SSR cards unchanged; the Your Tasks badge cleared,2026-11-24T05:39:13.099Z,
+Mega Deploy,"one tap at 05:39:05.422Z (472,926): no popup, no toast, the button stayed greyed; Perform Now not pressed",2026-11-24T05:39:07.606Z,nothing pending: NO NEW TIMERS
+next claim,UR Capture the Oil Depot about 2026-11-24T07:35:46Z (30K oil); then the new card pair at the next 4-hour start (unverified),2026-11-24T05:39:13Z,
+HUD,"oil 673.9K; diamonds 11,153; Total Power 150,046,960",2026-11-24T05:39:30Z,
+drag count,"drags tried 0, cancelled 0",,

@@ -1,7 +1,7 @@
 ---
 title: Execution records for coach on 2026-11-22
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-24T03:45:00Z
+modified: 2026-11-24T04:33:00Z
 version: 1.0.0
 description: Execution records for coach on 2026-11-22, one file per run, with the CSV sidecars the runs cite; the day index lists the runs.
 ---
@@ -82,3 +82,6 @@ sidecars the runs cite.
 - [power-delta-decomposition.csv](power-delta-decomposition.csv) - the net power change since 06:48Z on 11-23 split into our gain, the other device and the external casualties.
 - [hospital-test-prereg.csv](hospital-test-prereg.csv) - the three readings of the 1,000-troop external power drop (wounded, dead, away), registered before the hospital read.
 - [power-by-category-2.csv](power-by-category-2.csv) and [drill-ground-room.csv](drill-ground-room.csv) - the component accounting that attributes the other-device step exactly, and the room timeline for the waiting troops.
+- [1215-partial-collect-evidence.md](1215-partial-collect-evidence.md) - barracks collects look partial: the Lv.24 evidence, the tests registered, the correction to 1206.
+- [idle-blocked-audit.csv](idle-blocked-audit.csv) - the re-check of every earlier 'idle, blocked' read for finished batches we did not collect.
+- [partial-collect-test-prereg.csv](partial-collect-test-prereg.csv) - the three outcomes of the 11-26T21:10Z room test, Lv.30 pressed first, registered before the data.

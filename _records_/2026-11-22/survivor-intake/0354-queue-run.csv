@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,none: start at 03:54:46Z (wait 0),2026-11-24T03:54:46Z,see growth/0054-waits.csv
+before,"no survivor bubble or minute count beside the avatar; a '?' bubble at about (145,649) at the gate on the left edge with a small figure at (143,687); HUD power 150,046,960",2026-11-24T03:55:00Z,tag text [G]
+tap,"one tap on the gate figure (143,687): a white speech bubble reading '...ou soon!' (the start hidden behind the left round button); no card, no role, no level",2026-11-24T03:55:15Z,nothing recruitable
+after,the '?' bubble gone; no panel; energy 69 to 70; the red target icon badge 1 to 5,2026-11-24T03:55:35Z,
+pressed,"only that single tap; nothing with a diamond, price, Buy, Obtain or Speed Up",,no intake

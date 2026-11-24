@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,none: start at 04:53:34Z (wait 0),2026-11-24T04:53:34Z,see growth/0054-waits.csv
+fragments before,"M1 6, M2 6, M3 1, M4 4, M5 1, M6 8, M7 7: a full set of seven on hand",2026-11-24T04:53:55Z,"tag text [G]: panel; the 04:38Z claim paid treasure map fragments #7 x2, #4 x1 and #3 x1"
+Dig,"Dig 1 time pressed once (no price shown; Skip Animation already ticked, not touched)",2026-11-24T04:54:05Z,
+reward,"resource crate x12, gold coin crate x12, 1-minute construction speed-up x25, a 1-minute speed-up x50 (type unclear on the icon)",2026-11-24T04:54:10Z,"a gift received toast afterwards, not touched"
+fragments after,"M1 5, M2 5, M3 0, M4 3, M5 0, M6 7, M7 6",2026-11-24T04:54:15Z,M3 and M5 are at zero: the next dig needs both
+chest track,"6/15 before, 7/15 after",2026-11-24T04:54:15Z,

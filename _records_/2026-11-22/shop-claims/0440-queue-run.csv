@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,none: start at 04:40:48Z (wait 0),2026-11-24T04:40:48Z,see growth/0054-waits.csv
+tab row,"the Weekly Pass tab sat at about (620,153), not (500,153) (the row had shifted: (500,153) is Super Monthly Pass)",2026-11-24T04:41:10Z,ground the tab by its written text
+before,Free Supply chest showing; Legendary banner with a green Claim All (not tapped); S2 Drone Components Weekly Pass Remaining 5d 21:18:56 with a green Claim; S1 Drone Parts Weekly Pass Remaining 5d 21:18:56 with a green Claim (partly visible),2026-11-24T04:41:20Z,tag text [G]: shop page
+S2 claim,one tap on the plain green Claim of the S2 card: CONGRATULATIONS: Lv.4 chest x1,2026-11-24T04:41:35Z,dismissed by an empty tap
+Free Supply,"a second popup 'Free rewards have been automatically claimed': red gem item x10 and an item x4; the Free Supply chest then reads Claimed; diamonds 11,123 to 11,133",2026-11-24T04:41:45Z,closed with the back arrow
+S2 after,'Already claimed today' with a Renew $4.99 button (not touched),2026-11-24T04:41:55Z,
+S1 pickup,"green Claim with a red dot at the bottom edge of the page (about (572,914)): taps at (572,914), (570,910) and (560,917) in run 20261124T044227Z-52452d, one more at (572,913) after a scroll that did not move the page in run 20261124T044415Z-ecf0cb: no change, no popup; Remaining 5d 21:14:49 at the last read",2026-11-24T04:45:05.751Z,the button is clipped by the window bottom; the page does not scroll; daily pickup 15 drone parts
+not touched,"Renew, Renew All, Buy, the Legendary Claim All",,never
+HUD,"diamonds 11,133; food 125.4M, iron 769.1M, coin 23.0M",2026-11-24T04:45:30Z,

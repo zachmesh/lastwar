@@ -1,10 +1,13 @@
 step,room_free,basis
-before the siege (Drill Ground Full),about 0,'Drill Ground Full' refused every collect; derived [D]
+before the siege (Drill Ground Full),about 0,'Drill Ground Full' refused every collect [D]
 "after the 1,000 wounded left the army (01:15Z to 01:51Z)","about 1,000",the troops sit in the hospital
-after the Lv.27 T9 x726 batch collected whole (03:30:53Z),"about 274 = 1,000 - 726","no refusal; Total Power +981,552; consistent with room conserved [D]"
-the Lv.30 x793 batch (ends 11:18Z),needs 793: 519 more than the 274 free,will not fit now; fits when room reaches 793
-Lv.26 ground to 27 completes 2026-11-26T21:10:37Z,274 + 200 = 474,"+200 slots a level (panel Unit Count +7,200 to +7,400) [G]; still under 793"
-Lv.27 ground to 28 completes 2026-11-30T22:21:48Z,674,still under 793
-Lv.28 ground to 29 completes 2026-12-05T11:59:18Z,874,"793 fits from here, if nothing else changes (new troops, healing): the third level"
-"healing and collecting the 1,000 wounded","needs 1,000 room","do not heal now: a healed troop joins the 5,306 'Completed' pile and gains nothing until room exists"
-partial collect with room BELOW the batch size,untested,"the 726 was collected whole when room (1,000) covered it"
+after the Lv.27 T9 x726 batch collected whole (03:30:53Z),about 274,"no refusal; +981,552"
+after the Lv.24 finished batch of 274 collected whole (03:51Z to 03:53Z),about 0,"+291,262; Barracks Lv.20 then refused 'Drill Ground Full' at 03:52:20Z [M]: 726 + 274 = 1,000, the whole freed room"
+Lv.26 ground to 27 completes 2026-11-26T21:10:37Z,about 200,"+200 slots a level (panel Unit Count +7,200 to +7,400) [G]; a batch collected whole needs room for all of it"
+Lv.27 ground to 28 completes 2026-11-30T22:21:48Z,about 400,
+Lv.28 ground to 29 completes 2026-12-05T11:59:18Z,about 600,"about 600 slots from three levels: a partial collect releases waiting troops 200 at a time from each level, so the 793 batch no longer needs a FOURTH level to start paying out; it only needs one to collect whole; this SUPERSEDES the 04:00Z version"
+the fourth ground (Lv.30) or any other room source,needed: 793 - 600 = 193 more,not scheduled; the Lv.30 ground is the one not under upgrade
+"healing and collecting the 1,000 wounded","needs 1,000 room","not before the room exists: a healed troop joins the 5,306 'Completed' pile and gains nothing"
+partial collect with room BELOW the batch size,evidence says it works [D],"Lv.24: 666 queued, 143 collected on 11-22, digits about 523 on 11-23, 274 collected on 11-24 = exactly the free room; the remainder, probably 249 T8, still waits (1215-partial-collect-evidence.md); test registered for 11-26T21:10Z: 200 collected, 49 left; supersedes the step reading in 1206"
+LESSON,an 'idle' barracks can hold a finished batch (Lv.24 held 274 Lv.8 for a day): one pistol press per barracks per read whenever room could exist,operator record troop-training/0351
+Lv.24 barracks remainder,about 249 T8 waiting [D],"+264,687 power when collected","the 523 left after the 143, less the 274 collected"

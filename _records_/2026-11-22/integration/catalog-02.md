@@ -40,3 +40,7 @@ Back to the [folder index](INDEX.md).
 - [PR 946](landing-pr-946.md) - fifteenth records snapshot, units of 22:45Z to 00:55Z, builders starts
 - [PR 947](landing-pr-947.md) - scribe handover 0.4.0, the CU-721 follow-up
 - [PR 948](landing-pr-948.md) - refill-reset, the 02:00Z reset does not touch the count or the grid
+- [PR 949](landing-pr-949.md) - sixteenth records snapshot, units of 00:55Z to 03:50Z, OD-28
+- [PR 950](landing-pr-950.md) - finished-batch-lesson, a Drill Ground Full toast is not idle
+- [PR 951](landing-pr-951.md) - finished-batch-lesson-2, a collect admits what fits, the card taught the wrong inference
+- [PR 952](landing-pr-952.md) - known-dialogs, the three known dialogs and the safe answer to each

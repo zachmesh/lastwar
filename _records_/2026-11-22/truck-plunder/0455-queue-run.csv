@@ -1,0 +1,5 @@
+item,value,read_utc,note
+wait,none (no run),2026-11-24T04:53:10Z,see growth/0054-waits.csv
+route,"the trade icon (107,580) is PRESENT (read 02:30:41Z and 04:02Z as a round blue tram icon); the unit needs it for Truck Details, Reward Recovery and dispatch",2026-11-24T04:53:10Z,no tap
+hold,coordinator order (02:41Z and 04:29Z): no trade icon tap; the plunder scans 002 to 008 stay held and own trucks need the same icon,2026-11-24T04:53:10Z,held by the Steers
+state,"trade count and slots not read; nothing settled, dispatched or claimed",,no frame taken

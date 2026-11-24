@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,none: start at 04:03:53Z (wait 0),2026-11-24T04:03:53Z,see growth/0054-waits.csv
+rail before,"gift icons on Alliance and Event; red dots on Battle Report, Regular and In-app Purchases; none on System and Favorite",2026-11-24T04:04:10Z,
+Event Claim All,"three gift-icon mails (an alliance duel ranking, daily participation rewards, an arms race ranking reward); Claim All once: 8 tiles: honeycomb item x50, medal x100, coin chest x33, iron chest x33, food chest x33, a Lv.3 chest x1, EXP chest x30, triangle item 1.2K",2026-11-24T04:04:30Z,the list also held two read train mails and a Returned Items mail; no mail titled Train arrival reward
+System,"read system mails only, no gift icon; nothing pressed",2026-11-24T04:04:40Z,
+Alliance Claim All,"once: 11 tiles: gear item x25, coin 300.0K (37 units), gems x10, medal 4.0K, badge item 50, supply chest x80, coin chest x80, EXP 45.5M, three 1-minute speed-ups (600, 300, 300)",2026-11-24T04:04:55Z,
+rail after,"no gift icon anywhere; red dots on Battle Report, Regular and In-app Purchases remain (unopened)",2026-11-24T04:05:05Z,
+HUD,"diamonds 11,113 to 11,123 (+10, the gem item); food 125.4M, iron 769.1M, coin 23.0M, Total Power 150,046,960",2026-11-24T04:05:10Z,

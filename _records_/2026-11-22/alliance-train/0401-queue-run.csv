@@ -1,0 +1,5 @@
+item,value,read_utc,note
+wait,none: start at 04:01:48Z (wait 0),2026-11-24T04:01:48Z,see growth/0054-waits.csv
+boarding banner,none in any frame; the top banners were chat and appointment announcements,2026-11-24T04:02:05Z,
+left column,"a locomotive-style round icon at (107,579) (the Intercity Trade icon) with no countdown or dot; a vehicle icon (107,647) with a ? bubble; radar; hammer",2026-11-24T04:02:10Z,
+HUD,"Total Power 150,046,960; energy 71; queues 4/4 and 2/2; Warzone Duel 21:57:44",2026-11-24T04:02:15Z,

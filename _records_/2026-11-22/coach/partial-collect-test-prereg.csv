@@ -1,0 +1,8 @@
+outcome,Lv.30 barracks press (first),Lv.24 barracks press (second),reading
+"A, a ramp (partial collect works)","collects 200 T10: +329,400 = 200 x 1,647; toast '200 Lv. 10 units are ready'; 593 left",refused 'Drill Ground Full': the room is used up,the ladder pays out 200 troops a level at once
+"B, all or nothing",refused (793 over 200),refused (249 over 200),a batch needs room for all of it: the earlier 143 and 274 need another explanation
+"C, mixed",refused,"collects 200 T8: +212,600; 49 left","a batch-size rule, or the Lv.30 batch not counted as finished"
+WHAT TO RECORD,"'Unit Count X of Y' read BEFORE any press and after each press (the room the unit starts with: 200 if nothing else moved it; 249 or more would let both barracks collect), the toast text, the power before and after, the ready bubble and its digits per tent",,registered 04:30Z before the data; the 11:18Z Lv.30 tap with room 0 is dropped as uninformative
+DIGITS EXPECTED NOW,Lv.24 about 249; Lv.30 about 793 after 11:18Z; Lv.20 and Lv.27 none,,any training read from now on records the bubble and digits per tent
+IF THE STARTING ROOM IS 249 OR MORE,"Lv.30 collects min(room, 793) and Lv.24 can then collect the rest of its 249 if room remains",,,"read the outcome against the room actually present: A needs the collected count to equal the room used, B needs a refusal with room above zero but under the batch; the starting room decides which reading is fair"
+"PRIORS (Steer A, 04:24Z)","barracks: a collect with room below the batch size succeeds, 0.85 (was 0.3); the Hospital kept apart at 0.3: its collect has no selector and its toast named all 5,306",,,the Hospital is not shown by the barracks result
