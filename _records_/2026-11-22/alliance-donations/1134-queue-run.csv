@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the desktop lock was HELD by a cu-integrator run (nightly-2026-11-24T11:28:44Z, started 11:32:17.8Z): first checked 11:33:04Z, free at 11:34:37.06Z: waited 1.55 minutes (93 s), note OTHER; then the run was admitted 0.9 s after the request (start requested 11:34:48.409Z, run started 11:34:49.288Z); owner idle 12099 s; my previous run's last click 11:26:17Z; the first click 11:35:00.078Z (the Alliance shield) is the model's own turn",2026-11-24T11:34:49.288Z,see growth/0054-waits.csv
+badges,"first frame 11:34:54.9Z: tram (107,580), pickup and radar dish none; Warzone Duel timer 14:25:07",2026-11-24T11:34:54.862Z,tram badge rule: none; not tapped
+route,"Alliance shield (670,708), Techs (514,677), the recommended node (245,525): Quick Construction Lv.9 of 10",2026-11-24T11:35:16.087Z,tag text [G]: donation dialog
+entry count,"13/30 [G] at 11:35:24.253Z; the coin Donate green at 1,000 coins, no timer",2026-11-24T11:35:24.253Z,the Coach's registered entry 13 matches; the prediction: 13 grid points since the last tap at 07:01Z
+taps,"13 coin Donate taps at (495,756): 11:35:31.6Z, :38.5Z, :45.7Z, :52.5Z, 11:36:01.5Z, :12.8Z, :20.3Z, :27.0Z, :36.3Z, :43.6Z, :51.6Z, 11:37:01.8Z and 11:37:10.536Z (the last tap)",2026-11-24T11:37:10.536Z,"each tap 1,000 coins; reads after the taps: 12, 11, 10, hidden, hidden, 7, 6, hidden, 4, 3, 2, 1, hidden (the reward animation hid the count on four)"
+live count before the last tap,1/30 [G] read after tap 12 (11:37:02.9Z),2026-11-24T11:37:02.942Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:00:36 read at 11:37:22.169Z (then 00:00:26 at 11:37:31.180Z): the end 11:37:58.2Z and 11:37:57.2Z,2026-11-24T11:37:22.169Z,the 20-minute grid point 11:37:57.4Z: within 1 s
+witness,"Tech EXP bar 4.9M of 8.0M the same as at entry (no visible rise); 'Tech Donation Today' 1,650 to 3,050 (+1,400 for 13 taps)",2026-11-24T11:37:22.169Z,"the +1,400 against 13 taps is unexplained (not 100 per tap)"
+count after,"the count line shows 'Donate' in place of N/30 after the last tap: not written, never derived",2026-11-24T11:37:22.169Z,the next grid point 11:57:57.4Z gives one more
+close,"the donation dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base, no TIPS popup",2026-11-24T11:38:02Z,"drags tried 0, cancelled 0"

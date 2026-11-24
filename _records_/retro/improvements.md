@@ -31,3 +31,4 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 - [IMP-20261123-13](improvements-log/imp-20261123-13.md) - owner decided to mark the 1,108 duplicate run articles superseded and move them to a new local type, P2.
 - [IMP-20261123-14](improvements-log/imp-20261123-14.md) - activity folders become playbook cards with verified rules and a weekly improvement loop owned by scribe, coach, researcher and operator, P2.
 - [IMP-20261123-15](improvements-log/imp-20261123-15.md) - playbook quality baselines and the metrics that close an improvement.
+- [IMP-20261124-01](improvements-log/imp-20261124-01.md) - a regular that carries a known-blocked step is partial every run, and the growth partial rate.

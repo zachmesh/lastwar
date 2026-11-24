@@ -1,0 +1,42 @@
+---
+title: Intercity Trade History read - the specification, our own dispatch days, and the interpretation registered before the data
+created: 2026-11-24T11:45:00Z
+modified: 2026-11-24T11:57:00Z
+version: 1.0.1
+description: Coach specification of the one read-only look at the Intercity Trade History tab that Steer A asked for, the dispatch and plunder days our own records show since 11-11, and how the tab will be read before it is seen
+status: done
+activity: coach
+run_id: coach-2026-11-24-0335
+trigger: Steer A message of 11:33Z on the owner possibly dispatching from the phone
+started_at: 2026-11-24T11:33:00Z
+finished_at: 2026-11-24T11:45:00Z
+duration_seconds: 720
+verified: no
+grounded_in:
+  - source: truck-plunder 2105 (11-22 PT), truck-plunder 0701 (11-11), the plunder records of 11-23, the rule digest item 7
+---
+
+# The History read
+
+**I cannot read the game**, so this is the specification for the operator unit the planner stages in cycle A (14:15Z): one run, read-only, at most 8 steps: open the Intercity Trade screen, tap only the History tab, record each visible entry with its date and time as shown, its kind (dispatch or plunder), result and reward, scroll with the WHEEL at most twice (a wheel scroll is not a drag: no held button, so no cancelled-drag Escape; Steer A, 11:45Z), a frame after each and nothing tapped on any entry, record the oldest date shown, close with the back arrow. If the list does not move, say 'wheel inert on the History list'. Nothing pressed but the tab.
+
+## What our own records say
+
+The claim "the team has not dispatched own trucks since 11-11" is **wrong for 11-23**: the operator seat dispatched two own SR trucks at about 05:05Z (unit `trucks-2026-11-22-1857`, record 2105, Trade Count 0 to 2/5). Our records show dispatches or plunder on only these days:
+
+| UTC day | What we did |
+|---|---|
+| 11-11 | own trucks (0701) |
+| 11-23 | two own trucks at 05:05Z; plunder fights at 14:25Z (and a second) |
+| 11-12 to 11-22 | **none in our records**, 11 days |
+
+So "days without a dispatch by us" since 11-11 is 11 of the 12 days from 11-12 to 11-23. That is what the report states, not "quota lost".
+
+## Registered before the data
+
+1. The tab shows our two dispatches of 11-23 and, if it logs plunder, the fights of 11-23. If it shows neither, it records something else, and I say so.
+2. Any entry dated 11-12 to 11-22 was made by a hand other than ours, since we have no record of one: by elimination the owner or the phone [D]. I count the distinct days.
+3. The oldest date shown is the tab's retention: if nothing before 11-23 appears, the history is short or empty, and "nobody dispatched since 11-11" is **not** shown.
+4. The tab does not name a device, so "who" is by comparison with our records.
+
+Lost income is booked only if the tab shows empty days; until then the value stays "up to five trucks a day".

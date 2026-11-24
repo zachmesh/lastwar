@@ -1,9 +1,9 @@
 ---
 title: Trade Cycle Settle Dispatch And Plunder On One Badge 3110 2026-11-24
 created: 2026-11-24T02:25:00-08:00
-modified: 2026-11-24T02:35:00-08:00
+modified: 2026-11-24T03:50:00-08:00
 level: L0
-version: 1.1.0
+version: 1.2.0
 description: The procedure of one trade cycle - at a tram badge, settle the returned trucks, dispatch into the empty slots by rule 2, then plunder within today's count and the OD-20 guards - built from record 1000 and Steer A's ruling of 2026-11-24 10:16Z
 status: done
 activity: queue-planning
@@ -21,11 +21,11 @@ grounded_in:
 
 ## When
 
-At every tram badge (red N = N free slots or returned trucks). NO badge, NO tap (Steer A, 10:16Z): the icon then only pans the camera. A unit that finds no badge closes 'badge absent: no tap' with the frame; the Coordinator re-dispatches 15 minutes later, at most 3 tries.
+At every tram badge (red N = N free slots or returned trucks). NO badge, NO tap (Steer A): the icon then only pans the camera. A unit that finds no badge closes 'badge absent: no tap' with the frame; the Coordinator re-dispatches 15 minutes later, at most 3 tries.
 
 ## 0 Hospital first (units that plunder)
 
-BEFORE the tram tap, read the Hospital Lv.25 figures behind its tag's orange middle button: free room = 7,999 minus wounded minus 'Completed' (1,329 at 10:00Z). Under 1,000: do the cycle without the plunder step and write 'blocked by capacity: hospital room'. The dispatch fills the slots and clears the badge, so the read cannot wait until the plunder step.
+BEFORE the tram tap, read the Hospital Lv.25 figures behind its tag's orange middle button: free room = 7,999 minus wounded minus 'Completed'. Under 1,000: do the cycle without the plunder step and write 'blocked by capacity: hospital room'.
 
 ## 1 Open and settle
 
@@ -41,4 +41,4 @@ Switch to the Others' Trucks tab. Stop after any fight wounding more than 50 tro
 
 ## 4 Close
 
-The trade screen stays open across the runs of one unit (no trip to the base between runs); every fight records the guard, quality, cargo and loot. The blue back arrow (109,941), then read the Hospital free room again; write the badge state and trade count again. Another app, alert or dialog: stop, name `lsappinfo front`; TIPS Cancel only.
+The trade screen stays open across the runs of one unit (no trip to the base between runs); every fight records the guard, quality, cargo and loot. The History read (once, cycle A only, Steer A 11:33Z): before the back arrow, one tap on the History button, write the title, tabs and first rows' text and dates, press nothing in it, no drag, close it by one tap. The blue back arrow (109,941), then read the Hospital free room again; write the badge state and trade count again. Another app, alert or dialog: stop, name `lsappinfo front`; TIPS Cancel only.

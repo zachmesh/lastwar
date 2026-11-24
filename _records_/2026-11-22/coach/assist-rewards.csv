@@ -1,0 +1,7 @@
+press,utc,assist_counter_before,assist_counter_after,iron,food,hero_exp,mystery_supply_boxes,squad_1_free,march_queues,total_power,source
+1,2026-11-24T11:17:05.552Z,0/5,1/5,324900,324900,412800,6,yes,0/3,150051860,secret-missions/1114-queue-run.csv
+2,2026-11-24T11:23:35.148Z,1/5,2/5,324900,324900,412800,6,yes,0/3,150051860,secret-missions/1122-queue-run.csv
+3,2026-11-24T11:24:05.185Z,2/5,3/5,324900,324900,412800,6,yes,0/3,150051860,secret-missions/1122-queue-run.csv
+4,2026-11-24T11:25:04.389Z,3/5,4/5,324900,324900,412800,6,yes,0/3,150051860,secret-missions/1122-queue-run.csv
+5,2026-11-24T11:25:28.348Z,4/5,5/5,324900,324900,412800,6,yes,0/3,150051860,secret-missions/1122-queue-run.csv
+TOTAL,1 to 5 (11:17:05Z to 11:25:28Z),0/5,5/5,1624500,1624500,2064000,30,"yes, unchanged",0/3,150051860,day total; non-power

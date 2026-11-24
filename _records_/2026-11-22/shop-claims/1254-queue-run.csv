@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 12:53:55.676Z, run started 12:53:56.436Z), 3 minutes after my previous run ended; owner idle 16842 s: wait 0",2026-11-24T12:53:56.436Z,see growth/0054-waits.csv
+badges,"first frame 12:54:01.2Z and the base after closing 12:54:36.6Z: tram, pickup (a '?' bubble beside it) and radar dish none",2026-11-24T12:54:01.186Z,tram badge rule: none
+page before,"Free Supply 'Claimed'; the Legendary banner Claim All (not touched); S2 Drone Components Remaining 5d 13:05:36, 'Already claimed today', Renew $4.99 (not touched); S1 Drone Parts Remaining 5d 13:05:36, the Daily Pickup row, the green Claim with a red dot at y about 915, clipped; the S2 title baseline y 531; the S1 title y about 770",2026-11-24T12:54:25.175Z,tag text [G]: Weekly Pass tab
+what the model can send,"the standalone wait action accepts ONLY whole seconds (duration, an integer from 1 to 300); it cannot give duration_ms: the in-press wait the composer wants (duration_ms 300 and 100) cannot be expressed; the tools available in one message: mouse_move, left_mouse_down, left_mouse_up, left_click_drag, scroll, wait (whole seconds)",2026-11-24T12:54:25.175Z,the finding: a wait of 0 s was what the composer refused last time (a positive whole duration_ms needed)
+batch,not sent (by the brief: press nothing if the calls cannot be sent): no refusal text; the one retry of the unit is unused,2026-11-24T12:54:25.175Z,"a composed pan with whole-second waits (1 s each, about 8 s with the button down) is the variant to ask Steer A about"
+pan,"not made: pan count 0, no start or end, no measured move; the model did not use left_click_drag (the brief names only the composed pan)",2026-11-24T12:54:25.175Z,drags tried 0
+S1 Claim,not pressed (clipped); no popup,2026-11-24T12:54:25.175Z,blocked by route: Claim clipped
+Iron and Coin cards,never visible: nothing read,2026-11-24T12:54:25.175Z,
+closing,"the model closed the shop with its back arrow (103,935) at 12:54:34.4Z; the base with no panel; diamonds 11,153",2026-11-24T12:54:36.575Z,"no further drag, key or wheel"
