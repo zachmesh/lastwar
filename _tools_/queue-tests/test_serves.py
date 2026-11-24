@@ -14,6 +14,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 QUEUE = Path(__file__).resolve().parent.parent / "queue.py"
 SERVES = "keeps the builders hut upgrade on its window"
@@ -37,8 +38,13 @@ class PoolCase(unittest.TestCase):
         subprocess.run(["git", "init", "-q", str(self.repo)], check=True)
         subprocess.run(["git", "-C", str(self.repo), "config", "user.email", "t@example.org"], check=True)
         subprocess.run(["git", "-C", str(self.repo), "config", "user.name", "t"], check=True)
+        # The forecast switch lives in the repository's TEAM.yaml (coordination.queue.require_forecast, on since 2026-11-24): a test pool must not
+        # inherit it, so every test names a team file that does not exist (switch off) unless it writes its own (test_require_forecast.py does).
         self.env = dict(os.environ, LASTWAR_QUEUE_ALLOW_TMP_ROOT="1", LASTWAR_QUEUE_ALLOW_STALE_TOOL="1",
-                        LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM="1")
+                        LASTWAR_QUEUE_ALLOW_UNREAD_CLAIM="1", LASTWAR_TEAM_FILE=str(self.repo / "no-team-file.yaml"))
+        patcher = mock.patch.dict(os.environ, {"LASTWAR_TEAM_FILE": self.env["LASTWAR_TEAM_FILE"]})      # the in-process tests read it too
+        patcher.start()
+        self.addCleanup(patcher.stop)
 
     def queue(self, *args):
         return subprocess.run([sys.executable, "-B", str(QUEUE), "--root", str(self.pool), *args], capture_output=True,
