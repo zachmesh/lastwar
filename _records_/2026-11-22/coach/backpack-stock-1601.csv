@@ -1,0 +1,11 @@
+tab,stack_as_read,count,unit_value_or_status,total_or_note,source
+Speed-up,general 8h / 3h / 1h / 15m / 5m / 1m,"94 / 266 / 1,196 / 1 / 32,468 / 24,902","352,017 minutes","the 11-23 figure was 351,687 (+330)",perception-scout/1601
+Speed-up,construction (hammer) 5m / 1m,"24,390 / 19,440","141,390 minutes","+1,980 since the 03:36Z check of 139,410: source unread",1601
+Speed-up,"a silver-disc kind (unconfirmed, perhaps tech) 8h / 1h / 5m / 1m","5 / 125 / 2,156 / 6,074","26,754 minutes if the kinds are as labelled",kind UNCONFIRMED; the fourth kind (a green round icon) is on the cut-off row,1601
+Resources,red gem items (diamond value as labelled) rows 1 to 3,"5.0K x16, 10.0K x6, 200 x15, 100 x986, 1.0K x1, 500 x13, 5 x3,043, 1 x2,500, 10 x299, 20 x52, 50 x200","280,845 diamonds in item form","never used; the 5,000 Diamonds tile is selected on tab open with a live Use",1601
+Resources,blue-silver chest,552,"equals the 11-23 Resource Choice Chest UR 552 (coin 2.43M each, a choice of a Food, Iron or Coin Chest UR): 1.34G coin if converted",inferred by the count; unchanged since 11-23,1601 and growth/0009
+Special,purple question-mark chest (red dot),387,UNREAD: probably the Mystery Supply Box (299 on 11-23 08:25Z),inferred from the assist record's purple box; contents unread,1601
+Special,gold question-mark chest (red dot),350,UNREAD,a new stack to name,1601
+Heroes,Skill Medal,17.8K,unread value,"9,521 on 11-23: +8.3K, probably from the secret-mission claims [G]",1601
+Gear,Drone Parts,231,S1 pickups x15 a day (x105 a week),,1601
+ROWS NOT READ,the fourth row of each of the five grids and the Gift tab beyond seven tiles,,unread,"three blue-silver chests and an orange chest (Resources), a purple, blue, VI and pink chest (Special), a fourth speed-up kind, four cards (Heroes), gear Lv.30 and Lv.20 (Gear)",1601

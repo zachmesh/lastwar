@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 18:04:34.248Z, run started 18:04:35.012Z), 7 minutes after my previous run ended; owner idle 3,184 s: wait 0",2026-11-24T18:04:35.012Z,see growth/0054-waits.csv
+badges,"frames at 18:04:35.4Z, 18:04:40.7Z, 18:04:45.5Z, 18:04:49.6Z, 18:04:53.7Z and 18:04:58.9Z (timers 07:55:26 to 07:55:02): tram none, pickup none, radar dish 3 in every frame; hammer 4/4; flask 2/2",2026-11-24T18:04:35.012Z,tram badge rule: none; not tapped
+foreground history,"the last foreground loss known: the game restart at 17:04:31Z (Steer A's front log); LastWar in front at every operator front check since: 17:50:29Z, 17:53:35Z, 17:55:20Z, 17:57:31Z, 17:58:59Z, 18:04:33Z, 18:05:06Z",2026-11-24T18:04:33Z,"the probe follows about 60 minutes after the loss; the badge was first seen LIT at 15:48:25Z, 49 seconds after LastWar returned from an alert (15:36:23Z to 15:47:59Z), and dark at 15:26:17Z before it"
+derived return,the SR pressed 14:23:31.9Z with 03:36:58 shown: derived back at 18:00:30Z; the frames are 4.1 to 4.5 minutes later: no badge,2026-11-24T18:04:40.696Z,"the first SR (pressed 10:05:46Z) lit its badge between 15:26Z and 15:48Z, 27 to 49 minutes after its derived 14:59:21Z"
+left column,"tram (107,580) NONE; pickup (107,647) NONE; radar dish (107,715) 3; a crop of the left column (x 73 to 213, y 520 to 780) of the saved last frame step 5 at 4x confirms: the tram icon (a truck glyph) bare, the radar dish with a red 3",2026-11-24T18:04:58.944Z,probe: none
+HUD,"diamonds 11,173; iron 765.6M; food 143.9M; coin 19.4M; oil 635.7K; the plate counter 26.72K; Total Power 150,103,292: unchanged in every frame",2026-11-24T18:04:58.944Z,tag text [G]: HUD
+counters,"hammer 4/4, flask 2/2; the level badge 30; energy 183",2026-11-24T18:04:58.944Z,
+input,"none: waits only; no tap, drag, scroll or pan",,front check at the end: LastWar 18:05:06Z
+drags,"drags tried 0, cancelled 0",,

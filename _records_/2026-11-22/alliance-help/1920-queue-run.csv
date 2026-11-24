@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 19:19:49.459Z, run started 19:19:50.223Z), 15 s after the previous run ended; owner idle 7,684 s: wait 0",2026-11-24T19:19:50.223Z,see growth/0054-waits.csv
+badges,19:19:54.5Z: the Alliance button with a red dot; the tram icon not drawn; the Help tile with a red dot before and after,2026-11-24T19:19:50.223Z,tram badge rule: none; not tapped
+before,"the Help page (Alliance shield (670,708), Help tile (513,516)): header 740 of 1,000; four rows 30/30, the fourth partly cut off (no scroll)",2026-11-24T19:20:06.881Z,tag text [G]: Help page
+Help All,"the green Help All (393,766) pressed once at 19:20:13.5Z; the rows showed 'Time reduced' labels (1d 12:08:49 and 10:02:00 x3)",2026-11-24T19:20:15.656Z,no toast
+after the reopen,"the Help page closed (611,232) and reopened (513,516): header 780 of 1,000 (+40); the rows 30/30 again; Help All still shown",2026-11-24T19:20:29.290Z,the header updates only after a reopen
+close,"the Help page X (611,232), the Alliance back arrow (177,918); the base; the Help tile still carries a red dot",2026-11-24T19:20:43.374Z,
+drags,"drags tried 0, cancelled 0",,

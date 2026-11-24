@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.7 s after the request (start requested 17:34:53.923Z, run started 17:34:54.644Z), 1 minute after my previous record write; run 2 (17:35:31.2Z) admitted 0.7 s after the request, 16 s after run 1 ended; owner idle 1,407 and 1,444 s; wait 0",2026-11-24T17:34:54.644Z,see growth/0054-waits.csv
+badges,"17:34:59.7Z (timer 08:25:01): tram none, pickup none, radar dish 3; 17:35:46.9Z (timer 08:24:20): tram none, pickup none, radar dish 3; labs 2/2, builders 4/4",2026-11-24T17:34:54.644Z,tram badge rule: none; not tapped
+HUD before,"food 143.9M, iron 765.6M, coin 19.4M, oil 635.7K, plate counter 26.72K, diamonds 11,173; Total Power 150,103,292; labs counter 2/2",2026-11-24T17:34:59.708Z,tag text [G]: HUD
+Research Queue row 1,"'Lv.1 Food Output V upgrade in progress', Time Left 1d 02:04:02 (first read 17:35:05.4Z), 1d 02:03:32 (second read 17:35:35.7Z): ends about 2026-11-25T19:39:07Z; button Speed Up (not pressed)",2026-11-24T17:35:05.366Z,NO Complete button: the Food Output V Complete was not available
+Research Queue row 2,"'Lv.0 Oil Output I upgrade in progress', Time Left 1d 15:02:29 (first read), 1d 15:01:59 (second read): ends about 2026-11-26T08:37:34Z; button Speed Up (not pressed)",2026-11-24T17:35:05.366Z,the Oil Output I start of the brief's step 3 was already done by another actor
+idle lab / Iron Output V,no idle lab; no Iron Output V row: the second tech spend of the brief's step 2 has no target; nothing pressed,2026-11-24T17:35:35.704Z,for the Strategist: the brief's labs differ from the live labs
+quest line,'Upgrade Oil Well to Lv.24 (1/1)'; energy 183; the Thanksgiving Event badge 4,2026-11-24T17:35:46.911Z,a scrolling banner (a presidential appointment) ordinary
+pressed,"the flask icon (108,265) and the panel X (608,360); no Complete, Research, Speed Up or Finish Now",2026-11-24T17:35:38.173Z,the model batched two waits once: no effect
+drags,"drags tried 0, cancelled 0",,

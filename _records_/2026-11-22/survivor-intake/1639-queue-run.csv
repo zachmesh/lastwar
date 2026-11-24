@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 18:39:29.125Z, run started 18:39:29.862Z), 56 s after my previous run ended; owner idle 5,271 s: wait 0",2026-11-24T18:39:29.862Z,see growth/0054-waits.csv
+badges,"first frame 18:39:34.6Z: the tram icon not visible in the frame, pickup none, radar dish none, hammer 4/4, flask 2/2; after WORLD then BASE 18:39:57.0Z and the end 18:40:14.2Z: the tram icon not drawn (a crop of the saved frames confirms), pickup none, radar dish none",2026-11-24T18:39:29.862Z,tram badge rule: none; not tapped
+dot before,the survivor bubble beside the avatar none; the gate (left edge): no question mark and no figure,2026-11-24T18:39:34.568Z,tag text [G]: base left edge; timer 07:20:27
+refresh,"WORLD (660,940) at 18:39:40.1Z, BASE (660,940) at 18:39:48.0Z; no icon tapped",2026-11-24T18:39:51.240Z,
+dot after,"a bare question mark bubble at (91,686) in the frame just before, then a figure with a white question mark bubble at about (145,650) at 18:39:57.0Z (timer 07:20:04): CHANGED from none to a question-mark figure",2026-11-24T18:39:57.042Z,a stale gate until the camera round trip
+the tap,"the figure tapped once at (143,686) at 18:40:04.3Z: a white speech bubble 'T... welcome' (text partly hidden); NO survivor card, no Recruit button, no price; the bubble, figure and question mark gone within seconds",2026-11-24T18:40:07.551Z,the same outcome as record 1029 ('This is my welcome...'); no claim held behind the dot: not a HIT
+HUD,"food 149.8M, iron 771.4M, coin 23.2M, oil 638.4K, diamonds 11,173 unchanged",2026-11-24T18:40:14.207Z,nothing paid
+tram icon,"the round tram icon at (107,580) is NOT DRAWN after the refresh (the slot shows the map): the left column shows the pickup, the radar dish and the hero portrait only",2026-11-24T18:39:57.042Z,data for the badge question: the icon itself hides when no truck needs attention
+drags,"drags tried 0, cancelled 0",,

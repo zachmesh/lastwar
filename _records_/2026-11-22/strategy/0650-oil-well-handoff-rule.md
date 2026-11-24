@@ -1,7 +1,7 @@
 ---
 title: Oil Well hand-off rule
 created: 2026-11-23T22:30:00Z
-modified: 2026-11-24T11:44:00Z
+modified: 2026-11-24T17:36:00Z
 version: 1.0.0
 level: L3
 description: The rule for re-ranking builder 1 at each Oil Well level hand-off, with the oil date each level moves, the power per builder-day on two assumptions and the coin test
@@ -14,6 +14,10 @@ grounded_in:
 # Oil Well hand-off rule
 
 At each hand-off (a level completes, the next starts) the unit note records three numbers for the next level and for the best alternative, and the choice follows them. Table in [oil-well-levels.csv](oil-well-levels.csv).
+
+## Lv.24 measured, new time factor
+
+The Lv.24 start (17:31:42Z, record 1731) has original 1d 22:57:01 and effective 20:11:38: factor 0.4301, against 0.4706 at Lv.23 (08:12Z). The flat 23,520 s held a seventh time, so Lv.24 ends 11-25T07:11:20Z. If the 8.6 percent holds the chain is faster: Lv.25 ends about 11-26T05:00Z, Lv.27 11-29T15:05Z, Lv.30 12-11T17:16Z (1.75 days sooner); the source is unread (H131). Hand-offs so far: 6.5, 10.8 and 4.3 minutes idle.
 
 ## The three numbers
 

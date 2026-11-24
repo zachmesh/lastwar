@@ -9,3 +9,5 @@ OUR GAIN: Oil Well Lv.20 to 21 Complete (02:24:23Z),4200,,building
 "NET CHANGE since the 150,211,809 read at 07:47Z on 11-23",-164849,,"150,211,809 to 150,046,960"
 CHECK: our gain + other device + external,-164849,,equals the net change
 LOCKED BEHIND TROOP ROOM now,,6.1% to 8.2% of the total,"wounded 1,364 x 1,647 = 2,246,508; healed pile 5,306 x 1,063 to 1,647 = 5,640,278 to 8,738,982 (tier mix unread); Lv.30 batch 793 x 1,647 = 1,306,071; total 9,192,857 to 12,291,561 for 7,463 troops; the 274 collected were never in this count (it was a hidden finished batch: before the collect the pile was 7,737); PLUS about 249 T8 probably still waiting in the Lv.24 barracks (+264,687) [D], 7,712 troops in all"
+EXTERNAL TAP OF OUR BUILD: Oil Well Lv.23 completion (17:27:27.5Z to 17:28:32Z),5400,,"the build was ours, the tap was not (no click in our run's first frame; power unchanged through our run)"
+"UNATTRIBUTED WINDOW 15:56Z to 17:31Z, BY CATEGORY: Buildings +37,200 (residual), Tech +7,800 (two research Completes by another hand), Hero +1,032 (Decorations & Building Stats)",46032,,"reconciled exactly with the Oil Well's 5,400 to the +51,432 (perception-scout/1555)"

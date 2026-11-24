@@ -1,0 +1,14 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 19:25:23.769Z, run started 19:25:24.523Z), 24 s after the previous record write; owner idle 8,017 s: wait 0",2026-11-24T19:25:24.523Z,see growth/0054-waits.csv
+badges,"first frame 19:25:32.0Z: the tram icon not drawn, pickup none, radar dish none; the base 19:26:31.3Z: the same; the red target icon about 00:00:23 untouched",2026-11-24T19:25:24.523Z,tram badge rule: none; not tapped
+counters,Assist Allies 5/5; Plunder Others 0/5; the mode Normal,2026-11-24T19:25:43.617Z,"tag text [G]: Secret Command Post; the pickup icon (107,647)"
+card 1,"UR Rescue Missing Agent Lv.5: PERFECT stamp (the reward row: a question-mark chest x2, cash 40, a purple item 67, EXP 4.1M, a blue-triangle item 800); no timer, no Claim",2026-11-24T19:25:43.617Z,the task pays Mystery Supply Boxes (a question-mark chest x2): already complete
+card 2,"UR Capture the Oil Depot Lv.5: PERFECT (a question-mark chest x5, cash 40, a purple item 67, EXP 4.1M, an oil item x5); no timer, no Claim",2026-11-24T19:25:43.617Z,
+card 3,"SSR Search for Missing Refugees Lv.5: PERFECT (a question-mark chest x1, cash 30, a purple item 37, EXP 2.4M, a puzzle piece x1); no timer, no Claim",2026-11-24T19:25:43.617Z,
+card 4,"SSR Provide Tech Support to Refugees Lv.5: PERFECT (a question-mark chest x1, cash 30, a purple item 37, EXP 2.4M, a green item 290); no timer, no Claim",2026-11-24T19:25:43.617Z,
+clipped sliver,"the list ends at y about 858 with the top edge of what may be a fifth card: CLIPPED, not read; no drag or pan (not named by the unit)",2026-11-24T19:25:43.617Z,the reason for PARTIAL: a clipped claim cannot be ruled out
+bottom buttons,"Mega Refresh and Mega Deploy greyed; Recover, Record and Difficulty untouched",2026-11-24T19:25:43.617Z,no free slot to deploy
+Ally Tasks,"four UR ally cards, each with a blue Assist button: not pressed (Assist Allies 5/5)",2026-11-24T19:25:58.639Z,names withheld
+Others' Tasks,empty: 'No marked Secret Tasks. Please find one and share it to the Alliance Chat.',2026-11-24T19:26:03.797Z,no Plunder control
+box-count test,not run: no claim paid Mystery Supply Boxes (nothing claimed); the Special tab count tag last read 376 at 18:00Z (the second sample),2026-11-24T19:26:15.659Z,the Backpack not opened in this unit
+drags,"drags tried 0, cancelled 0",,

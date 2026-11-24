@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 19:21:16.450Z, run started 19:21:17.419Z), 19 s after the previous run ended; owner idle 7,770 s: wait 0",2026-11-24T19:21:17.419Z,see growth/0054-waits.csv
+badges,"four frames 19:21:21.9Z, 19:21:28.3Z, 19:21:32.8Z and 19:21:37.7Z (timer 06:38:39 to 06:38:23): the tram icon NOT DRAWN in each; pickup none; radar dish none",2026-11-24T19:21:17.419Z,tram badge rule: none; not tapped
+tram icon,"NOT DRAWN at (107,580) in four frames (only ground and buildings); the pickup (107,647) and the radar dish (107,715) drawn without a badge",2026-11-24T19:21:21.880Z,"tag text [G]: left column; no truck waits (all five settled), so no refresh needed"
+train banner,no 'Boarding closes in' banner and no locomotive icon at the top of the base,2026-11-24T19:21:21.880Z,the countdown is read only through the tram tap: skipped by the brief's rule
+counters,"hammer 4/4, flask 2/2",2026-11-24T19:21:37.653Z,nothing pressed
+drags,"drags tried 0, cancelled 0",,

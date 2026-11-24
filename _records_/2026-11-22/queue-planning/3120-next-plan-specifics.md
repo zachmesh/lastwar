@@ -3,7 +3,7 @@ title: Queue Planning Specifics To Apply After Every Plan 3120 2026-11-24
 created: 2026-11-24T03:30:00-08:00
 modified: 2026-11-24T03:45:00-08:00
 level: L0
-version: 1.16.0
+version: 1.22.0
 description: The list of text and retirements the planner applies after each plan run, as it stood on 2026-11-24 - so the next plan does not lose what was learned today
 status: done
 activity: queue-planning
@@ -20,20 +20,21 @@ grounded_in:
 
 ## Retire after each plan
 
-The roster donations unit (the passes carry donations at the 20 minute refill) and the roster trucks units (the trade cycles of 3110 replace them); each retirement stamps the current UTC time.
+The roster donations unit (the passes carry donations) and the roster trucks units (3110 replaces them); stamp each with the current UTC time.
 
 ## Add to the minted roster units
 
-- Every unit: 'Verify each HUD icon by its label or glyph before the tap.'
-- Every roster unit (secrets, train, survivors, treasures, duel-score above all): close by 3170: DONE for a taken claim or a verified nothing-to-do state with a `state_read:` line (what was read | frame | HH:MM:SSZ). Duel-score reads only the personal daily total (no weekly score, no roulette). The train read uses the Station Platform pan (a lit badge opens Intercity Trade: back arrow, touch nothing).
-- Left-column reads (scout-midday, scout): the tram badge and its count with the UTC time.
-- Radar: Confirm allowed for the 10 radar rewards dialog text only; any other dialog: stop.
-- Mail: Cancel only on the TIPS notifications dialog. The 'Train arrival reward!' Event mail: read its attachments, tap THAT mail's Claim once (never Claim All), 50-count chests unopened.
-- Arms race: claim the finished phase's chest and each claimable milestone's plain free Claim once; points from free actions only.
-- Passes: the Weekly Pass page follows 3130 (up to five composed pans from the top, each card read before any tap, owned plain Claims only, Already claimed today a COMPLETE, est 12).
-- Secrets: the Others' Tasks UR card's PLUNDER button is PvP, NEVER pressed. DAILY ASSIST, up to 5: read the counter first, nothing at 5/5, one press per UR card after reading it, stop on a picker, price, diamond, item cost, hero or squad line or other dialog; record the count, reward and Squad 1 unchanged; no dedicated assist unit unless the counter is under 5/5 (then PL-16).
-- Training, research, building-queues: classify a barracks by the press (Train Units panel = empty queue; the toast 'Drill Ground Full' = finished batch waiting), crop digits from the SAVED frame at 6x, one pistol press per barracks.
+- Every unit: 'Verify each HUD icon by its label or glyph before the tap.' A unit that computes a cost RE-READS coin, food, iron and oil in a fresh frame first; one that STARTS a build or research writes the speed factor (original over effective time).
+- Every roster unit (secrets, train, survivors, treasures, duel-score): close by 3170: DONE for a taken claim or a verified nothing-to-do state with a `state_read:` line (what was read | frame | HH:MM:SSZ); complete with --state-change yes|no. Duel-score reads only the daily total. The train read uses the Station Platform pan (a lit badge opens Intercity Trade: back arrow).
+- Left-column reads: the tram badge and its count with the UTC time.
+- DOT FIRST, one class per plan cycle (Steer A 18:35Z; the tram dot proved stale): write the unit's dot, WORLD then BASE, read the dot once. 18Z: survivors (in); 22Z: mail; 02Z: train (Steer A 18:45Z; gifts, help, treasures: no evidence).
+- Radar: Confirm only the 10 radar rewards dialog.
+- Mail: TIPS Cancel only. The 'Train arrival reward!' mail: read its attachments, tap THAT mail's Claim once (never Claim All), 50-count chests unopened.
+- Arms race: the finished phase's chest and each claimable milestone's plain free Claim, once; free actions only.
+- Passes: the Weekly Pass page follows 3130 (up to five composed pans, owned plain Claims only, est 12).
+- Secrets: the Others' Tasks UR card's PLUNDER button is PvP, NEVER pressed. DAILY ASSIST, up to 5: read the counter first, nothing at 5/5, one press per UR card after reading it, stop on a picker, price, diamond, item cost, hero or squad line; record count, reward, Squad 1 unchanged. BOX COUNT TEST (Steer A): in a run that claims a box-paying task, read the Special tab's purple chest count tag before and after (no tile).
+- Training, research, building-queues: classify a barracks by the press (Train Units panel = empty queue; toast 'Drill Ground Full' = finished batch waiting), digits cropped from the SAVED frame at 6x, one pistol press per barracks. Building-queues also writes every builder's end and the three Drill Grounds' ends to the second.
 
 ## Times and checks
 
-Open no unit exactly on the hour. CALM WINDOWS (CUHelper Screen Recording re-approval about every 6 h 31 min: 15:36Z, about 22:07Z, 04:38Z on 11-25, about 11:09Z [G]): no unit opens or expires in 22:00Z to 22:15Z and 04:30Z to 04:45Z (the 22Z plan opens the 22:03Z wave at 22:16Z; the 02Z plan opens the 04:30Z group at 04:46Z). On 11-25 keep 11:25Z to 11:40Z free of long units and donation pass windows, with ONE short read in it (`scout-midday-cu-gate-test-2026-11-25-001`, 11:28:30Z). Keep 08:00Z to 08:25Z clear of openings and expiries. Every serves is a plan item id with a ledger row or upkeep, snapshot or baseline. Use a 5 hour plan horizon.
+Open no unit exactly on the hour. CALM WINDOWS (CUHelper Screen Recording prompt about every 6 h 31 min: 15:36Z, about 22:07Z, 04:38Z, about 11:09Z [G]): no unit opens or expires in 22:00Z to 22:15Z and 04:30Z to 04:45Z (the 22Z plan opens the 22:03Z wave at 22:16Z; the 02Z plan the 04:30Z group at 04:46Z). On 11-25 keep 11:25Z to 11:40Z free but for `scout-midday-cu-gate-test-2026-11-25-001` (11:28:30Z). Keep 08:00Z to 08:25Z clear of openings and expiries. Every serves: a ledger plan item id or upkeep, snapshot or baseline. Horizon 5 hours.

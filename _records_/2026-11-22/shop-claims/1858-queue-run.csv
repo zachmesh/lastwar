@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s after the request (start requested 18:58:08.994Z, run started 18:58:09.777Z); run 2 requested 18:59:51Z found the lock held by a cu gate run (gate-cu-main-df59f3c81, started 18:59:48.9Z): waited 2.3 minutes (19:02:11.5Z free), note OTHER, then admitted 1.0 s after the request (19:02:18.444Z); owner idle 6,387 and 6,637 s",2026-11-24T18:58:09.777Z,see growth/0054-waits.csv
+badges,"18:58:15.1Z (timer 07:01:47): the tram icon not drawn, pickup none, radar dish none; the base after leaving the shop 19:03:02.5Z: pickup none, radar dish none, the tram icon not visible",2026-11-24T18:58:09.777Z,tram badge rule: none; not tapped
+page at the top,"Free Supply 'Claimed'; the Legendary banner shows Renew All $19.99; S2 Drone Components Remaining 5d 7:01:27 'Already claimed today'; S1 Drone Parts Remaining 5d 7:01:22 'Already claimed today'; S2 title y 531, S1 title y 769",2026-11-24T18:58:39.426Z,tag text [G]: Weekly Pass tab
+pan 1,the page moved 150 px (S1 title 769 to 619),2026-11-24T18:58:54.817Z,accepted
+S1 card,Drone Parts Weekly Pass: Remaining 5d 7:01:07: 'Already claimed today'; button Renew with a 50 gem icon and $4.99 (not pressed),2026-11-24T18:58:54.817Z,pickup already claimed on arrival
+pan 2 and EXP,the page moved 149 px (EXP title 856 to 707); EXP Weekly Pass: Remaining 5d 7:00:50: 'Already claimed today'; Renew with a 50 gem icon and $4.99,2026-11-24T18:59:11.043Z,already claimed on arrival
+pan 3 and Iron,"the page moved 150 px (EXP title 707 to 557); the Iron card (Elite) title y 795, Remaining 5d 7:00:31: 'Already claimed today'; its Renew button cut off at the bottom edge",2026-11-24T18:59:29.722Z,already claimed on arrival
+pan 4,(run 2) the page moved 150 px (Iron title 795 to 645); the Coin card's title y 882 and timer Remaining 5d 6:57:23 came into view at the bottom,2026-11-24T19:02:37.426Z,accepted
+pan 5 and Coin,the page moved 150 px (Coin title 882 to 732); Coin Weekly Pass (Elite): Remaining 5d 6:57:11: 'Already claimed today'; a Renew button with a 50 gem icon and $4.99 at y 878 (not touched); no Claim button,2026-11-24T19:02:49.778Z,already claimed on arrival; the fifth and last pan
+pressed,"the shop cart (633,82), the Weekly Pass tab (620,155), the back arrow (103,935): nothing on any card; no Renew, Go or G tab",2026-11-24T19:02:56.798Z,"drags tried 5, cancelled 0"
+HUD,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173, Total Power 150,103,292",2026-11-24T19:03:02.526Z,unchanged
+drags,"drags tried 5, cancelled 0",,

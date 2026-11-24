@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 19:07:56.169Z, run started 19:07:56.919Z), 1.5 minutes after the previous run ended; owner idle 6,973 s: wait 0",2026-11-24T19:07:56.919Z,see growth/0054-waits.csv
+badges,"first frame 19:08:01.4Z (timer 06:52:00): Events icon none, the tram icon not drawn; last base frame 19:09:01.2Z (timer 06:51:00): Events none, the tram icon not drawn",2026-11-24T19:07:56.919Z,tram badge rule: none; not tapped
+hub,"opened with Arms Race selected; the tab bar from left: a cut-off 'f Oil' (The Age of Oil), Arms Race, Black Market, Black Market Challenge (fully visible at the right edge); no red dot or tag on any tab",2026-11-24T19:08:16.506Z,tag text [G]: Events hub; no drag needed
+The Age of Oil,"a four-stage track (stage 3 current); cards 'Unlock: Lv. 31-35 Zombies on World Map' 11320/2000 (5d 06:51:37) and 'Rapid Rescue' 2356405/25000 (5d 06:51:37), each with a check mark; no green Claim",2026-11-24T19:08:24.178Z,nothing to claim
+Arms Race,"Hero Advancement, Contest Segment Lv.29-30, timer about 02:51, 0 points, chest 1/2; the three chests carry gem price tags (2,360, 4,800, 11,800); the task rows show Go arrows",2026-11-24T19:08:31.975Z,priced: never; Go: not pressed
+Black Market,"timer 19d 06:51:22; 11,110 Black Market cash; the free, featured and fantastic slots Sold Out; three items at 500 cash each; 'Refresh Free' is a refresh, not a Claim",2026-11-24T19:08:38.540Z,nothing pressed
+Black Market Challenge,"timer 5d 06:51:13; earned today 410/600; only Go To buttons (Radar Task, Secret Mobile Squad, Doom Elite, Zombie)",2026-11-24T19:08:47.046Z,Go: not pressed
+HUD,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173 unchanged; Events badge none; the tram icon not drawn",2026-11-24T19:09:01.246Z,"pressed: the Events icon (673,160), four tabs (172,155; 280,155; 429,155; 578,155), the back arrow (175,930)"
+drags,"drags tried 0, cancelled 0",,

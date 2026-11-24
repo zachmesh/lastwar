@@ -31,6 +31,6 @@ Rows in [{stem}-queue-run.csv]({stem}-queue-run.csv). Claimed {s['claimed']}; no
 open(f"{d}/{stem}-queue-run.md","w").write(md)
 j={"unit":s["unit"],"status":s["status"],"dir":s["dir"],"stem":stem,"run":s["run"],"steps":s["steps"],"actions":s["actions"],"cost":s["cost"],
  "summary":s["summary"],"follow":s["follow"],"target":s["target"],"achieved":s["achieved"],"resources":s.get("resources","none"),
- "index_text":s["index"],"rules":s.get("rules","1"),"extra_stats":s.get("extra_stats",{})}
+ "index_text":s["index"],"rules":s.get("rules","1"),"extra_stats":s.get("extra_stats",{}),"state_change":s.get("state_change",""),"state_read":s.get("state_read","")}
 json.dump(j,open(sys.argv[1]+".done.json","w"))
 print(subprocess.run(["python3","/tmp/operator-tasks/done.py",sys.argv[1]+".done.json"],capture_output=True,text=True).stdout.strip()[:300])

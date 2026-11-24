@@ -20,7 +20,7 @@ Updated 2026-11-24 16:12Z. Lessons and kit: `_records_/2026-11-22/growth/0054-se
 
 ## Holder
 
-Only the operator holds the device token and sends game input. Reply in four lines (STATUS, ARTIFACT, MEASUREMENT, NEXT), 120 words at most, context percent last. Write scope: queue, `_records_/<date>/`, `_tools_/state/`; never stage.
+Only the operator holds the device token and sends game input. Reply in four lines (STATUS, ARTIFACT, MEASUREMENT, NEXT), 120 words at most, context percent last. Never stage.
 
 ## Run recipe
 
@@ -36,12 +36,12 @@ The tram icon (107,580): no badge, no tap (a truck unit; the train read may tap 
 
 ## Closing rule (Steer A 16:03Z)
 
-DONE: the staged claim was taken, or a verified nothing-to-do state quoted as `state_read: <quoted> | <frame> | <HH:MM:SSZ>`; no evidence line: PARTIAL; unread state, alert, absent badge or clipped claim: PARTIAL. Never close DONE to lower the partial rate.
+DONE: the staged claim was taken (`state_change: yes`, the change named) or a verified nothing-to-do state quoted (`state_change: no` plus `state_read: <quoted> | <frame> | <HH:MM:SSZ>`; none: PARTIAL); unread state, alert, absent badge or clipped claim: PARTIAL. Declare what was done; never close DONE to lower the partial rate.
 
 ## Game facts
 
-A finished upgrade shows a gift box: one tap is the Complete. Upgrades run 23,520 s under the preview time. Barracks Lv.24, Lv.20 and Lv.30 read "Drill Ground Full". Donation grid: 03:57:57.397Z plus k x 1,200 s.
+A finished upgrade shows a gift box: one tap is the Complete. Upgrades run 23,520 s under the preview time. Barracks Lv.24, Lv.20, Lv.30: "Drill Ground Full".
 
 ## Open
 
-Oil Well Lv.23 ends 17:27:28Z; labs 17:30Z and 11-25T02:39Z; the Weekly Pass page: five composed pans from the top reach the Coin card (pickups reset 18:00 server time).
+Oil Well Lv.23 ends 17:27:28Z; labs 17:30Z and 11-25T02:39Z; Weekly Pass: five composed pans from the top reach the Coin card.

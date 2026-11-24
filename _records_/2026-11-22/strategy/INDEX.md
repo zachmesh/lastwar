@@ -1,7 +1,7 @@
 ---
 title: Strategy records for 2026-11-22
 created: 2026-11-23T08:34:00Z
-modified: 2026-11-24T16:08:00Z
+modified: 2026-11-24T19:39:00Z
 version: 1.0.0
 description: The strategist's plan of record, ranked levers, hypothesis register, decision records, resource policy and owner questions, with their CSV sidecars; the scribe lands the pages.
 ---
@@ -14,9 +14,9 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 
 - [plan-of-record.md](plan-of-record.md) and [plan-of-record.csv](plan-of-record.csv) - the table the planner mints from; ids PL-01 to PL-18.
 - [0030-slot-rules.md](0030-slot-rules.md) - lab, builder, speed-up and slot-arrival rules; [0030-dg-level-table.csv](0030-dg-level-table.csv) holds the level costs.
-- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 194 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
+- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 212 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
 - [forecast-ledger-schema.md](forecast-ledger-schema.md) - kinds, scoring and the immutability rule.
-- [strategy-log.md](strategy-log.md) and [b](strategy-log-1123b.md), [c](strategy-log-1123c.md), [d](strategy-log-1123d.md), [e](strategy-log-1123e.md), [f](strategy-log-1123f.md), [g](strategy-log-1123g.md), [h](strategy-log-1123h.md), [i](strategy-log-1123i.md), [j](strategy-log-1123j.md), [k](strategy-log-1123k.md), [l](strategy-log-1123l.md), [1124a](strategy-log-1124a.md), [1124b](strategy-log-1124b.md), [1124c](strategy-log-1124c.md), [1124d](strategy-log-1124d.md), [1124e](strategy-log-1124e.md), [1124f](strategy-log-1124f.md) - the log, append only.
+- [strategy-log.md](strategy-log.md), then strategy-log-1123b to 1123l and strategy-log-1124a to 1124l (current [1124l](strategy-log-1124l.md)): dated entries, newest last.
 - [0117-box-policy-v1.md](0117-box-policy-v1.md), [rules](0117-box-policy-v1.csv) and [stock](0117-box-stock.csv) - when, how and which chests to open, with the reserve.
 - [0133-black-market-policy-v1.md](0133-black-market-policy-v1.md) - tile ladder, free refresh rule, cash reserve and the closing sweep.
 - [0147-store-ranking-v1.md](0147-store-ranking-v1.md) and [buys](0147-store-buys.csv) - what to buy, hold and apply from honor, alliance and Campaign stores.
@@ -31,7 +31,7 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [dec-20261123-05.md](dec-20261123-05.md) - Base Expansion path order, speed-up budget and builder split.
 - [dec-20261123-06.md](dec-20261123-06.md) - lab plan after the other device started two nodes; corrected dependencies.
 - [0510-base-expansion-eta.md](0510-base-expansion-eta.md) and [scenarios](base-expansion-eta.csv) - the ETA range for the owner with its convention and assumptions.
-- [dec-20261124-03.md](dec-20261124-03.md) - B2's next job.
+- [dec-20261124-03.md](dec-20261124-03.md) - B2 next job.
 - [dec-20261124-02.md](dec-20261124-02.md) - ladder against long line.
 - [dec-20261124-01.md](dec-20261124-01.md) - use of the siege room.
 - [dec-20261123-08.md](dec-20261123-08.md) - the builders free at 23:20Z today: pick, conversions, chain times.
@@ -46,14 +46,20 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [0660-owner-digest-lines.md](0660-owner-digest-lines.md) - digest.
 - [0117-coin-line.md](0117-coin-line.md) - dated coin conversions and supply.
 - [0670-room-levers.md](0670-room-levers.md) and [sidecar](room-levers.csv) - room levers.
-- [0117-income-vs-need.md](0117-income-vs-need.md) - income items against need.
-- [0117-contracts.md](0117-contracts.md) - contracts and cap.
+- [0720-event-store-rubric.md](0720-event-store-rubric.md) - event store ranking.
+- [0710-speed-sources.md](0710-speed-sources.md) - speed sources.
+- [0700-durations-live-factor.md](0700-durations-live-factor.md) - durations.
+- [0690-hq31-date.md](0690-hq31-date.md) - HQ 31.
+- [0680-oil-line.md](0680-oil-line.md) - oil.
+- [0117-box-pricing.md](0117-box-pricing.md) - boxes.
+- [0117-income-vs-need.md](0117-income-vs-need.md) - need.
+- [0117-contracts.md](0117-contracts.md) - contracts.
 - [0030-resource-policy.md](0030-resource-policy.md) - floors, the three times rule proposal, conversions, speed-up bounds.
 
 ## Levers and claims
 
 - [lever-ranking-v3.md](lever-ranking-v3.md) and [lever-ranking-v3.csv](lever-ranking-v3.csv) - the v3.0 draft ranking.
-- [hypothesis-register.csv](hypothesis-register.csv) - 127 hypotheses, with a blocked_by column, each with a test, owner and read time.
+- [hypothesis-register.csv](hypothesis-register.csv) - 132 hypotheses, with a blocked_by column, each with a test, owner and read time.
 - [0030-ten-weakest-claims.md](0030-ten-weakest-claims.md) and [its sidecar](0030-ten-weakest-claims.csv).
 - [0030-readiness.md](0030-readiness.md) - the verdict on the central idea.
 

@@ -5,9 +5,9 @@ activity: troop-training
 segment: 2
 priority: 2
 created_at: 2026-11-24T03:59:35Z
-expires_at: 2026-11-26T23:00:00Z
+expires_at: 2026-11-26T14:00:00Z
 planned_for:
-not_before: 2026-11-26T21:20:00Z
+not_before: 2026-11-26T11:20:00Z
 window: train one batch with the free drill ground room after the collect
 est_minutes: 14
 serves: PL-09
@@ -36,11 +36,11 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-09
 
-DISPATCH ONLY WHEN NAMED, after the room collect unit `training-room-collect-2026-11-26-001` (about 21:20Z on 2026-11-26): train only if the free room is above 10 after the collect; the Lv.26 ground added +200 room at 21:10:37Z. Steer A's order: train with the free slots, the cheapest power on the board. Room order: finished batch that fits whole, new training, healing never first. THE SPEND: Train uses coin, food and iron: write which resources and amounts from the preview's Total cost line BEFORE pressing; if a resource row is short, or a price, a diamond or an item appears, STOP.
+DISPATCH ONLY WHEN NAMED, after the room collect unit `training-room-collect-2026-11-26-001` (about 11:20Z on 2026-11-26; the ground ends 11:08:36.6Z; the cu nightly gate run about 11:25Z to 11:35Z may delay a claim 2.4 minutes: not a fault): train only if the free room is above 10 after the collect (the Lv.26 ground added +200 room). Steer A's order: train with the free slots, the cheapest power on the board; a finished batch that fits whole first. THE SPEND: Train uses coin, food and iron: RE-READ coin, food and iron in a fresh frame (the account moves when the owner's phone moves), and write which resources and amounts from the Total cost line BEFORE pressing; a short row, a price, a diamond or an item: STOP.
 
-Barracks order (tap points in `_records_/2026-11-22/growth/tag-index.csv`, one per fresh frame): Lv.27 (T9, 1,352 power a troop), then Lv.24 (T8, 1,063), then Lv.20: the first idle one where Train can be pressed. Tiers and costs: the Train panel.
+Barracks order (tap points in `_records_/2026-11-22/growth/tag-index.csv`): Lv.27 (T9, 1,352 power a troop), Lv.24 (T8, 1,063), then the first idle Lv.20 where Train can be pressed.
 
-ONE batch only: open the pistol; read 'Unit Count X of Y' IMMEDIATELY BEFORE setting the batch size (free room = Y minus X); set the quantity to that room minus 10 (less if a resource row is short); read the Total cost and Total time lines in a frame; press Train ONCE; write the number trained, the tier, the resources before and after, the time and Total Power. NO speed-up, NO Finish Now, no Use, no Buy. A confirm dialog: Confirm only if it shows just the resource cost already read; a price, diamond, item or other app: stop.
+ONE batch only: open the pistol; read 'Unit Count X of Y' IMMEDIATELY BEFORE setting the batch size (free room = Y minus X); set the quantity to that room minus 10 (less if a resource row is short); read the Total cost and time lines; press Train ONCE; write the number trained, tier, resources before and after, Total Power. NO speed-up, NO Finish Now, no Use, no Buy. A confirm dialog: Confirm only if it shows just the resource cost already read; a price, diamond, item or other app: stop.
 
-Outside the 08:00Z to 08:25Z cu window. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if one opens, STOP.
+May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 Cost cap, stated: 0.60 USD.

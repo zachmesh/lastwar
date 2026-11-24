@@ -1,0 +1,13 @@
+utc,event,boxes,stack_after_if_nothing_else_moved,source,note
+2026-11-23 08:25Z,Backpack read (grid tag),299,299,growth/0009,CORRECT: my 'misread' statement of 16:25Z is withdrawn
+2026-11-23 08:51:08Z,Oil Depot (UR) claim popup: Mystery Supply Box 67,+67,366,secret-missions/0050,matches the 08:55Z panel read 366 exactly
+2026-11-23 08:55Z to 09:20Z,box sample batch 1: ten Uses,-10,356,growth/0913 (366 to 356),
+2026-11-23 09:20Z to 2026-11-24 04:37Z,no claim popup with boxes in our records; no box count read,0 known,356,none,"the second-device window 12:11Z to 12:50Z used the barrels, small coin tiles and 82 SR coin chests; a box count was not read"
+2026-11-24 04:38:36Z,SSR refugee claim popup: Mystery Supply Box 223,+223,579,secret-missions/0438,
+2026-11-24 05:38:52Z,UR Rescue claim popup: Mystery Supply Box 67,+67,646,secret-missions/0538,
+2026-11-24 07:36:13Z,UR Oil Depot claim popup: Mystery Supply Box 67,+67,713,secret-missions/0735,
+2026-11-24 11:14Z to 11:27Z,"five Assist presses, x6 each",+30,743,"secret-missions/1114, 1122",
+2026-11-24 16:01Z,"Backpack read, panel quantity",387 read,743 expected,perception-scout/1601 and 1619,DIFFERENCE 356 = exactly the stack of 09:20Z on 11-23: the read equals the inflows since 04:38Z alone (223 + 67 + 67 + 30 = 387)
+2026-11-24 16:45:50Z,box sample batch 2: one Use of 11,-11,376 read,perception-scout/1644,
+HYPOTHESES (priors before any test),,,,registered,H1 the stack of 356 was OPENED between 09:20Z on 11-23 and 04:37Z on 11-24 by something other than us (most likely the other device in the 12:11Z to 12:50Z window): p 0.55; H2 the claim popups' box numbers are not credited as boxes (or only in part): p 0.30; H3 the count of 387 is a coincidence of a different cause: p 0.15
+TESTS,,,,proposed,"(a) read the Special tab box count immediately BEFORE and AFTER the next claim that pays boxes (the Rescue claim about 05:38Z on 11-25, +67 expected; the refugee claim +223): H2 predicts a smaller rise; (b) the Resource Choice Chest SR stack (1,523 on 11-23 08:25Z): +306 expected if the other device opened the 356 boxes and kept the chests (row 4 of the Resources grid, cut off on 11-24); (c) the owner question whether the phone opens Mystery Supply Boxes"

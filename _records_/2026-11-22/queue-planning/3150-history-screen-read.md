@@ -3,7 +3,7 @@ title: History Screen Read Dispatch Tab And Defense Failed Row 3150 2026-11-24
 created: 2026-11-24T06:50:00-08:00
 modified: 2026-11-24T06:56:00-08:00
 level: L0
-version: 1.0.1
+version: 1.1.0
 description: The read-only procedure for the Intercity Trade History screen in cycle B - the Dispatch tab, then one composed pan to read the Defense Failed row - built from record 1416 and Steer A's ruling of 2026-11-24 14:42Z
 status: done
 activity: queue-planning
@@ -20,12 +20,12 @@ grounded_in:
 
 ## When
 
-In cycle B (`trucks-dispatch-2026-11-24-003`), after the settle and the slot 4 text, with the trade screen still open and before its back arrow.
+In cycle B (`trucks-dispatch-2026-11-24-003`), then B2 and B3 (Steer A 18:45Z): after the settle, with the trade screen still open and before its back arrow.
 
 ## Steps
 
 1. On the Others' Trucks tab tap the History button (top right of the list). The History screen has tabs Plunder, Dispatch and Favorite and relative times. Take a frame.
-2. Tap the Dispatch tab ONCE. READ ONLY: write each row's kind, relative time, quality and result as shown, and the oldest relative time visible.
+2. Tap the Dispatch tab ONCE. READ ONLY: each row's kind, time (the local PT clock, not relative), quality, result and empty reward slots, and the oldest row visible. THE DISPATCH PAN (Steer A 18:45Z): BEFORE it write where this list's blank right margin is (read it in the frame); ONE composed pan from that margin (the recipe of step 4); AFTER it write the oldest row now visible, the MOVE in px, and whether any dispatch exists between 11-12 and 11-22. Not moving or flinging: stop, no second try.
 3. Tap the Plunder tab ONCE to return. The 'Defense Failed' row sits below the Victory rows, cut off at the bottom.
 4. A NEW page for the pan recipe: BEFORE the pan write where the blank right margin of THIS list is (read it in the frame) and where the row sits. Then ONE composed pan, ALL IN ONE MESSAGE: mouse_move to the start on that margin; left_mouse_down; wait 1 (second); ONE move of about 175 px up; wait 1 (second); left_mouse_up; a screenshot after the up. AFTER it write the row's new position and the list's MOVE in px (from a fixed feature in both frames). If the batch is refused: write the text and STOP. If the list does not move or flings: stop, no second try.
 5. READ ONLY: the Defense Failed row's time and the loot lost. NEVER tap anything inside a history row (Revenge, Replay, Plunder back, Details or any button: it could start an attack or a fight, a RED LINE, no PvP). Press only the tabs and the back arrow.

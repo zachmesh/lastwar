@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 9
 created_at: 2026-11-23T16:00:29Z
-expires_at: 2026-11-26T20:42:53Z
+expires_at: 2026-11-25T09:30:00Z
 planned_for:
-not_before: 2026-11-25T02:42:00Z
+not_before: 2026-11-25T07:09:10Z
 window: oil well level 24 to 25 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17
@@ -36,7 +36,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-17
 
-Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.24 upgrade finishes; the coordinator dispatches it by name at the real finish. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`). If finished: the well completes by TAPPING THE WRAPPED GIFT BOX on the building (the panel has no Complete button; Total Power registers then; never Speed Up or Finish Now); write Total Power before and after. Go to the well by the route in the sheet (drag ONCE per frame and check the frame after each drag), read the tag ('Oil Well Lv.24'; stop and report if it differs), open the Upgrade preview ('Lv.24 to 25') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the preview's effective time, the panel's end time in UTC and their difference in seconds (expected 23,520 s). If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at 08:25:30Z, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
-Safe tap: the bare spot (310,660), not (400,640) after a camera shift.
+Facts, route and procedure: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. This unit starts when the Oil Well Lv.24 upgrade finishes; the coordinator dispatches it by name at the real finish. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release --unit <this unit>`). If finished: the well completes by TAPPING THE WRAPPED GIFT BOX on the building (the panel has no Complete button; Total Power registers then; never Speed Up or Finish Now); write Total Power before and after. Go to the well by the route in the sheet (drag ONCE per frame and check the frame after each drag), read the tag ('Oil Well Lv.24'; stop and report if it differs), open the Upgrade preview ('Lv.24 to 25') and write iron cost, output, power, storage, the Upgrade button clock (the effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second and write the preview's effective time, the original time, the SPEED FACTOR (original over effective; 2.325 at Lv.24), the panel's end time in UTC and the difference in seconds (expected 23,520 s). If the finish falls in the daily quiet window 08:00Z to 08:25Z, act at 08:25:30Z, or ask the coordinator for a one-line exception if the builder would idle over 15 minutes.
+Safe tap: (310,660), not (400,640) after a camera shift.
 HUD taps: verify each HUD icon by its label or glyph in a frame before the tap.
 Cost cap, stated: 0.60 USD.

@@ -21,3 +21,10 @@ Back to the [folder index](INDEX.md).
 - [PR 967](landing-pr-967.md) - scroll-recipe, a composed press moves a clipped page (experiment 007)
 - [PR 968](landing-pr-968.md) - daily-missions-lesson, row position depends on the panel state; errata moved to its own page
 - [PR 969](landing-pr-969.md) - nineteenth records snapshot, units of 11:10Z to 13:40Z, word-budget review
+- [PR 970](landing-pr-970.md) - toast-means-batch, a toast at room 0 means a finished batch waits (the first control)
+- [PR 971](landing-pr-971.md) - state-read-schema, the closing rule and the state_read key
+- [PR 972](landing-pr-972.md) - twentieth records snapshot, units of 13:40Z to 16:10Z, closing rule in the unit template
+- [PR 973](landing-pr-973.md) - conformance-exact, the alarm is on unit-hours; units are the trend
+- [PR 974](landing-pr-974.md) - state-read, complete --state-read; the queue tests stop inheriting the live switch
+- [PR 975](landing-pr-975.md) - state-read part 2, state_change and the require_state_read switch (off)
+- [PR 976](landing-pr-976.md) - forecast-override-count, the override marker and the forecast-overrides counter

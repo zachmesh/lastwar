@@ -1,7 +1,7 @@
 ---
 title: Food plan for the long line
 created: 2026-11-23T13:11:00Z
-modified: 2026-11-24T14:39:00Z
+modified: 2026-11-24T18:57:00Z
 version: 2.0.0
 level: L3
 description: Where the food comes from for Base Expansion, the Oil Well, HQ 31 and the first three ground levels, and what waits
@@ -29,7 +29,7 @@ H75 is settled: the ground levels do cost food (record 2320), so the need stays 
 |---|---|---|
 | Output alone | 147 | 2027-04-20 |
 | Plus typed Food Chests UR (686M) and plain chests (208M) | 91 | 2027-02-23 |
-| Plus own truck dispatch, 15.6M food a day [M cargo; two trucks credited in full, one Defense Failed seen] | 47 | 2027-01-10 |
+| Plus own truck dispatch, 15.6M food a day [M cargo; four settles credited, one UR plundered for 25 percent] | 47 | 2027-01-10 |
 | Plus 125 UR choice chests as food | 39 | 2027-01-02 |
 
 Output alone nearly meets the need by the lab date if the lab binds (divisor 2.2, day 146). If the chain runs faster (divisor 3.1 or more, day 45 to 60) food binds, and trucks and chests must supply the difference.

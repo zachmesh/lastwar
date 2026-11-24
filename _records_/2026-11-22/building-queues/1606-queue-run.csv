@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 18:06:21.979Z, run started 18:06:22.780Z), 1 minute after my previous record write; owner idle 3,292 s: wait 0",2026-11-24T18:06:22.780Z,see growth/0054-waits.csv
+badges,"18:06:28.3Z (timer 07:53:33) and 18:06:57.3Z (timer 07:53:04): tram none, pickup none, radar dish 3; hammer 4/4; flask 2/2",2026-11-24T18:06:22.780Z,tram badge rule: none; not tapped
+builder 1,Lv.26 Drill Ground upgrade in progress: Time Left 1d 17:01:55 at 18:06:41.6Z (1d 17:01:51 at 18:06:45.5Z): ends 2026-11-26T11:08:36.6Z; Speed Up button (not pressed); no help indicator drawn,2026-11-24T18:06:41.576Z,tag text [G]: Building Queue; the end moved earlier than the 21:10Z recorded at 14:48Z (another actor)
+builder 2,Lv.27 Drill Ground: 5d 07:24:20 (5d 07:24:16): ends 2026-11-30T01:31:01.6Z; Speed Up; no help indicator,2026-11-24T18:06:41.576Z,was 11-30T22:21:47Z at 14:48Z
+builder 3,Lv.23 Oil Well upgrade in progress (to Lv.24): 13:04:38 (13:04:34): ends 2026-11-25T07:11:19.6Z; the map timer 13:04:23 agrees; Speed Up; no help indicator,2026-11-24T18:06:41.576Z,the expected 07:11:20Z within 0.4 s
+builder 4,Lv.28 Drill Ground: 9d 05:43:32 (9d 05:43:28): ends 2026-12-03T23:50:13.6Z; Speed Up; no help indicator,2026-11-24T18:06:41.576Z,was 12-05T11:59:19Z at 14:48Z
+building levels,"Drill Ground builds to Lv.26, Lv.27, Lv.28 (three builders); Oil Well Lv.23 upgrading to Lv.24; no builder idle (hammer 4/4)",2026-11-24T18:06:41.576Z,
+help indicator,none drawn on any row; the Alliance Help screen not opened,2026-11-24T18:06:41.576Z,the panel's rows carry only a Speed Up button
+HUD,"food 143.9M, iron 765.6M, coin 19.4M, oil 635.7K, diamonds 11,173, Total Power 150,103,292 unchanged",2026-11-24T18:06:57.272Z,"pressed: the hammer icon (108,200) and the X (612,237)"
+drags,"drags tried 0, cancelled 0",,

@@ -1,7 +1,7 @@
 ---
 title: Strategist handover
 created: 2026-11-23T08:20:00Z
-modified: 2026-11-24T10:49:00Z
+modified: 2026-11-24T17:37:00Z
 level: L2
 version: 0.5.0
 description: The live state a replacement strategist starts from
@@ -23,12 +23,12 @@ Session `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`. Reports to the coordinat
 
 - **Long line** (owner orders): Base Expansion; ETA 2027-01-08 to 01-23 (`0510`). Labs: Output V trio, then Oil Output I 1 to 10; research flat 4h12m under the button.
 - **Room is the binding constraint:** about 7,463 troops (9.2M to 12.3M power) wait behind Drill Ground room. A barracks collect admits what fits (ramp, p 0.8, not yet tested); the hospital pile needs room for all (p 0.3). Order of use: finished batch by power per troop (T10, T9, T8), then training, healing last (PL-09, `0670-room-levers.md`).
-- **Builders** (decisions 08, 2026-11-24-02 and -03): B1 the Oil Well Lv.21 to 30 (flat 6h32m under the preview; rule `0650`); B2 to B4 the three grounds, ends 11-26 21:10:37Z, 11-30 22:21:48Z, 12-05 11:59:18Z; B2's next job is its ground's Lv.27 to 28 with a 10,000-minute speed-up, pre-conversion 20:00Z to 21:00Z on 11-26.
+- **Builders** (decisions 08, 2026-11-24-02 and -03): B1 the Oil Well Lv.21 to 30 (flat 6h32m under the preview; rule `0650`); B2 to B4 the three grounds, ends about 11-26 11:08Z (moved earlier by another actor), 11-30 22:21:48Z, 12-05 11:59:18Z; B2's next job is its ground's Lv.27 to 28 with a 10,000-minute speed-up, pre-conversion about 09:00Z to 10:30Z on 11-26.
 - **Resources:** coin line `0117-coin-line.md` (fixed chests spent; plain then choice chests, 1.0G floor); food rows are real; iron `0516`. Plunder is a supplement (dec 04); event stores `0630`; store buys `0640` (weapon test Murphy Lv.3 to 4, F-157).
 
 ## Open
 
-- 11-26 21:10Z: Lv.30 T10 and Lv.24 T8 presses, partial Collect (F-176, F-183, F-184); Unit Count extras read (H127, F-174, F-175); flat cause (H128); OD-21.
+- about 11-26 11:08Z: Lv.30 T10 and Lv.24 T8 presses, partial Collect (F-176, F-183, F-184); Unit Count extras read (H127, F-174, F-175); flat cause (H128); OD-21.
 - Siege: next search 11-27 01:15Z, owner's schedule; a repeat leaves 329 beds and stops plunder.
 
 ## Ledger and rules
