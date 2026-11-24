@@ -1,7 +1,11 @@
 item,value,read_utc,note
-wait,none: start at 22:17:21Z (wait 0),2026-11-23T22:17:21Z,see growth/0054-waits.csv
-survivor bubble,beside the avatar: '43min' (the hero-portrait bubble read 86min at 21:35Z): unchanged after the tap,2026-11-23T22:17:40Z,a new survivor about 23:00Z
-gate,"one white '?' bubble at about (146,649) beside a vehicle icon, a small figure below it at about (143,687); no other '?' bubble on the base",2026-11-23T22:17:45Z,
-tap,"one tap on the figure at (144,686): a speech bubble at the left edge, 'This is my welcome...' (the rest cut off); no survivor card, name, role, level or button",2026-11-23T22:17:55Z,tag text [G]
-after,the speech bubble and the '?' bubble gone; only the vehicle icon left,2026-11-23T22:18:00Z,processed but unverified: nobody counted as recruited
-HUD,"unchanged: Total Power 150,416,946, diamonds 11,113, builders 4/4, lab 2/2",2026-11-23T22:18:05Z,
+wait,"the lock admitted the run 0.9 s after the request (start requested 22:16:51.278Z, run started 22:16:52.223Z), the front already LastWar; owner idle 18,297 s: wait 0",2026-11-24T22:16:52.223Z,see growth/0054-waits.csv
+badges,"22:16:58.4Z (timer 03:43:03): the tram icon not drawn, pickup none, radar dish 1, the red target icon 4; 22:17:27.8Z (timer 03:42:41): the same, target icon 1",2026-11-24T22:16:52.223Z,tram badge rule: none; not tapped
+front,at the start 22:16:30Z front=LastWar (ASN 0x1a02800e); no front script run,2026-11-24T22:16:30Z,tag text [G]: lsappinfo front
+gate before,"the question-mark bubble at about (145,649) (a white speech bubble, a black '?', no text) with a small figure just below and left of it at about (122,665) to (143,688); the survivor bubble beside the avatar not visible",2026-11-24T22:16:58.408Z,timer 03:43:03
+refresh,"WORLD (658,935) at 22:17:03.6Z, BASE (658,935) at 22:17:17.3Z; no icon tapped",2026-11-24T22:17:20.579Z,
+gate after,"right after BASE the bubble drew at about (92,686) partly cut by the left edge and a figure half visible at about (78,700) (the walk animation); from 22:17:35.4Z the bubble back at (145,649) with the figure below it",2026-11-24T22:17:27.753Z,"CHANGED only in position (the figure walks): no new dot, no card"
+question-mark bubble,"glyph a black question mark; colour white (a speech bubble); text none; centred at (145,649) beside the pickup icon (107,647); read at 22:16:58Z, 22:17:27Z and 22:17:41Z",2026-11-24T22:16:58.408Z,"READ, NEVER PRESSED (Steer A 20:26Z)"
+survivors screen,"not opened: the unit's own read needs a tap on the figure, which Steer A's line forbids; the earlier tap (18:40Z) gave only a 'welcome' speech bubble",2026-11-24T22:17:49.123Z,the reason for PARTIAL
+HUD,"food 152.6M, iron 774.3M, coin 25.0M, oil 638.4K, diamonds 11,173, Total Power 150,103,292",2026-11-24T22:16:58.408Z,unchanged
+drags,"drags tried 0, cancelled 0",,

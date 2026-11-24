@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:25:32.758Z, run started 22:25:33.521Z), 23 s after the previous run ended; owner idle 18,817 s: wait 0",2026-11-24T22:25:33.521Z,see growth/0054-waits.csv
+badges,"first frame 22:25:39.0Z (timer 03:34:28): the tram icon not drawn, pickup none, radar dish 3; the base after 22:26:04.6Z: the same, the red target icon 3, the Events icon none",2026-11-24T22:25:33.521Z,tram badge rule: none; not tapped
+hub,"the Events hub (673,165) opened with the first tab ('The Age of Oil') selected; the tab bar: first tab, Arms Race, Black Market, a cut-off 'B'; no red dot on any tab",2026-11-24T22:25:47.309Z,tag text [G]: Events hub
+phase,"Arms Race (372,155): Base Building, Contest Segment Lv.29-30, timer 03:34:04; points 0; counter chest 1/2; a ranking row at 12 with 4,000 points (the earlier phase's figure)",2026-11-24T22:25:56.284Z,the Hero Advancement phase ended; points 0 in this phase
+ladder,"milestones 6,250 (a gem price tag 2,360), 12,500 (4,800) and 30,000 (11,800): locked, rewards not named; no Claim text, no red dot or glow",2026-11-24T22:25:56.284Z,priced: never pressed
+scoring rows,"Increase Building Power by 1pt +1; Use 1-min Construction Speed-up +10; Buy Packs containing Diamonds +30: each a green arrow, not pressed",2026-11-24T22:25:56.284Z,
+HUD,"diamonds 11,173, food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, energy 94 (before and after)",2026-11-24T22:26:04.584Z,"pressed: the Events icon (673,165), the Arms Race tab (372,155), the back arrow (176,932)"
+drags,"drags tried 0, cancelled 0",,

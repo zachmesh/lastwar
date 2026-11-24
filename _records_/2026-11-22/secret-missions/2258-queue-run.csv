@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:57:42.413Z, run started 22:57:43.215Z); owner idle 20,742 s: wait 0",2026-11-24T22:57:43.215Z,see growth/0054-waits.csv
+badges,"first frame 22:57:47.1Z (timer 03:02:14): the tram icon not drawn, pickup none, radar dish 3; the base after 22:59:29.0Z: the same",2026-11-24T22:57:43.215Z,tram badge rule: none; not tapped
+front,at the start 22:57:41Z front=LastWar; no front script needed,2026-11-24T22:57:41Z,tag text [G]: lsappinfo front
+Backpack Special tab,"opened by Inventory (670,852) at 22:57:50.3Z; row 1: Emote Choice Chest II x1 (pre-highlighted with a Use panel: not touched), Nameplate Choice Chest VII x1, a rocket x15, a ticket x1; row 2: pink crystal items 18,442, an ice-crystal item 218,000, a turkey x1, a gold ticket x40; row 3: a turkey ticket x6, a grain bag x42, the gold question-mark chest on teal (Violet's Loot) x58 with a red dot, a VI chest x3; row 4 clipped",2026-11-24T22:57:58.110Z,counts read in the saved frame at 6x
+Mystery Supply Box,the purple question-mark chest tile is NOT in rows 1 to 3 (it was in row 3 column 3 with 376 at 16:46Z): the stock is 0 (the tile removed) or sits in the clipped row 4: the count NOT read,2026-11-24T22:57:58.110Z,"a finding: 376 boxes opened by another actor (the pink crystal items +14,000)"
+Violet's Loot,the gold question-mark chest x58 (350 at 16:01Z): 292 fewer,2026-11-24T22:57:58.110Z,used by another actor
+Your Tasks,"UR Rescue Missing Agent Lv.5, UR Capture the Oil Depot Lv.5, SSR Search for Missing Refugees Lv.5, SSR Provide Tech Support to Refugees Lv.5: all PERFECT, no timer, Claim, Deploy or Start; a sliver of a fifth card clipped at the bottom edge (unread); Assist Allies 5/5, Plunder Others 0/5; Mega Refresh and Mega Deploy greyed; mode Normal",2026-11-24T22:58:20.779Z,the same as at 19:25Z
+Ally Tasks,"four UR ally cards with Assist buttons (5/5: not pressed), a sliver clipped",2026-11-24T22:58:35.579Z,names withheld
+Others' Tasks,empty: 'No marked Secret Tasks...',2026-11-24T22:58:43.659Z,no Plunder control
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292",2026-11-24T22:57:47.072Z,unchanged
+drags,"drags tried 0, cancelled 0",,

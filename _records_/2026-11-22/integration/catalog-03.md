@@ -29,3 +29,5 @@ Back to the [folder index](INDEX.md).
 - [PR 975](landing-pr-975.md) - state-read part 2, state_change and the require_state_read switch (off)
 - [PR 976](landing-pr-976.md) - forecast-override-count, the override marker and the forecast-overrides counter
 - [PR 977](landing-pr-977.md) - twenty-first records snapshot, units of 16:10Z to 19:45Z, handovers
+- [PR 978](landing-pr-978.md) - dialog-exception, the one Confirm of a controlled relaunch
+- [PR 979](landing-pr-979.md) - twenty-second records snapshot, records 19:45Z to 20:30Z, trimmed hazards sidecar

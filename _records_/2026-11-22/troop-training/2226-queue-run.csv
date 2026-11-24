@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s after the request (start requested 22:26:36.881Z, run started 22:26:37.659Z), 17 s after the previous run ended; run 2 admitted 1.7 s after its request (22:29:29.6Z); owner idle 18,880 and 19,053 s: wait 0",2026-11-24T22:26:37.659Z,see growth/0054-waits.csv
+badges,"22:26:43.0Z and 22:29:36.4Z: the tram icon not drawn, pickup none, radar dish 3, hammer 4/4, flask 2/2; the end frames 22:28:56.9Z and 22:32:21.6Z: the same",2026-11-24T22:26:37.659Z,tram badge rule: none; not tapped
+bubbles,a 6x crop of the saved frame (run 1 step 4): the Lv.27 tent a WHITE idle bubble with no digits; the Lv.30 tent a gold bubble with a red-helmet portrait and the digits 793; the Lv.24 tent a gold bubble with the digits about 248 (blurred); the Lv.20 tent a gold bubble with the digits about 110 (blurred); no clock bubble,2026-11-24T22:27:07.114Z,tag text [G]: bubble over each tent; digits cropped from the saved frame at 6x
+Barracks Lv.24,"the tag 'Barracks Lv.24', no Unit Count; the pistol (598,615): the toast 'Drill Ground Full: Unable to add more units.', no panel, no power change",2026-11-24T22:27:38.199Z,BLOCKED: a finished batch waiting (about 248)
+Barracks Lv.20,"the tag 'Barracks Lv.20', no Unit Count; the pistol (598,584): the same toast, no panel, no power change",2026-11-24T22:28:34.314Z,BLOCKED: a finished batch waiting (about 110)
+Barracks Lv.27,"the tag 'Barracks Lv.27', no Unit Count; the pistol (459,631): the TRAIN UNITS panel with no toast: slider maximum 726, Train 1d 10:19:35; closed with its X (611,281)",2026-11-24T22:30:54.126Z,EMPTY QUEUE; Train never pressed
+Barracks Lv.30,"the tag 'Barracks Lv.30', no Unit Count; the pistol (527,679): the toast 'Drill Ground Full: Unable to add more units.', no panel, no power change",2026-11-24T22:31:59.927Z,BLOCKED: the batch of 793 waiting since 11:18Z
+HUD,"Total Power 150,103,292 before and after; food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173 unchanged",2026-11-24T22:32:21.553Z,nothing collected
+slots,"slots_idle 4 (total open slots: Lv.27 empty and Lv.24, Lv.20, Lv.30 blocked); slots_blocked_by_capacity 3 ('Drill Ground Full')",2026-11-24T22:31:59.927Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 22:37:04.015Z, run started 22:37:04.795Z), 20 s after the previous record write; owner idle 19,506 s: wait 0",2026-11-24T22:37:04.795Z,see growth/0054-waits.csv
+badges,"22:37:13.2Z: the tram icon not drawn, pickup none, radar dish 3",2026-11-24T22:37:04.795Z,tram badge rule: none; not tapped
+panel,"the VS medallion (673,300): ALLIANCE DUEL opened on Duel Progress; tabs Today's Theme, Duel Progress, Duel League and a cut-off 'A'; day scores 818,038,633 (57 percent) and 626,518,889 (43 percent); the winner earns 2 Alliance Duel Score",2026-11-24T22:37:24.378Z,tag text [G]: Alliance Duel
+personal total,"Today's Theme (226,154) tapped once: 7,017,000 beside the medallion; Base Expansion about 03:22:26 left; chest thresholds 2,600,000, 3,600,000, 7,200,000",2026-11-24T22:37:35.562Z,"unchanged since 19:17:55Z; the target 3,600,000 exceeded by 3,417,000; 183,000 to the 7,200,000 chest"
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, diamonds 11,173, energy 96, Total Power 150,103,292",2026-11-24T22:37:54.080Z,"pressed: the VS medallion, the Today's Theme tab, the back arrow (166,933)"
+drags,"drags tried 0, cancelled 0",,
