@@ -114,9 +114,9 @@ class Ended(QuestionCase):
     def test_a_run_that_simply_runs_gets_no_note_and_an_unchanged_body(self):
         run_id = self.start_run()
         r, body = self.status(run_id)
-        self.assertEqual({k: v for k, v in body.items() if k != "bridge_owner_idle"}, {"state": "awaiting_consent"})    # only the owner-idle value is added
+        self.assertEqual({k: v for k, v in body.items() if not k.startswith("bridge_")}, {"state": "awaiting_consent"})    # only the owner-idle and project values are added
         self.assertNotIn("bridge_note", r.stdout)
-        self.assertEqual(r.stderr.strip(), f"cu_bridge: {body['bridge_owner_idle']}")                                    # and its one line, nothing else
+        self.assertEqual(r.stderr.strip().splitlines(), [f"cu_bridge: {body['bridge_owner_idle']}", f"cu_bridge: {body['bridge_project']}"])   # and its two lines, nothing else
         self.assertFalse(self.record(run_id)["ended_on_question"])
 
 
