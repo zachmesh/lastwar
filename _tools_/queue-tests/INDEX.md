@@ -1,8 +1,8 @@
 ---
 title: Queue Tests
 created: 2026-11-23T07:50:00Z
-modified: 2026-11-23T17:06:03Z
-version: 1.7.0
+modified: 2026-11-24T10:32:47Z
+version: 1.8.0
 description: Tests for the queue unit serves key, run against throwaway pools in temporary git repositories
 ---
 
@@ -18,11 +18,11 @@ every `serves` is an exempt word or a plan item with a ledger row.
 
 `test_next_expired.py`: `next` never names a unit whose window has closed, and `claim` refuses one by name.
 
-`test_forecast.py`: `validate` warns (never errors) for a live inbox unit whose serves names a plan item with no ledger row, or is neither a
-ledger plan item nor an exempt word, and for a missing ledger when a unit needs it; counts and unit names only.
+`test_forecast.py`: `validate` warns (never errors) for a live inbox unit whose serves names a plan item with no ledger row or fails the strict
+rule (each comma or semicolon part must be a ledger plan item or an exempt word), and for a missing ledger; counts only.
 
 `test_require_forecast.py`: the switch `coordination.queue.require_forecast` in TEAM.yaml (off when absent) makes `enqueue`, the minting of
-`plan`, `sweep` and `sync`, and `scout_diff.py`'s enqueue calls refuse a unit with no ledger row; `--no-require-forecast` overrides.
+`plan`, `sweep` and `sync`, and `scout_diff.py` refuse such a unit, saying which rule failed; `--no-require-forecast` overrides.
 
 `test_token_lease.py`: `token-acquire --lease-minutes N` (1 to 60, default 15) and `--exclusive`, which makes `claim` refuse every other
 executor while the token is live (`claim --ignore-token` passes); an ordinary token never blocks a claim.
