@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T15:29:11Z
+modified: 2026-11-24T11:59:07Z
 level: L1
-version: 1.66.0
+version: 1.67.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -82,7 +82,7 @@ Goal: claim every free shop item due and spend nothing.
 2. Open the shop from the base cart icon.
 3. Hot Deals banner: tap Free Claim on a pack with no price (none 2026-11-23).
 4. Weekly Pass tab: Free Supply should read Claimed.
-5. Read each pass card; only an owned pass shows Claim.
+5. Read each pass card (scroll by margin drag, see how-to-enter); only an owned pass shows Claim.
 6. Super Monthly Pass tab: Claim Reward once if owned.
 7. NEVER click Go: it opens the web store in Chrome, measured 2026-11-23; leave Take All alone.
 8. Back to base; record results.
