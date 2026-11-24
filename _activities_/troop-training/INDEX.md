@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T07:40:44Z
+modified: 2026-11-24T04:15:43Z
 level: L1
-version: 1.50.0
+version: 1.51.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -62,7 +62,7 @@ grounded_in:
 
 # Troop Training
 
-Read rule-digest.md first.
+Read rule-digest.md first, then the [finished-batch lesson](finished-batch-lesson.md).
 
 Training new troops in the barracks, tier by tier, one activity folder for training knowledge. This document was split verbatim into 111 articles in reading order; nothing was rewritten, and `split_doc.py --check` rebuilds the original body from them. Find a section by its key (an entry id, a unit key such as run-20261107-1824, or a day) or heading; each line gives the title, the keys the article holds and its first sentence.
 
@@ -75,3 +75,4 @@ Training new troops in the barracks, tier by tier, one activity folder for train
 ## Changelog
 
 - 1.49.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 1624-line, 33,393-word body into 111 key-named articles and 5 catalog pages, and added `rule-digest.md`; no word rewritten, no claim superseded. `--verify` PASS and `--check` EQUAL, body sha256 c124a73d51fb; the unsplit 1.48.0 file is commit 11d23ccf.
+- 1.51.0, 2026-11-24 - Finished-batch lesson linked.

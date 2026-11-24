@@ -1,9 +1,9 @@
 ---
 title: Troop Training Rule Digest
 created: 2026-11-23T06:48:39Z
-modified: 2026-11-23T13:46:17Z
+modified: 2026-11-24T04:15:43Z
 level: L1
-version: 0.7.0
+version: 0.8.0
 description: The standing rules an operator must follow when training troops, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -17,7 +17,7 @@ grounded_in:
 2. Tiers: Lv.24 T8, Lv.27 T9, Lv.30 T10; batches cost food and iron (cadence-section, how-it-is-p3).
 3. Never tap Finish Now or the green upgrade arrow (limits-section, how-to-enter-p5).
 4. Read busy or idle from the "Training in progress" line, not the button time (how-it-is-p2).
-5. A tap collects a finished batch; requeue is separate and can meet the Drill Ground Full toast (day-20261031-p3, day-20261031-p4). Also: a blocked slot closes with slots_blocked_by_capacity=<N> and capacity_blocker="<text>" (for example "Drill Ground Full"); a count without a blocker exempts nothing (`_tools_/strategy-conformance/INDEX.md`).
+5. A tap collects a finished batch; requeue is separate and can meet the Drill Ground Full toast (day-20261031-p3, day-20261031-p4). Press the pistol once per barracks per read when room could exist: the toast alone is not idle ([finished-batch lesson](finished-batch-lesson.md)). Also: a blocked slot closes with slots_blocked_by_capacity=<N> and capacity_blocker="<text>" (for example "Drill Ground Full"); a count without a blocker exempts nothing (`_tools_/strategy-conformance/INDEX.md`).
 6. 2026-11-22: the toast did not reproduce; Lv.27 and Lv.30 requeued (day-20261031-p5, _records_/2026-11-22/troop-training/0958-queue-run.md).
 7. Leave Quick Dispatch untapped: effect unverified (day-20261031-p1).
 8. Ground tents and the button row fresh; a reused point selected another building (how-to-enter-p1, how-to-enter-p2). Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
@@ -33,3 +33,4 @@ Unverified: [claims](unverified-claims.md). Errata: [errata](errata.md).
 - 0.4.0, 2026-11-23 - Growth start rule added.
 - 0.6.0, 2026-11-23 - Tag-text rule.
 - 0.7.0, 2026-11-23 - Capacity stat names; Errata moved to errata.md.
+- 0.8.0, 2026-11-24 - Pistol rule and lesson pointer in rule 5.
