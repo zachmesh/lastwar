@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"run A admitted 0.8 s and run B 0.8 s after their requests (04:21:42.987Z and 04:23:23.579Z); owner idle 6,201 and 6,301 s: wait 0",2026-11-25T04:21:43.750Z,see growth/0054-waits.csv
+badges,"04:21:48.9Z (Warzone Duel 21:38:12): the tram icon without a badge, the pickup a red dot; after the Perform Now: the pickup none; 04:24:07.4Z: the tram and the pickup none",2026-11-25T04:21:43.750Z,tram badge rule: none; not tapped
+cards before,"SSR Protect Refugee Camp, SSR Train Refugees x2, SSR Search for Missing Refugees, all Lv.5: finished, a green Claim, no timers; a fifth card clipped; badges Your Tasks 8, Ally Tasks 5",2026-11-25T04:22:02.350Z,"tag text [G]: Secret Command Post, Your Tasks"
+Claim,"the in-game Claim tapped once at (576,489) at 04:22:07.6Z: Skill Medal 1.3K, SSR Hero Universal Shard x1, Treasure Map Fragment #1 x2, Resource Chest x300, Treasure Map Fragment #5 x2, Upgrade Ore 1.2K, Iron 1.9M, Food 1.9M, Treasure Map Fragment #3 x1 (rows above the Skill Medal may be missing)",2026-11-25T04:22:20.319Z,state change: claimed
+Secret Task Report,"11-24 20:16 local (04:16Z): a player of another alliance plundered the task rewards (a purple chest x1, a green item x15, EXP 123.9K); 20:06 local (04:06Z): an ally helped claim task rewards; the Like All button never pressed",2026-11-25T04:22:20.319Z,a PvP loss to report: the plunder happened while the tasks were finished and unclaimed
+cards after,all four visible cards PERFECT; the Your Tasks badge 1,2026-11-25T04:22:29.349Z,
+Mega Deploy,"Reminder: ONE task, Retrieve Valuable Supplies Lv.5, 00:30:00, ticked; UR Only unticked; no price; Perform Now once at 04:22:43.4Z: the world map, then BASE",2026-11-25T04:22:46.613Z,no Mega Refresh
+new timers,04:23:46.0Z: UR Rescue Test Subject 02:49:16 (ends 07:13:02Z); UR Capture the Oil Depot 02:49:20 (ends 07:13:06Z); SR Retrieve Valuable Supplies 00:29:37 (ends 04:53:23Z); SSR Protect Refugee Camp PERFECT; read 2 at 04:23:54.0Z fell by 8 s,2026-11-25T04:23:46.018Z,a clipped card unread
+drags,"drags tried 0, cancelled 0",,

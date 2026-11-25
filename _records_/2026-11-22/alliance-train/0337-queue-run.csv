@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 03:37:08.150Z, run started 03:37:09.254Z); owner idle 3,528 s: wait 0",2026-11-25T03:37:09.254Z,see growth/0054-waits.csv
+badges,"03:37:15.4Z: the tram icon drawn without a badge, the pickup none, the radar dish none; after the home view returned (03:38:06.6Z): the same",2026-11-25T03:37:09.254Z,tram badge rule: none; not tapped
+tram,drawn without a badge before the tap (03:37:15.4Z) and after the WORLD then BASE (03:38:06.6Z),2026-11-25T03:37:15.436Z,tag text [G]: left column; a bare icon only pans the camera
+countdown,a conductor icon above the train: 02:50:33 at 03:37:29.664Z: ends about 06:28:02.7Z; 02:50:22 at about 03:37:40.6Z: ends about 06:28:02.6Z,2026-11-25T03:37:29.664Z,no label beside the digits; the Station building behind
+pressed,"the tram icon once (it panned to the Station Platform), WORLD once, BASE once",2026-11-25T03:37:59.390Z,nothing on the platform
+drags,"drags tried 0, cancelled 0",,

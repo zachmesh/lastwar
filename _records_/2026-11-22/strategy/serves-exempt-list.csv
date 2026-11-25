@@ -1,0 +1,26 @@
+regular_id,class,serves,reason,decided_utc,review_utc
+harvest,plan,PL-14,collects the base output that is the supply line,2026-11-25T04:35Z,2026-11-30T02:00Z
+radar,plan,PL-14,"claims radar rewards (iron, food, coin, EXP); also scores the duel on a radar theme day (PL-05)",2026-11-25T04:35Z,2026-11-30T02:00Z
+trucks,plan,PL-14 PL-18,"dispatch, settle and plunder: the supply and plunder lines",2026-11-25T04:35Z,2026-11-30T02:00Z
+train,plan,PL-14,alliance train boardings that pay Trade Contracts,2026-11-25T04:35Z,2026-11-30T02:00Z
+training,plan,PL-09,trains troops into freed room,2026-11-25T04:35Z,2026-11-30T02:00Z
+research,plan,PL-16,the Base Expansion lab chain,2026-11-25T04:35Z,2026-11-30T02:00Z
+building-queues,plan,PL-08 PL-17,builder hand-offs and the Oil Well chain,2026-11-25T04:35Z,2026-11-30T02:00Z
+help,plan,PL-08,alliance help on builds and research (H118 test F-231),2026-11-25T04:35Z,2026-11-30T02:00Z
+duel-score,plan,PL-05,"duel rows, claims and the top chest",2026-11-25T04:35Z,2026-11-30T02:00Z
+star-ceremony,plan,PL-05,alliance duel star ceremony claims,2026-11-25T04:35Z,2026-11-30T02:00Z
+mail,income,PL-19,"claims mail items (diamonds, chests)",2026-11-25T04:35Z,2026-11-30T02:00Z
+gifts,income,PL-19,alliance gift Claim All items,2026-11-25T04:35Z,2026-11-30T02:00Z
+events,income,PL-19,event claims and exchanges,2026-11-25T04:35Z,2026-11-30T02:00Z
+daily-missions,income,PL-19,"mission and activity chest claims, Main Tasks claims folded in",2026-11-25T04:35Z,2026-11-30T02:00Z
+secrets,income,PL-19,secret mission claims,2026-11-25T04:35Z,2026-11-30T02:00Z
+donations,income,PL-19,donation rankings rewards and Tech EXP,2026-11-25T04:35Z,2026-11-30T02:00Z
+passes,income,PL-19,weekly pass daily pickups,2026-11-25T04:35Z,2026-11-30T02:00Z
+vip,income,PL-19,VIP daily freebie,2026-11-25T04:35Z,2026-11-30T02:00Z
+treasures,income,PL-19,hidden treasure digs,2026-11-25T04:35Z,2026-11-30T02:00Z
+survivors,income,PL-19,survivor recruit and intake (also a duel row on Tuesday),2026-11-25T04:35Z,2026-11-30T02:00Z
+arms-race,income,PL-19,arms race free milestone claims,2026-11-25T04:35Z,2026-11-30T02:00Z
+ghost-ops,income,PL-19,weekly ghost ops claims (Thursday),2026-11-25T04:35Z,2026-11-30T02:00Z
+scout,exempt,upkeep-read,read only: perception reads for the hypothesis register; presses nothing that claims,2026-11-25T04:35Z,2026-11-30T02:00Z
+scout-midday,exempt,upkeep-read,read only: midday reads for the register and the daily report,2026-11-25T04:35Z,2026-11-30T02:00Z
+zero-sweep,exempt,upkeep-read,read only look for claims left behind; a find is booked to the regular that owns it,2026-11-25T04:35Z,2026-11-30T02:00Z

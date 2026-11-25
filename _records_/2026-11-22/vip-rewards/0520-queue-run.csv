@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 05:20:41.309Z, run started 05:20:42.689Z); owner idle 382 s: wait 0 (the unit was held 04:53Z to 05:20Z while the owner was at the Mac: idle 0 to 1 s)",2026-11-25T05:20:42.689Z,see growth/0054-waits.csv
+badges,"05:20:48.1Z: no separate VIP badge beside the avatar; the base after 05:22:20.8Z: the tram icon without a badge, the hammer 3/4",2026-11-25T05:20:42.689Z,tram badge rule: none; not tapped
+front,'Google Chrome' in front at 05:20:32Z (the owner away: idle 375 s); the standing front script run; LastWar in front at 05:20:34Z,2026-11-25T05:20:34Z,Steer A's FRONT rule
+route,no separate VIP badge beside the avatar: ONE avatar tap at 05:20:54.9Z opened the profile page; ONLY the VIP entry tapped at 05:21:17.4Z,2026-11-25T05:21:04.394Z,the profile page: no text recorded
+VIP panel,"VIP13; 7 days in a row; 1,695,740 of 2,000,000 points; the Daily Freebie a plain green Claim with an orange puzzle-piece item x2 and three crates x13; the login chest with a red dot (not claimed); VIP Exclusive $99.99 (never pressed)",2026-11-25T05:21:26.538Z,tag text [G]: VIP panel; no price on the Claim
+claim,"Claim (564,658) once at 05:21:32.9Z: an orange puzzle-piece item x2, a food-kind crate x13, an iron-kind crate x13, a coin-kind crate x13",2026-11-25T05:21:35.070Z,state change: claimed
+after,"the Daily Freebie button a countdown 20:38:26 at 05:21:35.1Z (next claim about 02:00:01Z); the points unchanged 1,695,740 of 2,000,000",2026-11-25T05:21:35.070Z,the login chest unclaimed
+close,"the dimmed-area tap (100,700), the back arrow (176,929), the profile page X (627,77); the base",2026-11-25T05:22:20.756Z,avatar tapped once only
+HUD,"food 140.4M, iron 760.2M, coin 25.8M, oil 600.0K, diamonds 11,283, Total Power 150,701,116, energy 141, builders 3/4 (03:47Z: 166.3M, 787.5M, 34.5M, 650.3K, 11,213, 150,103,292, 120, 4/4): the owner's play",2026-11-25T05:22:20.756Z,reported to the coordinator
+drags,"drags tried 0, cancelled 0",,

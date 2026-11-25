@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 03:28:08.480Z, run started 03:28:09.342Z); owner idle 2,990 s: wait 0",2026-11-25T03:28:09.342Z,see growth/0054-waits.csv
+badges,"03:28:15.8Z: the tram icon without a badge, the Mail envelope a plain red dot; after WORLD then BASE (03:28:40.1Z): the same; the base after 03:30:51.5Z: the Mail envelope still a red dot, diamonds 11,213",2026-11-25T03:28:09.342Z,tram badge rule: none; not tapped
+dot first,"before: a plain red dot, no number, 03:28:15.8Z; WORLD 03:28:19.9Z, BASE 03:28:29.0Z; after: the same plain red dot, 03:28:40.1Z: UNCHANGED (the dot held real gift icons)",2026-11-25T03:28:40.090Z,tag text [G]: Mail envelope; the Coach's stale-dot control
+rail,"Battle Report (red dot), Alliance (gift icon), Event (gift icon), System (red dot), Regular, In-app Purchases, Favorite: none",2026-11-25T03:28:54.786Z,
+Daily Participation Rewards,"Event, own Claim (565,933) at 03:29:14.2Z: four chests x30 (iron, steel, food and coin kinds); then no gift icon",2026-11-25T03:29:16.371Z,chests unopened
+Arms Race Ranking Reward,"Event, own Claim (565,933) at 03:29:39.4Z: three chests x3 (steel, food and coin kinds); the Claim button gone",2026-11-25T03:29:42.815Z,
+Daily Donation Rankings,"Alliance, own Claim (565,933) at 03:30:36.6Z: a badge item x4 and 10 diamonds; the Alliance gift icon gone",2026-11-25T03:30:42.207Z,"diamonds 11,203 to 11,213"
+left unclaimed,Event: 'Glittering Market Unclaimed...' and 'Unclaimed Arms Race event re...' still with gift icons (the step allowed two Event claims),2026-11-25T03:30:42.207Z,a follow-up mail unit; the digest: an 'Unclaimed' title does not decide
+System and others,"System: five President mails and a Planned Update Notice, red dots, no gift icons; two ally train mails read, none opened",2026-11-25T03:30:10.160Z,"no Claim All, Delete, Delete All or Read All"
+HUD,"before: food 166.3M, iron 787.5M, coin 34.5M, diamonds 11,203, energy 120, Total Power 150,103,292; after: diamonds 11,213",2026-11-25T03:30:51.460Z,no TIPS popup on closing
+drags,"drags tried 0, cancelled 0",,

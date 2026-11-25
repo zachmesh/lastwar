@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.1 s after the request (start requested 03:34:25.853Z, run started 03:34:26.976Z); owner idle 3,367 s: wait 0",2026-11-25T03:34:26.976Z,see growth/0054-waits.csv
+badges,"first frame 03:34:32.6Z: the tram icon without a badge, the pickup none, the radar dish none; the Alliance button and the Help tile with red dots",2026-11-25T03:34:26.976Z,tram badge rule: none; not tapped
+header,"Today's points gained from Alliance Help 0/1,000 before (03:34:45.7Z) and 0/1,000 after the reopen (03:35:10.1Z)",2026-11-25T03:34:45.683Z,tag text [G]: Alliance Help page
+rows,"four visible: building Lv.29 Drill Ground, Food Output V research, building Lv.27 Drill Ground, Oil Output I research (cut off): all the owner account's own requests at 30/30; no ally request",2026-11-25T03:34:45.683Z,nothing to help
+Help All,"pressed once (393,766) at 03:34:54.4Z: no toast; the rows showed 'Time reduced' labels (1d 12:08:49 and 10:02:00 x3); no points",2026-11-25T03:34:56.607Z,no state change read
+after,"reopened: the bars read 30/30 again; the Help All button still shown; the header 0/1,000",2026-11-25T03:35:10.131Z,
+drags,"drags tried 0, cancelled 0",,

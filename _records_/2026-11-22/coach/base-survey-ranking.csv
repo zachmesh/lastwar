@@ -1,0 +1,11 @@
+area_or_object,seen_in_frame_and_time,kind,plain_free_action_available,value_estimate,unit_cost_usd,value_per_usd,rule_status,note
+(rows are filled from the base survey record; none yet),,,,,,,,
+"PRIORS (registered 05:50Z, before the survey data; OD-20261125-05 'scroll the screen of the game so that you can see all different areas, and interact with those areas too')",,,,,,,,
+a composed pan from a blank ground start moves the base camera 100 px or more with no fling,,,,P 0.65,,,,"the recipe worked on the Weekly Pass page (margin), the History list (margin) and the Backpack grid (a tile gap) and failed on the Backpack margin and the Store list: a new page needs its own start point"
+the survey finds at least one object not in the standard base frame,,,,P 0.90,,,,
+it finds at least one plain free collect or claim not covered by an existing regular,,,,P 0.35,,,,
+"it finds at least one building the plan names (Hospital, Builder's Hut, Gear Factory, Training Base)",,,,P 0.70,,,,"the Main Tasks rows (01:29Z) name them, so they exist"
+three or more buildings are visible only after panning,,,,P 0.60,,,,
+the survey unit stays within its cap of 0.80 USD,,,,P 0.75,,,,
+"a pan flings, moves nothing, or draws a bridge 'out_of_scope' refusal during the survey",,,,P 0.15,,,,
+at least one of the unseen areas offers a free claim worth 100K resource-equivalent or more,,,,P 0.15,,,,Steer A's bar (23:49Z): a unit names its expected value against 0.2 to 0.3 USD; below about 100K it is folded into an existing unit

@@ -1,7 +1,7 @@
 ---
 title: Strategy records for 2026-11-22
 created: 2026-11-23T08:34:00Z
-modified: 2026-11-25T03:18:00Z
+modified: 2026-11-25T05:38:00Z
 version: 1.0.0
 description: The strategist's plan of record, ranked levers, hypothesis register, decision records, resource policy and owner questions, with their CSV sidecars; the scribe lands the pages.
 ---
@@ -12,9 +12,9 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 
 ## Plan and rules
 
-- [plan-of-record.md](plan-of-record.md) and [plan-of-record.csv](plan-of-record.csv) - the table the planner mints from; ids PL-01 to PL-18.
+- [plan-of-record.md](plan-of-record.md) and [plan-of-record.csv](plan-of-record.csv) - the table the planner mints from; ids PL-01 to PL-20.
 - [0030-slot-rules.md](0030-slot-rules.md) - lab, builder, speed-up and slot-arrival rules; [0030-dg-level-table.csv](0030-dg-level-table.csv) holds the level costs.
-- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 227 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
+- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 232 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
 - [forecast-ledger-schema.md](forecast-ledger-schema.md) - kinds, scoring and the immutability rule.
 - [strategy-log.md](strategy-log.md), then strategy-log-1123b to 1125b (latest [1125b](strategy-log-1125b.md)): dated.
 - [0117-box-policy-v1.md](0117-box-policy-v1.md), [rules](0117-box-policy-v1.csv) and [stock](0117-box-stock.csv) - when, how and which chests to open, with the reserve.
@@ -47,6 +47,7 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [0660-owner-digest-lines.md](0660-owner-digest-lines.md) - digest.
 - [0117-coin-line.md](0117-coin-line.md) - dated coin conversions and supply.
 - [0670-room-levers.md](0670-room-levers.md) and [sidecar](room-levers.csv) - room.
+- [0760-base-survey-rubric.md](0760-base-survey-rubric.md) - survey ranking.
 - [0750-hospital-room.md](0750-hospital-room.md) - hospital.
 - [0740-hut-and-hospital.md](0740-hut-and-hospital.md) - Hut.
 - [0730-duel-theme-rows.md](0730-duel-theme-rows.md) - rows.
