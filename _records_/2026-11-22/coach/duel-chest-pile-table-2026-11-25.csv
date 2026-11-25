@@ -1,0 +1,9 @@
+first radar run (UTC),tasks in the pile (about 1 an hour from 00:54Z),points from the radar,"with the Food Output V Complete (+117,000, from 19:39Z)",chests reached by that run,"value tags reached (of 35,650)",what is still missing
+18:00Z,17,"510,000",not yet complete,"40,000, 150,000","17,550","the 540,000 chest (a second run or the tech Complete)"
+18:54Z,18,"540,000",not yet complete,"40,000, 150,000, 540,000","35,650",nothing
+20:00Z,19,"570,000","687,000","40,000, 150,000, 540,000","35,650",nothing
+22:00Z,21,"630,000","747,000","40,000, 150,000, 540,000","35,650",nothing
+00:00Z (11-26),23,"690,000","807,000","40,000, 150,000, 540,000","35,650",nothing
+01:30Z (11-26),24,"720,000","837,000","40,000, 150,000, 540,000","35,650",nothing
+THE THRESHOLDS,"40,000 = 2 tasks (60,000); 150,000 = 5 tasks (exactly 150,000); 540,000 = 18 tasks, or 15 tasks with the +117,000 tech Complete (14 tasks and the tech give 537,000)",,,,,"the radar rows are +30,000 each; tech power +30 a point; the chests are claimed one plain Claim each"
+"THE UNKNOWNS (my priors, registered 18:05Z)","P(radar tasks do NOT expire, so the pile stands) 0.65 [G: never read]; P(the radar Claim All dialog still says 'will not grant Alliance Duel points') 0.15; P(the first run after the halt reaches the top chest, 540,000, given the owner answers by 22:00Z) 0.55 (0.80 if no expiry); P(the personal total is still 0 at the first read) 0.90 (no radar unit ran since 02:00Z)",,,,,

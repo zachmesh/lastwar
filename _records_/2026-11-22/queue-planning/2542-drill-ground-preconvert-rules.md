@@ -1,9 +1,9 @@
 ---
 title: Drill Ground Preconvert Rules For The 13:38Z Hand Off 2542 2026-11-25
 created: 2026-11-25T02:30:00-08:00
-modified: 2026-11-25T02:35:00-08:00
+modified: 2026-11-25T07:58:00-08:00
 level: L0
-version: 1.1.0
+version: 1.2.0
 description: Steer A's rulings of 2026-11-25 10:23Z for the Drill Ground hand-off unit - the revised cost floors, the preview first, the fixed-chest preconvert order and quantities, the checks around each Use and what is never touched
 status: done
 activity: queue-planning
@@ -35,7 +35,7 @@ UR food chests (68, 4.06M each), then SSR food chests (1,428, 1.35M); UR coin ch
 
 ## Each Use
 
-Procedure: sheet 2541. The Backpack Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a LIVE Use: NEVER tap that tile and never press the Use of a pre-selected panel. Select the chest tile by its icon and count tag; read the chest's NAME in the panel before any Use. Set the quantity with the plus button (no keypad opens); read the quantity field in a frame before the Use tap. Read the HUD resource before and after each Use: it must rise by the quantity times the chest's value within 1 percent, else STOP. Any diamond line, price or other dialog: STOP.
+Procedure: sheet 2541. The Backpack Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a LIVE Use: NEVER tap that tile and never press the Use of a pre-selected panel. Select the chest tile by its icon and count tag; read the chest's NAME in the panel before any Use. Set the quantity with the plus button (no keypad opens); read the quantity field in a frame before the Use tap. On this visit also read the iron chest rows (UR, SSR, SR) by name and count tag in a frame, once (H117: is iron binding; plan reason: the ladder and the HQ 31 iron bill); no Use on them. Read the HUD resource before and after each Use: it must rise by the quantity times the chest's value within 1 percent, else STOP. Any diamond line, price or other dialog: STOP.
 
 ## Never
 

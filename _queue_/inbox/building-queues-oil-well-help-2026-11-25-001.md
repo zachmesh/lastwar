@@ -5,7 +5,7 @@ activity: building-queues
 segment: 1
 priority: 2
 created_at: 2026-11-25T05:38:39Z
-expires_at: 2026-11-25T17:30:00Z
+expires_at: 2026-11-26T06:50:00Z
 planned_for:
 not_before: 2026-11-25T05:38:00Z
 window: h118 help request on the new oil well lv25 job steer a 05:37z

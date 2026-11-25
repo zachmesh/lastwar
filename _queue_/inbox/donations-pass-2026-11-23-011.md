@@ -5,7 +5,7 @@ activity: alliance-donations
 segment: 1
 priority: 2
 created_at: 2026-11-24T11:42:58Z
-expires_at: 2026-11-25T17:30:00Z
+expires_at: 2026-11-26T01:50:00Z
 planned_for:
 not_before: 2026-11-25T07:05:00Z
 window: donation pass about 3.5 hours after the previous
