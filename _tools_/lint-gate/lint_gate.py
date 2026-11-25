@@ -1082,6 +1082,7 @@ def cmd_check(a) -> int:
         sized = {path_of(f) for f in report.get("errors", []) if tag_of(f) == "document-concision"}
         redacted = staged_redaction_only(top, sized) if sized else set()
     blocking, legacy, exempt, other = classify(report.get("errors", []), rules, base, docs, folders, redacted)
+    other_findings = [f for f in report.get("errors", []) if tag_of(f) not in rules]
     print_privacy_hits(hits)
     for f in blocking:
         print(f"BLOCKED {short(f)}")
@@ -1093,6 +1094,8 @@ def cmd_check(a) -> int:
     note = (f"{len(legacy)} legacy structural finding(s) and {len(exempt)} exempt finding(s) ignored, "
             f"{other} error(s) of other rules ignored, {seen}")
     total = len(blocking) + len(hits) + len(failures) + len(added) + len(play_block)
+    if getattr(a, "list_ignored", False):
+        print_ignored(legacy, exempt, other_findings)
     if total:
         print(f"lint-gate: {total} blocking finding(s) ({mode}, {seconds:.1f}s); {note}.")
         if blocking:
@@ -1110,6 +1113,23 @@ def cmd_check(a) -> int:
         return 1
     print(f"lint-gate: ok ({mode}, {seconds:.1f}s); {note}.")
     return 0
+
+
+def print_ignored(legacy: list, exempt: list, other: list) -> None:
+    """What `check` counts and ignores, with its paths and rule names (never the finding text): the legacy structural findings, the exempt
+    ones and the errors of rules the gate does not enforce. Sorted, one `path  [rule]` per line (` xN` when a path has N findings of the
+    rule), so two runs diff to the new ones."""
+    for title, findings in (("legacy structural findings (ignored: they existed at the base)", legacy), ("exempt findings (exempt.txt)", exempt),
+                            ("errors of other rules (not enforced by this gate)", other)):
+        rows: dict[tuple[str, str], int] = {}
+        by_rule: dict[str, int] = {}
+        for f in findings:
+            key = (path_of(f), tag_of(f) or "?")
+            rows[key] = rows.get(key, 0) + 1
+            by_rule[key[1]] = by_rule.get(key[1], 0) + 1
+        print(f"ignored - {title}: {len(findings)}" + (f" ({', '.join(f'{t} {n}' for t, n in sorted(by_rule.items()))})" if rows else " (none)"))
+        for (path, tag), n in sorted(rows.items()):
+            print(f"  {path}  [{tag}]" + (f" x{n}" if n > 1 else ""))
 
 
 # --- install -----------------------------------------------------------------------------------------------
@@ -1451,6 +1471,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="command", required=True)
     c = sub.add_parser("check", parents=[common], help="block new or changed oversized or misshapen documents")
     c.add_argument("--staged", action="store_true", help="judge the staged commit (the hook; seconds)")
+    c.add_argument("--list-ignored", action="store_true", help="also print the path and rule of every ignored finding: legacy structural, exempt and other rules")
     c.add_argument("--base", metavar="REF", help="judge the tree against REF (a full lint, about a minute)")
     c.add_argument("--rules", help=f"comma list of rule tags that block (default {','.join(GATE_RULES)}; env LINT_GATE_RULES)")
     c.add_argument("--landing", action="store_true", help="the Integrator's form with --base: exit 2 (never a pass) when the base "
