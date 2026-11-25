@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 02:55:34.682Z, run started 02:55:35.497Z), 31 s after the previous run; owner idle 1,043 s: wait 0",2026-11-25T02:55:35.497Z,see growth/0054-waits.csv
+badges,"first frame 02:55:39.7Z (Warzone Duel 23:04:22): the tram icon without a badge, the pickup badge 10, the radar dish none, labs 2/2; the base after 02:56:16.3Z: the same",2026-11-25T02:55:35.497Z,tram badge rule: none; not tapped
+lab 1,"Lv.1 Food Output V, upgrade in progress, Speed Up (not pressed); 16:43:17 left at 02:55:50.693Z: ends 2026-11-25T19:39:07.7Z (known 19:39:07.4Z); second read 16:43:10 at 02:55:58.291Z",2026-11-25T02:55:50.693Z,tag text [G]: research queue panel
+lab 2,"Lv.0 Oil Output I, upgrade in progress; 1d 05:41:44 left: ends 2026-11-26T08:37:34.7Z (known 08:37:34.4Z); second read 1d 05:41:37",2026-11-25T02:55:50.693Z,
+classification,both RUNNING; none empty; none finished waiting; no Complete button,2026-11-25T02:55:58.291Z,slots_idle 0
+HUD,"unchanged before and after: food 166.3M, iron 787.5M, coin 34.5M, oil 650.3K, diamonds 11,193, Total Power 150,103,292",2026-11-25T02:56:16.301Z,
+drags,"drags tried 0, cancelled 0",,

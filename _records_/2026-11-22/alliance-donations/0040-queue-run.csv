@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the desktop lock was held by a cu-integrator gate run from 00:38:11.3Z; I polled read-only from 00:38:23Z and started at 00:40:38.6Z when free (about 2.2 minutes, note OTHER); owner idle 26,908 s: wait 0 after that",2026-11-25T00:40:39.398Z,see growth/0054-waits.csv
+badges,"first frame 00:40:44.5Z (timer 01:19:17): the tram icon not drawn, pickup none, radar dish 3; the base after 00:44:07.9Z (timer 01:15:53): no TIPS popup",2026-11-25T00:40:39.398Z,tram badge rule: none; not tapped
+entry count,"Quick Construction 9 of 10: count 10/30 at 00:41:15.476Z; the coin Donate green at 1000 coin, no timer",2026-11-25T00:41:15.476Z,tag text [G]: donation dialog; the Coach registered 10 from 00:37:57Z (11 from 00:57:57Z): matched
+taps,"10 coin Donate taps at (495,756): 00:41:21.0Z, 00:41:29.5Z, 00:41:36.0Z, 00:41:46.0Z, 00:41:59.6Z, 00:42:06.6Z, 00:42:32.1Z, 00:42:41.0Z, 00:42:51.1Z and 00:43:13.606Z (the last)",2026-11-25T00:43:13.606Z,"counts after taps 1 to 9: 9, 8, 7, 6, 5, 4, 3, about 2 (hidden by the animation), 1"
+live count before the last tap,1/30 in the frame at 00:43:05.4Z (after tap 9),2026-11-25T00:43:05.437Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:14:33 read at 00:43:24.2Z (00:14:21 at 00:43:36.1Z): the end 00:57:57.2Z on the grid point 00:57:57 within 0.2 s,2026-11-25T00:43:24.219Z,within the 3 s rule
+witness,"Tech Donation Today 6,650 to 8,050; the Tech EXP bar 5.3M of 8.0M unchanged; the diamond Donate (2) never pressed",2026-11-25T00:43:36.065Z,corroborates
+close,"the dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base; no TIPS popup",2026-11-25T00:44:07.965Z,HUD: coin 29.7M before
+drags,"drags tried 0, cancelled 0",,

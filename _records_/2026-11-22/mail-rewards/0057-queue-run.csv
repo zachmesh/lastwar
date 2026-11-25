@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:57:18.343Z, run started 00:57:19.104Z), 16 s after the previous record write; owner idle 27,905 s: wait 0",2026-11-25T00:57:19.104Z,see growth/0054-waits.csv
+badges,"first frame 00:57:24.2Z: the tram icon not drawn, pickup none, radar dish none; the base after 00:58:19.7Z: red dots on Alliance, Mail and Inventory",2026-11-25T00:57:19.104Z,tram badge rule: none; not tapped
+rail,"red dots on Battle Report, Event, System, Regular and In-app Purchases; none on Alliance and Favorite; no gift icon on any category (before and after)",2026-11-25T00:57:29.539Z,tag text [G]: Mail rail
+Event list,"six mails: four ally train notices (three unread), an ally Mega Exp mail (unread), the Train arrival reward notice (read); none with a gift icon or Claim; the list buttons Search, Delete All and Claim All (not pressed)",2026-11-25T00:57:35.881Z,never Delete All
+Train arrival notice,"read: all six attachments ticked as collected (a 2.5K resource, an item x1 with a 2.5K tag, two chests x50, another item x1, a greyed crossed 2.5K); no Claim button, only back, star and trash",2026-11-25T00:57:41.029Z,nothing pressed
+System and Alliance lists,"System: the Planned Update Notice unread, president mails read; Alliance: Daily Donation Rankings, zombie siege reports, an exercise report, two marker notices, all read: no gift icon",2026-11-25T00:58:01.239Z,
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, diamonds 11,173, energy 111, Total Power 150,103,292 (before and after)",2026-11-25T00:58:19.670Z,no TIPS popup on closing
+drags,"drags tried 0, cancelled 0",,

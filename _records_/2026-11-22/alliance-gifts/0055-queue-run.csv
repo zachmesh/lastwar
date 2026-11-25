@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:55:33.503Z, run started 00:55:34.342Z), 33 s after the previous record write; owner idle 27,801 s: wait 0",2026-11-25T00:55:34.342Z,see growth/0054-waits.csv
+badges,"first frame 00:55:39.9Z: the tram icon not drawn, pickup none, radar dish none; the Alliance menu keeps a red dot on Gifts after the claims",2026-11-25T00:55:34.342Z,tram badge rule: none; not tapped
+gifts before,"Gift Level 29, progress 44,252,320 of 257,900,000; Regular selected with a green Claim All badge 134; both tabs with red dots",2026-11-25T00:55:59.084Z,"tag text [G]: Gifts page; Alliance (670,708), Gifts tile (273,595)"
+Regular Claim All,"134 Regular Alliance Gifts claimed (once): golden chest x8, 5m speed-up x12, diamond item (5) x16, steel (1.0K) x841, coin (600) x522, bread (1.0K) x551",2026-11-25T00:56:10.506Z,"Claim All (393,918); summary dismissed (400,820)"
+Premium Claim All,2 Premium Alliance Gifts claimed (once): a chest x4 and a diamond item (20) x1,2026-11-25T00:56:27.697Z,"Claim All (550,918); summary dismissed (400,830)"
+re-check,"Premium: every row Claimed, no Claim All, no dot; Regular: four new gifts since the first claim, a green Claim All badge 4 (not pressed again); progress 44,259,980 of 257,900,000, Level 29",2026-11-25T00:56:33.649Z,one Claim All per tab by the brief
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, oil 648.4K, diamonds 11,173, Total Power 150,103,292",2026-11-25T00:56:49.298Z,the crates and chests unopened
+drags,"drags tried 0, cancelled 0",,

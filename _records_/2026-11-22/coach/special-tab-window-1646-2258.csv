@@ -1,0 +1,11 @@
+item,16:01Z to 16:46Z read,22:58Z read (secret-missions/2258),change,reading
+Violet's Loot (the gold question-mark chest),350,58,-292,"the stack was USED or converted by something other than our units; with the gifts of 6.7 an hour it would be about 394, so about 336 fewer than the model [G]"
+pink crystal items,"4,442","18,442","+14,000",the Violet's Loot panel says 'randomly obtain resources or upgrade materials': 292 chests would give about 48 pink crystals each if they were the source [G]
+turkey (the roast turkey item),7,1,-6,"NOT the turkey TICKETS: the ticket stack is still 6 (row 3 column 1): the Store's Redeem was not used; the turkey item fell by 6, the kind of change a 'Gift Turkey' send makes [G]"
+gold ticket,10,40,+30,an event or lottery ticket stack: +30 [G]
+grain bag,124,42,-82,"used or converted; the HUD food rose only by our own gains, so it was not converted into HUD food"
+Mystery Supply Box (purple question-mark chest),376 at 16:46Z (row 3 column 3),NOT IN ROWS 1 TO 3,unread,0 (tile removed) or in the clipped row 4; the second time this stack is missing from the arithmetic (the 356 between 09:20Z on 11-23 and 04:37Z on 11-24)
+turkey ticket,6,6,0,unchanged
+ice-crystal item,"218,000","218,000",0,unchanged
+"HUD food, iron, coin, oil","152.6M, 774.3M, 25.0M, 638.4K at 21:21:47Z","159.8M, 781.2M, 29.7M, 644.2K at 22:57:47Z","+7.2M, +6.9M, +4.7M, +5.8K","FULLY EXPLAINED by our own units: the radar Claim All at 22:19Z paid iron 4.2M, bread 4.2M, coin 2.8M and the harvest at 22:22Z paid iron 2.64M, food 2.86M, coin 1.88M: 6.84M, 7.06M and 4.68M against the HUD's +6.9M, +7.2M and +4.7M to the rounding; nothing moved after the 22:22Z collect (food 159,837,883, iron 781,232,698, coin 29,752,992 then and at 22:57Z)"
+WHO,"no person's input on this Mac from 17:11:25Z to 22:57Z except our own runs (the HID idle 11,019 s at 20:15Z; our click at 21:24Z)",,,"a second device or a server-side effect [G]; UNATTRIBUTED; the stacks that shrank (Violet's Loot, grain bags, the turkey item) and the stacks that grew (pink crystal, gold tickets) look like use of event and gift items, not of resources"

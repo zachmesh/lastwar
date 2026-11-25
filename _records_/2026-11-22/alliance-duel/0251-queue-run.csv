@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.7 s after the request (start requested 02:51:55.115Z, run started 02:51:55.861Z); owner idle 825 s (over the 300 s gate): wait 0",2026-11-25T02:51:55.861Z,see growth/0054-waits.csv
+badges,"02:52:00.4Z (timer 23:08:01): the tram icon drawn without a badge, the pickup badge 10; the base after 02:52:13.6Z: the same",2026-11-25T02:51:55.861Z,tram badge rule: none; not tapped
+theme,Today's Theme 'Age of Science' with a countdown 23:07:55; the personal daily total 0 (the coin-style icon beside it),2026-11-25T02:52:05.956Z,"tag text [G]: Alliance Duel, Today's Theme; the new day's theme (the previous day was Base Expansion)"
+chests,"carousel page 1 of 4: 40,000 (red-gem figure 8,020), 150,000 (9,530), 540,000 (18,100): all three closed; no mark, glow or Claim; a cyan arrow to the right (not pressed)",2026-11-25T02:52:05.956Z,a 6x crop of the saved frame read the three figures; the other pages unseen (no arrow in this unit's route)
+row 1,Use 1-min Research Speed-up +150.0 (6x crop),2026-11-25T02:52:05.956Z,digits cropped at 6x
+row 2,Increase Tech Power by 1pt +30.0,2026-11-25T02:52:05.956Z,
+row 3,Use 1 Valor Badge +750.0,2026-11-25T02:52:05.956Z,
+row 4,"Complete 1 Radar Task +30,000.0",2026-11-25T02:52:05.956Z,the radar line 0/40 until the restore at 02:38Z passed: 12 tasks await
+row 5,Buy Packs containing Diamonds (1 Diamond) +30.0 (a purchase row: never pressed),2026-11-25T02:52:05.956Z,red line: no purchase
+row 6,"For each Lv.1 Drone Component Chest opened +2,750.0",2026-11-25T02:52:05.956Z,list not cut off
+pressed,"the VS medallion (673,300) at 02:52:03.7Z and the back arrow (166,933) at 02:52:11.4Z; no chest, no row",2026-11-25T02:52:13.610Z,HUD unchanged
+drags,"drags tried 0, cancelled 0",,

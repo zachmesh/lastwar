@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 23:44:12.036Z, run started 23:44:12.932Z), after the unit's not_before 23:43:00Z; owner idle 23,528 s: wait 0",2026-11-24T23:44:12.932Z,see growth/0054-waits.csv
+badges,"23:44:18.0Z (timer 02:15:43): the tram icon not drawn, pickup none, radar dish 3; the base after 23:45:05.6Z: the same",2026-11-24T23:44:12.932Z,tram badge rule: none; not tapped
+panel,"the VS medallion (673,300): ALLIANCE DUEL opened on Today's Theme (already selected, so the tab was not tapped); tabs Today's Theme, Duel Progress, Duel League and a cut-off 'A'; no celebration overlay",2026-11-24T23:44:32.408Z,tag text [G]: Alliance Duel
+personal total,"7,017,000 beside the medallion on every read; Base Expansion countdown 02:15:36, 02:15:29, 02:15:23, 02:15:17, 02:15:11",2026-11-24T23:44:38.044Z,unchanged since 22:37:35Z and 19:17:55Z
+"2,600,000 chest","a silver chest with its lid open; a red-gem icon and 24,900 above it; no checkmark, no Claimed text, no Claim button",2026-11-24T23:44:38.044Z,state as drawn: the lid open
+"3,600,000 chest","a blue-silver chest with its lid open; a red-gem icon and 46,900 above it; no checkmark, no Claim button",2026-11-24T23:44:38.044Z,state as drawn: the lid open
+"7,200,000 chest","a gold chest with a star emblem (closed); a red-gem icon and 67,800 above it; no checkmark, no Claim button; the total 7,017,000 is 183,000 short",2026-11-24T23:44:38.044Z,the threshold not reached
+reward line,"REWARD LINE NOT SHOWN WITHOUT A TAP: the page prints under the chest row only 'Earn Points through these actions' and the scoring rows (Use 1-min Construction Speed-up +150; Increase Building Power by 1pt +30; Dispatch UR Trade Truck 1 time +300,000; Perform 1 UR Secret Task +225,000; Buy Packs containing Diamonds +30; Recruit Survivor 1 time +4,500); the carousel arrows, the page dots and the chests not tapped",2026-11-24T23:44:50.327Z,"the item names and quantities of the 7,200,000 chest unread: needs a tap"
+close,"the back arrow (166,933); the base; HUD food 159.8M, iron 781.2M, coin 29.7M, Total Power 150,103,292",2026-11-24T23:45:05.617Z,pressed: the VS medallion and the back arrow only
+drags,"drags tried 0, cancelled 0",,

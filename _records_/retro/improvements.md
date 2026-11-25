@@ -33,3 +33,4 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 - [IMP-20261123-15](improvements-log/imp-20261123-15.md) - playbook quality baselines and the metrics that close an improvement.
 - [IMP-20261124-01](improvements-log/imp-20261124-01.md) - a regular that carries a known-blocked step is partial every run, and the growth partial rate.
 - [IMP-20261124-02](improvements-log/imp-20261124-02.md) - a returned truck waits behind a stale tram dot.
+- [IMP-20261124-03](improvements-log/imp-20261124-03.md) - stock claims made from one read, and forensic reads without a plan reason.

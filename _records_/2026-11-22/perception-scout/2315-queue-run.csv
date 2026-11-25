@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"the first claim at 23:11:32Z was refused by the tool (not before 23:15:00Z): no run, the token released at once; after waiting read-only to 23:15:07Z the run was admitted 0.9 s after its request (start requested 23:15:23.597Z, run started 23:15:24.549Z); owner idle 21,801 s: wait 0",2026-11-24T23:15:24.549Z,see growth/0054-waits.csv
+badges,23:15:29.6Z (timer 02:44:31): the tram icon not drawn; 23:16:26.9Z (timer 02:43:27): the same,2026-11-24T23:15:24.549Z,tram badge rule: none; not tapped
+row 1 (23:15:41.1Z),"an Emote Choice Chest II x1 (pre-highlighted by the game; its panel 'Emote Choice Chest II' shown, nothing pressed); a Nameplate Choice Chest VII x1; a purple rocket x15; a gold-wing ticket x1",2026-11-24T23:15:41.108Z,tag text [G]: Special tab; counts read in the saved frame
+row 2,"the pink crystal x18,442; a blue crystal x218,000; a roast turkey x1; a gold-star ticket x40",2026-11-24T23:15:41.108Z,"pink crystal 4,442 at 16:46Z"
+row 3,a turkey ticket x6; a produce sack x42; a gold question-mark chest on teal (VIOLET'S LOOT) x58; a VI chest x3,2026-11-24T23:15:41.108Z,Violet's Loot 350 at 16:01Z; the Mystery Supply Box NOT in rows 1 to 3
+pan,"start (274,448) a gap between tiles (plain pale background, no tile, tag or button), end (274,273), ONE message: move, down, wait 1 s, move, wait 1 s, up, screenshot at 23:15:55.1Z: moved about 143 px; no selection",2026-11-24T23:15:55.325Z,"drags 1, cancelled 0; the untried gap start works"
+row 4 (23:16:00.8Z),a purple chest with a silver pattern x1; a purple-silver chest x2; a silver 'II' chest x2; a gold chest with a character x1,2026-11-24T23:16:00.809Z,new stacks
+"row 5 (tops, tags clipped)",a blue-triangle chest x1; a silver chest x6; a gold chest x25; a 'Lv.5' blue-and-gold chest x3,2026-11-24T23:16:00.809Z,counts clipped at the bottom edge
+Mystery Supply Box,ABSENT: no purple question-mark chest in rows 1 to 5; its former slot (between the produce sack and Violet's Loot) is gone: stock 0,2026-11-24T23:16:00.809Z,376 at 16:46Z: opened by another actor
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292",2026-11-24T23:15:29.606Z,"pressed: Inventory (670,852), the pan, the back arrow (112,914)"
+drags,"drags tried 1, cancelled 0",,

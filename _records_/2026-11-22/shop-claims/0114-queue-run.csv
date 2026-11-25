@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s after the request (start requested 01:14:48.240Z, run started 01:14:49.035Z), 34 s after the previous record write; run 2 (01:16:24.8Z) admitted 0.7 s after its request; owner idle 28,950 and 29,046 s: wait 0",2026-11-25T01:14:49.035Z,see growth/0054-waits.csv
+badges,"01:14:54.0Z (timer 00:45:12): the tram icon not drawn, pickup none (a question-mark bubble beside it), radar dish none; the base after 01:17:09.3Z: the same",2026-11-25T01:14:49.035Z,tram badge rule: none; not tapped
+page at the top,"Free Supply 'Claimed' (the weekly reset at 18:00:00 noted); the Legendary banner Renew All $19.99; S2 Drone Components Remaining 5d 0:44:48 'Already claimed today'; S1 Drone Parts Remaining 5d 0:44:43 'Already claimed today'; the tab row: Hot Sale Packs, Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, a cut-off tab",2026-11-25T01:15:17.892Z,tag text [G]: Weekly Pass tab
+pan 1 and S1,the page moved 150 px (S1 title 769 to 619); S1 Drone Parts Remaining 5d 0:44:37: 'Already claimed today',2026-11-25T01:15:30.128Z,accepted
+pan 2 and EXP,150 px (EXP title 857 to 707); EXP Weekly Pass Remaining 5d 0:44:24: 'Already claimed today',2026-11-25T01:15:44.797Z,
+pan 3 and Iron,"150 px (EXP title 707 to 557); the Iron card (Elite) title y 795, Remaining 5d 0:44:00: 'Already claimed today'; its price row cut off at the bottom",2026-11-25T01:16:01.543Z,
+pan 4,(run 2) 150 px (Iron title 795 to 645); the Coin card's title y 882 came into view,2026-11-25T01:16:43.525Z,accepted
+pan 5 and Coin,150 px (Coin title 882 to 732); Coin Weekly Pass (Elite): Remaining 5d 0:43:05: 'Already claimed today'; Renew $4.99 with a 50 gem icon; no Claim button,2026-11-25T01:16:55.515Z,the fifth and last pan
+pressed,"the shop cart (633,82), the Weekly Pass tab (620,153), the back arrow (103,935): nothing on any card",2026-11-25T01:17:03.640Z,"drags tried 5, cancelled 0"
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, oil 648.4K, diamonds 11,173, Total Power 150,103,292",2026-11-25T01:17:09.316Z,unchanged
+drags,"drags tried 5, cancelled 0",,

@@ -9,4 +9,7 @@ lock_held_from_utc,held_until_utc,held_minutes,seen_through_the_wait_of,wait_min
 2026-11-24T13:24:18Z,2026-11-24T13:26:40.9Z,2.38,passes-iron-coin-read-2026-11-24-001,0.85,gate run (id not noted),
 2026-11-24T15:23:00Z,2026-11-24T15:25:20.1Z,2.33,trucks-dispatch-2026-11-24-008,1.15,gate run (id not noted),
 2026-11-24T18:59:48.9Z,2026-11-24T19:02:18.5Z,2.49,passes-2026-11-24-1057,2.3,gate-cu-main-df59f3c81,3.6
+2026-11-25T00:38:11Z,about 2026-11-25T00:40:33Z,about 2.4,donations-pass-2026-11-23-009 (read-only wait),,a cu gate run,about 5.3 (since 18:59:48.9Z)
+2026-11-25T02:14:18Z,2026-11-25T02:16:39Z,2.35,trucks-dispatch-2026-11-24-004 (read-only wait),,a cu gate run,
+2026-11-25T02:21:03Z,2026-11-25T02:23:23Z,2.33,trucks-dispatch-2026-11-24-004 (read-only wait),,a cu gate run,
 READING,held 2.3 to 2.5 minutes each (n=7),,"only runs that overlapped an operator request are seen; TWO KINDS: a NIGHTLY (id nightly-<date>T11:28:44Z, one so far) and PR GATE RUNS (id gate-cu-pr<N>-..., which follow cu merges and cannot be predicted); only the nightly is a candidate for a daily time",,"REGISTERED, unchanged: if the nightly is daily, the lock is held about 11:28Z to 11:35Z on 11-25 (a wait row there is the test, CK1); PR gate runs are not scheduled",

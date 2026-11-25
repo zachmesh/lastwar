@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 03:00:45.412Z, run started 03:00:46.266Z); owner idle 1,352 s: wait 0",2026-11-25T03:00:46.266Z,see growth/0054-waits.csv
+badges,"03:00:52.2Z (Warzone Duel 22:59:09): the tram icon drawn without a badge, the pickup badge 10, the radar dish none; the last frame 03:01:46.5Z: the same",2026-11-25T03:00:46.266Z,tram badge rule: none; not tapped
+front,'Google Chrome for Testing' in front at 03:00:17Z and 03:00:35Z; the standing front script run at 03:00:36Z; LastWar in front at 03:00:37Z; nothing pressed or read in the other app,2026-11-25T03:00:37Z,Steer A's FRONT rule of 21:11Z; the coordinator told
+gate,"7 frames 03:00:52Z to 03:01:46Z: no walking figure, no question-mark bubble beside the pickup (107,647); a half-cut white round shape at the window's left edge (about (76,648)), unchanged",2026-11-25T03:00:52.170Z,tag text [G]: base left column; crops at 6x of the first and last frames
+survivor surfaces,"no survivor bubble beside the avatar, no survivor card, no Recruit or Claim button on the base; nothing tapped",2026-11-25T03:01:46.463Z,rule (b): nothing to recruit
+badges,the tram icon drawn without a badge; the pickup badge 10; the radar dish none,2026-11-25T03:00:52.170Z,not tapped
+drags,"drags tried 0, cancelled 0",,

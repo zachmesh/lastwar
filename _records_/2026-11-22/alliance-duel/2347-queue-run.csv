@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 23:47:32.079Z, run started 23:47:32.897Z), after the unit's not_before 23:46:00Z; owner idle 23,728 s: wait 0",2026-11-24T23:47:32.897Z,see growth/0054-waits.csv
+badges,"23:47:38.2Z (timer 02:12:23): the tram icon not drawn, pickup none, radar dish 3; the base after 23:48:36.6Z: the same",2026-11-24T23:47:32.897Z,tram badge rule: none; not tapped
+panel,"the VS medallion (673,300): ALLIANCE DUEL on Today's Theme: personal total 7,017,000; Base Expansion 02:12:17; chests 2,600,000 (tag 24,900), 3,600,000 (46,900), 7,200,000 (67,800); no reward text drawn on any chest",2026-11-24T23:47:49.871Z,tag text [G]: Alliance Duel
+the one tap,"the 7,200,000 chest's icon (the gold chest with the star emblem above the threshold 7,200,000) tapped once at (541,447) at 23:47:55.6Z; no second tap on any chest",2026-11-24T23:48:04.524Z,Steer A's approval 23:46Z
+preview,"a popup headed 'Valued: 67800' with a red-gem icon; item rows (icon, name, quantity tag): a Valor Badge x400; a UR Hero Universal Shard x1; a Tactical Master Supply Box x15; a fourth row 'Lv.3 Drone Component' cut off at the bottom (quantity unread); no X, no Claim, Go, Buy or any button; digits read in a 6x crop of the saved frame",2026-11-24T23:48:04.524Z,"the tag 67,800 labels the chest's value in gems ('Valued'); further items below the fold unread"
+close,"the blue back arrow (166,933) at 23:48:17.8Z dismissed the preview and the duel panel together (the base); the final back-arrow turn not needed",2026-11-24T23:48:20.045Z,nothing pressed inside the preview
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, diamonds 11,173, Total Power 150,103,292 unchanged",2026-11-24T23:48:36.613Z,"pressed: the VS medallion, ONE chest icon, the back arrow"
+drags,"drags tried 0, cancelled 0",,

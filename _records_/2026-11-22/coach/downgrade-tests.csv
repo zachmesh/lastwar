@@ -1,0 +1,9 @@
+test_no,cycle_and_time_utc,slot,quality_before,quality_after,contracts_spent_on_the_test,stock_after,downgrade,posterior_that_a_refresh_can_downgrade,note
+1,"C, 2026-11-25 02:20:40Z",slot 2,SR (arrival 04:24:10),SR (arrival 03:58:58),1,259,no,0.53,the refresh re-rolled (the arrival time changed): SR to SR
+2,"pending (D, E ...)",,,,,,,0.46 if no downgrade in 2 of 2; 1.00 if any downgrade,"Steer A 02:51Z: the FIRST truck that reaches SR in each dispatch cycle, one more refresh, never on SSR or UR, no diamond"
+3,"pending (D, E ...)",,,,,,,0.39 if no downgrade in 3 of 3; 1.00 if any downgrade,"Steer A 02:51Z: the FIRST truck that reaches SR in each dispatch cycle, one more refresh, never on SSR or UR, no diamond"
+4,"pending (D, E ...)",,,,,,,0.32 if no downgrade in 4 of 4; 1.00 if any downgrade,"Steer A 02:51Z: the FIRST truck that reaches SR in each dispatch cycle, one more refresh, never on SSR or UR, no diamond"
+5,"pending (D, E ...)",,,,,,,0.26 if no downgrade in 5 of 5; 1.00 if any downgrade,"Steer A 02:51Z: the FIRST truck that reaches SR in each dispatch cycle, one more refresh, never on SSR or UR, no diamond"
+RULE (registered 03:00Z),the posterior = 1.00 once any test downgrades; otherwise p_exist 0.60 prior and 0.25 per-refresh downgrade chance if it exists: P(no downgrade in k) = 0.75^k,,,,,,,k = 5 with no downgrade: 0.26,the chase value if lift-only (Steer A): about 0.17 x 3.4M = 0.6M per contract against a stock of 258 and the floor of 80
+MY PRIORS for tests 2 to 5,P(no downgrade in all four) 0.64; P(at least one downgrade) 0.36,,,,,,,,registered before the data
+THE FOURTH SLOT (padlock),"tapped once at 18:34:24Z on 11-24 (truck-plunder/1820): no text, no dialog, no price",,,,,,,,Steer A 02:51Z asks the Researcher for one read-only look at the next trade-screen visit: my prior that a second tap shows unlock text: 0.15 (the first showed none); P(it shows a purchase surface) 0.05 (STOP)

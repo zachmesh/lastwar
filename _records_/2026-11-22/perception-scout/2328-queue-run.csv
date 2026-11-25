@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the first claim attempt was held back by waiting read-only until not_before 23:28:05Z; the run was admitted 0.8 s after the request (start requested 23:28:12.095Z, run started 23:28:12.857Z); owner idle 22,569 s: wait 0",2026-11-24T23:28:12.857Z,see growth/0054-waits.csv
+badges,23:28:17.0Z (timer 02:31:44): the tram icon not drawn; 23:29:26.3Z (timer 02:30:35): the same,2026-11-24T23:28:12.857Z,tram badge rule: none; not tapped
+first frame,"the Resources tab at 23:28:40.9Z: the pre-selected tile row 1 column 1 '5.0K' x16 ('5,000 Diamonds', slider 16, Total 80.00K, Use): NOT touched",2026-11-24T23:28:40.851Z,tag text [G]: Backpack Resources; the live Use never pressed
+rows 1 to 3 before the pan,"row 1: 5.0K gem x16, 10.0K gem x6, 100 gem x988, 200 gem x15; row 2: 1.0K gem x1, 500 gem x13, 5 gem x3,114, 1 gem x2,500; row 3: 10 gem x316, 20 gem x54, 50 gem x224, a blue-and-silver chest on orange x552",2026-11-24T23:28:40.851Z,the gem items are the red-gem item stacks
+pan,"start (274,448) a gap crossing (plain pale background, 10 px from the tile edges, far from the panel), end (274,273), ONE message: the grid moved 150 px; no selection; the panel still '5,000 Diamonds'",2026-11-24T23:28:57.750Z,"drags 1, cancelled 0; a second pan not needed"
+choice chests and Resource Chest (6x crop of step 7),"UR (blue-silver chest on orange, double chevron) 552; SSR (on purple) 587; SR (on blue, double chevron) 1,713; the plain Resource Chest (on blue, single chevron) 22,179",2026-11-24T23:28:57.750Z,"11-23: UR 552, SSR 587, SR 1,523, Resource Chest 20,753: SR +190, Resource Chest +1,426; the Coach's SR test about 1,840 not met"
+food chests,"a bread chest on orange x68; on purple x1,428 (clipped); on blue x8,227 (clipped); on green x67 (clipped); a 50.0K bread tile x1,339 (clipped)",2026-11-24T23:28:57.750Z,row 5 tags clipped at the bottom edge
+HUD,"diamonds 11,173 before and after; food 159.8M, iron 781.2M, coin 29.7M",2026-11-24T23:29:26.311Z,"pressed: Inventory (670,852), the Resources tab (239,154), the pan, the back arrow (112,914)"
+drags,"drags tried 1, cancelled 0",,

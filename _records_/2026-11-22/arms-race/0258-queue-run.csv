@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.8 s and run 2 0.8 s after their requests (02:57:12.5Z and 02:58:14.2Z); owner idle 1,140 and 1,201 s: wait 0",2026-11-25T02:57:13.287Z,see growth/0054-waits.csv
+badges,"02:57:17.9Z (Warzone Duel 23:02:44) and 02:58:19.6Z: the tram icon without a badge, the pickup badge 10, the radar dish none; the Events icon badge 2; the base after 02:59:14.3Z: the same",2026-11-25T02:57:13.287Z,tram badge rule: none; not tapped
+tabs,"before the drag: Black Market, Black Market Challenge (selected, timer 4d 23:01:34, earned today 0/600), Desert Battlefield, a cut-off Zom... tab with a red dot; after the ONE tab-row drag: The Age of Oil, Arms Race (no red dot), Black Market and a cut-off tab with a red dot",2026-11-25T02:58:45.264Z,"tag text [G]: Events hub; drags tried 1, cancelled 0"
+phase,"Drone Boost (contest segment Lv.29-30), timer 03:01:08 at 02:58:59.105Z: ends about 2026-11-25T06:00:07Z",2026-11-25T02:58:59.105Z,the phase after: unread
+points,"owner points 0, rank 11 (#2110) with 0 points; the top visible row 94 points; counter chest 0 of 2",2026-11-25T02:58:59.105Z,
+ladder,"1,500 points: ruby price tag 2,360; 10,000 points: 4,800; 30,000 points: 11,800: all three priced offers, none claimable, none pressed (rewards not shown by name or quantity)",2026-11-25T02:58:59.105Z,never a price
+scoring rows,Use 10 Drone Battle Data +1; Use 1 Stamina +100 (the likely free path); Buy Packs containing Diamonds (1 Diamond) +30 (a purchase row): none pressed,2026-11-25T02:58:59.105Z,for the planner: Use 1 Stamina +100
+pressed,"the Events icon (673,160), the ONE tab-row drag, the Arms Race tab (372,155), the back arrow (176,932): nothing on the page",2026-11-25T02:59:07.346Z,HUD unchanged
+drags,"drags tried 1, cancelled 0",,
