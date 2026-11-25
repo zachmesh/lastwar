@@ -90,6 +90,14 @@ class Spawning(Case):
             self.assertEqual(r.returncode, 2, flag)
             self.assertEqual(self.calls(), [], flag)                       # nothing was spawned
 
+    def test_a_change_of_the_effort_in_team_yaml_changes_the_spawn_and_nothing_is_a_constant(self):
+        """The owner's request of 2026-11-25 (xhigh to high): the tool follows the file, so a policy change needs no code change."""
+        for effort in ("high", "xhigh", "medium"):
+            team = self.tmp / f"team-{effort}.yaml"
+            team.write_text(TEAM.replace("high-test", effort))
+            out = self.run_tool("--title", "T", "--dry-run", team=team).stdout
+            self.assertIn(f"on claude-test-model {effort} test-provider", out)
+
     def test_dry_run_states_the_policy_and_spawns_nothing(self):
         r = self.run_tool("--title", "T", "--dry-run")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)

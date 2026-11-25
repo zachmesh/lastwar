@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""spawn_seat: the only way to spawn a roster seat (owner order 2026-11-23: Claude Sonnet 5.5 at xhigh, persisted).
+"""spawn_seat: the only way to spawn a roster seat (owner orders 2026-11-23 and 2026-11-25: the approved model and effort in TEAM.yaml, persisted;
+Claude Sonnet 5.5, xhigh on 11-23, high since the owner's request of 11-25 - the effort is read from the file, never a constant here).
 
 `session-relay spawn` defaults to claude-opus-5-5, so a bare spawn brings a seat up on the wrong model (the operator did, at
 09:07Z). This wraps it with the model, effort and provider FIXED from TEAM.yaml (`coordination.execution.approved_model`,

@@ -1,14 +1,14 @@
 ---
 title: Spawn Seat
 created: 2026-11-23T09:18:27Z
-modified: 2026-11-23T09:18:27Z
-version: 1.0.0
+modified: 2026-11-25T05:03:09Z
+version: 1.1.0
 description: spawn_seat.py, the only way to spawn a roster seat, with the model fixed from TEAM.yaml and read back
 ---
 
 # Spawn seat
 
-Owner order 2026-11-23: every seat runs Claude Sonnet 5.5 at xhigh. `session-relay spawn` defaults to claude-opus-5-5, so a bare
+Owner orders 2026-11-23 and 2026-11-25: every seat runs Claude Sonnet 5.5 at the effort in `TEAM.yaml` (xhigh, high since 11-25). `session-relay spawn` defaults to claude-opus-5-5, so a bare
 spawn brought the operator up on the wrong model. A seat is spawned ONLY with this command; a bare `session-relay spawn` for a
 seat is forbidden.
 

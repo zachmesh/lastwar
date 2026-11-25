@@ -28,6 +28,7 @@ def cmd_spawn(a):
     if MODE in ("ok", "step-fails"):
         state["model"] = {"provider": a.provider, "model": a.model, "reasoningEffort": a.effort}
     else:                                             # the seat came up on the host default
+        # what a bare `session-relay spawn` brings up (the host default, not the policy: the guard must correct both the model and the effort)
         state["model"] = {"provider": "meta-claude", "model": "claude-opus-5-5", "reasoningEffort": "xhigh"}
     state["running"] = MODE == "drift-running"
     _save(state)
