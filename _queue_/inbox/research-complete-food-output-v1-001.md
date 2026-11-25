@@ -5,7 +5,7 @@ activity: research-queue
 segment: 2
 priority: 1
 created_at: 2026-11-24T17:40:09Z
-expires_at: 2026-11-25T21:39:07Z
+expires_at: 2026-11-26T01:50:00Z
 planned_for:
 not_before: 2026-11-25T19:39:22Z
 window: complete food output v lv.1 when it finishes
@@ -22,13 +22,11 @@ lease_until:
 
 # research
 
-Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
-
 Serves: PL-04
 
 ## Brief (definition pointer, from the roster)
 
-This unit is the regular `research`: Research queue - press Complete on finished research and record the power change; never start new research without a standing owner direction. Its definition is the activity folder `_activities_/research-queue/` (the folder is named for the activity, not the regular id): read its `rule-digest.md` first, then its `INDEX.md`. The map of every regular to its activity folder is `_records_/2026-11-22/queue-planning/2760-regular-to-activity-map.csv`. If the digest does not cover a step, stop with 'blocked by prerequisite' and say which step; never improvise.
+This unit is the regular `research`: Research queue - press Complete on finished research and record the power change; never start new research without a standing owner direction. Its definition is the activity folder `_activities_/research-queue/` (the folder is named for the activity, not the regular id): read its `rule-digest.md` first, then its `INDEX.md`. If the digest does not cover a step, stop with 'blocked by prerequisite' and say which step; never improvise.
 
 Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md` (routes in `_records_/2026-11-22/queue-planning/2700-routes.csv`). Red lines and snap: `_records_/2026-11-22/team-operations/2350-growth-start-rule-decision.md`.
 
@@ -41,4 +39,5 @@ Facts [M] (record research-queue/1734, 17:35:35Z, after another actor changed th
 2. If finished: press COMPLETE on Food Output V Lv.1; write Total Power before and after.
 3. Read both labs again; write each timer to the second. Start NOTHING here: the next node is the Strategist's, named by the Coordinator; an idle lab is reported, not filled. Never Finish Now, never a speed-up here, no diamond or item spend.
 Up to two runs. FRONT (Steer A 21:11Z): at the start, if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release, tell the Coordinator. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken Complete tap or a verified nothing-to-do (`--state-change no` plus a `state_read:` line naming the lab timers read); else PARTIAL.
 Cost cap, stated: 0.50 USD.

@@ -47,3 +47,4 @@ Back to the [folder index](INDEX.md).
 - [PR 993](landing-pr-993.md) - twenty-sixth records snapshot, the five strategy files, word-budget review, records 06:40Z to 16:00Z
 - [PR 994](landing-pr-994.md) - known-dialogs-table, the known-dialogs table with the like dialog and the avatar rule
 - [PR 995](landing-pr-995.md) - scribe handover 0.6.0, the open branch stated truly
+- [PR 996](landing-pr-996.md) - twenty-seventh records snapshot, the two-hourly delivery 16:00Z to 18:00Z, handovers

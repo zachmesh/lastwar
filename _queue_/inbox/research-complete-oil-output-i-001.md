@@ -41,4 +41,5 @@ Facts [M] (record research-queue/1734, 17:35:35Z, after another actor changed th
 2. If finished: press COMPLETE on Oil Output I; write Total Power before and after.
 3. Read both labs again; write each timer to the second. Start NOTHING here: the next node is the Strategist's, named by the Coordinator; an idle lab is reported, not filled. Never Finish Now, never a speed-up here, no diamond or item spend.
 Up to two runs. FRONT (Steer A 21:11Z): at the start, if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release, tell the Coordinator. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken Complete tap or a verified nothing-to-do (`--state-change no` plus a `state_read:` line naming the lab timers read); else PARTIAL.
 Cost cap, stated: 0.50 USD.
