@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-25T03:22:00Z
-version: 2.23.0
+modified: 2026-11-25T05:39:35Z
+version: 2.24.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -20,10 +20,11 @@ Add one small article file `owner-decisions-log/<entry-id>.md`, named by an entr
 
 ## Open now
 
-None. On 2026-11-23 the owner closed the last open item (OD-20261123-09). Earlier, on 2026-11-22 22:2x PT (2026-11-23 06:2xZ) the owner decided every open item, relayed by the Steward, and said the seats decide operational choices from now on (decide, record why, tell the Steward in one line). Each article's `decision` line holds the answer. Fixed, not operational: no purchase or diamond or premium spend; no PvP, attack, rally, march, Arena fight or General's Trial fight; no alliance diplomacy; no ally-exchange trade; the owner's own in-game name never appears in a file or message (OD-20261123-04: current tree redacted, history not rewritten, repository public).
+None. The owner closed the last open item (OD-20261123-09) on 2026-11-23 and said the seats decide operational choices (decide, record why, tell the Steward in one line). Each article's `decision` line holds the answer. Fixed, not operational: no purchase or diamond or premium spend; no PvP, attack, rally, march, Arena fight or General's Trial fight; no alliance diplomacy; no ally-exchange trade; the owner's own in-game name never appears in a file or message (OD-20261123-04: current tree redacted, history not rewritten, repository public).
 
 ## Changelog
 
+- 2.24.0, 2026-11-25 - OD-20261125-05 added to catalog 05: the owner's instruction to scroll the game screen.
 - 2.23.0, 2026-11-25 - Catalog 05 listed: the owner's four answers (OD-20261125-01 to -04); OD-20261123-21 is CLOSED by OD-20261125-03.
 - 2.21.0, 2026-11-23 - The 13 entry lines OD-20261123-04 to -16 moved verbatim to catalog 02 (page budget 300 words); new lines go to the newest catalog.
 
@@ -33,4 +34,4 @@ None. On 2026-11-23 the owner closed the last open item (OD-20261123-09). Earlie
 - [Catalog 02](owner-decisions-log/catalog-02.md) - 13 entries, OD-20261123-04 to OD-20261123-16
 - [Catalog 03](owner-decisions-log/catalog-03.md) - 6 entries, OD-20261123-17 to OD-20261123-22 (21 is OPEN)
 - [Catalog 04](owner-decisions-log/catalog-04.md) - 4 entries, OD-20261123-23 to OD-20261123-26 (the owner's answers of 19:48Z)
-- [Catalog 05](owner-decisions-log/catalog-05.md) - 4 entries, OD-20261125-01 to OD-20261125-04 (the owner's answers learned 2026-11-25T03:15Z; closes OD-20261123-21)
+- [Catalog 05](owner-decisions-log/catalog-05.md) - 5 entries, OD-20261125-01 to OD-20261125-05 (the owner's answers of 03:15Z, closing OD-20261123-21, and his scroll instruction)
