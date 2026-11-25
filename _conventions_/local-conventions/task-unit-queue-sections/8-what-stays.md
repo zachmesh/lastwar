@@ -1,8 +1,8 @@
 ---
 title: 8. What stays the same
 created: 2026-11-23T09:03:48Z
-modified: 2026-11-24T23:37:27Z
-version: 0.8.0
+modified: 2026-11-25T00:35:29Z
+version: 0.9.0
 sequence: 18
 description: The red lines, the kick rule for the different-device dialog, the Arms Race just-enough rule and
 ---
@@ -12,16 +12,7 @@ description: The red lines, the kick rule for the different-device dialog, the A
   Arms Race just-enough rule and every other standing order bind units
   exactly as they bind segment runs. A unit inherits its regular's
   activity metadata in `_activities_`.
-- Known dialogs, 2026-11-24 (the operator's copy is the route card,
-  `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`). Identify a dialog by its
-  text in a frame taken just before the tap, tap once, and stop on any other dialog. The TIPS
-  "Enable notifications and never miss important messages again." (Cancel, Enable Now): Cancel,
-  never Enable Now (Steer A; `_records_/2026-11-22/perception-scout/0412-queue-run.md`). The TIPS
-  about another device: stop, never Confirm; the one exception is the single Confirm of a controlled relaunch (Steer A,
-  2026-11-24; the operator's hazards sheet). The radar claim "Completing Radar Tasks today will not
-  grant Alliance Duel points, and you are about to claim 10 radar task rewards at once. Continue?"
-  (Cancel, Confirm, no price): Confirm is allowed for that exact text only
-  (`_records_/2026-11-22/radar-tasks/0339-queue-run.md`).
+- Known dialogs: the table of each dialog's text, buttons and safe answer is [known dialogs](../known-dialogs.md); a dialog not in it is a stop.
 - Scrolling a clipped page, 2026-11-24 (recipe and table in `_activities_/shop-claims/scroll-recipe.md`):
   in ONE message press at the page's start point, hold 1 s, ONE move of 175 px, hold 1 s, release, then the screenshot after the up. 
   Start per page: a blank right margin on the shop and History pages, the centre of a tile-gap crossing on the Backpack grids.
