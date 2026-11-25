@@ -5,7 +5,7 @@ activity: truck-plunder
 segment: 2
 priority: 1
 created_at: 2026-11-24T10:13:23Z
-expires_at: 2026-11-25T17:30:00Z
+expires_at: 2026-11-26T01:50:00Z
 planned_for: 2026-11-25T10:01:28Z
 not_before:
 window: dispatch the last two after the 02:00Z reset

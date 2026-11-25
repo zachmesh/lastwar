@@ -44,3 +44,6 @@ Back to the [folder index](INDEX.md).
 - [PR 990](landing-pr-990.md) - donations-part-two, a run at the step cap with the count live is PARTIAL
 - [PR 991](landing-pr-991.md) - training-stray-tap, a stray tap opened Building Details or the world map
 - [PR 992](landing-pr-992.md) - ledger-bubbles-main-tasks, ledger v1.5.0 and the mail digest rules 11 and 12
+- [PR 993](landing-pr-993.md) - twenty-sixth records snapshot, the five strategy files, word-budget review, records 06:40Z to 16:00Z
+- [PR 994](landing-pr-994.md) - known-dialogs-table, the known-dialogs table with the like dialog and the avatar rule
+- [PR 995](landing-pr-995.md) - scribe handover 0.6.0, the open branch stated truly
