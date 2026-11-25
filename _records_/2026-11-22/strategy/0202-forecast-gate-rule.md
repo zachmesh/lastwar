@@ -1,8 +1,8 @@
 ---
 title: Forecast gate rule for the enqueue check
 created: 2026-11-23T10:02:00Z
-modified: 2026-11-24T10:49:00Z
-version: 1.1.0
+modified: 2026-11-25T04:23:00Z
+version: 1.3.0
 level: L3
 description: The rule the toolsmith implements so that a unit's plan item has a forecast row, first as a warning and later as a refusal, and when the ledger counts as stable
 status: unverified
@@ -43,3 +43,6 @@ The announcement is in strategy-log-1124c.md (10:23Z) and the switch is `coordin
 
 Live since 2026-11-24T10:48:40Z (PR 959, merge b341250ac): the live TEAM.yaml 0.7.5 carries the switch and `queue.py validate` reads 'pool valid' for the planner's 51 units. A unit that serves a new plan item needs its ledger row first.
 
+## Coverage by unit-hours, definition (11-25, revised 04:20Z on Steer A's ruling)
+
+No label lifts the figure. The units that claim items go to PL-19, the daily claims income line, which has a ledger row (F-232 and the plain chest inflow F-220): mail, gifts, events, daily missions, secrets claims, donations, the passes' daily pickups. The units that only look (zero sweep, scout reads) are exempt with a reason in `serves-exempt-list.csv`, one line per regular (id, class, serves, reason, date), content mine and parser and validation the Toolsmith's; The trade cycles serve PL-14 or PL-18, not `upkeep`. The coach's report carries the old figure and this one side by side with the definition in its header, and no day is compared across definitions.

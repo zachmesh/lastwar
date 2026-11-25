@@ -33,3 +33,10 @@ Back to the [folder index](INDEX.md).
 - [PR 979](landing-pr-979.md) - twenty-second records snapshot, records 19:45Z to 20:30Z, trimmed hazards sidecar
 - [PR 980](landing-pr-980.md) - twenty-third records snapshot, records 20:30Z to 23:10Z, standing lines in the template
 - [PR 981](landing-pr-981.md) - gap-start-table, the scroll start point is page-specific
+- [PR 982](landing-pr-982.md) - siege-owner-schedule, the siege is never cancelled; the guard reads free room 1,329
+- [PR 983](landing-pr-983.md) - twenty-fourth records snapshot, the owner's four answers, OD-21 closed
+- [PR 984](landing-pr-984.md) - exempt-list, the serves exempt list validated with a dated baseline
+- [PR 985](landing-pr-985.md) - team-effort, TEAM.yaml 0.7.6 approved_effort high (owner request)
+- [PR 986](landing-pr-986.md) - effort-high, the model policy is Sonnet 5.5 at High effort
+- [PR 987](landing-pr-987.md) - effort-from-team, the effort is read from TEAM.yaml, never a constant
+- [PR 988](landing-pr-988.md) - od-owner-scroll, the owner's instruction to scroll the screen (OD-20261125-05)

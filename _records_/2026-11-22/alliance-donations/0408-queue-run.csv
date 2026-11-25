@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 04:08:44.975Z, run started 04:08:45.936Z); owner idle 5,423 s: wait 0",2026-11-25T04:08:45.936Z,see growth/0054-waits.csv
+badges,"04:08:51.1Z (Warzone Duel 21:51:11): the tram none, the pickup a red dot, the radar dish none; the base after 04:11:26Z: no TIPS popup",2026-11-25T04:08:45.936Z,tram badge rule: none; not tapped
+entry count,"Quick Construction 9 of 10: Donation Count 7/30 at 04:09:25.571Z; the coin Donate green at 1000, no timer; the Coach's registration: 7 from 04:05Z to 04:17:57Z",2026-11-25T04:09:25.571Z,tag text [G]: donation dialog; matched
+taps,"7 coin Donate taps at (495,756): 04:09:30.9Z, 04:09:40.2Z, 04:09:45.6Z, 04:09:54.2Z, 04:10:01.4Z, 04:10:09.6Z and 04:10:27.452Z (the last)",2026-11-25T04:10:27.452Z,"counts after taps 1 to 6: 6, 5, 4, 3, 2, 1"
+live count before the last tap,1/30 with a green coin Donate in the frame at 04:10:20.2Z (2x crop of the saved frame),2026-11-25T04:10:20.155Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:07:19 read at 04:10:37.765Z (2x crop confirms; 00:07:08 at 04:10:49.456Z): the end 04:17:56.8Z on the grid point 04:17:57 within 0.2 s,2026-11-25T04:10:37.765Z,within the 3 s rule
+witness,the Tech EXP bar 5.5M of 8.0M before and after; the diamond Donate (2) never pressed,2026-11-25T04:10:49.456Z,corroboration not required
+close,"the dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base; no TIPS popup",2026-11-25T04:11:25.995Z,before 04:28Z
+drags,"drags tried 0, cancelled 0",,

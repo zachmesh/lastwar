@@ -1,7 +1,7 @@
 ---
 title: Oil Well hand-off rule
 created: 2026-11-23T22:30:00Z
-modified: 2026-11-24T17:36:00Z
+modified: 2026-11-25T05:30:00Z
 version: 1.0.0
 level: L3
 description: The rule for re-ranking builder 1 at each Oil Well level hand-off, with the oil date each level moves, the power per builder-day on two assumptions and the coin test
@@ -15,9 +15,9 @@ grounded_in:
 
 At each hand-off (a level completes, the next starts) the unit note records three numbers for the next level and for the best alternative, and the choice follows them. Table in [oil-well-levels.csv](oil-well-levels.csv).
 
-## Lv.24 measured, new time factor
+## Timing and the time factor (11-25)
 
-The Lv.24 start (17:31:42Z, record 1731) has original 1d 22:57:01 and effective 20:11:38: factor 0.4301, against 0.4706 at Lv.23 (08:12Z). The flat 23,520 s held a seventh time, so Lv.24 ends 11-25T07:11:20Z. If the 8.6 percent holds the chain is faster: Lv.25 ends about 11-26T05:00Z, Lv.27 11-29T15:05Z, Lv.30 12-11T17:16Z (1.75 days sooner); the source is unread (H131). Hand-offs so far: 6.5, 10.8 and 4.3 minutes idle.
+The Lv.24 start (17:31:42Z, record 1731) read factor 0.4301 (0.4706 at Lv.23); the flat 23,520 s held a seventh time. The Lv.24 build then finished before 05:25Z, not by us (the owner was playing 04:53Z to 05:14Z), 1.6 h or more ahead of 07:11:20Z. From a Lv.25 start at about 05:41Z at factor 2.325 (read at each start): Lv.25 ends 11-26T03:26Z, Lv.26 11-27T12:37Z, Lv.27 11-29T13:30Z, Lv.28 12-02T12:40Z, Lv.29 12-06T11:00Z, Lv.30 12-11T15:40Z.
 
 ## The three numbers
 
@@ -31,4 +31,4 @@ Keep B1 on the well while the level is coin-free and beats the best free alterna
 
 ## Oil model
 
-Income now 58.8K a day (1,200 an hour plus the depot), 66K at Lv.25, 73K at Lv.30. The research oil cost factor is unmeasured: 0.90 like the other research costs (0.85 is the construction factor).
+Income now 58.8K a day (1,200 an hour plus the depot), 66K at Lv.25, 73K at Lv.30. The research oil cost factor is about 0.855 (H112).

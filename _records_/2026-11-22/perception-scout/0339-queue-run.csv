@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 03:39:51.264Z, run started 03:39:52.033Z); owner idle 3,691 s: wait 0",2026-11-25T03:39:52.033Z,see growth/0054-waits.csv
+badges,03:39:56.5Z: the tram icon drawn without a badge; the pickup none; the radar dish none; the base after 03:40:53.4Z: the same,2026-11-25T03:39:52.033Z,tram badge rule: none; not tapped
+tram,drawn without a badge at 03:39:56.5Z and 03:40:53.4Z,2026-11-25T03:39:56.520Z,tag text [G]: left column
+base dots,"Alliance, Mail and Inventory red dots; Thanksgiving Event badge 3; Events badge 2; the red target icon badge 2 to 5 with a sub-minute countdown; the energy bar and the quest banner red dots; chat 99+; builders 4/4; labs 2/2; none on the pickup, radar dish, Warzone Duel icon or megaphone",2026-11-25T03:40:01.564Z,"the second read: only the clocks, the target badge, the banner and the bubble numbers changed"
+Alliance menu,"red dots on Alliance Wars, Alliance Gifts and Alliance Events; none on Help, Members, Store, Techs, Assemble, Strength Ranking, City, Record, Applicants, Alliance Star, Settings",2026-11-25T03:40:15.062Z,Gifts: four Regular gifts left after record 0332
+Events hub,"opened on the Drone Boost page; tabs Oil, Drone Boost (selected), Black Market, Black Market Challenge (a red ! top right); the tab bar partly scrolled",2026-11-25T03:40:35.022Z,explains the Events badge 2 in part
+explained,"Alliance Gifts (4 left), Mail (two Event gift icons, 0328), Events badge 2 (the Challenge !)",2026-11-25T03:40:35.022Z,
+unexplained,"the Thanksgiving Event badge 3 (not opened), the Inventory dot, the energy dot, the quest banner dot, the red target badge; Alliance Wars and Alliance Events dots not opened",2026-11-25T03:41:03.639Z,no route in this unit: rule 2 makes the unit partial
+pressed,"the Alliance button (670,708), (177,919), the Events icon (673,160), (176,932): nothing claimed",2026-11-25T03:40:44.403Z,
+drags,"drags tried 0, cancelled 0",,

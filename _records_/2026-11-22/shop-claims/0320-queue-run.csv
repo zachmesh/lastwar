@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.0 s after its request (03:20:15.6Z, 03:23:18.9Z and 03:25:37.1Z); owner idle 2,518 to 2,840 s: wait 0",2026-11-25T03:20:16.431Z,see growth/0054-waits.csv
+badges,"03:20:22.7Z (Warzone Duel 22:39:38): the tram icon without a badge, the pickup badge none; the base after 03:27:13.2Z: the same; diamonds 11,203",2026-11-25T03:20:16.431Z,tram badge rule: none; not tapped
+S2 Drone Components,"Remaining 4d 22:39:20: a plain Claim (572,678): claimed once at 03:20:52.2Z: a Lv.4 chest x1; a second popup 'Free rewards have been automatically claimed' (gems x10, a green item x4); then 'Already claimed today'; Free Supply 'Claimed'",2026-11-25T03:20:54.666Z,"tag text [G]: Weekly Pass; diamonds 11,193 to 11,203"
+S1 Drone Parts,"Remaining 4d 22:38:40: a plain Claim (572,765): claimed once at 03:21:27.8Z: a gold gear item x15; then 'Already claimed today'",2026-11-25T03:21:30.332Z,after pan 1 (150 px)
+interruption,"03:21:42.3Z to 03:21:44.4Z: run 1 pan 2 refused 'out_of_scope' (an app outside the scope came to the front; the drag cancelled and its button released at (685,650)); LastWar in front at 03:22:16Z",2026-11-25T03:21:44.372Z,"foreground interruption, out_of_scope, sub-second, the bridge cancelled the drag; I pressed and read nothing in it; the coordinator's logger saw no change"
+EXP Weekly Pass,"Remaining 4d 22:35:38: a plain Claim (572,854): claimed once at 03:24:30.2Z: one EXP item x3 (the popup showed no readable name); then 'Already claimed today'",2026-11-25T03:24:31.368Z,run 2 after pan 3
+Iron Weekly Pass,"at pan 3 the Claim was a green sliver at the bottom edge (y about 922): left; after pan 4 (150 px) a plain Claim (573,792) fully inside the content, Remaining 4d 22:34:03: claimed once at 03:26:05.8Z: an iron crate x3; then 'Already claimed today'",2026-11-25T03:26:11.957Z,run 3
+Coin Weekly Pass,"after pan 5 (150 px): Remaining 4d 22:33:23, a plain Claim (573,880): claimed once at 03:26:43.9Z: a coin crate x3; then 'Already claimed today' (Remaining 4d 22:33:02); the Legendary banner now Renew All $19.99 (not pressed)",2026-11-25T03:26:46.856Z,
+HUD,"food 166.3M, iron 787.5M, coin 34.5M (the crates unopened), diamonds 11,203; the shop closed by its back arrow (103,935)",2026-11-25T03:27:13.231Z,
+drags,"drags tried 7, cancelled 0",,

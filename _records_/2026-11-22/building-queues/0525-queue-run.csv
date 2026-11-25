@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 05:25:04.171Z, run started 05:25:05.167Z); owner idle 644 s: wait 0 (the unit was held while the owner was at the Mac)",2026-11-25T05:25:05.167Z,see growth/0054-waits.csv
+badges,05:25:11.5Z: the hammer counter 3/4; the tram icon without a badge,2026-11-25T05:25:05.167Z,tram badge rule: none; not tapped
+row 1,"Lv.26 Drill Ground, Speed Up (not pressed): 08:13:10 left at 05:25:25.792Z: ends 2026-11-25T13:38:35.8Z (the known end 13:38:36Z)",2026-11-25T05:25:25.792Z,tag text [G]: builders panel
+row 2,Lv.27 Drill Ground: 4d 20:05:36 left: ends 2026-11-30T01:31:01.8Z,2026-11-25T05:25:25.792Z,
+row 3,IDLE with a Construct button: a free builder (not pressed),2026-11-25T05:25:25.792Z,slots_idle 1: the Oil Well Lv.24 row is gone
+row 4,Lv.28 Drill Ground: 8d 18:24:48 left: ends 2026-12-03T23:50:13.8Z,2026-11-25T05:25:25.792Z,
+help control,"none drawn on any row: no Help or Request Help button, no hand glyph, no 'n of 30'",2026-11-25T05:25:32.653Z,blocked by route: no Oil Well row to request on
+re-reads,"05:27:01.5Z: 08:11:34, 4d 20:04:00, 8d 18:23:12; 05:27:09.0Z: 08:11:26, 4d 20:03:53, 8d 18:23:05; row 3 still Idle",2026-11-25T05:27:08.988Z,consistent
+pressed,"the hammer (108,200) and the X (612,237) only",2026-11-25T05:27:17.220Z,nothing on any row
+drags,"drags tried 0, cancelled 0",,

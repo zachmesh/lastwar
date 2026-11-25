@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.1 s after its request; owner idle 3,819 and 3,913 s: wait 0",2026-11-25T03:42:01.631Z,see growth/0054-waits.csv
+badges,"03:42:06.5Z: the tram icon without a badge, the Thanksgiving badge 3, the Events badge 2; a new red dot on the pickup icon appeared during the closing waits (03:43Z)",2026-11-25T03:42:01.631Z,tram badge rule: none; not tapped
+turkey tickets,held 6 at 03:42:21.0Z (the Thanksgiving Store); countdown 5d 22:17:44,2026-11-25T03:42:21.006Z,tag text [G]: Thanksgiving Store; the income series
+Store rows,"Cornucopia-style item 6/100 limit 1 Go Obtain; Lv.5 chest 6/100 limit 1 Go Obtain; puzzle-piece item 6/10 limit 10 Go Obtain; golden trophy 6/1 limit 600 Redeem (green, a ticket spend, not pressed); a fifth row cut off",2026-11-25T03:42:21.006Z,no plain free Claim
+Thanksgiving tabs,Store red dot 3; Thanksgiving Lottery no dot (NEVER tapped); Gift of Thanks red dot 1; a fourth cut off,2026-11-25T03:42:26.029Z,Gift of Thanks: not opened
+Oil tab,"'Unlock: Lv. 31-35 Zombies on World Map' 14024/2000 and 'Rapid Rescue' 3130612/25000, both with green checks; no Claim",2026-11-25T03:44:03.696Z,hub frame 03:43:54.6Z opened on Arms Race
+Arms Race tab,"Drone Boost 02:16 left, 0 points, 0/2 chests; chests priced 2,360, 4,800, 11,800 gems; task rows with green arrows only",2026-11-25T03:43:54.560Z,skipped: priced
+Black Market tab,18d left; cash 11285; Free slot Sold Out; other items 500 cash each; Refresh Free,2026-11-25T03:44:11.007Z,skipped
+Black Market Challenge tab,"4d left; earned today 0/600; four Go To buttons (Radar Task, Secret Mobile Squad, Doom Elite, Zombie)",2026-11-25T03:44:18.625Z,skipped: Go
+badges,Events badge 2 before and after; Thanksgiving badge 3 before and after,2026-11-25T03:44:40.209Z,nothing claimed
+drags,"drags tried 0, cancelled 0",,
