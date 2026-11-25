@@ -49,3 +49,4 @@ Back to the [folder index](INDEX.md).
 - [PR 995](landing-pr-995.md) - scribe handover 0.6.0, the open branch stated truly
 - [PR 996](landing-pr-996.md) - twenty-seventh records snapshot, the two-hourly delivery 16:00Z to 18:00Z, handovers
 - [PR 997](landing-pr-997.md) - twenty-eighth records snapshot, the two-hourly delivery 18:00Z to 20:00Z
+- [PR 998](landing-pr-998.md) - twenty-ninth records snapshot, the integration records of 20:00Z to 22:00Z

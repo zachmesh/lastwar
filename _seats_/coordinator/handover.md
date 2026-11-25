@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-25T17:25:00Z
+modified: 2026-11-25T22:30:00Z
 level: L2
-version: 0.25.0
+version: 0.25.1
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, schedules, the trade cycle, the macOS alert and open decisions
 status: unverified
 grounded_in:
@@ -33,5 +33,6 @@ The game shows 'active on a different device' (the owner's phone): NOTHING is pr
 
 ## Open
 
-- Owner: the dialog answer. Strategist: 12 overdue reads, due to Steer A 20:00Z. Integrator: four old branches.
+- Owner: the dialog answer. Strategist: 12 overdue reads (due to Steer A 20:00Z); cycle E staged. Integrator: four old branches, work/gate-list-ignored.
+- WEEKLY DIGEST owner lines (11-30): the Glittering Market mail residue; rename the board's Agent option from the owner's login to 'owner' (a ten-second settings edit, no token; Steer A 22:27Z; then the Toolsmith's two-line branch and the Scribe's lines 26 and 36 of the project-p1 page follow).
 - Rotate at 85 to 88 percent in a gap with `spawn_seat.py`; record the id; tell Steer A. Never push local main; no checkout, switch, reset or stash in the live tree.

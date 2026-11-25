@@ -6,8 +6,8 @@ segment: 2
 priority: 1
 created_at: 2026-11-24T17:40:09Z
 expires_at: 2026-11-26T01:50:00Z
-planned_for:
-not_before: 2026-11-25T19:39:22Z
+planned_for: 2026-11-25T22:00:42Z
+not_before:
 window: complete food output v lv.1 when it finishes
 est_minutes: 6
 serves: PL-04
