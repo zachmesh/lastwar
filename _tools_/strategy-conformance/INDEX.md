@@ -1,26 +1,30 @@
 ---
 title: Strategy Conformance
 created: 2026-11-23T08:48:32Z
-modified: 2026-11-24T16:14:31Z
-version: 1.6.0
+modified: 2026-11-25T04:26:28Z
+version: 1.7.0
 description: strategy_conformance.py, the read-only counts-only watchdog that checks the strategy reaches the queue, with its tests
 ---
 
 # Strategy conformance
 
 `strategy_conformance.py`: does the strategy reach the queue and the game? It reads the queue folders and each unit's frontmatter,
-prints counts only and writes nothing.
+prints counts only and writes nothing (but `--accept-exempt-list`, below).
 
-`python3 _tools_/strategy-conformance/strategy_conformance.py [--hours 12] [--since TIME] [--plan CSV] [--format text|json]`; exit 0 conforming,
-1 an alarm, 2 the queue cannot be read. Alarms, each threshold a flag: no execution in 45 minutes; a builder, lab or queue slot
-idle over 30 minutes (the planner's `slots_blocked_capacity` is subtracted and printed beside it); the share of unit-hours serving a ranked item
-under 60 percent (units print as context); growth partial rate over 35 percent; a top plan item not started two hours after
-its trigger. A ranked item is a plan item id in `serves` with a row in the newest forecast ledger (the check `queue.py validate` uses); an exempt word, an id with no row and other wording are not, and are counted apart; with no ledger an id counts by shape, said in the output. The plan file is a CSV
-`rank,item,trigger_at,serves` kept by the strategist; without one that check is skipped.
+`python3 _tools_/strategy-conformance/strategy_conformance.py [--hours 12] [--since TIME] [--plan CSV] [--exempt-list CSV] [--format text|json]`;
+exit 0 conforming, 1 an alarm, 2 the queue cannot be read. Alarms, each threshold a flag: no execution in 45 minutes; an idle builder, lab or queue
+slot over 30 minutes (`slots_blocked_capacity` is subtracted); the share of unit-hours serving a ranked item under 60 percent; growth partial rate over
+35 percent; a top plan item not started two hours after its trigger; an exempt-list error. A ranked item is a plan item id in `serves` with a row in the
+newest forecast ledger (`queue.py validate`'s check); with no ledger an id counts by shape, said in the output. The plan file is a CSV
+`rank,item,trigger_at,serves`.
 
-Coverage prints two lines: the rolling window (context) and since the roster remap landed (the verdict, which the alarm and the Coach
-quote), each with the units serving nothing and their hours. Hours decide, units are the trend (splitting units moves counts, not hours); percentages print to one decimal, the alarm compares unrounded. The cutover is `--since TIME`, else
-`_tools_/state/strategy-cutover.json` (`{"since": "ISO UTC"}`), else the first-parent git commit that introduced a plan item id as a roster
-serves (the remap's merge); with none, the rolling figure is the verdict. The JSON carries both.
+Coverage prints the rolling window (context) and since the roster remap landed (the verdict), each with the units serving nothing and their hours. Hours
+decide, units are the trend; percentages print to one decimal, the alarm compares unrounded. The cutover is `--since`, else
+`_tools_/state/strategy-cutover.json`, else git (the remap's merge).
 
-Tests (`test_conformance.py`, 58) cover each alarm at its threshold, the ranked rule, the cutover, counts-only output, a byte-identical tree. Run: `python3 -m unittest discover -s _tools_/strategy-conformance`.
+The exempt list (`serves-exempt-list.csv`, the Strategist's, newest in a `strategy` folder; the parser `exempt_list.py` is the Toolsmith's): every roster
+regular is `plan`, `income` or `exempt`, no id outside the roster, ledger rows for PL ids; any error alarms. The baseline is never re-based silently:
+a changed line needs a newer `decided_utc`; only `--accept-exempt-list` records it. DEFINITION B prints beside A: hours of plan and income regulars over
+hours without the exempt ones; it never decides the alarm.
+
+Tests (`test_conformance.py` 58, `test_exempt_list.py`): `python3 -m unittest discover -s _tools_/strategy-conformance`.

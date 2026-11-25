@@ -22,6 +22,12 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     verdict and the output says so. Both lines also give the units that serve nothing (not ranked) with their hours of the
                     total. Percentages print to one decimal; the alarm compares the UNROUNDED value (59.57 is below 60, though it once
                     rounded to 60 and passed).
+  exempt-list       the serves exempt list (`_records_/<date>/strategy/serves-exempt-list.csv`, the Strategist's; parser and validation in
+                    exempt_list.py) has an error: a roster regular not on it, a listed id outside the roster, a bad class or date, a plan or income
+                    serves that is not a PL id with a ledger row, an exempt line naming a plan item, or a line changed since the accepted baseline
+                    without a newer decided_utc. Printed beside the verdict: DEFINITION B (unit-hours of plan and income regulars over unit-hours
+                    without the exempt look-only regulars; a regular off the list counts as unserved); it never decides an alarm. The baseline
+                    (`_tools_/state/serves-exempt-baseline.json`) is written ONLY by --accept-exempt-list, refused while the list has errors.
   growth partial    partial units are over --partial-percent (35) of executed growth units in the window
   plan item         a top plan item (--plan, rank within --top) has no claimed or finished unit carrying its serves tag
                     --late-hours (2) after its trigger
@@ -34,7 +40,7 @@ regular and file name (growth, convert, collect, promot, capacity, store, invent
 The plan file is a CSV `rank,item,trigger_at,serves` (trigger_at in UTC, ISO 8601), kept by the strategist; without one the
 plan-item check is skipped and says so. A kind with no sample (nothing executed, no growth unit) is n/a, never an alarm.
 
-  strategy_conformance.py [--root PATH] [--hours 12] [--since TIME] [--now ISO] [--plan CSV] [--format text|json]
+  strategy_conformance.py [--root PATH] [--hours 12] [--since TIME] [--now ISO] [--plan CSV] [--exempt-list CSV] [--accept-exempt-list] [--format text|json]
 
 Exit 0 conforming, 1 at least one alarm, 2 the queue cannot be read. Standard library only.
 """
@@ -83,6 +89,13 @@ def configure_ranking(root: Path) -> None:
     except Exception as exc:
         ids, reason = None, f"the ledger reader failed ({type(exc).__name__})"
     RANKING.update(ids=ids, reason=reason or "")
+
+
+def load_exempt_module():
+    spec = importlib.util.spec_from_file_location("exempt_list_for_conformance", str(HERE / "exempt_list.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 CUTOVER_STATE = "_tools_/state/strategy-cutover.json"
@@ -136,6 +149,22 @@ def coverage_stats(units: list, limit=None) -> dict:
             "units_percent_exact": unit_pct, "unit_hours_percent_exact": hour_pct,
             "total_hours": round(total_hours, 2), "ranked_hours": round(ranked_hours, 2),
             "serves_nothing_units": len(units) - len(ranked), "serves_nothing_hours": round(total_hours - ranked_hours, 2)}
+
+
+def coverage_b(units: list, classes: dict, limit=None) -> dict:
+    """DEFINITION B (Steer A, 2026-11-25): the share of unit-hours whose REGULAR the exempt list classes plan or income, of all unit-hours WITHOUT
+    the exempt (look-only) regulars. A regular the list does not know counts as unserved (no label lifts the figure) and is counted apart."""
+    served = sum(u.hours for u in units if classes.get(u.regular) in ("plan", "income"))
+    exempt = sum(u.hours for u in units if classes.get(u.regular) == "exempt")
+    unknown = [u for u in units if u.regular not in classes]
+    total = sum(u.hours for u in units)
+    base = total - exempt
+    pct = percent(served, base)
+    return {"executed": len(units), "served_hours": round(served, 2), "exempt_hours": round(exempt, 2), "denominator_hours": round(base, 2),
+            "total_hours": round(total, 2), "percent": shown(pct, limit), "percent_exact": pct,
+            "exempt_units": sum(1 for u in units if classes.get(u.regular) == "exempt"),
+            "unlisted_units": len(unknown), "unlisted_hours": round(sum(u.hours for u in unknown), 2),
+            "hours_by_class": {c: round(sum(u.hours for u in units if classes.get(u.regular) == c), 2) for c in ("plan", "income", "exempt")}}
 
 
 def serves_kind(serves: str) -> str:
@@ -219,6 +248,7 @@ class Unit:
         self.serves = fields.get("serves", "").strip().lower()
         self.serves_raw = fields.get("serves", "").strip()
         self.activity = fields.get("activity", "")
+        self.regular = fields.get("regular", "").strip()
         hours = number(fields, "result.duration_seconds")
         self.hours = hours / 3600 if hours is not None else (number(fields, "est_minutes", 0) or 0) / 60
 
@@ -369,6 +399,43 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
             if late and row["serves"] not in started_tags:
                 alarms.append({"alarm": "plan-item", "item": row["item"], "rank": row["rank"],
                                "hours_past_trigger": round((now - row["trigger"]).total_seconds() / 3600, 1), "limit": a.late_hours})
+    # the serves exempt list: validation, the dated baseline and DEFINITION B beside the verdict (definition A, by the unit's own serves)
+    ex = load_exempt_module()
+    list_path = Path(a.exempt_list) if a.exempt_list else ex.find(root)
+    if list_path is None or not list_path.is_file():
+        counts["exempt_list"] = None
+        counts["coverage_b"] = None
+        na.append("exempt-list")
+    else:
+        rows, parse_errors, sha = ex.parse(list_path)
+        roster_serves, roster_error = ex.roster(root)
+        found = ex.validate(rows, parse_errors, roster_serves, RANKING["ids"], now)
+        if roster_error:
+            found["errors"].append(roster_error)
+        baseline = ex.compare_baseline(root, rows)
+        errors = found["errors"] + baseline["errors"]
+        accepted = ""
+        if getattr(a, "accept_exempt_list", False):
+            if errors:
+                accepted = "refused: the list has errors"
+            else:
+                accepted = ex.accept_baseline(root, rows, str(list_path.relative_to(root)) if list_path.is_relative_to(root) else str(list_path), sha, now)
+                baseline = ex.compare_baseline(root, rows)
+        try:
+            shown_path = str(list_path.relative_to(root))
+        except ValueError:
+            shown_path = str(list_path)
+        newest = max((ex.parse_stamp(r["decided_utc"]) for r in rows if ex.parse_stamp(r["decided_utc"])), default=None)
+        counts["exempt_list"] = {"path": shown_path, "newest_decision": newest.strftime("%Y-%m-%dT%H:%MZ") if newest else "", "regulars": found["regulars_listed"],
+                                 "classes": found["classes"], "roster": found["roster"], "unlabeled": found["unlabeled"], "stale": found["stale"],
+                                 "roster_serves_mismatch": found["roster_serves_mismatch"], "errors": errors, "warnings": found["warnings"] + baseline["warnings"],
+                                 "baseline": {k: baseline[k] for k in ("state", "accepted_at", "added", "removed", "edited")}, "accepted": accepted}
+        classes = {r["regular_id"]: r["class"] for r in rows}
+        counts["coverage_b"] = {"definition": "unit-hours of plan and income regulars / unit-hours without the exempt look-only regulars; a regular not on the list counts as unserved",
+                                "rolling": coverage_b(executed, classes, a.coverage_percent),
+                                "since_cutover": None if since_stats is None else coverage_b(since_units, classes, a.coverage_percent)}
+        if errors:
+            alarms.append({"alarm": "exempt-list", "errors": len(errors), "first": errors[:6]})
     return {"at": now.strftime("%Y-%m-%dT%H:%MZ"), "window_hours": hours, "counts": counts, "alarms": alarms, "not_applicable": na}
 
 
@@ -398,6 +465,30 @@ def render(result: dict) -> str:
     else:
         lines.append(f"coverage SINCE CUTOVER {sc['since']} ({sc['source']}): no unit executed since yet (n/a)")
     lines.append(f"coverage rule: hours decide, units are the trend (the alarm compares unit-hours with the {c['coverage_limit_percent']:g} percent limit)")
+    el, cb = c.get("exempt_list"), c.get("coverage_b")
+    if el is None:
+        lines.append("exempt list: none found (_records_/<date>/strategy/serves-exempt-list.csv): definition B n/a")
+    else:
+        k2 = el["classes"]
+        lines.append(f"exempt list {el['path']} (newest decision {el['newest_decision'] or 'none'}): {el['regulars']} regulars - plan {k2['plan']}, income "
+                     f"{k2['income']}, exempt {k2['exempt']} | roster {el['roster']}: unlabeled {len(el['unlabeled'])}, stale {len(el['stale'])} | baseline: "
+                     + (f"none accepted yet (--accept-exempt-list records it)" if el["baseline"]["state"] == "none" else
+                        f"accepted {el['baseline']['accepted_at']}, {el['baseline']['state']}"
+                        + (f" (+{len(el['baseline']['added'])} -{len(el['baseline']['removed'])} ~{len(el['baseline']['edited'])})"
+                           if el["baseline"]["state"] == "changed" else "")))
+        if el["accepted"]:
+            lines.append(f"exempt list baseline: {el['accepted']}")
+        for w in el["warnings"][:4]:
+            lines.append(f"  note: {w}")
+        r2, s2 = cb["rolling"], cb["since_cutover"]
+        lines.append(f"coverage DEFINITION B (regular class from the list; exempt hours leave the denominator), beside definition A above: ROLLING "
+                     f"{r2['percent']}% of {r2['denominator_hours']:g} h ({r2['exempt_hours']:g} h exempt, {r2['unlisted_units']} units off the list)"
+                     + ("" if s2 is None else f" | SINCE CUTOVER {s2['percent']}% of {s2['denominator_hours']:g} h ({s2['exempt_hours']:g} h exempt, "
+                                              f"{s2['unlisted_units']} units off the list)"))
+        for label, b in (("rolling", r2), ("since cutover", s2)):
+            if b is not None:
+                h = b["hours_by_class"]
+                lines.append(f"  hours by class, {label}: plan {h['plan']:g} h, income {h['income']:g} h, exempt {h['exempt']:g} h, off the list {b['unlisted_hours']:g} h")
     lines.append(f"growth units executed {c['growth_executed']}" + (f", partial {c['growth_partial_percent']}%" if "growth_partial_percent" in c else ""))
     for read in c["slot_reads"]:
         note = (f" + {read['slots_blocked_capacity']} blocked by capacity" + (f" ({read['blocker']})" if read.get("blocker") else " (blocker not named)")
@@ -419,6 +510,8 @@ def main(argv=None) -> int:
     p.add_argument("--root", default=str(HERE.parent.parent), help="the repository (default: the one holding this tool)")
     p.add_argument("--hours", type=float, default=12, help="the window of executed units")
     p.add_argument("--now", default="", help="the instant to judge at, ISO 8601 UTC (default: now)")
+    p.add_argument("--exempt-list", default="", help="the serves exempt list CSV (default: the newest _records_/<date>/strategy/serves-exempt-list.csv)")
+    p.add_argument("--accept-exempt-list", action="store_true", help="record the list as the accepted baseline (the one thing this tool writes; refused while the list has errors)")
     p.add_argument("--since", default="", help="the roster remap's cutover, ISO 8601 UTC: the coverage verdict counts units executed after it "
                                                "(default: the state file, else git)")
     p.add_argument("--plan", default="", help="plan-of-record CSV: rank,item,trigger_at,serves")
