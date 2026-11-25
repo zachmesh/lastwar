@@ -37,4 +37,4 @@ S=list(csv.reader(open(os.path.join(H,"total-power-series.csv"))))[-3:]
 for r in S: print("  ",r[2],r[3],"|",r[5][:90])
 for r in csv.reader(open(os.path.join(H,"power-delta-decomposition.csv"))):
     if r[0].startswith(("OUR GAIN, total","OTHER DEVICE","EXTERNAL","NET CHANGE","LOCKED")): print("  ",r[0][:70],"|",r[1],"|",(r[2] or "")[:40])
-print("\n--- 6. STAGED INPUTS (daily-report-inputs-2026-11-24.csv): rows",len(list(csv.reader(open(os.path.join(H,"daily-report-inputs-2026-11-24.csv")))))-1)
+print("\n--- 6. STAGED INPUTS (daily-report-inputs-2026-11-25.csv): rows",len(list(csv.reader(open(os.path.join(H,"daily-report-inputs-2026-11-25.csv")))))-1)

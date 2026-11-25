@@ -40,3 +40,7 @@ Back to the [folder index](INDEX.md).
 - [PR 986](landing-pr-986.md) - effort-high, the model policy is Sonnet 5.5 at High effort
 - [PR 987](landing-pr-987.md) - effort-from-team, the effort is read from TEAM.yaml, never a constant
 - [PR 988](landing-pr-988.md) - od-owner-scroll, the owner's instruction to scroll the screen (OD-20261125-05)
+- [PR 989](landing-pr-989.md) - twenty-fifth records snapshot, records 03:30Z to 06:40Z, handover 0.24.0
+- [PR 990](landing-pr-990.md) - donations-part-two, a run at the step cap with the count live is PARTIAL
+- [PR 991](landing-pr-991.md) - training-stray-tap, a stray tap opened Building Details or the world map
+- [PR 992](landing-pr-992.md) - ledger-bubbles-main-tasks, ledger v1.5.0 and the mail digest rules 11 and 12

@@ -4,10 +4,15 @@ OUR GAIN: Oil Well Lv.20 to 21 Complete (02:24:23Z),4200,,building
 "OUR GAIN: Lv.27 T9 x726 batch collected (03:30:53Z), room freed by the external siege",981552,,"726 x 1,352"
 "OUR GAIN: Lv.24 finished batch of 274 Lv.8 collected (03:51Z to 03:53Z), room freed by the external siege",291262,,"274 x 1,063; the room the siege freed is used up: 726 + 274 = 1,000"
 "OUR GAIN, total",1284814,,what we caused; the four builds started tonight add power only as they complete
-"OTHER DEVICE, attributed by category (11:53Z to 12:51Z on 11-23)",197337,,"hero +149,237 (Decorations and Building Stats +133,767), drone +1,800, building +23,200, tech +23,100 [D]"
+"OTHER DEVICE, attributed by category (11:53Z to 12:51Z on 11-23) [THE OWNER'S PHONE, his word relayed 03:16Z (OD-20261125-03)]",197337,,"hero +149,237 (Decorations and Building Stats +133,767), drone +1,800, building +23,200, tech +23,100 [D]"
 "EXTERNAL, RECOVERABLE: 1,000 T10 troops wounded by the owner-set Zombie Siege (01:15Z)",-1647000,,"in the hospital: Severely Wounded Lv.10 1,364; +1,647,000 only when healed AND collected, which needs 1,000 room"
 "NET CHANGE since the 150,211,809 read at 07:47Z on 11-23",-164849,,"150,211,809 to 150,046,960"
 CHECK: our gain + other device + external,-164849,,equals the net change
 LOCKED BEHIND TROOP ROOM now,,6.1% to 8.2% of the total,"wounded 1,364 x 1,647 = 2,246,508; healed pile 5,306 x 1,063 to 1,647 = 5,640,278 to 8,738,982 (tier mix unread); Lv.30 batch 793 x 1,647 = 1,306,071; total 9,192,857 to 12,291,561 for 7,463 troops; the 274 collected were never in this count (it was a hidden finished batch: before the collect the pile was 7,737); PLUS about 249 T8 probably still waiting in the Lv.24 barracks (+264,687) [D], 7,712 troops in all"
 EXTERNAL TAP OF OUR BUILD: Oil Well Lv.23 completion (17:27:27.5Z to 17:28:32Z),5400,,"the build was ours, the tap was not (no click in our run's first frame; power unchanged through our run)"
 "UNATTRIBUTED WINDOW 15:56Z to 17:31Z, BY CATEGORY: Buildings +37,200 (residual), Tech +7,800 (two research Completes by another hand), Hero +1,032 (Decorations & Building Stats)",46032,,"reconciled exactly with the Oil Well's 5,400 to the +51,432 (perception-scout/1555)"
+OUR GAIN since 03:53Z: the Oil Well Lv.22 Complete (08:11:06.986Z),4900,,tapped by our unit
+"WINDOW 15:56Z to 17:31Z: the Oil Well Lv.23 tap (5,400) and the unattributed 46,032 (Buildings +37,200, Tech +7,800, Hero +1,032)",51432,,reconciled by category (perception-scout/1555); not the owner's answer (his OD-21 answer covered the 11-23 morning only)
+THE OWNER'S SESSION 04:53Z to 05:14Z (inside his presence at the Mac),597824,,"the Oil Well Lv.24 finished early (before 05:25:25.8Z) and the resources fell (food -25.9M, iron -27.3M, coin -8.7M, oil -50.3K); the components are not read"
+"NET CHANGE since the 150,211,809 read at 07:47Z on 11-23, to the 05:22Z read of 11-25",489307,,"150,211,809 to 150,701,116"
+"CHECK 05:22Z: (-164,849) + 4,900 + 51,432 + 597,824",489307,,equals the net change
