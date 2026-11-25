@@ -4,7 +4,7 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.7.5
+version: 0.7.6
 title: Last War continuous-play team
 updated_at: '2026-11-24T10:25:22Z'
 state: active
@@ -105,7 +105,7 @@ coordination:
     loop_schedule_owner_session: session-4b4cb08d-fb77-419a-be34-14a72a3b73d1
     approved_model_ref: _conventions_/local-conventions/team-organization.md
     approved_model: claude-sonnet-5-5
-    approved_effort: xhigh
+    approved_effort: high
     approved_provider: meta-claude
     cap_authority_ref: _conventions_/local-conventions/continuous-play-team.md
   reporting:
