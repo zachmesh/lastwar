@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:52:48.089Z, run started 00:52:48.863Z), 18 s after the previous run ended; owner idle 27,636 s: wait 0",2026-11-25T00:52:48.863Z,see growth/0054-waits.csv
+badges,"first frame 00:52:53.6Z: the tram icon not drawn, pickup none, radar dish 3; the last frame 00:54:15.8Z: radar dish none",2026-11-25T00:52:48.863Z,tram badge rule: none; not tapped
+radar before,"'You can complete 1 tasks, requires 10 Stamina' with a blue Quick Execute; energy 120; '12 Radar Task(s) will be restored in 1:45'",2026-11-25T00:53:10.558Z,tag text [G]: radar screen
+Quick Execute,"pressed once (393,934): energy 120 to 110; the bar became a green Claim All '4 task rewards can be claimed'",2026-11-25T00:53:24.197Z,
+Claim All and dialog,"Claim All once; the dialog 'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 4 radar task rewards at once. Continue?' (no price): Confirm once (481,698)",2026-11-25T00:53:40.242Z,Steer A's rule: the count 4 read from the dialog
+reward popup,"'Drop Limit Update 116/328'; CONGRATULATIONS: cash x45, radar token item x40, food bag x13, blue triangle item x408, EXP 3.1M, blue screen item x800, coin 860.4K, oil barrel item x880, iron 316.8K, bread 316.8K; dismissed by an empty tap (394,860)",2026-11-25T00:53:47.658Z,oil line present: x880
+radar after,"no tasks left on the map, no bar; energy 111; the dish badge gone",2026-11-25T00:54:05.846Z,
+HUD,"before: food 161.5M, iron 782.7M, coin 30.8M, oil 647.6K; after: food 161.8M, iron 783.0M, coin 31.6M, oil 648.4K, energy 111, diamonds 11,173, Total Power 150,103,292",2026-11-25T00:54:15.842Z,the radar dish badge 3 to none
+drags,"drags tried 0, cancelled 0",,

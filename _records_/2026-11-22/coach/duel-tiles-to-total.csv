@@ -1,0 +1,9 @@
+step,tiles_used_cumulative,Own_count_expected,VS_total_expected,note
+one single Use,1,24488,7017750,Own count only
+check: 9 more singles or one x10 after a label read,10,24479,7024500,read the duel page here
+"x100 bubble, first",110,24379,7099500,Own count only
+"x100 bubble, second",210,24279,7174500,read the duel page here
+"x10 bubbles, four",250,24239,7204500,Own count only
+"singles, eight more (the stop rule 258)",258,24231,7210500,read the duel page here
+the gap,"244 tiles = 1,220 minutes","24,245",7200000,"exactly 7,200,000 at 244 tiles: no margin; 258 tiles gives 7,210,500 (margin 10,500)"
+BOUND,"a mis-pressed x100 is 100 tiles = 500 minutes = 75,000 points",,,"Steer A's cap 31,500 minutes allows 2,060 more (412 tiles): the worst case overshoots the stop rule by at most 100 tiles"

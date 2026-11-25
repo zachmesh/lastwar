@@ -1,9 +1,9 @@
 ---
 title: Strategist handover
 created: 2026-11-23T08:20:00Z
-modified: 2026-11-24T17:37:00Z
+modified: 2026-11-25T00:24:00Z
 level: L2
-version: 0.5.0
+version: 0.6.0
 description: The live state a replacement strategist starts from
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 # Handover - strategist
 
-Updated 2026-11-24 10:49Z. Times Mac UTC. State lives in `_records_/2026-11-22/strategy/`; start at its `INDEX.md`. After a compaction re-read the newest decisions `dec-20261124-01.md` to `-03.md` before acting. Rotate at 88 percent.
+Updated 2026-11-24 23:58Z. Times Mac UTC. State lives in `_records_/2026-11-22/strategy/`; start at its `INDEX.md`. After a compaction re-read the newest decisions `dec-20261124-02.md` to `-04.md` and the newest log (`strategy-log-1124n.md`) before acting. Rotate at 88 percent.
 
 ## Holder
 
@@ -21,16 +21,20 @@ Session `session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4`. Reports to the coordinat
 
 ## Strategy of record: v3.0 (`0446-strategy-v3.md`)
 
-- **Long line** (owner orders): Base Expansion; ETA 2027-01-08 to 01-23 (`0510`). Labs: Output V trio, then Oil Output I 1 to 10; research flat 4h12m under the button.
-- **Room is the binding constraint:** about 7,463 troops (9.2M to 12.3M power) wait behind Drill Ground room. A barracks collect admits what fits (ramp, p 0.8, not yet tested); the hospital pile needs room for all (p 0.3). Order of use: finished batch by power per troop (T10, T9, T8), then training, healing last (PL-09, `0670-room-levers.md`).
-- **Builders** (decisions 08, 2026-11-24-02 and -03): B1 the Oil Well Lv.21 to 30 (flat 6h32m under the preview; rule `0650`); B2 to B4 the three grounds, ends about 11-26 11:08Z (moved earlier by another actor), 11-30 22:21:48Z, 12-05 11:59:18Z; B2's next job is its ground's Lv.27 to 28 with a 10,000-minute speed-up, pre-conversion about 09:00Z to 10:30Z on 11-26.
-- **Resources:** coin line `0117-coin-line.md` (fixed chests spent; plain then choice chests, 1.0G floor); food rows are real; iron `0516`. Plunder is a supplement (dec 04); event stores `0630`; store buys `0640` (weapon test Murphy Lv.3 to 4, F-157).
+- **Long line** (owner orders): Base Expansion ETA 2027-01-08 to 01-23 (`0510`); HQ 31 start about 2027-01-22 to 01-31, oil-gated (`0690`; the research nodes cost oil at about 0.855, H112).
+- **Speed factor 2.325** since about 17:03Z on 11-24 (was 2.125; source unread, H131, `0710`): durations in `0700`; the factor is read at every start (F-207, F-209).
+- **Room binds:** about 7,463 troops wait behind Drill Ground room. Ground ends 11-25 13:38:36Z (after the duel speed-up of 1,290 minutes), 11-30 01:31:02Z, 12-03 23:50:14Z; if the displayed ends lag (F-210) add about 10, 20, 36 hours. B2's next job is its ground's Lv.27 to 28 (`dec-20261124-03`).
+- **Oil Well chain** (B1): Lv.24 ends 11-25T07:11:20Z; hand-offs by `0650`.
+- **Resources:** coin is the one binding resource; food is covered by typed chests (about 3.6G, counts read 23:30Z); choice reserve 1.99G coin-equivalent over the 1.0G floor; plain chests rise about 875 a day (F-220). Boxes are consumed by someone else (H130, R6 retired); trucks lose about 5 percent to plunder (F-213).
+- **Event store** (Thanksgiving, ends about 12-01T01:00Z): 6 tickets, redeem in the last two hours (`0720`).
+- **Duel:** `dec-20261124-04` GO on 258 construction 5-minute tiles for the 7.2M chest; rows by theme `0730` (F-221).
 
 ## Open
 
-- about 11-26 11:08Z: Lv.30 T10 and Lv.24 T8 presses, partial Collect (F-176, F-183, F-184); Unit Count extras read (H127, F-174, F-175); flat cause (H128); OD-21.
-- Siege: next search 11-27 01:15Z, owner's schedule; a repeat leaves 329 beds and stops plunder.
+- 11-25 05:37Z box count test (F-206, F-218); 07:11Z Lv.25 start reads the factor.
+- 11-25 13:38Z ground end, room test, B2's Lv.27 to 28 with a 10,000-minute speed-up, pre-conversion about 11:30Z; siege search 11-27 01:15Z.
+- 11-29 20:00Z weekly review (productive share, quiet-hour dispatch); 11-30 04:00Z owner digest.
 
 ## Ledger and rules
 
-Ledger 181 rows (36 columns, unchanged since 11-23 10:22Z), register 127. The forecast-refusal gate is LIVE since 11-24 10:48Z: every plan item needs a row before a unit serves it; serves is strict (each part a plan id or an exempt word). Rules: G rows low x0.75, high x1.5, a quantity that may be zero is two rows, no fixed shade on binaries; power rows score our gain only. No game input, purchase, diamond spend or git checkout in the live repo; no osascript; never press Go on the banner. Word gate counts body words under 500.
+Ledger 218 rows (36 columns), register 132. The forecast-refusal gate is live: every plan item needs a row; serves is strict. Rules: G rows low x0.75, high x1.5, a quantity that may be zero is two rows; power rows score our gain only. No game input, purchase, diamond spend or git checkout; no osascript. Word gate counts body words under 500.

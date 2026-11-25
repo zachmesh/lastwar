@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:49:29.634Z, run started 00:49:30.405Z), 24 s after the previous run ended; owner idle 27,438 s: wait 0",2026-11-25T00:49:30.405Z,see growth/0054-waits.csv
+badges,"first frame 00:49:37.4Z: the tram icon not drawn, pickup none, radar dish 3, hammer 4/4, flask 2/2; the last base frame 00:52:13.7Z: the same",2026-11-25T00:49:30.405Z,tram badge rule: none; not tapped
+coin,"available 1,087,220 to 0; owned 29,742,992 to 30,831,834 (+1,088,842); 444.5K an hour (the owned figure is over the capacity bar 16,474,999)",2026-11-25T00:50:04.259Z,"tag text [G]: panel; Collect (553,552)"
+food,"available 1,661,425 to 0; owned 159,842,883 to 161,507,134 (+1,664,251); 678.9K an hour",2026-11-25T00:50:37.350Z,
+iron,"available 1,536,114 to 0; owned 781,237,698 to 782,776,422 (+1,538,724); 626.6K an hour",2026-11-25T00:51:12.878Z,
+oil,"available 3,381 to 0; owned 644,223 to 647,604 (+3,381); 1.3K an hour; Collect at (553,526)",2026-11-25T00:52:00.942Z,"Details, Go, Use not touched"
+HUD,"food 161.5M, iron 782.7M, coin 30.8M, oil 647.6K, diamonds 11,173, Total Power 150,103,292",2026-11-25T00:52:13.715Z,unchanged power
+drags,"drags tried 0, cancelled 0",,

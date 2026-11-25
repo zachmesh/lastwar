@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the unit's not_before 02:06:00Z had passed; the lock admitted the run 0.8 s after the request (start requested 02:06:33.291Z, run started 02:06:34.034Z); owner idle 32,052 s: wait 0",2026-11-25T02:06:34.034Z,see growth/0054-waits.csv
+badges,"first frame 02:06:37.9Z: the tram icon drawn with badge 3, the pickup badge 10; the base after 02:08:44.3Z: the same",2026-11-25T02:06:34.034Z,tram badge rule: none; not tapped
+tabs,"MISSION: Main Tasks and Daily Tasks; it opened on Daily Tasks (badge 2); Main Tasks tapped at (181,155)",2026-11-25T02:06:51.404Z,tag text [G]: Mission panel
+Main Tasks,"five rows, no green Claim: Headquarters Lv.31 (3.0K gold), Builder's Hut Lv.26, Hospital Lv.26, Training Base Lv.27, Gear Factory Lv.21 (5.0K bread and 5.0K iron each): all Go",2026-11-25T02:07:05.557Z,re-read after: unchanged; nothing pressed
+Daily before,"points 0; chests 40, 80, 120, 160, 200 unclaimed; Daily Login 1/1 (10 points, 10 gems) green Claim; VIP Activated 1/1 (40 points, 10 gems) green Claim; Doom Elite 0/1, Radar Task 0/1, Donate 5 times 0/5, Help Allies 0/5: Go; more rows below",2026-11-25T02:07:41.842Z,
+claim,"one tap on the Daily Login Claim (574,431): both claim rows gone; points 50; diamonds 11,173 to 11,193",2026-11-25T02:07:58.455Z,+20 gems = two rows of 10
+40 chest,"glowing after 50 points: tapped once (273,275): CONGRATULATIONS: 'No double reward this time': 2 gear items, a rocket item, 2 resource crates, 2 bread crates, 6 gold crates, 600 crystal shards, a 5-minute speed-up; closed by an empty tap (450,935)",2026-11-25T02:08:08.631Z,the 40 chest opened; 80 needs 30 more points
+after,"points 50; the 40 chest opened; the 80, 120, 160 and 200 chests unclaimed; the tab badge gone; the remaining tasks all Go at 0",2026-11-25T02:08:35.510Z,never a Go
+drags,"drags tried 0, cancelled 0",,

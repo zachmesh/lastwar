@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 01:20:16.488Z, run started 01:20:17.332Z), 21 s after the previous record write; owner idle 29,277 s: wait 0",2026-11-25T01:20:17.332Z,see growth/0054-waits.csv
+badges,"first frame 01:20:22.0Z (timer 00:39:43): the tram icon not drawn, pickup none, radar dish none; the base after 01:21:56.6Z: red dots on Alliance, Mail and Inventory",2026-11-25T01:20:17.332Z,tram badge rule: none; not tapped
+rail,"Battle Report (red dot), Alliance, Event (dot), System (dot), Regular (dot before opening, none after), In-app Purchases (dot before opening, none after), Favorite; the back arrow at (113,934)",2026-11-25T01:20:34.939Z,tag text [G]: Mail rail; Regular and In-app lost their dots on opening
+Battle Report,"six mails visible (the sixth cut off; no scroll): Victory against Lv.20, Lv.19, Lv.18, Lv.17, Lv.16 and Lv.15 Zombie Horde, all '23h ago'; the newest read, five with red dots; no gift icon; buttons Search, Delete All, Claim All (none pressed)",2026-11-25T01:20:46.026Z,reports only; the dot stays (unread reports)
+Regular,"at least six mails (a seventh partly visible): Victory against Lv.30 Doom Elite (x2, '5h ago') and Lv.30 victim reports (x4, '1d ago'); no dots; no gift icon; buttons not pressed",2026-11-25T01:21:15.910Z,
+In-app Purchases,at least two receipts of 2026-11-22: 'Pack purchased: Take All' (22:35:33; a Weekly Pass voucher; 2.5K diamonds and 5 of an item) and 'Pack purchased: Drone Great Value Pack' (20:44:22): receipts only; no gift icon; nothing pressed,2026-11-25T01:21:34.549Z,"the rule digest: receipts only, nothing to claim"
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, diamonds 11,173 before and after",2026-11-25T01:21:56.579Z,no TIPS popup on closing
+drags,"drags tried 0, cancelled 0",,

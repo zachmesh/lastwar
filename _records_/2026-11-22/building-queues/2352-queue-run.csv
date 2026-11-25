@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 23:52:14.836Z, run started 23:52:15.585Z), 3 minutes after the previous record write; owner idle 24,011 s: wait 0",2026-11-24T23:52:15.585Z,see growth/0054-waits.csv
+badges,"23:52:20.0Z (timer 02:07:41): the tram icon not drawn, pickup none, radar dish 3; 23:53:58.9Z: the same (builders 4/4)",2026-11-24T23:52:15.585Z,tram badge rule: none; not tapped
+front,at the start 23:52:14Z front=LastWar; no front script needed,2026-11-24T23:52:14Z,tag text [G]: lsappinfo front
+step 1 VS panel,"Alliance Duel on Today's Theme: personal total 7,017,000; Base Expansion 02:07:35; the 7,200,000 chest a closed gold chest, no checkmark, no Claim button, no glow",2026-11-24T23:52:31.196Z,unchanged since 22:37:35Z
+step 2 Building Queue,Lv.26 Drill Ground 1d 11:15:49 (ends 2026-11-26T11:08:37.4Z); Lv.27 5d 01:38:14 (11-30T01:31:02.4Z); Oil Well Lv.23 to 24 07:18:32 (11-25T07:11:20.4Z); Lv.28 8d 23:57:26 (12-03T23:50:14.4Z); read at the frame after the hammer tap,2026-11-24T23:52:48.388Z,"all four ends match the earlier reads within 0.8 s; the Speed Up buttons at x 544, y 405, 517, 629, 741"
+Speed Up panel,"SPEED UP, Time Left 1d 11:15:23 (the bar), builder indicator 30/30; Instant Speed-up (green, 'Use Speed-up items 1d 11:16:00', not pressed); Finish Now (yellow Buy and Use with 4,445 diamonds, not pressed); 5m Construction Speed-up 'Own: 24489' Use (552,586); 1m Construction Speed-up 'Own: 19440' Use (552,676); 8h Speed-up (general) Use (552,766) partly cut off; the list continues below (no scroll); NO slider, plus, minus or typed field on any row",2026-11-24T23:53:13.343Z,the guard of step 3 cannot be applied as written: blocked by prerequisite
+pressed,"the VS medallion (673,300), the duel back arrow (166,933), the hammer (108,200), the Speed Up button of row 1 (544,405), the panel X (612,232), the queue X (612,237): no item row button",2026-11-24T23:53:46.742Z,nothing used
+HUD,"food 159.8M, iron 781.2M, coin 29.7M, oil 644.2K, diamonds 11,173, Total Power 150,103,292",2026-11-24T23:53:58.915Z,unchanged
+drags,"drags tried 0, cancelled 0",,

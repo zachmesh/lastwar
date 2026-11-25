@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-23T19:58:00Z
-version: 2.22.0
+modified: 2026-11-25T03:22:00Z
+version: 2.23.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -24,6 +24,7 @@ None. On 2026-11-23 the owner closed the last open item (OD-20261123-09). Earlie
 
 ## Changelog
 
+- 2.23.0, 2026-11-25 - Catalog 05 listed: the owner's four answers (OD-20261125-01 to -04); OD-20261123-21 is CLOSED by OD-20261125-03.
 - 2.21.0, 2026-11-23 - The 13 entry lines OD-20261123-04 to -16 moved verbatim to catalog 02 (page budget 300 words); new lines go to the newest catalog.
 
 ## Articles
@@ -32,3 +33,4 @@ None. On 2026-11-23 the owner closed the last open item (OD-20261123-09). Earlie
 - [Catalog 02](owner-decisions-log/catalog-02.md) - 13 entries, OD-20261123-04 to OD-20261123-16
 - [Catalog 03](owner-decisions-log/catalog-03.md) - 6 entries, OD-20261123-17 to OD-20261123-22 (21 is OPEN)
 - [Catalog 04](owner-decisions-log/catalog-04.md) - 4 entries, OD-20261123-23 to OD-20261123-26 (the owner's answers of 19:48Z)
+- [Catalog 05](owner-decisions-log/catalog-05.md) - 4 entries, OD-20261125-01 to OD-20261125-04 (the owner's answers learned 2026-11-25T03:15Z; closes OD-20261123-21)

@@ -1,7 +1,8 @@
 item,value,read_utc,note
-wait,none: start at 00:48:05Z (wait 0),2026-11-24T00:48:05Z,see growth/0054-waits.csv
-tan trophy bubble,"no: the spot about (600,710) left of the Alliance shield holds a tan tile with a green military vehicle, not a trophy; the same on two looks 2 s apart",2026-11-24T00:48:30Z,
-icons near the Alliance shield,"a small white bubble with a green vehicle about (630,745); Mail below; the red target icon about (670,640) with a badge going 1 to 4; no Help bubble",2026-11-24T00:48:30Z,
-mid-base trophy bubble,"gold trophy over the mid-base building about (583,218), NEW at one frame",2026-11-24T00:48:30Z,never tapped (OD-20261123-01)
-taps,none,,waits only
-HUD,"Total Power 150,416,946; coin 22.1M; diamonds 11,113; energy 72",2026-11-24T00:48:45Z,
+wait,"the lock admitted the run 1.1 s after the request (start requested 00:48:02.550Z, run started 00:48:03.631Z), 21 s after the previous run ended; owner idle 27,351 s: wait 0",2026-11-25T00:48:03.631Z,see growth/0054-waits.csv
+badges,"00:48:08.7Z (timer 01:11:53): the tram icon not drawn, pickup none, radar dish 3; the base after 00:48:52.2Z: the same",2026-11-25T00:48:03.631Z,tram badge rule: none; not tapped
+personal total,"7,210,500 beside the medallion on every read; Base Expansion 01:11:46 then 01:11:23 left",2026-11-25T00:48:21.050Z,"tag text [G]: Today's Theme; the target 3,600,000 exceeded by 3,610,500"
+carousel,"the chest row not shown: the fourth carousel page 'Infinite Roulette' (VS icon x0, 7.9M/10.0M, counter 0, a Go button; text 'Spins and points will be reset every Sunday at 24:00'; timer 5d 01:11:46); four page dots with the fourth lit; a left arrow (not pressed)",2026-11-25T00:48:21.050Z,"the 7,200,000 chest state not read here; claimed 00:21:27.9Z (2410)"
+scoring rows,"Use 1-min Construction Speed-up +150; Increase Building Power by 1pt +30; Dispatch UR Trade Truck 1 time +300,000; Perform 1 UR Secret Task +225,000; Buy Packs containing Diamonds +30; Recruit Survivor 1 time +4,500",2026-11-25T00:48:33.196Z,
+close,"the back arrow (166,933); the base; HUD normal",2026-11-25T00:48:47.570Z,pressed: the VS medallion and the back arrow only
+drags,"drags tried 0, cancelled 0",,

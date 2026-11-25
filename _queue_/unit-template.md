@@ -22,22 +22,14 @@ lease_until: <empty until claimed>
 
 # <Regular name>
 
-What to do, in the regular's own terms. The executor also reads the
-activity metadata in `_activities_/<activity>/` and the standing rules
-in the recording rules before acting.
+What to do, in the regular's own terms. The executor also reads the activity metadata in `_activities_/<activity>/` and the recording rules.
 
 THE FORECAST REFUSAL IS LIVE (since 2026-11-24T10:48:40Z): every unit minted or synced, chain follow-ups
 included, is refused unless EACH comma or semicolon part of serves is a plan item id with a row in the forecast
 ledger or an exempt word (upkeep, snapshot, baseline): 'PL-17' passes, 'PL-17 the Oil Well chain' is refused.
 Write the ledger row before the unit. Emergency path: `--no-require-forecast` on enqueue.
 
-A FALLBACK unit (staged for a case that may not happen) says 'DISPATCH ONLY WHEN NAMED' and carries priority 9 and a
-not_before beyond any plausible tick pick until it is needed, because the 15-minute ticker picks `next` by ranking: a moot
-unit is a trap; retire it the moment its case is closed.
-
-A brief that can reach a banner, a Go, a Buy, a link, a web, a share or an
-external-app button carries one line: 'may open another app: needs Steer A's
-approval first; if it opens, STOP' (standing rule, Steer A, 2026-11-23).
+A FALLBACK unit (staged for a case that may not happen) says 'DISPATCH ONLY WHEN NAMED', carries priority 9 and a not_before beyond any plausible tick pick, because the 15-minute ticker picks `next` by ranking: a moot unit is a trap; retire it when its case closes.
 
 A brief that taps buildings or menus points at the route card,
 `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`,
@@ -48,9 +40,13 @@ cost, by prerequisite, by route or by window.
 
 Close DONE or PARTIAL by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (the counter or card state after, in the summary) or a verified nothing-to-do state with ONE `state_read: <what was read, quoted> | <frame: step or file> | <HH:MM:SSZ>` line (the key `evidence` stays the record path); PARTIAL when the state could not be read or the route not completed. Complete with `--state-change yes|no`: yes when the result changed the game state (named in the summary), no otherwise (a no on a DONE needs the state_read line).
 
-Every unit carries Steer A's standing line, word for word: 'May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.'
+A brief that reads the Backpack names its PLAN REASON (a conversion we want, an open date, the HQ 31 start, a stock check before a cost): no forensic read without one (Steer A 23:34Z; imp-20261124-03). A stock count claimed from a Backpack read needs two reads within the hour.
 
-At the start of every unit: if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release and tell the Coordinator (Steer A 21:11Z; the script worked in 3.2 s on 11-24).
+A NEW UNIT names its expected value against its cost (0.2 to 0.3 USD a unit): below about 100K of resource-equivalent, a power gain, a duel row or a stated information value, it is FOLDED INTO AN EXISTING UNIT or not staged (Steer A 01:33Z).
+
+Every unit carries Steer A's standing line (2026-11-23), word for word: 'May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.'
+
+At the start of every unit: if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release and tell the Coordinator.
 
 On completion the executor runs `_tools_/queue.py complete`, which
 writes the result section into this file's frontmatter - status,

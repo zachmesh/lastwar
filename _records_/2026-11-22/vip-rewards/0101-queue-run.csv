@@ -1,0 +1,6 @@
+item,value,read_utc,note
+wait,no run: the unit was closed from the base frames already read; the token was held only to claim and complete,2026-11-25T01:01:00Z,see growth/0054-waits.csv
+badges,"the base frames: the tram icon not drawn, pickup none; no VIP entry visible",2026-11-25T01:01:00Z,tram badge rule: none; not tapped
+route,the VIP screen is reached only through the avatar (the measured claims 11-02 to 11-22 all used it); no other VIP entry is visible in the left column or the HUD in the base frames of 00:25Z to 01:00Z,2026-11-25T01:00:20.483Z,tag text [G]: base frames; Steer A's ban of 00:40Z
+decision,closed 'blocked by route: the VIP screen needs the avatar (forbidden)'; nothing tapped; Steer A may allow a named exception (the planner asked him),2026-11-25T01:01:00Z,"the final sweep reads the two VIP lines only through another VIP entry, else unreadable"
+drags,"drags tried 0, cancelled 0",,

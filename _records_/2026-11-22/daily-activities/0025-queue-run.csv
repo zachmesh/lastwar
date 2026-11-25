@@ -1,0 +1,28 @@
+item,value,read_utc,note
+wait,"the lock admitted each run 0.8 s after its request (00:25:14.7Z, 00:26:11.8Z, 00:28:02.5Z, 00:30:23.3Z); owner idle 25,987 to 26,294 s: wait 0",2026-11-25T00:25:15.522Z,see growth/0054-waits.csv
+badges,"00:25:16.0Z (timer 01:34:42): the tram icon not drawn, pickup none (a '?' bubble beside it), radar dish 3, hammer 4/4, flask 2/2; the base after 00:29:50.5Z: the same",2026-11-25T00:25:15.522Z,tram badge rule: none; not tapped
+1 food bubbles,"NOT AT ZERO: five food bubbles standing over the farmland at about (306,427), (262,458), (349,458), (305,489), (261,520), in two frames",2026-11-25T00:25:19.439Z,"tag text [G]: base; fix-up unit harvest-2026-11-24-1630 (live, p1, PL-16)"
+2 iron bubbles,"NOT AT ZERO: five iron bubbles standing at about (179,338), (221,367), (177,397), (263,397), (219,427)",2026-11-25T00:25:19.439Z,harvest-2026-11-24-1630
+3 coin bubbles,"NOT AT ZERO: five coin bubbles standing at about (131,427), (174,458), (128,489), (172,520), (214,551); coin 29.7M",2026-11-25T00:25:19.439Z,harvest-2026-11-24-1630
+4 EXP bubbles,AT ZERO: none seen in two frames,2026-11-25T00:25:27.423Z,
+5 titanium bubbles,AT ZERO: none seen over the Titanium Alloy Factory in two frames,2026-11-25T00:25:27.423Z,
+6 armed truck,UNREADABLE: no 'fully loaded' notice seen; the not-full timer needs the truck's panel (not opened),2026-11-25T00:25:27.423Z,unverified under R1; the final sweep reads it again
+7 drone components,"AT ZERO: the S2 Drone Components Weekly Pass 'Already claimed today' (a purchase renew is an offer, not a pickup)",2026-11-24T23:05:19.906Z,record shop-claims 2305
+8 upgrade ore,"AT ZERO: the radar reward popup of 22:19Z transcribed (cash 130, radar item 380, food bag 26, EXP 15.4M, card 1.6K, triangle item 225, iron 4.2M, bread 4.2M, coin 2.8M): no ore line",2026-11-24T22:19:28.843Z,record radar-tasks 2218
+9 screws,AT ZERO: no screw claim recorded in today's records (reported as such),2026-11-25T00:25Z,
+10 shop pickup and Free Supply,AT ZERO: the Free Supply chest 'Claimed',2026-11-24T23:05:19.906Z,record shop-claims 2305
+11 pass pickups,"AT ZERO: S2, S1, EXP, Iron and Coin cards each 'Already claimed today'",2026-11-24T23:06:57.382Z,the new day's pickups arrive at 02:00Z
+12 VIP Daily Freebie,"UNREADABLE: no VIP badge on the base; the avatar tap opened My Profile with a dialog 'You're very popular!' / '1 people think you're awesome!' / '1,847 +1' (button Awesome!): stopped, reported",2026-11-25T00:30:30.097Z,"vip-2026-11-24-1630 (live, p1)"
+13 VIP login chest,UNREADABLE: same,2026-11-25T00:30:30.097Z,vip-2026-11-24-1630
+14 daily activity chests,"NOT AT ZERO: Mission panel, Daily Tasks (badge 1): activity points 140 of 200 (chests 40, 80, 120, 160, 200; the first three drawn differently from the last two: opened or closed unreadable); a task 'Defeat any Doom Elite' 1/1 with a green Claim; 'Recruit Heroes' 0/1, 'Kill 5 zombies' 0/5, 'Attack a Commander' 0/1 (Go: never)",2026-11-25T00:26:25.057Z,"daily-missions-2026-11-24-1630 (live, p1)"
+15 mail six categories,"NOT AT ZERO: the rail: red dots on Battle Report, Event, System, Regular and In-app Purchases; none on Alliance and Favorite; the 22:35Z read found no Claim in Event, System and Alliance (dots on unread notices); Battle Report, Regular and In-app not opened",2026-11-25T00:28:31.828Z,"mail-2026-11-24-1630 (live, p1)"
+16 alliance gifts,"NOT AT ZERO: Gifts page: Regular and Premium tabs with red dots, a green Claim All with badge 80, Gift Level 29, progress 44,132,050 of 257,900,000",2026-11-25T00:27:02.263Z,"gifts-2026-11-24-1630 (live, p1)"
+17 donations,"NOT AT ZERO: Quick Construction Lv.9 of 10: Donation Count 9/30 (remaining; 9 refills since pass 008, the grid), the coin Donate green (1000), the diamond Donate 2 diamonds (not touched)",2026-11-25T00:29:15.237Z,"donations-pass-2026-11-23-009 (live, p2: the coordinator dispatches it at 00:40Z)"
+18 trucks,"AT ZERO: dispatch 5 of 5 and plunder 4 of 4, all settled (the live trade-screen reads of 18:2xZ and 18:5xZ the same day: truck-plunder 1820 and 1850); a trade-screen read in this sweep unreachable: the tram icon not drawn",2026-11-24T18:51:02.149Z,"trucks-dispatch-2026-11-24-004 and -006 (live, p1)"
+19 alliance train,UNREADABLE: the tram icon not drawn: the station panel unreachable (the train read 22:41Z skipped for the same reason),2026-11-25T00:25:19.439Z,"train-2026-11-24-1630 (live, p1)"
+20 radar,"NOT AT ZERO: the bar 'You can complete 1 tasks, requires 10 Stamina' with a blue Quick Execute, tasks 0/40, energy 118, 'Fully restore at 11-25 12:38:08 local'; the dish badge 3; Claim All done at 22:19Z",2026-11-25T00:28:14.656Z,"radar-2026-11-24-1630 (live, p1)"
+21 duel total,"AT ZERO for the closing figure so far: 7,210,500 against the 3.6M target (+3,610,500) at 00:20:32Z; the 7.2M chest claimed at 00:21:27.9Z",2026-11-25T00:20:32.173Z,record building-queues 2410
+22 crystal,R5: not located; age 30 days from 2026-10-25,2026-11-25T00:25Z,
+23 Glittering Market,R5: market not worked; age 24 days from 2026-10-31,2026-11-25T00:25Z,
+state at the end,"the base was NOT restored at the sweep's close: MY PROFILE with the dialog 'You're very popular!' (Awesome! at (393,677)) open; the coordinator asked",2026-11-25T00:30:39Z,token released 00:30:39Z
+drags,"drags tried 0, cancelled 0",,

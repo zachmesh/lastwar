@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:46:01.673Z, run started 00:46:02.441Z), 15 s after the previous record write; owner idle 27,230 s: wait 0",2026-11-25T00:46:02.441Z,see growth/0054-waits.csv
+badges,"first frame 00:46:06.8Z: the tram icon not drawn, pickup none, radar dish 3; the base after 00:47:30.1Z (timer 01:12:31): the same",2026-11-25T00:46:02.441Z,tram badge rule: none; not tapped
+points before,"Daily Tasks: activity points 140; chests 40, 80, 120 opened and 160, 200 closed (as drawn); four tasks with a blue Go and the Doom Elite task with a green Claim",2026-11-25T00:46:19.575Z,tag text [G]: Mission panel; 140 matches the sweep read 00:26Z
+claim,"the green Claim of 'Defeat any Doom Elite 1 time(s)' (1/1) at (574,431): activity points +10, a bread item 5.0K and an iron item 5.0K shown on the row; no popup",2026-11-25T00:46:26.806Z,one claim; the row's reward list read as printed
+points after,activity points 150; no chest glow or red dot; the 160 chest needs 10 more points,2026-11-25T00:46:39.548Z,no further plain Claim on any task
+remaining tasks,"Recruit Heroes 0/1, Kill 5 zombies on World Map 0/5, Attack a Commander 1 time 0/1 (a red line), Gather Food x 10,000 at 0, one more cut off: each a blue Go, never pressed",2026-11-25T00:46:39.548Z,Go buttons start attacks or marches: not seat actions
+close,"the panel's back arrow (113,930); the base; HUD unchanged",2026-11-25T00:47:14.355Z,
+drags,"drags tried 0, cancelled 0",,

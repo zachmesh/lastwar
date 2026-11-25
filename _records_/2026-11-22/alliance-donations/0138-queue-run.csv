@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"run 1 admitted 0.9 s after the request (start requested 01:38:25.361Z, run started 01:38:26.443Z); run 2 admitted 1.0 s after its request (01:40:18.5Z); owner idle 30,363 and 30,477 s: wait 0",2026-11-25T01:38:26.443Z,see growth/0054-waits.csv
+badges,"01:38:31.9Z (timer 00:21:29): the tram icon not drawn, pickup none, radar dish none; a question-mark bubble beside the pickup (145,649) and a smaller one at (98,682), read, not pressed; the base after 01:42:12.7Z: no TIPS popup",2026-11-25T01:38:26.443Z,tram badge rule: none; not tapped
+slip,run 1 (01:38:25Z to 01:39:50Z): entry count 3/30 at 01:39:02.4Z; no tap (my text's pass rule 'under 6'); nothing spent; the unit's own brief has no such rule,2026-11-25T01:39:02.416Z,"my error in the task text, disclosed; the unit stayed claimed"
+entry count,"Quick Construction 9 of 10: count 3/30 at 01:40:55.181Z; the coin Donate green at 1000, no timer: 1/30 left after pass 009's last tap at 00:43:13Z plus the grid points 01:17:57 and 01:37:57",2026-11-25T01:40:55.181Z,the refill clock matched
+taps,"3 coin Donate taps at (495,756): 01:41:01.1Z, 01:41:18.1Z and 01:41:23.871Z (the last)",2026-11-25T01:41:23.871Z,counts after taps 1 and 2: 2 and 1
+live count before the last tap,1/30 in the frame at 01:41:19.3Z,2026-11-25T01:41:19.252Z,the close condition met
+timer,the coin Donate grey with a cooldown 00:16:23 read at 01:41:34.6Z (a 6x crop confirms): the end 01:57:57.6Z on the grid point 01:57:57 within 0.7 s,2026-11-25T01:41:34.641Z,within the 3 s rule
+witness,the Tech EXP bar 5.3M of 8.0M unchanged; the diamond Donate (2) never pressed,2026-11-25T01:41:42.377Z,
+close,"the dialog X (611,222), the Techs X (614,172), the Alliance back arrow (177,919); the base; no TIPS popup",2026-11-25T01:42:12.742Z,"HUD: coin 31.6M, food 161.8M, iron 783.0M before"
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 00:59:42.255Z, run started 00:59:43.048Z), 16 s after the previous record write; owner idle 28,047 s: wait 0",2026-11-25T00:59:43.048Z,see growth/0054-waits.csv
+badges,"00:59:52.9Z: the tram icon not drawn, pickup none, radar dish none; the Alliance shield, Mail and Inventory with red dots",2026-11-25T00:59:43.048Z,tram badge rule: none; not tapped
+tan trophy bubble,absent: no gold trophy cup in a tan bubble left of the Alliance shield in frames over 28 s,2026-11-25T00:59:52.876Z,tag text [G]: the area left of the Alliance shield
+other bubbles,"a tan bubble with a green tank-like icon (600,710); a tan bubble with a portrait and an 8d timer (598,780); the Alliance shield, Mail and Inventory with red dots",2026-11-25T00:59:58.783Z,none tapped
+central trophy,"the small gold trophy bubble over the central building (584,218) alternating with a NEW tag: NEVER tapped",2026-11-25T01:00:03.580Z,
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, oil 648.4K, energy 112, diamonds 11,173, Total Power 150,103,292",2026-11-25T01:00:20.483Z,nothing pressed
+drags,"drags tried 0, cancelled 0",,

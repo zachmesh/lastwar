@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 02:04:26.734Z, run started 02:04:27.650Z); owner idle 31,925 s: wait 0",2026-11-25T02:04:27.650Z,see growth/0054-waits.csv
+badges,"02:04:33.6Z (timer 00:21:29 equivalent): the TRAM ICON DRAWN with badge 3 (crop of the saved frame), the pickup icon badge 10, the radar dish none",2026-11-25T02:04:27.650Z,tram badge rule: none; not tapped
+badges,"a crop of the left column of the saved first frame: the tram icon (a blue circle with a truck glyph) at (107,580) with a red badge 3; the pickup icon (107,647) with a red badge 10; the radar dish without a badge",2026-11-25T02:04:33.611Z,tag text [G]: left column; told to the coordinator at once
+radar before,no bottom bar; counter 0/40; 663 at 100%; energy 120; '12 Radar Task(s) will be restored in 00:33:27' and 'Fully restore at 11-25 18:38:08 local',2026-11-25T02:04:48.862Z,no task to execute or claim
+pressed,"the radar dish (107,714) and the back arrow (126,936) only",2026-11-25T02:04:55.547Z,nothing pressed on the radar screen
+HUD,"food 161.8M, iron 783.0M, coin 31.6M, oil 648.4K, energy 120, diamonds 11,173, Total Power 150,103,292 before and after",2026-11-25T02:04:55.547Z,
+drags,"drags tried 0, cancelled 0",,

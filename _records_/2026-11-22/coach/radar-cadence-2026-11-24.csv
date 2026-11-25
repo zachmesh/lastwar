@@ -1,0 +1,10 @@
+unit_time_utc,tasks_executed,energy_before_to_after,claim_all_rewards,hours_since_previous_unit,tasks_per_hour_since_previous,note
+2026-11-24 03:43,4,106 to 67,10,,,first of the game day (02:00Z to 02:00Z)
+2026-11-24 06:21,1,98 to 88,1,2.6,0.4,
+2026-11-24 10:15,4,120 to 80,8,3.9,1.0,
+2026-11-24 14:39,4,120 to 80,6,4.4,0.9,
+2026-11-24 18:08,2,183 to 163,5,3.5,0.6,
+2026-11-24 22:19,7,163 to 93,9,4.2,1.7,the 7 included the tasks that stood since 18:08Z
+2026-11-25 00:54,1,120 to 110,4,2.6,0.4,the sweep fix-up at 00:37Z found 'no task left'
+TOTAL for the game day 11-24,23,,43 rewards,,about 1.0 a day-hour,"23 tasks x 30,000 = 690,000 at the new row"
+READING,"tasks arrive at about ONE AN HOUR (0.4 to 1.7 per interval): 23 in 24 hours: ENERGY IS NOT THE LIMIT (the units stopped at 67 to 120 energy, above the floor of 40): THE TASKS AVAILABLE SET THE DAILY TOTAL; the radar screen's '0/40' at 02:05Z is read as a counter of 40 a day [G] (we did 23)",,,,,"re-timing the units changes the total only if tasks EXPIRE (unread): if they do not, the total is the production, about 22 to 23 a day; 18 tasks (the 540,000 chest) accumulate by about 20:00Z"

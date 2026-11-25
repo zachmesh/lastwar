@@ -31,3 +31,5 @@ Back to the [folder index](INDEX.md).
 - [PR 977](landing-pr-977.md) - twenty-first records snapshot, units of 16:10Z to 19:45Z, handovers
 - [PR 978](landing-pr-978.md) - dialog-exception, the one Confirm of a controlled relaunch
 - [PR 979](landing-pr-979.md) - twenty-second records snapshot, records 19:45Z to 20:30Z, trimmed hazards sidecar
+- [PR 980](landing-pr-980.md) - twenty-third records snapshot, records 20:30Z to 23:10Z, standing lines in the template
+- [PR 981](landing-pr-981.md) - gap-start-table, the scroll start point is page-specific

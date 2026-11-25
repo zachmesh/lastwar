@@ -40,4 +40,37 @@ registered_utc,what,outcome_classes_and_probabilities,outcome,score,note
 2026-11-24T21:13Z,Front script returns LastWar to the front (P 0.90),p 0.90,front=LastWar 3.2 s after the script; no dialog,HIT at 0.90,"the script was used twice today (20:17Z, 21:21Z): both clean"
 2026-11-24T21:13Z,Chrome has left by itself by 21:22Z,P(left) 0.35,"still Chrome in front at 21:21:29.083Z, 26 minutes after 20:55Z",MISS: realized probability 0.65 (it stayed),the front script cleared it
 2026-11-24T19:00Z,Survivors forward test: a real claim after the refresh,P(claim) 0.15,"no claim in two tests (18:39Z: a figure appeared, a tap gave a speech bubble; 22:17Z: nothing changed)",HIT on the empty outcome: realized probability 0.85,"the first forward test came back empty, as Steer A allowed"
-TOTAL,"39 scored items (004 void; the downgrade test, the box and Violet's Loot reads, the control and the mail and train forward tests pending)",the last is the survivors forward test at 0.85,mean 0.55,"mean log score -0.71 against -0.77 for a uniform guess per item: better by 0.06 nats an item, n = 39",
+2026-11-24T23:14Z,Special-tab anchor read: pan from a tile gap moves the grid 100 px or more,p 0.60,"143 px, no selection",HIT at 0.60,
+2026-11-24T23:14Z,Special-tab anchor read: Mystery Supply Box tile found in row 4,p 0.30,absent from rows 1 to 5,MISS: realized 0.70,
+2026-11-24T23:14Z,Special-tab anchor read: no purple question-mark chest in rows 1 to 4 (stack 0),p 0.70,absent,HIT at 0.70,
+2026-11-24T23:14Z,Special-tab anchor read: Violet's Loot 57 to 70,p 0.60,58,HIT at 0.60,
+2026-11-24T23:14Z,"Special-tab anchor read: pink crystal 18,442 unchanged",p 0.70,"18,442",HIT at 0.70,
+2026-11-24T23:26Z,"Resources tab read: SR choice chest stack in 1,700 to 2,000",p 0.20,"1,713",HIT at 0.20,
+2026-11-24T23:26Z,Resources tab read: UR choice chest 552 unchanged,p 0.70,552,HIT at 0.70,
+2026-11-24T23:26Z,Resources tab read: SSR choice chest 587 unchanged,p 0.60,587,HIT at 0.60,
+2026-11-24T23:26Z,"Resources tab read: plain Resource Chest 20,753 unchanged",p 0.70,"22,179 (+1,426)",MISS: realized 0.30,
+2026-11-24T23:26Z,Resources tab read: gap pan moves the Resources grid,p 0.80,"150 px, no selection",HIT at 0.80,
+2026-11-24T23:51Z,Duel preview: the 7.2M chest lists an item the plan values,p 0.75,"Valor Badge x400, UR Hero Universal Shard x1, Tactical Master Supply Box x15, Lv.3 Drone Component (alliance-duel/2347)",HIT at 0.75,
+2026-11-24T23:51Z,Duel preview: the red-gem tag is the chest's value label,p 0.60,"'VALUED: 67800': confirmed, not a price",HIT at 0.60,
+2026-11-24T23:51Z,"Duel speed-up unit: 10 construction 5-minute tiles move the total by 7,500 within 1,000",p 0.93,"+7,500 exactly (7,024,500 at 00:13:47.5Z)",HIT at 0.93,
+2026-11-24T23:51Z,"Duel speed-up unit: the update shows at once, not delayed",p 0.85,"7,024,500 again 46 s later: immediate",HIT at 0.85,
+2026-11-24T23:51Z,"Duel speed-up unit: the total reads 7,200,000 or more by 01:15Z",p 0.95,"7,210,500 at 00:20:32Z",HIT at 0.95,
+2026-11-24T23:51Z,"Duel speed-up unit: the Lv.26 ground's end falls by the minutes used, nominal 1:1",p 0.85,"11-26T11:08:37.4Z to 11-25T13:38:36Z = 21 h 30 min = 1,290 minutes exactly",HIT at 0.85,
+2026-11-24T23:51Z,Duel speed-up unit: the claim popup lists the UR Hero Universal Shard x1,p 0.90,a golden puzzle piece x1 (the shard icon) in row 1,HIT at 0.90,
+2026-11-24T23:51Z,Duel speed-up unit: the claim popup is a plain Congratulations with no price,p 0.95,"no X, no button, no price",HIT at 0.95,
+2026-11-24T23:51Z,Duel speed-up unit: the unit finishes by 01:15Z,p 0.85,the claim at 00:21:27.9Z,HIT at 0.85,
+2026-11-24T23:51Z,Duel speed-up unit: the claim works by one plain tap,p 0.85,"one tap at (541,447)",HIT at 0.85,
+2026-11-24T22:42Z,Pass 010 entry count 10 (00:37:57Z to 00:57:57Z),p 0.80,10/30 at 00:41:15.5Z,HIT at 0.80,H20 holds a tenth time
+2026-11-24T16:40Z,"Control at the final sweep: WORLD then BASE with nothing waiting leaves the icon not drawn, no badge",p 0.90,"absent in all four reads, no false light",HIT at 0.90,n = 1
+2026-11-24T16:40Z,Final sweep: at most 3 lines not at zero,p 0.60,"10 not at zero (6 structural, 4 real)",MISS: realized 0.40,the line definition and the 'as directed' passes lines were not in my prior
+2026-11-24T16:40Z,Final sweep: two or fewer unreadable lines,p 0.50,"4 unreadable (armed truck, two VIP, the train)",MISS: realized 0.50,the avatar is forbidden and the tram icon never draws on an empty station
+2026-11-24T17:25Z,Main Tasks unit: the first Claim is plain and works,p 0.90,the row left the list at 01:29:55.3Z,HIT at 0.90,
+2026-11-24T17:25Z,Main Tasks unit: two or more rows carry a green Claim,p 0.50,one green Claim only (Oil Well Lv.24),MISS: realized 0.50,
+2026-11-24T17:25Z,"Main Tasks unit: any row shows a price, gem icon or Buy",p 0.10,none,HIT: realized 0.90,
+2026-11-24T17:25Z,Main Tasks unit: the Oil Well Lv.24 reward includes diamonds,p 0.35,"5.0K food and 5.0K iron, no diamonds",realized 0.65 (the 'no' side),
+2026-11-25T02:17Z,Cycle C: the tram badge 3 counts the empty unlocked slots (H-slots),p 0.55,"the Your Truck badge 3 at entry, then 2, 1, none with each dispatch",HIT at 0.55,
+2026-11-25T02:17Z,Cycle C: the Your Truck tab reads 3 at entry,p 0.50,3,HIT at 0.50,
+2026-11-25T02:17Z,Cycle C: the Others' Trucks tab reads 3,p 0.20,4,MISS: realized 0.80 for 'not 3',the Others' tab rose 2 to 4 since 18:22Z
+2026-11-25T02:17Z,Cycle C downgrade test: a refresh from SR can downgrade (p 0.60),p 0.60,"SR to SR, no downgrade (n = 1)",UNSCORED: posterior 0.53,needs three or more refreshes from SR
+2026-11-24T08:45Z,H1: the old Mystery Supply Box stack (the 356) was opened by another hand (registered 0.55 before the 05:37Z test),p 0.55,the owner's word: the 11-23 morning boxes were his own opening on his phone,"HIT at 0.55 (a hand other than our units, the owner's)",H2 (popups not credited in full) 0.30 and H3 0.15 were wrong for the first drain
+TOTAL,71 scored items (004 void; the downgrade test unscored; the 05:37Z reads and the mail test pending),the last is H1 for the first box drain,mean 0.62,"mean log score -0.58 against -0.74 for a uniform guess per item: better by 0.16 nats an item, n = 71",

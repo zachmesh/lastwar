@@ -1,0 +1,15 @@
+item,value,read_utc,note
+wait,"each run admitted 0.7 to 1.3 s after its request; owner idle 1,905 to 2,374 s: wait 0",2026-11-25T03:10:01.613Z,see growth/0054-waits.csv
+badges,"03:10:06.3Z (Warzone Duel 23:06:00): the tram icon without a badge, the pickup badge 10; after the Perform Now (03:12:57Z and later): the pickup badge none; inside the post the Your Tasks tab badge 1 (the idle SR), Ally Tasks 5",2026-11-25T03:10:01.613Z,tram badge rule: none; not tapped
+before,"Your Tasks: UR Rescue Test Subject, UR Capture the Oil Depot, SSR Protect Refugee Camp and more, all idle with a blue Go; Assist Allies 0/5, Plunder Others 0/5; Mega Refresh and Mega Deploy active with no price",2026-11-25T03:10:17.543Z,"tag text [G]: Secret Command Post, Your Tasks"
+Mega Deploy Reminder,"five tasks ticked: Rescue Test Subject 04:00:00, Capture the Oil Depot 04:00:00, Search for Missing Refugees 01:00:00, Train Refugees 01:00:00, Train Refugees 01:00:00; UR Only unticked; a blue Perform Now; no price; first opened and closed unpressed (03:10:41Z); then Perform Now once at 03:12:26.2Z",2026-11-25T03:12:20.831Z,the free Mega Deploy confirm
+UR Rescue Test Subject Lv.5,running: 03:54:52 left at 03:18:10.1Z: ends 07:13:02Z (4 h task),2026-11-25T03:18:10.135Z,timer cross-checked at 03:14:07Z (03:58:55) and 03:16:33Z (03:56:29)
+UR Capture the Oil Depot Lv.5,running: 03:54:55 left at 03:18:10.1Z: ends 07:13:05Z (4 h task),2026-11-25T03:18:10.135Z,one second apart across reads
+SSR Protect Refugee Camp Lv.5,running: 00:54:11 left at 03:18:40.5Z: ends 04:12:51Z (1 h task),2026-11-25T03:18:40.456Z,
+SSR Train Refugees Lv.5 (first),running: 00:54:18 left: ends 04:12:58Z,2026-11-25T03:18:40.456Z,
+SSR Train Refugees Lv.5 (second),running: 00:54:23 left: ends 04:13:03Z,2026-11-25T03:18:40.456Z,
+SSR Search for Missing Refugees Lv.5,running: 00:54:27 left: ends 04:13:07Z (the last card: the list ends there),2026-11-25T03:18:40.456Z,
+SR Retrieve Valuable Supplies Lv.5,"idle: a blue Go, not deployed by Mega Deploy (not in the Reminder); the Your Tasks badge 1",2026-11-25T03:14:07.268Z,never pressed
+pans,"two composed pans from the margin (150,760) to (150,585): each moved the list 150 px; one more earlier in run 4: drags tried 3, cancelled 0",2026-11-25T03:18:34.670Z,
+HUD,"unchanged; pressed: the pickup icon, Mega Deploy, Perform Now once, the X of the panel, the back arrow, BASE once; nothing claimed or refreshed",2026-11-25T03:18:58.973Z,cost 0.61 USD over five runs
+drags,"drags tried 3, cancelled 0",,

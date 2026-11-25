@@ -1,0 +1,28 @@
+item,value,read_utc,note
+wait,"the lock admitted each run 0.8 s after its request (01:05:30.2Z, 01:07:02.1Z, 01:08:56.8Z, 01:11:24.2Z); owner idle 28,395 to 28,747 s: wait 0",2026-11-25T01:05:31.015Z,see growth/0054-waits.csv
+badges,"01:05:35.1Z: the tram icon not drawn, pickup none, radar dish none; after WORLD then BASE 01:06:00.7Z and 01:06:08.2Z: the same; no false light",2026-11-25T01:05:31.015Z,tram badge rule: none; not tapped
+control,tram icon: not drawn 01:05:35.1Z; after WORLD (tap 01:05:39.1Z) not drawn 01:05:42.3Z; after BASE (tap 01:05:51.6Z) not drawn 01:06:00.7Z and 01:06:08.2Z,2026-11-25T01:06:08.208Z,no false light; first sweep: absent too
+1 food bubbles,"first: NOT AT ZERO; now NOT AT ZERO: five standing at about (306,427), (350,458), (262,458), (305,489), (260,519) at 01:05:35Z and 01:06:08Z, standing after the harvest panel Collect of 00:49Z to 00:52Z (available 0): the panel method does not clear them",2026-11-25T01:06:08.208Z,no fix-up: a harvest unit by the panel method cannot clear them; a bubble tap is outside the harvest rules: a ruling is needed; harvest-2026-11-24-1803 (p3) live
+2 iron bubbles,"first: NOT AT ZERO; now NOT AT ZERO: five standing at about (179,338), (221,367), (177,397), (263,397), (219,427)",2026-11-25T01:06:08.208Z,same finding
+3 coin bubbles,"first: NOT AT ZERO; now NOT AT ZERO: five standing at about (131,427), (174,458), (128,489), (171,519), (215,551)",2026-11-25T01:06:08.208Z,same finding
+4 EXP bubbles,first: AT ZERO; now AT ZERO: none seen,2026-11-25T01:06:08.208Z,
+5 titanium bubbles,first: AT ZERO; now AT ZERO: none seen,2026-11-25T01:06:08.208Z,
+6 armed truck,"first: UNREADABLE; now UNREADABLE: no 'fully loaded' notice seen (01:05:35Z, 01:06:08Z) and the tram icon absent after the control: the timer needs the truck's panel",2026-11-25T01:06:08.208Z,tram-dependent line
+7 drone components,first: AT ZERO; now NOT AT ZERO as directed: passes-2026-11-24-1630 open and NOT RUN; the last live read 23:06:57Z: all cards 'Already claimed today' (record shop-claims 2305); the new day's pickups arrive at 02:00Z,2026-11-24T23:06:57.382Z,"live unit passes-2026-11-24-1630 (p1, est 12)"
+8 upgrade ore,"first: AT ZERO; now AT ZERO: the radar reward popup of 00:53:47Z transcribed (cash x45, radar token item x40, food bag x13, blue triangle item x408, EXP 3.1M, blue screen item x800, coin 860.4K, oil barrel item x880, iron 316.8K, bread 316.8K): no ore line",2026-11-25T00:53:47.658Z,record radar-tasks 0052
+9 screws,first: AT ZERO (none recorded); now the same: no screw claim recorded today,2026-11-25T01:05Z,
+10 shop pickup and Free Supply,first: AT ZERO; now as line 7: last read 23:05:19.9Z 'Claimed'; passes-2026-11-24-1630 open,2026-11-24T23:05:19.906Z,same unit
+11 pass pickups,first: AT ZERO; now as line 7: last read 23:06:57.4Z all five cards 'Already claimed today',2026-11-24T23:06:57.382Z,same unit
+12 VIP Daily Freebie,first: UNREADABLE; now UNREADABLE: no VIP entry or badge in the left column or the HUD (frames 01:05:35Z to 01:06:35Z); the avatar never tapped; vip-2026-11-24-1630 closed blocked by route,2026-11-25T01:05:35.134Z,Steer A's avatar ban
+13 VIP login chest,first: UNREADABLE; now UNREADABLE: same,2026-11-25T01:05:35.134Z,
+14 daily activity chests,"first: NOT AT ZERO (140 of 200 and a Claim); now NOT AT ZERO: activity points 150 of 200 (the Doom Elite task claimed 00:46:26.8Z); chests 40, 80 and 120 drawn bright (opened or glowing: unreadable), 160 and 200 unreached; the remaining daily tasks all blue Go (Recruit Heroes 0/1, Kill 5 zombies 0/5, Attack a Commander 0/1, Gather Food 0 of 10,000); the Main Tasks tab: 'Upgrade Oil Well to Lv.24 (1/1)' with a green Claim (a main task, not this line)",2026-11-25T01:09:42.582Z,no fix-up: the remaining tasks need Go; chest states unreadable
+15 mail,"first: NOT AT ZERO; now NOT AT ZERO: the rail: red dots on Battle Report, Event, System, Regular and In-app Purchases; none on Alliance and Favorite; no gift icon in the lists read at 00:57Z",2026-11-25T01:10:28.230Z,fix-up mail-2026-11-25-0113 (p1): open the three unopened categories
+16 alliance gifts,"first: NOT AT ZERO (Claim All 80); the gifts unit claimed 134 and 2 at 00:56Z; now NOT AT ZERO: a green Claim All badge 32, both tabs with red dots, Gift Level 29 progress 44,266,000 of 257,900,000",2026-11-25T01:08:01.838Z,fix-up gifts-2026-11-25-0113 (p1)
+17 donations,"first: NOT AT ZERO (9 of 30 remaining); pass 009 spent 10; now NOT AT ZERO: Donation Count 1/30 remaining at 01:11:57Z (the coin Donate green, 1000)",2026-11-25T01:11:57.078Z,"fix-up donations-2026-11-25-0113 (p1, serves PL-04): best at or after the grid point 01:37:57Z"
+18 trucks,first: AT ZERO; now AT ZERO: dispatch 5 of 5 and plunder 4 of 4 settled (truck-plunder 1820 and 1850); the tram icon absent after the control: no truck waits,2026-11-25T01:06:08.208Z,
+19 alliance train,first: UNREADABLE; now UNREADABLE: the tram icon absent in every read including after the control; the train unit 0058 closed on the absent icon,2026-11-25T01:06:08.208Z,tram-dependent line
+20 radar,"first: NOT AT ZERO (1 task); the radar unit ran 00:52Z; now AT ZERO: no bottom bar, tasks 0/40, energy 114, 'Fully restore' 01:28:11 left at 01:10:03.5Z",2026-11-25T01:10:03.487Z,record radar-tasks 0052
+21 duel total,"first: AT ZERO; now AT ZERO: the closing figure 7,210,500 against the 3.6M target (+3,610,500), read 00:48:21Z (not re-read in this sweep); the 7.2M chest claimed 00:21:27.9Z",2026-11-25T00:48:21.050Z,records alliance-duel 0048 and building-queues 2410
+22 crystal,R5: not located; age 30 days from 2026-10-25,2026-11-25T01:05Z,
+23 Glittering Market,R5: market not worked; age 24 days from 2026-10-31,2026-11-25T01:05Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the unit's not_before 01:22Z had passed; the lock admitted the run 1.1 s after the request (start requested 01:29:20.457Z, run started 01:29:21.518Z); owner idle 29,819 s: wait 0",2026-11-25T01:29:21.518Z,see growth/0054-waits.csv
+badges,"first frame 01:29:28.3Z: the tram icon not drawn, pickup none, radar dish none; the base after 01:30:39.2Z: the quest banner now reads the Builder's Hut task",2026-11-25T01:29:21.518Z,tram badge rule: none; not tapped
+tabs,MISSION: Main Tasks (selected) and Daily Tasks,2026-11-25T01:29:39.170Z,tag text [G]: Mission panel
+rows before,"Headquarters Lv.31 0/1 (3.0K gold, Go); Oil Well Lv.24 1/1 (5.0K food, 5.0K iron, green Claim); Builder's Hut Lv.26 0/1, Hospital Lv.26 0/1, Training Base Lv.27 0/1 (each 5.0K food and 5.0K iron, Go)",2026-11-25T01:29:48.980Z,the list cut off at the bottom: no scroll
+claim,"the green Claim of 'Upgrade Oil Well to Lv.24 (1/1)' at (566,452): the row left the list; no popup or toast; rewards as printed: 5.0K food and 5.0K iron",2026-11-25T01:30:02.076Z,"one claim; no price, no gem icon"
+rows after,"Headquarters, Builder's Hut, Hospital, Training Base and a new row Gear Factory Lv.21 0/1 (5.0K food and 5.0K iron): all Go; no green Claim remains",2026-11-25T01:30:25.282Z,no Go pressed
+close,"the panel's back arrow (113,930); the base; the quest banner now the Builder's Hut task; HUD unchanged to the 0.1M shown",2026-11-25T01:30:39.159Z,
+drags,"drags tried 0, cancelled 0",,

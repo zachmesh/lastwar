@@ -1,7 +1,7 @@
 ---
 title: Food plan for the long line
 created: 2026-11-23T13:11:00Z
-modified: 2026-11-24T18:57:00Z
+modified: 2026-11-24T23:35:00Z
 version: 2.0.0
 level: L3
 description: Where the food comes from for Base Expansion, the Oil Well, HQ 31 and the first three ground levels, and what waits
@@ -28,7 +28,7 @@ H75 is settled: the ground levels do cost food (record 2320), so the need stays 
 | Supply | Days from 11-24 | Date |
 |---|---|---|
 | Output alone | 147 | 2027-04-20 |
-| Plus typed Food Chests UR (686M) and plain chests (208M) | 91 | 2027-02-23 |
+| Plus typed Food Chests (3.6G read 23:30Z) and plain chests (222M) | 0 | now: a use-count line |
 | Plus own truck dispatch, 15.6M food a day [M cargo; four settles credited, one UR plundered for 25 percent] | 47 | 2027-01-10 |
 | Plus 125 UR choice chests as food | 39 | 2027-01-02 |
 
@@ -41,7 +41,7 @@ Output 10.6M a day gives 0.64G in 60 days against 2.5G: the chests (fixed 273.7M
 ## Sources, in order
 
 1. Own truck dispatch: five trucks dispatched at 10:00Z on 11-24 carry iron 15.6M, food 15.6M and coin 9.9M (UR 3.8M, 3.8M, 2.4M [M cargo, settle pending]); the 11-11 gap may have been the owner's phone (F-126, F-127).
-2. Typed Food Chests UR; SSR and SR Food Chests if they exist (F-071); plain chests as food (208M).
+2. Typed Food Chests, counts read 23:30Z on 11-24: UR 68, SSR 1,428, SR 8,227, R 67, about 3.6G (F-071 true); plain chests as food (222M).
 3. Choice chests as food (UR 4.06M, 67 percent more than as coin).
 4. Harvest bubbles (the 1330 Collect gave 0.7M food), alliance help; Food Output V adds 2.5 percent.
 5. Truck plunder: two fights paid 0.95M and 0.49M food and iron (coin 0.6M and 0.3M) with no wounds; at 3 fights a day about 2.2M food, which moves the typed-and-plain date from 2027-02-23 to about 2027-02-13 (decision 04).
