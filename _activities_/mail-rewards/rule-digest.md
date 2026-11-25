@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Rule Digest
 created: 2026-11-23T07:08:48Z
-modified: 2026-11-23T09:50:09Z
+modified: 2026-11-25T03:46:00Z
 level: L1
-version: 0.2.0
+version: 0.4.0
 description: The standing rules an operator must follow when collecting rewards from game mail, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -23,6 +23,9 @@ grounded_in:
 8. Category rail read live 2026-11-11: Battle Report, Alliance, Event, System, Regular, In-app Purchases, Favorite (_records_/2026-11-11/mail-rewards/1422-queue-run.md).
 9. Latest read 2026-11-22: full sweep, every Claim All answered "No rewards available.", nothing claimed (_records_/2026-11-22/mail-rewards/0619-queue-run.md).
 10. Entry, unverified (old ticker units): ground the Mail envelope fresh each unit; confirm Mail, not Alliance, opened (how-to-enter-p1, run-20261102-0840, run-20261103-1740-p1).
+
+11. The 'Unclaimed Arms Race Event' mail is an event mail with a plain attachment (the event's unclaimed rewards sent by post): read its attachments (names, quantities), tap THAT mail's Claim once, never Claim All; no price, no diamond line, no Go, no link; the chests it pays are not opened (Steer A 2026-11-25 03:39Z; `_records_/2026-11-22/mail-rewards/0328-queue-run.md`).
+12. The 'Glittering Market Unclaimed' mail is NOT claimed: the owner's OD-20261123-10 forbids the Glittering Market by name and the owner's open-item list calls this mail residue of a market not worked; quote its list row's title and time text (no tap, no body read) and report it by name and age in the sweep; whether its attachment may be claimed is the owner's question (Steer A 2026-11-25 03:39Z; `_records_/retro/owner-decisions-log/od-20261123-10.md`).
 
 Unverified: tap offsets, normalized coordinates, window or fullscreen framing and the mail-detail back-arrow re-test (old ticker units, not the computer-use bridge); which reward mails expire (open-questions).
 
