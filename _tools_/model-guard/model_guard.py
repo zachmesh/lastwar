@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""model_guard: every roster seat runs the approved model at the approved effort (owner order 2026-11-23: Claude Sonnet 5.5, xhigh).
+"""model_guard: every roster seat runs the approved model at the approved effort (owner orders 2026-11-23 and 2026-11-25: Claude Sonnet 5.5, xhigh on 11-23, high since 11-25 - the effort is read
+from TEAM.yaml `approved_effort`, never a constant here).
 
 From Steer A's 45-line v1, with the roster read by yaml.safe_load - the `seats` list and the `steward` block - and the policy read
 from TEAM.yaml `coordination.execution.approved_model`, `approved_effort`, `approved_provider`. Each seat's model is read with

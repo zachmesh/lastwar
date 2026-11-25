@@ -1,14 +1,14 @@
 ---
 title: Model Guard
 created: 2026-11-23T09:20:47Z
-modified: 2026-11-23T09:20:47Z
-version: 1.0.0
+modified: 2026-11-25T05:03:09Z
+version: 1.1.0
 description: model_guard.py, the quiet check that every roster seat runs the approved model, with tests
 ---
 
 # Model guard
 
-Owner order 2026-11-23: every seat runs Claude Sonnet 5.5 at xhigh. `model_guard.py` is Steer A's 45-line v1 rebuilt for the
+Owner orders 2026-11-23 and 2026-11-25: every seat runs Claude Sonnet 5.5 at the effort in `TEAM.yaml` (xhigh, high since 11-25). `model_guard.py` is Steer A's 45-line v1 rebuilt for the
 coordinator's 15-minute tick: the roster is read with `yaml.safe_load` (the `seats` list and the `steward` block, skipping seats
 with no session or a concluded assignment), the policy from `TEAM.yaml` `coordination.execution.approved_model`,
 `approved_effort` and `approved_provider`.

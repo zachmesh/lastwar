@@ -105,6 +105,20 @@ class Quiet(Case):
 
 
 class Drift(Case):
+    def test_the_effort_is_the_policys_so_lowering_it_in_team_yaml_makes_the_old_one_drift_and_is_what_is_sent(self):
+        """The owner's request of 2026-11-25 (xhigh to high) needed one line in TEAM.yaml and no code: every seat at the old effort drifts."""
+        lowered = self.tmp / "TEAM-lower.yaml"
+        lowered.write_text(TEAM.replace("approved_effort: high-test", "approved_effort: lower-test"))
+        quiet = self.run_tool(team=self.team)
+        self.assertEqual((quiet.returncode, quiet.stdout), (0, ""))                                # at the old policy nothing drifts
+        r = self.run_tool("--apply", "--verbose", team=lowered)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("seats 4 | drift 4 | fixed 4 | unfixed 0 | policy claude-test-model lower-test", r.stdout)
+        sent = self.calls()
+        self.assertEqual(len(sent), 4)
+        self.assertEqual({c["args"]["request"]["reasoningEffort"] for c in sent}, {"lower-test"})    # only the policy's effort is ever sent
+        self.assertEqual(self.run_tool("--apply", team=lowered).stdout, "")                          # and the next tick is quiet again
+
     def test_a_dry_run_reports_and_exits_one_without_touching_anything(self):
         self.seats(coordinator=GOOD, operator=OPUS, scout=GOOD, steward=GOOD)
         r = self.run_tool()
