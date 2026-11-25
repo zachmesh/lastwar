@@ -1,24 +1,20 @@
 ---
 title: Model policy
 created: 2026-11-23T09:04:37Z
-modified: 2026-11-23T09:41:36Z
-version: 0.2.0
+modified: 2026-11-25T05:03:17Z
+version: 0.3.0
 sequence: 12
 description: Owner decision, 2026-11-22 2022 PT - every DSH session under /Users/zhenchen/zachmesh/lastwar runs Claude Sonnet 5.5 at
 ---
 ### Model policy
 
 Owner decision, 2026-11-22 20:22 PT: every DSH session under
-`/Users/zhenchen/zachmesh/lastwar` runs **Claude Sonnet 5.5 at xHigh effort**
-(`claude-sonnet-5-5`, `reasoningEffort: xhigh`, provider `meta-claude`).
-
-- Applied through `session/selectModel` to the nine top-level sessions (the
-  Steward, Coordinator and seven seats) and verified by `session-relay
-  inspect`, which reports `model=claude-sonnet-5-5/xhigh` for each.
-- The seven retired child-session predecessors are owned by subagent routing;
-  the host refuses `selectModel` on them (`session/agent-busy`). They are idle
-  and unused; they stay as they are until archived, and no new work goes to
-  them.
+`/Users/zhenchen/zachmesh/lastwar` runs **Claude Sonnet 5.5** (`claude-sonnet-5-5`, provider `meta-claude`). The effort was
+xHigh until the owner's request at the GUI, 2026-11-25 05:05Z, which set **High** (`reasoningEffort: high`).
+- Applied through `session/selectModel`; `session-relay inspect` reports `model=claude-sonnet-5-5/high`. On 2026-11-25 the
+  guard fixed nine idle seats and the coordinator re-pointed the running three; the guard reads `approved_effort: high` from `TEAM.yaml`.
+- Child (subagent) sessions are refused by the host (`session/agent-busy`; 58 on 2026-11-25): they are finished and
+  stay as they are.
 - A running session picks the new model up at its next turn.
 - The computer-use run model is a separate setting (`--model` on
   `cu_bridge.py start`, currently `claude-gateway/claude-sonnet-5-5`).
@@ -36,8 +32,8 @@ The operator's respawn at 09:07Z came up on the host default, `claude-opus-5-5`,
 Respawn checklist:
 
 1. `python3 _tools_/spawn-seat/spawn_seat.py --title "<seat title>" --prompt-file <bootstrap>`; never a bare spawn.
-2. The printed read-back must be `claude-sonnet-5-5/xhigh`; exit 1 means stop and tell the coordinator.
-3. Confirm with `session-relay inspect`: `model=claude-sonnet-5-5/xhigh`.
+2. The printed read-back must be `claude-sonnet-5-5/high`; exit 1 means stop and tell the coordinator.
+3. Confirm with `session-relay inspect`: `model=claude-sonnet-5-5/high`.
 4. A running seat that drifts is left to `model_guard.py --apply`.
 
 TEAM.yaml lists ten seats and the steward, eleven sessions in all, and the guard checks every one.
