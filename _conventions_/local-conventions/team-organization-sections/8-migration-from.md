@@ -1,8 +1,8 @@
 ---
 title: 8. Migration from child sessions
 created: 2026-11-23T09:04:37Z
-modified: 2026-11-23T09:04:37Z
-version: 0.1.0
+modified: 2026-11-25T05:03:17Z
+version: 0.2.0
 sequence: 11
 description: The first team used delegated child sessions.
 ---
@@ -32,7 +32,7 @@ The top-level sessions are created with:
 DSH_WEB_URL=http://localhost:8080 SESSION_RELAY_JAR=/tmp/dsh-gate.cj \
   python3 ~/dtadpole/reflection/_tools_/session-relay/session-relay.py spawn \
   --workspace /Users/zhenchen/zachmesh/lastwar --title '[Last War] <Role>' \
-  --model claude-sonnet-5-5 --effort xhigh \
+  --model claude-sonnet-5-5 --effort high \
   --prompt-file /tmp/lw-<role>-bootstrap.md
 ```
 
