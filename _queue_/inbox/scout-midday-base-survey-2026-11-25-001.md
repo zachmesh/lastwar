@@ -5,7 +5,7 @@ activity: perception-scout
 segment: 2
 priority: 2
 created_at: 2026-11-25T05:38:41Z
-expires_at: 2026-11-25T09:55:00Z
+expires_at: 2026-11-25T17:30:00Z
 planned_for:
 not_before: 2026-11-25T05:48:00Z
 window: base survey by the composed pan read only owner instruction 05:37z

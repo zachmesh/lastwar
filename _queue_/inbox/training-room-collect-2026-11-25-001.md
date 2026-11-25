@@ -5,7 +5,7 @@ activity: troop-training
 segment: 2
 priority: 2
 created_at: 2026-11-25T00:24:18Z
-expires_at: 2026-11-25T16:30:00Z
+expires_at: 2026-11-25T17:30:00Z
 planned_for:
 not_before: 2026-11-25T13:35:00Z
 window: room read and collect of finished batches after the lv 26 ground completes 11-25
@@ -22,8 +22,6 @@ lease_until:
 
 # training
 
-Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
-
 Serves: PL-09
 
 ## Brief (definition pointer, from the roster)
@@ -36,10 +34,11 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-09
 
-DISPATCH ONLY WHEN NAMED, at about 13:39Z on 2026-11-25: the Lv.26 ground ends 2026-11-25T13:38:36Z (record building-queues/2410: 258 construction 5-minute tiles took 1,290 minutes off its old end 11-26T11:08:37Z). FIRST read the ground's timer: more than 5 minutes left: RELEASE this unit unrun. +200 room, +21,600 power.
+DISPATCH ONLY WHEN NAMED, at about 13:39Z on 2026-11-25: the Lv.26 ground ends 2026-11-25T13:38:36Z. FIRST read the ground's timer: more than 5 minutes left: RELEASE this unit unrun. +200 room, +21,600 power.
 
 1. A finished ground completes by TAPPING THE WRAPPED GIFT BOX on it (no Complete button): if the Lv.26 ground shows one, tap it ONCE; write Total Power before and after.
-2. THE PARTIAL COLLECT TEST (Coach's evidence 1215; Steer A 15:08Z). FIRST read 'Unit Count X of Y' (the free room). Write the READY BUBBLE AND ITS DIGITS beside each tent, cropped from the SAVED frame at 6x, never a zoom action (expected: Lv.24 about 249, Lv.30 about 793, Lv.20 probably a finished batch, Lv.27 none). Highest power per troop first: press the Lv.30 pistol ONCE, then the Lv.24 pistol ONCE whatever Lv.30 did, then Lv.20 ONLY IF room remains; each press with 'Unit Count X of Y' before and after. Registered: (A) ramp: Lv.30 collects 200 T10 (+329,400), Lv.24 refused 'Drill Ground Full'; (B) both refused; (C) Lv.30 refused, Lv.24 collects 200 (+212,600). Record each toast EXACTLY and Total Power before and after. An empty barracks (Lv.27) opens its Train Units panel with no toast: close it.
+2. THE PARTIAL COLLECT TEST. FIRST read 'Unit Count X of Y' (the free room). Write the READY BUBBLE AND ITS DIGITS beside each tent, cropped from the SAVED frame at 6x, never a zoom action (expected: Lv.24 about 249, Lv.30 about 793, Lv.27 none). Highest power per troop first: press the Lv.30 pistol ONCE, then the Lv.24 pistol ONCE whatever Lv.30 did, then Lv.20 ONLY IF room remains; each press with 'Unit Count X of Y' before and after. Registered: (A) ramp: Lv.30 collects 200 T10 (+329,400), Lv.24 refused 'Drill Ground Full'; (B) both refused; (C) Lv.30 refused, Lv.24 collects 200 (+212,600). Record each toast EXACTLY and Total Power before and after. An empty barracks (Lv.27) opens its Train Units panel with no toast: close it.
 3. Never Train, Heal, Collect at the Hospital, speed up or buy. May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+BUTTON ROW: the buttons under a tent are small: verify the pistol glyph in a frame before each tap (a stray tap once opened Building Details, another the world map): back arrow or X, and write it; never the green up arrow (the upgrade shortcut).
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 Cost cap, stated: 0.50 USD.

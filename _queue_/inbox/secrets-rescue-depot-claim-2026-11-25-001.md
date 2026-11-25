@@ -5,9 +5,9 @@ activity: secret-missions
 segment: 2
 priority: 1
 created_at: 2026-11-25T03:16:37Z
-expires_at: 2026-11-25T07:58:00Z
-planned_for:
-not_before: 2026-11-25T07:13:30Z
+expires_at: 2026-11-25T17:30:00Z
+planned_for: 2026-11-25T10:01:28Z
+not_before:
 window: claim the rescue and oil depot tasks and re-deploy, after the oil well hand-off
 est_minutes: 8
 serves: PL-17
@@ -34,7 +34,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-17
 
-The UR RESCUE TEST SUBJECT Lv.5 ends 07:13:02Z and the UR CAPTURE THE OIL DEPOT Lv.5 07:13:06Z: ONE claim takes both. A finished secret task is exposed to plunder from its end (04:16Z on 11-25): CLAIM FIRST, redeploy after. Opens 07:13:30Z, p1, ahead of non-builder units (the Oil Well hand-off ran early); END BEFORE 07:58Z. Verify the title SECRET COMMAND POST before any tap. Read each card's timer to the second with the UTC time. Claim ONLY with the in-game Claim button (one tap claims every finished task); a task not finished: claim nothing, write the time left. Read the claim POPUP FROM ITS TOP (a frame before any scroll, one after: rows above may be missing); write every row with its count; quote the SECRET TASK REPORT lines (who as shown, when, what: plunder and ally help; the owner's own name never). Then re-deploy with Mega Deploy; write the new timers and the claim time. No diamond or item spend, no Mega Refresh; Plunder Others is PvP: never tapped. No Backpack or box-count read.
+The UR RESCUE TEST SUBJECT Lv.5 ends 07:13:02Z and the UR CAPTURE THE OIL DEPOT Lv.5 07:13:06Z: ONE claim takes both. A finished secret task is exposed to plunder from its end (04:16Z on 11-25): CLAIM FIRST, redeploy after. Opens 07:13:30Z, p1; Avoid 08:00Z-08:25Z and 09:58Z-10:05Z. Verify the title SECRET COMMAND POST before any tap. Read each card's timer to the second with the UTC time. Claim ONLY with the in-game Claim button (one tap claims every finished task); a task not finished: claim nothing, write the time left. Read the claim POPUP FROM ITS TOP (a frame before any scroll, one after: rows above may be missing); write every row with its count; quote the SECRET TASK REPORT lines (who as shown, when, what: plunder and ally help; the owner's own name never). Then re-deploy with Mega Deploy; write the new timers and the claim time. No diamond or item spend, no Mega Refresh; Plunder Others is PvP: never tapped. No Backpack or box-count read.
 CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (state after, in the summary) or a verified nothing-to-do state with a `state_read: <what was read> | <frame> | <HH:MM:SSZ>` line; else PARTIAL; `--state-change yes` if a claim was taken.
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
