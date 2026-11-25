@@ -48,3 +48,4 @@ Back to the [folder index](INDEX.md).
 - [PR 994](landing-pr-994.md) - known-dialogs-table, the known-dialogs table with the like dialog and the avatar rule
 - [PR 995](landing-pr-995.md) - scribe handover 0.6.0, the open branch stated truly
 - [PR 996](landing-pr-996.md) - twenty-seventh records snapshot, the two-hourly delivery 16:00Z to 18:00Z, handovers
+- [PR 997](landing-pr-997.md) - twenty-eighth records snapshot, the two-hourly delivery 18:00Z to 20:00Z
