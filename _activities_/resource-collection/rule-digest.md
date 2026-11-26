@@ -1,9 +1,9 @@
 ---
 title: Resource Collection Rule Digest
 created: 2026-11-23T06:22:07Z
-modified: 2026-11-26T13:29:36Z
+modified: 2026-11-26T16:36:43Z
 level: L1
-version: 0.3.0
+version: 0.4.0
 description: The standing rules an operator must follow when collecting building output and truck loot, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -17,8 +17,8 @@ grounded_in:
 2. Ground the bubble centre on the live screenshot, never an estimate; re-ground after any camera pan (how-it-is-p3, how-it-is-p9).
 3. Identify the bubble before tapping; confirm the total moved after the first tap (R2, how-it-is-p8).
 4. Verify the HUD total moved after every tap (how-it-is-p1).
-5. Panel Collect is the standing method: open each resource panel, read Available, tap Collect, confirm Owned moved and Available is 0; after bubble taps still read the panels (how-it-is-p1, how-it-is-p2).
-6. One tap per resource type clears all its bubbles; the harvest brief (2026-11-26) taps no bubble over a building, so the furnace 596 bubbles and the 11-26 wrench bubbles (+480 each, free) are uncovered: probably one class under two glyphs [G]; resource unread, oil the candidate (open-questions-p3, `_records_/2026-11-22/perception-scout/1320-queue-run.md`).
+5. Panel Collect is the standing method: open each resource panel, read Available, tap Collect, confirm Owned moved and Available is 0; after bubble taps still read the panels (how-it-is-p1, how-it-is-p2). The capacity bar is not a cap on Collect ([piles](piles-and-capacity.md)).
+6. One tap per resource type clears all its bubbles; the harvest brief taps no bubble over a building, so the furnace 596 and 11-26 wrench bubbles (+480 each, free) are uncovered: probably one class [G]; resource unread (oil?) (open-questions-p3, `_records_/2026-11-22/perception-scout/1320-queue-run.md`).
 7. Read the screen between taps; never batch-tap after a tap opened a panel (how-it-is-p9).
 8. Close a stray building panel with the left-edge swipe-back, not the X (how-it-is-p9).
 9. The Armed Truck loot check is the first action of each harvest unit (R7) (how-it-is-p12, how-it-is-p15).
