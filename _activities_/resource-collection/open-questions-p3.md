@@ -1,8 +1,8 @@
 ---
 title: Open questions part 3
 created: 2026-11-23T06:19:33Z
-modified: 2026-11-23T06:19:33Z
-version: 0.1.0
+modified: 2026-11-26T13:29:36Z
+version: 0.2.0
 sequence: 37
 description: Issue 502 stays open.) (2026-11-11 1740 update - still not run - this unit tapped bubbles,
 ---
@@ -10,3 +10,4 @@ description: Issue 502 stays open.) (2026-11-11 1740 update - still not run - th
 
 - What the blue-triangle 596 bubbles over the furnace buildings are: four yellow-circle bubbles with a blue triangle icon, each labelled 596, stand over the orange-glowing furnace buildings; one tap cleared all four at once with no HUD total moving. Candidates, unverified: oil from the Age of Oil event (the oil total may live on the event page, not the HUD) or a furnace output that lands in inventory. Tracked as knowledge Issue #508 (labels knowledge). The next harvest unit reads the furnace building panel and, if it is oil, the Age of Oil event page, and states whether these bubbles belong in the zero sweep. (Added 2026-11-09 0636.) (2026-11-10 0826 update: the 4 blue triangles were unchanged, 4 before and 4 after, by the green-bubble tap - they did not clear. Issue #508 stays open.)
 
+2026-11-26 note: the bubble probe (`_records_/2026-11-22/perception-scout/1320-queue-run.md`) tapped three wrench bubbles over blue copper-domed buildings once: +480 on each, all three vanished, free, no panel or price [M]. The coin, food and iron HUD steps are 0.1M and hide 1.4K; the oil HUD steps are 0.1K and would show it. A new glyph of the class of the 596 bubbles [G]; the resource is still unread, and the oil counter in the 13:22Z and 13:24Z frames would settle it.
