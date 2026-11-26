@@ -1,9 +1,9 @@
 ---
 title: Event Claims Rule Digest
 created: 2026-11-23T07:08:45Z
-modified: 2026-11-23T09:48:37Z
+modified: 2026-11-26T15:28:23Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules an operator must follow when claiming event rewards, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 # Rule digest
 
 1. Recenter the base view first; the green up-arrow is a retract control (how-it-is, run-20261122-0253).
-2. Sweep every hub tab: wait after each tap, drag the bar to its end (how-it-is, day-20261101).
+2. Sweep every hub tab: the hub opens scrolled on the remembered tab, so drag the bar (no hold) both ways until every tab is seen and listed; wait after each tap (how-it-is, day-20261101).
 3. Claim earned rewards; Doomsday first-kill tiers re-arm each round (how-it-is, _records_/2026-11-08/event-claims/0656-queue-run.md).
 4. A bouncing chest or reward dot is unclaimed until opened; rescan after claiming; check each reward set (how-it-is, day-20261026).
 5. A tab dot or badge is not claim proof (_records_/2026-11-02/event-claims/2341-queue-run.md, _records_/2026-11-08/event-claims/1506-queue-run.md).

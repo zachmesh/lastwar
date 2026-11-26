@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-23T07:28:22Z
+modified: 2026-11-26T15:28:23Z
 level: L1
-version: 1.44.0
+version: 1.45.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -60,3 +60,5 @@ Checking event pages and claiming earned event rewards, one activity folder for 
 ## Changelog
 
 - 1.44.0, 2026-11-23 - Split verbatim by `split_doc.py` from a 1375-line, 18,103-word body into 67 key-named articles and 3 catalog pages, and added `rule-digest.md`; no word rewritten. `--verify` PASS and `--check` EQUAL against the unsplit original, body sha256 495a528fd093; the unsplit 1.43.0 file is commit 0467e3ef.
+
+2026-11-26 note, the tab bar scrolls: the Events hub opens on the remembered tab with the bar already scrolled, and one plain drag of the bar (no hold) showed the Age of Oil, Arms Race, Black Market and a cut-off 'B' tab with a red '!' (the operator's disclosure, relayed by the coordinator; its record is not written yet). The 15:18Z sweep made 0 drags, read the four tabs then visible and called the Age of Oil and Arms Race absent from the bar (`_records_/2026-11-22/event-claims/1518-queue-run.md`). Older 'full hub sweep of all 5 tabs' and 'all 7 tabs' source lines may have missed scrolled-off tabs [G].
