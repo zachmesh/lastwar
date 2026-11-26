@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 11,167 s: wait 0",2026-11-26T14:57:27.470Z,see growth/0054-waits.csv
+badges,14:57:32.4Z: the tram absent; the pickup bare; radar 4; hammer 4/4; flask 2/2,2026-11-26T14:57:27.470Z,tram badge rule: none; not tapped
+tram,"absent (not drawn) at 14:57:32.4Z, 14:57:37.8Z and 14:57:59.3Z",2026-11-26T14:57:32.398Z,tag text [G]: base left column
+Total Power,"151,689,455 (unchanged at all three reads)",2026-11-26T14:57:32.398Z,
+HUD,"food 43.4M, iron 640.0M, coin 9.3M, oil 617.0K, gold bars 26.72K, diamonds 10,673, energy 131",2026-11-26T14:57:32.398Z,
+left column,pickup bare; radar dish 4; hammer 4/4; flask 2/2,2026-11-26T14:57:59.302Z,
+right column,Alliance and Mail red dots; Events 1; Thanksgiving 1; Inventory none,2026-11-26T14:57:32.398Z,unchanged
+trade count,5/5 (last read 14:41:26.7Z),2026-11-26T14:41:26.7Z,not re-read
+drags,"drags tried 0, cancelled 0",,

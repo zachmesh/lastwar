@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 10,351 to 10,906 s: wait 0",2026-11-26T14:44:17.995Z,see growth/0054-waits.csv
+badges,"14:44:22Z: the tram not drawn; Inventory tab badges Special 68, Heroes 20",2026-11-26T14:44:17.995Z,tram badge rule: none; not tapped
+speed-up stacks,"construction hammer: 5m 24,829, 1m 19,640; general: 8h 94, 3h 266, 1h 1,196, 15m 1, 5m 32,858, 1m 25,725; others read",2026-11-26T14:44:42.371Z,no tap
+Food Chest (SR),169.20K Food; quantity 1; Use 14:50:13.4Z; food 43.3M to 43.4M,2026-11-26T14:50:15.602Z,tile count not read
+Iron Chest (SR),"169.20K Iron; 8,724 to 8,723; Use 14:50:48.0Z; iron 639.9M to 640.0M",2026-11-26T14:50:50.185Z,
+Coin Chest (SR),101.52K Coins; 18 to 17; Use 14:51:52.1Z; coin 9.2M to 9.3M,2026-11-26T14:51:59.264Z,floor 10M
+oil barrel,6.0K Oil x15 to x14; one barrel Use 14:52:18.3Z; oil 587.0K to 593.0K (+6.0K),2026-11-26T14:52:20.531Z,in range 5.9K to 6.1K
+four barrels,"NOT used: quantity set to 4 (Total 24.00K), cost cap reached",2026-11-26T14:52:29.733Z,"Backpack left open, Use live"
+drags,"drags tried 0, cancelled 0",,

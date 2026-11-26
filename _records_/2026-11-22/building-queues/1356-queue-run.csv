@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 7,471 to 9,963 s; the front was waited out by the coordinator's hold from 14:09 to 14:19Z",2026-11-26T13:55:44.352Z,see growth/0054-waits.csv
+badges,13:56:34Z: the tram bare; 14:35:16Z: the tram a count badge 1,2026-11-26T13:55:44.352Z,tram badge rule: none; not tapped
+helmet map,helmet over the 13-day ground and over the Oil Well; none over the 7-day or the 3-day ground,2026-11-26T13:56:34.250Z,6x crops: same glyph; green Q bubble elsewhere
+13-day ground,pressed 13:58:22.1Z; 30 helps; end 2026-12-10T07:24:19Z to 2026-12-08T09:25:35Z; 0.50% of the remaining per help,2026-11-26T14:20:03.552Z,"k 5.0, 7.0, 9.0, 13.0 then 30.0"
+Oil Well,pressed 14:24:47.8Z; 30 helps; end 2026-11-28T19:37:10Z to 2026-11-28T08:50:14Z; 0.75% per help,2026-11-26T14:37:38.212Z,"cut 38,816 s = Help page Time reduced 10:47:00"
+front,"Chrome took the front 14:02:04.5Z (owner idle 8,286 s); front script once at 14:19:25Z; LastWar 14:19:31Z",2026-11-26T14:19:31Z,Steer A 14:16Z
+cost,1.220 of 0.80: crossed inside the Oil Well press run,2026-11-26T14:26:40Z,disclosed
+tram,count badge 1 from 14:35:16Z: not entered,2026-11-26T14:35:16.769Z,a returned truck
+drags,"drags tried 0, cancelled 0",,

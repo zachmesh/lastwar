@@ -5,11 +5,11 @@ activity: building-queues
 segment: 1
 priority: 9
 created_at: 2026-11-23T16:00:32Z
-expires_at: 2026-11-29T09:46:07Z
+expires_at: 2026-11-28T22:52:14Z
 planned_for:
-not_before: 2026-11-28T13:46:07Z
+not_before: 2026-11-28T02:52:14Z
 window: oil well level 27 to 28 builder b1 chain complete the previous level and start this one
-est_minutes: 8
+est_minutes: 12
 serves: PL-17
 chain_id: oil-well-2026-11-24
 chain_seq: 8
@@ -22,12 +22,14 @@ lease_until:
 
 # building-queues
 
-Definition `_activities_/building-queues/`; routes `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`.
-
 ## Brief (planner, builder B1: Oil Well Lv.27 to 28, PL-17)
 
-FIRST read the Oil Well entry in the hammer panel: the queue row 'Lv.N upgrade in progress' names the level being upgraded FROM: a row 'Lv.27 upgrade in progress' or a tag 'Oil Well Lv.28' means another hand started it: do NOT release: close a verified nothing-to-do with a `state_read:` line. If the Lv.26 job still has more than 5 minutes left, write the time and RELEASE this unit unrun. If finished: the well completes by TAPPING THE WRAPPED GIFT BOX on the building (never Speed Up or Finish Now). Go to the well by the route in the sheet: the oil-barrel bubble over it is a COLLECT, never tap it, tap the building below it. Read the tag ('Oil Well Lv.27'; stop and report if it differs) and open the Upgrade preview ('Lv.27 to 28'). DRAG THE COST LIST until EVERY row is visible (iron, food, coin, oil), then write every cost row, the effective time, the original time and the power gained, with the stocks in the SAME frame. Press Upgrade ONCE, ONLY if every stock stays at or above coin 10M, iron 100M and food 30M after the cost, checked against ALL rows AND the table's expected cost at 0.85 (Lv.27 to 28: iron 78.2M, food 26.4M, coin 17.0M; a charged row can hide even after a drag: 2541), and no diamond price shows; a shortfall may be covered ONLY by the typed fixed chests per sheet `2542-drill-ground-preconvert-rules.md` (never choice chests); if they do not cover it: DO NOT press, write the preview and STOP. After the press read the timer to the second; write the effective time, the SPEED FACTOR and the panel's end time in UTC. NEVER the green up arrow, NEVER Speed Up or Finish Now. If any cost row was NOT seen: DO NOT press, write what was seen and STOP.
+Read the Oil Well entry in the hammer panel: a row 'Lv.27 upgrade in progress' or a tag 'Oil Well Lv.28' means another hand started it: close a verified nothing-to-do. If the Lv.26 job has over 5 minutes left, RELEASE unrun. If finished: TAP THE WRAPPED GIFT BOX.
+COIN FIRST: coin panel: read Available, Collect ONCE, confirm Owned moved, read the HUD coin.
+Go to the well by the route in the sheet (never tap the oil-barrel bubble: a COLLECT). Read the tag ('Oil Well Lv.27'; else stop and report), open the preview ('Lv.27 to 28') and DRAG THE COST LIST until EVERY row is visible: write every row, effective time, power gained, the stocks in the SAME frame. Table cost at 0.85: iron 78.2M, food 26.4M, coin 17.0M.
+Press Upgrade ONCE, ONLY if every stock stays at or above coin 10M, iron 100M, food 30M after the cost by BOTH the table and ALL rows seen, no diamond price. Any row NOT seen: DO NOT press. Only coin short, up to 1.73M: cover ONLY the shortfall plus 0.1M with the fewest whole typed Coin Chest (SR) tiles (17 left, 101.52K each) per sheet 2542 'Each Use' (the Diamonds tile hazard; the count tag read before each Use; HUD coin up by quantity times 101.52K within one display step); never the R5 choice chests. Otherwise a floor breaks: DO NOT press, write the table's total and stocks, RELEASE unrun. After the press: the timer to the second, the SPEED FACTOR, the end time in UTC.
+HELMET (Steer A 14:04Z): right after the press, a 6x crop above the well: press the white round green-helmet bubble ONCE (no other bubble); end time to the second before, at +1 and at +10 minutes; a priced, Speed Up or Upgrade dialog: close by its X. NEVER the green up arrow or Speed Up.
 CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for the Upgrade pressed or a verified nothing-to-do (`--state-change no`, a `state_read:` line); else PARTIAL.
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
-Cost cap, stated: 0.60 USD.
+Cost cap, stated: 1.20 USD.

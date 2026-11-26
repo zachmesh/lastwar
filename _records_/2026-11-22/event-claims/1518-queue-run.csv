@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"read-only wait 15:15:58 to 15:17:52Z for the cu-integrator gate run (never bypassed); owner idle 12,447 s",2026-11-26T15:18:01.679Z,see growth/0054-waits.csv
+badges,15:18:06.4Z: Events badge 1; Thanksgiving badge 1; the tram not drawn,2026-11-26T15:18:01.679Z,tram badge rule: none; not tapped
+tab bar,"Black Market, Black Market Challenge, Desert Battlefield, Zom (Zombie Invasion - Glacieradon); no tab dot; The Age of Oil and Arms Race absent",2026-11-26T15:19:10.026Z,tag text [G]: Events hub
+Black Market,Sold Out or BM Cash prices: skipped,2026-11-26T15:19:16.946Z,
+Black Market Challenge,earned today 725/745; 3d 10:40:37; only Go To rows,2026-11-26T15:19:10.026Z,no Claim
+Desert Battlefield,waiting for battle to start; 1d 09:35:32; Enter and Watch buttons,2026-11-26T15:19:28.729Z,no claim
+Zombie Invasion,"Store icon with a red dot (not pressed); Search, Boss Search, Record",2026-11-26T15:19:36.129Z,nothing claimable
+turkey tickets,"6 (store rows 6/100, 6/10, 6/1) at 15:20:00Z; Thanksgiving timer 4d 10:39:59",2026-11-26T15:20:00.800Z,unchanged since 10:48:57Z
+badges,Events 1 and Thanksgiving 1 before and after,2026-11-26T15:20:13.930Z,no claim possible
+drags,"drags tried 0, cancelled 0",,

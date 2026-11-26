@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 12,099 s: wait 0",2026-11-26T15:13:03.066Z,see growth/0054-waits.csv
+badges,15:13:07.8Z: not read (the Backpack run),2026-11-26T15:13:03.066Z,tram badge rule: none; not tapped
+speed-ups,"general: 8h 94, 3h 266, 1h 1,196, 15m 1, 5m 32,858, 1m 25,725 (same as 14:44:42Z)",2026-11-26T15:13:27.030Z,no tile tapped
+stack,6.0K Oil x10 to 0,2026-11-26T15:14:10.565Z,"quantity 10, Total 60.00K"
+Use,"once at 15:14:17.7Z at quantity 10: no price, gem or popup",2026-11-26T15:14:21.002Z,
+oil,618.2K to 678.2K (+60.0K = 10 x 6.0K),2026-11-26T15:14:21.002Z,exact
+barrels in all,15 (1 + 4 + 10): oil 587.0K to 678.2K with the radar's 1.2K,2026-11-26T15:14:21.002Z,Steer A 15:04Z
+drags,"drags tried 0, cancelled 0",,

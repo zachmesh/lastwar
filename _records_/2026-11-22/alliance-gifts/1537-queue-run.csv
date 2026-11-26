@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,the lock was free at the claim; the macOS window was dismissed by one killall before the run,2026-11-26T15:37:55.828Z,see growth/0054-waits.csv
+badges,15:38:02.7Z: the tram not drawn; the pickup bare; the radar dish 8; the Alliance button a red dot; the Gifts tile a red dot,2026-11-26T15:37:55.828Z,tram badge rule: none; not tapped
+macOS window,UserNotificationCenter in front 15:37:40Z; one killall -9 UserNotificationCenter at about 15:37:42Z; LastWar in front 15:37:44Z; not returned through 15:39:38Z,2026-11-26T15:37:44Z,Steer A 10:39Z ruling; nothing read or clicked
+Regular,"198 gifts claimed: coin 600 x1.1K, iron 1.0K x754, 5m speed-up x19, iron 10.0K x29, food 1.0K x870, red gem 5 x22, coin 6.0K x58",2026-11-26T15:38:26.969Z,result dialog; no market item
+Premium,"10 gifts claimed: gold ticket x1, 500 medal x4, 50 medal x5, blue crate x7, gold crate x2, a 60 material tile",2026-11-26T15:38:46.386Z,result dialog; no market item
+Gift Level,"29: 51,380,540 before; 51,384,180 after of 257,900,000",2026-11-26T15:38:19.381Z,"+3,640"
+tile dot,"the Alliance Gifts tile's red dot cleared; Help, Techs, Events keep theirs",2026-11-26T15:39:26.056Z,
+drags,"drags tried 0, cancelled 0",,

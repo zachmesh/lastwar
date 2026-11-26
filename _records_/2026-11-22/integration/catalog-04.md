@@ -25,3 +25,7 @@ Back to the [folder index](INDEX.md).
 - [PR 1011](landing-pr-1011.md) - thirty-sixth records snapshot, the two-hourly delivery 10:00Z to 12:00Z
 - [PR 1012](landing-pr-1012.md) - wrench-bubble-note, the wrench bubbles of the 11-26 probe are uncovered by the harvest unit
 - [PR 1013](landing-pr-1013.md) - build-preview-rule, a build unit presses only after every cost row is seen
+- [PR 1014](landing-pr-1014.md) - thirty-seventh records snapshot, the two-hourly delivery 12:00Z to 14:00Z, handover 0.27.0
+- [PR 1015](landing-pr-1015.md) - help-request, the helmet bubble is the alliance help request (one press per build)
+- [PR 1016](landing-pr-1016.md) - scribe handover 0.7.0
+- [PR 1017](landing-pr-1017.md) - help-request-flat, each help is the larger of 0.5 percent and a flat 21.6 minutes
