@@ -1,22 +1,22 @@
 ---
 title: Build help request, the helmet bubble
 created: 2026-11-26T14:07:05Z
-modified: 2026-11-26T14:07:05Z
-version: 0.1.0
+modified: 2026-11-26T14:43:12Z
+version: 0.2.0
 description: The white round helmet bubble over an upgrading building is the alliance help request - what it is, what each help does to the end time, and Steer A's standing step for every build unit
 ---
 
 # Build help request, the helmet bubble
 
-Dated 2026-11-26 14:04Z, from the operator's interim helmet-test report (its press record is not written yet) and Steer A's rulings. Evidence so far: `_records_/2026-11-22/building-queues/1328-queue-run.md` and `_records_/2026-11-22/coach/help-evidence-h118.csv`. Back to the [rule digest](rule-digest.md).
+Dated 2026-11-26, updated 14:42Z, from the operator's helmet test (`_records_/2026-11-22/building-queues/1356-queue-run.md`, in the delivery queue) and Steer A's rulings. Earlier: `_records_/2026-11-22/building-queues/1328-queue-run.md`, `_records_/2026-11-22/coach/help-evidence-h118.csv`. Back to the [rule digest](rule-digest.md).
 
 ## What it is
 
-A white round helmet bubble over an upgrading building is the alliance help request: one press, no price, no dialog [M]. Only the 13-day Lv.28 Drill Ground carried it at 13:55Z, not the 7-day and 3-day grounds. One press at 13:58:22.1Z drew the toasts "helped you build the Lv.28 Drill Ground" 2/30, 5/30, 11/30; the bubble vanished; 13 helps came in 100 seconds.
+A white round helmet bubble over an upgrading building is the alliance help request: one press, no price, no dialog [M]. At 13:55Z only the 13-day Lv.28 Drill Ground carried it; one press at 13:58:22.1Z brought 13 helps in 100 seconds and 30 of 30 by 14:20Z.
 
 ## What it does
 
-Each help cuts 0.5 percent of the current remaining time; the flat 20 minutes is refuted [M]. The end time of 07:24:18.6Z on 12-10 fell by 8.15 h at 5 helps, 14.53 h at 9 and 20.78 h at 13, each equal to the proportional prediction. 30 helps cut 14.0 percent: about 46 hours off the 13-day ground. Steer A reads our older builds' shorter timers as help the owner's phone asked [G].
+Each help cuts the larger of 0.5 percent of the remaining time and a flat amount near 21.6 minutes [D]. The 13-day ground (329.4 h left; 0.5 percent is 98.8 minutes) lost 46.0 hours with 30 helps, end 12-10T07:24:19Z to 12-08T09:25:35Z, as the proportional model predicts. The Oil Well Lv.26 to 27 (53.2 h left; 0.5 percent is 16.0 minutes) lost 646.9 minutes, 21.6 a help, end 11-28T19:37:10Z to 08:50:14Z. The flat part rests on one build [G]; the Researcher's figure was 20.07 minutes.
 
 ## The standing step (Steer A, 14:04Z)
 
@@ -24,4 +24,4 @@ Right after a build's upgrade press, read a 6x crop of the bubbles above that bu
 
 ## Open
 
-The Oil Well Lv.27 build (ends 11-28T19:37:10Z) showed its helmet at 13:35Z and not at 14:00Z; one press is approved, crop first.
+The flat amount, and whether a build the owner's phone started without a request shows a helmet to press (the planner's one look per visit).
