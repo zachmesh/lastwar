@@ -1,8 +1,8 @@
 ---
 title: Repository Tools
 created: 2026-11-01T07:58:31Z
-modified: 2026-11-26T15:53:42Z
-version: 2.11.0
+modified: 2026-11-26T17:13:05Z
+version: 2.12.0
 description: Executable helpers, configuration and runtime state, with each tool described in a linked article
 ---
 
@@ -25,4 +25,4 @@ One row per kind. Each article holds purpose, data and issue history; [tool deta
 | Batch and bridge | [records_batch.py](records_batch.py), [cu_bridge.py](cu_bridge.py), [cu-bridge-tests](cu-bridge-tests/INDEX.md) | [batch](tool-details/batch-and-bridge-tools.md) |
 | Gate and landing | [lint-gate](lint-gate/INDEX.md), [integrator](integrator/INDEX.md), [tool-sync](tool-sync/INDEX.md), [board-check](board-check/INDEX.md), [split-doc](split-doc/INDEX.md), [records-snapshot](records-snapshot/INDEX.md) | [gate](tool-details/lint-gate-summary.md) |
 | Gate and landing | [lint-gate](lint-gate/INDEX.md), [integrator](integrator/INDEX.md), [tool-sync](tool-sync/INDEX.md), [board-check](board-check/INDEX.md), [split-doc](split-doc/INDEX.md), [playbook-check](playbook-check/INDEX.md) | [gate](tool-details/lint-gate-summary.md) |
-| Team guards | [spawn-seat](spawn-seat/INDEX.md), [model-guard](model-guard/INDEX.md), [strategy-conformance](strategy-conformance/INDEX.md), [strategist-health](strategist-health/INDEX.md), [home-glob-check](home-glob-check/INDEX.md) | each own index |
+| Team guards | [spawn-seat](spawn-seat/INDEX.md), [model-guard](model-guard/INDEX.md), [strategy-conformance](strategy-conformance/INDEX.md), [strategist-health](strategist-health/INDEX.md), [home-glob-check](home-glob-check/INDEX.md), [tcc-who](tcc-who/INDEX.md) | each own index |
