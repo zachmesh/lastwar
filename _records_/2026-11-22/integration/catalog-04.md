@@ -39,3 +39,4 @@ Back to the [folder index](INDEX.md).
 - [PR 1025](landing-pr-1025.md) - thirty-ninth records snapshot, the two-hourly delivery 16:00Z to 18:00Z
 - [PR 1026](landing-pr-1026.md) - batch-confirmed, the finished batch confirmed, room and finished batches, Steer A's rulings
 - [PR 1027](landing-pr-1027.md) - imp-leftover-server, a leftover test server listens on every interface (IMP-20261126-04)
+- [PR 1028](landing-pr-1028.md) - fortieth records snapshot, the two-hourly delivery 18:00Z to 20:00Z

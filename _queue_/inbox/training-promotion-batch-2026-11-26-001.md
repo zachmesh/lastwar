@@ -5,7 +5,7 @@ activity: troop-training
 segment: 1
 priority: 1
 created_at: 2026-11-26T16:50:36Z
-expires_at: 2026-11-26T22:30:00Z
+expires_at: 2026-11-27T00:40:00Z
 planned_for:
 not_before: 2026-11-26T20:16:00Z
 window: promotion batch 2 after the 20:13z completion (steer a 16:27z standing)
