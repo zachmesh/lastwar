@@ -1,8 +1,8 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-23T09:20:00Z
-version: 1.3.5
+modified: 2026-11-26T17:24:02Z
+version: 1.3.6
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
 grounded_in:
@@ -37,3 +37,4 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 - [IMP-20261126-01](improvements-log/imp-20261126-01.md) - a tool that globs from the home folder raises a macOS consent window.
 - [IMP-20261126-02](improvements-log/imp-20261126-02.md) - free alliance help is requested on every build the team starts.
 - [IMP-20261126-03](improvements-log/imp-20261126-03.md) - plan-serving units labelled snapshot or upkeep count as serving nothing.
+- [IMP-20261126-04](improvements-log/imp-20261126-04.md) - a test web server left running listened on every interface for 85 hours; the weekly health read gains a listening-port list.
