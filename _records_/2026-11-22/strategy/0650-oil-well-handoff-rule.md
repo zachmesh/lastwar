@@ -1,7 +1,7 @@
 ---
 title: Oil Well hand-off rule
 created: 2026-11-23T22:30:00Z
-modified: 2026-11-25T05:30:00Z
+modified: 2026-11-26T05:10:00Z
 version: 1.0.0
 level: L3
 description: The rule for re-ranking builder 1 at each Oil Well level hand-off, with the oil date each level moves, the power per builder-day on two assumptions and the coin test
@@ -31,4 +31,4 @@ Keep B1 on the well while the level is coin-free and beats the best free alterna
 
 ## Oil model
 
-Income now 58.8K a day (1,200 an hour plus the depot), 66K at Lv.25, 73K at Lv.30. The research oil cost factor is about 0.855 (H112).
+Income now 58.8K a day (1,200 an hour plus the depot), 66K at Lv.25, 73K at Lv.30. The research oil cost factor is about 0.89 (H112).

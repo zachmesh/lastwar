@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 04:20:45.799Z, run started 04:20:47.274Z); owner idle 59,559 s: wait 0",2026-11-26T04:20:47.274Z,see growth/0054-waits.csv
+badges,not read: the first frame was the dialog over the Special Forces screen,2026-11-26T04:20:47.274Z,tram badge rule: none; not tapped
+front,"UserNotificationCenter at 04:19:30.2Z; front script once: still UserNotificationCenter at 04:19:35.5Z; one killall -9 UserNotificationCenter at 04:20:00.2Z (Steer A, 04:17Z); LastWar at 04:20:03.3Z",2026-11-26T04:20:03.335Z,tag text [G]: the front check; the window never read or clicked
+dialog,TIPS 'Your account is currently active on a different device!' with ONE red button 'Confirm' over the Special Forces screen,2026-11-26T04:20:51.602Z,exactly the unit's expected text and button
+Confirm,"ONE tap at (393,571) at 04:20:55.097Z; never a second tap",2026-11-26T04:20:55.097Z,the one Confirm of this takeover; the 30-minute guard from here (to 04:50:55Z)
+after,"'Google Chrome' in front at 04:20:57.8Z, run cancelled; the game quit (no LastWar process)",2026-11-26T04:20:57.798Z,"the 11-23 precedent, record 2738"
+drags,"drags tried 0, cancelled 0",,

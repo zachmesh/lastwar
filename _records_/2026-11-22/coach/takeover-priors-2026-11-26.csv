@@ -1,0 +1,20 @@
+item,prior_registered_04:15Z_before_the_takeover_unit,what_scores_it
+the owner-idle gate lets the takeover unit run (16 hours without input),0.95,the unit's start time against the lock
+the standing front script restores LastWar over the UserNotificationCenter window (lsappinfo front names LastWar after it),0.85,the unit's front check
+the dialog reads exactly 'Your account is currently active on a different device!' with ONE button 'Confirm',0.90,the unit's frame read
+ONE tap on Confirm takes the session (the base view live in the next frame),0.90,the frame after: a resource bar and the builders panel
+the dialog RETURNS within 30 minutes of the Confirm (someone plays on the other device),0.15,the OD-05 guard: a second Confirm or a stop
+the unit stays within its 0.40 USD cap and est 6,0.80,the unit record
+"the Total Power at the first base frame equals the 05:22Z read, 150,701,116 (within 5,000): nothing changed while the game was held",0.60,the first HUD read (a phone session may have acted: 0.40)
+"food, iron and coin in the HUD each within 1 percent of the 05:22Z values (140.4M, 760.2M, 25.8M): the HUD excludes uncollected harvest",0.55,the first HUD read
+the builders panel shows the same three running builds and TWO idle builders (the Oil Well and the Lv.26 ground),0.85,the builders panel read
+"the radar pile, if tasks do not expire (my 0.65): the first Quick Execute offers 24 or more tasks, and the Claim All dialog still warns 'will not grant Alliance Duel points' (my 0.15 that it does)",0.65 and 0.15,the radar unit's first read
+"the first harvest collect is within 10 percent of the uncapped figure (rates 445K coin, 678K food, 629K iron an hour from 00:49Z on 11-25)",0.60,the harvest unit
+the Food Output V lab shows a finished node waiting for a Complete,0.90,the research read
+"the new day's Hospital free room (the siege guard) reads at least 1,000",0.85,"the room read (1,329 at 02:37Z on 11-25)"
+"the owner-timing item 'the dialog clears with no answer, his phone leaving the session' (0.10)",resolves NO (realized 0.90) when the team presses Confirm,the takeover record
+KILLALL (approved once by Steer A at 04:17Z): killing UserNotificationCenter dismisses the Chrome notification window and the front then names LastWar (recorded before and after),"0.80 (registered 04:30Z, before the data)",the unit's two lsappinfo front records
+KILLALL: the window reappears within 10 minutes of the kill,0.15,the unit's re-check
+"KILLALL: the window is of the kind the tccd log said (Chrome notification request), not another kind",0.85,the unit's one-frame read of the front app name only
+THE OPERATOR'S ROTATION (99 percent context): the takeover unit starts before 05:00Z,0.60,the claim time
+"PHONE-IDLE PROXY (proposed 05:55Z): two frames of the HUD at least 60 minutes apart over the standing dialog show the same Total Power, diamonds, food, iron, coin, oil and builders counter","P(a 60-minute HUD-stable pair means the phone did nothing, so a Confirm then holds 30 minutes or more) 0.75; P(a Confirm after a stable pair holds 2 hours or more) 0.60; the energy counter regenerates and is NOT used; the resource counters rise only on a collect or an action","the first test: the next two reads at about 07:46Z and 08:46Z, then the Confirm"

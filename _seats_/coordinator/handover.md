@@ -1,9 +1,9 @@
 ---
 title: Coordinator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-25T22:30:00Z
+modified: 2026-11-26T04:20:00Z
 level: L2
-version: 0.25.1
+version: 0.26.0
 description: The live state a replacement coordinator starts from - holder, roster, operating rules, schedules, the trade cycle, the macOS alert and open decisions
 status: unverified
 grounded_in:
@@ -20,9 +20,9 @@ Updated 2026-11-25 17:25Z (Mac UTC; quote `date -u`). Earlier versions are in gi
 - Session `session-4b4cb08d-fb77-419a-be34-14a72a3b73d1`. Loop clock `schedule-53b1277f-4e75-4e35-ae7b-ce379f0b53b0` (900 s: tool_sync, model_guard, `queue.py next`; `next` can name a held unit: check). Planner ping `schedule-4803c6f4` (02, 06, 10, 14, 18, 22Z); daily `schedule-e1887d97` 11:55Z; records delivery `schedule-70993579` every 2 h (first 17:56Z); weekly `schedule-fee71877` 11-30 01:00Z.
 - TEAM.yaml 0.7.6: model claude-sonnet-5-5 at HIGH (owner request 11-25; the guard reads it). The operator's id is in /tmp/lw-new-operator-id.txt. Steer A `session-eb024f72-e661-4a77-9303-66af95dbcfd1` and Steer B `session-e127662e-07ba-4385-b905-3d0e90fd1eeb` relay the owner. Helpers in /tmp: lw-pre-rebase.sh, lw-scan-branch.py (rebuild if gone).
 
-## The halt (since 06:25:52Z)
+## The halt (since 06:25:52Z) and the takeover
 
-The game shows 'active on a different device' (the owner's phone): NOTHING is pressed or dispatched without the owner's word (OD-20261125-01 to 04, Steer A 06:36Z); Steer B holds the question. Two builders idle (Oil Well, Lv.26 ground ended 13:38:36Z). After his word the front script restores LastWar, then (Steer A 17:47Z): the radar unit and the duel-score claim FIRST (the duel chests, value 35,650, expire 02:00Z; radar tasks cannot be done after the reset), then Oil Well `-005`, Drill Ground hand-off (preview, preconvert, floors), cycle D, room collect, UR claim, train batch (75 to 115 minutes). A cu test's Chrome notification window stands (the owner's to dismiss).
+The game showed 'active on a different device' (the owner's phone). I held 22 h on Steer A's 06:36Z ruling; Steer A WITHDREW it at 04:05Z on 11-26 (OD-20261126-01): the 'nobody Confirms again without the owner' clause was the Steers' own 11-23 resume procedure (record 2738), not the owner's; the owner's words are OD-05 (standing approval, 30-minute guard) and OD-17 ('take ownership, kick out others'). Takeover unit `scout-midday-takeover-session-2026-11-26-001`: one Confirm on the exact dialog text, no second tap, no more than two Confirms in two hours. 04:07Z it stopped at the front step: the front script does not lift LastWar over a UserNotificationCenter window; Steer A decides one killall. Then the order: radar and duel-score claim, lab Complete, Oil Well `-005`, Drill Ground hand-off, cycle E, room collect, UR claim, train batch. Cost of the halt: 35,650 duel chests, about 49M and 4 percent of the build per further day.
 
 ## Rules learned
 

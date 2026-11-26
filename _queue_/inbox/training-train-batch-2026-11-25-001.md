@@ -34,13 +34,14 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-09
 
-DISPATCH ONLY WHEN NAMED, after the room collect unit `training-room-collect-2026-11-25-001` (about 13:50Z): train only if the free room is above 10 after the collect (the Lv.26 ground added +200 room). Steer A's order: train with the free slots, a finished batch that fits whole first. THE SPEND: Train uses coin, food and iron: RE-READ coin, food and iron in a fresh frame, and write which resources and amounts from the Total cost line BEFORE pressing; a short row, a price, a diamond or an item: STOP.
+DISPATCH ONLY WHEN NAMED, after the room collect unit `training-room-collect-2026-11-25-001`: train only if the free room is above 10 after the collect. Steer A's order: train with the free slots, a finished batch that fits whole first. THE SPEND: Train uses coin, food and iron: RE-READ coin, food and iron in a fresh frame, and write which resources and amounts from the Total cost line BEFORE pressing; a short row, a price, a diamond or an item: STOP.
 
-Barracks order (tap points in `_records_/2026-11-22/growth/tag-index.csv`): Lv.27 (T9, 1,352 power a troop), Lv.24 (T8, 1,063), then the first idle Lv.20 where Train can be pressed.
+Barracks order (tap points in `_records_/2026-11-22/growth/tag-index.csv`): Lv.27, Lv.24, then the first idle Lv.20 where Train can be pressed.
 
 ONE batch only: open the pistol; read 'Unit Count X of Y' IMMEDIATELY BEFORE setting the batch size (free room = Y minus X); set the quantity to that room minus 10; read the Total cost and time lines; press Train ONCE; write the number trained, tier, resources before and after, Total Power. NO speed-up, NO Finish Now, no Use, no Buy. A confirm dialog: Confirm only if it shows just the resource cost already read; a price, diamond, item or other app: stop.
 
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
+CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken action or a verified nothing-to-do (`--state-change no`, a `state_read:` line); else PARTIAL.
 BUTTON ROW: the buttons under a tent are small: verify the pistol glyph in a frame before each tap (a stray tap once opened Building Details, another the world map): back arrow or X, and write it; never the green up arrow (the upgrade shortcut).
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 Cost cap, stated: 0.60 USD.

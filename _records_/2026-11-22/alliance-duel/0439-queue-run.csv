@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.9 s after the request (start requested 04:39:09.440Z, run started 04:39:10.351Z); owner idle 60,660 s: wait 0",2026-11-26T04:39:10.351Z,see growth/0054-waits.csv
+badges,04:39:14.5Z (Warzone Duel timer 21:20:47): the tram icon without a badge,2026-11-26T04:39:10.351Z,tram badge rule: none; not tapped
+dialog,the different-device dialog not on screen at any frame (04:39:14.5Z to 04:40:08.2Z),2026-11-26T04:39:14.463Z,tag text [G]: the base and the duel panel; the guard to 04:50:55Z
+personal total,0 at 04:39:40.4Z; the countdown 21:20:27,2026-11-26T04:39:40.441Z,tag text [G]: Today's Theme tab
+chests,"thresholds 40,000, 150,000, 540,000: all closed, no glow, no Claim button or red dot; red-gem prices 8,020, 9,530, 18,100 printed above (never pressed); the first of four carousel pages",2026-11-26T04:39:40.441Z,"the old brief's 2,600,000, 3,600,000, 7,200,000 do not match this theme"
+theme,"Train Heroes: Perform 1 Hero Recruitment +4,500.0; Use at least 660 Hero EXP Points at a time +2.5; Use 1 UR Hero Shard +25,000.0; Use 1 SSR Hero Shard +8,750.0; Use 1 SR Hero Shard +2,500.0; Use 1 Skill Medal +25.0; Buy Packs containing Diamonds (1 Diamond) +30.0; list cut off at the bottom",2026-11-26T04:39:46.012Z,not scrolled
+claim,no chest reached: total 0 below every threshold: nothing claimed,2026-11-26T04:39:52.041Z,a verified nothing-to-do
+pressed,"the VS medallion (673,302), the Today's Theme tab (226,155), the back arrow (166,933)",2026-11-26T04:40:08.159Z,nothing else
+drags,"drags tried 0, cancelled 0",,

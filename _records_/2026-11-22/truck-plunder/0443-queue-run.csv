@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 04:43:47.894Z, run started 04:43:48.697Z); owner idle 60,937 s: wait 0",2026-11-26T04:43:48.697Z,see growth/0054-waits.csv
+badges,"04:43:52.9Z: the tram none, the pickup 12, the radar dish 3; 04:44:37.1Z: the tram none; 04:45:02.2Z (after WORLD then BASE): the tram none",2026-11-26T04:43:48.697Z,tram badge rule: none; not tapped
+HUD,"diamonds 10,943, food 168.6M, iron 738.2M, coin 2.7M, oil 564.8K, Total Power 151,273,926",2026-11-26T04:43:52.938Z,"tag text [G]: HUD; icons read by order, unlabeled"
+Hospital,"Lv.25: Severely Wounded 1,364 of 7,999; Completed 5,104; free room 7,999 - 1,364 - 5,104 = 1,531; Collect not pressed",2026-11-26T04:44:16.568Z,"at least 1,000: plunder not blocked by capacity"
+tram first read,"NO badge at 04:44:37.1Z (timer 21:15:24); the pickup 12, the radar dish 3",2026-11-26T04:44:37.059Z,a bare icon only pans the camera: never tapped
+WORLD then BASE,"WORLD (660,940) 04:44:41.3Z, BASE (660,940) 04:44:51.2Z; no icon tapped",2026-11-26T04:44:54.394Z,
+tram second read,still NO badge at 04:45:02.2Z: 'badge absent: no tap',2026-11-26T04:45:02.170Z,the sheet's dark close; re-dispatch in 15 minutes
+trade,"the trade screen never opened: count, slots and cycle C's trucks unread",2026-11-26T04:45:02.170Z,"no settle, dispatch or plunder"
+drags,"drags tried 0, cancelled 0",,

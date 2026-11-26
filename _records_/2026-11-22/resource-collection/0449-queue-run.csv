@@ -1,0 +1,13 @@
+item,value,read_utc,note
+wait,"the lock admitted the runs 0.8 to 0.9 s after their requests; owner idle 61,270 and 61,356 s: wait 0",2026-11-26T04:49:22.323Z,see growth/0054-waits.csv
+badges,"04:49:26.9Z: the tram none, the pickup 12, the radar dish 3, the hammer 3/4 with a red dot, the flask 2/2",2026-11-26T04:49:22.323Z,tram badge rule: none; not tapped
+COIN before,"Available 1,578,454 at 04:49:38.9Z; 444.5K/H; bar 2,736,564 of 16,474,999; Owned 2.7M",2026-11-26T04:49:38.936Z,tag text [G]: Coin panel; the Coach's cap test line
+COIN after,"Collect once at 04:49:43.5Z: Available 0; bar 4,477,183 of 16,474,999; Owned 4.4M",2026-11-26T04:49:45.671Z,no 'full' mark
+FOOD before,"Available 2,416,945 at 04:50:04.2Z; 682.8K/H; bar 168,631,132 of 49,642,724; Owned 168.6M",2026-11-26T04:50:04.198Z,Owned above the second figure of the bar
+FOOD after,"Collect once at 04:50:09.5Z: Available 0; bar 171,376,806; Owned 171.3M",2026-11-26T04:50:11.701Z,
+IRON before,"Available 2,398,296 at 04:51:04.3Z; 626.6K/H; bar 738,296,616 of 59,840,549; Owned 738.2M",2026-11-26T04:51:04.268Z,Owned above the second figure of the bar
+IRON after,"Collect once at 04:51:08.8Z: Available 0; bar 740,825,764; Owned 740.8M",2026-11-26T04:51:10.967Z,
+OIL before,"Available 6,043 at 04:51:29.7Z; 1.5K/H; bar 564,801 (no cap figure shown); Owned 564.8K",2026-11-26T04:51:29.738Z,"the Collect at (553,526), not the sheet's (553,501)"
+OIL after,"Collect once at 04:51:34.4Z: Available 0; bar 570,844; Owned 570.8K",2026-11-26T04:51:36.617Z,
+HUD,"after: food 171.3M, iron 740.8M, coin 4.4M, oil 570.8K, diamonds 10,943, Total Power 151,273,926, energy 156",2026-11-26T04:51:49.085Z,"the base, no panel"
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request (start requested 04:41:28.950Z, run started 04:41:29.785Z); owner idle 60,799 s: wait 0",2026-11-26T04:41:29.785Z,see growth/0054-waits.csv
+badges,04:41:30.3Z: the hammer counter 3/4,2026-11-26T04:41:29.785Z,tram badge rule: none; not tapped
+row 1,"'Lv.25 Oil Well upgrade in progress', Time Left 08:28:12 at 04:41:44.350Z: the end about 2026-11-26T13:09:56.4Z, Speed Up (not pressed)",2026-11-26T04:41:44.350Z,tag text [G]: Building Queue panel; started by another hand during the hold
+row 2,"'Lv.27 Drill Ground upgrade in progress', Time Left 3d 10:49:17: ends about 2026-11-29T15:31:01Z",2026-11-26T04:41:44.350Z,
+row 3,IDLE with a Construct button: a free builder; the Lv.26 Drill Ground row is gone,2026-11-26T04:41:44.350Z,not pressed
+row 4,"'Lv.28 Drill Ground upgrade in progress', Time Left 7d 09:08:30: ends about 2026-12-03T13:50:14Z",2026-11-26T04:41:44.350Z,
+re-reads,row 1 08:28:07 at the second read and 08:28:12 and 08:28:17 earlier: consistent; row 2 3d 10:49:12; row 4 7d 09:08:24,2026-11-26T04:41:49.811Z,
+pressed,"the hammer (108,200) and the X (612,237) only",2026-11-26T04:41:57.346Z,nothing on any row
+drags,"drags tried 0, cancelled 0",,

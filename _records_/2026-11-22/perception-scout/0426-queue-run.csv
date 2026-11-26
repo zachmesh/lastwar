@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the runs 0.7 to 0.9 s after their requests; owner idle 59,964 and 60,169 s: wait 0",2026-11-26T04:30:58.247Z,see growth/0054-waits.csv
+badges,"04:31:58.6Z: the pickup 12, the radar dish 6, the tram none, the hammer a red dot; Thanksgiving badge 7, Events 1",2026-11-26T04:30:58.247Z,tram badge rule: none; not tapped
+front,"'Google Chrome' at 04:25:45Z and 04:26:06Z, no LastWar process; the front script once at 04:26:06Z; LastWar in front at 04:26:12Z",2026-11-26T04:26:12Z,tag text [G]: the front check
+login screen,"a System Announcement behind, an 'Installing...' bar, version 1.0.366(908); a TIPS dialog 'Update complete, please restart the game.' with ONE blue button 'Confirm': run 1 stopped (not on the unit's list)",2026-11-26T04:27:33.013Z,the Coordinator's decision 04:32Z: one tap
+update Confirm,"ONE tap at (393,571) at 04:31:08.6Z; the game restarted",2026-11-26T04:31:08.648Z,never a second tap
+takeover done,the base live at 04:31:50.9Z: takeover done 04:31:51Z; no different-device dialog; no TIPS,2026-11-26T04:31:50.871Z,the 30-minute guard from the 04:20:55.1Z Confirm: to 04:50:55Z
+HUD,"Total Power 151,273,926; food 165.2M; iron 734.8M; coin 564; oil 564.8K; diamonds 10,943; energy 196; builders 3/4; labs 2/2",2026-11-26T04:31:58.582Z,"the Coach's 05:22Z values: power 150,701,116, food 140.4M, iron 760.2M, coin 25.8M: no comment"
+badges,"the pickup 12, the radar dish 6, the tram none, the hammer a red dot; Thanksgiving 7, Events 1, a red target icon with a countdown",2026-11-26T04:31:58.582Z,not opened
+drags,"drags tried 0, cancelled 0",,

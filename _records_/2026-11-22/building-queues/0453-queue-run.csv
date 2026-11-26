@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the runs 0.8 to 1.0 s after their requests; owner idle 61,532 to 61,881 s: wait 0",2026-11-26T04:53:45.271Z,see growth/0054-waits.csv
+badges,04:53:49.9Z: the hammer 3/4 and the flask 2/2,2026-11-26T04:53:45.271Z,tram badge rule: none; not tapped
+builders,Lv.25 Oil Well 08:15:56 (ends ~13:09:56.5Z); Lv.27 Drill Ground 3d 10:37:01 (ends ~11-29T15:31:01.5Z); row 3 IDLE; Lv.28 Drill Ground 7d 08:56:13 (ends ~12-03T13:50:13.5Z),2026-11-26T04:54:00.534Z,tag text [G]: Building Queue panel; the Coach's idle-builder baseline
+labs,Lv.8 Defense Training VIII 3d 07:44:26 (ends ~11-29T12:38:44.6Z); Lv.2 Oil Output I 1d 18:25:48 (ends ~11-27T23:20:06.6Z); no idle lab,2026-11-26T04:54:18.610Z,
+Hospital preview,"Lv.25 to 26; capacity 1,800 to 1,840; power 120,900 to 144,100; food 171.3M of 255.0M red; coin 4.4M of 68.8M red; Lv.26 Headquarters met; original 23d 00:07:56; effective 10d 19:49:37; Finish Now 219,271 diamonds (read only)",2026-11-26T04:56:10.451Z,not pressed
+HQ preview,"Lv.30 to 31; power 388,300 to 452,000; hero cap 150 to 155; Base Expansion Lv.1 red; oil 570,844 of 1.2M; iron 740.8M of 1.3G; food 171.3M of 1.3G; coin 4.4M of 433.5M (all red); Tech Center, Barracks, Tank Center Lv.30 green; original 111d 18:21:40; effective 52d 14:17:16; Finish Now 2,647,872 diamonds (read only)",2026-11-26T04:58:09.549Z,not pressed
+slip,"the first Hospital tap (668,535) opened 'Barracks Lv.20' (blue people, orange pistol, green up arrow: none pressed): closed by (310,660)",2026-11-26T04:54:34.726Z,"the Barracks tent lies at (668,535); the Hospital at (688,460) in the home frame"
+hut,no Builder's Hut tag one tap away: not searched,2026-11-26T05:01:32.359Z,
+cost,0.67027 USD over four runs against the cap 0.35: disclosed,2026-11-26T05:01:48Z,"the cap was read per unit, my runs per step"
+drags,"drags tried 0, cancelled 0",,

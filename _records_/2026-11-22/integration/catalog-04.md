@@ -13,3 +13,7 @@ Back to the [folder index](INDEX.md).
 - [PR 999](landing-pr-999.md) - gate-list-ignored, check --list-ignored names the ignored findings by path and rule
 - [PR 1000](landing-pr-1000.md) - thirtieth records snapshot, the two-hourly delivery 20:00Z to 00:00Z, handover 0.25.1
 - [PR 1001](landing-pr-1001.md) - thirty-first records snapshot, the integration records of 00:00Z to 02:00Z
+- [PR 1002](landing-pr-1002.md) - thirty-second records snapshot, the two-hourly delivery 00:00Z to 04:00Z, handovers
+- [PR 1003](landing-pr-1003.md) - team-strategist, TEAM.yaml 0.7.7 the strategist session rotated
+- [PR 1004](landing-pr-1004.md) - od-takeover-confirm, Steer A's decision on the Confirm after a 22-hour halt (OD-20261126-01)
+- [PR 1005](landing-pr-1005.md) - od-takeover-killall, the killall line and the dropped calm window (OD-20261126-01)

@@ -1,9 +1,9 @@
 ---
 title: Oil Well Level 20 To 30 Builder Chain 2900 2026-11-23
 created: 2026-11-23T08:10:00-08:00
-modified: 2026-11-24T09:45:00-08:00
+modified: 2026-11-26T04:50:00Z
 level: L0
-version: 1.9.0
+version: 1.10.0
 description: The facts, route, hand-off rule and current schedule pointer for the builder B1 chain that raises the Oil Well from level 20 to 30, with the per level table in a CSV beside it
 status: done
 activity: queue-planning
@@ -32,7 +32,7 @@ At each real finish the coordinator dispatches the next unit BY NAME. A finished
 
 ## Schedule
 
-[2900-oil-well-chain.csv](2900-oil-well-chain.csv) is the start log: each level's start, end, unit, window, `speed_factor` and `last_game_restart_utc` (the coordinator fills it from the front log). Lv.21 to Lv.24 are measured: Lv.23 ended 17:27:27Z, Lv.24 started 17:31:42Z and REALLY ENDS 2026-11-25T07:11:20Z (effective 20:11:38, panel 13:39:13 left at 17:32:06.8Z). The construction speed factor rose (the Coach: 2.000 at 03:36Z, 2.125 at 08:14Z, 2.325 at 17:33Z), so effective times ran 8.6 percent under the model (0.91375 against 2.125 over 2.325, 0.9140); the later ends are the old durations rescaled [G] and move again if the factor does; the planner re-times each unit from the real end. The hand-off unit opens 2 minutes before a real end; no opening in the quiet window 08:00Z to 08:25Z.
+[2900-oil-well-chain.csv](2900-oil-well-chain.csv) is the start log: each level's start, end, unit, window, `speed_factor` and `last_game_restart_utc`. Lv.21 to Lv.24 are measured: Lv.23 ended 17:27:27Z, Lv.24 started 17:31:42Z and REALLY ENDS 2026-11-25T07:11:20Z. The speed factor series is the Coach's (speed-factor-series.csv); the later ends are the old durations rescaled [G]. Lv.25 was started by the phone while the Mac was held (builders panel 04:41:44.4Z, Time Left 08:28:12): it REALLY ENDS 2026-11-26T13:09:56.4Z, and Lv.26 to Lv.30 were re-timed from it at 04:50Z with the same durations; the planner re-times each unit again from each real end. The hand-off unit opens 2 minutes before a real end; no opening in the quiet window 08:00Z to 08:25Z.
 
 
 ## HQ 31 start unit, pre-steps (not staged)
