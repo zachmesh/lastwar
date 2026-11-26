@@ -40,3 +40,5 @@ Back to the [folder index](INDEX.md).
 - [PR 1026](landing-pr-1026.md) - batch-confirmed, the finished batch confirmed, room and finished batches, Steer A's rulings
 - [PR 1027](landing-pr-1027.md) - imp-leftover-server, a leftover test server listens on every interface (IMP-20261126-04)
 - [PR 1028](landing-pr-1028.md) - fortieth records snapshot, the two-hourly delivery 18:00Z to 20:00Z
+- [PR 1029](landing-pr-1029.md) - forty-first records snapshot, the last records and the coordinator handover for the next harness
+- [PR 1030](landing-pr-1030.md) - the Scribe's handover to the new harness
