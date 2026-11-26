@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import os
 import re
 from pathlib import Path
 
@@ -144,7 +145,10 @@ class Validation(ExemptCase):
         self.assertIn("mail: in the roster and not on the list (unlabeled)", self.exempt_alarm(d)["first"])
 
     def test_the_real_list_holds_for_the_real_roster_and_ledger(self):
-        """A regression guard: a regular added to the roster must be labeled in the Strategist's list before it lands (and the reverse)."""
+        """An opt-in check (CHECK_REAL_EXEMPT_LIST=1): the Strategist's real list against the real roster and ledger. The standing guard is the watchdog's own
+        `exempt-list` alarm; a test of code must not fail on content another seat owns, so this one runs only when asked."""
+        if os.environ.get("CHECK_REAL_EXEMPT_LIST") != "1":
+            self.skipTest("opt-in: set CHECK_REAL_EXEMPT_LIST=1 (the watchdog's exempt-list alarm is the standing guard)")
         ex = load_module()
         root = HERE.parent.parent
         path = ex.find(root)
@@ -291,3 +295,69 @@ class DefinitionB(ExemptCase):
         r, d = self.data()
         self.assertNotIn(SECRET, r.stdout + r.stderr)
         self.assertNotIn(SECRET, self.run_tool().stdout)
+
+
+class OneOffs(ExemptCase):
+    """The optional `kind` column (Steer A, 2026-11-26): `oneoff` lines (a test, a probe, a single reading) may be on the list with no roster row."""
+    HEADER7 = HEADER.rstrip("\n") + ",kind\n"
+
+    def write7(self, lines, reason="looks only"):
+        body = self.HEADER7 + "".join(f'{i},{c},{s},"{reason}",{d},{REVIEW},{k}\n' for i, c, s, d, k in lines)
+        self.list_path().write_text(body)
+
+    BASE = [("harvest", "plan", "PL-01", DECIDED, ""), ("mail", "income", "PL-19", DECIDED, ""), ("scout", "exempt", "upkeep-read", DECIDED, "")]
+
+    def test_a_one_off_with_no_roster_row_is_accepted_and_counted(self):
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "oneoff"), ("bubble-probe", "exempt", "upkeep-read", DECIDED, "oneoff")])
+        r, d = self.data()
+        el = d["counts"]["exempt_list"]
+        self.assertEqual((el["errors"], el["stale"], el["oneoff"]), ([], [], ["bubble-probe", "helmet-test"]))
+        self.assertIsNone(self.exempt_alarm(d))
+        self.assertEqual(el["classes"], {"plan": 2, "income": 1, "exempt": 2})
+        self.assertIn("(one-off 2)", self.run_tool("--since", iso(600)).stdout)
+
+    def test_the_same_id_as_a_regular_line_is_still_stale_without_the_kind(self):
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "")])
+        _r, d = self.data()
+        self.assertIn("helmet-test: on the list and not in the roster", self.exempt_alarm(d)["first"])
+
+    def test_a_blank_kind_column_or_no_column_means_regular(self):
+        self.write7(self.BASE)
+        _r, d = self.data()
+        self.assertEqual(d["counts"]["exempt_list"]["oneoff"], [])
+        self.assertIsNone(self.exempt_alarm(d))
+
+    def test_an_unknown_kind_is_an_error(self):
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "temporary")])
+        _r, d = self.data()
+        self.assertTrue(any(e.startswith("helmet-test: kind temporary is not one of regular, oneoff") for e in self.exempt_alarm(d)["first"]))
+
+    def test_a_one_off_the_roster_also_holds_is_a_note_and_a_one_off_is_held_to_its_review_date(self):
+        self.write_roster({**self.ROSTER, "helmet-test": "upkeep"})
+        body = self.HEADER7 + "".join(f'{i},{c},{s},"x",{d},{rv},{k}\n' for i, c, s, d, rv, k in [
+            ("harvest", "plan", "PL-01", DECIDED, REVIEW, ""), ("mail", "income", "PL-19", DECIDED, REVIEW, ""), ("scout", "exempt", "upkeep-read", DECIDED, REVIEW, ""),
+            ("helmet-test", "plan", "PL-02", DECIDED, "2026-11-01T00:00Z", "oneoff"), ("old-probe", "exempt", "upkeep-read", DECIDED, "2026-11-01T00:00Z", "oneoff")])
+        self.list_path().write_text(body)
+        _r, d = self.data()
+        warnings = d["counts"]["exempt_list"]["warnings"]
+        self.assertIn("helmet-test: listed as a one-off but the roster holds it (make it a regular line)", warnings)
+        self.assertIn("old-probe: review date has passed", warnings)
+        self.assertIsNone(self.exempt_alarm(d))
+
+    def test_a_one_off_counts_in_definition_b_by_its_class(self):
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "oneoff"), ("bubble-probe", "exempt", "upkeep-read", DECIDED, "oneoff")])
+        self.unit("done", ago=10, serves="PL-01", regular="harvest", hours=1.0)
+        self.unit("done", ago=20, serves="upkeep", regular="helmet-test", hours=1.0)         # a one-off plan unit: served by the list's class
+        self.unit("done", ago=30, serves="upkeep", regular="bubble-probe", hours=1.0)        # a one-off read: exempt, out of the denominator
+        _r, d = self.data()
+        b = d["counts"]["coverage_b"]["rolling"]
+        self.assertEqual((b["served_hours"], b["exempt_hours"], b["denominator_hours"], b["unlisted_units"]), (2.0, 1.0, 2.0, 0))
+
+    def test_a_kind_change_needs_a_newer_decided_utc_like_any_other_change(self):
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "oneoff")])
+        r = self.run_tool("--format", "json", "--since", iso(600), "--accept-exempt-list")
+        self.assertIn(r.returncode, (0, 1), r.stdout + r.stderr)
+        self.write_roster({**self.ROSTER, "helmet-test": "PL-02"})                             # the roster now holds it: the line becomes a regular one
+        self.write7(self.BASE + [("helmet-test", "plan", "PL-02", DECIDED, "")])
+        _r, d = self.data()
+        self.assertIn("helmet-test: changed since the accepted baseline without a newer decided_utc", self.exempt_alarm(d)["first"])

@@ -23,7 +23,7 @@ and prints counts, percentages and minutes. It writes nothing. Five alarms, each
                     total. Percentages print to one decimal; the alarm compares the UNROUNDED value (59.57 is below 60, though it once
                     rounded to 60 and passed).
   exempt-list       the serves exempt list (`_records_/<date>/strategy/serves-exempt-list.csv`, the Strategist's; parser and validation in
-                    exempt_list.py) has an error: a roster regular not on it, a listed id outside the roster, a bad class or date, a plan or income
+                    exempt_list.py) has an error: a roster regular not on it, a listed id outside the roster (unless its kind is oneoff), a bad class or date, a plan or income
                     serves that is not a PL id with a ledger row, an exempt line naming a plan item, or a line changed since the accepted baseline
                     without a newer decided_utc. Printed beside the verdict: DEFINITION B (unit-hours of plan and income regulars over unit-hours
                     without the exempt look-only regulars; a regular off the list counts as unserved); it never decides an alarm. The baseline
@@ -427,7 +427,7 @@ def evaluate(root: Path, now: datetime, hours: float, plan_path: Path | None, a)
             shown_path = str(list_path)
         newest = max((ex.parse_stamp(r["decided_utc"]) for r in rows if ex.parse_stamp(r["decided_utc"])), default=None)
         counts["exempt_list"] = {"path": shown_path, "newest_decision": newest.strftime("%Y-%m-%dT%H:%MZ") if newest else "", "regulars": found["regulars_listed"],
-                                 "classes": found["classes"], "roster": found["roster"], "unlabeled": found["unlabeled"], "stale": found["stale"],
+                                 "classes": found["classes"], "roster": found["roster"], "unlabeled": found["unlabeled"], "stale": found["stale"], "oneoff": found["oneoff"],
                                  "roster_serves_mismatch": found["roster_serves_mismatch"], "errors": errors, "warnings": found["warnings"] + baseline["warnings"],
                                  "baseline": {k: baseline[k] for k in ("state", "accepted_at", "added", "removed", "edited")}, "accepted": accepted}
         classes = {r["regular_id"]: r["class"] for r in rows}
@@ -471,7 +471,8 @@ def render(result: dict) -> str:
     else:
         k2 = el["classes"]
         lines.append(f"exempt list {el['path']} (newest decision {el['newest_decision'] or 'none'}): {el['regulars']} regulars - plan {k2['plan']}, income "
-                     f"{k2['income']}, exempt {k2['exempt']} | roster {el['roster']}: unlabeled {len(el['unlabeled'])}, stale {len(el['stale'])} | baseline: "
+                     f"{k2['income']}, exempt {k2['exempt']}" + (f" (one-off {len(el['oneoff'])})" if el["oneoff"] else "")
+                     + f" | roster {el['roster']}: unlabeled {len(el['unlabeled'])}, stale {len(el['stale'])} | baseline: "
                      + (f"none accepted yet (--accept-exempt-list records it)" if el["baseline"]["state"] == "none" else
                         f"accepted {el['baseline']['accepted_at']}, {el['baseline']['state']}"
                         + (f" (+{len(el['baseline']['added'])} -{len(el['baseline']['removed'])} ~{len(el['baseline']['edited'])})"

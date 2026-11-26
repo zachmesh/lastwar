@@ -1,8 +1,8 @@
 ---
 title: Strategy Conformance
 created: 2026-11-23T08:48:32Z
-modified: 2026-11-25T04:26:28Z
-version: 1.7.0
+modified: 2026-11-26T16:08:36Z
+version: 1.8.0
 description: strategy_conformance.py, the read-only counts-only watchdog that checks the strategy reaches the queue, with its tests
 ---
 
@@ -23,7 +23,7 @@ decide, units are the trend; percentages print to one decimal, the alarm compare
 `_tools_/state/strategy-cutover.json`, else git (the remap's merge).
 
 The exempt list (`serves-exempt-list.csv`, the Strategist's, newest in a `strategy` folder; the parser `exempt_list.py` is the Toolsmith's): every roster
-regular is `plan`, `income` or `exempt`, no id outside the roster, ledger rows for PL ids; any error alarms. The baseline is never re-based silently:
+regular is `plan`, `income` or `exempt`, no id outside the roster unless its optional `kind` is `oneoff` (a test or probe, held to its review date), ledger rows for PL ids; any error alarms. The baseline is never re-based silently:
 a changed line needs a newer `decided_utc`; only `--accept-exempt-list` records it. DEFINITION B prints beside A: hours of plan and income regulars over
 hours without the exempt ones; it never decides the alarm.
 
