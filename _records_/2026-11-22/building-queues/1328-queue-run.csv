@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; the runs admitted 0.8 to 1.0 s after their requests; owner idle 5,823 to 6,417 s",2026-11-26T13:28:10.859Z,see growth/0054-waits.csv
+badges,13:28:15.2Z: the tram bare; 13:33:54.8Z: the tram a red dot,2026-11-26T13:28:10.859Z,tram badge rule: none; not tapped
+builders before,row 1 idle; Lv.27 Drill Ground 3d 02:02:33; Lv.27 13d 17:55:50; Lv.28 7d 00:21:46; no Oil Well row,2026-11-26T13:28:28.393Z,tag text [G]: Building Queue
+tag and preview,"Oil Well Lv.26; Lv.26 to 27: Power +10,600; oil 1,560 to 1,620 an hour; iron 56.1M visible; original 5d 08:49:52; effective 2d 12:37:36; coin and food rows hidden below (cost list not dragged)",2026-11-26T13:30:11.647Z,a stop condition missed
+Upgrade,"pressed once at 13:31:34.0Z: iron -56.1M, food -18.7M, coin -11.9M; coin 4.0M below the 10M floor",2026-11-26T13:31:49.223Z,floor breach disclosed
+timer,Oil Well 2d 06:05:07 at 13:32:03.0Z: END 2026-11-28T19:37:10Z; speed factor 2.125; real 2d 06:05:36,2026-11-26T13:32:02.975Z,
+help icon look,no hand or Help above the Oil Well or the Drill Grounds; a white round bubble with a green helmet glyph above each; nothing pressed,2026-11-26T13:38:38.976Z,Drill Ground end unchanged 2026-12-10T07:24:19Z
+tram,"red dot with no count at 13:33:54.8Z, 13:34:49.8Z, 13:39:19Z: not entered",2026-11-26T13:39:19.048Z,the trade entry
+drags,"drags tried 0, cancelled 0",,

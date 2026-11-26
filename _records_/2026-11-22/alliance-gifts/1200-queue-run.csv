@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,the lock admitted the run 0.8 s after the request; owner idle 549 s: wait 0,2026-11-26T12:00:08.217Z,see growth/0054-waits.csv
+badges,12:00:08.2Z: the tram bare; the pickup a red dot; the radar dish 4; the Alliance button a red dot; the Alliance Gifts tile a red dot,2026-11-26T12:00:08.217Z,tram badge rule: none; not tapped
+tile dot,the Alliance Gifts tile carried a red dot before; cleared after the claims,2026-11-26T12:00:23.483Z,tag text [G]: Alliance menu
+Gift Level,"Level 29: 50,761,780 of 257,900,000 before; 50,772,960 after",2026-11-26T12:00:23.483Z,alliance-wide progress
+Regular,"363 Regular Alliance Gifts claimed: bread 1.0K x1.7K, 5m building speed-up x35, iron 1.0K x1.3K, coin 600 x1.8K, red gem item 5 x37, coin 6.0K x87, iron 10.0K x58, bread 10.0K x29",2026-11-26T12:00:30.295Z,dialog quoted
+Premium,"17 Premium Alliance Gifts claimed: gold bar x1, red gem item 100 x1, coin crate x18, material crate x22, medal 50 x5, blue chest x15, bundle x2, 5m speed-up x2, 5m builder speed-up x4",2026-11-26T12:00:46.657Z,dialog quoted
+re-check,"both tabs clear: no dot, no Claim All; rows Claimed",2026-11-26T12:01:04.426Z,
+Alliance tiles,"Help, Alliance Techs, Alliance Events still show dots",2026-11-26T12:01:11.550Z,the Gifts tile dot cleared
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,the lock admitted the run 0.8 s after the request; owner idle 710 s: wait 0,2026-11-26T12:02:48.912Z,see growth/0054-waits.csv
+badges,12:02:53.4Z: the Alliance button a red dot; the Help tile a red dot (12:03:06.8Z),2026-11-26T12:02:48.912Z,tram badge rule: none; not tapped
+Help tile dot,a red dot with no number before (12:03:06.8Z); no dot after (12:03:47Z): cleared,2026-11-26T12:03:06.808Z,tag text [G]: Alliance menu
+header,"540 of 1,000 before Help All; 600 of 1,000 after a close and reopen (+60)",2026-11-26T12:03:35.976Z,the header updates only on reopen
+rows,"four own requests, all 30/30: Oil Output I, Defense Training VIII, building Lv.26 Oil Well, building Lv.28 Drill Ground (cut off at the fold)",2026-11-26T12:03:14.429Z,not scrolled
+Help All,"pressed once at 12:03:21.1Z: green, no toast seen; rows showed Time reduced",2026-11-26T12:03:23.294Z,
+Alliance tiles,Techs and Events still with dots,2026-11-26T12:03:47Z,other units
+drags,"drags tried 0, cancelled 0",,

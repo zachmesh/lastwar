@@ -24,12 +24,14 @@ lease_until: <empty until claimed>
 
 What to do, in the regular's own terms. The executor also reads the activity metadata in `_activities_/<activity>/` and the recording rules.
 
-THE FORECAST REFUSAL IS LIVE (since 2026-11-24T10:48:40Z): every unit minted or synced, chain follow-ups
+THE FORECAST REFUSAL IS LIVE: every unit minted or synced, chain follow-ups
 included, is refused unless EACH comma or semicolon part of serves is a plan item id with a row in the forecast
 ledger or an exempt word (upkeep, snapshot, baseline): 'PL-17' passes, 'PL-17 the Oil Well chain' is refused.
 Write the ledger row before the unit. Emergency path: `--no-require-forecast` on enqueue.
 
 A FALLBACK unit (staged for a case that may not happen) says 'DISPATCH ONLY WHEN NAMED', carries priority 9 and a not_before beyond any plausible tick pick, because the 15-minute ticker picks `next` by ranking: a moot unit is a trap; retire it when its case closes.
+
+A BUILD UNIT'S PREVIEW STEP (Steer A 13:34Z): DRAG THE COST LIST until EVERY row (iron, food, coin, oil) is visible; check ALL floors against ALL rows and the table's three columns (2541) before the press; a row not seen: DO NOT press, write what was seen and STOP.
 
 A brief that taps buildings or menus points at the route card,
 `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`,
@@ -38,9 +40,9 @@ tag text beside every number taken from a building panel, and stops with
 one named reason: blocked by capacity, by the owner on another device, by
 cost, by prerequisite, by route or by window.
 
-Close DONE or PARTIAL by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (the counter or card state after, in the summary) or a verified nothing-to-do state with ONE `state_read: <what was read, quoted> | <frame: step or file> | <HH:MM:SSZ>` line (the key `evidence` stays the record path); PARTIAL when the state could not be read or the route not completed. Complete with `--state-change yes|no`: yes when the result changed the game state (named in the summary), no otherwise (a no on a DONE needs the state_read line).
+Close DONE or PARTIAL by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken claim (the counter or card state after, in the summary) or a verified nothing-to-do state with ONE `state_read: <what was read, quoted> | <frame: step or file> | <HH:MM:SSZ>` line (the key `evidence` stays the record path); PARTIAL when the state could not be read or the route not completed. Complete with `--state-change yes|no`: yes when the result changed the game state (named in the summary), no otherwise.
 
-A brief that reads the Backpack names its PLAN REASON (a conversion we want, an open date, the HQ 31 start, a stock check before a cost): no forensic read without one (Steer A 23:34Z; imp-20261124-03). A stock count claimed from a Backpack read needs two reads within the hour.
+A brief that reads the Backpack names its PLAN REASON (a conversion we want, an open date, the HQ 31 start, a stock check before a cost): no forensic read without one. A stock count claimed from a Backpack read needs two reads within the hour.
 
 A NEW UNIT names its expected value against its cost (0.2 to 0.3 USD a unit): below about 100K of resource-equivalent, a power gain, a duel row or a stated information value, it is FOLDED INTO AN EXISTING UNIT or not staged (Steer A 01:33Z).
 
@@ -48,9 +50,4 @@ Every unit carries Steer A's standing line (2026-11-23), word for word: 'May ope
 
 At the start of every unit: if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release and tell the Coordinator.
 
-On completion the executor runs `_tools_/queue.py complete`, which
-writes the result section into this file's frontmatter - status,
-start and finish times, duration, claimed items and the activity's
-result statistics - and moves the file to `done`. The result shape is
-defined in the
-[task unit queue design](../_conventions_/local-conventions/task-unit-queue-design.md).
+On completion the executor runs `_tools_/queue.py complete` (the result section, then `done`; the shape is in the [task unit queue design](../_conventions_/local-conventions/task-unit-queue-design.md)).

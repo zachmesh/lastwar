@@ -22,3 +22,6 @@ Back to the [folder index](INDEX.md).
 - [PR 1008](landing-pr-1008.md) - thirty-fourth records snapshot, the two-hourly delivery 06:00Z to 08:00Z
 - [PR 1009](landing-pr-1009.md) - thirty-fifth records snapshot, the two-hourly delivery 08:00Z to 10:00Z
 - [PR 1010](landing-pr-1010.md) - plunder-amendment, Steer A's plunder rule of 2026-11-26 (widens the owner's profile; flagged)
+- [PR 1011](landing-pr-1011.md) - thirty-sixth records snapshot, the two-hourly delivery 10:00Z to 12:00Z
+- [PR 1012](landing-pr-1012.md) - wrench-bubble-note, the wrench bubbles of the 11-26 probe are uncovered by the harvest unit
+- [PR 1013](landing-pr-1013.md) - build-preview-rule, a build unit presses only after every cost row is seen

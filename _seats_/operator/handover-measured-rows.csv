@@ -1,0 +1,20 @@
+topic,item,value,source
+tram,icon point,"(107,580); a badge opens Intercity Trade, a bare icon only pans the camera",route card 2700
+trade,tab points,"Others' Trucks (257,942); Your Truck (479,942); back arrow (109,941); slot plus (298,450) (362,450) (426,450)",records 0907 to 1341
+plunder,button points,"Quick Plunder (423,864); Battle (393,928); DMG Taken (526,397); Return (500,878)",records 0941 to 1341
+plunder,final rule,"guard under Squad 1 26.10M; arrival over 30 min; not an alliance mate; free room 1,000 or more; UR then SSR then SR; stop after a fight wounding over 50",sheet 2544
+hospital,route,"WORLD (658,940) then BASE; tent (688,460); orange middle button (599,522); panel X (605,257); bare ground (300,670)",record 1341
+hospital,figures 11-26,"wounded 1,364 of 7,999; Completed 5,104; free room 1,531 (13:42Z and 13:51Z)",record 1341
+builders,hammer counter,"(108,218); panel X (612,237)",record 1328
+oil well,route after WORLD then BASE,"plain drags (400,580) to (150,830), (655,602) to (390,620), (420,650) to (250,470); pumpjack about (343,410); gift box about (415,518) on the finished well",records 1311 and 1328
+oil well,Lv.26 to 27,"iron 56.1M + food 18.7M + coin 11.9M; effective 2d 12:37:36; original 5d 08:49:52; speed factor 2.125; ends 2026-11-28T19:37:10Z",record 1328
+pans,composed pan,"start (330,640) blank road; down +175 y shows the north; right +175 x shows the west",records 1143 and 1320
+bubbles,probe 11-26,"NEW! is the News Center portrait; wrench bubbles plain collect +480 each; question-mark figures idle chatter",record 1320
+donations,tech tap,"coin Donate (495,756); count 21 to 5 in 16 taps; EXP bar 6.3M of 8.0M",record 1232
+treasures,dig,"pickup (107,647); tab (310,162); Dig 1 time (311,939); one dig per unit unless the text says three; stop at a zero fragment",records 1213 and 1245
+harvest,3.07 h,"coin 447.1K/H, food 682.8K/H, iron 626.6K/H, oil 1.5K/H; piles equal elapsed output; cap between 3.07 and about 3.3 h",record 1223
+secrets,tab points,"Hidden Treasures (310,162); Others' Tasks (551,418); Claim (575,489); Like All never",record 1205
+gifts,points,"Alliance (670,708); Gifts tile (273,595); Regular Claim All (393,918); Premium tab (517,287) and its Claim All (550,918)",record 1200
+help,points,"Help tile (513,516); Help All (393,766); page X (611,232)",record 1202
+mail,points,"Mail (670,787); Event category (400,378); back arrow (113,934); Event list pan start (670,720)",records 1150 and 1210
+cu gates,owner idle,"start refused under 300 s idle; poll cu_bridge.py lock read-only",record 1150

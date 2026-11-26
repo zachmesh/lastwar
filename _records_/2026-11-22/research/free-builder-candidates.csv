@@ -1,12 +1,12 @@
-building,from_level,to_level,coin_M_at_0.85,power_gain,power_per_M_coin,base_days,effective_days_at_2.325,budget_fit,source
+building,from_level,to_level,coin_M_at_0.85,power_gain,power_per_M_coin,base_days,effective_days_at_2.125_less_6h32,budget_fit,source
 Gear Factory,20,21,6.6,10500,1584,5.8,2.5,fits 48M,guide table S1 (Gear Factory Lv.21 row; the game Main Tasks names it); level 20 from the tag index
 Training Base,26,27,11.9,10600,891,5.4,2.3,fits 48M,table S1 row validated on four panels; Main Tasks names Lv.27
-Iron Mine,27,28,17.0,12600,741,7.5,3.2,fits 48M,table S1; level from tag index
-Builders Hut,25,26,18.7,17500,936,15.3,6.6,fits 48M,table S1; panel 11-09 lists iron 170.0M and food 56.9M and no coin row
-Farmland,28,29,23.8,14900,626,9.8,4.2,fits 48M,table S1; level from tag index
-Gold Mine,28,29,23.8,14800,622,9.8,4.2,fits 48M,table S1; level from tag index; one tap hazard on the map
-Smelter,26,27,35.7,15700,440,10.7,4.6,fits 48M,table S1; level from tag index
-Barracks,24,25,49.3,19500,396,16.4,7.1,fits 58M only,table S1; level 24 is one of four barracks in the tag index
-Food Warehouse,24,25,58.6,20200,344,16.4,7.1,over budget,table S1; level from tag index
-Drill Ground,26,27,59.5,21600,363,21.5,9.2,over budget,table S1; level from tag index
-Hospital,25,26,68.8,23200,337,23.0,9.9,over budget,preview read 11-26 04:53Z (coin 68.8M)
+Iron Mine,27,28,17.0,12600,741,7.5,3.3,fits 48M,table S1; level from tag index
+Builders Hut,25,26,18.7,17500,936,15.3,6.9,fits 48M,table S1; panel 11-09 lists iron 170.0M and food 56.9M and no coin row
+Farmland,28,29,23.8,14900,626,9.8,4.3,fits 48M,table S1; level from tag index
+Gold Mine,28,29,23.8,14800,622,9.8,4.3,fits 48M,table S1; level from tag index; one tap hazard on the map
+Smelter,26,27,35.7,15700,440,10.7,4.8,fits 48M,table S1; level from tag index
+Barracks,24,25,49.3,19500,396,16.4,7.4,fits 58M only,table S1; level 24 is one of four barracks in the tag index
+Food Warehouse,24,25,58.6,20200,344,16.4,7.4,over budget,table S1; level from tag index
+Drill Ground,26,27,59.5,21600,363,21.5,9.8,over budget,table S1; level from tag index
+Hospital,25,26,68.8,23200,337,23.0,10.6,over budget,preview read 11-26 04:53Z (coin 68.8M)

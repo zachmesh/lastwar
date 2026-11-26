@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 1,178 s: wait 0",2026-11-26T12:10:37.816Z,see growth/0054-waits.csv
+badges,12:10:42.0Z: the Mail button without a dot; the tram not read,2026-11-26T12:10:37.816Z,tram badge rule: none; not tapped
+Event list before the pan,"six rows, all read: an ally's Mega Exp x2 and train mails x3, Code 87 Individual Reward; buttons Search, Delete All, Claim All",2026-11-26T12:10:59.893Z,tag text [G]: Mail Event list
+pan,"start (670,720) plain right margin, end (670,570): moved about 125 px; one new row below the sixth: a second Code 87 Individual Reward 6h ago",2026-11-26T12:11:12.901Z,list ends at seven rows
+named mails,"'Train arrival reward!', 'UNCLAIMED ARMS RACE EVENT' and 'GLITTERING MARKET UNCLAIMED' are not in the list",2026-11-26T12:11:12.901Z,a verified nothing-to-do
+Mail dot,no dot at 12:10:42.0Z and at the end; In-app Purchases category with a dot (not opened),2026-11-26T12:11:25.761Z,
+drags,"drags tried 0, cancelled 0",,

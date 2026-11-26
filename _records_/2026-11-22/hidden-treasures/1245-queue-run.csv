@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the first claim attempt (about 12:37:40Z) was refused by the not_before floor 12:45:00Z; I waited without input until 12:45:02Z; the run was admitted 1.2 s after its request; owner idle 3,262 s",2026-11-26T12:45:26.812Z,see growth/0054-waits.csv
+badges,12:45:30.9Z: the tram not read; the pickup icon with a dot then none after,2026-11-26T12:45:26.812Z,tram badge rule: none; not tapped
+before dig 1,"M1 x7, M2 x4, M3 x5, M4 x1, M5 x3, M6 x5, M7 x5: a full set; track 0 of 15; Skip Animation ticked; Rewards button text 'Rewards'",2026-11-26T12:45:46.781Z,tag text [G]: Hidden Treasure
+dig 1,"Dig 1 time once at 12:45:51.4Z: golden crate x36, medal x900, 1m speed-up x50, 1m speed-up x25, blue triangle x200",2026-11-26T12:45:54.657Z,
+after dig 1,"M1 x6, M2 x3, M3 x4, M4 x0, M5 x2, M6 x4, M7 x4; track 1 of 15",2026-11-26T12:46:01.404Z,M4 zero: stop
+digs 2 and 3,not made: M4 at zero,2026-11-26T12:46:01.404Z,the rule: stop when any fragment is zero
+drags,"drags tried 0, cancelled 0",,
