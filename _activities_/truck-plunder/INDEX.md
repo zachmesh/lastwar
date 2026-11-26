@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-23T15:33:54Z
+modified: 2026-11-26T11:30:10Z
 level: L1
-version: 1.48.0
+version: 1.49.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -71,8 +71,8 @@ Goal: dispatch and plunder trade trucks within the casualty guard.
 ## Rules
 
 - R1 Trade truck plunder is on (owner override OD-20261123-20); Arena, gold-trophy fights, rallies, General's Trial and base attacks stay forbidden. Status: tested. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
-- R2 Plunder UR or SSR trucks with a UR 500-badge stack in either half, guard under Squad 1 (25.61M), arrival over 30 minutes. Status: tested. 2026-11-23. `_records_/2026-11-22/truck-plunder/1523-queue-run.md`
-- R3 Casualty guard: read the hospital before each session; stop if free room falls under 1,000 or two fights in a row wound over 100 troops. Status: unverified. 2026-11-23. `_records_/retro/owner-decisions-log/od-20261123-20.md`
+- R2 Plunder any truck meeting all four: guard under Squad 1 (read in the frame), arrival over 30 minutes, not an alliance mate, free room at least 1,000; order UR, SSR, SR. Status: unverified. 2026-11-26. `_records_/2026-11-22/queue-planning/2544-trade-day-rules.md`
+- R3 Casualty guard: stop after a fight that wounds over 50 troops or if free room falls under 1,000. Status: unverified. 2026-11-26. `_records_/2026-11-22/queue-planning/2544-trade-day-rules.md`
 - R4 Find the trade icon by glyph and badge each unit; verify the screen that opened. Status: tested. 2026-11-22. `_records_/2026-11-22/truck-plunder/0958-queue-run.md`
 - R5 Claim Reward Recovery at the red dot. Status: verified. 2026-11-22. `_records_/2026-11-22/truck-plunder/2058-queue-run.md`
 
@@ -83,7 +83,7 @@ Goal: dispatch and plunder trade trucks within the casualty guard.
 
 ## Open questions
 
-- Does slot position change the shards won? Test: log stack slots and shards per fight; run by operator.
+- Does slot position change the shards won? Test: log stack slots and shards per fight.
 - Does free room fall by the wounded count? Test: read the hospital before and after a fight; run by researcher.
 
 ## Numbers
@@ -93,5 +93,6 @@ Numbers, 7 days to 2026-11-23: 1 units; done 0%; done-or-by-design 100%; partial
 ## Links
 
 - [Rule digest](rule-digest.md)
+- [Plunder amendment](plunder-amendment.md)
 - [All catalogs](article-catalogs.md)
 - [Hospital finding](../../_records_/2026-11-22/coach/2400-hospital-finding.md)
