@@ -1,0 +1,19 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.0 s after its request; owner idle 80,337 to 81,470 s: wait 0",2026-11-26T10:07:31.679Z,see growth/0054-waits.csv
+badges,"10:09:14Z: the tram icon with a RED DOT (a trade entry, not used in this unit)",2026-11-26T10:07:31.679Z,tram badge rule: none; not tapped
+builders,Lv.25 Oil Well 03:01:56; Lv.27 Drill Ground 3d 05:23:01; row 3 IDLE; Lv.28 Drill Ground 7d 03:42:13,2026-11-26T10:07:49.761Z,tag text [G]: Building Queue
+right ground,tag 'Drill Ground Lv.27' with no timer: the top red field after the pan,2026-11-26T10:11:54.748Z,
+preview,"Lv.27 to 28: coin 83.3M, iron 102.0M, food 314.5M (all within 1 percent); power 140,200 to 165,800; original 30d 01:27:10, effective 14d 03:30:26",2026-11-26T10:25:46.496Z,
+use 1,Food Chest (UR) x36 (4.06M): food 211.9M to 358.0M,2026-11-26T10:14:12.707Z,count 73 to 37
+use 2,Coin Chest (UR) x10 (2.43M): coin 23.3M to 47.7M,2026-11-26T10:15:31.739Z,count 10 to 0
+use 3,Coin Chest (SSR) x6 (812.16K): coin 47.7M to 52.5M,2026-11-26T10:16:47.479Z,
+use 4,Coin Chest (SR) x138 (101.52K): coin 52.5M to 66.6M,2026-11-26T10:17:13.924Z,
+use 5,coin item 30.0K x50: coin 66.6M to 68.1M,2026-11-26T10:17:41.510Z,
+use 6,coin item 6.0K x58: coin 68.1M to 68.4M,2026-11-26T10:18:47.797Z,
+use 7,"coin item 600 x6,757: coin 68.4M to 72.5M",2026-11-26T10:19:08.478Z,
+use 8 (R5),"UR Resource Choice Chest x1 then x8, Coin Chest (UR) option (2.43M each, no price): 9 Coin Chest (UR) items; choice count 604 to 595",2026-11-26T10:22:02.830Z,R5 used: 21.9M coin of the 40M cap
+use 9,Coin Chest (UR) x9 (2.43M): coin 72.5M to 94.4M,2026-11-26T10:23:04.168Z,
+Upgrade,"Upgrade pressed ONCE at 10:25:52.0Z: food 43.5M, iron 677.7M, coin 11.1M after",2026-11-26T10:26:04.782Z,floors held
+timer,"Lv.27 Drill Ground 13d 20:57:28 at 10:26:51.1Z: ends about 2026-12-10T07:24:19Z; factor 2.17; 23,519 s below the preview time",2026-11-26T10:26:51.130Z,
+cost,1.640479 USD against the cap 1.50 USD: over by 0.14,2026-11-26T10:27:26Z,disclosed
+drags,"drags tried 0, cancelled 0",,

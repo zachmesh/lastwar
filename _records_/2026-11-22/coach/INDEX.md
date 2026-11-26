@@ -12,6 +12,7 @@ Coach seat records: notes newest first, then data by topic.
 
 ## Notes
 
+- [1155-daily-report-2026-11-26.md](1155-daily-report-2026-11-26.md) - daily report, 12:00Z 11-26
 - [0348-daily-report-2026-11-24.md](0348-daily-report-2026-11-24.md) - daily report, 12:00Z 11-24
 - [0335-trade-history-read-spec.md](0335-trade-history-read-spec.md) - Trade History read specification
 - [1537-flat-reduction-series.md](1537-flat-reduction-series.md) - flat 6 h 32 min series

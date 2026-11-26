@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 82,743 s: wait 0",2026-11-26T10:47:46.868Z,see growth/0054-waits.csv
+badges,"10:47:51.7Z: the Events badge 1, the tram icon with a red dot; 10:49:05.8Z: the same",2026-11-26T10:47:46.868Z,tram badge rule: none; not tapped
+tab bar,"Age of Oil (cut off), Arms Race, Black Market, Black Market Challenge (red '!')",2026-11-26T10:48:04.781Z,tag text [G]: Events hub
+Age of Oil,"stages 1 to 3 reached, stage 4 locked; two cards with faded check marks, no Claim; 3d 15:11:50",2026-11-26T10:48:10.937Z,
+Arms Race,"Hero Advancement: score 0; timer 03:12; chests 2,360, 4,800, 11,800 diamonds (priced)",2026-11-26T10:48:19.304Z,never pressed
+Black Market,free item sold out; the others priced in BM cash,2026-11-26T10:48:26.462Z,
+Black Market Challenge,only Go To buttons; earned today 555/745; 3d 15:11,2026-11-26T10:48:33.303Z,
+turkey tickets,"balance 6 at 10:48:57.4Z (rows 6/100, 6/100, 6/10, 6/1); Store timer 4d 15:11:03; nothing redeemed",2026-11-26T10:48:57.403Z,the Coach's income series
+claims,none: no plain Claim on any tab,2026-11-26T10:49:05.781Z,a verified nothing-to-do
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.2 s after its request; owner idle 81,641 to 82,619 s: wait 0",2026-11-26T10:39:52.689Z,see growth/0054-waits.csv
+badges,10:40:49Z: the Daily Tasks tab badge 1,2026-11-26T10:39:52.689Z,tram badge rule: none; not tapped
+front,UserNotificationCenter in front 10:39:29Z; one killall -9 UserNotificationCenter 10:39:29Z; LastWar front 10:39:33Z and 10:46:23Z,2026-11-26T10:39:33Z,tag text [G]: the consent window never read or answered
+Main Tasks,"all rows Go (HQ Lv.31, Builder's Hut Lv.26, Hospital Lv.26, Training Base Lv.27, Gear Factory Lv.21 ...): no Claim",2026-11-26T10:40:15.759Z,
+Daily before,"points 150; 'Upgrade a Building 1 time(s) (1/1)' green Claim (10 points, 5.0K food, 5.0K iron)",2026-11-26T10:40:49.263Z,
+Claim,'Upgrade a Building' once at 10:44:07.7Z: points 150 to 160,2026-11-26T10:44:16.743Z,popup not read
+160 chest,"tapped once at 10:44:52.6Z: gold paw item x1, truck-ticket item x1, scroll x1, red gem item 30 x1, blue crystal 1.6K, 5m construction speed-up x3",2026-11-26T10:44:54.787Z,No double reward this time
+HUD,"food 43.5M, iron 677.7M, coin 11.1M, diamonds 10,673 (10,643 before)",2026-11-26T10:46:11.430Z,
+Weekly Pass,not done: cap,2026-11-26T10:46:23Z,cards already claimed at 09:38Z
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,the second run waited read-only 4 min 30 s for the owner gate (idle 48 s at 11:51:44Z to 316 s at 11:56:12Z); first run admitted 0.8 s after its request,2026-11-26T11:50:36.327Z,see growth/0054-waits.csv
+badges,11:50:41.3Z: the tram bare; the Mail button a red dot; 11:58:10Z: the Mail dot gone,2026-11-26T11:50:36.327Z,tram badge rule: none; not tapped
+rail,Battle Report none; Alliance gift icon; Event gift icon; System none; Regular red dot; In-app red dot; Favorite none,2026-11-26T11:50:51.582Z,tag text [G]: Mail rail
+Event list,"six unread rows (an ally's Mega Exp x2 and train mails x3, Code 87 read): no Train arrival, Arms Race or Glittering Market mail visible; no gift icon on a row",2026-11-26T11:51:03.029Z,not scrolled
+Event Claim All,once at 11:56:54.7Z: no popup; rows read; HUD unchanged,2026-11-26T11:57:00.424Z,nothing paid
+Alliance Claim All,once at 11:57:18.6Z: list all read; no popup; nothing paid,2026-11-26T11:57:25.392Z,nothing paid
+Regular,Victory reports Lv.30 Doom Elite; no gift icon: no Claim All,2026-11-26T11:57:41.049Z,
+Mail dot,red dot at 11:50:41.3Z; gone at 11:58:10.4Z,2026-11-26T11:58:16.215Z,cleared
+owner gate,local input 49 s before 11:51:44Z: run refused; held until idle 316 s,2026-11-26T11:56:12Z,D-066
+drags,"drags tried 0, cancelled 0",,
