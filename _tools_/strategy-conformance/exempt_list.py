@@ -1,7 +1,8 @@
 """The serves exempt list: parser, validation and the dated baseline, read by strategy_conformance.py (owner of the parser: the Toolsmith;
 owner of the content: the Strategist - one line per regular in `_records_/<date>/strategy/serves-exempt-list.csv`, Steer A's ruling of 2026-11-25).
 
-Columns: regular_id, class, serves, reason, decided_utc, review_utc. class is
+Columns: regular_id, class, serves, reason, decided_utc, review_utc, and an OPTIONAL kind (blank or `regular`: the id is a roster regular; `oneoff`: a
+one-off unit the roster does not hold - a test, a probe, a single reading - which may be on the list without a roster row and is held to its review date). class is
   plan    the regular feeds a plan item with a ledger row (serves: PL ids)           - counts as served
   income  its claims are daily claims income, ledger line PL-19 (serves: PL ids)      - counts as served
   exempt  it only looks (a read; presses nothing that claims); serves names no plan item - leaves the denominator, with its reason
@@ -29,6 +30,7 @@ LIST_NAME = "serves-exempt-list.csv"
 BASELINE_REL = "_tools_/state/serves-exempt-baseline.json"
 HEADER = ["regular_id", "class", "serves", "reason", "decided_utc", "review_utc"]
 CLASSES = ("plan", "income", "exempt")
+KINDS = ("regular", "oneoff")
 PLAN_ID = re.compile(r"^PL-\d{1,3}$")
 STAMP_FORMATS = ("%Y-%m-%dT%H:%MZ", "%Y-%m-%dT%H:%M:%SZ")
 
@@ -70,6 +72,7 @@ def parse(path: Path):
     seen = set()
     for number, record in enumerate(reader, start=2):
         row = {c: (record.get(c) or "").strip() for c in HEADER}
+        row["kind"] = (record.get("kind") or "").strip().lower() or "regular"
         ident = row["regular_id"]
         if not ident:
             errors.append(f"line {number}: regular_id is empty")
@@ -78,6 +81,8 @@ def parse(path: Path):
             errors.append(f"{ident}: listed twice")
             continue
         seen.add(ident)
+        if row["kind"] not in KINDS:
+            errors.append(f"{ident}: kind {row['kind']} is not one of {', '.join(KINDS)} (blank means regular)")
         if row["class"] not in CLASSES:
             errors.append(f"{ident}: class {row['class'] or '(empty)'} is not one of {', '.join(CLASSES)}")
         if not row["serves"]:
@@ -107,10 +112,14 @@ def validate(rows, parse_errors, roster_serves: dict, ledger_ids, now: datetime)
     errors, warnings = list(parse_errors), []
     listed = {r["regular_id"]: r for r in rows}
     unlabeled = sorted(set(roster_serves) - set(listed))
-    stale = sorted(set(listed) - set(roster_serves)) if roster_serves else []
+    stale = sorted(i for i in listed if i not in roster_serves and listed[i].get("kind") != "oneoff") if roster_serves else []
+    oneoffs = sorted(i for i, r in listed.items() if r.get("kind") == "oneoff")
     if roster_serves:
         errors += [f"{i}: in the roster and not on the list (unlabeled)" for i in unlabeled]
         errors += [f"{i}: on the list and not in the roster" for i in stale]
+    for ident in oneoffs:
+        if ident in roster_serves:
+            warnings.append(f"{ident}: listed as a one-off but the roster holds it (make it a regular line)")
     for ident, row in listed.items():
         parts = serves_parts(row["serves"])
         plan_ids = [p for p in parts if PLAN_ID.match(p)]
@@ -131,12 +140,12 @@ def validate(rows, parse_errors, roster_serves: dict, ledger_ids, now: datetime)
                         + (" ..." if len(mismatched) > 12 else ""))
     classes = {c: sum(1 for r in rows if r["class"] == c) for c in CLASSES}
     return {"errors": errors, "warnings": warnings, "regulars_listed": len(rows), "classes": classes, "roster": len(roster_serves),
-            "unlabeled": unlabeled, "stale": stale, "roster_serves_mismatch": mismatched,
+            "unlabeled": unlabeled, "stale": stale, "oneoff": oneoffs, "roster_serves_mismatch": mismatched,
             "ledger_checked": ledger_ids is not None}
 
 
 def _line_key(row: dict) -> dict:
-    return {"class": row["class"], "serves": " ".join(serves_parts(row["serves"])),
+    return {"class": row["class"], "kind": row.get("kind", "regular"), "serves": " ".join(serves_parts(row["serves"])),
             "reason_sha": hashlib.sha256(row["reason"].encode("utf-8")).hexdigest()[:12], "decided_utc": row["decided_utc"]}
 
 
@@ -159,8 +168,8 @@ def compare_baseline(root: Path, rows) -> dict:
     now_lines = {r["regular_id"]: _line_key(r) for r in rows}
     added = sorted(set(now_lines) - set(lines))
     removed = sorted(set(lines) - set(now_lines))
-    edited = sorted(i for i in now_lines if i in lines and {k: now_lines[i][k] for k in ("class", "serves", "reason_sha")}
-                    != {k: lines[i].get(k) for k in ("class", "serves", "reason_sha")})
+    edited = sorted(i for i in now_lines if i in lines and {k: now_lines[i][k] for k in ("class", "kind", "serves", "reason_sha")}
+                    != {k: lines[i].get(k, "regular" if k == "kind" else None) for k in ("class", "kind", "serves", "reason_sha")})
     errors, warnings = [], []
     for ident in edited:
         old, new = parse_stamp(lines[ident].get("decided_utc", "")), parse_stamp(now_lines[ident]["decided_utc"])
