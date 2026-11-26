@@ -281,3 +281,4 @@ trucks-dispatch-2026-11-26-001,2026-11-26T04:43:47.9Z,60937,2026-11-26T04:42:21.
 harvest-2026-11-25-1803,2026-11-26T04:49:21.2Z,61270,2026-11-26T04:46:00.0Z,2026-11-26T04:49:22.3Z,0.01,"two runs: admitted 0.8 to 0.9 s after the requests: wait 0"
 scout-midday-builders-read-2026-11-26-001,2026-11-26T04:53:44.4Z,61532,2026-11-26T04:52:00.0Z,2026-11-26T04:53:45.3Z,0.01,"four runs: admitted 0.8 to 1.0 s after the requests: wait 0"
 scout-midday-takeover2-session-2026-11-26-001,2026-11-26T05:43:52.0Z,64536,2026-11-26T05:43:46.5Z,2026-11-26T05:46:23.4Z,0.45,"the cu-integrator's gate run held the lock 05:43:46Z to about 05:46:20Z: OTHER"
+scout-midday-takeover3-session-2026-11-26-001,2026-11-26T07:46:51.4Z,71914,2026-11-26T07:46:44.0Z,2026-11-26T07:46:52.8Z,0.01,"admitted 1.4 s after the request: wait 0"

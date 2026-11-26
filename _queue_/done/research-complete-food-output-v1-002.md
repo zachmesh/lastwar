@@ -5,7 +5,7 @@ activity: research-queue
 segment: 2
 priority: 1
 created_at: 2026-11-26T04:09:24Z
-expires_at: 2026-11-27T02:00:00Z
+expires_at: 2026-11-26T06:02:41Z
 planned_for:
 not_before: 2026-11-26T04:12:00Z
 window: complete food output v lv.1, finished 11-25 19:39z, complete tap waits
@@ -18,6 +18,20 @@ max_attempts: 3
 claimed_by:
 claimed_at:
 lease_until:
+result:
+  status: expired
+  started_at:
+  finished_at: 2026-11-26T06:02:41Z
+  duration_seconds: 
+  executor:
+  summary: retired by the planner: the phone restarted both labs, so the Food Output V node is long finished (builders read 04:54Z: Oil Output I and Defense VIII running); the lab completes are the oil and defense units
+  claimed: []
+  claimed_count: 0
+  evidence: 
+  follow_up: none
+  stats:
+  stats_missing: [target, achieved, resources_gained, costs, verified]
+  stats_warnings: []
 ---
 
 # research

@@ -13,11 +13,45 @@ est_minutes: 6
 serves: upkeep
 chain_id: takeover3-session-2026-11-26
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T07:46:51Z
+lease_until: 2026-11-26T08:06:51Z
+result:
+  status: done
+  started_at: 2026-11-26T07:46:51Z
+  finished_at: 2026-11-26T07:50:50Z
+  duration_seconds: 239
+  executor: operator
+  summary: Third takeover: the third Confirm tapped once at 07:47:01.5Z; the game quit and the front script once relaunched it; takeover done 07:47:24Z (the base live; Total Power 151,680,155, food 195.0M, iron 763.0M, coin 14.8M, oil 573.1K, diamonds 10,643, energy 181, builders 3/4, labs 2/2); the builders panel unread (three hammer taps opened nothing, cause unknown); the 30-minute guard runs to 08:17:01Z; drags 0. state_change: yes
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/perception-scout/0746-queue-run.md and 0746-queue-run.csv; run 20261126T074651Z-f8d05d
+  state_change: yes
+  follow_up: the guard to 08:17:01Z; the builders panel to be read in a later unit
+  stats:
+    target: one Confirm on the different-device dialog
+    achieved: Confirm tapped, base live 07:47:24Z
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.275 USD
+    verified: yes
+    run_id: 20261126T074651Z-f8d05d
+    run_steps: 24
+    actions_done: 4
+    actions_refused: 0
+    cost_usd: 0.275
+    device_takeovers: 0
+    claims: 0
+    confirm_utc: 07:47:01.5
+    takeover_done_utc: 07:47:24
+    power: 151680155
+    tram_badge: none at the turn-9 read
+    drags_tried: 0
+    rules_used: 1
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # scout-midday
