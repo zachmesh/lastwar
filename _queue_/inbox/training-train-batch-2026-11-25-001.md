@@ -5,7 +5,7 @@ activity: troop-training
 segment: 2
 priority: 2
 created_at: 2026-11-25T00:24:20Z
-expires_at: 2026-11-26T06:50:00Z
+expires_at: 2026-11-27T02:00:00Z
 planned_for:
 not_before: 2026-11-25T13:50:00Z
 window: train one batch with the free drill ground room after the collect 11-25

@@ -1,9 +1,9 @@
 ---
 title: Integrator handover
 created: 2026-11-23T07:25:00Z
-modified: 2026-11-25T16:26:00Z
+modified: 2026-11-26T02:02:00Z
 level: L2
-version: 0.5.0
+version: 0.5.1
 description: The live state a replacement integrator starts from
 status: unverified
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 
 # Handover - integrator
 
-Updated 2026-11-25 16:26Z. Earlier versions are in git history.
+Updated 2026-11-26 02:02Z. Earlier versions are in git history.
 
 ## Holder
 
@@ -22,8 +22,8 @@ Session `session-bc838015-7852-464e-8cab-cf2fcc70a335`, started 2026-11-23T07:15
 
 ## State
 
-- Last merged pull request: 995, merge commit `eed38530352b`, the origin/main tip at 2026-11-25 16:23Z. The only open pull request is 838, stale: never merge it.
-- Nothing else is waiting. Every branch the coordinator named has merged (908 to 995, branches kept). Many work branches show as unmerged by SHA: they landed as rebuilt `land/` copies or predate this seat. Check the pull request list and the landing notes, not ancestry.
+- Last merged pull request: 1001, merge commit `f27f6e8c18f9`, the origin/main tip at 2026-11-26 01:59Z. The only open pull request is 838, stale: never merge it.
+- Nothing else is waiting. Every branch the coordinator named has merged (908 to 1001, branches kept). Many work branches show as unmerged by SHA: they landed as rebuilt `land/` copies or predate this seat. Check the pull request list and the landing notes, not ancestry.
 - Finding for the scribe: finished-batch-lesson.md carries a pre-registration stamped 2026-11-26T21:10:37Z, in the future.
 - Switches: `require_forecast` is on since 959. `require_state_read` is absent, which is off; flipping it is the coordinator's, never mine.
 - Guarded blobs on main: queue.py 7a4b2f11e3d7, cu_bridge.py f595c7303f76, regulars.json 1879aba3489b, observation.py 950ebf74c257. After landing a change to one, give the coordinator the new blob for tool_sync.
@@ -34,7 +34,7 @@ Scope, then the privacy scan before any push, then the checks. Push the named br
 
 ## Checks
 
-`lint_gate.py check --base origin/main` blocks on exit 2; the author's hook replay (`check --staged`); the privacy census, whose control (`--rev 839bad3fda`) must read live. Read every code file and test diff. Records branches: each deleted unit needs a counterpart in `_queue_/done`; an untracked citation is a warning for the coordinator's next snapshot. The cu-bridge tests never run while `_queue_/claimed/` holds a file; a skip is not a pass; poll for a gap; never set CU_TESTS_IGNORE_LIVE_RUN. Landing note: `landing-pr-NNN.md` plus one line in the newest catalog (now catalog-03.md); the coordinator commits them.
+`lint_gate.py check --base origin/main` blocks on exit 2; the author's hook replay (`check --staged`); the privacy census, whose control (`--rev 839bad3fda`) must read live. Read every code file and test diff. Records branches: each deleted unit needs a counterpart in `_queue_/done`; an untracked citation is a warning for the coordinator's next snapshot. The cu-bridge tests never run while `_queue_/claimed/` holds a file; a skip is not a pass; poll for a gap; never set CU_TESTS_IGNORE_LIVE_RUN. Landing note: `landing-pr-NNN.md` plus one line in the newest catalog (now catalog-04.md); the coordinator commits them.
 
 ## Tools
 

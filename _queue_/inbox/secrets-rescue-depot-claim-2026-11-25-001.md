@@ -5,7 +5,7 @@ activity: secret-missions
 segment: 2
 priority: 1
 created_at: 2026-11-25T03:16:37Z
-expires_at: 2026-11-26T06:50:00Z
+expires_at: 2026-11-27T02:00:00Z
 planned_for: 2026-11-25T10:01:28Z
 not_before:
 window: claim the rescue and oil depot tasks and re-deploy, after the oil well hand-off
