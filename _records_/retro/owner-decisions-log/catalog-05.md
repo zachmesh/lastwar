@@ -1,12 +1,12 @@
 ---
 title: Owner decisions catalog 05
 created: 2026-11-25T03:20:00Z
-modified: 2026-11-26T04:07:16Z
-version: 1.2.0
+modified: 2026-11-26T05:49:41Z
+version: 1.3.0
 description: Owner decisions OD-20261125-01 to OD-20261125-04, answered by the owner through Steer B and learned on 2026-11-25T03:15Z
 ---
 
-# Catalog 05: OD-20261125-01 to OD-20261126-01
+# Catalog 05: OD-20261125-01 to OD-20261126-02
 
 - [OD-20261125-01](od-20261125-01.md) - DECIDED by the owner: the macOS screen-recording prompt is handled in System Settings (which answer unknown); keep the 04:30Z calm window and the 04:38Z check.
 - [OD-20261125-02](od-20261125-02.md) - DECIDED by the owner: ai-sync playwright_sync.py is HIS job; the team avoids its time; the daily calm window 09:58Z to 10:05Z is kept.
@@ -14,3 +14,4 @@ description: Owner decisions OD-20261125-01 to OD-20261125-04, answered by the o
 - [OD-20261125-04](od-20261125-04.md) - DECIDED by the owner: the zombie siege schedule stays unchanged and the risk is accepted; the hospital free room is read and told to him before it.
 - [OD-20261125-05](od-20261125-05.md) - DECIDED by the owner, directly in the GUI at about 05:31Z: scroll the game screen to see all areas and interact with them where it is free and allowed; a read-only base survey first, then ranked interaction units, then the world map.
 - [OD-20261126-01](od-20261126-01.md) - DECIDED by Steer A under OD-05 and OD-17: one Confirm on the different-device dialog after the 22-hour halt; the no-press clause was the Steers' own procedure; the 30-minute guard stands.
+- [OD-20261126-02](od-20261126-02.md) - DECIDED by Steer A under OD-05 and OD-17: the second Confirm held 5 min 13 s, so the team stops for two hours, then a doubling backoff (2, 4, 8 hours) until the owner chooses; the owner's question is OPEN.

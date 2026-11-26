@@ -1,8 +1,8 @@
 ---
 title: Known dialogs
 created: 2026-11-25T00:35:29Z
-modified: 2026-11-26T04:07:16Z
-version: 0.3.0
+modified: 2026-11-26T05:49:41Z
+version: 0.4.0
 description: The dialogs the game has shown that a unit may meet, each with its text, its buttons and the one safe answer; anything not in the table is a stop
 ---
 
@@ -13,7 +13,7 @@ Identify a dialog by its text in a frame taken just before the tap, tap once, an
 | Dialog and its text | Buttons | Answer | Source |
 |---|---|---|---|
 | TIPS "Enable notifications and never miss important messages again." | Cancel, Enable Now | Cancel, never Enable Now (Steer A) | `_records_/2026-11-22/perception-scout/0412-queue-run.md` |
-| TIPS "Your account is currently active on a different device!" | Confirm | The owner's standing approval: Confirm once to take the session back; if it returns within 30 minutes of a Confirm, stop for that window and retry once after 30 minutes; the second return stops the team and tells the owner; at most two Confirms in two hours (Steer A, 2026-11-26) | OD-20261123-05, OD-20261123-17, OD-20261126-01 |
+| TIPS "Your account is currently active on a different device!" | Confirm | The owner's standing approval (OD-05, OD-17): Confirm once, the dialog text read exactly. Backoff until the owner chooses (Steer A, 2026-11-26): a return within 30 minutes of a Confirm doubles the wait before the next one (2, 4, then 8 hours); a Confirm that holds 2 hours resets it to 30 minutes | OD-20261123-05, OD-20261123-17, OD-20261126-01, OD-20261126-02 |
 | Radar claim "Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 10 radar task rewards at once. Continue?" | Cancel, Confirm, no price | Confirm, for that exact text only | `_records_/2026-11-22/radar-tasks/0339-queue-run.md` |
 | Profile like dialog "You're very popular!" ("... people think you're awesome!"), opened by tapping the avatar | one blue "Awesome!" | Tap "Awesome!" once (393,677), then the profile's X (627,77) to return to the base, nothing else on the profile (the coordinator's ruling of 2026-11-25 00:36Z, confirmed by Steer A at 00:40Z, no veto) | `_records_/2026-11-22/daily-activities/0025-queue-run.md` |
 
