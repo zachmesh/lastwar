@@ -41,6 +41,7 @@ Steer A 05:37Z (approved gesture). SKIP this unit if the record of `building-que
 Never Speed Up, Finish Now or another builder's row.
 Cost cap, stated: 0.25 USD.
 CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for the reads written (and the gesture if tapped), with ONE `state_read: <what was read> | <frame> | <HH:MM:SSZ>` line; else PARTIAL; `--state-change` yes only if the help request was tapped.
+Hammer: if one verified tap opens nothing, record the frame and try the second route in the routes table (builders row) once; else STOP and report: never a fourth tap.
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
-Safe tap: the bare spot (310,660), not (400,640) after a camera shift (WORLD then BASE first). Verify each HUD icon by its label first.
+Safe tap: the bare spot (310,660), not (400,640) after a camera shift (WORLD then BASE first).

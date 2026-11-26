@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted each run 0.6 to 1.3 s after its request; owner idle 71,907 s: wait 0",2026-11-26T07:46:52.812Z,see growth/0054-waits.csv
+badges,"07:47:24.4Z: the base live; at the turn-9 read: the tram none, the pickup a red dot, the radar dish 3, the hammer 3/4 with a red dot",2026-11-26T07:46:52.812Z,tram badge rule: none; not tapped
+dialog before,TIPS 'Your account is currently active on a different device!' with ONE red button 'Confirm' over the frozen base,2026-11-26T07:46:57.679Z,tag text [G]: the dialog; the exact expected text
+third Confirm,"ONE tap at (393,571) at 07:47:01.5Z; reason: the third Confirm: backoff rule of Steer A 05:48Z: 2 hours after the quick return of 05:46:23.8Z (the second Confirm of 05:41:10.9Z held 5 min 13 s)",2026-11-26T07:47:01.548Z,never a second tap
+quit and relaunch,Google Chrome in front 07:47:03.2Z; no LastWar process 07:47:10Z; the front script once: LastWar front 07:47:16Z,2026-11-26T07:47:16Z,
+takeover done,"the base live at the first frame 07:47:24.4Z: takeover done 07:47:24Z; no Update dialog, no TIPS",2026-11-26T07:47:24.363Z,
+HUD,"Total Power 151,680,155; food 195.0M; iron 763.0M; coin 14.8M; oil 573.1K; diamonds 10,643; energy 181; builders 3/4; labs 2/2",2026-11-26T07:47:48.783Z,"the 05:41:55Z baseline: food 194.8M, iron 762.8M, coin 14.8M, oil 572.7K"
+builders panel,NOT read: three hammer taps in two runs opened nothing (the frames showed the base each time),2026-11-26T07:49:46.514Z,cause unknown; the panel can be read in a later unit
+guard,30 minutes from the Confirm: to 08:17:01Z; the dialog had not returned by 07:50:01Z,2026-11-26T07:50:00.978Z,"if it returns: no tap, the next wait 4 hours"
+drags,"drags tried 0, cancelled 0",,

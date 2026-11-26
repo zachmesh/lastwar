@@ -1,9 +1,9 @@
 ---
 title: Operator seat handover
 created: 2026-11-22T19:11:00-08:00
-modified: 2026-11-26T04:17:00Z
+modified: 2026-11-26T07:58:00Z
 level: L2
-version: 0.19.0
+version: 0.20.0
 description: The operator's live recipe - run recipe and hazards, research and plunder rules, stat names, gates, open items, links to the route card and the detail sidecar
 status: unverified
 grounded_in:
@@ -17,7 +17,7 @@ grounded_in:
 
 # Handover - operator
 
-Updated 2026-11-26 04:17Z. Lessons and kit: `_records_/2026-11-22/growth/0054-session-lessons.md`, `0054-operator-handover-detail.md`, `0054-run-hazards.md`, `0054-task-texts.csv`. Routes: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`. Second device: `_records_/2026-11-22/team-operations/2715-second-device.md`.
+Updated 2026-11-26 07:58Z. Lessons and kit: `_records_/2026-11-22/growth/0054-session-lessons.md`, `0054-operator-handover-detail.md`, `0054-run-hazards.md`, `0054-task-texts.csv`. Routes: `_records_/2026-11-22/queue-planning/2700-route-card-and-stop-reasons.md`. Second device: `_records_/2026-11-22/team-operations/2715-second-device.md`.
 
 ## Holder
 
@@ -27,14 +27,14 @@ Only the operator holds the device token and sends game input. Reply in four lin
 
 - ONE unit, one run, one claim at a time, each BY NAME, its own `queue.py complete`, a record of 350 words or fewer plus a CSV. token-acquire; claim (stale receipt: `queue.py read --record PATH --executor operator`); `cu_bridge.py lock` free; `lsappinfo` names LastWar; start `--app com.lastwar.ios`; poll. 16 steps or fewer (18 screenshots end `context_full`: read the saved frames yourself); EXACTLY ONE action per turn.
 - Owner-idle gate 300 s: `cu_bridge.py lock` shows `owner_idle_seconds`. A person at the Mac (idle near 0) means HOLD, poll read-only, send one line when he leaves; never input over him.
-- Dialogs: TIPS "Enable notifications": Cancel only. Radar Claim All confirm ("will not grant Alliance Duel points"): Confirm. Consent requests are human-only. "Active on a different device": the owner's standing approval (OD-20261123-05 and -17: take the session, kick the other device out) is run ONLY by the takeover unit `scout-midday-takeover-session-2026-11-26-001`: ONE Confirm, a 30-minute guard (the dialog returning means someone plays), at most two Confirms in two hours. Steer A withdrew the no-press ruling at 04:05Z (OD-20261126-01); "nobody Confirms without the owner" was the Steers' resume procedure of 11-23 (record 2738), not the owner's.
-- Foreground: a switch stops the run: press nothing, `lsappinfo front`, tell the coordinator. The front script does NOT lift LastWar over a UserNotificationCenter window (04:07Z, still in front at 04:08Z): the coordinator asked Steer A about one killall; never read or click that window. Chrome for Testing: hold. `out_of_scope` refusals: stop and tell.
+- Dialogs: TIPS "Enable notifications": Cancel only. Radar Claim All confirm ("will not grant Alliance Duel points"): Confirm. Consent requests are human-only. "Active on a different device": only a takeover unit by name taps its ONE Confirm (owner OD-20261123-05 and -17); the game then QUITS: front script once, frames only, one tap on "Update complete, please restart the game." if shown. Guard: the dialog back within 30 minutes means someone plays: no tap; backoff 30 min, then 2 h, then 4 h; two Confirms per two hours.
+- Foreground: a switch stops the run: press nothing, `lsappinfo front`, tell the coordinator. The front script did not lift LastWar over a UserNotificationCenter window: Steer A allowed ONE killall (spent 04:20Z); never read or click that window. cu quiet window 08:00Z to 08:25Z daily: no claim, no run; an exclusive cu token lease means wait, never `--ignore-token`. `out_of_scope` refusals: stop and tell.
 - Map moves: plain drags only (a 1 s hold on a building starts move mode: the red X cancels); the composed pan with its hold only from blank ground 60 px or more from any building. The avatar is never tapped (the VIP unit used its one named exception).
 - Privacy: 'the profile page' only; never the owner's name.
 
 ## Trucks and trains
 
-The tram icon (107,580): bare icon taps only pan the camera; a badge counts empty slots and opens Intercity Trade. Rule 2 dispatch: SR or above Let's Go once, below SR the free dice then contract refreshes; no Mega Mode. Plunder: Squad 1 25.61M, one Quick Plunder and one Battle each; read the Hospital after.
+The tram icon (107,580): bare icon taps only pan the camera; a badge counts empty slots and opens Intercity Trade. Rule 2 dispatch: SR or above Let's Go once, below SR the free dice then contract refreshes; no Mega Mode.
 
 ## Closing rule (Steer A 16:03Z)
 
@@ -42,4 +42,4 @@ DONE: the staged claim was taken (`state_change: yes`) or a verified nothing-to-
 
 ## Open
 
-The Oil Well hand-off `building-queues-oil-well-2026-11-24-005` waits (one builder idle, Lv.24 finished before 05:25Z on 11-25); the takeover retry follows Steer A's answer on the killall.
+Drill Ground unit `building-queues-drill-ground-2026-11-26-001` (claimed, unrun): hammer fallback: one tap on the hammer counter, then the second route once, never a fourth tap (three hammer taps opened nothing at 07:49Z). Stop at each unit's cost cap.
