@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was held by the cu-integrator gate run (15:08:42Z) while I stepped off: read-only polling from 15:09:12Z until free at 15:11:12Z (never bypassed); owner idle 11,582 to 12,000 s",2026-11-26T15:04:23.022Z,see growth/0054-waits.csv
+badges,15:04:28Z: the Alliance button a red dot; the Gifts tile a red dot; the Claim All badge 159,2026-11-26T15:04:23.022Z,tram badge rule: none; not tapped
+Claim All badge,159 at 15:04:41Z; 160 after the first pan; 163 at 15:05:45Z; 165 at 15:11:26Z,2026-11-26T15:11:26.074Z,rises as allies' kills arrive
+rows read,"4 of 163: Alliance Gifts +10 (Defeated Zombie Boss x2, Defeated Doom Elite x2), each a green crate icon and a green Claim; no market or price item",2026-11-26T15:04:41.940Z,a fifth row cut off
+pans,two composed pans inside the list from a plain gap did not move it,2026-11-26T15:05:56.806Z,the rows below stay unread
+ban,Steer A 12:12Z: no Claim All on an unread list: held; Steer A's ruling pending,2026-11-26T15:09:00Z,nothing claimed
+HUD,"food 46.6M, iron 643.2M, coin 11.5M, oil 618.2K",2026-11-26T15:12:03.015Z,
+drags,"drags tried 0, cancelled 0",,

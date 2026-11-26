@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 12,608 s: wait 0",2026-11-26T15:21:31.934Z,see growth/0054-waits.csv
+badges,15:21:36.1Z: the tram not drawn; the pickup bare; the radar dish 8,2026-11-26T15:21:31.934Z,tram badge rule: none; not tapped
+Your Tasks,"four cards PERFECT, no timer: UR Rescue Missing Agent Lv.5, UR Capture the Oil Depot Lv.5, SSR Search for Missing Refugees Lv.5 x2; a fifth cut off",2026-11-26T15:21:49.411Z,tag text [G]: Secret Command Post
+Mega Deploy,greyed; Mega Refresh greyed; not pressed,2026-11-26T15:22:20.163Z,
+Others' Tasks,"Assist Allies 5/5, Plunder Others 0/5; No marked Secret Tasks",2026-11-26T15:22:37.268Z,Plunder never pressed
+last claim,12:06Z (record 1205): UR Capture the Oil Depot,2026-11-26T12:06:08.756Z,
+drags,"drags tried 0, cancelled 0",,

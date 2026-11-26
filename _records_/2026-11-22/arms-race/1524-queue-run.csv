@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 12,790 s: wait 0",2026-11-26T15:24:34.673Z,see growth/0054-waits.csv
+badges,15:24:39.4Z: Events badge 1; the tram not drawn; Zombie Invasion tab dot 1; a red '!' on the cut-off 'B' tab,2026-11-26T15:24:34.673Z,tram badge rule: none; not tapped
+Arms Race phase,Tech Research (Contest Segment Lv.29-30); timer 02:34:48 at 15:25:12.9Z: ends about 18:00:01Z,2026-11-26T15:25:12.869Z,tag text [G]: Arms Race page
+my points,0; rank 12 with 0,2026-11-26T15:25:12.869Z,
+chests,"6,250 (2,360 gems), 12,500 (4,800), 30,000 (11,800): all locked and priced; counter 0/2",2026-11-26T15:25:12.869Z,nothing claimable
+tasks,Increase Tech Power by 1pt +1; Use 1-min Research Speed-up +10; Buy Packs containing Diamonds +30,2026-11-26T15:25:12.869Z,the +30 is a purchase
+tab bar,"The Age of Oil, Arms Race, Black Market, 'B' with a red '!', then Black Market Challenge, Desert Battlefield, Zombie Invasion (dot 1), Wanted B...",2026-11-26T15:25:00.375Z,one plain drag of the bar
+disclosure,"record 1518 missed The Age of Oil, the 'B' tab with '!' and 'Wanted B...': the bar was scrolled right",2026-11-26T15:25:00.375Z,an events re-sweep is due
+drags,"drags tried 0, cancelled 0",,

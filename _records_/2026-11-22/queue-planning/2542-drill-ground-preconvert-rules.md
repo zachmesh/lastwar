@@ -3,7 +3,7 @@ title: Drill Ground Preconvert Rules For The 13:38Z Hand Off 2542 2026-11-25
 created: 2026-11-25T02:30:00-08:00
 modified: 2026-11-26T04:40:00Z
 level: L0
-version: 1.6.0
+version: 1.7.0
 description: Steer A's rulings of 2026-11-25 10:23Z for the Drill Ground hand-off unit - the revised cost floors, the preview first, the fixed-chest preconvert order and quantities, the checks around each Use and what is never touched
 status: done
 activity: queue-planning
@@ -31,15 +31,15 @@ Floors are cushions, not a ban: iron at least 100M, food at least 30M, coin at l
 
 ## First step: the preview
 
-Read the Upgrade preview ('Lv.27 to 28'), every cost row, scrolling to its end. Read coin, iron and food in a fresh frame. If any resource would fall under its cost plus its floor, preconvert first. If none is short, press Upgrade.
+Read the Upgrade preview ('Lv.27 to 28'), every cost row after DRAGGING THE COST LIST (sheet 2541). Read coin, iron and food in a fresh frame. If any resource would fall under its cost plus its floor, preconvert first. If none is short, press Upgrade.
 
 ## The preconvert: fixed chests only, this order
 
-UR food chests (32 left after 36 were used on 11-26, 4.06M each), then SSR food chests (1,428, 1.35M); every typed coin chest (UR, SSR, SR) and the coin items were used on 11-26 at 10:25Z. Convert the needed quantity only: the shortfall plus about 10 percent, whole chests, highest tier first, for the fewest Use operations. The counts are old reads: read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
+UR food chests (32 left after 36 were used on 11-26, 4.06M each), then SSR food chests (1,428, 1.35M); the typed coin chests: UR and SSR used on 11-26 at 10:25Z; SR 17 left (101.52K each, 1.73M; the 138 were used then, 18 are new; read 11-26 14:50Z, perception-scout/1453). Convert the needed quantity only: the shortfall plus about 10 percent, whole chests, highest tier first, for the fewest Use operations. The counts are old reads: read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
 
 ## Each Use
 
-Procedure: sheet 2541. The Backpack Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a LIVE Use: NEVER tap that tile and never press the Use of a pre-selected panel. Select the chest tile by its icon and count tag; read the chest's NAME in the panel before any Use. Set the quantity with the plus button (no keypad opens); read the quantity field in a frame before the Use tap. On this visit also read the iron chest rows (UR, SSR, SR) by name and count tag in a frame, once (H117: is iron binding; plan reason: the ladder and the HQ 31 iron bill); no Use on them. Read the HUD resource before and after each Use: it must rise by the quantity times the chest's value within 1 percent, else STOP. Any diamond line, price or other dialog: STOP.
+Procedure: sheet 2541. The Backpack Resources tab opens with the 5,000 Diamonds x16 tile SELECTED and a LIVE Use: NEVER tap that tile and never press the Use of a pre-selected panel. Select the chest tile by its icon and count tag; read the chest's NAME in the panel before any Use. Set the quantity with the plus button (no keypad opens); read the quantity field in a frame before the Use tap. Iron SR chests: 8,723 (169.20K each, 11-26 14:50Z); no Use on them. Read the HUD resource before and after each Use: it must rise by the quantity times the chest's value within one display step (0.1M, 0.1K for oil), else STOP. Any diamond line, price or other dialog: STOP.
 
 ## Never
 

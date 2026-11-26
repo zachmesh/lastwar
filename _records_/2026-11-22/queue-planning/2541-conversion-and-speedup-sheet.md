@@ -3,7 +3,7 @@ title: Conversion Procedure And Speed Up Use For The 09:20Z Builder Units 2541 2
 created: 2026-11-23T03:36:00-08:00
 modified: 2026-11-23T10:30:00-08:00
 level: L0
-version: 1.3.0
+version: 1.4.0
 description: The Backpack conversion steps and the speed-up use rules for the builder units for 2026-11-23T23:20Z (corrected: the builders are free at 23:20Z today; 09:20 was the Oil Well upgrade's duration), from the RC1 chest limits read, split off the Drill Ground sheet 2540 to keep both small
 status: done
 activity: queue-planning
@@ -29,4 +29,8 @@ Construction items (167,760 minutes): 8h x10 (4,800 minutes), 1h x26 (1,560), 5m
 
 ## Build preview cost list (Steer A 13:34Z)
 
-Every build unit's preview step: DRAG THE COST LIST until EVERY row (iron, food, coin, oil) is visible, with the stocks in the same frame. Check all floors (coin 10M, iron 100M, food 30M) against ALL rows before the press. If any row was not seen, do not press: write what was seen and stop. A dragged preview may STILL omit a charged row (the Lv.20 to 21 preview was scrolled and food and coin were charged): ALSO check the floors against the table's three columns at 0.85, for the Oil Well food 0.333 and coin 0.212 of the iron cost (Lv.21, 24 and 27 deltas), and use the preview only to confirm the rows it shows (the Researcher, 11-26). The Oil Well Lv.26 to 27 press on 11-26 at 13:31:34Z read only the visible rows and left coin 6.0M under its floor.
+Every build unit's preview step: DRAG THE COST LIST until EVERY row (iron, food, coin, oil) is visible, with the stocks in the same frame. Check all floors (coin 10M, iron 100M, food 30M) against ALL rows before the press. If any row was not seen, do not press: write what was seen and stop. A dragged preview may STILL omit a charged row (the Lv.20 to 21 preview was scrolled and food and coin were charged): ALSO check the floors against the table's three columns at 0.85, for the Oil Well food 0.333 and coin 0.212 of the iron cost (Lv.21, 24 and 27 deltas), and use the preview only to confirm the rows it shows (the Researcher, 11-26).
+
+## Helmet after a build press (Steer A 14:04Z)
+
+The white round bubble with a green helmet above an upgrading building is the help request (11-26 13:58Z: one press on the 13-day ground, 13 helps in 100 seconds, each help takes 0.5 percent of the time then left). Every build unit, right after the Upgrade press: a 6x crop of the bubbles above that building; press the helmet ONCE (no other bubble); read the end time to the second before, at +1 and +10 minutes; a dialog with a price, a gem, Speed Up or Upgrade: close by its X. Press early. A lab start: only if a helmet shows above the Tech Center.

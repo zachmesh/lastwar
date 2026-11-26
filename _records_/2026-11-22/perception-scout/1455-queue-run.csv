@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free; owner idle 11,006 s: wait 0",2026-11-26T14:54:46.304Z,see growth/0054-waits.csv
+badges,14:54:50.9Z: not read (the Backpack open),2026-11-26T14:54:46.304Z,tram badge rule: none; not tapped
+selection,"6.0K Oil tile selected (not the diamond tile); quantity 4, Total 24.00K; stack 14; oil 593.0K",2026-11-26T14:54:50.885Z,tag text [G]: Inventory Resources
+Use,once at 14:54:54.5Z: no price or popup; quantity reset to 1,2026-11-26T14:54:56.715Z,
+result,oil 593.0K to 617.0K (+24.0K); stack 14 to 10,2026-11-26T14:55:01.743Z,in range 23.9K to 24.1K
+total,five barrels in all (1 + 4): oil 587.0K to 617.0K (+30.0K),2026-11-26T14:55:01.743Z,the cap of five
+HUD,"food 43.4M, iron 640.0M, coin 9.3M, oil 617.0K",2026-11-26T14:55:23.268Z,coin 0.7M under the floor
+drags,"drags tried 0, cancelled 0",,

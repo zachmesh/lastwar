@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 11,450 s: wait 0",2026-11-26T15:02:11.138Z,see growth/0054-waits.csv
+badges,15:02:15.6Z: the Alliance button a red dot; the Help tile a red dot,2026-11-26T15:02:11.138Z,tram badge rule: none; not tapped
+Help tile,a red dot before; cleared after,2026-11-26T15:02:22.658Z,tag text [G]: Alliance menu
+header,"600 of 1,000 before Help All; 640 of 1,000 after a close and reopen (+40)",2026-11-26T15:02:51.590Z,the header updates only on reopen
+own rows,"four visible, all 30 of 30: Oil Output I, Lv.28 Drill Ground (13-day), Defense Training VIII, Lv.27 Oil Well",2026-11-26T15:02:30.871Z,not scrolled
+Help All,"pressed once at 15:02:36.4Z: green, no toast seen",2026-11-26T15:02:38.577Z,
+HUD,"food 46.6M, iron 643.2M, coin 11.5M, diamonds 10,673",2026-11-26T15:03:04.883Z,
+drags,"drags tried 0, cancelled 0",,

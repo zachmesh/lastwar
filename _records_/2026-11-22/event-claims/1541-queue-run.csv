@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 13,792 s: wait 0",2026-11-26T15:41:18.548Z,see growth/0054-waits.csv
+badges,"15:41:24.2Z: Events badge 1; Thanksgiving badge 1; tab dots: Black Market Challenge '!', Zombie Invasion 1",2026-11-26T15:41:18.548Z,tram badge rule: none; not tapped
+tab list,The Age of Oil; Arms Race; Black Market; Black Market Challenge ('!'); Desert Battlefield; Zombie Invasion (dot 1); Wanted Boss; Community,2026-11-26T15:42:36.000Z,tag text [G]: Events hub; 8 tabs
+The Age of Oil,"stage 3 reached, 4 locked; Kill 2000 Zombies 19012 of 2000 and Rapid Rescue heal 5059839 of 25000 done; 3d 10:16:12 at 15:43:49Z; no Claim seen",2026-11-26T15:43:18.871Z,lower rows not scrolled
+Black Market Challenge,earned today 725/745; 3d 10:16:01; only Go To rows,2026-11-26T15:43:59.237Z,no Claim
+Zombie Invasion,"1d 10:17:15; Store icon with a red dot (not pressed); Search, Boss Search, Record",2026-11-26T15:42:45.326Z,nothing claimable
+not opened,Wanted Boss and Community (no dot); Thanksgiving balance not re-read (6 at 15:20:00Z),2026-11-26T15:44:08.025Z,cost cap reached
+drags,"drags tried 0, cancelled 0",,

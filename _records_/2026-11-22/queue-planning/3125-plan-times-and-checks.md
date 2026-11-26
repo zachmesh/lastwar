@@ -3,7 +3,7 @@ title: Plan Times And Checks To Apply After Every Plan 3125 2026-11-24
 created: 2026-11-24T13:35:00-08:00
 modified: 2026-11-26T09:45:00Z
 level: L0
-version: 1.10.0
+version: 1.14.0
 description: The times the plan keeps clear (the calm windows, the quiet windows, the on-the-hour rule), the forecast rule and the horizon - moved out of note 3120 on 2026-11-24 to keep both under the 500-word gate
 status: done
 activity: queue-planning
@@ -24,3 +24,6 @@ Harvest units follow the Coach's and the Researcher's cap test until it settles 
 Passes: the Weekly Pass check is folded into the daily-missions unit (Steer A 09:43Z; the 09:38Z read found all six pickups the phone's), so retire every passes unit a plan mints and mint no separate one; the daily-missions unit carries the check once a day.
 
 Build starts: every unit that presses an Upgrade has a preview step that says DRAG THE COST LIST until EVERY row is visible (iron, food, coin, oil) and check every floor against all rows before the press, and if any row was not seen, do not press and stop (the 11-26 13:31Z Oil Well press read only the visible rows and left coin 6.0M under its floor). Check it in each build unit at each plan.
+Helmet: every build unit also carries the helmet step of sheet 2541 (a 6x crop after the press, ONE press of the white round green-helmet bubble, end time before, at +1 and +10): check it at each plan.
+Helmet look (Steer A 14:42Z): every harvest and daily-missions unit carries the HELMET LOOK paragraph of harvest-2026-11-26-0603 (a 6x crop above every upgrading building, one press per white round helmet, end times before, +1, +10); copy it into each minted one.
+Gifts (Steer A 15:15Z): the gifts unit's specifics are the Claim All RESULT dialog procedure of gifts-2026-11-26-1030 (press once, read the result by text, dismiss by one tap on empty space); copy them into each minted gifts unit. The mail unit keeps its ban.

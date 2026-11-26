@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 10,190 s: wait 0",2026-11-26T14:41:07.308Z,see growth/0054-waits.csv
+badges,14:41:13.1Z: the tram a count badge 1; 14:42:34Z: the tram not drawn,2026-11-26T14:41:07.308Z,tram badge rule: none; not tapped
+tram,count badge 1 at 14:41:13.1Z; not drawn at 14:42:34Z after the settle,2026-11-26T14:41:13.136Z,tag text [G]: base left column
+entry,count 5/5; Your Truck badge 1; slot 3 returned; slots 1 and 2 empty; slot 4 padlock,2026-11-26T14:41:26.677Z,"no dispatch, no plunder"
+settle,"SR truck: iron 2.5M, food 2.5M, coin 1.6M, blue crates 60, a purple 500-badge item, a green item",2026-11-26T14:41:56.137Z,no Claim button
+HUD,coin 7.6M before; 9.2M after (floor 10M: 0.8M short); food 40.7M to 43.3M; iron 637.3M to 639.9M,2026-11-26T14:42:33.976Z,no coin spent
+drags,"drags tried 0, cancelled 0",,
