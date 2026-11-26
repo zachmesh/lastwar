@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the front script once and two cu gate waits (read-only); owner idle 23,166 s",2026-11-26T18:17:45.307Z,see growth/0054-waits.csv
+badges,18:17:50Z: the tram not read,2026-11-26T18:17:45.307Z,tram badge rule: none; not tapped
+macOS window,FollowUpUI in front 18:16:15Z: ONE front-script run (Steer A 18:13Z): LastWar at 18:16:19Z; nothing in the window read or pressed; not killed,2026-11-26T18:16:19Z,front before and after recorded
+phase,Drone Boost (Contest Segment Lv.29-30); timer 03:41:38 at 18:18:22.5Z (ends about 22:00:00Z),2026-11-26T18:18:22.544Z,tag text [G]: Arms Race
+points,"2,000 (rank 12); chest counter 0/2",2026-11-26T18:18:22.544Z,from 20 radar stamina
+"chest 1,500","reached: highlighted yellow with light rays over a part-filled bar; a red-gem tag 2,360; no plain Claim button",2026-11-26T18:18:52.806Z,gem line: not pressed
+"chest 10,000 and 30,000","locked: tags 4,800 and 11,800",2026-11-26T18:18:52.806Z,
+drags,"drags tried 0, cancelled 0",,

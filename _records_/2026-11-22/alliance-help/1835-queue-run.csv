@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 24,210 s: wait 0",2026-11-26T18:35:09.351Z,see growth/0054-waits.csv
+badges,18:35:13.8Z: the Help tile dot (no number),2026-11-26T18:35:09.351Z,tram badge rule: none; not tapped
+header,"640 of 1,000 before Help All (18:35:27.5Z); 660 of 1,000 after (18:35:50.9Z): up 20",2026-11-26T18:35:50.951Z,tag text [G]: Help page
+own rows,"Oil Output I research, Lv.28 Drill Ground, Defense Training VIII research, Lv.27 Oil Well: all 30/30; a fourth row cut off at the bottom",2026-11-26T18:35:27.502Z,no scroll
+Help All,"once at 18:35:34.8Z: rows 'Time reduced', none disappeared",2026-11-26T18:35:36.975Z,"plain green button, no price"
+Help dot,cleared after,2026-11-26T18:36:04.466Z,Alliance dot remains
+drags,"drags tried 0, cancelled 0",,

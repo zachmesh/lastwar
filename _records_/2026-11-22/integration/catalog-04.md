@@ -36,3 +36,6 @@ Back to the [folder index](INDEX.md).
 - [PR 1022](landing-pr-1022.md) - piles-capacity, the capacity bar is not a cap on Collect
 - [PR 1023](landing-pr-1023.md) - promotion-note, the troop promotion path and Steer A's bounded pre-approval
 - [PR 1024](landing-pr-1024.md) - tcc-who, a read-only names-only reader of who asked macOS for a protected folder
+- [PR 1025](landing-pr-1025.md) - thirty-ninth records snapshot, the two-hourly delivery 16:00Z to 18:00Z
+- [PR 1026](landing-pr-1026.md) - batch-confirmed, the finished batch confirmed, room and finished batches, Steer A's rulings
+- [PR 1027](landing-pr-1027.md) - imp-leftover-server, a leftover test server listens on every interface (IMP-20261126-04)

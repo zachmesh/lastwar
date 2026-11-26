@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock waited out read-only (a cu gate run) until 19:11:58Z; owner idle 26,419 s",2026-11-26T19:12:00.017Z,see growth/0054-waits.csv
+badges,19:12:05.4Z: the pickup bare; the tram not read,2026-11-26T19:12:00.017Z,tram badge rule: none; not tapped
+fragments,"M1 x6, M2 x3, M3 x4, M4 x0, M5 x2, M6 x4, M7 x4",2026-11-26T19:12:23.638Z,tag text [G]: Hidden Treasure page
+full set,no: M4 at zero,2026-11-26T19:12:23.638Z,unchanged since 12:45:51Z
+chest track,1 of 15,2026-11-26T19:12:23.638Z,Rewards button not pressed
+dig,none made: Dig buttons greyed; Skip Animation ticked,2026-11-26T19:12:23.638Z,stop rule
+drags,"drags tried 0, cancelled 0",,
