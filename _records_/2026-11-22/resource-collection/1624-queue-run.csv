@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 16,400 s: wait 0; the harvest started at 16:24:48Z (the 4.0 h mark) as the Coach's test needs",2026-11-26T16:24:49.881Z,see growth/0054-waits.csv
+badges,16:24:55.0Z: the tram not drawn; the radar dish 8; the radar target icon 5 at 16:32:57Z,2026-11-26T16:24:49.881Z,tram badge rule: none; not tapped
+coin,"available 1,796,726 at 16:25:09Z; 447.1K/H; 4:01:23 since 12:23:51Z; owned 11,541,850 to 13,339,817",2026-11-26T16:25:08.958Z,no cap
+food,"available 2,744,727 at 16:25:44Z; 682.8K/H; 4:01:32 since 12:24:18Z; owned 46,686,449 to 49,434,019 (capacity figure 49,642,724)",2026-11-26T16:25:44.581Z,"208,705 under the capacity: the next pile will overflow"
+iron,"available 2,515,224 at 16:26:27Z; 626.6K/H; 4:01:10 since 12:25:24Z; owned 643,272,189 to 645,790,023",2026-11-26T16:26:26.963Z,no cap
+oil,"available 5,114 at 16:27:16Z; 1.5K/H; 3:12:47 since 13:14:40Z; owned 678,229 to 683,343",2026-11-26T16:27:16.042Z,
+cap test,each pile equals the elapsed output within 0.2 percent at 4.02 h: no hard cap; 09:19Z integers not repeated,2026-11-26T16:26:26.963Z,cap beyond 4.02 h
+helmet look,no white round helmet bubble over the Oil Well or any Drill Ground tower; nothing pressed,2026-11-26T16:32:57.148Z,empty result
+drags,"drags tried 0, cancelled 0",,

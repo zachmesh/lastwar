@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 17,957 s: wait 0",2026-11-26T16:50:49.307Z,see growth/0054-waits.csv
+badges,16:50:54.0Z: the tram not drawn,2026-11-26T16:50:49.307Z,tram badge rule: none; not tapped
+personal total,"11,056,390 (unchanged since 16:06Z); theme Train Heroes, countdown about 09:09:00",2026-11-26T16:51:16.164Z,over all three thresholds
+carousel,"page 4 of 4: Infinite Roulette card (1.8M/10.0M, Go not pressed); dot 4 lit",2026-11-26T16:51:16.164Z,chest row not visible
+swipes,"three plain drags (230,430) to (480,430), back, and again: the page never moved",2026-11-26T16:52:04.884Z,the unit's maximum of three
+page arrow,none found beside the card,2026-11-26T16:51:35.566Z,
+chests,"never seen: no claim, no preview",2026-11-26T16:52:14.4Z,PARTIAL
+drags,"drags tried 0, cancelled 0",,

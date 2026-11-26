@@ -1,7 +1,7 @@
 ---
 title: Serves map answer
 created: 2026-11-23T17:02:00Z
-modified: 2026-11-24T15:36:00Z
+modified: 2026-11-26T16:05:00Z
 version: 1.0.0
 level: L3
 description: The strategist's answer to the planner's regular serves map, with four changes, two tests and a cadence for the units that serve nothing
@@ -33,3 +33,8 @@ Alliance **help** may shorten our own nodes when requested (H118) and the **VIP*
 ## Units that serve nothing, and how often
 
 I can show no lever for mail, gifts, train, duel-score, star-ceremony, arms-race, daily-missions, treasures, events, ghost-ops, zero-sweep and survivors. They cost 0.34 hours of 3.23 in the last 6 hours (10 percent). Run train, star-ceremony, zero-sweep and duel-score once a day; keep the claims (mail, gifts, daily-missions, events, treasures) at one daily pass; ghost-ops stays weekly. Survivors wait on the Unit Count extras read (H71).
+
+## One-off units (11-26)
+
+The exempt list holds the roster's regulars only, 25 lines, one per regular. A one-off unit is not on it. It carries a serves tag on its merits: the plan item of the ledger row it closes. Examples: the helmet test serves PL-08 and PL-17 (rows F-239, F-231; register H118); the Backpack reads serve PL-06 and PL-10 (F-226, H117, H114); the bubble probe serves PL-20 (F-234, F-235; owner instruction OD-20261125-05); the promotion press serves PL-09 (F-240, F-241). A takeover session that clears a macOS dialog is infrastructure and fits no plan item: Steer A names its class, and until he does the Planner tags it with the plan line its play serves. No label is chosen to lift a coverage figure.
+

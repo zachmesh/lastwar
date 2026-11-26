@@ -1,7 +1,7 @@
 ---
 title: Strategy log 2026-11-26 part f
 created: 2026-11-26T14:40:00Z
-modified: 2026-11-26T14:40:00Z
+modified: 2026-11-26T16:24:00Z
 version: 1.0.0
 level: L3
 description: The helmet help request repriced against the plan, the speed-up allocation line and the free-builder line
@@ -19,3 +19,5 @@ grounded_in:
 - **HQ 31 ETA, repriced.** Unchanged, 2027-01-25 to 02-10 [G]. The start is oil-gated (0690: oil 1.2M plus the nodes' oil at 66.9K a day, about 2027-01-22 to 01-31) and coin-gated (0780); helps shorten builds and, if the same icon works on labs (unverified), research, not oil accrual. What they save is minutes: the HQ build 52 days at 2.125 becomes about 14 percent shorter, so the construction reserve falls from about 74.2K to about 64K, and about 14 percent of the research speed-up minutes are not needed. Those minutes go to the grounds.
 - **Free builder.** None is free (the Oil Well to 11-28T19:37Z, the Lv.27 ground to 11-29T15:31Z, the Lv.28 ground to 12-03, the new ground to 12-10); coin is 7.6M, under the 10M floor. Any job waits for coin above the floor and must pass the dragged-panel test (at least 1.0K power per million coin, or coin-free); the table's four buildings have durations and no coin yet. The next sink is the 4th ground level at 83M coin.
 - **Row:** F-new, helps at 30 shorten a build by 14.0 percent (read 5, 9, 13 helps at k integer).
+- 2026-11-26 16:50Z. The promotion dialog always carries a Finish Now button beside Promote; "confirm only if no Finish Now" read as a condition and the operator cancelled (0.27 USD). Wording for two-button dialogs: press only the named button; never Finish Now, Speed Up or a gem button.
+

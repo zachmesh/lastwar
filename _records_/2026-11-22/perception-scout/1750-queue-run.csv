@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 21,482 s: wait 0",2026-11-26T17:49:40.386Z,see growth/0054-waits.csv
+badges,17:49:44.9Z: the tram absent; the pickup bare; the radar dish 8,2026-11-26T17:49:40.386Z,tram badge rule: none; not tapped
+tram,absent (not drawn) at 17:49:44.9Z and 17:50:14.4Z (after WORLD then BASE),2026-11-26T17:49:44.890Z,tag text [G]: base left column
+Total Power,"152,113,439",2026-11-26T17:49:44.890Z,unchanged since 17:21Z
+tent bubbles,Lv.30 67; Lv.24 248; Lv.20 110; Lv.27 clock (the promotion),2026-11-26T17:50:14.386Z,6x crops; same as 17:31Z
+HUD,"food 48.5M, iron 644.9M, coin 13.3M, oil 683.3K, energy 114 to 115",2026-11-26T17:49:44.890Z,
+left column,pickup bare; radar dish 8; hammer 4/4; flask 2/2,2026-11-26T17:49:44.890Z,
+trade count,5/5 (last read 14:41:26.7Z),2026-11-26T14:41:26.7Z,not re-read
+drags,"drags tried 0, cancelled 0",,

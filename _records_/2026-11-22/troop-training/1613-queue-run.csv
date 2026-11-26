@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 15,744 s: wait 0",2026-11-26T16:13:54.654Z,see growth/0054-waits.csv
+badges,16:13:59.4Z: the tram not read,2026-11-26T16:13:54.654Z,tram badge rule: none; not tapped
+before frame,"food 46.6M, iron 643.2M, coin 11.5M; Total Power 151,689,455; Lv.7 1,116, Lv.8 2,415, Lv.9 2,604, Lv.10 34.3K; qty 726; 3.2M food, 3.2M iron; 1d 06:53:38; arrow green",2026-11-26T16:14:56.897Z,Lv.8 selected
+press,"green up-arrow (572,684) once at 16:15:17.0Z: UNIT UPGRADING Lv.8 to Lv.9, 726 troops: 887.6K food, 887.6K iron, no coin; Finish Now 03:25:58 and Promote 03:25:58",2026-11-26T16:15:29.994Z,Lv.8 power 1063 to Lv.9 1352 (+289 each)
+decision,cancelled by its X at 16:15:38.5Z: a Finish Now button is in the dialog (the Confirm rule excludes it); Promote never pressed,2026-11-26T16:15:38.494Z,costs within the caps
+after,"+10 s and +73 s: HUD, Total Power, four counts, qty and times unchanged",2026-11-26T16:16:29.862Z,nothing promoted
+power note,"772K expected drop not seen (nothing started); the gain on a Confirm would be about 209,800 (726 x 289)",2026-11-26T16:15:29.994Z,computed
+drags,"drags tried 0, cancelled 0",,

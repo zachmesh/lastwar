@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,the lock was free at every claim; the macOS window removed by one killall before the run,2026-11-26T17:05:59.291Z,see growth/0054-waits.csv
+badges,17:06:04Z: not read,2026-11-26T17:05:59.291Z,tram badge rule: none; not tapped
+macOS window,UserNotificationCenter in front 17:05:46Z (since 16:58:19.6Z); one killall at about 17:05:48Z; LastWar 17:05:50Z; not returned through 17:07:46Z,2026-11-26T17:05:50Z,Steer A standing ruling; never read
+carousel arrow,"cyan left arrow (167,463): three taps: page 3 (2.6M/3.6M/7.2M), page 2 (660K/1.0M/2.3M), page 1 (40,000/150,000/540,000)",2026-11-26T17:07:26.480Z,route A
+chest row,"40,000 / 150,000 / 540,000: open lids, full bar, coin badges; tags 8,020 / 9,530 / 18,100 untouched; no Claim, glow or dot",2026-11-26T17:07:26.480Z,all reached: nothing to claim
+personal total,"11,056,390; Train Heroes; countdown 08:53:31",2026-11-26T17:06:15.267Z,
+drags,"drags tried 0, cancelled 0",,

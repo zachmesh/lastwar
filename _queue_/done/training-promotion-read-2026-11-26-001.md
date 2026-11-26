@@ -13,11 +13,49 @@ est_minutes: 10
 serves: PL-09
 chain_id: promotion-read-2026-11-26
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T15:47:47Z
+lease_until: 2026-11-26T16:07:47Z
+result:
+  status: done
+  started_at: 2026-11-26T15:47:47Z
+  finished_at: 2026-11-26T15:52:38Z
+  duration_seconds: 291
+  executor: operator
+  summary: Promotion read: the Lv.30 barracks' pistol only toasts 'Drill Ground Full: Unable to add more units.'; the Lv.27 barracks opened Train Units (Lv.7 1,116 and Lv.8 2,415 with green up-arrow badges, Lv.9 2,604, Lv.10 locked 34.3K; 726 troops max costs 4.1M food and 4.1M iron, no coin; Train and Finish Now 1d 10:19:35); no tab or control named Promote (an unnamed grey up-arrow button beside the cost row, not pressed): the panel's text is the result; HUD food 46.6M, iron 643.2M, coin 11.5M unmoved; nothing pressed beyond opening and closing; drags 0. state_change: no. state_read: Train Units panel of the Lv.27 barracks; no Promote tab; Lv.30 barracks toast Drill Ground Full | step 13 | 15:51:16Z
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/troop-training/1547-queue-run.md and 1547-queue-run.csv; run 20261126T154921Z-8456e8
+  state_read: Train Units panel of the Lv.27 barracks; no Promote tab; Lv.30 barracks toast Drill Ground Full | step 13 | 15:51:16Z
+  state_change: no
+  follow_up: the grey up-arrow button beside the cost row is unnamed (the possible promote shortcut: a named read needs Steer A's word); the Lv.30 barracks is Full
+  stats:
+    target: read the Promote view costs and tiers
+    achieved: read the panel: no Promote tab exists
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.33975 USD
+    verified: yes
+    run_id: 20261126T154921Z-8456e8
+    run_steps: 24
+    actions_done: 11
+    actions_refused: 0
+    cost_usd: 0.33975
+    device_takeovers: 0
+    claims: 0
+    lv27_lv7: 1116
+    lv27_lv8: 2415
+    lv27_lv9: 2604
+    max_batch: 726
+    food_cost_max: 4.1M
+    iron_cost_max: 4.1M
+    tram_badge: not read
+    drags_tried: 0
+    rules_used: 1,2
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # training

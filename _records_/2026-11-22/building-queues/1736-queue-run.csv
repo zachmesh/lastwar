@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 20,660 s: wait 0",2026-11-26T17:35:57.939Z,see growth/0054-waits.csv
+badges,17:36:01Z: hammer 4/4; flask 2/2; radar dish 8; the tram not read,2026-11-26T17:35:57.939Z,tram badge rule: none; not tapped
+Oil Well,Lv.26 upgrade: 1d 15:13:56 at 17:36:14.0Z: end 2026-11-28T08:50:10Z; Speed Up not pressed,2026-11-26T17:36:14.023Z,tag text [G]: Building Queue
+Drill Ground (3d),Lv.27 upgrade: 2d 21:54:48: end 2026-11-29T15:31:02Z,2026-11-26T17:36:14.023Z,
+Drill Ground (13d),Lv.27 upgrade: 11d 15:49:21: end 2026-12-08T09:25:35Z (the helped ground),2026-11-26T17:36:14.023Z,unchanged
+Drill Ground (7d),Lv.28 upgrade: 6d 20:14:00: end 2026-12-03T13:50:14Z,2026-11-26T17:36:14.023Z,
+helmet look,no white round helmet bubble over any Drill Ground tower or the Oil Well (the well carries the oil collect bubble),2026-11-26T17:39:45.722Z,nothing pressed
+slots,hammer 4/4 busy: slots_idle 0; none finished waiting,2026-11-26T17:36:14.023Z,
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 14,181 s: wait 0",2026-11-26T15:47:48.550Z,see growth/0054-waits.csv
+badges,15:47:53.7Z: the tram not read; the radar dish 8,2026-11-26T15:47:48.550Z,tram badge rule: none; not tapped
+Lv.30 barracks,tag 'Barracks Lv.30'; pistol: toast 'Drill Ground Full: Unable to add more units.'; no Train panel,2026-11-26T15:50:13.722Z,Full state
+Lv.27 barracks,tag 'Barracks Lv.27'; pistol opened Train Units,2026-11-26T15:51:16.467Z,view opens while Lv.30 is Full
+panel stats,"Power 1352, Morale 625.0, Squad Load Capacity 2000, Unit HP 4167.45, Attack 33.87, Defense 7.04",2026-11-26T15:51:16.467Z,
+troop row,"Lv.7 1,116 and Lv.8 2,415 with green up-arrow badges; Lv.9 2,604 selected; Lv.10 locked 34.3K",2026-11-26T15:51:16.467Z,counts as shown
+cost row,"726 troops (max): food 4.1M, iron 4.1M, no coin; Train and Finish Now 1d 10:19:35",2026-11-26T15:51:16.467Z,no drag needed
+Promote,"no tab or control named Promote; an unnamed grey up-arrow button at (572,684) not pressed",2026-11-26T15:51:27.759Z,a result
+HUD,"food 46.6M, iron 643.2M, coin 11.5M, oil 678.2K before and after",2026-11-26T15:51:56Z,unmoved
+drags,"drags tried 0, cancelled 0",,

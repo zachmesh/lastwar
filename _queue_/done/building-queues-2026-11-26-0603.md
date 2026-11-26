@@ -13,11 +13,46 @@ est_minutes: 4
 serves: PL-08
 chain_id:
 chain_seq:
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T17:35:56Z
+lease_until: 2026-11-26T17:55:56Z
+result:
+  status: done
+  started_at: 2026-11-26T17:35:56Z
+  finished_at: 2026-11-26T17:40:19Z
+  duration_seconds: 263
+  executor: operator
+  summary: Builders read: four of four busy (Oil Well Lv.26 1d 15:13:56, ends 2026-11-28T08:50:10Z; Drill Grounds Lv.27 2d 21:54:48 (ends 2026-11-29T15:31:02Z), Lv.27 11d 15:49:21 (ends 2026-12-08T09:25:35Z) and Lv.28 6d 20:14:00 (ends 2026-12-03T13:50:14Z)); no help count; no white round helmet bubble over any build (the Oil Well carries the oil collect bubble); slots_idle 0; Speed Up never pressed; drags 4. state_change: no. state_read: Building Queue: hammer 4/4, all four rows in progress with Time Left and ends; no helmet bubble | step 3 | 17:36:14Z
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/building-queues/1736-queue-run.md and 1736-queue-run.csv; run 20261126T173556Z-dc9965
+  state_read: Building Queue: hammer 4/4, all four rows in progress with Time Left and ends; no helmet bubble | step 3 | 17:36:14Z
+  state_change: no
+  follow_up: the Oil Well ends 2026-11-28T08:50:10Z; the 3-day ground 2026-11-29T15:31:02Z
+  stats:
+    target: read idle builder slots and every end time
+    achieved: verified all four busy
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.311421 USD
+    verified: yes
+    run_id: 20261126T173556Z-dc9965
+    run_steps: 25
+    actions_done: 10
+    actions_refused: 0
+    cost_usd: 0.311421
+    device_takeovers: 0
+    claims: 0
+    slots_idle: 0
+    hammer: 4/4
+    oil_well_end: 2026-11-28T08:50:10Z
+    tram_badge: not read
+    drags_tried: 4
+    rules_used: 1,2
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # building-queues

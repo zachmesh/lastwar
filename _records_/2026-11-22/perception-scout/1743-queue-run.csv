@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 21,034 s: wait 0",2026-11-26T17:42:13.366Z,see growth/0054-waits.csv
+badges,17:42:18Z: the tram not read,2026-11-26T17:42:13.366Z,tram badge rule: none; not tapped
+tag,"'Hospital Lv.25' with a blue paw, the orange tent middle button and a green up arrow",2026-11-26T17:43:10.288Z,tag text [G]
+wounded,"Severely Wounded Units 1,364 of 7,999; the wounded tile is Lv.10 x1,364",2026-11-26T17:43:24.157Z,"capacity 7,999"
+completed,"5,104 (bar full); the panel shows no tier for the Completed troops",2026-11-26T17:43:24.157Z,Collect not pressed
+free room,"7,999 - 1,364 - 5,104 = 1,531",2026-11-26T17:43:24.157Z,unchanged since 11:00Z
+HUD,"food 48.5M, iron 644.9M, coin 13.3M before and after",2026-11-26T17:43:48.794Z,unmoved
+drags,"drags tried 0, cancelled 0",,
