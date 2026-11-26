@@ -1,9 +1,9 @@
 ---
 title: Resource Collection Rule Digest
 created: 2026-11-23T06:22:07Z
-modified: 2026-11-23T10:59:13Z
+modified: 2026-11-26T13:29:36Z
 level: L1
-version: 0.2.0
+version: 0.3.0
 description: The standing rules an operator must follow when collecting building output and truck loot, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 3. Identify the bubble before tapping; confirm the total moved after the first tap (R2, how-it-is-p8).
 4. Verify the HUD total moved after every tap (how-it-is-p1).
 5. Panel Collect is the standing method: open each resource panel, read Available, tap Collect, confirm Owned moved and Available is 0; after bubble taps still read the panels (how-it-is-p1, how-it-is-p2).
-6. One tap per resource type clears all its bubbles; the furnace 596 bubbles are not covered and unidentified (how-it-is-p4, how-it-is-p6, open-questions-p3).
+6. One tap per resource type clears all its bubbles; the harvest brief (2026-11-26) taps no bubble over a building, so the furnace 596 bubbles and the 11-26 wrench bubbles (+480 each, free) are uncovered: probably one class under two glyphs [G]; resource unread, oil the candidate (open-questions-p3, `_records_/2026-11-22/perception-scout/1320-queue-run.md`).
 7. Read the screen between taps; never batch-tap after a tap opened a panel (how-it-is-p9).
 8. Close a stray building panel with the left-edge swipe-back, not the X (how-it-is-p9).
 9. The Armed Truck loot check is the first action of each harvest unit (R7) (how-it-is-p12, how-it-is-p15).
