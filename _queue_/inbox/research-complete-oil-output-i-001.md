@@ -5,7 +5,7 @@ activity: research-queue
 segment: 2
 priority: 1
 created_at: 2026-11-24T17:40:10Z
-expires_at: 2026-11-26T10:37:34Z
+expires_at: 2026-11-27T02:00:00Z
 planned_for:
 not_before: 2026-11-26T08:37:49Z
 window: complete oil output i when it finishes

@@ -5,7 +5,7 @@ activity: building-queues
 segment: 1
 priority: 1
 created_at: 2026-11-25T10:13:50Z
-expires_at: 2026-11-26T06:50:00Z
+expires_at: 2026-11-27T02:00:00Z
 planned_for: 2026-11-25T18:00:59Z
 not_before:
 window: drill ground hand-off: the completed ground's next level 27 to 28, steer a 10:12z default
