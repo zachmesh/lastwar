@@ -1,9 +1,9 @@
 ---
 title: Building Queues Rule Digest
 created: 2026-11-23T06:47:36Z
-modified: 2026-11-23T13:46:17Z
+modified: 2026-11-26T13:36:55Z
 level: L1
-version: 0.7.0
+version: 0.8.0
 description: The standing rules an operator must follow when checking the build queues, each cited to the split article file that carries it
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
 
 8. Record the tag text, the name and level above the building, beside each panel number; none means [G] ([snapshot protocol](../perception-scout/snapshot-protocol.md); `_records_/2026-11-22/perception-scout/0022-queue-run.md`, `_records_/2026-11-22/growth/1047-f1b-drill-ground.md`).
 9. A blocked slot closes with slots_blocked_by_capacity=<N> and capacity_blocker="<text>" (for example "Drill Ground Full"); a count without a blocker exempts nothing (`_tools_/strategy-conformance/INDEX.md`).
+10. Every build unit's preview step: drag the cost list until every row (iron, food, coin, oil) is visible with the stocks in the same frame; check all floors (coin 10M, iron 100M, food 30M) against all rows before the press; if any row was not seen, do not press: write what was seen and stop (Steer A, 2026-11-26: the Oil Well Lv.26 to 27 press at 13:31:34Z read only the visible rows and left coin 6.0M under its floor; `_records_/2026-11-22/queue-planning/2541-conversion-and-speedup-sheet.md`).
 Unverified: [claims](unverified-claims.md). Errata: [errata](errata.md).
 
 ## Changelog
@@ -33,3 +34,4 @@ Unverified: [claims](unverified-claims.md). Errata: [errata](errata.md).
 - 0.5.0, 2026-11-23 - Growth start rule added.
 - 0.6.0, 2026-11-23 - Tag-text rule.
 - 0.7.0, 2026-11-23 - Capacity stat names; Errata moved to errata.md.
+- 0.8.0, 2026-11-26 - Preview rule: every cost row seen.
