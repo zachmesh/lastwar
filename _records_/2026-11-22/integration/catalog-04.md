@@ -20,3 +20,5 @@ Back to the [folder index](INDEX.md).
 - [PR 1006](landing-pr-1006.md) - od-two-hour-stop, Steer A's two-hour stop and backoff on the different-device dialog (OD-20261126-02)
 - [PR 1007](landing-pr-1007.md) - thirty-third records snapshot, the two-hourly delivery 04:00Z to 06:00Z, handover 0.26.0
 - [PR 1008](landing-pr-1008.md) - thirty-fourth records snapshot, the two-hourly delivery 06:00Z to 08:00Z
+- [PR 1009](landing-pr-1009.md) - thirty-fifth records snapshot, the two-hourly delivery 08:00Z to 10:00Z
+- [PR 1010](landing-pr-1010.md) - plunder-amendment, Steer A's plunder rule of 2026-11-26 (widens the owner's profile; flagged)

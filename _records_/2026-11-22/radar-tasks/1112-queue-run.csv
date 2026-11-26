@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request; owner idle 84,202 s: wait 0",2026-11-26T11:12:08.319Z,see growth/0054-waits.csv
+badges,"11:12:13.0Z: the tram none, the pickup a red dot, the radar dish 5; after: the radar dish 4",2026-11-26T11:12:08.319Z,tram badge rule: none; not tapped
+pile,"'You can complete 1 tasks, requires 10 Stamina' at 11:12:26.6Z; energy 141; bar 14/40; '12 Radar Task(s) will be restored in 03:25:49'",2026-11-26T11:12:26.604Z,tag text [G]: the radar screen
+Quick Execute,once at 11:12:32.1Z: energy 141 to 131; '6 task rewards can be claimed',2026-11-26T11:12:40.009Z,no popup
+Claim All dialog,"'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 6 radar task rewards at once. Continue?' Cancel / Confirm; Confirm once at 11:12:55.2Z",2026-11-26T11:12:48.039Z,still says will not grant Alliance Duel points
+rewards,"cash 60, radar item 60, food bag 14, EXP 6.3M, a 2.4K card item, a 366 triangle item, iron 1.2M, bread 1.2M, coin 1.0M, oil 1.6K",2026-11-26T11:13:03.954Z,
+after,"bar 8/40; '12 Radar Task(s) will be restored in 03:24:48'; energy 131; offer '2 tasks, 20 Stamina' not pressed; radar badge 4",2026-11-26T11:13:20.692Z,
+HUD,"after: food 48.6M, iron 682.7M, coin 14.6M, oil 581.0K, energy 131",2026-11-26T11:13:39.245Z,"before: food 47.4M, iron 681.5M, coin 13.5M, oil 579.4K, energy 141"
+drags,"drags tried 0, cancelled 0",,

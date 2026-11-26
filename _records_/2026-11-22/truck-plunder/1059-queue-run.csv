@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.7 s after its request; owner idle 83,273 to 83,851 s: wait 0 (the earlier 'DESKTOP BUSY' of 10:56:37Z by a cu-developer-three hold released at 10:58:24Z)",2026-11-26T10:59:04.722Z,see growth/0054-waits.csv
+badges,10:59:10.6Z: the tram icon with a red dot; 11:06:40Z: bare,2026-11-26T10:59:04.722Z,tram badge rule: none; not tapped
+Hospital,"Lv.25: 1,364 of 7,999 wounded, 5,104 Completed: free room 1,531",2026-11-26T11:00:06.556Z,re-read before the tram tap; Collect not pressed
+entry,"tram icon red dot at 11:01:06.2Z; one tap 11:01:10.7Z; tab badges Others' 2, Your Truck 1; count 5/5; slot 1 returned, slots 2 and 3 out, a padlock",2026-11-26T11:01:19.650Z,tag text [G]: the badge-at-entry sample
+Others' tab,"count 2/4; seven cards read: guards 29.2M, 29.3M, 20.4M, 24.6M and the repeats: none with a UR 500-badge stack and a guard under 26.10M",2026-11-26T11:03:25.048Z,no fight
+settled truck,"UR: iron 3.8M, food 3.8M, coin 2.4M, treasure-map items x2, 500-badge x3, 5m items, blue crates x25, gold bar x1, puzzle piece x1, gold chest x10, ticket bar 8/10",2026-11-26T11:05:33.195Z,slot 1 then empty
+dispatch,none: the day's count is 5/5,2026-11-26T11:06:28.225Z,
+HUD,"after: food 47.4M, iron 681.5M, coin 13.5M",2026-11-26T11:06:40.263Z,"before: food 43.5M, iron 677.7M, coin 11.1M"
+tram,bare at 11:06:40Z after the settle,2026-11-26T11:06:40.263Z,
+drags,"drags tried 0, cancelled 0",,

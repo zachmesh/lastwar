@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request; owner idle 86,313 s: wait 0",2026-11-26T11:47:21.017Z,see growth/0054-waits.csv
+badges,"11:47:25.4Z: the tram bare; the pickup a red dot; the radar dish 4; Thanksgiving 1; Events 1; Alliance, Mail and energy red dots",2026-11-26T11:47:21.017Z,tram badge rule: none; not tapped
+tram,drawn without a badge (bare) at 11:47:25.4Z and 11:48:20.7Z,2026-11-26T11:47:25.437Z,tag text [G]: the base frame
+counters,radar dish 4; hammer 4/4; flask 2/2; Thanksgiving 1; Events 1; chat 99+,2026-11-26T11:47:25.437Z,each with its reason in the description
+unexplained dots,"energy bar, pickup icon, Mail button",2026-11-26T11:47:25.437Z,read only: not opened
+Alliance tiles,"red dots on Wars, Help, Gifts, Techs, Events; none on the others",2026-11-26T11:47:46.480Z,nothing pressed
+Events hub,"opened on Black Market Challenge; tabs Black Market, cash stack, Desert Battlefield, 'Zom...': no dot",2026-11-26T11:48:07.661Z,
+HUD,"food 48.6M, iron 682.7M, coin 14.6M, oil 581.0K, diamonds 10,673, energy 131",2026-11-26T11:47:25.437Z,
+drags,"drags tried 0, cancelled 0",,

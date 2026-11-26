@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the first attempt waited read-only 1 min 20 s for the cu-integrator gate run (11:08:36Z to 11:09:57Z); the run was admitted 1.2 s after its request; owner idle 84,080 s",2026-11-26T11:10:06.290Z,see growth/0054-waits.csv
+badges,11:10:11.5Z: the hammer counter 4/4,2026-11-26T11:10:06.290Z,tram badge rule: none; not tapped
+Oil Well row,"Lv.25 Oil Well upgrade in progress: Time Left 01:59:27 at 11:10:29.5Z (ends about 13:09:56.5Z); only a Speed Up button; no help count, no help control",2026-11-26T11:10:29.532Z,tag text [G]: Building Queue
+other rows,Lv.27 Drill Ground 3d 04:20:32; Lv.27 Drill Ground 13d 20:13:49; Lv.28 Drill Ground 7d 02:39:44,2026-11-26T11:10:29.532Z,builders 4/4
+help,not requested: no help control on the Oil Well row,2026-11-26T11:10:29.532Z,blocked by route: the control is absent in this version
+drags,"drags tried 0, cancelled 0",,

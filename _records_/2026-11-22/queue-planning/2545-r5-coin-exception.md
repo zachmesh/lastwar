@@ -3,7 +3,7 @@ title: R5 Coin Exception For The Drill Ground 2545 2026-11-26
 created: 2026-11-26T00:59:22-08:00
 modified: 2026-11-26T00:59:22-08:00
 level: L0
-version: 1.0.0
+version: 1.2.0
 description: The small, named use of the R5 choice-chest reserve that Steer A approved on 2026-11-26 08:57Z for the Drill Ground Lv.27 to 28 coin shortfall - the order of the typed chests, the coin items and the capped UR choice chests, and the steps that keep the rest of the reserve untouched
 status: done
 activity: queue-planning
@@ -36,3 +36,7 @@ The rest of R5 (UR 552 less this, SSR 587, SR 1,713) is untouched: no SSR or SR 
 ## Write
 
 Every Use: tier, quantity, coin before and after, and the running total against the 40M cap.
+
+## What the 11-26 run showed
+
+The Drill Ground Lv.27 to 28 hand-off (building-queues/1007) used every typed coin chest and the coin items (49.1M), then 9 UR choice chests for 21.9M of the 40M cap. A UR choice chest gives a COIN CHEST (UR), not coin: open it as one more Use (about 2.43M each), and read the HUD after the second step. The run cost 1.64 USD against a 1.50 cap, over inside the Upgrade run: a unit with this many Uses takes a 2.00 USD cap. The unit read the R5 UR choice chest count as 604, 603, then 595 (the 552 of 11-23 was stale); the SSR 587 and SR 1,713 counts are 11-23 reads, unverified.

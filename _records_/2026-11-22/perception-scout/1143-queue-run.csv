@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 86,059 s: wait 0",2026-11-26T11:43:06.519Z,see growth/0054-waits.csv
+badges,11:43:11.7Z: the tram icon bare; the pickup and radar dish red dots,2026-11-26T11:43:06.519Z,tram badge rule: none; not tapped
+start point,"blank road ground (330,640), margin about 80 px",2026-11-26T11:43:11.675Z,named before the first pan
+pan left,"content 170 px left: HQ (325,370); golden monument cluster, tower, ferris wheel, pink car, teal dome, purple crystal building, gold-roof building",2026-11-26T11:43:33.118Z,not in the standard frame
+pan right,"content 175 px right: blue-roof houses, glass-dome library, aircraft field, five question-mark bubbles with figures, tanks, trucks, red buggy",2026-11-26T11:44:04.376Z,
+pan up,"content 172 px up: HQ (565,208); parking area with pad numbers 2 and 3, wall and pipes",2026-11-26T11:44:32.144Z,
+pan down,"content 165 px down: HQ (575,545); gold pyramid, statue rows, gold jet monument, tower, gold pillars, wrench bubbles, copper domes",2026-11-26T11:44:58.561Z,
+standard frame,"HQ (570,380) home view; Alliance shield (670,705); tents (385,580), (450,630), (545,560), (595,530), (660,420); hero bubbles; NEW! bubble (520,860)",2026-11-26T11:45:18.215Z,tag text [G]: base survey
+tram,bare before and after the survey,2026-11-26T11:45:18.215Z,
+drags,"drags tried 0, cancelled 0",,

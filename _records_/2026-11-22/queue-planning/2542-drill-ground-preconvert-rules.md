@@ -3,7 +3,7 @@ title: Drill Ground Preconvert Rules For The 13:38Z Hand Off 2542 2026-11-25
 created: 2026-11-25T02:30:00-08:00
 modified: 2026-11-26T04:40:00Z
 level: L0
-version: 1.5.0
+version: 1.6.0
 description: Steer A's rulings of 2026-11-25 10:23Z for the Drill Ground hand-off unit - the revised cost floors, the preview first, the fixed-chest preconvert order and quantities, the checks around each Use and what is never touched
 status: done
 activity: queue-planning
@@ -35,7 +35,7 @@ Read the Upgrade preview ('Lv.27 to 28'), every cost row, scrolling to its end. 
 
 ## The preconvert: fixed chests only, this order
 
-UR food chests (68 old, 4.06M each), then SSR food chests (1,428, 1.35M); UR coin chests (10 at 11-26 08:36Z, 2.43M), then SSR coin chests (6, 0.812M); then the 138 SR coin chests and the coin items (Steer A 08:57Z). Convert the needed quantity only: the shortfall plus about 10 percent, whole chests, highest tier first, for the fewest Use operations. The counts are old reads: read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
+UR food chests (32 left after 36 were used on 11-26, 4.06M each), then SSR food chests (1,428, 1.35M); every typed coin chest (UR, SSR, SR) and the coin items were used on 11-26 at 10:25Z. Convert the needed quantity only: the shortfall plus about 10 percent, whole chests, highest tier first, for the fewest Use operations. The counts are old reads: read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
 
 ## Each Use
 
