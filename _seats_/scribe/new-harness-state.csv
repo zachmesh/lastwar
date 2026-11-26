@@ -1,0 +1,23 @@
+item,value,read_at,source
+coin,13.3M,2026-11-26T16:33Z,resource-collection/1624
+food,49.4M,2026-11-26T16:33Z,resource-collection/1624
+iron,645.8M,2026-11-26T16:33Z,resource-collection/1624
+oil,683K,2026-11-26T16:33Z,resource-collection/1624
+total power,"152,113,439",2026-11-26T17:21Z,troop-training/1720
+builders busy,4 of 4,2026-11-26T17:36Z,building-queues/1736
+Oil Well Lv.26 to 27 ends,2026-11-28T08:50Z (the -008 starts then),2026-11-26T17:36Z,building-queues/1736
+Drill Ground ends,2026-11-29T15:31Z,2026-11-26T17:36Z,building-queues/1736
+Drill Ground ends,2026-12-03T13:50Z,2026-11-26T17:36Z,building-queues/1736
+Drill Ground ends,2026-12-08T09:25Z,2026-11-26T17:36Z,building-queues/1736
+promotion batch 1,due about 20:13Z; return unread,2026-11-26T17:27Z,troop-training/1720
+Lv.8 troops left,"1,689",2026-11-26T17:27Z,troop-training/1720
+finished batches waiting,Lv.24 and Lv.20 barracks,2026-11-26T17:27Z,troop-training/1720
+schedule (Coordinator),planner ping,names only,owner stop order
+schedule (Coordinator),two-hourly records delivery,names only,owner stop order
+schedule (Coordinator),harvest,names only,owner stop order
+schedule (Coordinator),donations,names only,owner stop order
+schedule (Coordinator),hospital,names only,owner stop order
+schedule (Coordinator),front log,names only,owner stop order
+schedule (Coordinator),siege reads 00:30Z and 00:45Z,names only,owner stop order
+schedule (cu),wakes 08:00Z and 10:00Z and 11:27Z,names only,Coordinator note
+schedule (Scribe),none,names only,Scribe
