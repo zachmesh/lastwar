@@ -1,9 +1,9 @@
 ---
 title: Drill Ground Preconvert Rules For The 13:38Z Hand Off 2542 2026-11-25
 created: 2026-11-25T02:30:00-08:00
-modified: 2026-11-25T07:58:00-08:00
+modified: 2026-11-26T04:40:00Z
 level: L0
-version: 1.2.0
+version: 1.3.0
 description: Steer A's rulings of 2026-11-25 10:23Z for the Drill Ground hand-off unit - the revised cost floors, the preview first, the fixed-chest preconvert order and quantities, the checks around each Use and what is never touched
 status: done
 activity: queue-planning
@@ -19,7 +19,11 @@ grounded_in:
 
 # Drill Ground preconvert rules, 2542
 
-Steer A, 2026-11-25 10:23Z. These supersede his 10:12Z floors, which equalled the stock.
+Steer A, 2026-11-25 10:23Z. These supersede his 10:12Z floors.
+
+## Before the preview: the builders and the supply
+
+First read the builders panel (hammer): an idle builder must exist and the ground's own upgrade must not already run (another hand started a build while the game was held); else STOP, no chest used. Before the first Use read the UR and SSR coin and food chest counts by count tag in a frame: if all tiers together cannot cover the shortfall, STOP before any Use, no partial preconvert.
 
 ## Floors, after the cost
 
@@ -27,11 +31,11 @@ Floors are cushions, not a ban: iron at least 100M, food at least 30M, coin at l
 
 ## First step: the preview
 
-Read the Upgrade preview ('Lv.27 to 28'), every cost row, scrolling to its end (the 11-23 read: coin 83.3M, iron 102.0M, food 314.5M). Read coin, iron and food in a fresh frame. If any resource would fall under its cost plus its floor, preconvert first. If none is short, press Upgrade.
+Read the Upgrade preview ('Lv.27 to 28'), every cost row, scrolling to its end. Read coin, iron and food in a fresh frame. If any resource would fall under its cost plus its floor, preconvert first. If none is short, press Upgrade.
 
 ## The preconvert: fixed chests only, this order
 
-UR food chests (68, 4.06M each), then SSR food chests (1,428, 1.35M); UR coin chests (87, 2.43M), then SSR coin chests (71, 0.812M). Convert the needed quantity only: the shortfall plus about 10 percent, rounded up to whole chests of the highest tier first, so there are the fewest Use operations. The counts above are old reads (68 UR food is 169 less 101 used; 87 UR coin is the 11-23 count): read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
+UR food chests (68, 4.06M each), then SSR food chests (1,428, 1.35M); UR coin chests (87, 2.43M), then SSR coin chests (71, 0.812M). Convert the needed quantity only: the shortfall plus about 10 percent, rounded up to whole chests of the highest tier first, for the fewest Use operations. The counts above are old reads: read the count tag before each Use and type the smaller of the needed quantity and the count, then go on to the next tier.
 
 ## Each Use
 
@@ -47,4 +51,4 @@ Press Upgrade ONCE. Write the timer to the second, the effective time, the speed
 
 ## Limits
 
-Up to fourteen runs of 12 steps; cap 1.2 USD. If the dialog about another device stands, nothing runs.
+Up to fourteen runs of 12 steps; cap 1.2 USD.

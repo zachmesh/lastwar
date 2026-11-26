@@ -1,9 +1,9 @@
 ---
 title: Trade Day Rules For The 11-26 Cycles 2544 2026-11-25
 created: 2026-11-25T14:30:00-08:00
-modified: 2026-11-25T14:30:00-08:00
+modified: 2026-11-26T05:40:00Z
 level: L0
-version: 1.0.0
+version: 1.1.0
 description: The dispatch, refresh, downgrade test, plunder and siege rules for trade cycles E and F of the 2026-11-26 game day, from Steer A's default plan of 22:15Z - held in one sheet so both units stay under 450 words
 status: done
 activity: queue-planning
@@ -26,7 +26,7 @@ Five own trucks a day: cycle E up to three, cycle F the last two, each into an E
 
 ## Badge rule v2 and the cargo
 
-The Your Truck tab badge counts the empty unlocked slots while the day's count is below 5. Write BOTH tab badges at entry. A dark or absent icon: WORLD then BASE, as sheet 3110. Read the cargo from the Your Truck tab.
+THE DAY'S FIRST ENTRY IS UNCONDITIONAL (Steer A 05:37Z, after the 04:45Z 'badge absent: no tap' cost a window): one tap on the tram icon, bare or with a badge; not drawn: WORLD then BASE once and tap where it was last drawn only if it appears, else report. Write the icon state, BOTH tab badges, the count x of 5 and each slot's state (empty, out with a return time, returned waiting): the badge-at-entry sample. The Your Truck tab badge counts the empty unlocked slots while the count is below 5 (n=1 on a new day). LATER settle checks keep the badge-first rule: a dark or absent icon: WORLD then BASE, as sheet 3110. Read the cargo from the Your Truck tab.
 
 ## Downgrade test
 

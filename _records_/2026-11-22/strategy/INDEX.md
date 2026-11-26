@@ -1,7 +1,7 @@
 ---
 title: Strategy records for 2026-11-22
 created: 2026-11-23T08:34:00Z
-modified: 2026-11-25T17:49:00Z
+modified: 2026-11-26T05:05:00Z
 version: 1.0.0
 description: The strategist's plan of record, ranked levers, hypothesis register, decision records, resource policy and owner questions, with their CSV sidecars; the scribe lands the pages.
 ---
@@ -14,9 +14,9 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 
 - [plan-of-record.md](plan-of-record.md) and [plan-of-record.csv](plan-of-record.csv) - the table the planner mints from; ids PL-01 to PL-20.
 - [0030-slot-rules.md](0030-slot-rules.md) - lab, builder, speed-up and slot-arrival rules; [0030-dg-level-table.csv](0030-dg-level-table.csv) holds the level costs.
-- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 233 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
+- [forecast-ledger.csv](forecast-ledger.csv) - the forecast ledger, 235 rows with kinds and probabilities, written before the units run; the coach fills the actuals.
 - [forecast-ledger-schema.md](forecast-ledger-schema.md) - kinds, scoring and the immutability rule.
-- [strategy-log.md](strategy-log.md), then strategy-log-1123b to 1125c (latest [1125c](strategy-log-1125c.md)): dated.
+- [strategy-log.md](strategy-log.md), then strategy-log-1123b to 1126d (latest [1126d](strategy-log-1126d.md)): dated.
 - [0117-box-policy-v1.md](0117-box-policy-v1.md), [rules](0117-box-policy-v1.csv) and [stock](0117-box-stock.csv) - when, how and which chests to open, with the reserve.
 - [0133-black-market-policy-v1.md](0133-black-market-policy-v1.md) - tile ladder, free refresh rule, cash reserve and the closing sweep.
 - [0147-store-ranking-v1.md](0147-store-ranking-v1.md) and [buys](0147-store-buys.csv) - what to buy, hold and apply from honor, alliance and Campaign stores.
@@ -33,6 +33,7 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [0510-base-expansion-eta.md](0510-base-expansion-eta.md) and [scenarios](base-expansion-eta.csv) - the ETA range for the owner with its convention and assumptions.
 - [dec-20261124-04.md](dec-20261124-04.md) - duel chest.
 - [dec-20261124-03.md](dec-20261124-03.md) - B2 job.
+- [dec-20261126-01.md](dec-20261126-01.md) - the free builder: the Drill Ground over the Hospital and the HQ.
 - [dec-20261124-02.md](dec-20261124-02.md) - ladder against long line.
 - [dec-20261124-01.md](dec-20261124-01.md) - use of the siege room.
 - [dec-20261123-08.md](dec-20261123-08.md) - the builders free at 23:20Z today: pick, conversions, chain times.
@@ -48,6 +49,7 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [0117-coin-line.md](0117-coin-line.md) - dated coin conversions and supply.
 - [0670-room-levers.md](0670-room-levers.md) and [sidecar](room-levers.csv) - room.
 - [0770-halt-price.md](0770-halt-price.md) - halt priced.
+- [0780-coin-binding-line.md](0780-coin-binding-line.md) - the chain coin bill to HQ 31 and the R5 release.
 - [0760-base-survey-rubric.md](0760-base-survey-rubric.md) - survey.
 - [0750-hospital-room.md](0750-hospital-room.md) - hospital.
 - [0740-hut-and-hospital.md](0740-hut-and-hospital.md) - Hut.

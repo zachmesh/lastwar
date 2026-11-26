@@ -5,9 +5,9 @@ activity: building-queues
 segment: 1
 priority: 9
 created_at: 2026-11-23T16:00:32Z
-expires_at: 2026-11-29T21:16:00Z
+expires_at: 2026-11-30T05:21:41Z
 planned_for:
-not_before: 2026-11-29T09:16:00Z
+not_before: 2026-11-29T17:21:41Z
 window: oil well level 27 to 28 builder b1 chain complete the previous level and start this one
 est_minutes: 8
 serves: PL-17
@@ -36,9 +36,9 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-17
 
-Route: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. Starts at the Oil Well finish, dispatched by name. FIRST read the Oil Well entry in the hammer panel: if more than 5 minutes remain, write the time left and RELEASE this unit unrun (`queue.py release`). If finished: the well completes by TAPPING THE WRAPPED GIFT BOX on the building (no Complete button; Total Power registers then; never Speed Up or Finish Now); write Total Power before and after. Go to the well by the route in the sheet (drag ONCE per frame, check after each), read the tag ('Oil Well Lv.27'; stop and report if it differs), open the Upgrade preview ('Lv.27 to 28') and write iron cost, output, power, storage, the Upgrade button clock (effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second; write the effective time, the SPEED FACTOR (original over effective), the panel's end time in UTC and the difference in seconds (expected 23,520 s). If the finish falls in the quiet window 08:00Z to 08:25Z, act at 08:25:30Z, or ask the coordinator for an exception if the builder would idle over 15 minutes.
+Route: `_records_/2026-11-22/queue-planning/2900-oil-well-chain.md`. Starts at the Oil Well finish, dispatched by name. FIRST read the Oil Well entry in the hammer panel: if it reads 'Oil Well Lv.28' (another hand started it) do NOT release: close a verified nothing-to-do with a `state_read:` line (the panel, its timer); if the Lv.27 job still has more than 5 minutes left, write the time and RELEASE this unit unrun (`queue.py release`). If finished: the well completes by TAPPING THE WRAPPED GIFT BOX on the building (no Complete button; never Speed Up or Finish Now); write Total Power before and after. Go to the well by the route in the sheet (drag ONCE per frame, check after each), read the tag ('Oil Well Lv.27'; stop and report if it differs), open the Upgrade preview ('Lv.27 to 28') and write iron cost, output, power, storage, the Upgrade button clock (effective time) and the original time; keep iron above the 150M floor; press Upgrade ONCE; read the timer to the second; write the effective time, the SPEED FACTOR (original over effective), the panel's end time in UTC and the difference in seconds.
+CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for the Upgrade pressed or a verified nothing-to-do (`--state-change no`, a `state_read:` line); else PARTIAL.
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 Safe tap: (310,660), not (400,640) after a camera shift.
-HUD taps: verify each icon by its label or glyph first.
 Cost cap, stated: 0.60 USD.
