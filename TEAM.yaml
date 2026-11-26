@@ -4,9 +4,9 @@
 # Read the operating model in
 # _conventions_/local-conventions/continuous-play-team.md before changing it.
 schema: reflection/session-team/v3
-version: 0.7.6
+version: 0.7.7
 title: Last War continuous-play team
-updated_at: '2026-11-24T10:25:22Z'
+updated_at: '2026-11-26T04:06:00Z'
 state: active
 runtime: dsh
 project_path: .
@@ -361,7 +361,7 @@ seats:
     handover_ref: _seats_/integrator/handover.md
   - key: strategist
     principal: zhenc
-    session_id: session-5b02c501-8fd0-4186-a5b6-2ff5e3b3c3b4
+    session_id: session-65f64bb6-0d7b-4f14-9092-c4bd4be3b84b
     session_started: '2026-11-23T10:33:00Z'
     title: '[Last War] Strategist'
     assignment: assigned
