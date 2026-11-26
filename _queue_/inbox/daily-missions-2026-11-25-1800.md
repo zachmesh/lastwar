@@ -9,7 +9,7 @@ expires_at: 2026-11-27T02:00:00Z
 planned_for: 2026-11-26T02:00:00Z
 not_before: 2026-11-26T02:08:00Z
 window:
-est_minutes: 3
+est_minutes: 10
 serves: upkeep
 chain_id:
 chain_seq:
@@ -33,9 +33,9 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 ## Brief (planner, the specifics)
 
 MAIN TASKS (Steer A 01:21Z, folded in): the panel may open on the Main Tasks tab (read the tab labels first). Read every Main Tasks row by text; tap a plain green CLAIM once per row (no price, no gem icon, not Buy, Unlock, Upgrade or Activate), re-reading the list after each; EVERY Go stays unpressed; record the rewards. Then the Daily Tasks tab as below.
-Daily missions: claim each completed Mission task's plain Claim one by one, re-checking after each; claim an activity chest at its threshold only when its button is a plain Claim (never a diamond or price line). Write the points before and after.
+Daily missions: claim each completed Mission task's plain Claim one by one, re-checking after each; claim an activity chest at its threshold only when its button is a plain Claim (never a diamond or price line). Write the points before and after. WEEKLY PASS CHECK (Steer A 09:43Z, folded from the passes unit): after the missions open the Weekly Pass tab only (never the G tab, never Go, Renew or Extension) and follow `_records_/2026-11-22/queue-planning/3130-weekly-pass-page-sequence.md`: a frame at the top, at most FIVE composed pans, each its own message with a frame after it; read each card's label, price line, gem icon and state BEFORE any tap; 'Already claimed today' is a complete; ONE plain Claim per owned card. Write the six cards' state words as shown (Claim, Already claimed today, Claimed).
 
-Safe tap: the bare spot (310,660), not (400,640) after a camera shift (WORLD then BASE first). Verify each HUD icon by its label or glyph in a frame before the tap. A TIPS dialog about another device: STOP, report, never Confirm. No purchase, diamond spend or speed-up.
+Verify each HUD icon by its label or glyph in a frame before the tap. A TIPS dialog about another device: STOP, report, never Confirm. No purchase, diamond spend or speed-up.
 FRONT (Steer A 21:11Z): at the start, if `lsappinfo front` is not LastWar, record it, run the standing front script, record again; still not LastWar: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 Cost cap, stated: 0.60 USD.

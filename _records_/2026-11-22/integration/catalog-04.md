@@ -19,3 +19,4 @@ Back to the [folder index](INDEX.md).
 - [PR 1005](landing-pr-1005.md) - od-takeover-killall, the killall line and the dropped calm window (OD-20261126-01)
 - [PR 1006](landing-pr-1006.md) - od-two-hour-stop, Steer A's two-hour stop and backoff on the different-device dialog (OD-20261126-02)
 - [PR 1007](landing-pr-1007.md) - thirty-third records snapshot, the two-hourly delivery 04:00Z to 06:00Z, handover 0.26.0
+- [PR 1008](landing-pr-1008.md) - thirty-fourth records snapshot, the two-hourly delivery 06:00Z to 08:00Z

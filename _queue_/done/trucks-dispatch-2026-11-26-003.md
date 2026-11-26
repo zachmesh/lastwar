@@ -13,11 +13,43 @@ est_minutes: 15
 serves: PL-18
 chain_id: dispatch-2026-11-26
 chain_seq: 3
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T08:48:03Z
+lease_until: 2026-11-26T09:08:03Z
+result:
+  status: partial
+  started_at: 2026-11-26T08:48:03Z
+  finished_at: 2026-11-26T08:50:31Z
+  duration_seconds: 148
+  executor: operator
+  summary: Cycle E entry: the tram icon drawn bare at 08:48:11.6Z; the one unconditional tap at 08:48:16.5Z only panned the camera to the train station (no Intercity Trade, no tab badges, count or slots); WORLD then BASE restored the home view and the icon stayed bare (08:49:39.5Z, 08:49:49.4Z); nothing settled, dispatched or plundered; the different-device dialog never showed; drags 0. state_change: no
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/truck-plunder/0848-queue-run.md and 0848-queue-run.csv; run 20261126T084803Z-abf548
+  state_change: no
+  follow_up: the trade slots stay unread: a bare icon opens no trade screen; the Coordinator re-dispatches
+  stats:
+    target: settle, dispatch up to the day's remaining count, plunder up to four
+    achieved: entry tapped: bare icon, camera pan only
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.150859 USD
+    verified: yes
+    run_id: 20261126T084803Z-abf548
+    run_steps: 12
+    actions_done: 3
+    actions_refused: 0
+    cost_usd: 0.150859
+    device_takeovers: 0
+    claims: 0
+    blocker_category: bare tram icon: no trade screen
+    tram_badge: bare at every read
+    drags_tried: 0
+    rules_used: 1,2
+  stats_missing: []
+  stats_warnings: [blocker_category not in enum a-i]
 ---
 
 # trucks

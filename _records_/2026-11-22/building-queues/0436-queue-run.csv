@@ -1,0 +1,12 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.1 s after its request; owner idle 74,870 to 75,370 s: wait 0",2026-11-26T08:36:10.366Z,see growth/0054-waits.csv
+badges,"08:36:10.9Z: the hammer 3/4; the base after 08:45:46.7Z: the pickup 3, the radar dish 3",2026-11-26T08:36:10.366Z,tram badge rule: none; not tapped
+front,System Settings in front 08:35:41.6Z; the front script once; LastWar front 08:35:46.0Z,2026-11-26T08:35:46.0Z,tag text [G]: the front check (Steer A 08:35Z)
+guard,the different-device dialog not on screen at 08:36:10.9Z or later (49 minutes after the 07:47:01.5Z Confirm),2026-11-26T08:36:10.909Z,
+builders,"Lv.25 Oil Well 04:33:22 (ends ~13:09:56Z); Lv.27 Drill Ground 3d 06:54:27 (~11-29T15:31:01Z); row 3 IDLE (Construct); Lv.28 Drill Ground 7d 05:13:40 (~12-03T13:50:14Z); the hammer opened by its counter (108,218)",2026-11-26T08:36:34.255Z,one idle builder
+coin chests,"UR 10 (2.43M each), SSR 6 (812.16K each), SR 138 (101.52K each): 43.18M; coin items 5.90M",2026-11-26T08:45:13.102Z,Coin Chest (SR) 101.52K and (SSR) 812.16K read by their panels
+food chests,"SSR 1,428; SR 8,726; green 72; an orange 73 (UR food, name unread); choice-chest rows 689, 1,185, 22,999 (R5, never touched)",2026-11-26T08:45:37.949Z,
+iron chests,"Iron Chest (UR) 289 (4.06M each); SSR 1,428; SR 8,702; a green 19; iron items 50.0K x1,413, 10.0K x6,831, 1.0K x139,832",2026-11-26T08:45:23.881Z,"H117, once, no Use"
+shortfall,coin needed 83.3M (sheet) + 10M floor - 14.8M held = 78.5M; all coin chests 43.18M and items 5.90M = 49.1M: cannot cover: stop before any Use,2026-11-26T08:45:13.102Z,the real preview unread: the stop comes first
+cost,"0.509718 of 1.20 USD over five runs (one cut by a gateway 429, one by max_cost)",2026-11-26T08:45:48Z,
+drags,"drags tried 0, cancelled 0",,

@@ -34,6 +34,7 @@ Written by the strategist seat. Times are Mac UTC. File prefixes are Pacific tim
 - [dec-20261124-04.md](dec-20261124-04.md) - duel chest.
 - [dec-20261124-03.md](dec-20261124-03.md) - B2 job.
 - [dec-20261126-01.md](dec-20261126-01.md) - the free builder: the Drill Ground over the Hospital and the HQ.
+- [dec-20261126-02.md](dec-20261126-02.md) - the coin shortfall: a minimal R5 release against waiting.
 - [dec-20261124-02.md](dec-20261124-02.md) - ladder against long line.
 - [dec-20261124-01.md](dec-20261124-01.md) - use of the siege room.
 - [dec-20261123-08.md](dec-20261123-08.md) - the builders free at 23:20Z today: pick, conversions, chain times.

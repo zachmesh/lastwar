@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 78,416 s: wait 0",2026-11-26T09:35:26.421Z,see growth/0054-waits.csv
+badges,09:35:32.9Z: the Events icon badge 1,2026-11-26T09:35:26.421Z,tram badge rule: none; not tapped
+phase,"Unit Progression, Contest Segment Lv.29-30; timer 00:24:01 at 09:35:59.6Z (ends about 10:00:00.6Z)",2026-11-26T09:35:59.606Z,tag text [G]: Arms Race page
+points,0; counter chest 0/2,2026-11-26T09:35:59.606Z,
+chests,"15,000 (price 2,360), 30,000 (price 4,800), 75,000 (price 11,800): all locked with gem price tags; no Free Claim, no green Claim, no red dot",2026-11-26T09:36:05.929Z,never pressed
+tasks,Train a Lv.10 unit +31; Use 1-min Training Speed-up +10; Buy Packs containing Diamonds (1 Diamond) +30,2026-11-26T09:35:59.606Z,Go buttons never pressed
+ranking,rank 11 with 0 points,2026-11-26T09:35:59.606Z,no names recorded
+claim,none: nothing claimable and every chest priced,2026-11-26T09:36:25.194Z,a verified nothing-to-do
+drags,"drags tried 0, cancelled 0",,

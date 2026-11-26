@@ -7,7 +7,7 @@ priority: 2
 created_at: 2026-11-25T00:24:20Z
 expires_at: 2026-11-27T02:00:00Z
 planned_for:
-not_before: 2026-11-25T13:50:00Z
+not_before: 2026-11-27T00:30:00Z
 window: train one batch with the free drill ground room after the collect 11-25
 est_minutes: 14
 serves: PL-09
@@ -34,7 +34,7 @@ Routes and stop reasons: `_records_/2026-11-22/queue-planning/2700-route-card-an
 
 serves: PL-09
 
-DISPATCH ONLY WHEN NAMED, after the room collect unit `training-room-collect-2026-11-25-001`: train only if the free room is above 10 after the collect. Steer A's order: train with the free slots, a finished batch that fits whole first. THE SPEND: Train uses coin, food and iron: RE-READ coin, food and iron in a fresh frame, and write which resources and amounts from the Total cost line BEFORE pressing; a short row, a price, a diamond or an item: STOP.
+HOLD (Coordinator 09:00Z): the 08:52Z room collect found the Drill Ground FULL (1,351 troops waiting): DISPATCH ONLY WHEN NAMED, and only if a read shows free room above 10; else close a verified nothing-to-do 'room full'. Steer A's order: the free slots, a finished batch that fits whole first. THE SPEND: Train uses coin, food and iron: RE-READ coin, food and iron in a fresh frame, and write which resources and amounts from the Total cost line BEFORE pressing; a short row, a price, a diamond or an item: STOP.
 
 Barracks order (tap points in `_records_/2026-11-22/growth/tag-index.csv`): Lv.27, Lv.24, then the first idle Lv.20 where Train can be pressed.
 
@@ -42,6 +42,6 @@ ONE batch only: open the pistol; read 'Unit Count X of Y' IMMEDIATELY BEFORE set
 
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.
 CLOSE by `_records_/2026-11-22/queue-planning/3170-closing-rule-done-and-partial.md`: DONE for a taken action or a verified nothing-to-do (`--state-change no`, a `state_read:` line); else PARTIAL.
-BUTTON ROW: the buttons under a tent are small: verify the pistol glyph in a frame before each tap (a stray tap once opened Building Details, another the world map): back arrow or X, and write it; never the green up arrow (the upgrade shortcut).
+BUTTON ROW: the buttons under a tent are small: verify the pistol glyph in a frame before each tap : back arrow or X, and write it; never the green up arrow (the upgrade shortcut).
 FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 Cost cap, stated: 0.60 USD.

@@ -1,9 +1,9 @@
 ---
 title: Trade Day Rules For The 11-26 Cycles 2544 2026-11-25
 created: 2026-11-25T14:30:00-08:00
-modified: 2026-11-26T05:40:00Z
+modified: 2026-11-26T08:55:00Z
 level: L0
-version: 1.1.0
+version: 1.5.0
 description: The dispatch, refresh, downgrade test, plunder and siege rules for trade cycles E and F of the 2026-11-26 game day, from Steer A's default plan of 22:15Z - held in one sheet so both units stay under 450 words
 status: done
 activity: queue-planning
@@ -26,15 +26,19 @@ Five own trucks a day: cycle E up to three, cycle F the last two, each into an E
 
 ## Badge rule v2 and the cargo
 
-THE DAY'S FIRST ENTRY IS UNCONDITIONAL (Steer A 05:37Z, after the 04:45Z 'badge absent: no tap' cost a window): one tap on the tram icon, bare or with a badge; not drawn: WORLD then BASE once and tap where it was last drawn only if it appears, else report. Write the icon state, BOTH tab badges, the count x of 5 and each slot's state (empty, out with a return time, returned waiting): the badge-at-entry sample. The Your Truck tab badge counts the empty unlocked slots while the count is below 5 (n=1 on a new day). LATER settle checks keep the badge-first rule: a dark or absent icon: WORLD then BASE, as sheet 3110. Read the cargo from the Your Truck tab.
+BADGE FIRST. The left-column vehicle-front icon opens Intercity Trade ONLY WITH A BADGE (a red dot or a count): a BARE icon is the Alliance Train shortcut by glyph, and a tap only pans the camera to the station (11-04, 11-24 07:09Z, 11-26 at 04:45Z and 08:48Z): no tap on a bare icon. A bare or absent icon after ONE WORLD then BASE is a VERIFIED NOTHING-TO-DO (a state_read line, 3170 DONE). Steer A's 05:37Z unconditional first entry was tried once, at 08:48Z, and only panned the camera: Steer A reverted it at 08:57Z (rule v3). At entry write the icon state, BOTH tab badges, the count x of 5 and each slot's state. The Your Truck tab badge counts the empty unlocked slots while the count is below 5. Read the cargo from the Your Truck tab.
+
+## Order on a dot
+
+Read the Hospital free room BEFORE the tram tap (a read within the last hour holds) or AFTER the plunders. On entry read the Others' tab FIRST and plunder before any other screen; then the Your Truck tab. NEVER leave the trade screen between the entry and the Others' tab (cycle F did on 11-26: the dot cleared, no plunder). A bare icon gives no re-entry until a truck returns.
 
 ## Downgrade test
 
-Until the Coach has five tests: on the FIRST truck of a cycle that reaches SR (never SSR or UR), make ONE MORE refresh, price line first; write the quality before and after; if it downgrades, refresh until SR or better is back, within the slot's ten, the day's 60 and the floor of 80. Cycle F runs it only if cycle E did not.
+A measured sample for the Coach (n=2 so far; cycle G did not run it): on the first truck that reaches SR or better at the contract refresh, never SSR or UR, press ONE MORE refresh (a contract, never a diamond price) BEFORE Let's Go. Write the tier before and after. Dispatch what it shows if SR or better; if it fell to R or lower, refresh once more. Cycle F runs it only if cycle E did not.
 
 ## Plunder, up to four a day (OD-20261123-20)
 
-Read the Hospital free room first: under 1,000, no plunder ('blocked by capacity'). Stop after a fight that wounds more than 50. Target a guard under Squad 1 (25.61M), never an alliance mate, arrival over 30 minutes (sheet 3110). Cycle F fights only if the count is under 4 of 4.
+Read the Hospital free room first: under 1,000, no plunder ('blocked by capacity'). Stop after a fight that wounds more than 50. Target a guard under Squad 1 (26.10M, read 11-26 09:51Z), never an alliance mate, arrival over 30 minutes (sheet 3110). Cycle F fights only if the count is under 4 of 4.
 
 ## The siege of 11-27T01:15Z
 

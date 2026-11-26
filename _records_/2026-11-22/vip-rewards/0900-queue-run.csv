@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the runs 0.8 to 1.0 s after their requests; owner idle 76,290 and 76,305 s: wait 0",2026-11-26T09:00:08.471Z,see growth/0054-waits.csv
+badges,"09:00:25.8Z: the tram icon without a badge, the base live",2026-11-26T09:00:08.471Z,tram badge rule: none; not tapped
+route,"the post closed (176,929); no separate VIP badge; ONE avatar tap (110,100) 09:00:30.4Z (the profile page); 'Awesome!' once 09:00:41.2Z; the VIP entry (441,361) 09:00:49.3Z",2026-11-26T09:00:51.521Z,the profile page: no text recorded
+Daily Freebie,"VIP13 Daily Freebie: a COUNTDOWN 16:59:10 at 09:00:51.5Z (next claim about 02:00:01Z): already claimed; rewards x2, x13, x13, x13",2026-11-26T09:00:51.521Z,tag text [G]: VIP panel; no Claim button
+VIP points,"1,706,340 of 2,000,000 (1,695,740 at 05:22Z)",2026-11-26T09:00:51.521Z,
+login chest,"shown, NOT claimed",2026-11-26T09:00:51.521Z,
+close,"VIP back arrow (176,929) 09:00:58.9Z; profile page X (627,77) 09:01:06.2Z; the base",2026-11-26T09:01:08.380Z,nothing else pressed
+drags,"drags tried 0, cancelled 0",,
