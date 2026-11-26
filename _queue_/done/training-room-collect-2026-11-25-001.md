@@ -13,11 +13,45 @@ est_minutes: 12
 serves: PL-09
 chain_id: room-collect-2026-11-25
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T08:52:13Z
+lease_until: 2026-11-26T09:12:13Z
+result:
+  status: done
+  started_at: 2026-11-26T08:52:13Z
+  finished_at: 2026-11-26T08:55:47Z
+  duration_seconds: 214
+  executor: operator
+  summary: Partial collect test: no wrapped gift box showing; the Lv.30 and Lv.24 barracks pistols each pressed once and both refused with 'Drill Ground Full: Unable to add more units.' (outcome B); Lv.20 not pressed (no room); ready bubbles about 793, 248 and 310 (6x crop, low confidence); no Unit Count X of Y line on the tags; Total Power 151,680,155 before and after; nothing collected or trained; drags 0. state_change: no. state_read: Lv.30 and Lv.24 barracks pistols both refused: 'Drill Ground Full: Unable to add more units.'; Total Power unchanged | step 7 | 08:54:46Z
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/troop-training/0852-queue-run.md and 0852-queue-run.csv; run 20261126T085213Z-cfe852
+  state_read: Lv.30 and Lv.24 barracks pistols both refused: 'Drill Ground Full: Unable to add more units.'; Total Power unchanged | step 7 | 08:54:46Z
+  state_change: no
+  follow_up: the finished batches (about 793, 248, 310) stay waiting: the Drill Ground capacity is full
+  stats:
+    target: the partial collect test: Lv.30 then Lv.24 pistols
+    achieved: outcome B: both refused
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.254083 USD
+    verified: yes
+    run_id: 20261126T085213Z-cfe852
+    run_steps: 21
+    actions_done: 10
+    actions_refused: 0
+    cost_usd: 0.254083
+    device_takeovers: 0
+    claims: 0
+    outcome: B both refused
+    power: 151680155
+    tram_badge: bare
+    drags_tried: 0
+    rules_used: 1,2
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # training

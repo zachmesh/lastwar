@@ -13,11 +13,44 @@ est_minutes: 8
 serves: PL-17
 chain_id: rescue-depot-claim-2026-11-25
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T08:56:30Z
+lease_until: 2026-11-26T09:16:30Z
+result:
+  status: done
+  started_at: 2026-11-26T08:56:30Z
+  finished_at: 2026-11-26T08:59:01Z
+  duration_seconds: 151
+  executor: operator
+  summary: Secrets claim: the in-game Claim once at 08:56:53.8Z (the four finished tasks: UR Rescue Missing Agent, SSR Search for Missing Refugees x2, SSR Protect Refugee Camp) paid Resource Chest x300, Refined Iron Module 135, Hero EXP 16.3M, Treasure Map Fragments #2 x2, #7, #1 and #4, 5m Research Speed-up x50, Upgrade Ore 1.0K, SSR Hero Universal Shard x2, Skill Medal 2.1K (the top row may be missing); the Secret Task Report shows another alliance's player plundered the task rewards at 08:40Z (purple chest x1, green item x15, EXP 123.9K) and an ally helped claim at 08:03Z; Mega Deploy and Mega Refresh greyed (nothing to deploy); Assist Allies 5/5; drags 0. state_change: yes
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/secret-missions/0856-queue-run.md and 0856-queue-run.csv; run 20261126T085630Z-8b87ff
+  state_change: yes
+  follow_up: the post has nothing to deploy now (Mega Deploy greyed); Hidden Treasures shows a badge 1: a restock
+  stats:
+    target: claim the finished tasks and re-deploy
+    achieved: one Claim taken; nothing pending to re-deploy
+    resources_gained: Resource Chest x300; Refined Iron Module 135; Hero EXP 16.3M; 5m Research Speed-up x50; Upgrade Ore 1.0K; SSR Hero Universal Shard x2; Skill Medal 2.1K; Treasure Map Fragments
+    points: 0
+    costs: none spent; model 0.145579 USD
+    verified: yes
+    run_id: 20261126T085630Z-8b87ff
+    run_steps: 11
+    actions_done: 4
+    actions_refused: 0
+    cost_usd: 0.145579
+    device_takeovers: 0
+    claims: 1
+    plundered_report: 08:40Z by another alliance
+    mega_deploy: greyed
+    tram_badge: bare
+    drags_tried: 0
+    rules_used: 1,2,3,5
+  stats_missing: []
+  stats_warnings: []
 ---
 
 # secrets

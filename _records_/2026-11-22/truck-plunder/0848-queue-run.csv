@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 s after its request; owner idle 75,583 s: wait 0",2026-11-26T08:48:04.134Z,see growth/0054-waits.csv
+badges,08:48:11.6Z: the tram icon bare (no badge); 08:49:20.9Z (WORLD frame): no dot; 08:49:39.5Z and 08:49:49.4Z (BASE): bare,2026-11-26T08:48:04.134Z,tram badge rule: none; not tapped
+entry tap,"the tram icon (107,580) bare at 08:48:11.6Z; ONE unconditional tap at 08:48:16.5Z: only the camera panned to the train station area (two white plus bubbles, a countdown about 01:49:40); no trade screen",2026-11-26T08:48:19.692Z,tag text [G]: left column tram icon; a bare icon only pans
+tab badges and slots,"not read: the trade screen never opened (no tab badge, no Plunder Count, no trade count, no slot state)",2026-11-26T08:48:25.176Z,"the badge-at-entry sample: bare, no trade screen"
+WORLD then BASE,"WORLD 08:49:08.1Z (the tram icon bare, no dot at 08:49:20.9Z), BASE 08:49:25.9Z; bare at 08:49:39.5Z and 08:49:49.4Z",2026-11-26T08:49:49.444Z,the home view restored
+HUD,"food 195.0M, iron 763.0M, coin 14.8M, diamonds 10,643",2026-11-26T08:48:11.578Z,
+drags,"drags tried 0, cancelled 0",,

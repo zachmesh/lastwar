@@ -13,11 +13,46 @@ est_minutes: 15
 serves: PL-08
 chain_id: drill-ground-2026-11-26
 chain_seq: 1
-attempts: 1
+attempts: 2
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: operator
+claimed_at: 2026-11-26T08:36:09Z
+lease_until: 2026-11-26T08:56:09Z
+result:
+  status: partial
+  started_at: 2026-11-26T08:36:09Z
+  finished_at: 2026-11-26T08:46:53Z
+  duration_seconds: 644
+  executor: operator
+  summary: Drill Ground stopped before any Use: the coin shortfall for Lv.27 to 28 is 78.5M (83.3M by the sheet plus the 10M floor, 14.8M held) and every coin chest gives only 43.18M (UR 10 x 2.43M, SSR 6 x 812.16K, SR 138 x 101.52K; coin items 5.90M): the chests cannot cover it; one builder idle; iron chests UR 289 (4.06M), SSR 1,428, SR 8,702; food chests SSR 1,428, SR 8,726, an orange 73; nothing used; the different-device dialog never showed; cost 0.51 USD of 1.20; drags 3. state_change: no
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-22/building-queues/0436-queue-run.md and 0436-queue-run.csv; run 20261126T083609Z-bb02cf
+  state_change: no
+  follow_up: the idle builder needs coin: 78.5M short for the Drill Ground; the coin chests give 43.18M
+  stats:
+    target: preconvert fixed chests and upgrade the Lv.27 Drill Ground
+    achieved: stopped before any Use: the chests cannot cover the coin shortfall
+    resources_gained: none
+    points: 0
+    costs: none spent; model 0.509718 USD
+    verified: yes
+    run_id: 20261126T083609Z-bb02cf
+    run_steps: 45
+    actions_done: 15
+    actions_refused: 0
+    cost_usd: 0.509718
+    device_takeovers: 0
+    claims: 0
+    blocker_category: supply: coin chests cannot cover the shortfall
+    coin_chest_total: 43180000
+    coin_shortfall: 78500000
+    slots_idle: 1
+    tram_badge: not read
+    drags_tried: 3
+    rules_used: 1,2
+  stats_missing: []
+  stats_warnings: [blocker_category not in enum a-i]
 ---
 
 # building-queues

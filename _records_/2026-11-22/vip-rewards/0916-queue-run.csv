@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 77,293 s: wait 0",2026-11-26T09:16:41.586Z,see growth/0054-waits.csv
+badges,09:16:45.7Z: the base live,2026-11-26T09:16:41.586Z,tram badge rule: none; not tapped
+route,"no separate VIP badge; ONE avatar tap (110,100) 09:16:49.8Z; the VIP entry (440,361) 09:17:06.3Z",2026-11-26T09:17:14.276Z,the profile page: no text recorded
+VIP panel,"VIP13; 'logged in 8 days in a row; Collect 200 VIP points tomorrow'; points 1,706,340 of 2,000,000",2026-11-26T09:17:14.276Z,tag text [G]: VIP panel
+login chest,"the chest icon at the top right is OPEN (empty), no Claim, no red dot: already taken today",2026-11-26T09:17:14.276Z,a verified nothing-to-do
+Daily Freebie,countdown 16:42:47 (read only),2026-11-26T09:17:14.276Z,next claim ~02:00:01Z
+close,"VIP back arrow (175,929) 09:17:32.6Z; profile page X (627,77) 09:17:40.7Z",2026-11-26T09:17:42.914Z,
+drags,"drags tried 0, cancelled 0",,

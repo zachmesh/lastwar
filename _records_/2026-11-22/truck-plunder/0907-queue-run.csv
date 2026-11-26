@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.0 s after its request; owner idle 76,763 to 77,102 s: wait 0",2026-11-26T09:07:49.222Z,see growth/0054-waits.csv
+badges,"09:07:53.5Z: the tram icon with a RED DOT; tab badges Others' 4, Your Truck 1; 09:13:56.7Z and 09:14:36.7Z: the tram icon bare",2026-11-26T09:07:49.222Z,tram badge rule: none; not tapped
+entry,"tram icon with a red dot at 09:07:53.5Z; one tap 09:07:57.6Z: Intercity Trade on Your Truck; tab badges Others' Trucks 4, Your Truck 1; count 3/5",2026-11-26T09:08:05.994Z,tag text [G]: the badge-at-entry sample
+slots,1 yellow truck out (exhaust); 2 yellow truck with a blue crate bubble (returned); 3 cyan truck out (exhaust); 4 padlock; timers of slots 1 and 3 unread,2026-11-26T09:08:16.944Z,
+settled truck,"UR (Squad 2, five heroes Lv.150): iron 3.8M, food 3.8M, coin 2.4M, blue tablet x1, 500-badge x6, orange scroll x1, orange puzzle piece x1, red gem item 100 x1, gold bar x1; battle report: Plunder Failed 08:10:55Z; no Claim button",2026-11-26T09:09:45.009Z,slot 2 then empty (green plus)
+roll,"roll 1 R (free dice tag), refresh 1 free: SR (255/1), test refresh (contract, 255 to 254): UR: arrives 04:20:53",2026-11-26T09:12:29.987Z,"downgrade test: SR to UR, no downgrade"
+dispatch,"Let's Go once at 09:12:34.6Z: UR truck, iron 3.8M, food 3.8M, coin 2.4M expected, back about 13:33:27Z; count 4/5",2026-11-26T09:12:37.818Z,"Squad 3, no unit losses"
+Hospital,"Lv.25: 1,364 of 7,999 wounded, 5,104 Completed: free room 1,531",2026-11-26T09:14:12.808Z,Collect not pressed
+plunders,none: the tram icon bare after the dispatch: the trade screen not re-enterable; the Others' Trucks tab (badge 4) unread,2026-11-26T09:14:36.680Z,my sequencing error: read it before leaving the trade screen
+drags,"drags tried 0, cancelled 0",,

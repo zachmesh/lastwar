@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 s after its request; owner idle 75,832 and 75,933 s: wait 0",2026-11-26T08:52:14.034Z,see growth/0054-waits.csv
+badges,08:52:19.3Z: the tram bare; the pickup 3; the radar dish 3,2026-11-26T08:52:14.034Z,tram badge rule: none; not tapped
+gift box,none showing on any building or ground,2026-11-26T08:52:19.316Z,the phone took the ground's completion
+ready bubbles,"Lv.30 red helmet ~793; Lv.24 blue helmet with a star ~248; Lv.20 blue cap ~310; Lv.27 white face bubble, no digits (6x crop of the saved frame)",2026-11-26T08:52:34.417Z,"low-confidence digits; the earlier read 793, 249, 310"
+Barracks Lv.30,"tag 'Barracks Lv.30'; pistol (527,679) once at 08:52:55.4Z: toast 'Drill Ground Full: Unable to add more units.'; Total Power 151,680,155 before and after",2026-11-26T08:52:57.879Z,no Unit Count line on the tag
+Barracks Lv.24,"tag 'Barracks Lv.24'; pistol (598,616) once at 08:54:36.8Z: toast 'Drill Ground Full: Unable to add more units.'; Total Power 151,680,155 before and after",2026-11-26T08:54:39.245Z,no Unit Count line on the tag
+Barracks Lv.20,not pressed: no room remains (the unit: only if room remains),2026-11-26T08:54:46.507Z,
+outcome,registered (B): both refused,2026-11-26T08:54:46.507Z,no collection
+drags,"drags tried 0, cancelled 0",,

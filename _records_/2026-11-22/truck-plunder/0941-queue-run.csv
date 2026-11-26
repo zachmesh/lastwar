@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"each run admitted 0.8 to 1.1 s after its request; owner idle 78,793 to 79,327 s: wait 0",2026-11-26T09:41:44.336Z,see growth/0054-waits.csv
+badges,"09:41:49.2Z: the tram icon with a RED DOT; entry tab badges Others' 4, Your Truck 1; after: the tram bare (09:51:04.6Z, 09:52:00.5Z)",2026-11-26T09:41:44.336Z,tram badge rule: none; not tapped
+entry,"tram icon red dot at 09:41:49.2Z; one tap 09:41:53.5Z; tab badges Others' 4, Your Truck 1; count 4/5; two trucks out, slot 3 returned, a padlock",2026-11-26T09:42:02.371Z,tag text [G]: the badge-at-entry sample
+plunder 1,"UR truck, guard 23.2M (Squad 1 26.10M vs 23.26M), Mission Completed: iron 951.8K, food 951.8K, coin 607.5K, scroll x1, gold bar x1, 500-badge x3, Extra shard x3; count 1/4",2026-11-26T09:43:12.536Z,no wounded line on DMG Taken
+plunder 2,"SSR truck, guard 17.2M (Squad 1 26.10M vs 17.24M), Mission Completed: iron 761.5K, food 761.5K, coin 486.2K, 500-badge x3, 5m speed-ups, an Extra puzzle piece; count 2/4",2026-11-26T09:46:29.440Z,red item reclaimed
+casualties,"Hospital after the fights: 1,364 of 7,999 wounded, Completed 5,104 (unchanged): free room 1,531",2026-11-26T09:51:37.147Z,no troops wounded
+settled truck,"slot 3 SR (cyan): iron 2.5M, food 2.5M, coin 1.6M, blue chests x20 x3, red gem item 50 x1, 500-badge x1",2026-11-26T09:48:52.624Z,
+dispatch,"5th truck: N, free dice N, contract dice (254 to 253) SR 04:26:15; Let's Go 09:50:08.2Z; count 5/5; back ~14:16:20Z",2026-11-26T09:50:18.731Z,downgrade test not run (done in cycle F)
+plunders 3 and 4,not fought: no candidate with a 500-badge stack and a guard under Squad 1 left on the list,2026-11-26T09:48:08.254Z,count 2/4
+drags,"drags tried 0, cancelled 0",,

@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 1.0 s after the request (start requested 08:56:30.544Z, run started 08:56:31.514Z); owner idle 76,089 s: wait 0",2026-11-26T08:56:31.514Z,see growth/0054-waits.csv
+badges,"08:56:36.1Z: the tram bare, the pickup 3, the Warzone Duel timer 17:03:25; after the claim: Your Tasks none, Hidden Treasures 1, Ghost Ops 3",2026-11-26T08:56:31.514Z,tram badge rule: none; not tapped
+cards before,"UR Rescue Missing Agent, SSR Search for Missing Refugees x2, SSR Protect Refugee Camp (Lv.5): finished, a green Claim each; a fifth clipped; Your Tasks 8; Assist Allies 5/5, Plunder Others 0/5",2026-11-26T08:56:47.244Z,"tag text [G]: Secret Command Post, Your Tasks"
+Claim,the in-game Claim once at 08:56:53.8Z,2026-11-26T08:56:56.037Z,state change: claimed
+popup rows,"Resource Chest x300; Refined Iron Module 135; Hero EXP 16.3M; Treasure Map Fragment #2 x2; 5m Research Speed-up x50; Treasure Map Fragments #7 x1, #1 x1, #4 x1; Upgrade Ore 1.0K; SSR Hero Universal Shard x2; Skill Medal 2.1K",2026-11-26T08:56:56.037Z,the popup scrolls by itself: the top row may be missing
+Secret Task Report,"11-26 00:40 (08:40Z): another alliance's player (as shown: comandante Lucco, tag [3djr]) plundered your task rewards: purple chest x1, green item x15, EXP 123.9K; 11-26 00:03 (08:03Z): an ally helped you claim",2026-11-26T08:57:01.624Z,the owner's own name never; Like All never pressed
+cards after,all four visible cards PERFECT; Your Tasks badge gone; Hidden Treasures 1; Ghost Ops 3,2026-11-26T08:57:18.201Z,
+Mega Deploy,"tapped once at 08:57:24.1Z: Mega Refresh and Mega Deploy both greyed: no panel, no toast: nothing to deploy",2026-11-26T08:57:33.315Z,no Mega Refresh
+drags,"drags tried 0, cancelled 0",,

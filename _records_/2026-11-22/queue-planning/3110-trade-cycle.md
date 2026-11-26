@@ -3,7 +3,7 @@ title: Trade Cycle Settle Dispatch And Plunder On One Badge 3110 2026-11-24
 created: 2026-11-24T02:25:00-08:00
 modified: 2026-11-24T06:45:00-08:00
 level: L0
-version: 1.7.0
+version: 1.8.0
 description: The procedure of one trade cycle - at a tram badge, settle the returned trucks, dispatch into the empty slots by rule 2, then plunder within today's count and the OD-20 guards - built from record 1000 and Steer A's ruling of 2026-11-24 10:16Z
 status: done
 activity: queue-planning
@@ -36,7 +36,7 @@ Up to the unit's number, into each empty slot's green plus ((298,450), (362,450)
 
 ## 3 Plunder
 
-On the Others' Trucks tab: Stop after a fight wounding over 50. Read the count; stop at 4 of 4. The list has 'out trucks from your Warzone' ticked; refresh only if Free. Target: a gold (UR) or purple (SSR) truck with a UR 500-badge stack in either half, guard under Squad 1 (25.61M), arrival over 30 minutes. Quick Plunder once, Battle once, per fight. Record per fight: shards won, item shares, troops wounded, the count ('Your Plunder Count Today' decides), Total Power. Never Collect, Heal, Recover or Speed Up, and never History unless the unit names sheet 3150.
+On the Others' Trucks tab: Stop after a fight wounding over 50. Read the count; stop at 4 of 4. The list has 'out trucks from your Warzone' ticked; refresh only if Free. Target: a gold (UR) or purple (SSR) truck with a UR 500-badge stack in either half, guard under Squad 1 (26.10M), arrival over 30 minutes. Quick Plunder once, Battle once, per fight. Record per fight: shards won, item shares, troops wounded, the count ('Your Plunder Count Today' decides), Total Power. Never Collect, Heal, Recover or Speed Up, and never History unless the unit names sheet 3150.
 
 ## 4 Close
 

@@ -1,7 +1,7 @@
 ---
 title: Strategist handover
 created: 2026-11-23T08:20:00Z
-modified: 2026-11-26T04:36:00Z
+modified: 2026-11-26T08:49:00Z
 level: L2
 version: 0.8.1
 description: The live state a replacement strategist starts from
@@ -36,7 +36,7 @@ The 12 overdue reads of 16:00Z: H131 closed for the measured numbers; H117, H114
 
 ## The halt and the takeover
 
-The different-device dialog stood from 11-25T06:25:52Z to 04:31Z, when the team took over (killall, relaunch, the update Confirm); the base is live. The first frame (record 0426) shows coin 564, food 165.2M, iron 734.8M, oil 564.8K, diamonds 10,943, power 151.27M, builders 3/4 (one build was started by the owner's phone), labs 2/2: read the builders panel and the research queue before counting any idle minute. The freed-builder pre-conversion needs coin of about 103M (43 UR coin chests, count unread since 11-23) and food about 198M (49 UR food chests). Chain after: radar and duel claims of the new theme, lab Complete, Oil Well -005, Drill Ground hand-off, cycle E, room collect, UR claim, train batch.
+The different-device dialog stood from 11-25T06:25:52Z to 04:31Z, when the team took over (killall, relaunch, the update Confirm); the base is live. The first frame (record 0426) shows coin 564, food 165.2M, iron 734.8M, oil 564.8K, diamonds 10,943, power 151.27M, builders 3/4 (one build was started by the owner's phone), labs 2/2: read the builders panel and the research queue before counting any idle minute. The pre-conversion for the ground needs coin about 78.5M: typed coin chests hold only about 43M (UR 10, SSR 9), the rest about 6,500 plain chests (Steer A's word). Chain after: radar and duel claims of the new theme, lab Complete, Oil Well -005, Drill Ground hand-off, cycle E, room collect, UR claim, train batch.
 
 ## Rules
 

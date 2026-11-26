@@ -3,7 +3,7 @@ title: Queue Planning Specifics To Apply After Every Plan 3120 2026-11-24
 created: 2026-11-24T03:30:00-08:00
 modified: 2026-11-24T03:45:00-08:00
 level: L0
-version: 1.44.0
+version: 1.46.0
 description: The list of text and retirements the planner applies after each plan run, as it stood on 2026-11-24 - so the next plan does not lose what was learned today
 status: done
 activity: queue-planning
@@ -31,12 +31,12 @@ The roster donations and trucks units.
 - Survivors: quote the gate in state_read; never tap the '?' figure at (145,649).
 - Zero sweeps: the rules are sheet 2543 (bubble lines, Main Tasks, VIP, tram); each unit points to it.
 - Daily-missions: Main Tasks tab first.
-- Dispatch cycle units: DOWNGRADE TEST (Steer A 02:51Z) on the first SR truck, never SSR or UR, until the Coach's table holds five tests.
+- Dispatch cycle units: DOWNGRADE TEST on the first SR-or-better truck: ONE MORE refresh BEFORE Let's Go (text in sheet 2544; n=2).
 - Secrets claim units: open at the task end plus 20 s, p1, ahead of non-builder units.
-- VIP (22Z plan): copy the 11-25 route paragraph.
+- VIP (22Z plan): copy the route paragraph of vip-login-chest-2026-11-26-001 (login chest claim, points read).
 - Donation passes: a run at max_steps with the count live is continued by part two.
 - Radar and duel-score units on a day whose theme scores radar: p1 to the reset; pick order is expiry first, priority second.
-- After every plan READ BACK the held units' expiries (a plan can shorten one).
+- After every plan READ BACK the held units' expiries.
 - Research start units (H112): write the oil counter (income 1.5K an hour) with the UTC time and BOTH labs' end times before and after the start, gap under 2 minutes; a changed other-lab end time voids the read.
 - Radar: Confirm only the 10-reward dialog; quote it.
 - Mail: the 'Train arrival reward!' and 'Unclaimed Arms Race Event' mails: tap THAT mail's Claim once (never Claim All); the Glittering Market mail is NOT claimed.
