@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-26T04:07:16Z
-version: 2.25.0
+modified: 2026-11-26T05:49:41Z
+version: 2.26.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -24,6 +24,7 @@ None. The owner closed the last open item (OD-20261123-09) on 2026-11-23 and sai
 
 ## Changelog
 
+- 2.26.0, 2026-11-26 - OD-20261126-02 added.
 - 2.25.0, 2026-11-26 - OD-20261126-01 added.
 - 2.24.0, 2026-11-25 - OD-20261125-05 added to catalog 05: the owner's instruction to scroll the game screen.
 - 2.23.0, 2026-11-25 - Catalog 05 listed: the owner's four answers (OD-20261125-01 to -04); OD-20261123-21 is CLOSED by OD-20261125-03.
@@ -35,4 +36,4 @@ None. The owner closed the last open item (OD-20261123-09) on 2026-11-23 and sai
 - [Catalog 02](owner-decisions-log/catalog-02.md) - 13 entries, OD-20261123-04 to OD-20261123-16
 - [Catalog 03](owner-decisions-log/catalog-03.md) - 6 entries, OD-20261123-17 to OD-20261123-22 (21 is OPEN)
 - [Catalog 04](owner-decisions-log/catalog-04.md) - 4 entries, OD-20261123-23 to OD-20261123-26 (the owner's answers of 19:48Z)
-- [Catalog 05](owner-decisions-log/catalog-05.md) - 6 entries, OD-20261125-01 to OD-20261126-01 (the owner's answers, his scroll instruction, Steer A's takeover)
+- [Catalog 05](owner-decisions-log/catalog-05.md) - 7 entries, OD-20261125-01 to OD-20261126-02 (the owner's answers, his scroll instruction, Steer A's takeover rules)
