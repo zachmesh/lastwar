@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 24,491 s: wait 0",2026-11-26T18:39:50.351Z,see growth/0054-waits.csv
+badges,18:40:00Z: the Mail button red dot,2026-11-26T18:39:50.351Z,tram badge rule: none; not tapped
+Event list end,"the pan moved about 125 of 150 px: the 7th row (a Mega Exp... mail, 12h ago, read) is the list's end",2026-11-26T18:40:20.178Z,tag text [G]: Event list
+Alliance,from the top: Happy Thanksgiving alliance R5 mail 6h unread (no gift icon); Daily Donation Rankings 16h; Alliance Exercise 19h; New Alliance Marker x3 1d: all read; list continues,2026-11-26T18:42:38.023Z,none opened
+System,"six or more (President Mail) broadcasts 6h ago, all unread, no gift icon (Indonesian, Korean, Turkish, Portuguese, Espanol, Thanksgiving); list continues",2026-11-26T18:42:51.804Z,none opened
+Battle Report,Victory in Attack 1d; Victory Lv.20 to Lv.16 Zombie Hordes 2d; all read; list continues,2026-11-26T18:43:06.519Z,
+claims,no gift icon or own Claim button on any row of the four lists: nothing claimable seen,2026-11-26T18:43:06.519Z,Glittering Market mail not seen
+drags,"drags tried 0, cancelled 0",,

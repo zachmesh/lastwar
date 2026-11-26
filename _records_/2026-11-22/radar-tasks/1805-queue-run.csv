@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 22,407 s: wait 0",2026-11-26T18:05:06.154Z,see growth/0054-waits.csv
+badges,18:05:10.3Z: the tram not drawn; the radar dish 8; 18:06:37Z: the radar dish 1,2026-11-26T18:05:06.154Z,tram badge rule: none; not tapped
+pile,"2 tasks, 20 stamina at 18:05:23.4Z; bar 5 of 40; 12 tasks restore in 02:32:52",2026-11-26T18:05:23.375Z,tag text [G]: Radar screen
+Quick Execute,once at 18:05:30.7Z: energy 118 to 98; bar 5 to 0 of 40; full restore 11-27 06:38:08 local,2026-11-26T18:05:42.243Z,floor 40 held
+Claim All dialog,"'Completing Radar Tasks today will not grant Alliance Duel points, and you are about to claim 11 radar task rewards at once. Continue?': Confirm once at 18:05:59.0Z",2026-11-26T18:05:51.454Z,count 11 not 10
+rewards,"cash x20, radar item x110, food bag x32, EXP book 8.2M, blue triangle 1.4K, blue chip 1.6K, iron 2.6M, bread 2.6M, coin 2.8M, Lv.1 chest x1",2026-11-26T18:06:08.204Z,no oil line
+HUD,food 48.5M to 51.1M; iron 644.9M to 647.5M; coin 13.3M to 16.1M; oil 683.3K unchanged; energy 118 to 98,2026-11-26T18:06:37.082Z,
+after,"'4 tasks, 40 stamina' offered, not pressed; radar dish badge 1",2026-11-26T18:06:37.082Z,
+drags,"drags tried 0, cancelled 0",,

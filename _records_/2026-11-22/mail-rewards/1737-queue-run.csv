@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 24,342 s: wait 0",2026-11-26T18:37:21.766Z,see growth/0054-waits.csv
+badges,18:37:26.5Z: the Mail button red dot,2026-11-26T18:37:21.766Z,tram badge rule: none; not tapped
+event list before pan,"6 ally train or Mega Express mails: 2h, 3h, 6h unread; 7h (Mega Ex...), 7h, 10h read; no own Claim button",2026-11-26T18:37:44.901Z,tag text [G]: Event list
+pan,"start (670,720) to (670,570): moved about 125 px; one new row: Mega Exp... 11h ago read",2026-11-26T18:38:00.198Z,one composed pan only
+wanted mails,"Train arrival reward!, UNCLAIMED ARMS RACE EVENT, GLITTERING MARKET UNCLAIMED: none among the 7 rows read",2026-11-26T18:38:00.198Z,list end not reached
+Mail dot,red before and after,2026-11-26T18:38:28Z,3 unread ally train mails
+drags,"drags tried 0, cancelled 0",,

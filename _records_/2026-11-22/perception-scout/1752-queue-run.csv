@@ -1,0 +1,7 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 21,673 s: wait 0",2026-11-26T17:52:53.460Z,see growth/0054-waits.csv
+badges,17:52:59.8Z: the tram not read,2026-11-26T17:52:53.460Z,tram badge rule: none; not tapped
+panel,"wounded 1,364 of 7,999 (Lv.10 x1,364); Completed 5,104 (full bar); room 1,531",2026-11-26T17:53:56.717Z,as at 17:43Z
+info popup,INSTRUCTIONS: the wounded-treatment defaults (3 points); no tier or count of the Completed troops,2026-11-26T17:54:18.999Z,tier still unread
+HUD,"food 48.5M, iron 644.9M, coin 13.3M unmoved",2026-11-26T17:55:00.461Z,
+drags,"drags tried 0, cancelled 0",,

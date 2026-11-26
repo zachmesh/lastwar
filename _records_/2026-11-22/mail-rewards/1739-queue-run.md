@@ -1,0 +1,22 @@
+---
+title: Mail part two: Event list ends at 7 rows, no gift icon anywhere 1739
+created: 2026-11-26T18:43:29Z
+modified: 2026-11-26T18:43:29Z
+version: 1.0.0
+description: PART TWO of unit mail-2026-11-26-1030 (the Coordinator 18:41Z, Steer A's rule 'pan first or use each row's own Claim'; record 1737 is part one; the queue unit is already closed; two runs 0.151 + 0.150 = 0.3016 USD against the 0.30 cap: an overrun of 0.0016 disclosed; version 1.0.366(908); front LastWar throughout; owner idle 24,491 s; the different-device dialog never on screen) - RUN 1 (18:39:49Z): the Mail envelope (670,787) at 18:39:59.6Z; the EVENT category (390,378) at 18:40:05.6Z; the ONE composed pan (670,720) to (670,570) at 18:40:13.4Z: THE EVENT LIST (18:40:20.2Z): the same SEVEN ally train or Mega Express mails as at 18:38Z (ages now 4h, 6h, 8h, 8h, 10h, 12h; 6h unread; the rest read): THE LAST ROW (a Mega Exp... mail, 12h ago) IS THE LIST'S END (the pan moved about 125 px of the 150 requested: the list stopped; the same last row as the first pan): NO ROW BELOW THE 11h/12h ROW; no 'Train arrival reward!', no 'UNCLAIMED ARMS RACE EVENT' and no 'GLITTERING MARKET UNCLAIMED' mail in the Event list; the back arrow (113,935); the Alliance category (390,280): the list showed ALREADY SCROLLED (the Event pan's scroll state carried over: the newest rows hidden): so that read was discarded and RUN 2 re-read from a fresh top; RUN 2 (18:41:54Z): the back arrow to the base, then the Mail envelope (670,787) at 18:42:12.9Z; THE ALLIANCE LIST FROM ITS TOP (18:42:38.0Z): row 1 'Happy Thanksgiving ...' (an alliance R5 broadcast with an R5 badge) 6h ago UNREAD (red dot; no gift icon; NOT opened); row 2 'Daily Donation Rankings' 16h ago read; row 3 '[Alliance Exercise] Alliance R...' 19h ago read; rows 4 to 6 'New Alliance Marker / New Alliance Marker Created' 1d ago read (a hammer icon, then two crossed-swords icons); the sixth row cut off at the bottom: THE LIST CONTINUES (a 'Daily Donation Rankings' 1d ago read row was seen below in the first scrolled frame); THE SYSTEM LIST (18:42:51.8Z, from the top): six or more '(President Mail)' broadcasts, each UNREAD (red dot) 6h ago, plain closed envelopes (no gift icon): Indonesian, Korean, Turkish, Portuguese, Espanol, Thanksgiving; the list continues below; none opened; THE BATTLE REPORT LIST (18:43:06.5Z): six rows, none with a dot: 'Victory in Attack' 1d ago (units defeated 1805) and five Victory rows against Lv.20, Lv.19, Lv.18, Lv.17 and Lv.16 Zombie Hordes 2d ago; the list continues; nothing pressed; THE ONLY GIFT ICONS: none on any row of the Event, Alliance, System or Battle Report lists: NO ROW CARRIES AN OWN CLAIM BUTTON OR AN UNCLAIMED ATTACHMENT; nothing opened or claimed; the Glittering Market mail not seen (the Event list ended without it); Claim All, Delete All and Delete never pressed; the In-app Purchases, Regular and Favorite categories not read (not named); back arrows to the base (18:43:19.0Z); the Mail button's red dot remains (3 unread ally train mails, the president broadcasts, the Thanksgiving alliance mail); drags 1 (the composed pan)
+status: partial
+grounded_in:
+  - source: cu_bridge run 20261126T184154Z-1e2041, final report read by the operator, 2026-11-26T18:39Z to 18:43Z
+  - source: unit brief mail-2026-11-26-1030 and the mail-rewards rule digest
+---
+
+# Mail part two: Event list ends at 7 rows, no gift icon anywhere 1739
+
+Rows in [1739-queue-run.csv](1739-queue-run.csv). Claimed 18:37:20Z; no different-device dialog.
+
+- **Event list ends at 7 rows:** the second pan moved about 125 of 150 px and showed the same last row (a Mega Exp... mail, 12h ago): no row below; no Train arrival, Arms Race or Glittering Market mail in it.
+- **Alliance** (from a fresh top): an unread alliance R5 Thanksgiving mail (no gift icon) above read Donation Rankings, Exercise and three Marker mails; **System:** six or more unread president broadcasts (no gift icon); **Battle Report:** six read victories; each list continues below the visible rows.
+- **No gift icon or own Claim button on any row read:** nothing opened or claimed; Claim All, Delete All never pressed; In-app Purchases, Regular and Favorite not read.
+- **Counts.** The scroll state carries over between categories (re-enter Mail for a fresh top); the dialog never showed; drags 1; cost 0.3016 against the 0.30 cap (disclosed).
+- **Run.** One run, 24 steps, 13 actions, 0.301645 USD, cap 0.5; 0 refused; foreground stayed LastWar.
+- **Closing state.** The base, no panel; token released 18:43:24Z.
