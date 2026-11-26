@@ -36,7 +36,7 @@ serves: snapshot
 
 The owner's zombie siege search runs at 2026-11-27T01:15Z and is NOT delayed (the owner accepted the risk). This unit reads the Hospital's free room 45 minutes before it; the Coordinator tells the owner in one line (Steer B carries it); the plunder casualty guard (free room at least 1,000) stands. 4 steps:
 (1) From the base, find the Hospital (tent E about (678,510); a portrait bubble over a barracks may be the Hospital, not a batch; the tag may read Lv.20 or Lv.25): read its tag in a frame and tap only the building that reads Hospital.
-(2) Tap the tag's orange middle button ONCE: read the figures by TEXT: capacity, wounded, 'Completed' (healed, waiting). Free room = capacity minus wounded minus Completed. Write each number with the UTC time (digits cropped at 6x).
+(2) Tap the tag's orange middle button ONCE: read the figures by TEXT: capacity, wounded, 'Completed' (healed, waiting: the COUNT; the panel prints no tier). Free room = capacity minus wounded minus Completed. Write each number with the UTC time (digits cropped at 6x).
 (3) NEVER Collect, Heal, Recover or Speed Up: nothing is pressed in the Hospital. Close with the blue back arrow.
 (4) Any dialog, price or other app: STOP. `--state-change no`, a `state_read:` line. FRONT: if `lsappinfo front` is not LastWar: record, run the standing front script, record; still not: stop, release, tell the Coordinator.
 May open another app: any banner, Go, Buy, link, web or share button needs Steer A's approval first; if another app opens, STOP and touch nothing.

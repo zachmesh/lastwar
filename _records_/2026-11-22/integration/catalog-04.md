@@ -29,3 +29,10 @@ Back to the [folder index](INDEX.md).
 - [PR 1015](landing-pr-1015.md) - help-request, the helmet bubble is the alliance help request (one press per build)
 - [PR 1016](landing-pr-1016.md) - scribe handover 0.7.0
 - [PR 1017](landing-pr-1017.md) - help-request-flat, each help is the larger of 0.5 percent and a flat 21.6 minutes
+- [PR 1018](landing-pr-1018.md) - thirty-eighth records snapshot, the two-hourly delivery 14:00Z to 16:00Z
+- [PR 1019](landing-pr-1019.md) - events-bar-scroll, the events hub tab bar scrolls (drag until every tab is seen)
+- [PR 1020](landing-pr-1020.md) - home-glob-check, a read-only finder of code that globs or walks from the home folder
+- [PR 1021](landing-pr-1021.md) - exempt-oneoff, the exempt list accepts an optional kind column (oneoff)
+- [PR 1022](landing-pr-1022.md) - piles-capacity, the capacity bar is not a cap on Collect
+- [PR 1023](landing-pr-1023.md) - promotion-note, the troop promotion path and Steer A's bounded pre-approval
+- [PR 1024](landing-pr-1024.md) - tcc-who, a read-only names-only reader of who asked macOS for a protected folder

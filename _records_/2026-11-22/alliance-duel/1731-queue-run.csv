@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 20,374 s: wait 0",2026-11-26T17:31:11.289Z,see growth/0054-waits.csv
+badges,17:31:15.0Z: the radar dish 8; the labs counter 2/2,2026-11-26T17:31:11.289Z,tram badge rule: none; not tapped
+star icon,absent at every read (17:31:15Z to 17:31:45Z),2026-11-26T17:31:15.024Z,tag text [G]: right column
+Lv.30 tent,red-capped portrait bubble printing 67 (blurred; reads 67),2026-11-26T17:31:25.046Z,after the 726 collect: a partial entry
+Lv.24 tent,blue-capped portrait bubble printing 248,2026-11-26T17:31:25.046Z,finished batch waiting
+Lv.20 tent,blue-capped portrait bubble printing 110,2026-11-26T17:31:25.046Z,finished batch waiting
+Lv.27 tent,clock-like bubble (training: the promotion),2026-11-26T17:31:25.046Z,
+HUD,"food 48.5M, iron 644.9M, coin 13.3M, oil 683.3K, Total Power 152,113,439",2026-11-26T17:31:15.024Z,
+drags,"drags tried 0, cancelled 0",,

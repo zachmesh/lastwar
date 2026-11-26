@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at every claim; owner idle 15,244 s: wait 0; the bridge refusal 16:08:38Z",2026-11-26T16:05:32.151Z,see growth/0054-waits.csv
+badges,16:05:35.7Z: the tram not drawn,2026-11-26T16:05:32.151Z,tram badge rule: none; not tapped
+personal total,"11,056,390 (theme Train Heroes, countdown 09:53:58)",2026-11-26T16:06:02.701Z,"over all three thresholds (40,000, 150,000, 540,000)"
+carousel,"page 4 of 4: Infinite Roulette card (x0 spins, 1.8M/10.0M, green Go not pressed); dots at x 350, 379, 408, 437 (y 569), dot 4 lit",2026-11-26T16:06:02.701Z,chest row not on this page
+scoring rows,"Hero Recruitment +4,500; Hero EXP (660) +2.5; UR Hero Shard +25,000; SSR +8,750; SR +2,500; Skill Medal +25; diamond packs +30",2026-11-26T16:06:02.701Z,last row cut off
+page dot 1,click at 16:08:38Z refused by the bridge policy: 'the target names no app'; no retry (Coordinator 16:13Z),2026-11-26T16:08:38Z,blocked
+chests,"never seen: no claim, no preview",2026-11-26T16:13:08.0Z,PARTIAL
+drags,"drags tried 0, cancelled 0",,

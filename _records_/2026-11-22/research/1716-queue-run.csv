@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 19,477 s: wait 0",2026-11-26T17:16:11.231Z,see growth/0054-waits.csv
+badges,17:16:15.5Z: the tram not drawn; the pickup bare; the radar dish 8; the labs counter 2/2,2026-11-26T17:16:11.231Z,tram badge rule: none; not tapped
+lab 1,Lv.8 Defense Training VIII running: 2d 19:22:13 at 17:16:31.9Z (ends about 2026-11-29T12:38:45Z): Speed Up not pressed,2026-11-26T17:16:31.877Z,tag text [G]: Research Queue
+lab 2,Lv.2 Oil Output I running: 1d 06:03:35 at 17:16:31.9Z (ends about 2026-11-27T23:20:07Z): Speed Up not pressed,2026-11-26T17:16:31.877Z,
+idle slots,"0 idle, 0 finished waiting, 0 blocked by a full Drill Ground",2026-11-26T17:16:31.877Z,slots_idle=0
+helmet look,no white round green-helmet bubble on the base frame; hero-face bubbles are other bubbles,2026-11-26T17:16:15.499Z,nothing pressed
+left column,tram not drawn; pickup bare; radar dish 8; labs counter 2/2,2026-11-26T17:16:15.499Z,
+drags,"drags tried 0, cancelled 0",,

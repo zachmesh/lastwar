@@ -1,0 +1,10 @@
+item,value,read_utc,note
+wait,"the lock was held by a cu-integrator gate run (17:17:48Z): read-only polling until free at 17:20:13Z (never bypassed); owner idle 19,728 s",2026-11-26T17:20:22.944Z,see growth/0054-waits.csv
+badges,17:20:27Z: the tram not read; the radar dish 8; the labs counter 2/2,2026-11-26T17:20:22.944Z,tram badge rule: none; not tapped
+ready bubbles,"Lv.27 clock (460,530); Lv.30 red-capped portrait (528,578); Lv.24 soldier portrait (616,515); Lv.20 blue-capped portrait (659,484); digits too small",2026-11-26T17:20:46.698Z,portrait = a finished batch
+Lv.30,"pistol once at 17:21:08.1Z: Training complete: 726 Lv. 10 units are ready: POWER +1,195,722 (150,917,717 to 152,113,439); Lv.10 34.3K to 35.0K; barracks now idle",2026-11-26T17:21:16.496Z,batch collected
+Lv.27,"Train Units: Lv.9 x726 training in progress 02:50:38 (ends about 20:13:10Z), Speed Up not pressed; counts Lv.7 1,116, Lv.8 1,689, Lv.9 2,604, Lv.10 35.0K",2026-11-26T17:22:31.229Z,promotion running
+Lv.24,toast 'Drill Ground Full: Unable to add more units.',2026-11-26T17:24:50.569Z,finished batch waiting
+Lv.20,toast 'Drill Ground Full: Unable to add more units.',2026-11-26T17:26:09.806Z,finished batch waiting
+classes,"slots_idle 1 (Lv.30), slots_blocked_by_capacity 2 (Lv.24, Lv.20), 1 running (Lv.27 promotion)",2026-11-26T17:26:44.867Z,capacity_blocker Drill Ground Full
+drags,"drags tried 0, cancelled 0",,

@@ -1,7 +1,7 @@
 ---
 title: Box policy v1
 created: 2026-11-23T09:20:00Z
-modified: 2026-11-24T23:36:00Z
+modified: 2026-11-26T16:36:00Z
 version: 1.1.0
 level: L3
 description: When, how and which chests and boxes to open regularly so slot starts never wait on a resource, while keeping the choice chests as flexibility
@@ -26,7 +26,7 @@ The long line needs coin about 2.1G and food 1.9G to 3.0G (0515); coin is short 
 - **R3 buffer:** **coin on hand is at most the 10M floor plus spend due within 6 hours plus 25 percent; the 72-hour figure is a planning horizon**, checked daily: convertible stock must cover 72 hours of planned spend. The plunder reason is unproven (H48).
 - **R4 food and iron:** typed chests first, for a shortfall against the floors. Choice and plain chests pay 67 percent more food or iron than coin, so if food runs short they open as food (H78).
 - **R5 reserve (Steer A, 23:07Z, replaces decision 03's wording and the 50M fixed buffer):** the reserve is the plain Resource Chests (20,862, about 125M coin in one Use, each also worth 10K food or iron) and the choice chests (UR 552, SSR 587, SR 1,523, about 1.97G coin-equivalent). The fixed Coin Chests went on the first three ground levels (80 UR and 62 SSR, +245.3M); about 28M remain. A 1.0G choice-chest minimum is the only hard floor.
-- **R6 retired as moot (Steer A, 23:34Z):** someone else consumes the Mystery Supply Box stack (H130, H1 0.92): no sample, box unit or hold; the Resources tab is read again only for a reason of the plan, with the clipped rows read in the same visit. Kept from R6: read one SSR and one UR choice chest before any large conversion, and read the Coin Vault protection.
+- **R6 retired as moot (Steer A, 23:34Z):** someone else consumes the Mystery Supply Box stack (H130, H1 0.92): no sample, box unit or hold; the Resources tab is read again only for a reason of the plan, with the clipped rows read in the same visit. Kept from R6: read one SSR and one UR choice chest before any large conversion, and read the Coin Vault protection. The vault read is answered: bar figures are protection, not caps.
 - **R7 windows** by the Duel screen: Thursday hero items, Monday drone, Wednesday components, Tuesday construction speed-ups.
 - **R8 cadence:** event-driven, a daily check, a weekly review.
 - **R9 log** every open; one forecast row per conversion batch (F-033 to F-037).

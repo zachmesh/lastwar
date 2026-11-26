@@ -34,3 +34,6 @@ Add one small article file `improvements-log/<entry-id>.md`, named by an entry i
 - [IMP-20261124-01](improvements-log/imp-20261124-01.md) - a regular that carries a known-blocked step is partial every run, and the growth partial rate.
 - [IMP-20261124-02](improvements-log/imp-20261124-02.md) - a returned truck waits behind a stale tram dot.
 - [IMP-20261124-03](improvements-log/imp-20261124-03.md) - stock claims made from one read, and forensic reads without a plan reason.
+- [IMP-20261126-01](improvements-log/imp-20261126-01.md) - a tool that globs from the home folder raises a macOS consent window.
+- [IMP-20261126-02](improvements-log/imp-20261126-02.md) - free alliance help is requested on every build the team starts.
+- [IMP-20261126-03](improvements-log/imp-20261126-03.md) - plan-serving units labelled snapshot or upkeep count as serving nothing.

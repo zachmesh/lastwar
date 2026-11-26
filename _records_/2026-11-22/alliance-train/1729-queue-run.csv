@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 20,253 s: wait 0",2026-11-26T17:29:11.263Z,see growth/0054-waits.csv
+badges,17:29:15.0Z: the tram not drawn; the pickup bare; the radar dish 8,2026-11-26T17:29:11.263Z,tram badge rule: none; not tapped
+tram icon,"not drawn at (107,580) at 17:29:15.0Z, 17:29:22.1Z, 17:29:33.3Z and the later reads",2026-11-26T17:29:15.008Z,tag text [G]: base left column
+train banner,"none: no banner, strip or icon naming a train, station or conductor",2026-11-26T17:29:15.008Z,rule 1: no train preparing
+radar icon,a red crosshair icon with a badge and a countdown above the Alliance button from 17:29:33Z: not a train,2026-11-26T17:29:33.289Z,
+HUD,"food 48.5M, iron 644.9M, coin 13.3M, oil 683.3K, Total Power 152,113,439",2026-11-26T17:29:15.008Z,
+drags,"drags tried 0, cancelled 0",,

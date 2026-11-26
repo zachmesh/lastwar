@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 17,652 s: wait 0",2026-11-26T16:45:43.308Z,see growth/0054-waits.csv
+badges,16:45:48.8Z: the tram not read,2026-11-26T16:45:43.308Z,tram badge rule: none; not tapped
+before frame,"food 49.4M, iron 645.7M, coin 13.3M; Total Power 151,689,455; Lv.7 1,116, Lv.8 2,415, Lv.9 2,604, Lv.10 34.3K; qty 726; 1d 06:53:38",2026-11-26T16:46:46.286Z,Lv.8 selected
+dialog,"UNIT UPGRADING Lv.8 to Lv.9, 726 troops: 887.6K food and 887.6K iron, no coin, no gem; 03:25:58; Power 1063 to 1352",2026-11-26T16:47:04.417Z,within the 1.0M rule
+Promote,"blue Promote (508,770) pressed once at 16:47:10.4Z; Finish Now never pressed",2026-11-26T16:47:10.415Z,Steer A 16:27Z
+after,"food 48.5M, iron 644.9M, coin 13.3M; Total Power 150,917,717 (down 771,738) at +11 s; unchanged to +74 s",2026-11-26T16:47:21.487Z,the promotion in progress
+queue,a clock bubble over the Lv.27 barracks; the counts and the queue row not visible after the panel closed,2026-11-26T16:47:21.487Z,a later read of the panel needs the pistol
+drags,"drags tried 0, cancelled 0",,

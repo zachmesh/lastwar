@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was held by a cu-integrator gate run from 17:10:41Z: read-only polling until free at 17:13:09Z (never bypassed); owner idle 19,307 s",2026-11-26T17:13:20.434Z,see growth/0054-waits.csv
+badges,17:13:24Z: the tram not drawn; the pickup bare; the radar dish 8,2026-11-26T17:13:20.434Z,tram badge rule: none; not tapped
+gate,"a standing figure at about (143,688) and a white '?' speech bubble at about (145,648): not recruitable; unchanged over the reads",2026-11-26T17:13:24.313Z,tag text [G]: base left edge
+survivor bubble,none beside the avatar,2026-11-26T17:13:24.313Z,
+buttons,"no survivor card, no Recruit, no Claim",2026-11-26T17:13:24.313Z,
+left column,tram not drawn; pickup bare; radar dish 8,2026-11-26T17:13:24.313Z,
+HUD,"food 48.5M, iron 644.9M, coin 13.3M, oil 683.3K, diamonds 10,673, energy 107, Total Power 150,917,717",2026-11-26T17:13:24.313Z,
+drags,"drags tried 0, cancelled 0",,

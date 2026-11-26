@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock was free at the claim; owner idle 14,555 s: wait 0",2026-11-26T15:54:03.778Z,see growth/0054-waits.csv
+badges,15:54:08.6Z: the radar dish 8; the tram not read,2026-11-26T15:54:03.778Z,tram badge rule: none; not tapped
+barracks tag,"'Barracks Lv.27'; pistol at (459,631) opens Train Units",2026-11-26T15:54:33.747Z,tag text [G]
+Lv.9 panel,"Power 1352, Morale 625.0, Load 2000, HP 4167.45, Attack 33.87, Defense 7.04; qty 726 (max 726); 4.1M food, 4.1M iron; 1d 10:19:35",2026-11-26T15:55:05.337Z,default selection
+tap 1,"grey up-arrow (572,684): nothing opened",2026-11-26T15:55:22.481Z,disabled at Lv.9
+tap 2,"Lv.8 badge (333,474): only selects Lv.8: Power 1063, Morale 531.25, Load 1800, HP 3566.74, Attack 29.0, Defense 6.03; qty 726; 3.2M food, 3.2M iron; 1d 06:53:38; the arrow turns GREEN",2026-11-26T15:55:47.653Z,"promote action button, unpressed"
+HUD,"food 46.6M, iron 643.2M, coin 11.5M before and after",2026-11-26T15:56:37.789Z,unmoved
+drags,"drags tried 0, cancelled 0",,
