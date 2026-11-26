@@ -1,0 +1,11 @@
+item,value,read_utc,note
+wait,"the first claim at 12:22:34Z met a cu-developer-three hold (until 12:49:32Z) that released at 12:23:16Z: waited read-only 42 s; the runs admitted 0.8 to 1.2 s after their requests; owner idle 1,901 to 2,224 s",2026-11-26T12:23:35.427Z,see growth/0054-waits.csv
+badges,"12:23:40Z: the tram none, the pickup none, the radar dish 4, hammer 4/4, flask 2/2",2026-11-26T12:23:35.427Z,tram badge rule: none; not tapped
+COIN,"Available 1,373,163 at 12:23:51.4Z; 447.1K/H; elapsed 3h04m18s (3.072 h); ratio 3.071 h; bar 14,638,176 of 16,474,999; after: 16,012,580",2026-11-26T12:23:51.357Z,tag text [G]: Coin panel; the Coach's cap test line
+FOOD,"Available 2,096,008 at 12:24:17.6Z; 682.8K/H; elapsed 3h04m18s; ratio 3.070 h; bar 51,884,623 of 49,642,724; after: 53,983,475",2026-11-26T12:24:17.592Z,
+IRON,"Available 1,923,407 at 12:25:23.7Z; 626.6K/H; elapsed 3h04m14s; ratio 3.070 h; bar 686,044,068 of 59,840,549; after: 687,969,215",2026-11-26T12:25:23.659Z,
+OIL,"Available 4,691 at 12:25:49.2Z; 1.5K/H; elapsed 3h04m08s; ratio 3.13 h (rate rounded); bar 581,088; after: 585,780",2026-11-26T12:25:49.244Z,
+Farmland tag,'Farmland' Lv.28; no panel text; buttons: a group glyph and a green up arrow (not pressed),2026-11-26T12:27:12.093Z,tap 1 of 2
+help icon,not found above the upgrading Drill Ground; green round bubbles only; not pressed,2026-11-26T12:28:55.027Z,tap 2 not made
+Drill Ground end,13d 18:55:57 at 12:28:22.0Z: end 2026-12-10T07:24:19Z; at +1 (12:29:21.0Z) 13d 18:54:58: end 07:24:19Z unchanged; no help count,2026-11-26T12:29:21Z,
+drags,"drags tried 0, cancelled 0",,

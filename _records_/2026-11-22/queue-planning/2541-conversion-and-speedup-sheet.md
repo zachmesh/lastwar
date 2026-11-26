@@ -3,7 +3,7 @@ title: Conversion Procedure And Speed Up Use For The 09:20Z Builder Units 2541 2
 created: 2026-11-23T03:36:00-08:00
 modified: 2026-11-23T10:30:00-08:00
 level: L0
-version: 1.1.0
+version: 1.3.0
 description: The Backpack conversion steps and the speed-up use rules for the builder units for 2026-11-23T23:20Z (corrected: the builders are free at 23:20Z today; 09:20 was the Oil Well upgrade's duration), from the RC1 chest limits read, split off the Drill Ground sheet 2540 to keep both small
 status: done
 activity: queue-planning
@@ -26,3 +26,7 @@ Inventory, Resources tab. It opens with the 5,000 Diamonds x16 tile SELECTED and
 ## Speed-up use [M] from RC1
 
 Construction items (167,760 minutes): 8h x10 (4,800 minutes), 1h x26 (1,560), 5m x28,477, 1m x19,015. General items (351,647 minutes) stay in reserve. An item's quantity may default to its full stock: read the panel first, reduce the quantity before pressing, use the LARGE items first, write the minutes used after every press, and STOP at 10,000 minutes per upgrade and 30,000 in all (weekly cap 35,000); 10,000 minutes is 6,360 from the large items plus 728 of the 5m items, or 2,000 of the 5m items alone. Nothing is pressed if the number cannot be read. Never Finish Now, diamonds or money. Timing: 2026-11-24 is Tuesday, Base Expansion, until 2026-11-25T02:00Z; read the Duel screen first, it is the authority.
+
+## Build preview cost list (Steer A 13:34Z)
+
+Every build unit's preview step: DRAG THE COST LIST until EVERY row (iron, food, coin, oil) is visible, with the stocks in the same frame. Check all floors (coin 10M, iron 100M, food 30M) against ALL rows before the press. If any row was not seen, do not press: write what was seen and stop. A dragged preview may STILL omit a charged row (the Lv.20 to 21 preview was scrolled and food and coin were charged): ALSO check the floors against the table's three columns at 0.85, for the Oil Well food 0.333 and coin 0.212 of the iron cost (Lv.21, 24 and 27 deltas), and use the preview only to confirm the rows it shows (the Researcher, 11-26). The Oil Well Lv.26 to 27 press on 11-26 at 13:31:34Z read only the visible rows and left coin 6.0M under its floor.

@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,the lock was free at the claim; the runs admitted 0.8 to 1.0 s after their requests,2026-11-26T13:12:02.946Z,see growth/0054-waits.csv
+badges,13:12:08Z: the hammer counter 3/4; the target icon (badge 1) at the right edge,2026-11-26T13:12:02.946Z,tram badge rule: none; not tapped
+builders,hammer 3/4: row 1 idle; Lv.27 Drill Ground 3d 02:18:42; Lv.27 Drill Ground 13d 18:11:59; Lv.28 Drill Ground 7d 00:37:54; no Oil Well row,2026-11-26T13:12:19.550Z,tag text [G]: Building Queue
+unintended collect,"tap on the oil-barrel bubble (614,666) at 13:14:40.2Z: oil 585.7K to 587.0K",2026-11-26T13:14:43.272Z,bubble rule breached: disclosed
+completion,"wrapped gift box tapped once at 13:17:34.5Z: OIL WELL LEVEL UP: Power 51,500 to 60,800; oil 1,500 to 1,560 an hour; 1.4M EXP; Total Power +9,300",2026-11-26T13:17:36.678Z,
+tag,"Oil Well Lv.26 (not Lv.25): stop; no preview, no Upgrade",2026-11-26T13:18:01.824Z,the next step is Lv.26 to 27
+HUD,"Total Power 151,689,455; iron 687.9M; oil 587.0K; one builder idle",2026-11-26T13:18:10.759Z,
+drags,"drags tried 0, cancelled 0",,

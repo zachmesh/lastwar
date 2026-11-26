@@ -1,0 +1,8 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 1,328 s: wait 0",2026-11-26T12:13:08.681Z,see growth/0054-waits.csv
+badges,12:13:13.8Z: the pickup icon a red dot; the Hidden Treasures tab badge 1,2026-11-26T12:13:08.681Z,tram badge rule: none; not tapped
+fragments before,"M1 x8, M2 x5, M3 x6, M4 x2, M5 x4, M6 x6, M7 x6: a full set; chest track 10 of 15",2026-11-26T12:13:31.818Z,tag text [G]: Hidden Treasure
+dig,"Dig 1 time once at 12:13:55.9Z: golden statue x1, iron crate x3, food crate x3, orange box x20, medal 1.8K, 1m speed-up x150 x2, triangle 1.2K, silver bars 600",2026-11-26T12:13:59.206Z,one dig per unit
+fragments after,"M1 x7, M2 x4, M3 x5, M4 x1, M5 x3, M6 x5, M7 x5; chest track 0 of 15",2026-11-26T12:14:17.511Z,track reset mechanism unverified
+next dig,Dig 1 time still lit (M4 x1); Dig 2 time(s) greyed,2026-11-26T12:14:17.511Z,a next unit may dig again
+drags,"drags tried 0, cancelled 0",,

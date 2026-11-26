@@ -1,0 +1,9 @@
+item,value,read_utc,note
+wait,"the lock admitted the run 0.8 s after the request; owner idle 2,472 s: wait 0",2026-11-26T12:32:15.645Z,see growth/0054-waits.csv
+badges,12:32:19.4Z: the tram none; the pickup none; the radar dish 4,2026-11-26T12:32:15.645Z,tram badge rule: none; not tapped
+entry,"Quick Construction Lv.9 of 10: count 21 of 30; coin Donate green, 1000, no timer; Tech EXP 6.3M of 8.0M",2026-11-26T12:32:43.495Z,tag text [G]: Alliance Tech dialog
+taps,"16 coin Donate taps 12:32:48.8Z to 12:33:54.6Z (batches of three: counts 18, 15, 12, 9, 6, then one tap: 5)",2026-11-26T12:33:57.840Z,diamond Donate never pressed
+final,"count 5 of 30 at 12:34:04.2Z; coin Donate green, no timer; Tech EXP 6.3M of 8.0M (bar not refreshed in the open dialog)",2026-11-26T12:34:04.192Z,the floor of 5 reached
+coin,"16.0M before; 15.9M after (16,000 spent)",2026-11-26T12:34:04.192Z,
+daily reward,nothing claimable seen,2026-11-26T12:34:04.192Z,
+drags,"drags tried 0, cancelled 0",,

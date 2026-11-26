@@ -3,7 +3,7 @@ title: Oil Well Level 20 To 30 Builder Chain 2900 2026-11-23
 created: 2026-11-23T08:10:00-08:00
 modified: 2026-11-26T04:50:00Z
 level: L0
-version: 1.10.0
+version: 1.11.0
 description: The facts, route, hand-off rule and current schedule pointer for the builder B1 chain that raises the Oil Well from level 20 to 30, with the per level table in a CSV beside it
 status: done
 activity: queue-planning
@@ -28,11 +28,11 @@ Every build measured so far ended 23,520 s (6 h 32 min) before its preview, to w
 
 ## Hand-off rule
 
-At each real finish the coordinator dispatches the next unit BY NAME. A finished well completes by TAPPING THE WRAPPED GIFT BOX on the building (no Complete button in the panel; Total Power registers then). Then: the route, the tag (stop if the level is wrong), the Upgrade preview, iron above the 150M floor, Upgrade once, and write the preview's effective time, the panel's end time in UTC and their difference in seconds. The planner re-times the NEXT unit from that real end. A unit claimed before its upgrade ends releases itself unrun and the release keeps the attempt, so each carries max_attempts 8 and priority 9 until it is due. Lv.21 cost 7.48 idle builder minutes.
+At each real finish the coordinator dispatches the next unit BY NAME. A finished well completes by TAPPING THE WRAPPED GIFT BOX on the building (no Complete button in the panel; Total Power registers then). Then: the route, the tag (stop if the level is wrong), the Upgrade preview, iron above the 150M floor, Upgrade once, and write the preview's effective time, the panel's end time in UTC and their difference in seconds. The planner re-times the NEXT unit from that real end. A unit claimed before its upgrade ends releases itself unrun and the release keeps the attempt, so each carries max_attempts 8 and priority 9 until it is due.
 
 ## Schedule
 
-[2900-oil-well-chain.csv](2900-oil-well-chain.csv) is the start log: each level's start, end, unit, window, `speed_factor` and `last_game_restart_utc`. Lv.21 to Lv.24 are measured: Lv.23 ended 17:27:27Z, Lv.24 started 17:31:42Z and REALLY ENDS 2026-11-25T07:11:20Z. The speed factor series is the Coach's (speed-factor-series.csv); the later ends are the old durations rescaled [G]. Lv.25 was started by the phone while the Mac was held (builders panel 04:41:44.4Z, Time Left 08:28:12): it REALLY ENDS 2026-11-26T13:09:56.4Z, and Lv.26 to Lv.30 were re-timed from it at 04:50Z with the same durations; the planner re-times each unit again from each real end. The hand-off unit opens 2 minutes before a real end; no opening in the quiet window 08:00Z to 08:25Z.
+[2900-oil-well-chain.csv](2900-oil-well-chain.csv) is the start log: each level's start, end, unit, window, `speed_factor` and `last_game_restart_utc`. Lv.21 to Lv.24 are measured: Lv.23 ended 17:27:27Z, Lv.24 started 17:31:42Z and REALLY ENDS 2026-11-25T07:11:20Z. CORRECTED 2026-11-26T13:23Z: the builders row 'Lv.N upgrade in progress' names the level upgraded FROM. The job read at 04:41Z (Time Left 08:28:12) was Lv.25 to 26: it ended 13:09:56.4Z and was completed 13:17:34.5Z (tag Oil Well Lv.26, +9,300 power, oil 1,500 to 1,560 an hour); -006 stopped. -007 (Lv.26 to 27, priority 1) is live for the idle builder; Lv.27 to 30 were shifted by 32:59:51, expiries 20 h after the floors; the planner re-times from each real end. The hand-off unit opens 2 minutes before a real end; no opening in the quiet window 08:00Z to 08:25Z.
 
 
 ## HQ 31 start unit, pre-steps (not staged)

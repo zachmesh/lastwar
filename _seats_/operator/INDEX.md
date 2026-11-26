@@ -56,3 +56,4 @@ to the game.
 - [`bootstrap.md`](bootstrap.md): the first prompt this seat receives.
 - [`duties.md`](duties.md): the per-firing checklist.
 - [`handover.md`](handover.md): the live state a replacement starts from.
+- [`handover-measured-rows.csv`](handover-measured-rows.csv): the measured taps, points, routes and timings moved out of the handover.
